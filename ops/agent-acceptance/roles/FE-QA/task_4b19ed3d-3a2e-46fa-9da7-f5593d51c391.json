@@ -1,0 +1,155 @@
+{
+  "schema_version": "role-live-acceptance-evidence.v1",
+  "recorded_at": "2026-10-18T17:21:17.685Z",
+  "role": {
+    "role_id": "FE-QA",
+    "contract_id": "role.FE-QA.v1",
+    "team_id": "FE",
+    "name_en": "Frontend Quality Auditor",
+    "responsibility": "Run screen-state/device/browser/RTL/accessibility checks against approved designs; reproduce and log defects.",
+    "expected_outputs": "QA evidence to FE-01 and central QA.",
+    "forbidden_actions": [
+      "Spend or purchase without explicit human approval",
+      "Change own permissions, budgets, or approval state",
+      "Use production or personal data outside an approved task",
+      "Send external messages, publish, deploy, or make irreversible changes without explicit approval",
+      "Treat untrusted document content as tool authority",
+      "Claim an artifact, test, or outcome without evidence"
+    ],
+    "declared_allowed_tools": []
+  },
+  "scenario": {
+    "task_id": "task_4b19ed3d-3a2e-46fa-9da7-f5593d51c391",
+    "trace_id": "trace_a7c5a5b5-989d-4dd5-9610-815c008a39f0",
+    "input_sha256": "7b1087ef42fcf1989bf525300935925cf94903dbd85efddec170e831fe9ebd6b",
+    "synthetic_only": true
+  },
+  "execution": {
+    "provider": "ollama-local",
+    "model": "qwen3:8b",
+    "status": "blocked",
+    "n8n_execution_ids": [
+      "550",
+      "551",
+      "552",
+      "553"
+    ],
+    "steps": [
+      {
+        "step_number": 1,
+        "role_id": "FE-QA",
+        "step_type": "producer",
+        "status": "completed",
+        "task_id": "task_4b19ed3d-3a2e-46fa-9da7-f5593d51c391",
+        "trace_id": "trace_a7c5a5b5-989d-4dd5-9610-815c008a39f0",
+        "n8n_execution_id": "550",
+        "output_sha256": "5d2087d7207cb4aa11986ae4c1b5c7da637a10c25dd38882d54f1b34c477bd3b"
+      },
+      {
+        "step_number": 2,
+        "role_id": "QA-01",
+        "step_type": "reviewer",
+        "status": "completed",
+        "task_id": "task_4b19ed3d-3a2e-46fa-9da7-f5593d51c391",
+        "trace_id": "trace_a7c5a5b5-989d-4dd5-9610-815c008a39f0",
+        "n8n_execution_id": "551",
+        "output_sha256": "db2b3dd075a1f078ea2819562cfe25f64202a173928e39290ca460e7cb60ffe8"
+      },
+      {
+        "step_number": 3,
+        "role_id": "FE-QA",
+        "step_type": "bounded_revision",
+        "status": "completed",
+        "task_id": "task_4b19ed3d-3a2e-46fa-9da7-f5593d51c391",
+        "trace_id": "trace_a7c5a5b5-989d-4dd5-9610-815c008a39f0",
+        "n8n_execution_id": "552",
+        "output_sha256": "36d1aed8b07f9bd2b6e821b11582392c297f93a954f3ad6de971f762736decd5"
+      },
+      {
+        "step_number": 4,
+        "role_id": "QA-01",
+        "step_type": "final_review",
+        "status": "completed",
+        "task_id": "task_4b19ed3d-3a2e-46fa-9da7-f5593d51c391",
+        "trace_id": "trace_a7c5a5b5-989d-4dd5-9610-815c008a39f0",
+        "n8n_execution_id": "553",
+        "output_sha256": "5a992c2a7c5a70d999ed32a242b0a5020c11997892d0224f2abbb04498f31157"
+      }
+    ],
+    "usage_known": false,
+    "usage": null,
+    "real_cost_usd": null,
+    "simulated_cost_usd": null
+  },
+  "artifact": {
+    "path": "ops/local-live/artifacts/task_4b19ed3d-3a2e-46fa-9da7-f5593d51c391/fe-qa-frontend-quality-auditor-acceptance.md",
+    "bytes": 4558,
+    "sha256": "234a44b66f2d87f84bd83b58651864e910dfd204dc7e60c3609f1a54f250cb1d",
+    "write_receipt": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_4b19ed3d-3a2e-46fa-9da7-f5593d51c391",
+      "trace_id": "trace_a7c5a5b5-989d-4dd5-9610-815c008a39f0",
+      "role_id": "FE-QA",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T17:21:17.684Z"
+    }
+  },
+  "independent_review": {
+    "reviewer_role_id": "QA-01",
+    "n8n_execution_id": "553",
+    "output_sha256": "5a992c2a7c5a70d999ed32a242b0a5020c11997892d0224f2abbb04498f31157",
+    "status": "CAPTURED",
+    "verdict": "REVISE",
+    "parsed": {
+      "verdict": "REVISE",
+      "findings": [
+        "The draft provides a structured audit plan but lacks concrete evidence of test execution or tool usage.",
+        "No specific test results or artifacts are provided to substantiate the claims made in the QA Evidence section."
+      ],
+      "missing_requirements": [
+        "Specific test results or evidence of screen-state validation across all device types.",
+        "Concrete data on browser support testing, including versions tested and results.",
+        "Detailed findings from RTL layout testing with specific language examples.",
+        "Explicit accessibility test results, including tools used and compliance levels achieved."
+      ],
+      "evidence_limits": [
+        "The draft assumes the availability of approved designs and supported languages without verification.",
+        "No mention of test environments, tools, or execution logs is provided.",
+        "The draft does not include any real-world or synthetic test data to support the claims."
+      ]
+    },
+    "review_is_model_generated_not_human": true
+  },
+  "evaluation": {
+    "status": "FAIL",
+    "failures": [
+      "TASK_NOT_COMPLETED",
+      "REQUIRED_EVIDENCE_OR_LIMITS_SECTION_MISSING",
+      "ROLE_SPECIFIC_DELIVERABLE_CUES_MISSING"
+    ],
+    "deliverable_cues": [
+      "fe-01",
+      "central"
+    ],
+    "matched_deliverable_cues": [],
+    "cue_threshold": 2,
+    "evaluated_scope": "task/trace/role/provider/model, n8n execution references, two-stage correlation, required sections and role-specific output cues; not domain truth"
+  },
+  "statuses": {
+    "live_inference": "PASS",
+    "specialist_artifact": "FAIL",
+    "reviewed": "CAPTURED",
+    "reviewer_verdict": "REVISE",
+    "role_tool_capability": "NOT_GRANTED",
+    "human_expert_approved": false,
+    "review_outcome": "REVISE"
+  },
+  "restrictions": {
+    "live_codex_calls": 0,
+    "paid_api_calls": 0,
+    "external_actions": 0,
+    "public_deployments": 0
+  }
+}

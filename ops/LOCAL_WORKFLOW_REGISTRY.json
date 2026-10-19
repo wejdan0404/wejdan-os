@@ -1,0 +1,69 @@
+{
+  "schema_version": "local-workflow-registry.v1",
+  "updated_at": "2026-10-18T10:06:36.385Z",
+  "scope": "private local n8n instance bound to loopback; not n8n Cloud",
+  "cloud_gate_state": {
+    "G05": "BLOCKED_EXTERNAL",
+    "source": "ops/GATE_QUEUE.json"
+  },
+  "workflows": [
+    {
+      "workflow_id": "nNGeWSsYiuX1Aeuj",
+      "name": "Wejdan Local Agent | Ollama",
+      "version": "2.43.7",
+      "status": "ACTIVE_LOCAL_LOOPBACK_TEST_ONLY",
+      "active": true,
+      "publication_scope": "private local n8n only; not public and not production",
+      "local_url": "http://127.0.0.1:5678/workflow/nNGeWSsYiuX1Aeuj",
+      "webhook_url": "http://127.0.0.1:5678/webhook/wejdan-local-agent",
+      "nodes": [
+        "Local Task Webhook",
+        "Validate Local Task",
+        "Local Ollama Inference",
+        "Validate and Correlate Result"
+      ],
+      "node_count": 4,
+      "connection_count": 3,
+      "credential_nodes": 0,
+      "model": "qwen3:8b",
+      "provider": "ollama-local",
+      "paid_provider_calls": 0,
+      "export_path": "ops/evidence/local-n8n-agent-role-output-1536.json",
+      "export_sha256": "21dbe27cbd123a0bec8f5a834cf2fccea9ec6ea57f8d219a0453a8f359e67798",
+      "exact_code_node_match": true,
+      "executed_n8n_execution_ids": [
+        "95",
+        "96",
+        "97",
+        "98",
+        "99",
+        "100",
+        "101"
+      ],
+      "verified_task_ids": [
+        "task_7d310fb8-14ea-4c69-8006-261b776a4c8a",
+        "task_e84c0a8e-3df0-4081-8b80-932d6ac4f8dc",
+        "task_4acf456f-0c91-436c-9d18-6398bc03aa18",
+        "task_da33d161-b033-4e2a-b160-7397e65d8ce5"
+      ],
+      "updated_at": "2026-10-18T10:06:36.385Z",
+      "version_id": "7fc62cf5-9d0c-4270-bae9-8416267473df",
+      "code_node_matches": [
+        {
+          "name": "Validate Local Task",
+          "match": true,
+          "characters": 1323,
+          "sha256": "6984b799b7e830d8ecf12f205f3d1f8c1bf0b7bb2e24d1482207a4e7a05e4621"
+        },
+        {
+          "name": "Validate and Correlate Result",
+          "match": true,
+          "characters": 789,
+          "sha256": "6b803abe9539ca3b50a26e797db3ff0f38424e41031a73ef0b4e23d5d24fceb3"
+        }
+      ]
+    }
+  ],
+  "all_local_listeners": "127.0.0.1 only",
+  "public_production_deployed": false
+}

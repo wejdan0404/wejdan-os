@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>Onboarding — Welcome</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'IBM Plex Sans Arabic','IBM Plex Sans',sans-serif;background:#F4F7FC;color:#0E121C}
+a{color:#4F5FA0}a:hover{color:#2B3358}
+</style>
+</helmet>
+<div style="width:390px;height:844px;position:relative;overflow:hidden;background:#F4F7FC;box-sizing:border-box;font-family:'IBM Plex Sans Arabic','IBM Plex Sans',sans-serif;color:#0E121C;display:flex;flex-direction:column;padding:16px 20px 32px;">
+  <div style="display:flex;align-items:center;justify-content:space-between;height:44px;">
+    <div role="progressbar" aria-label="الخطوة 1 من 6" aria-valuemin="1" aria-valuemax="6" aria-valuenow="1" style="display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:6px;width:180px;">
+      <span style="height:6px;border-radius:999px;background:#6172B5;"></span>
+      <span style="height:6px;border-radius:999px;background:#DCE3EF;"></span>
+      <span style="height:6px;border-radius:999px;background:#DCE3EF;"></span>
+      <span style="height:6px;border-radius:999px;background:#DCE3EF;"></span>
+      <span style="height:6px;border-radius:999px;background:#DCE3EF;"></span>
+      <span style="height:6px;border-radius:999px;background:#DCE3EF;"></span>
+    </div>
+    <span style="font-size:13px;line-height:20px;font-weight:500;color:#5A6478;"><bdi>1</bdi> من <bdi>6</bdi></span>
+  </div>
+
+  <div style="margin-top:16px;height:216px;border-radius:28px;background:#EAF1FB;position:relative;overflow:hidden;">
+    <svg width="350" height="216" viewBox="0 0 350 216" aria-hidden="true" style="position:absolute;inset:0;">
+      <path d="M40 176 C 90 60, 260 60, 310 176" fill="none" stroke="#9BC4EE" stroke-width="1.75" stroke-dasharray="4 6" stroke-linecap="round"></path>
+      <line x1="24" y1="176" x2="326" y2="176" stroke="#BEDAF7" stroke-width="1.75" stroke-linecap="round"></line>
+      <circle cx="68" cy="126" r="10" fill="#FFFFFF" stroke="#6172B5" stroke-width="1.75"></circle>
+      <circle cx="175" cy="88" r="10" fill="#FFFFFF" stroke="#6172B5" stroke-width="1.75"></circle>
+      <circle cx="282" cy="126" r="10" fill="#FFFFFF" stroke="#6172B5" stroke-width="1.75"></circle>
+      <path d="M175 30 C176.3 40.6 180.4 44.7 191 46 C180.4 47.3 176.3 51.4 175 62 C173.7 51.4 169.6 47.3 159 46 C169.6 44.7 173.7 40.6 175 30Z" fill="#E0A93B"></path>
+      <path d="M214 52 C214.6 56.8 216.2 58.4 221 59 C216.2 59.6 214.6 61.2 214 66 C213.4 61.2 211.8 59.6 207 59 C211.8 58.4 213.4 56.8 214 52Z" fill="#6172B5"></path>
+      <path d="M140 58 C140.5 61.6 141.9 63 145.5 63.5 C141.9 64 140.5 65.4 140 69 C139.5 65.4 138.1 64 134.5 63.5 C138.1 63 139.5 61.6 140 58Z" fill="#9BC4EE"></path>
+    </svg>
+    <span style="position:absolute;top:150px;right:34px;height:24px;padding:0 10px;border-radius:999px;background:#FFFFFF;font-size:12px;line-height:24px;font-weight:600;color:#2B3358;">الصباح</span>
+    <span style="position:absolute;top:112px;left:50%;transform:translateX(-50%);height:24px;padding:0 10px;border-radius:999px;background:#FFFFFF;font-size:12px;line-height:24px;font-weight:600;color:#2B3358;">النهار</span>
+    <span style="position:absolute;top:150px;left:34px;height:24px;padding:0 10px;border-radius:999px;background:#FFFFFF;font-size:12px;line-height:24px;font-weight:600;color:#2B3358;">المساء</span>
+  </div>
+
+  <h1 style="margin:24px 0 0;font-size:28px;line-height:36px;font-weight:700;">يومك يكون جاهز<br>قبل ما تصحين</h1>
+  <p style="margin:8px 0 0;font-size:16px;line-height:26px;color:#3A4256;">أرتّب لك اليوم: وش تسوين، ومتى، وأصغر نسخة منه — ومعه شي تحبينه.</p>
+
+  <ul style="list-style:none;margin:20px 0 0;padding:0;display:flex;flex-direction:column;gap:14px;">
+    <li style="display:flex;align-items:flex-start;gap:12px;">
+      <span style="flex:none;display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:999px;background:#E3F0E8;color:#2F6B4A;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21v-9"></path><path d="M12 12c0-4 3-7 8-7 0 4-3 7-8 7z"></path><path d="M12 14c0-3-2.5-5.5-7-5.5 0 3 2.5 5.5 7 5.5z"></path></svg>
+      </span>
+      <div><div style="font-size:16px;line-height:24px;font-weight:600;">نسخة صغيرة تكفي</div><div style="font-size:14px;line-height:22px;color:#5A6478;">لكل عادة حد أدنى، ويُحسب إنجازًا كاملًا.</div></div>
+    </li>
+    <li style="display:flex;align-items:flex-start;gap:12px;">
+      <span style="flex:none;display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:999px;background:#FBF1D6;color:#8A6412;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c.7 5.3 3 7.6 9 9-6 1.4-8.3 3.7-9 9-.7-5.3-3-7.6-9-9 6-1.4 8.3-3.7 9-9z"></path></svg>
+      </span>
+      <div><div style="font-size:16px;line-height:24px;font-weight:600;">المتعة جزء من الخطة</div><div style="font-size:14px;line-height:22px;color:#5A6478;">نربط اللي لازم يصير باللي تحبينه.</div></div>
+    </li>
+    <li style="display:flex;align-items:flex-start;gap:12px;">
+      <span style="flex:none;display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:999px;background:#ECE8F7;color:#5B4C99;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11a8 8 0 1 0-2.3 5.7"></path><path d="M20 5v6h-6"></path></svg>
+      </span>
+      <div><div style="font-size:16px;line-height:24px;font-weight:600;">التعثّر معلومة، مو حكم</div><div style="font-size:14px;line-height:22px;color:#5A6478;">إذا ما مشى الحال، نعدّل التصميم مو نلومك.</div></div>
+    </li>
+  </ul>
+
+  <div style="flex:1;"></div>
+  <p style="display:flex;align-items:center;justify-content:center;gap:6px;margin:0 0 12px;font-size:13px;line-height:20px;font-weight:500;color:#5A6478;">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="10" width="14" height="11" rx="2.5"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg>
+    بياناتك كلها على جهازك فقط
+  </p>
+  <a href="Onboarding2.dc.html" style="flex:none;display:flex;align-items:center;justify-content:center;height:52px;border-radius:16px;background:#6172B5;color:#FFFFFF;text-decoration:none;font-size:16px;line-height:24px;font-weight:600;">يلا نبدأ</a>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

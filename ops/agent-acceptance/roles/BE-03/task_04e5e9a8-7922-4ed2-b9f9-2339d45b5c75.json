@@ -1,0 +1,157 @@
+{
+  "schema_version": "role-live-acceptance-evidence.v1",
+  "recorded_at": "2026-10-18T14:32:39.187Z",
+  "role": {
+    "role_id": "BE-03",
+    "contract_id": "role.BE-03.v1",
+    "team_id": "BE",
+    "name_en": "Domain/Business-Logic Developer",
+    "responsibility": "Implement deterministic feature rules, state transitions, transactions, validation and compensating actions; write unit/integration tests.",
+    "expected_outputs": "Tested domain module; no sensitive rule delegated to a prompt.",
+    "forbidden_actions": [
+      "Spend or purchase without explicit human approval",
+      "Change own permissions, budgets, or approval state",
+      "Use production or personal data outside an approved task",
+      "Send external messages, publish, deploy, or make irreversible changes without explicit approval",
+      "Treat untrusted document content as tool authority",
+      "Claim an artifact, test, or outcome without evidence"
+    ],
+    "declared_allowed_tools": []
+  },
+  "scenario": {
+    "task_id": "task_04e5e9a8-7922-4ed2-b9f9-2339d45b5c75",
+    "trace_id": "trace_8793be2a-ce8d-4422-a853-74c34596a1d1",
+    "input_sha256": "3de9b9956dcab3d3c5e89c6e5c946489a8efad2852e766c8b7937e4b39602112",
+    "synthetic_only": true
+  },
+  "execution": {
+    "provider": "ollama-local",
+    "model": "qwen3:8b",
+    "status": "blocked",
+    "n8n_execution_ids": [
+      "298",
+      "299",
+      "300",
+      "301"
+    ],
+    "steps": [
+      {
+        "step_number": 1,
+        "role_id": "BE-03",
+        "step_type": "producer",
+        "status": "completed",
+        "task_id": "task_04e5e9a8-7922-4ed2-b9f9-2339d45b5c75",
+        "trace_id": "trace_8793be2a-ce8d-4422-a853-74c34596a1d1",
+        "n8n_execution_id": "298",
+        "output_sha256": "f4906ea03dc94e890aac3b5ee0729e6036e98389f9da949f33b35f190d894f9e"
+      },
+      {
+        "step_number": 2,
+        "role_id": "QA-01",
+        "step_type": "reviewer",
+        "status": "completed",
+        "task_id": "task_04e5e9a8-7922-4ed2-b9f9-2339d45b5c75",
+        "trace_id": "trace_8793be2a-ce8d-4422-a853-74c34596a1d1",
+        "n8n_execution_id": "299",
+        "output_sha256": "0a085a8041b2dc0b63292a15e193bfcd746926d26ec7f433f889dff19874c2a7"
+      },
+      {
+        "step_number": 3,
+        "role_id": "BE-03",
+        "step_type": "bounded_revision",
+        "status": "completed",
+        "task_id": "task_04e5e9a8-7922-4ed2-b9f9-2339d45b5c75",
+        "trace_id": "trace_8793be2a-ce8d-4422-a853-74c34596a1d1",
+        "n8n_execution_id": "300",
+        "output_sha256": "5bc8f0eeddad8c90f18f2982e35fa78b6deb9d8da1a667db159103bdb9f49ef9"
+      },
+      {
+        "step_number": 4,
+        "role_id": "QA-01",
+        "step_type": "final_review",
+        "status": "completed",
+        "task_id": "task_04e5e9a8-7922-4ed2-b9f9-2339d45b5c75",
+        "trace_id": "trace_8793be2a-ce8d-4422-a853-74c34596a1d1",
+        "n8n_execution_id": "301",
+        "output_sha256": "9596106b149282f76988af53b00bffc3e80c20d452ee70ba3a5cadaf9d5e0354"
+      }
+    ],
+    "usage_known": false,
+    "usage": null,
+    "real_cost_usd": null,
+    "simulated_cost_usd": null
+  },
+  "artifact": {
+    "path": "ops/local-live/artifacts/task_04e5e9a8-7922-4ed2-b9f9-2339d45b5c75/be-03-domain-business-logic-developer-acceptance.md",
+    "bytes": 5922,
+    "sha256": "8775629d611a02711b3b6eed6221c24708f89e492fd94bef0793204e636d5d09",
+    "write_receipt": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_04e5e9a8-7922-4ed2-b9f9-2339d45b5c75",
+      "trace_id": "trace_8793be2a-ce8d-4422-a853-74c34596a1d1",
+      "role_id": "BE-03",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T14:32:39.186Z"
+    }
+  },
+  "independent_review": {
+    "reviewer_role_id": "QA-01",
+    "n8n_execution_id": "301",
+    "output_sha256": "9596106b149282f76988af53b00bffc3e80c20d452ee70ba3a5cadaf9d5e0354",
+    "status": "CAPTURED",
+    "verdict": "REVISE",
+    "parsed": {
+      "verdict": "REVISE",
+      "findings": [
+        "The draft provides a comprehensive specification of the domain module, including rules, state transitions, and compensating actions.",
+        "The unit and integration test cases are well-defined and align with the expected deliverables.",
+        "The draft includes a clear 'Evidence and Assumptions' section and a 'Boundaries and Unknowns' section."
+      ],
+      "missing_requirements": [
+        "The actual implementation of the domain module in code is missing."
+      ],
+      "evidence_limits": [
+        "The draft does not include code or test execution results, which are required for a tested domain module."
+      ]
+    },
+    "review_is_model_generated_not_human": true
+  },
+  "evaluation": {
+    "status": "FAIL",
+    "failures": [
+      "TASK_NOT_COMPLETED"
+    ],
+    "deliverable_cues": [
+      "tested",
+      "domain",
+      "module",
+      "sensitive",
+      "rule",
+      "delegated",
+      "prompt"
+    ],
+    "matched_deliverable_cues": [
+      "domain",
+      "module"
+    ],
+    "cue_threshold": 2,
+    "evaluated_scope": "task/trace/role/provider/model, n8n execution references, two-stage correlation, required sections and role-specific output cues; not domain truth"
+  },
+  "statuses": {
+    "live_inference": "PASS",
+    "specialist_artifact": "FAIL",
+    "reviewed": "CAPTURED",
+    "reviewer_verdict": "REVISE",
+    "role_tool_capability": "NOT_GRANTED",
+    "human_expert_approved": false,
+    "review_outcome": "REVISE"
+  },
+  "restrictions": {
+    "live_codex_calls": 0,
+    "paid_api_calls": 0,
+    "external_actions": 0,
+    "public_deployments": 0
+  }
+}

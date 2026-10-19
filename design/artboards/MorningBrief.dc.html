@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>Morning Brief</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'IBM Plex Sans Arabic','IBM Plex Sans',sans-serif;background:#F4F7FC;color:#0E121C}
+a{color:#4F5FA0}a:hover{color:#2B3358}
+</style>
+</helmet>
+<div style="width:390px;height:844px;position:relative;overflow:hidden;background:#F4F7FC;box-sizing:border-box;font-family:'IBM Plex Sans Arabic','IBM Plex Sans',sans-serif;color:#0E121C;display:flex;flex-direction:column;padding:16px 20px 32px;">
+  <div style="display:flex;align-items:center;justify-content:space-between;">
+    <span style="font-size:13px;line-height:20px;font-weight:500;color:#5A6478;">الإثنين 28 سبتمبر · <bdi>07:02</bdi></span>
+    <a href="Main.dc.html" aria-label="إغلاق الموجز" style="flex:none;display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;color:#3A4256;text-decoration:none;">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+    </a>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:8px;margin-top:12px;">
+    <svg width="40" height="28" viewBox="0 0 40 28" aria-hidden="true">
+      <path d="M12 2 C12.8 8.5 15.5 11.2 22 12 C15.5 12.8 12.8 15.5 12 22 C11.2 15.5 8.5 12.8 2 12 C8.5 11.2 11.2 8.5 12 2Z" fill="#E0A93B"></path>
+      <path d="M30 14 C30.4 17.3 31.7 18.6 35 19 C31.7 19.4 30.4 20.7 30 24 C29.6 20.7 28.3 19.4 25 19 C28.3 18.6 29.6 17.3 30 14Z" fill="#9BC4EE"></path>
+    </svg>
+    <h1 style="margin:0;font-size:28px;line-height:36px;font-weight:700;">صباح الخير، وجدان</h1>
+    <p style="margin:0;font-size:16px;line-height:26px;color:#3A4256;">كيف طاقتك اليوم؟ اختاري وحدة، والخطة تتكيّف معك.</p>
+  </div>
+
+  <div role="group" aria-label="طاقتي اليوم" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:24px;">
+    <sc-for list="{{energies}}" as="e" hint-placeholder-count="3">
+      <button type="button" onClick="{{e.pick}}" aria-pressed="{{e.pressed}}" style="{{e.style}}">
+        <span style="{{e.iconWrap}}">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{e.icon}}"></path></svg>
+        </span>
+        <span style="font-size:16px;line-height:24px;font-weight:600;">{{e.label}}</span>
+        <span style="font-size:12px;line-height:18px;font-weight:600;opacity:.9;">{{e.hint}}</span>
+      </button>
+    </sc-for>
+  </div>
+
+  <section aria-live="polite" style="margin-top:24px;background:#FFFFFF;border:1px solid #DCE3EF;border-radius:20px;padding:16px;display:flex;flex-direction:column;gap:10px;">
+    <span style="font-size:12px;line-height:18px;font-weight:600;color:#5A6478;">شكل يومك</span>
+    <div style="font-size:22px;line-height:30px;font-weight:700;color:#2B3358;">{{shape}}</div>
+    <p style="margin:0;font-size:14px;line-height:22px;color:#3A4256;">{{shapeNote}}</p>
+    <sc-if value="{{isRed}}" hint-placeholder-val="{{false}}">
+      <a href="TodayRed.dc.html" style="display:inline-flex;align-items:center;gap:6px;min-height:44px;font-size:14px;line-height:22px;font-weight:600;color:#5B4C99;text-decoration:none;">
+        شوفي نسخة اليوم الهادئة
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg>
+      </a>
+    </sc-if>
+  </section>
+
+  <section style="margin-top:12px;background:#FFFFFF;border:1px solid #DCE3EF;border-radius:20px;padding:16px;display:flex;align-items:center;gap:12px;">
+    <span style="flex:none;display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:#E1EEFB;color:#2D5F92;">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"></path></svg>
+    </span>
+    <div style="flex:1;min-width:0;">
+      <div style="font-size:12px;line-height:18px;font-weight:600;color:#5A6478;">أول خطوة</div>
+      <div style="font-size:16px;line-height:26px;font-weight:600;">سلسلة الصباح: كوب ماء</div>
+      <div style="font-size:13px;line-height:20px;font-weight:500;color:#5A6478;">أول حلقة في السلسلة — تجرّ الباقي بدون تفكير</div>
+    </div>
+  </section>
+
+  <div style="flex:1;"></div>
+
+  <a href="Main.dc.html" style="flex:none;display:flex;align-items:center;justify-content:center;height:52px;border-radius:16px;background:#6172B5;color:#FFFFFF;text-decoration:none;font-size:16px;line-height:24px;font-weight:600;">ابدئي يومي</a>
+  <a href="RoutinePlayer.dc.html" style="flex:none;display:flex;align-items:center;justify-content:center;min-height:44px;margin-top:8px;color:#4F5FA0;text-decoration:none;font-size:16px;line-height:24px;font-weight:600;">شغّلي سلسلة الصباح مباشرة</a>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { energy: 'green' };
+  }
+  renderVals() {
+    var self = this;
+    var cur = this.state.energy;
+    var defs = [
+      { id: 'green', label: 'جيدة', hint: 'يوم عادي', ink: '#2F6B4A', bg: '#E3F0E8', icon: 'M8 12a4 4 0 1 0 8 0a4 4 0 1 0-8 0M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4' },
+      { id: 'yellow', label: 'متوسطة', hint: 'نسخ أخف', ink: '#8A6412', bg: '#FBF1D6', icon: 'M4.5 8a3.5 3.5 0 1 0 7 0a3.5 3.5 0 1 0-7 0M8 1.5v1.5M1.5 8H3M3.4 3.4l1 1M7 21h10a4 4 0 0 0 .5-8 5.5 5.5 0 0 0-10.5 1.5A3.3 3.3 0 0 0 7 21z' },
+      { id: 'red', label: 'منخفضة', hint: 'الحد الأدنى', ink: '#5B4C99', bg: '#ECE8F7', icon: 'M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z' }
+    ];
+    var shapes = {
+      green: { shape: '3 أساسية · 2 صيانة · 1 متعة', note: 'خطتك العادية، ولكل عادة نسخة صغيرة إذا احتجتيها.' },
+      yellow: { shape: '2 أساسية · 2 صيانة · 1 متعة', note: 'نسخ أخف: الصيانة بالحد الأدنى، والأساسيات اثنتين بس.' },
+      red: { shape: '3 أساسيات صغيرة + متعة', note: 'نوم، عناية، وشي صغير واحد — ومتعة لك. هذا يكفي اليوم تمامًا.' }
+    };
+    var energies = defs.map(function (d) {
+      var sel = d.id === cur;
+      return {
+        label: d.label, hint: d.hint, icon: d.icon,
+        pressed: sel ? 'true' : 'false',
+        style: 'display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;min-height:132px;padding:12px 8px;border-radius:20px;cursor:pointer;font-family:inherit;box-sizing:border-box;color:' + d.ink + ';background:' + (sel ? d.bg : '#FFFFFF') + ';border:' + (sel ? '2px solid ' + d.ink : '1px solid #DCE3EF') + ';',
+        iconWrap: 'display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:' + (sel ? '#FFFFFF' : d.bg) + ';',
+        pick: function () { self.setState({ energy: d.id }); }
+      };
+    });
+    return {
+      energies: energies,
+      shape: shapes[cur].shape,
+      shapeNote: shapes[cur].note,
+      isRed: cur === 'red'
+    };
+  }
+}
+</script>
+</body>
+</html>

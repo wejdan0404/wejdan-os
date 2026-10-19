@@ -1,0 +1,66 @@
+{
+  "schema_version": "local-lifecycle-test.v1",
+  "tested_at": "2026-10-19T05:37:10.733Z",
+  "result": "PASS",
+  "checks": [
+    {
+      "name": "unknown reviewer rejected before task/inference",
+      "result": "PASS",
+      "detail": "HTTP 400; tasks 0→0"
+    },
+    {
+      "name": "single-stage local dispatch and memory persistence",
+      "result": "PASS",
+      "detail": "{\"status\":\"completed\",\"steps\":1,\"memory\":2}"
+    },
+    {
+      "name": "task export includes scoped memory and confirmed delete removes it",
+      "result": "PASS",
+      "detail": "{\"export_memory\":2,\"delete_http\":200,\"after_delete\":404}"
+    },
+    {
+      "name": "mismatched task/trace/role correlation fails closed and persists",
+      "result": "PASS",
+      "detail": "{\"http\":502,\"task_status\":\"failed\",\"step_status\":\"failed\"}"
+    },
+    {
+      "name": "empty model output fails closed and persists",
+      "result": "PASS",
+      "detail": "{\"http\":502,\"error\":\"LOCAL_EMPTY_OUTPUT\"}"
+    },
+    {
+      "name": "reviewer correlation failure preserves producer and fails overall task",
+      "result": "PASS",
+      "detail": "{\"http\":502,\"task_status\":\"failed\",\"step_statuses\":[\"completed\",\"failed\"]}"
+    },
+    {
+      "name": "queued cancellation prevents any model/n8n dispatch",
+      "result": "PASS",
+      "detail": "{\"status\":\"cancelled\",\"stub_calls\":6,\"before_cancel\":6,\"active_status\":\"running\"}"
+    },
+    {
+      "name": "running cancellation is honest and applied at a safe checkpoint",
+      "result": "PASS",
+      "detail": "{\"cancel_http\":202,\"status\":\"cancelled\",\"step_status\":\"completed\",\"note\":\"Cancelled at producer checkpoint; an already-running local n8n/Ollama call was allowed to finish.\"}"
+    },
+    {
+      "name": "retry creates linked attempt with fresh task and trace IDs",
+      "result": "PASS",
+      "detail": "{\"attempt\":2,\"parent_task_id\":\"task_f45ae33e-953e-450e-a030-66f09cb23236\",\"status\":\"failed\"}"
+    },
+    {
+      "name": "restart recovery marks interrupted task/step failed without replay",
+      "result": "PASS",
+      "detail": "{\"task_status\":\"failed\",\"step_status\":\"failed\",\"stub_calls\":10}"
+    }
+  ],
+  "mock_only": true,
+  "external_calls": 0,
+  "paid_provider_calls": 0,
+  "bindings": [
+    "127.0.0.1"
+  ],
+  "stub_endpoint": "http://127.0.0.1:8768",
+  "api_port": 8767,
+  "note": "Stub outputs validate API lifecycle, correlation, cancellation/retry, and memory handling only; real producer-reviewer inference is evidenced separately by local n8n executions. Running n8n/Ollama inference cannot be interrupted and is cancelled at a task checkpoint."
+}

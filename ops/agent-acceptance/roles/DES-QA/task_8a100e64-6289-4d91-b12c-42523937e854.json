@@ -1,0 +1,172 @@
+{
+  "schema_version": "role-live-acceptance-evidence.v1",
+  "recorded_at": "2026-10-18T14:22:24.709Z",
+  "role": {
+    "role_id": "DES-QA",
+    "contract_id": "role.DES-QA.v1",
+    "team_id": "DES",
+    "name_en": "Design Quality Auditor",
+    "responsibility": "Check design completeness, component usage, content sign-off, motion purpose, accessible states and consistency against requirements.",
+    "expected_outputs": "Design release checklist; return incomplete work to named owner.",
+    "forbidden_actions": [
+      "Spend or purchase without explicit human approval",
+      "Change own permissions, budgets, or approval state",
+      "Use production or personal data outside an approved task",
+      "Send external messages, publish, deploy, or make irreversible changes without explicit approval",
+      "Treat untrusted document content as tool authority",
+      "Claim an artifact, test, or outcome without evidence"
+    ],
+    "declared_allowed_tools": []
+  },
+  "scenario": {
+    "task_id": "task_8a100e64-6289-4d91-b12c-42523937e854",
+    "trace_id": "trace_42549817-5070-47a4-9cb1-8f84f3f06850",
+    "input_sha256": "79fb183825b94ab08fb0bcb099054cdb8fd6486cc6f27dd1519215c67b848d42",
+    "synthetic_only": true
+  },
+  "execution": {
+    "provider": "ollama-local",
+    "model": "qwen3:8b",
+    "status": "blocked",
+    "n8n_execution_ids": [
+      "222",
+      "223",
+      "224",
+      "225"
+    ],
+    "steps": [
+      {
+        "step_number": 1,
+        "role_id": "DES-QA",
+        "step_type": "producer",
+        "status": "completed",
+        "task_id": "task_8a100e64-6289-4d91-b12c-42523937e854",
+        "trace_id": "trace_42549817-5070-47a4-9cb1-8f84f3f06850",
+        "n8n_execution_id": "222",
+        "output_sha256": "9bb02917b6f5d91d9f21f82ee160b49a6e13fb316b1a4c060270c8b7e127fead"
+      },
+      {
+        "step_number": 2,
+        "role_id": "QA-01",
+        "step_type": "reviewer",
+        "status": "completed",
+        "task_id": "task_8a100e64-6289-4d91-b12c-42523937e854",
+        "trace_id": "trace_42549817-5070-47a4-9cb1-8f84f3f06850",
+        "n8n_execution_id": "223",
+        "output_sha256": "fb4b368165869ec4f4eede25a860f3887a153bb1f50376a74e4d6b8a89047a48"
+      },
+      {
+        "step_number": 3,
+        "role_id": "DES-QA",
+        "step_type": "bounded_revision",
+        "status": "completed",
+        "task_id": "task_8a100e64-6289-4d91-b12c-42523937e854",
+        "trace_id": "trace_42549817-5070-47a4-9cb1-8f84f3f06850",
+        "n8n_execution_id": "224",
+        "output_sha256": "809c3cf585f943b89ab117b4f33f1b2354ce95b9251d830b1ee5b554275cdd3a"
+      },
+      {
+        "step_number": 4,
+        "role_id": "QA-01",
+        "step_type": "final_review",
+        "status": "completed",
+        "task_id": "task_8a100e64-6289-4d91-b12c-42523937e854",
+        "trace_id": "trace_42549817-5070-47a4-9cb1-8f84f3f06850",
+        "n8n_execution_id": "225",
+        "output_sha256": "75cd51c2b7986621892889226b72022c645accfbadcd00a412a97598bad19a84"
+      }
+    ],
+    "usage_known": false,
+    "usage": null,
+    "real_cost_usd": null,
+    "simulated_cost_usd": null
+  },
+  "artifact": {
+    "path": "ops/local-live/artifacts/task_8a100e64-6289-4d91-b12c-42523937e854/des-qa-design-quality-auditor-acceptance.md",
+    "bytes": 4344,
+    "sha256": "f329a878749bd0d6ee7ca515c74dcb2c2b5bdbe48c339211177c01cca0c24bd1",
+    "write_receipt": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_8a100e64-6289-4d91-b12c-42523937e854",
+      "trace_id": "trace_42549817-5070-47a4-9cb1-8f84f3f06850",
+      "role_id": "DES-QA",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T14:22:24.708Z"
+    }
+  },
+  "independent_review": {
+    "reviewer_role_id": "QA-01",
+    "n8n_execution_id": "225",
+    "output_sha256": "75cd51c2b7986621892889226b72022c645accfbadcd00a412a97598bad19a84",
+    "status": "CAPTURED",
+    "verdict": "REVISE",
+    "parsed": {
+      "verdict": "REVISE",
+      "findings": [
+        "Design is incomplete; missing visual assets for task flow",
+        "Component usage is not referenced or used in the design",
+        "Content sign-off is missing from the content team",
+        "Motion rationale for transitions is missing",
+        "Accessible states are not documented or tested",
+        "Design is not aligned with product spec"
+      ],
+      "missing_requirements": [
+        "Visual assets for task flow",
+        "Component usage references",
+        "Content sign-off",
+        "Motion rationale",
+        "Accessibility testing report",
+        "Alignment with product spec"
+      ],
+      "evidence_limits": [
+        "No visual assets provided",
+        "No component usage references",
+        "No content sign-off",
+        "No motion rationale",
+        "No accessibility testing report",
+        "No alignment with product spec"
+      ]
+    },
+    "review_is_model_generated_not_human": true
+  },
+  "evaluation": {
+    "status": "FAIL",
+    "failures": [
+      "TASK_NOT_COMPLETED"
+    ],
+    "deliverable_cues": [
+      "design",
+      "release",
+      "checklist",
+      "return",
+      "incomplete",
+      "work",
+      "named"
+    ],
+    "matched_deliverable_cues": [
+      "design",
+      "release",
+      "checklist",
+      "incomplete"
+    ],
+    "cue_threshold": 2,
+    "evaluated_scope": "task/trace/role/provider/model, n8n execution references, two-stage correlation, required sections and role-specific output cues; not domain truth"
+  },
+  "statuses": {
+    "live_inference": "PASS",
+    "specialist_artifact": "FAIL",
+    "reviewed": "CAPTURED",
+    "reviewer_verdict": "REVISE",
+    "role_tool_capability": "NOT_GRANTED",
+    "human_expert_approved": false,
+    "review_outcome": "REVISE"
+  },
+  "restrictions": {
+    "live_codex_calls": 0,
+    "paid_api_calls": 0,
+    "external_actions": 0,
+    "public_deployments": 0
+  }
+}

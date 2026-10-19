@@ -1,0 +1,42 @@
+{
+  "schema_version": "codex-subscription-state-reconciliation.v1",
+  "reconciled_at": "2026-10-18",
+  "historical_cli_auth": {
+    "status": "CLI_AUTH_VERIFIED",
+    "method": "ChatGPT account sign-in",
+    "evidence": "ops/evidence/codex-subscription-pilot.json",
+    "note": "The legacy status string CODEX_SUBSCRIPTION_LIVE in the pilot file refers only to its single direct CLI invocation before integration."
+  },
+  "cli_direct_live": {
+    "status": "CLI_DIRECT_LIVE_VERIFIED",
+    "invocations": 1,
+    "usage": { "input_tokens": 20441, "output_tokens": 40 },
+    "cost_usd": null,
+    "usage_is_reported_not_inferred": true
+  },
+  "app_mock_integration": {
+    "status": "APP_MOCK_INTEGRATION_VERIFIED_HISTORICAL",
+    "evidence": "ops/evidence/codex-subscription-integration.json",
+    "live_codex_calls": 0,
+    "paid_api_calls": 0,
+    "n8n_runs": 0
+  },
+  "app_codex_live_e2e": {
+    "status": "NOT_VERIFIED",
+    "required_approval": "One additional synthetic API-to-Codex subscription call",
+    "dispatch_enabled": false
+  },
+  "provider_policy": {
+    "desired_provider": "user-selected-per-task",
+    "effective_provider": "ollama-local default",
+    "usage_known_for_app_e2e": false,
+    "real_cost_usd": null,
+    "simulated_cost_usd": null
+  },
+  "ll09_activity": {
+    "live_codex_calls": 0,
+    "paid_api_calls": 0,
+    "n8n_runs": 0,
+    "cloud_projects_touched": []
+  }
+}

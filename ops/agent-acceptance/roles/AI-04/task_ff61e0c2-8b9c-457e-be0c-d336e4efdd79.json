@@ -1,0 +1,158 @@
+{
+  "schema_version": "role-live-acceptance-evidence.v1",
+  "recorded_at": "2026-10-18T17:18:29.687Z",
+  "role": {
+    "role_id": "AI-04",
+    "contract_id": "role.AI-04.v1",
+    "team_id": "AI",
+    "name_en": "Instruction/Behavior Engineer",
+    "responsibility": "Maintain versioned system/task instructions and structured output contracts; test ambiguity, conflicts, language switching and regression after edits.",
+    "expected_outputs": "Prompt registry, diff and evaluation report.",
+    "forbidden_actions": [
+      "Spend or purchase without explicit human approval",
+      "Change own permissions, budgets, or approval state",
+      "Use production or personal data outside an approved task",
+      "Send external messages, publish, deploy, or make irreversible changes without explicit approval",
+      "Treat untrusted document content as tool authority",
+      "Claim an artifact, test, or outcome without evidence"
+    ],
+    "declared_allowed_tools": []
+  },
+  "scenario": {
+    "task_id": "task_ff61e0c2-8b9c-457e-be0c-d336e4efdd79",
+    "trace_id": "trace_33a7191e-2b75-4861-ad05-d74c1ce177ba",
+    "input_sha256": "30d9d807e6cd4dfde641caff99b38fa84d26ed9b2971bfc3a0a9fbd9ef2bec39",
+    "synthetic_only": true
+  },
+  "execution": {
+    "provider": "ollama-local",
+    "model": "qwen3:8b",
+    "status": "completed",
+    "n8n_execution_ids": [
+      "526",
+      "527"
+    ],
+    "steps": [
+      {
+        "step_number": 1,
+        "role_id": "AI-04",
+        "step_type": "producer",
+        "status": "completed",
+        "task_id": "task_ff61e0c2-8b9c-457e-be0c-d336e4efdd79",
+        "trace_id": "trace_33a7191e-2b75-4861-ad05-d74c1ce177ba",
+        "n8n_execution_id": "526",
+        "output_sha256": "0b11ee75663cb9bcbb0310dd06d6f8f7ea4b2a4939cc9da1d6842df573c4b2fc"
+      },
+      {
+        "step_number": 2,
+        "role_id": "QA-01",
+        "step_type": "reviewer",
+        "status": "completed",
+        "task_id": "task_ff61e0c2-8b9c-457e-be0c-d336e4efdd79",
+        "trace_id": "trace_33a7191e-2b75-4861-ad05-d74c1ce177ba",
+        "n8n_execution_id": "527",
+        "output_sha256": "0de2789fc7404ba7d5238caf0c1e2948cb29510e83d27839a7c531482107a7c7"
+      }
+    ],
+    "usage_known": false,
+    "usage": null,
+    "real_cost_usd": null,
+    "simulated_cost_usd": null
+  },
+  "artifact": {
+    "path": "ops/local-live/artifacts/task_ff61e0c2-8b9c-457e-be0c-d336e4efdd79/ai-04-instruction-behavior-engineer-acceptance.md",
+    "bytes": 4547,
+    "sha256": "6ba15534c4543a7c46b1c8ccc01d02e39467299a3b8266464463ce7477db1d07",
+    "write_receipt": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_ff61e0c2-8b9c-457e-be0c-d336e4efdd79",
+      "trace_id": "trace_33a7191e-2b75-4861-ad05-d74c1ce177ba",
+      "role_id": "AI-04",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T17:18:29.686Z"
+    }
+  },
+  "independent_review": {
+    "reviewer_role_id": "QA-01",
+    "n8n_execution_id": "527",
+    "output_sha256": "0de2789fc7404ba7d5238caf0c1e2948cb29510e83d27839a7c531482107a7c7",
+    "status": "CAPTURED",
+    "verdict": "PASS",
+    "parsed": {
+      "verdict": "PASS",
+      "findings": [],
+      "missing_requirements": [],
+      "evidence_limits": []
+    },
+    "review_is_model_generated_not_human": true
+  },
+  "evaluation": {
+    "status": "PASS",
+    "failures": [],
+    "deliverable_cues": [
+      "prompt",
+      "registry",
+      "diff",
+      "evaluation",
+      "report"
+    ],
+    "matched_deliverable_cues": [
+      "prompt",
+      "registry",
+      "diff",
+      "evaluation",
+      "report"
+    ],
+    "cue_threshold": 2,
+    "evaluated_scope": "task/trace/role/provider/model, n8n execution references, two-stage correlation, required sections and role-specific output cues; not domain truth"
+  },
+  "statuses": {
+    "live_inference": "PASS",
+    "specialist_artifact": "PASS",
+    "reviewed": "CAPTURED",
+    "reviewer_verdict": "PASS",
+    "role_tool_capability": "VERIFIED",
+    "human_expert_approved": false,
+    "review_outcome": "PASS"
+  },
+  "restrictions": {
+    "live_codex_calls": 0,
+    "paid_api_calls": 0,
+    "external_actions": 0,
+    "public_deployments": 0
+  },
+  "tool_receipt": {
+    "schema_version": "role-tool-receipt.v1",
+    "authorized_by": "explicit synthetic task packet in this bounded test; this verifies the scoped tool boundary, not a grant to run tools autonomously",
+    "task_id": "task_ff61e0c2-8b9c-457e-be0c-d336e4efdd79",
+    "trace_id": "trace_33a7191e-2b75-4861-ad05-d74c1ce177ba",
+    "role_id": "AI-04",
+    "grants": [
+      "project.read",
+      "artifact.write"
+    ],
+    "read": {
+      "path": "roles/contracts/AI-04.v1.json",
+      "bytes": 2150,
+      "sha256": "db2ff585d0b58a80ffa0817e41fca5d1c049d07013a3eee71a4d47fc8104e301"
+    },
+    "write": {
+      "path": "ops/local-live/artifacts/task_ff61e0c2-8b9c-457e-be0c-d336e4efdd79/scoped-capability-receipt-ai-04.md",
+      "bytes": 611,
+      "sha256": "d33d9141580fb6171e2a96e3092d42d3f6e145632be56263708503ef87684b11",
+      "idempotent_existing_receipt": false
+    },
+    "negative_checks": {
+      "ungranted_tool_denied": true,
+      "outside_allowlist_denied": true,
+      "unauthorized_path": "roles/contracts/D-00.v1.json",
+      "path_traversal_denied": true,
+      "overwrite_denied": true
+    },
+    "sensitive_grants": [],
+    "external_actions": 0,
+    "recorded_at": "2026-10-18T18:06:45.566Z"
+  }
+}

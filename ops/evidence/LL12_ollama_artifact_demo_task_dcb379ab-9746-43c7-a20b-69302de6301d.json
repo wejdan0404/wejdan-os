@@ -1,0 +1,80 @@
+{
+  "schema_version": "ll12-ollama-artifact-demo.v1",
+  "verified_at": "2026-10-18T09:00:47.906Z",
+  "status": "PREPARATORY_EVIDENCE_NOT_GATE_COMPLETE",
+  "task_id": "task_dcb379ab-9746-43c7-a20b-69302de6301d",
+  "trace_id": "trace_ebd0245d-18fc-4bf9-9d61-49297839ae9a",
+  "roles": {
+    "planner": "D-00",
+    "specialist": "PMO-01",
+    "reviewer": "QA-01"
+  },
+  "artifact": {
+    "path": "ops/local-live/artifacts/task_dcb379ab-9746-43c7-a20b-69302de6301d/codex-adapter-hardening-implementation-note.md",
+    "bytes": 707,
+    "sha256": "62b42794af5b25054ed6e2f7c15adab0dc6d26da943a92e933a14f0bba1dcc2a",
+    "provenance": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_dcb379ab-9746-43c7-a20b-69302de6301d",
+      "trace_id": "trace_ebd0245d-18fc-4bf9-9d61-49297839ae9a",
+      "role_id": "PMO-01",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T09:00:47.901Z"
+    }
+  },
+  "artifact_readback_bytes": 707,
+  "revision_count": 0,
+  "review": {
+    "verdict": "PASS",
+    "feedback": "The draft effectively communicates the current state of the Codex adapter hardening work, aligns with the provided facts, and avoids unsupported claims. It clearly states the scope, verified facts, and next steps without inventing any release, external action, or completed milestone.",
+    "unsupported_claims": []
+  },
+  "review_scope": "structural only; no independent factual certification",
+  "stages": [
+    {
+      "role_id": "D-00",
+      "stage": "planner",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "elapsed_ms": 2245,
+      "usage": {
+        "input_tokens": 198,
+        "output_tokens": 219
+      }
+    },
+    {
+      "role_id": "PMO-01",
+      "stage": "specialist",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "elapsed_ms": 1102,
+      "usage": {
+        "input_tokens": 279,
+        "output_tokens": 101
+      }
+    },
+    {
+      "role_id": "QA-01",
+      "stage": "reviewer",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "elapsed_ms": 829,
+      "usage": {
+        "input_tokens": 289,
+        "output_tokens": 76
+      }
+    }
+  ],
+  "local_inference_calls": 3,
+  "input_tokens_reported": 766,
+  "output_tokens_reported": 396,
+  "real_cost_usd": null,
+  "simulated_cost_usd": null,
+  "provider_cost_status": "local electricity unmeasured",
+  "live_codex_calls": 0,
+  "paid_api_calls": 0,
+  "n8n_runs": 0,
+  "limitation": "This pipeline demo is not integrated with the persistent task database; LL09 runtime activation and LL10 remain incomplete. Same local model was invoked separately in planner/reviewer roles; this is not an independent model or human factual review."
+}

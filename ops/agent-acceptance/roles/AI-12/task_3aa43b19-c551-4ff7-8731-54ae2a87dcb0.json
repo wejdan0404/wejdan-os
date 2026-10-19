@@ -1,0 +1,169 @@
+{
+  "schema_version": "role-live-acceptance-evidence.v1",
+  "recorded_at": "2026-10-18T14:27:42.301Z",
+  "role": {
+    "role_id": "AI-12",
+    "contract_id": "role.AI-12.v1",
+    "team_id": "AI",
+    "name_en": "AI Evaluation Engineer",
+    "responsibility": "Build golden datasets of normal, ambiguous, missing, conflicting, multilingual, dialectal and malicious cases; compare model/prompt/tool versions; calibrate automated graders with human review.",
+    "expected_outputs": "Versioned eval dataset, metrics and regression gate; measure end state, not self-reported success.",
+    "forbidden_actions": [
+      "Spend or purchase without explicit human approval",
+      "Change own permissions, budgets, or approval state",
+      "Use production or personal data outside an approved task",
+      "Send external messages, publish, deploy, or make irreversible changes without explicit approval",
+      "Treat untrusted document content as tool authority",
+      "Claim an artifact, test, or outcome without evidence"
+    ],
+    "declared_allowed_tools": []
+  },
+  "scenario": {
+    "task_id": "task_3aa43b19-c551-4ff7-8731-54ae2a87dcb0",
+    "trace_id": "trace_687ee3ce-686c-4ecb-8dc3-f18a46a89dd0",
+    "input_sha256": "b51627d6cfc50f1a2b7b0868cfdc327a96adcae539068ae64d7d0f6ef0c2cb30",
+    "synthetic_only": true
+  },
+  "execution": {
+    "provider": "ollama-local",
+    "model": "qwen3:8b",
+    "status": "blocked",
+    "n8n_execution_ids": [
+      "260",
+      "261",
+      "262",
+      "263"
+    ],
+    "steps": [
+      {
+        "step_number": 1,
+        "role_id": "AI-12",
+        "step_type": "producer",
+        "status": "completed",
+        "task_id": "task_3aa43b19-c551-4ff7-8731-54ae2a87dcb0",
+        "trace_id": "trace_687ee3ce-686c-4ecb-8dc3-f18a46a89dd0",
+        "n8n_execution_id": "260",
+        "output_sha256": "e590d9e54f0a0101c2ae21b8aebe646c377d2d04a59c16e8b316020e30d8866b"
+      },
+      {
+        "step_number": 2,
+        "role_id": "QA-01",
+        "step_type": "reviewer",
+        "status": "completed",
+        "task_id": "task_3aa43b19-c551-4ff7-8731-54ae2a87dcb0",
+        "trace_id": "trace_687ee3ce-686c-4ecb-8dc3-f18a46a89dd0",
+        "n8n_execution_id": "261",
+        "output_sha256": "ce7bfe21cbcddd7dadfdebea1b4a901eb3497157d4274482af00e6fafa387acf"
+      },
+      {
+        "step_number": 3,
+        "role_id": "AI-12",
+        "step_type": "bounded_revision",
+        "status": "completed",
+        "task_id": "task_3aa43b19-c551-4ff7-8731-54ae2a87dcb0",
+        "trace_id": "trace_687ee3ce-686c-4ecb-8dc3-f18a46a89dd0",
+        "n8n_execution_id": "262",
+        "output_sha256": "55677e624402391bf480d1c452119f44278f41812a198ed366cea8502dd8487f"
+      },
+      {
+        "step_number": 4,
+        "role_id": "QA-01",
+        "step_type": "final_review",
+        "status": "completed",
+        "task_id": "task_3aa43b19-c551-4ff7-8731-54ae2a87dcb0",
+        "trace_id": "trace_687ee3ce-686c-4ecb-8dc3-f18a46a89dd0",
+        "n8n_execution_id": "263",
+        "output_sha256": "997abf225d243cd2124ba1d6884c7571c7ba6488e93b129ca7b289e25759d101"
+      }
+    ],
+    "usage_known": false,
+    "usage": null,
+    "real_cost_usd": null,
+    "simulated_cost_usd": null
+  },
+  "artifact": {
+    "path": "ops/local-live/artifacts/task_3aa43b19-c551-4ff7-8731-54ae2a87dcb0/ai-12-ai-evaluation-engineer-acceptance.md",
+    "bytes": 7539,
+    "sha256": "d4ff2314e8836284895c0e457111dad6fc478539fb5e8969f6f7b7d09ff18770",
+    "write_receipt": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_3aa43b19-c551-4ff7-8731-54ae2a87dcb0",
+      "trace_id": "trace_687ee3ce-686c-4ecb-8dc3-f18a46a89dd0",
+      "role_id": "AI-12",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T14:27:42.300Z"
+    }
+  },
+  "independent_review": {
+    "reviewer_role_id": "QA-01",
+    "n8n_execution_id": "263",
+    "output_sha256": "997abf225d243cd2124ba1d6884c7571c7ba6488e93b129ca7b289e25759d101",
+    "status": "CAPTURED",
+    "verdict": "REVISE",
+    "parsed": {
+      "verdict": "REVISE",
+      "findings": [
+        "The dataset is based on a fictional scenario and may not reflect real-world use cases.",
+        "The definitions of ambiguous and conflicting cases are not fully specified.",
+        "The effectiveness of multilingual and dialectal cases depends on the model's language capabilities."
+      ],
+      "missing_requirements": [
+        "Real-world user data for validation.",
+        "Detailed definitions for ambiguous and conflicting cases.",
+        "Evaluation of multilingual and dialectal cases with actual language data."
+      ],
+      "evidence_limits": [
+        "No real-world data is used for the evaluation.",
+        "The malicious case is a hypothetical scenario.",
+        "The dataset is limited to the fictional planning exercise."
+      ]
+    },
+    "review_is_model_generated_not_human": true
+  },
+  "evaluation": {
+    "status": "FAIL",
+    "failures": [
+      "TASK_NOT_COMPLETED"
+    ],
+    "deliverable_cues": [
+      "versioned",
+      "eval",
+      "dataset",
+      "metrics",
+      "regression",
+      "gate",
+      "measure",
+      "state",
+      "self-reported",
+      "success"
+    ],
+    "matched_deliverable_cues": [
+      "versioned",
+      "dataset",
+      "metrics",
+      "regression",
+      "gate",
+      "measure",
+      "state"
+    ],
+    "cue_threshold": 2,
+    "evaluated_scope": "task/trace/role/provider/model, n8n execution references, two-stage correlation, required sections and role-specific output cues; not domain truth"
+  },
+  "statuses": {
+    "live_inference": "PASS",
+    "specialist_artifact": "FAIL",
+    "reviewed": "CAPTURED",
+    "reviewer_verdict": "REVISE",
+    "role_tool_capability": "NOT_GRANTED",
+    "human_expert_approved": false,
+    "review_outcome": "REVISE"
+  },
+  "restrictions": {
+    "live_codex_calls": 0,
+    "paid_api_calls": 0,
+    "external_actions": 0,
+    "public_deployments": 0
+  }
+}

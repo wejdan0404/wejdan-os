@@ -1,0 +1,1143 @@
+[
+ {
+  "action_id": "BODY-01",
+  "area": "physical activity guideline",
+  "name_en": "Weekly aerobic activity target",
+  "name_ar": "هدف النشاط الهوائي الأسبوعي",
+  "what": "Accumulate moderate-intensity aerobic activity (e.g., brisk walking, dancing, cycling) across the week; count every session, including short chunks.",
+  "dose": "150-300 min/week moderate OR 75-150 min/week vigorous, or an equivalent combination (WHO 2020; Saudi MOH: at least 150 min moderate or 75 min vigorous, up to 300 min moderate for more benefit). CDC: can be split into smaller chunks, e.g., 30 min x 5 days.",
+  "why": "WHO states some activity is better than none and more is better; meeting the weekly range provides health benefits for adults.",
+  "evidence_strength": "Guideline",
+  "sources": [
+   {
+    "type": "PMID",
+    "id": "33239350",
+    "title": "World Health Organization 2020 guidelines on physical activity and sedentary behaviour",
+    "year": 2020,
+    "verified_by": "eutils"
+   },
+   {
+    "type": "URL",
+    "id": "https://www.moh.gov.sa/en/healthawareness/educationalcontent/miscellaneous/pages/physical-activity.aspx",
+    "title": "Saudi Ministry of Health - Physical Activity (health awareness)",
+    "year": null,
+    "verified_by": "webfetch"
+   },
+   {
+    "type": "URL",
+    "id": "https://www.cdc.gov/physical-activity-basics/guidelines/adults.html",
+    "title": "CDC - Physical activity guidelines for adults",
+    "year": null,
+    "verified_by": "webfetch"
+   },
+   {
+    "type": "PMID",
+    "id": "34484438",
+    "title": "The recommended amount of physical activity, sedentary behavior, and sleep duration for healthy Saudis: A joint consensus statement of the Saudi Public Health Authority",
+    "year": 2021,
+    "verified_by": "eutils"
+   }
+  ],
+  "cue_suggestion": "After Asr prayer on her 4 home-workout days; walking fills the other days.",
+  "minimum_version": "10 min brisk walk or one dance song block - it still counts toward the weekly total.",
+  "normal_version": "30-40 min moderate session (brisk walk or home cardio) on ~4-5 days/week to land in 150-300 min.",
+  "bonus_version": "Add 1-2 vigorous intervals sessions (e.g., stairs, fast dance) - 1 min vigorous is roughly equal to 2 min moderate in guideline math.",
+  "joy_pairing": "Pair with a favourite playlist/podcast used only during activity; rotate formats (walk, dance workout, cycling) weekly for novelty.",
+  "friction_down": "Weekly minutes bar in the app that auto-adds walks and workouts; shoes and mat kept visible; pre-chosen workout video queued the night before.",
+  "friction_up_for_competing": "Put the phone's entertainment apps behind a 'after movement' shortcut on workout days.",
+  "if_then_plan": "If it is Asr time on a workout day and I feel low energy, then I will do the 10-minute minimum version instead of skipping.",
+  "tracking_metric": "Active minutes this week (auto-sum) vs 150 target.",
+  "progression": "Self-paced: start from current weekly minutes and build toward 150, then toward 300 (sources state the range, not a weekly increase rate).",
+  "safety_or_stop_rule": "See BODY-25 stop rules. Walk outdoors only in cooler hours in Makkah/Jeddah heat.",
+  "schedule_slot": "afternoon",
+  "time_minutes_normal": 35,
+  "app_type": "Habit",
+  "priority_for_her": "Core",
+  "notes": "Umbrella target; BODY-02 (walking) and BODY-05 (strength) feed into it. 'Moderate' = can talk but not sing."
+ },
+ {
+  "action_id": "BODY-02",
+  "area": "walking",
+  "name_en": "Daily walk / step count",
+  "name_ar": "مشي يومي وعدد الخطوات",
+  "what": "Walk daily and track steps with the phone or a watch; raise the daily average gradually from her own baseline.",
+  "dose": "Dose-response evidence (observational): inflection at around 5,000-7,000 steps/day for all-cause mortality, CVD, dementia and falls; 7,000 vs 2,000 steps/day linked to 47% lower all-cause mortality (Ding 2025). In adults <60, mortality risk kept falling up to 8,000-10,000 steps/day (Paluch 2022). No official step target is set.",
+  "why": "More daily steps are associated with lower risk of death, heart disease and depressive symptoms, with most of the gain reached by about 7,000 steps/day.",
+  "evidence_strength": "SR/MA",
+  "sources": [
+   {
+    "type": "PMID",
+    "id": "40713949",
+    "title": "Daily steps and health outcomes in adults: a systematic review and dose-response meta-analysis",
+    "year": 2025,
+    "verified_by": "eutils"
+   },
+   {
+    "type": "PMID",
+    "id": "35247352",
+    "title": "Daily steps and all-cause mortality: a meta-analysis of 15 international cohorts",
+    "year": 2022,
+    "verified_by": "eutils"
+   }
+  ],
+  "cue_suggestion": "After Maghrib prayer (cooler hours) or right after a phone call - 'walk-and-talk'.",
+  "minimum_version": "1,000 extra steps: a 10-min walk around the house/mall corridor.",
+  "normal_version": "Reach ~7,000 steps/day on most days.",
+  "bonus_version": "8,000-10,000 steps via a longer evening walk with a friend/family member.",
+  "joy_pairing": "Walk-and-talk calls with a friend; audiobook or IELTS listening podcast only while walking (temptation bundle); malls or corniche for scenery.",
+  "friction_down": "Step widget on home screen; default walking route saved; comfortable shoes by the door.",
+  "friction_up_for_competing": "Take calls standing/walking by default.",
+  "if_then_plan": "If by 8 pm I am under 5,000 steps, then I will do a 15-minute indoor walk while listening to my podcast.",
+  "tracking_metric": "Steps today (auto from phone) + 7-day average.",
+  "progression": "Self-paced: raise 7-day average in small steps from baseline; sources give dose-response, not a ramp rate.",
+  "safety_or_stop_rule": "Avoid outdoor walking in peak heat; carry water; stop per BODY-25.",
+  "schedule_slot": "evening",
+  "time_minutes_normal": 30,
+  "app_type": "Habit",
+  "priority_for_her": "Core",
+  "notes": "10,000 is not an official threshold; Ding 2025 frames 7,000 as a realistic target. Evidence is observational (association, not proven cause)."
+ },
+ {
+  "action_id": "BODY-03",
+  "area": "sedentary time",
+  "name_en": "Break up sitting",
+  "name_ar": "كسر الجلوس الطويل",
+  "what": "Stand up and move (walk, stairs, a few squats) during long study/desk sessions.",
+  "dose": "Saudi PHA: reduce prolonged sitting and break it up as often as possible with at least light activity. WHO: reduce sedentary time (no threshold quantified). In crossover trials, interrupting sitting at least every 30 min lowered glucose more than less frequent breaks (Yin 2024).",
+  "why": "Replacing sitting with any activity carries health benefits, and frequent breaks improved post-meal glucose in lab trials.",
+  "evidence_strength": "Guideline",
+  "sources": [
+   {
+    "type": "URL",
+    "id": "https://faculty.ksu.edu.sa/sites/default/files/24hr_s_movement_practice_guidelines_for_saudi_arabia_1619026105.pdf",
+    "title": "Twenty-Four-Hour Movement Practice Guidelines for Saudi Arabia (PDF)",
+    "year": 2021,
+    "verified_by": "webfetch"
+   },
+   {
+    "type": "PMID",
+    "id": "33239350",
+    "title": "World Health Organization 2020 guidelines on physical activity and sedentary behaviour",
+    "year": 2020,
+    "verified_by": "eutils"
+   },
+   {
+    "type": "PMID",
+    "id": "39630056",
+    "title": "Optimal Frequency of Interrupting Prolonged Sitting for Cardiometabolic Health: A Systematic Review and Meta-Analysis of Randomized Crossover Trials",
+    "year": 2024,
+    "verified_by": "eutils"
+   },
+   {
+    "type": "PMID",
+    "id": "21694556",
+    "title": "ACSM position stand. Quantity and quality of exercise for developing and maintaining cardiorespiratory, musculoskeletal, and neuromotor fitness in apparently healthy adults",
+    "year": 2011,
+    "verified_by": "eutils"
+   }
+  ],
+  "cue_suggestion": "End of each Pomodoro/study block, or every time a video lesson ends.",
+  "minimum_version": "Stand and stretch 30 seconds.",
+  "normal_version": "2-3 min walk or stairs every ~30 min of sitting.",
+  "bonus_version": "Take calls and meeting-free reading standing or walking.",
+  "joy_pairing": "Use the break as a 'song break' - one song, move to it.",
+  "friction_down": "Timer built into the app's focus sessions; water bottle kept away from the desk so refills force a walk.",
+  "friction_up_for_competing": "Auto-pause autoplay on video platforms.",
+  "if_then_plan": "If my focus timer ends, then I will stand and walk until the next song ends.",
+  "tracking_metric": "Number of breaks taken today (tap per break).",
+  "progression": "self-paced",
+  "safety_or_stop_rule": "None specific.",
+  "schedule_slot": "midday",
+  "time_minutes_normal": 3,
+  "app_type": "System/automation",
+  "priority_for_her": "Core",
+  "notes": "Pairs with IELTS/UX study blocks. Sources do not set a daily sitting-hours limit."
+ },
+ {
+  "action_id": "BODY-04",
+  "area": "exercise snacks",
+  "name_en": "Exercise snacks (short vigorous bursts)",
+  "name_ar": "وجبات رياضية خفيفة",
+  "what": "Insert 1-2 minute bursts of vigorous effort into daily life: fast stairs, brisk uphill walking, fast squats or jumping jacks.",
+  "dose": "Observational: ~3 bouts/day of 1-2 min vigorous intermittent lifestyle activity was associated with 38-40% lower all-cause mortality in non-exercisers (UK Biobank, mean age ~62). Low-certainty SR: exercise snacks give a small improvement in neuromuscular performance in insufficiently active adults. No official dose.",
+  "why": "Brief vigorous bursts are associated with lower mortality and can be a starting point for people not doing structured exercise.",
+  "evidence_strength": "Observational",
+  "sources": [
+   {
+    "type": "PMID",
+    "id": "36482104",
+    "title": "Association of wearable device-measured vigorous intermittent lifestyle physical activity with mortality",
+    "year": 2022,
+    "verified_by": "eutils"
+   },
+   {
+    "type": "PMID",
+    "id": "42607816",
+    "title": "Effects of exercise snacking on neuromuscular performance in insufficiently active adults: A systematic review and meta-analysis",
+    "year": 2026,
+    "verified_by": "eutils"
+   }
+  ],
+  "cue_suggestion": "Every time she takes the stairs or before sitting down to study.",
+  "minimum_version": "One 1-minute burst (e.g., fast stair climb).",
+  "normal_version": "3 bursts across the day.",
+  "bonus_version": "Use on rest-from-workout days to keep momentum.",
+  "joy_pairing": "Treat it as a game: 'beat the song chorus' burst; streak confetti in the app.",
+  "friction_down": "No equipment, no changing clothes needed.",
+  "friction_up_for_competing": "Choose stairs over elevator as a default rule.",
+  "if_then_plan": "If I arrive at a building with stairs, then I will take them fast for the first flights.",
+  "tracking_metric": "Bursts today (0-3).",
+  "progression": "self-paced",
+  "safety_or_stop_rule": "Vigorous effort: stop per BODY-25 warning signs.",
+  "schedule_slot": "as-needed",
+  "time_minutes_normal": 3,
+  "app_type": "Habit",
+  "priority_for_her": "Optional",
+  "notes": "Mortality data come from an older cohort; treat as a supplement to, not replacement for, BODY-01 and BODY-05."
+ },
+ {
+  "action_id": "BODY-05",
+  "area": "home resistance training",
+  "name_en": "Home strength training with progression",
+  "name_ar": "تمارين القوة المنزلية مع التدرج",
+  "what": "Train all major muscle groups (legs, hips, back, abdomen, chest, shoulders, arms) at home with bodyweight, bands or dumbbells; progress when the current load becomes easy.",
+  "dose": "At least 2 days/week for all major muscle groups (WHO, CDC, Saudi MOH); ACSM: 2-3 days/week. Observational dose-response: maximum risk reduction at ~30-60 min/week of muscle-strengthening (Momma 2022). Novices: loads around 8-12 repetition maximum, 2-3 days/week; increase load 2-10% when she can do 1-2 reps more than target (ACSM 2009).",
+  "why": "Muscle-strengthening activity is associated with 10-17% lower risk of all-cause mortality, CVD, cancer and diabetes, independent of aerobic activity.",
+  "evidence_strength": "Guideline",
+  "sources": [
+   {
+    "type": "PMID",
+    "id": "33239350",
+    "title": "World Health Organization 2020 guidelines on physical activity and sedentary behaviour",
+    "year": 2020,
+    "verified_by": "eutils"
+   },
+   {
+    "type": "URL",
+    "id": "https://www.cdc.gov/physical-activity-basics/guidelines/adults.html",
+    "title": "CDC - Physical activity guidelines for adults",
+    "year": null,
+    "verified_by": "webfetch"
+   },
+   {
+    "type": "URL",
+    "id": "https://www.moh.gov.sa/en/healthawareness/educationalcontent/miscellaneous/pages/physical-activity.aspx",
+    "title": "Saudi Ministry of Health - Physical Activity (health awareness)",
+    "year": null,
+    "verified_by": "webfetch"
+   },
+   {
+    "type": "PMID",
+    "id": "21694556",
+    "title": "ACSM position stand. Quantity and quality of exercise for developing and maintaining cardiorespiratory, musculoskeletal, and neuromotor fitness in apparently healthy adults",
+    "year": 2011,
+    "verified_by": "eutils"
+   },
+   {
+    "type": "PMID",
+    "id": "19204579",
+    "title": "ACSM position stand. Progression models in resistance training for healthy adults",
+    "year": 2009,
+    "verified_by": "eutils"
+   },
+   {
+    "type": "PMID",
+    "id": "35228201",
+    "title": "Muscle-strengthening activities are associated with lower risk and mortality in major non-communicable diseases: a systematic review and meta-analysis of cohort studies",
+    "year": 2022,
+    "verified_by": "eutils"
+   }
+  ],
+  "cue_suggestion": "After Asr prayer on 2-3 of her 4 home-workout days (e.g., Sun/Tue/Thu).",
+  "minimum_version": "One circuit: squat, push-up (wall/knee), glute bridge, row with band - 1 set each.",
+  "normal_version": "20-30 min full-body session, 1-3 sets per exercise, reps in the 8-12 range to near-fatigue.",
+  "bonus_version": "Add a third weekly session or a harder variation (split squat, elevated push-up).",
+  "joy_pairing": "Upbeat playlist (BODY-11); 'new move of the week' for novelty; log a PR badge when a harder variation is unlocked.",
+  "friction_down": "Mat and bands stay out; one saved routine with video demos; no decision needed on the day.",
+  "friction_up_for_competing": "Workout starts before phone social time after Asr.",
+  "if_then_plan": "If I can do 2 reps more than my target on an exercise for two sessions, then I will move to the next harder variation or heavier weight.",
+  "tracking_metric": "Sessions this week (0-3) + top variation/weight per exercise.",
+  "progression": "ACSM 2009: increase load 2-10% when current load allows 1-2 reps above target. For bodyweight, a harder variation is the home equivalent (adaptation, not stated in source).",
+  "safety_or_stop_rule": "Controlled form; sharp joint pain = stop that exercise. See BODY-25.",
+  "schedule_slot": "afternoon",
+  "time_minutes_normal": 30,
+  "app_type": "Routine step",
+  "priority_for_her": "Core",
+  "notes": "The J-shaped curve (Momma 2022) means >60 min/week showed no extra observed benefit for some outcomes; no need to over-train."
+ },
+ {
+  "action_id": "BODY-06",
+  "area": "mobility/flexibility",
+  "name_en": "Stretching and mobility",
+  "name_ar": "تمارين المرونة والإطالة",
+  "what": "Stretch each major muscle-tendon group; end workouts or study days with a short mobility routine.",
+  "dose": "ACSM 2011: flexibility exercises for each major muscle-tendon group, a total of 60 s per exercise, on at least 2 days/week. Strength training itself also improves joint flexibility (SR, high risk of bias).",
+  "why": "Flexibility exercise maintains joint range of motion (ACSM).",
+  "evidence_strength": "Guideline",
+  "sources": [
+   {
+    "type": "PMID",
+    "id": "21694556",
+    "title": "ACSM position stand. Quantity and quality of exercise for developing and maintaining cardiorespiratory, musculoskeletal, and neuromotor fitness in apparently healthy adults",
+    "year": 2011,
+    "verified_by": "eutils"
+   },
+   {
+    "type": "PMID",
+    "id": "39787531",
+    "title": "The Influence of Resistance Training on Joint Flexibility in Healthy Adults: A Systematic Review, Meta-analysis, and Meta-regression",
+    "year": 2025,
+    "verified_by": "eutils"
+   }
+  ],
+  "cue_suggestion": "Immediately after a strength session, or after Isha before wind-down.",
+  "minimum_version": "3 stretches x 60 s (hips, hamstrings, chest).",
+  "normal_version": "8-10 min covering the major groups, 60 s total each.",
+  "bonus_version": "Guided mobility/yoga-style video on a rest day.",
+  "joy_pairing": "Calm playlist, dim warm light - doubles as a wind-down cue (BODY-17).",
+  "friction_down": "One saved 10-min routine; do it on the same mat.",
+  "friction_up_for_competing": "None needed.",
+  "if_then_plan": "If I finish a workout, then I will do my 60-second stretches before showering.",
+  "tracking_metric": "Mobility days this week (target 2+).",
+  "progression": "self-paced",
+  "safety_or_stop_rule": "Stretch to mild tension, not pain.",
+  "schedule_slot": "evening",
+  "time_minutes_normal": 10,
+  "app_type": "Routine step",
+  "priority_for_her": "Recommended",
+  "notes": "60 s may be split into shorter holds per the ACSM total-time framing."
+ },
+ {
+  "action_id": "BODY-07",
+  "area": "core/Pilates",
+  "name_en": "Pilates/core session for variety",
+  "name_ar": "بيلاتس/تمارين الجذع للتنويع",
+  "what": "Optional weekly Pilates-based session (online is fine) as an enjoyable variation within the strength/mobility plan.",
+  "dose": "not specified by source (SR: even once-weekly programs were associated with improvements, but optimal dose unclear).",
+  "why": "Pilates-based exercise showed benefits for quality of life and self-esteem; evidence for depression/anxiety is limited; remote and in-person delivery performed similarly in adults.",
+  "evidence_strength": "SR/MA",
+  "sources": [
+   {
+    "type": "PMID",
+    "id": "42188548",
+    "title": "Effects of Pilates-Based Exercise on Mental Health, Psychological Well-Being, and Quality of Life: A Systematic Review and Meta-Analysis",
+    "year": 2026,
+    "verified_by": "eutils"
+   }
+  ],
+  "cue_suggestion": "Weekend morning slot.",
+  "minimum_version": "15-min beginner video.",
+  "normal_version": "30-45 min class, once a week.",
+  "bonus_version": "Do it with a friend over video call.",
+  "joy_pairing": "Try different instructors for novelty; it counts as a 'fun' workout day.",
+  "friction_down": "Save 3 favourite videos in the app.",
+  "friction_up_for_competing": "None.",
+  "if_then_plan": "If I feel bored of my strength routine, then I will swap one session for Pilates that week.",
+  "tracking_metric": "Pilates done this week (yes/no).",
+  "progression": "self-paced",
+  "safety_or_stop_rule": "Stop if back pain worsens; see professional if persistent.",
+  "schedule_slot": "weekly",
+  "time_minutes_normal": 30,
+  "app_type": "Weekly task",
+  "priority_for_her": "Optional",
+  "notes": "Evidence is heterogeneous (I2 ~92%) and mixes clinical/non-clinical groups; do not claim posture or 'core-fixes-back-pain' benefits from this source."
+ },
+ {
+  "action_id": "BODY-08",
+  "area": "posture/ergonomics",
+  "name_en": "Desk setup and micro-breaks",
+  "name_ar": "تهيئة المكتب واستراحات قصيرة",
+  "what": "Set up a comfortable laptop/desk arrangement and, more importantly, change position and take brief breaks.",
+  "dose": "not specified by source. Cochrane: workstation adjustment and sit-stand desks showed no effect on upper-limb pain; supplementary breaks had very-low-quality evidence of reducing neck/shoulder/arm discomfort.",
+  "why": "Ergonomic equipment alone has weak/inconsistent evidence; breaks have some (very low quality) evidence for less discomfort.",
+  "evidence_strength": "SR/MA",
+  "sources": [
+   {
+    "type": "PMID",
+    "id": "30350850",
+    "title": "Ergonomic interventions for preventing work-related musculoskeletal disorders of the upper limb and neck among office workers",
+    "year": 2018,
+    "verified_by": "eutils"
+   }
+  ],
+  "cue_suggestion": "Same focus-timer cue as BODY-03.",
+  "minimum_version": "Change posture and roll shoulders at each timer.",
+  "normal_version": "Comfortable setup (screen roughly at eye level, feet supported) + BODY-03 breaks.",
+  "bonus_version": "Laptop stand + external keyboard for long design sessions (comfort choice, not evidence-proven).",
+  "joy_pairing": "Make the desk a pleasant space (plant, light) she wants to sit at - and leave regularly.",
+  "friction_down": "One-time setup task in the app.",
+  "friction_up_for_competing": "None.",
+  "if_then_plan": "If I notice neck or wrist discomfort, then I will stand up and take a 2-minute break immediately.",
+  "tracking_metric": "Discomfort today 0-3 (weekly check).",
+  "progression": "self-paced",
+  "safety_or_stop_rule": "Persistent pain, numbness or tingling: see a physiotherapist/doctor.",
+  "schedule_slot": "as-needed",
+  "time_minutes_normal": 2,
+  "app_type": "Project step",
+  "priority_for_her": "Recommended",
+  "notes": "Honest framing: no 'perfect posture' evidence found; movement variety is the defensible message. Setup details (eye level etc.) are common practice, not from the cited source."
+ },
+ {
+  "action_id": "BODY-09",
+  "area": "exercise adherence",
+  "name_en": "Choose intensity by feel (pleasure-guided)",
+  "name_ar": "اختيار الشدة حسب الشعور بالمتعة",
+  "what": "Pick an intensity that feels good during the session (can talk, feels pleasant) and allow herself to adjust it mid-workout.",
+  "dose": "not specified by source.",
+  "why": "Feeling better during moderate exercise predicts future activity; in an RCT, pleasure-oriented intensity prescription led to 77% more gym sessions over 8 weeks; allowing intensity adjustment improved affect in young adults.",
+  "evidence_strength": "RCT",
+  "sources": [
+   {
+    "type": "PMID",
+    "id": "25921307",
+    "title": "Can the Affective Response to Exercise Predict Future Motives and Physical Activity Behavior? A Systematic Review of Published Evidence",
+    "year": 2015,
+    "verified_by": "eutils"
+   },
+   {
+    "type": "PMID",
+    "id": "39103923",
+    "title": "Individualized pleasure-oriented exercise sessions, exercise frequency, and affective outcomes: a pragmatic randomized controlled trial",
+    "year": 2024,
+    "verified_by": "eutils"
+   },
+   {
+    "type": "PMID",
+    "id": "41111404",
+    "title": "Making the exercise experience more pleasurable: Exploring the psychological effect of allowing intensity adjustments during exercise",
+    "year": 2026,
+    "verified_by": "eutils"
+   }
+  ],
+  "cue_suggestion": "Start of every workout: rate 'how do I feel?' on a -5..+5 scale.",
+  "minimum_version": "Keep the session but lower intensity if the feeling drops below 0.",
+  "normal_version": "Stay in the zone that feels pleasant most of the time.",
+  "bonus_version": "Push harder only at the end when feeling good (end on a high).",
+  "joy_pairing": "End each session with the favourite move/song so the remembered feeling is positive.",
+  "friction_down": "One-tap feeling rating in the app before/after.",
+  "friction_up_for_competing": "None.",
+  "if_then_plan": "If the workout starts feeling bad, then I will lower the intensity rather than stop.",
+  "tracking_metric": "Feeling rating after session (-5..+5).",
+  "progression": "self-paced",
+  "safety_or_stop_rule": "See BODY-25.",
+  "schedule_slot": "as-needed",
+  "time_minutes_normal": 1,
+  "app_type": "Routine step",
+  "priority_for_her": "Core",
+  "notes": "RCT was small (n=47) and short-term; still a strong fit for her goal of linking routines to enjoyment."
+ },
+ {
+  "action_id": "BODY-10",
+  "area": "exercise adherence",
+  "name_en": "Music during workouts",
+  "name_ar": "الموسيقى أثناء التمرين",
+  "what": "Listen to music she likes during exercise; faster-tempo tracks for cardio/strength.",
+  "dose": "not specified by source.",
+  "why": "Meta-analysis of 139 studies: music improved affective valence, physical performance, and reduced perceived exertion; performance effects larger with fast tempo.",
+  "evidence_strength": "SR/MA",
+  "sources": [
+   {
+    "type": "PMID",
+    "id": "31804098",
+    "title": "Effects of music in exercise and sport: A meta-analytic review",
+    "year": 2020,
+    "verified_by": "eutils"
+   }
+  ],
+  "cue_suggestion": "Pressing play = workout starts.",
+  "minimum_version": "One song of movement.",
+  "normal_version": "Dedicated workout playlist for the whole session.",
+  "bonus_version": "Build playlists by tempo for warm-up, main set, cool-down.",
+  "joy_pairing": "Workout-only playlist she looks forward to.",
+  "friction_down": "Playlist linked from the workout card in the app.",
+  "friction_up_for_competing": "None.",
+  "if_then_plan": "If I don't feel like exercising, then I will put on my workout playlist and only commit to the first song.",
+  "tracking_metric": "None needed (optional: favourite track of the week).",
+  "progression": "self-paced",
+  "safety_or_stop_rule": "Keep volume safe; stay aware of surroundings when walking outdoors.",
+  "schedule_slot": "as-needed",
+  "time_minutes_normal": 0,
+  "app_type": "Reference",
+  "priority_for_her": "Recommended",
+  "notes": "If she prefers not to listen to music, podcasts/audiobooks fit the temptation-bundling action (BODY-11) instead - the music evidence does not cover spoken audio."
+ },
+ {
+  "action_id": "BODY-11",
+  "area": "exercise adherence",
+  "name_en": "Temptation bundling",
+  "name_ar": "ربط التمرين بمتعة خاصة",
+  "what": "Reserve a 'want' pleasure (a gripping audiobook, series, podcast) for exercise time only.",
+  "dose": "not specified by source.",
+  "why": "In a field experiment, gym-only access to tempting audiobooks increased gym visits by 51% initially, though effects declined over time (especially after a holiday).",
+  "evidence_strength": "RCT",
+  "sources": [
+   {
+    "type": "PMID",
+    "id": "25843979",
+    "title": "Holding the Hunger Games Hostage at the Gym: An Evaluation of Temptation Bundling",
+    "year": 2014,
+    "verified_by": "eutils"
+   }
+  ],
+  "cue_suggestion": "Walking or cardio sessions.",
+  "minimum_version": "Listen to one chapter while walking.",
+  "normal_version": "The bundled show/book is only allowed during walks/workouts.",
+  "bonus_version": "Refresh the bundle monthly with a new story to fight fade-out.",
+  "joy_pairing": "This IS the joy pairing.",
+  "friction_down": "Downloaded episodes ready offline.",
+  "friction_up_for_competing": "Hide the bundled app/series from the home screen outside workout time.",
+  "if_then_plan": "If I want to hear the next chapter, then I will put on my shoes and walk.",
+  "tracking_metric": "Bundled sessions this week.",
+  "progression": "self-paced",
+  "safety_or_stop_rule": "Stay alert to traffic if walking outdoors.",
+  "schedule_slot": "as-needed",
+  "time_minutes_normal": 0,
+  "app_type": "System/automation",
+  "priority_for_her": "Recommended",
+  "notes": "Effect decays; plan renewal and a restart after breaks (see BODY-12)."
+ },
+ {
+  "action_id": "BODY-12",
+  "area": "exercise adherence",
+  "name_en": "Comeback reward after a missed workout",
+  "name_ar": "مكافأة العودة بعد تفويت تمرين",
+  "what": "When a planned workout is missed, make the next session the priority and give a small reward for returning, rather than treating the week as ruined.",
+  "dose": "not specified by source.",
+  "why": "In a 61,293-person megastudy, the top intervention offered micro-rewards for returning to the gym after a missed workout; 45% of interventions increased visits but few effects lasted beyond 4 weeks.",
+  "evidence_strength": "RCT",
+  "sources": [
+   {
+    "type": "PMID",
+    "id": "34880497",
+    "title": "Megastudies improve the impact of applied behavioural science",
+    "year": 2021,
+    "verified_by": "eutils"
+   }
+  ],
+  "cue_suggestion": "App detects a missed planned workout.",
+  "minimum_version": "Next day: 10-minute minimum version earns the comeback badge.",
+  "normal_version": "Next scheduled session done = comeback reward (points/treat).",
+  "bonus_version": "Two comebacks in a row unlock something she wants (new playlist, class).",
+  "joy_pairing": "Visible comeback badge; celebrate returns, not only streaks.",
+  "friction_down": "Auto-reschedule missed session to the next free slot.",
+  "friction_up_for_competing": "None.",
+  "if_then_plan": "If I miss a planned workout, then I will do the minimum version at the next Asr and log a comeback.",
+  "tracking_metric": "Comebacks this month.",
+  "progression": "self-paced",
+  "safety_or_stop_rule": "If missed due to illness, rest first (BODY-25).",
+  "schedule_slot": "as-needed",
+  "time_minutes_normal": 0,
+  "app_type": "System/automation",
+  "priority_for_her": "Core",
+  "notes": "Design implication for the life-OS: reward recovery, avoid punishing broken streaks. Megastudy population was gym members in the US."
+ },
+ {
+  "action_id": "BODY-13",
+  "area": "exercise adherence",
+  "name_en": "Exercise with others",
+  "name_ar": "التمرين مع الآخرين",
+  "what": "Schedule some walks/workouts with a friend, sister, or an online class/group; or set up mutual check-ins.",
+  "dose": "not specified by source.",
+  "why": "A Community Guide systematic review found social-support interventions in community settings effective for increasing physical activity.",
+  "evidence_strength": "SR/MA",
+  "sources": [
+   {
+    "type": "PMID",
+    "id": "11985936",
+    "title": "The effectiveness of interventions to increase physical activity. A systematic review",
+    "year": 2002,
+    "verified_by": "eutils"
+   },
+   {
+    "type": "URL",
+    "id": "https://www.cheshireandmerseyside.nhs.uk/your-health/surgery-school/getting-active/",
+    "title": "NHS Cheshire and Merseyside - Getting active",
+    "year": null,
+    "verified_by": "webfetch"
+   }
+  ],
+  "cue_suggestion": "Fixed weekly walk with a friend (e.g., Thursday evening).",
+  "minimum_version": "Send a 'done' message to an accountability buddy.",
+  "normal_version": "One shared walk or class per week.",
+  "bonus_version": "Join a women's walking group or gym class.",
+  "joy_pairing": "Combine with social time and a coffee/juice after (caffeine timing per BODY-16).",
+  "friction_down": "Recurring calendar invite; shared step challenge in a phone app.",
+  "friction_up_for_competing": "None.",
+  "if_then_plan": "If my buddy cancels, then I will do the walk alone with my bundled podcast.",
+  "tracking_metric": "Social sessions this week.",
+  "progression": "self-paced",
+  "safety_or_stop_rule": "None specific.",
+  "schedule_slot": "weekly",
+  "time_minutes_normal": 40,
+  "app_type": "Weekly task",
+  "priority_for_her": "Recommended",
+  "notes": "Evidence is older (2002) and at community-program level; dropped: family-based social support had inconsistent findings in the same review."
+ },
+ {
+  "action_id": "BODY-14",
+  "area": "sleep duration",
+  "name_en": "Protect 7+ hours of sleep",
+  "name_ar": "حماية ٧ ساعات نوم أو أكثر",
+  "what": "Plan the night so there is at least 7 hours of sleep opportunity; set bedtime by counting back from wake time.",
+  "dose": "Adults: 7 or more hours per night (AASM/SRS; CDC for ages 18-60; Saudi PHA: >=7 h of good sleep, young adults 18-25 aim for 7-9 h).",
+  "why": "Consensus statements define >=7 h as the amount needed to promote optimal health in adults.",
+  "evidence_strength": "Guideline",
+  "sources": [
+   {
+    "type": "PMID",
+    "id": "26039963",
+    "title": "Recommended Amount of Sleep for a Healthy Adult: A Joint Consensus Statement of the AASM and SRS",
+    "year": 2015,
+    "verified_by": "eutils"
+   },
+   {
+    "type": "URL",
+    "id": "https://www.cdc.gov/sleep/about/index.html",
+    "title": "CDC - About Sleep (recommendations and healthy sleep habits)",
+    "year": null,
+    "verified_by": "webfetch"
+   },
+   {
+    "type": "PMID",
+    "id": "34484438",
+    "title": "The recommended amount of physical activity, sedentary behavior, and sleep duration for healthy Saudis: A joint consensus statement of the Saudi Public Health Authority",
+    "year": 2021,
+    "verified_by": "eutils"
+   },
+   {
+    "type": "URL",
+    "id": "https://faculty.ksu.edu.sa/sites/default/files/24hr_s_movement_practice_guidelines_for_saudi_arabia_1619026105.pdf",
+    "title": "Twenty-Four-Hour Movement Practice Guidelines for Saudi Arabia (PDF)",
+    "year": 2021,
+    "verified_by": "webfetch"
+   }
+  ],
+  "cue_suggestion": "Bedtime alarm = wake time minus 7.5 h (includes time to fall asleep; buffer is a planning choice).",
+  "minimum_version": "In bed with lights off by planned time on 5 of 7 nights.",
+  "normal_version": "7-9 h sleep opportunity nightly.",
+  "bonus_version": "Weekly review of average sleep in the app.",
+  "joy_pairing": "Make the pre-bed routine something she enjoys (reading paper book, skincare, Quran recitation).",
+  "friction_down": "App schedules evening tasks to end before wind-down.",
+  "friction_up_for_competing": "Phone charges outside bed reach (see BODY-17).",
+  "if_then_plan": "If my bedtime alarm rings, then I will stop what I'm doing and start my wind-down.",
+  "tracking_metric": "Hours slept (self-report or phone/watch).",
+  "progression": "self-paced",
+  "safety_or_stop_rule": "Persistent insomnia, loud snoring/breathing pauses, or daytime sleepiness despite enough sleep: see a doctor.",
+  "schedule_slot": "night",
+  "time_minutes_normal": 0,
+  "app_type": "System/automation",
+  "priority_for_her": "Core",
+  "notes": "Saudi PHA (conditional): splitting night sleep around Fajr prayer showed no evidence of harm - total sleep is what to protect."
+ },
+ {
+  "action_id": "BODY-15",
+  "area": "sleep regularity",
+  "name_en": "Consistent wake time",
+  "name_ar": "موعد استيقاظ ثابت",
+  "what": "Wake up and go to bed at roughly the same time every day, including weekends.",
+  "dose": "not specified by source (CDC: same time every day; no numeric tolerance given).",
+  "why": "In a UK Biobank cohort (older adults, observational), higher sleep regularity predicted lower mortality more strongly than sleep duration.",
+  "evidence_strength": "Guideline",
+  "sources": [
+   {
+    "type": "URL",
+    "id": "https://www.cdc.gov/sleep/about/index.html",
+    "title": "CDC - About Sleep (recommendations and healthy sleep habits)",
+    "year": null,
+    "verified_by": "webfetch"
+   },
+   {
+    "type": "URL",
+    "id": "https://faculty.ksu.edu.sa/sites/default/files/24hr_s_movement_practice_guidelines_for_saudi_arabia_1619026105.pdf",
+    "title": "Twenty-Four-Hour Movement Practice Guidelines for Saudi Arabia (PDF)",
+    "year": 2021,
+    "verified_by": "webfetch"
+   },
+   {
+    "type": "PMID",
+    "id": "37738616",
+    "title": "Sleep regularity is a stronger predictor of mortality risk than sleep duration: A prospective cohort study",
+    "year": 2024,
+    "verified_by": "eutils"
+   }
+  ],
+  "cue_suggestion": "Anchor wake time to Fajr or a fixed alarm after it.",
+  "minimum_version": "Same wake time on weekdays; weekend within a small window she chooses.",
+  "normal_version": "Same wake and bedtime all 7 days.",
+  "bonus_version": "Morning daylight walk right after waking (BODY-18).",
+  "joy_pairing": "A morning ritual she looks forward to (favourite drink, sunlight, playlist).",
+  "friction_down": "One recurring alarm; app day-plan starts at the same time daily.",
+  "friction_up_for_competing": "Alarm across the room.",
+  "if_then_plan": "If I stayed up late, then I will still wake at my usual time and take a short early-afternoon nap if needed (BODY-20).",
+  "tracking_metric": "Wake time logged (auto from alarm dismiss).",
+  "progression": "self-paced",
+  "safety_or_stop_rule": "None.",
+  "schedule_slot": "morning",
+  "time_minutes_normal": 0,
+  "app_type": "Habit",
+  "priority_for_her": "Core",
+  "notes": "Regularity evidence is observational in older adults; guidelines (CDC, Saudi PHA) still recommend consistency."
+ },
+ {
+  "action_id": "BODY-16",
+  "area": "caffeine timing",
+  "name_en": "Caffeine cutoff",
+  "name_ar": "موعد آخر كوب قهوة",
+  "what": "Set a daily caffeine cutoff time based on bedtime.",
+  "dose": "Meta-analysis: coffee (~107 mg/250 mL) at least 8.8 h before bedtime; a standard pre-workout supplement (~217.5 mg) at least 13.2 h before bedtime. CDC: avoid caffeine in the afternoon or evening.",
+  "why": "Caffeine reduced total sleep time by 45 min and sleep efficiency by 7% on average.",
+  "evidence_strength": "SR/MA",
+  "sources": [
+   {
+    "type": "PMID",
+    "id": "36870101",
+    "title": "The effect of caffeine on subsequent sleep: A systematic review and meta-analysis",
+    "year": 2023,
+    "verified_by": "eutils"
+   },
+   {
+    "type": "URL",
+    "id": "https://www.cdc.gov/sleep/about/index.html",
+    "title": "CDC - About Sleep (recommendations and healthy sleep habits)",
+    "year": null,
+    "verified_by": "webfetch"
+   }
+  ],
+  "cue_suggestion": "App shows 'last coffee' time computed from bedtime (e.g., bed 23:00 -> coffee before ~14:10).",
+  "minimum_version": "No caffeine after Asr.",
+  "normal_version": "Last coffee/tea/energy drink before the computed cutoff.",
+  "bonus_version": "Switch afternoon drink to decaf or herbal.",
+  "joy_pairing": "Keep a pleasant non-caffeinated afternoon drink ritual (karak-style decaf, herbal tea).",
+  "friction_down": "Stock decaf/herbal options.",
+  "friction_up_for_competing": "Don't keep energy drinks at home.",
+  "if_then_plan": "If I want coffee after the cutoff, then I will have my decaf/herbal drink instead.",
+  "tracking_metric": "Last caffeine time (tap).",
+  "progression": "self-paced",
+  "safety_or_stop_rule": "None.",
+  "schedule_slot": "midday",
+  "time_minutes_normal": 0,
+  "app_type": "System/automation",
+  "priority_for_her": "Recommended",
+  "notes": "Arabic coffee and tea also contain caffeine; source doses are for coffee and pre-workout supplements specifically."
+ },
+ {
+  "action_id": "BODY-17",
+  "area": "screens/light before bed",
+  "name_en": "Evening wind-down: dim light, devices off",
+  "name_ar": "روتين التهدئة المسائي: إضاءة خافتة وإبعاد الأجهزة",
+  "what": "Dim home lighting in the evening, stop screens before bed, and switch to a non-screen activity.",
+  "dose": "CDC: turn off electronic devices at least 30 min before bedtime. Expert consensus: from at least 3 h before bedtime keep light at the eye <=10 lux melanopic EDI; sleep environment as dark as possible (<=1 lux).",
+  "why": "Reading on a light-emitting device before bed delayed sleep onset, suppressed melatonin, shifted the body clock and reduced next-morning alertness vs a printed book (small RCT).",
+  "evidence_strength": "Expert consensus",
+  "sources": [
+   {
+    "type": "URL",
+    "id": "https://www.cdc.gov/sleep/about/index.html",
+    "title": "CDC - About Sleep (recommendations and healthy sleep habits)",
+    "year": null,
+    "verified_by": "webfetch"
+   },
+   {
+    "type": "PMID",
+    "id": "35298459",
+    "title": "Recommendations for daytime, evening, and nighttime indoor light exposure to best support physiology, sleep, and wakefulness in healthy adults",
+    "year": 2022,
+    "verified_by": "eutils"
+   },
+   {
+    "type": "URL",
+    "id": "https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3001571",
+    "title": "Brown et al. 2022 full text (light recommendations)",
+    "year": 2022,
+    "verified_by": "webfetch"
+   },
+   {
+    "type": "PMID",
+    "id": "25535358",
+    "title": "Evening use of light-emitting eReaders negatively affects sleep, circadian timing, and next-morning alertness",
+    "year": 2015,
+    "verified_by": "eutils"
+   }
+  ],
+  "cue_suggestion": "After Isha prayer: switch to warm/dim lamps.",
+  "minimum_version": "Phone away 30 min before bed.",
+  "normal_version": "Dim lights ~3 h before bed; last 30-60 min screen-free (paper book, stretching, journaling).",
+  "bonus_version": "Phone charges outside the bedroom.",
+  "joy_pairing": "A paper novel or English (IELTS) reader she enjoys only in bed; calm stretching (BODY-06).",
+  "friction_down": "Smart-home/phone schedule for dim lights and Do Not Disturb.",
+  "friction_up_for_competing": "App limits on social/video apps after wind-down start.",
+  "if_then_plan": "If I catch myself scrolling after my wind-down time, then I will put the phone on the charger outside my room.",
+  "tracking_metric": "Screens off by target time (yes/no).",
+  "progression": "self-paced",
+  "safety_or_stop_rule": "None.",
+  "schedule_slot": "evening",
+  "time_minutes_normal": 30,
+  "app_type": "Routine step",
+  "priority_for_her": "Core",
+  "notes": "Melanopic EDI is a lab/lighting metric; practical translation = dim, warm lighting. The eReader RCT was small (n=12)."
+ },
+ {
+  "action_id": "BODY-18",
+  "area": "daytime/morning light",
+  "name_en": "Daylight exposure",
+  "name_ar": "التعرض لضوء النهار",
+  "what": "Get bright light during the day, ideally daylight (e.g., sit by a window while studying, short outdoor time in cooler early hours).",
+  "dose": "Expert consensus: daytime minimum melanopic EDI of 250 lux at the eye; use daylight first where available. No minutes-per-day dose stated.",
+  "why": "Consensus recommends bright daytime light to support circadian rhythm, sleep and alertness.",
+  "evidence_strength": "Expert consensus",
+  "sources": [
+   {
+    "type": "PMID",
+    "id": "35298459",
+    "title": "Recommendations for daytime, evening, and nighttime indoor light exposure to best support physiology, sleep, and wakefulness in healthy adults",
+    "year": 2022,
+    "verified_by": "eutils"
+   },
+   {
+    "type": "URL",
+    "id": "https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3001571",
+    "title": "Brown et al. 2022 full text (light recommendations)",
+    "year": 2022,
+    "verified_by": "webfetch"
+   }
+  ],
+  "cue_suggestion": "Right after Fajr/waking: open curtains; study near a window.",
+  "minimum_version": "Open curtains and have breakfast by the window.",
+  "normal_version": "Study/work in a daylit spot; brief outdoor time in cool early morning.",
+  "bonus_version": "Morning walk outdoors when temperature allows (combine with BODY-02).",
+  "joy_pairing": "Morning coffee on a balcony (within caffeine window).",
+  "friction_down": "Move desk near a window (one-time project step).",
+  "friction_up_for_competing": "None.",
+  "if_then_plan": "If I start a study session, then I will sit in the brightest daylit spot available.",
+  "tracking_metric": "Morning light done (yes/no).",
+  "progression": "self-paced",
+  "safety_or_stop_rule": "Avoid midday heat; never look at the sun.",
+  "schedule_slot": "morning",
+  "time_minutes_normal": 15,
+  "app_type": "Habit",
+  "priority_for_her": "Recommended",
+  "notes": "Source addresses daytime generally, not specifically 'morning within X minutes' - avoid claiming a morning-light dose."
+ },
+ {
+  "action_id": "BODY-19",
+  "area": "bedtime procrastination",
+  "name_en": "Bedtime procrastination plan",
+  "name_ar": "خطة مقاومة تأجيل النوم",
+  "what": "Decide a 'go to bed' time and pre-commit with a plan for the usual delay trigger (scrolling, series, late work).",
+  "dose": "not specified by source.",
+  "why": "In a representative Dutch sample, going to bed later than intended without external reasons (bedtime procrastination) mediated the link between low self-regulation and insufficient sleep.",
+  "evidence_strength": "Observational",
+  "sources": [
+   {
+    "type": "PMID",
+    "id": "24997168",
+    "title": "Bedtime procrastination: A self-regulation perspective on sleep insufficiency in the general population",
+    "year": 2016,
+    "verified_by": "eutils"
+   }
+  ],
+  "cue_suggestion": "Wind-down alarm (BODY-17).",
+  "minimum_version": "Name the delay trigger tonight and set the phone to charge outside the room.",
+  "normal_version": "Use if-then plan nightly; review weekly which trigger won.",
+  "bonus_version": "Move 'revenge' leisure (series) to earlier evening as a planned reward.",
+  "joy_pairing": "Schedule guilt-free leisure earlier so bedtime doesn't feel like losing 'me time'.",
+  "friction_down": "Auto Do Not Disturb + app lock at wind-down.",
+  "friction_up_for_competing": "Log out of the most tempting app at night; disable autoplay.",
+  "if_then_plan": "If one episode ends after my wind-down time, then I will close the app and not start the next.",
+  "tracking_metric": "In bed by intended time (yes/no).",
+  "progression": "self-paced",
+  "safety_or_stop_rule": "None.",
+  "schedule_slot": "night",
+  "time_minutes_normal": 0,
+  "app_type": "System/automation",
+  "priority_for_her": "Recommended",
+  "notes": "The intervention side (if-then plans) is general behavior science, not tested in this source."
+ },
+ {
+  "action_id": "BODY-20",
+  "area": "naps",
+  "name_en": "Short midday nap (Qailulah) if needed",
+  "name_ar": "قيلولة قصيرة عند الحاجة",
+  "what": "If sleepy, take a short nap around midday; keep it short.",
+  "dose": "Saudi PHA: napping around midday (noontime) is acceptable, limited to less than 30 min. Cohort meta-analysis: naps >=30 min associated with higher mortality/CVD/metabolic risk; <30 min not. Lab meta-analysis: naps improved alertness, with early-afternoon naps (before 13:00) better.",
+  "why": "Short naps improved cognitive performance (especially alertness) in lab studies, while long habitual naps were associated with higher health risks.",
+  "evidence_strength": "Guideline",
+  "sources": [
+   {
+    "type": "URL",
+    "id": "https://faculty.ksu.edu.sa/sites/default/files/24hr_s_movement_practice_guidelines_for_saudi_arabia_1619026105.pdf",
+    "title": "Twenty-Four-Hour Movement Practice Guidelines for Saudi Arabia (PDF)",
+    "year": 2021,
+    "verified_by": "webfetch"
+   },
+   {
+    "type": "PMID",
+    "id": "39153335",
+    "title": "To nap or not? Evidence from a meta-analysis of cohort studies of habitual daytime napping and health outcomes",
+    "year": 2024,
+    "verified_by": "eutils"
+   },
+   {
+    "type": "PMID",
+    "id": "34639511",
+    "title": "Effects of a Short Daytime Nap on the Cognitive Performance: A Systematic Review and Meta-Analysis",
+    "year": 2021,
+    "verified_by": "eutils"
+   }
+  ],
+  "cue_suggestion": "After Dhuhr prayer, only when needed.",
+  "minimum_version": "Eyes-closed rest 10 min.",
+  "normal_version": "Nap under 30 min with an alarm.",
+  "bonus_version": "n/a",
+  "joy_pairing": "Quiet, cool, dark spot; calm audio.",
+  "friction_down": "One-tap 25-min nap timer in the app.",
+  "friction_up_for_competing": "Alarm across the room to prevent oversleeping.",
+  "if_then_plan": "If I feel very sleepy after Dhuhr, then I will set a 25-minute alarm and nap.",
+  "tracking_metric": "Nap minutes.",
+  "progression": "none",
+  "safety_or_stop_rule": "Avoid naps if they make it hard to sleep at night. Needing naps daily despite 7+ h sleep: see a doctor.",
+  "schedule_slot": "midday",
+  "time_minutes_normal": 25,
+  "app_type": "Habit",
+  "priority_for_her": "Optional",
+  "notes": "Cohort risks are associations, mean age ~56; the Saudi guideline is the most relevant anchor for her."
+ },
+ {
+  "action_id": "BODY-21",
+  "area": "sleep hygiene",
+  "name_en": "Bedroom set-up for sleep",
+  "name_ar": "تهيئة غرفة النوم للنوم",
+  "what": "Keep the bedroom quiet, cool and dark; avoid large meals before bedtime.",
+  "dose": "CDC: bedroom quiet, relaxing, cool temperature; avoid large meals before bedtime. Consensus: sleep environment as dark as possible (<=1 lux melanopic EDI). No specific temperature stated.",
+  "why": "Individual sleep hygiene components are associated with better sleep, though bundled 'sleep hygiene education' is largely untested in the general population.",
+  "evidence_strength": "Guideline",
+  "sources": [
+   {
+    "type": "URL",
+    "id": "https://www.cdc.gov/sleep/about/index.html",
+    "title": "CDC - About Sleep (recommendations and healthy sleep habits)",
+    "year": null,
+    "verified_by": "webfetch"
+   },
+   {
+    "type": "URL",
+    "id": "https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3001571",
+    "title": "Brown et al. 2022 full text (light recommendations)",
+    "year": 2022,
+    "verified_by": "webfetch"
+   },
+   {
+    "type": "PMID",
+    "id": "25454674",
+    "title": "The role of sleep hygiene in promoting public health: A review of empirical evidence",
+    "year": 2015,
+    "verified_by": "eutils"
+   }
+  ],
+  "cue_suggestion": "One-time setup + weekly check on the weekend.",
+  "minimum_version": "Cover LED lights; eye mask.",
+  "normal_version": "Blackout curtains, AC set cool, quiet (earplugs/white noise if needed), dinner not right before bed.",
+  "bonus_version": "Remove TV/desk work from bed.",
+  "joy_pairing": "Make the bed space inviting (fresh sheets, favourite scent).",
+  "friction_down": "Buy once: blackout curtain, eye mask.",
+  "friction_up_for_competing": "Keep work laptop off the bed.",
+  "if_then_plan": "If dinner is late, then I will keep it light.",
+  "tracking_metric": "Setup checklist done (one-time).",
+  "progression": "none",
+  "safety_or_stop_rule": "None.",
+  "schedule_slot": "weekly",
+  "time_minutes_normal": 10,
+  "app_type": "Project step",
+  "priority_for_her": "Recommended",
+  "notes": "Irish 2015 is a narrative review; honest message: environment basics are sensible, not a cure for sleep disorders."
+ },
+ {
+  "action_id": "BODY-22",
+  "area": "sleep (Ramadan)",
+  "name_en": "Ramadan sleep plan",
+  "name_ar": "خطة النوم في رمضان",
+  "what": "During Ramadan, plan a split sleep: a main night block plus a daytime sleep to keep total sleep adequate.",
+  "dose": "Saudi PHA (as extracted from guideline PDF): sufficient sleep of 4-6 h at night supplemented by 1.5-2 h daytime sleep.",
+  "why": "Saudi consensus recognizes Ramadan's changed schedule and recommends maintaining adequate total sleep.",
+  "evidence_strength": "Guideline",
+  "sources": [
+   {
+    "type": "PMID",
+    "id": "34484438",
+    "title": "The recommended amount of physical activity, sedentary behavior, and sleep duration for healthy Saudis: A joint consensus statement of the Saudi Public Health Authority",
+    "year": 2021,
+    "verified_by": "eutils"
+   },
+   {
+    "type": "URL",
+    "id": "https://faculty.ksu.edu.sa/sites/default/files/24hr_s_movement_practice_guidelines_for_saudi_arabia_1619026105.pdf",
+    "title": "Twenty-Four-Hour Movement Practice Guidelines for Saudi Arabia (PDF)",
+    "year": 2021,
+    "verified_by": "webfetch"
+   }
+  ],
+  "cue_suggestion": "After Suhoor/Fajr and after Dhuhr.",
+  "minimum_version": "Protect the night block.",
+  "normal_version": "Night block + planned daytime sleep.",
+  "bonus_version": "Shift workouts to after Iftar.",
+  "joy_pairing": "Pair evening walk after Iftar with family.",
+  "friction_down": "App switches to a Ramadan template automatically.",
+  "friction_up_for_competing": "None.",
+  "if_then_plan": "If Ramadan starts, then I will switch my app to the Ramadan sleep template.",
+  "tracking_metric": "Total sleep per 24 h.",
+  "progression": "none",
+  "safety_or_stop_rule": "Hydrate between Iftar and Suhoor; avoid intense exercise while fasting in heat.",
+  "schedule_slot": "as-needed",
+  "time_minutes_normal": 0,
+  "app_type": "Reference",
+  "priority_for_her": "Conditional",
+  "notes": "Numbers were read from a text-garbled PDF via web fetch; re-confirm against PMC8388570 before shipping."
+ },
+ {
+  "action_id": "BODY-23",
+  "area": "hydration",
+  "name_en": "Drink regularly through the day",
+  "name_ar": "شرب السوائل بانتظام",
+  "what": "Drink fluids regularly; drink more in heat and when active.",
+  "dose": "NHS: aim for 6-8 cups or glasses of fluid a day (water, lower-fat milk, sugar-free drinks including tea and coffee count); more if in a hot environment or physically active for long periods. EFSA: 2.0 L/day considered adequate for women (total water intake).",
+  "why": "Official bodies set adequate intakes; needs rise in hot environments and with prolonged activity.",
+  "evidence_strength": "Guideline",
+  "sources": [
+   {
+    "type": "URL",
+    "id": "https://www.nhs.uk/live-well/eat-well/food-guidelines-and-food-labels/water-drinks-nutrition/",
+    "title": "NHS - Water, drinks and your health",
+    "year": null,
+    "verified_by": "webfetch"
+   },
+   {
+    "type": "URL",
+    "id": "https://www.efsa.europa.eu/en/press/news/nda100326",
+    "title": "EFSA sets European dietary reference values for nutrient intakes (press release)",
+    "year": 2010,
+    "verified_by": "webfetch"
+   },
+   {
+    "type": "DOI",
+    "id": "10.2903/j.efsa.2010.1459",
+    "title": "Scientific Opinion on Dietary Reference Values for water",
+    "year": 2010,
+    "verified_by": "crossref"
+   }
+  ],
+  "cue_suggestion": "A glass with each prayer time (5 natural anchors).",
+  "minimum_version": "Water with each meal.",
+  "normal_version": "A glass/cup at each prayer + during workouts.",
+  "bonus_version": "Extra water on hot outdoor days and after long workouts.",
+  "joy_pairing": "A nice bottle; infuse with lemon/mint.",
+  "friction_down": "Filled bottle in view at desk and in bag.",
+  "friction_up_for_competing": "Don't stock sugary soft drinks.",
+  "if_then_plan": "If I hear the adhan, then I will drink a glass of water.",
+  "tracking_metric": "Glasses today (tap).",
+  "progression": "none",
+  "safety_or_stop_rule": "Heat illness signs: see BODY-25.",
+  "schedule_slot": "as-needed",
+  "time_minutes_normal": 0,
+  "app_type": "Habit",
+  "priority_for_her": "Recommended",
+  "notes": "The popular '8 glasses of water' is not what sources say: NHS counts all fluids, EFSA's value is total water (food contributes)."
+ },
+ {
+  "action_id": "BODY-24",
+  "area": "sun/vitamin D (Saudi)",
+  "name_en": "Vitamin D awareness (Saudi context)",
+  "name_ar": "الوعي بفيتامين د في السعودية",
+  "what": "Be aware vitamin D deficiency is common in Saudi Arabia; if concerned, ask a doctor whether testing/supplementation is appropriate. Sun exposure can help but no safe minutes-dose is sourced.",
+  "dose": "not specified by source (Saudi expert consensus: universal screening not recommended; correction advised if serum 25(OH)D <50 nmol/L; a Riyadh lab study identified best sun windows for previtamin D3 production: summer ~09:00-10:30 and 14:00-15:00, winter 10:00-14:00).",
+  "why": "Saudi experts note deficiency is common; sunlight drives vitamin D production, with time of day mattering.",
+  "evidence_strength": "Expert consensus",
+  "sources": [
+   {
+    "type": "PMID",
+    "id": "28004295",
+    "title": "Vitamin D status correction in Saudi Arabia: an experts' consensus under the auspices of ESCEO",
+    "year": 2017,
+    "verified_by": "eutils"
+   },
+   {
+    "type": "PMID",
+    "id": "24494051",
+    "title": "Vitamin D: Light side and best time of sunshine in Riyadh, Saudi Arabia",
+    "year": 2013,
+    "verified_by": "eutils"
+   }
+  ],
+  "cue_suggestion": "Annual check-up.",
+  "minimum_version": "Mention it at the next routine doctor visit.",
+  "normal_version": "Follow the doctor's advice.",
+  "bonus_version": "n/a",
+  "joy_pairing": "n/a",
+  "friction_down": "Add to annual check-up checklist.",
+  "friction_up_for_competing": "n/a",
+  "if_then_plan": "If I book a routine check-up, then I will ask about vitamin D.",
+  "tracking_metric": "Asked doctor (yes/no).",
+  "progression": "none",
+  "safety_or_stop_rule": "Do not self-dose high supplements without medical advice; avoid peak heat sun exposure.",
+  "schedule_slot": "monthly",
+  "time_minutes_normal": 0,
+  "app_type": "Reference",
+  "priority_for_her": "Conditional",
+  "notes": "Riyadh study used ampoules (in vitro), not people; it cannot give a minutes-of-skin-exposure dose. Makkah/Jeddah are further south; windows may differ."
+ },
+ {
+  "action_id": "BODY-25",
+  "area": "recovery & safety",
+  "name_en": "Recovery days and stop rules",
+  "name_ar": "أيام التعافي وقواعد التوقف",
+  "what": "Keep lighter/rest days between hard sessions and know when to stop exercise and seek help (chest pain, dizziness, feeling very unwell, heat illness signs).",
+  "dose": "Rest-day number: not specified by source. Stop and seek medical advice for chest pain, dizziness or feeling very unwell (NHS). Heat stroke (confusion, slurred speech, very high body temperature): emergency; heat exhaustion (headache, nausea, dizziness, weakness, heavy sweating): leave the heat, drink, cool down (CDC NIOSH).",
+  "why": "Exercise is safe for most people, and exercise-related cardiac events are often preceded by warning signs/symptoms (ACSM).",
+  "evidence_strength": "Guideline",
+  "sources": [
+   {
+    "type": "URL",
+    "id": "https://www.cheshireandmerseyside.nhs.uk/your-health/surgery-school/getting-active/",
+    "title": "NHS Cheshire and Merseyside - Getting active",
+    "year": null,
+    "verified_by": "webfetch"
+   },
+   {
+    "type": "URL",
+    "id": "https://www.cdc.gov/niosh/heat-stress/about/illnesses.html",
+    "title": "CDC NIOSH - Heat-related Illnesses",
+    "year": null,
+    "verified_by": "webfetch"
+   },
+   {
+    "type": "PMID",
+    "id": "26473759",
+    "title": "Updating ACSM's Recommendations for Exercise Preparticipation Health Screening",
+    "year": 2015,
+    "verified_by": "eutils"
+   },
+   {
+    "type": "PMID",
+    "id": "21694556",
+    "title": "ACSM position stand. Quantity and quality of exercise for developing and maintaining cardiorespiratory, musculoskeletal, and neuromotor fitness in apparently healthy adults",
+    "year": 2011,
+    "verified_by": "eutils"
+   }
+  ],
+  "cue_suggestion": "Weekly plan: alternate strength days; walking/mobility on off days. Stop card shown on every workout screen.",
+  "minimum_version": "Full rest day when sick or very fatigued.",
+  "normal_version": "1-3 non-strength days/week with easy walking or mobility.",
+  "bonus_version": "Weekly check: sleep, soreness, mood - lighten the week if all low.",
+  "joy_pairing": "Rest days = enjoyable easy movement (social walk, Pilates).",
+  "friction_down": "App auto-plans rest days so rest is 'on plan', not a failure.",
+  "friction_up_for_competing": "None.",
+  "if_then_plan": "If I feel chest pain, dizziness or very unwell during exercise, then I will stop immediately and seek medical advice.",
+  "tracking_metric": "Soreness/energy 1-5 before workout.",
+  "progression": "none",
+  "safety_or_stop_rule": "Stop immediately: chest pain/pressure, dizziness/fainting, feeling very unwell, confusion in heat. Emergency care for heat stroke signs. See a doctor before starting vigorous exercise if she has known heart/metabolic/kidney disease or symptoms (ACSM screening logic).",
+  "schedule_slot": "weekly",
+  "time_minutes_normal": 0,
+  "app_type": "Reference",
+  "priority_for_her": "Core",
+  "notes": "Outdoor heat in Makkah/Jeddah makes heat-illness rules especially relevant. No source found that fixes a rest-day count for general adults."
+ }
+]

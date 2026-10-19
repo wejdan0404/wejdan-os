@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>Routine Player</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'IBM Plex Sans Arabic','IBM Plex Sans',sans-serif;background:#F4F7FC;color:#0E121C}
+a{color:#4F5FA0}a:hover{color:#2B3358}
+</style>
+</helmet>
+<div style="width:390px;height:844px;position:relative;overflow:hidden;background:#F4F7FC;box-sizing:border-box;font-family:'IBM Plex Sans Arabic','IBM Plex Sans',sans-serif;color:#0E121C;display:flex;flex-direction:column;padding:16px 20px 32px;">
+  <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;">
+    <span style="flex:none;width:44px;"></span>
+    <div style="text-align:center;">
+      <div style="font-size:16px;line-height:24px;font-weight:600;">سلسلة الصباح</div>
+      <div style="font-size:13px;line-height:20px;font-weight:500;color:#5A6478;">{{stepLabel}}</div>
+    </div>
+    <a href="Main.dc.html" aria-label="إغلاق السلسلة" style="flex:none;display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:#FFFFFF;border:1px solid #DCE3EF;color:#3A4256;text-decoration:none;box-sizing:border-box;">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+    </a>
+  </div>
+
+  <div role="progressbar" aria-label="تقدّم السلسلة" aria-valuemin="0" aria-valuemax="4" aria-valuenow="{{doneCount}}" style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin-top:16px;">
+    <sc-for list="{{bar}}" as="seg" hint-placeholder-count="4">
+      <span style="{{seg.s}}"></span>
+    </sc-for>
+  </div>
+
+  <sc-if value="{{playing}}" hint-placeholder-val="{{true}}">
+    <section aria-live="polite" style="margin-top:24px;background:#FFFFFF;border:1px solid #DCE3EF;border-radius:28px;padding:24px 20px;display:flex;flex-direction:column;align-items:center;gap:16px;">
+      <div style="position:relative;width:176px;height:176px;">
+        <svg width="176" height="176" viewBox="0 0 176 176" aria-hidden="true">
+          <circle cx="88" cy="88" r="80" fill="none" stroke="#EAF1FB" stroke-width="8"></circle>
+          <circle cx="88" cy="88" r="80" fill="none" stroke="#6172B5" stroke-width="8" stroke-linecap="round" stroke-dasharray="{{ring}}" transform="rotate(-90 88 88)"></circle>
+        </svg>
+        <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;">
+          <span style="display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:#E1EEFB;color:#2D5F92;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{cur.icon}}"></path></svg>
+          </span>
+          <span style="font-family:'IBM Plex Sans',sans-serif;font-size:36px;line-height:44px;font-weight:600;color:#2B3358;">{{cur.time}}</span>
+        </div>
+      </div>
+      <div style="text-align:center;">
+        <h1 style="margin:0;font-size:28px;line-height:36px;font-weight:700;">{{cur.title}}</h1>
+        <p style="margin:4px 0 0;font-size:15px;line-height:24px;color:#3A4256;">{{cur.hint}}</p>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <span style="display:inline-flex;align-items:center;gap:8px;height:36px;padding:0 14px;border-radius:999px;background:#FBF1D6;color:#8A6412;font-size:13px;line-height:20px;font-weight:600;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V5l11-2v13"></path><path d="M4 18a2.5 2.5 0 1 0 5 0a2.5 2.5 0 1 0-5 0M15 16a2.5 2.5 0 1 0 5 0a2.5 2.5 0 1 0-5 0"></path></svg>
+          قائمة الصباح الهادئة
+        </span>
+        <button type="button" onClick="{{togglePause}}" aria-label="{{pauseLabel}}" style="display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;border:1px solid #DCE3EF;background:#FFFFFF;color:#2B3358;cursor:pointer;">
+          <sc-if value="{{paused}}" hint-placeholder-val="{{false}}">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 5l11 7-11 7z"></path></svg>
+          </sc-if>
+          <sc-if value="{{running}}" hint-placeholder-val="{{true}}">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5v14M15 5v14"></path></svg>
+          </sc-if>
+        </button>
+      </div>
+    </section>
+
+    <section aria-label="الخطوات" style="margin-top:16px;display:flex;flex-direction:column;gap:8px;">
+      <span style="font-size:12px;line-height:18px;font-weight:600;color:#5A6478;">الخطوات</span>
+      <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;">
+        <sc-for list="{{steps}}" as="s" hint-placeholder-count="4">
+          <div style="{{s.box}}">
+            <span style="{{s.dot}}">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>
+            </span>
+            <span style="font-size:13px;line-height:20px;font-weight:600;">{{s.title}}</span>
+            <span style="font-size:12px;line-height:18px;font-weight:600;color:#5A6478;">{{s.dur}}</span>
+          </div>
+        </sc-for>
+      </div>
+    </section>
+
+    <div style="flex:1;"></div>
+    <button type="button" onClick="{{done}}" style="flex:none;display:flex;align-items:center;justify-content:center;width:100%;height:52px;border:0;border-radius:16px;background:#6172B5;color:#FFFFFF;font-family:inherit;font-size:16px;line-height:24px;font-weight:600;cursor:pointer;">{{doneLabel}}</button>
+    <button type="button" onClick="{{skip}}" style="flex:none;display:flex;align-items:center;justify-content:center;width:100%;min-height:44px;margin-top:6px;border:0;background:transparent;color:#4F5FA0;font-family:inherit;font-size:16px;line-height:24px;font-weight:600;cursor:pointer;">تخطّي هذه الخطوة اليوم</button>
+  </sc-if>
+
+  <sc-if value="{{finished}}" hint-placeholder-val="{{false}}">
+    <section aria-live="polite" style="margin-top:48px;display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center;">
+      <svg width="72" height="72" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 C12.8 8.5 15.5 11.2 22 12 C15.5 12.8 12.8 15.5 12 22 C11.2 15.5 8.5 12.8 2 12 C8.5 11.2 11.2 8.5 12 2Z" fill="#E0A93B"></path></svg>
+      <h1 style="margin:0;font-size:28px;line-height:36px;font-weight:700;">اكتملت سلسلة الصباح</h1>
+      <p style="margin:0;font-size:16px;line-height:26px;color:#3A4256;">بداية حلوة. <bdi>+1</bdi> شرارة لأنك بدأتي.</p>
+    </section>
+    <div style="flex:1;"></div>
+    <a href="Main.dc.html" style="flex:none;display:flex;align-items:center;justify-content:center;height:52px;border-radius:16px;background:#6172B5;color:#FFFFFF;text-decoration:none;font-size:16px;line-height:24px;font-weight:600;">رجوع ليومي</a>
+  </sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { i: 1, paused: false, skipped: {} };
+  }
+  advance(skip) {
+    var sk = Object.assign({}, this.state.skipped);
+    if (skip) sk[this.state.i] = true;
+    this.setState({ i: this.state.i + 1, paused: false, skipped: sk });
+  }
+  renderVals() {
+    var self = this;
+    var st = this.state;
+    var defs = [
+      { title: 'ماء', dur: '1 د', time: '01:00', hint: 'كوب كامل قبل أي شي', icon: 'M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z' },
+      { title: 'واقي شمس', dur: '2 د', time: '01:24', hint: 'الوجه والرقبة — العلبة جنب المغسلة', icon: 'M8 12a4 4 0 1 0 8 0a4 4 0 1 0-8 0M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4' },
+      { title: 'فطور', dur: '15 د', time: '15:00', hint: 'بهدوء، بدون جوال', icon: 'M4 9h13v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5zM17 11h1.5a2.5 2.5 0 0 1 0 5H17M8 3v3M12 3v3' },
+      { title: 'مفردات', dur: '3 د', time: '03:00', hint: 'النسخة الأدنى: 5 بطاقات', icon: 'M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2zM4 21V5M9 8h6' }
+    ];
+    var i = st.i;
+    var finished = i >= defs.length;
+    var cur = defs[Math.min(i, defs.length - 1)];
+    var steps = defs.map(function (d, k) {
+      var done = k < i;
+      var now = k === i;
+      return {
+        title: d.title, dur: st.skipped[k] ? 'تخطّيتيها' : d.dur,
+        box: 'display:flex;flex-direction:column;align-items:center;gap:4px;padding:10px 4px;border-radius:16px;text-align:center;' + (now ? 'background:#FFFFFF;border:2px solid #9BC4EE;' : 'background:#FFFFFF;border:1px solid #DCE3EF;'),
+        dot: 'display:flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:999px;box-sizing:border-box;' + (done && !st.skipped[k] ? 'background:#E3F0E8;color:#2F6B4A;' : (done ? 'background:#EEF1F6;color:#EEF1F6;' : (now ? 'background:#6172B5;color:#6172B5;' : 'border:1px solid #DCE3EF;color:#FFFFFF;')))
+      };
+    });
+    var doneCount = Math.min(i, defs.length);
+    var bar = defs.map(function (d, k) { return { s: 'height:6px;border-radius:999px;background:' + (k < i ? '#6172B5' : '#DCE3EF') + ';' }; });
+    return {
+      playing: !finished,
+      finished: finished,
+      cur: cur,
+      steps: steps,
+      bar: bar,
+      doneCount: doneCount,
+      stepLabel: finished ? 'اكتملت' : 'الخطوة ' + (i + 1) + ' من 4',
+      ring: i === 1 ? '351.9 502.7' : '502.7 502.7',
+      paused: st.paused,
+      running: !st.paused,
+      pauseLabel: st.paused ? 'استئناف المؤقت' : 'إيقاف مؤقت',
+      togglePause: function () { self.setState({ paused: !st.paused }); },
+      doneLabel: i === defs.length - 1 ? 'تم — أنهي السلسلة' : 'تم، التالي: ' + defs[Math.min(i + 1, defs.length - 1)].title,
+      done: function () { self.advance(false); },
+      skip: function () { self.advance(true); }
+    };
+  }
+}
+</script>
+</body>
+</html>

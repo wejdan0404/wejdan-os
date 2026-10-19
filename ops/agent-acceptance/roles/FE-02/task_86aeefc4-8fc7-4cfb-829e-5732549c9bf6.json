@@ -1,0 +1,167 @@
+{
+  "schema_version": "role-live-acceptance-evidence.v1",
+  "recorded_at": "2026-10-18T14:29:09.561Z",
+  "role": {
+    "role_id": "FE-02",
+    "contract_id": "role.FE-02.v1",
+    "team_id": "FE",
+    "name_en": "Web UI Developer",
+    "responsibility": "Implement accessible web screens, forms, API binding, all states and browser behavior; add component/unit tests.",
+    "expected_outputs": "PR with screenshots/test results and acceptance trace.",
+    "forbidden_actions": [
+      "Spend or purchase without explicit human approval",
+      "Change own permissions, budgets, or approval state",
+      "Use production or personal data outside an approved task",
+      "Send external messages, publish, deploy, or make irreversible changes without explicit approval",
+      "Treat untrusted document content as tool authority",
+      "Claim an artifact, test, or outcome without evidence"
+    ],
+    "declared_allowed_tools": []
+  },
+  "scenario": {
+    "task_id": "task_86aeefc4-8fc7-4cfb-829e-5732549c9bf6",
+    "trace_id": "trace_a6ac2e46-645a-494f-96be-bfb9758cce15",
+    "input_sha256": "eec7d1ddbbc0b1ace50a280f53b82d9f3a6931a03576af7c9f15d0e963476d2f",
+    "synthetic_only": true
+  },
+  "execution": {
+    "provider": "ollama-local",
+    "model": "qwen3:8b",
+    "status": "completed",
+    "n8n_execution_ids": [
+      "272",
+      "273"
+    ],
+    "steps": [
+      {
+        "step_number": 1,
+        "role_id": "FE-02",
+        "step_type": "producer",
+        "status": "completed",
+        "task_id": "task_86aeefc4-8fc7-4cfb-829e-5732549c9bf6",
+        "trace_id": "trace_a6ac2e46-645a-494f-96be-bfb9758cce15",
+        "n8n_execution_id": "272",
+        "output_sha256": "edd00e303db02a8dc1e2bc744397a8a57d0a3dda9f4991615ee27a70648ce647"
+      },
+      {
+        "step_number": 2,
+        "role_id": "QA-01",
+        "step_type": "reviewer",
+        "status": "completed",
+        "task_id": "task_86aeefc4-8fc7-4cfb-829e-5732549c9bf6",
+        "trace_id": "trace_a6ac2e46-645a-494f-96be-bfb9758cce15",
+        "n8n_execution_id": "273",
+        "output_sha256": "d4c1275f409313407a5484566fcead8decfd68ee1eb6cc887355de1d32ce67b7"
+      }
+    ],
+    "usage_known": false,
+    "usage": null,
+    "real_cost_usd": null,
+    "simulated_cost_usd": null
+  },
+  "artifact": {
+    "path": "ops/local-live/artifacts/task_86aeefc4-8fc7-4cfb-829e-5732549c9bf6/fe-02-web-ui-developer-acceptance.md",
+    "bytes": 5586,
+    "sha256": "76fee8c9fd30f45554e76a6747da0cb5434c76498f6a19295e355eb7b0900973",
+    "write_receipt": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_86aeefc4-8fc7-4cfb-829e-5732549c9bf6",
+      "trace_id": "trace_a6ac2e46-645a-494f-96be-bfb9758cce15",
+      "role_id": "FE-02",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T14:29:09.559Z"
+    }
+  },
+  "independent_review": {
+    "reviewer_role_id": "QA-01",
+    "n8n_execution_id": "273",
+    "output_sha256": "d4c1275f409313407a5484566fcead8decfd68ee1eb6cc887355de1d32ce67b7",
+    "status": "CAPTURED",
+    "verdict": "PASS",
+    "parsed": {
+      "verdict": "PASS",
+      "findings": [
+        "The draft deliverable includes a comprehensive overview of the web UI implementation for the personal planning exercise.",
+        "All components (planning screen, task form, API binding) are described with accessibility features and state management.",
+        "Unit tests are outlined for accessibility, state management, and browser behavior.",
+        "Screenshots are included as placeholders, which aligns with the synthetic task requirements.",
+        "An acceptance trace is provided with user story and acceptance criteria.",
+        "The 'Evidence and Assumptions' section clearly outlines the basis for the draft.",
+        "The 'Boundaries and Unknowns' section identifies the unknowns and sets clear boundaries for the synthetic task."
+      ],
+      "missing_requirements": [],
+      "evidence_limits": [
+        "The screenshots are placeholders and not actual images, which is acceptable for a synthetic task."
+      ]
+    },
+    "review_is_model_generated_not_human": true
+  },
+  "evaluation": {
+    "status": "PASS",
+    "failures": [],
+    "deliverable_cues": [
+      "screenshots",
+      "test",
+      "results",
+      "acceptance",
+      "trace"
+    ],
+    "matched_deliverable_cues": [
+      "screenshots",
+      "test",
+      "acceptance",
+      "trace"
+    ],
+    "cue_threshold": 2,
+    "evaluated_scope": "task/trace/role/provider/model, n8n execution references, two-stage correlation, required sections and role-specific output cues; not domain truth"
+  },
+  "statuses": {
+    "live_inference": "PASS",
+    "specialist_artifact": "PASS",
+    "reviewed": "CAPTURED",
+    "reviewer_verdict": "PASS",
+    "role_tool_capability": "VERIFIED",
+    "human_expert_approved": false,
+    "review_outcome": "PASS"
+  },
+  "restrictions": {
+    "live_codex_calls": 0,
+    "paid_api_calls": 0,
+    "external_actions": 0,
+    "public_deployments": 0
+  },
+  "tool_receipt": {
+    "schema_version": "role-tool-receipt.v1",
+    "authorized_by": "explicit synthetic task packet in this bounded test; this verifies the scoped tool boundary, not a grant to run tools autonomously",
+    "task_id": "task_86aeefc4-8fc7-4cfb-829e-5732549c9bf6",
+    "trace_id": "trace_a6ac2e46-645a-494f-96be-bfb9758cce15",
+    "role_id": "FE-02",
+    "grants": [
+      "project.read",
+      "artifact.write"
+    ],
+    "read": {
+      "path": "roles/contracts/FE-02.v1.json",
+      "bytes": 2007,
+      "sha256": "c915393204c0f0c6d06627ecf00f1385d6127df6bd7933b2ecab2bf5c8580b4c"
+    },
+    "write": {
+      "path": "ops/local-live/artifacts/task_86aeefc4-8fc7-4cfb-829e-5732549c9bf6/scoped-capability-receipt-fe-02.md",
+      "bytes": 611,
+      "sha256": "b4dce7570b51e2f10f0a9077ede5a62445f460480cc76fb9dbf8e6ffcacbf606",
+      "idempotent_existing_receipt": true
+    },
+    "negative_checks": {
+      "ungranted_tool_denied": true,
+      "outside_allowlist_denied": true,
+      "unauthorized_path": "roles/contracts/D-00.v1.json",
+      "path_traversal_denied": true,
+      "overwrite_denied": true
+    },
+    "sensitive_grants": [],
+    "external_actions": 0,
+    "recorded_at": "2026-10-18T17:05:16.277Z"
+  }
+}

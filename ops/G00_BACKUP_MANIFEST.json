@@ -1,0 +1,100 @@
+{
+  "manifest_version": "n8n-backup-manifest.g00.v1",
+  "created_at": "2026-10-16T08:26:00+03:00",
+  "source_instance": "https://wejdan404.app.n8n.cloud",
+  "project_id": "p5MRQODVi7djfuZf",
+  "count": 7,
+  "backup_directory": "workflows/n8n/backups/g00-rebaseline-20261016",
+  "files": [
+    {
+      "workflow_id": "KvMjR2lx81qsuCPL",
+      "name": "Wejdan Life OS | Agent Financial & Runtime Monitoring | Pilot",
+      "export_file": "workflows/n8n/backups/g00-rebaseline-20261016/pilot-original.json",
+      "sha256": "bdb3409e95ec24e8ec21b329177b2dc73d23fca2e2d164cb1dcf9c90c953182c",
+      "bytes": 14097,
+      "exported_via": "Authenticated n8n Cloud UI > Export JSON",
+      "verified_id": true,
+      "active": false,
+      "credential_nodes": 0,
+      "original_preservation": true
+    },
+    {
+      "workflow_id": "6leaYQgPdxIgACYC",
+      "name": "مدير البرنامج — Program Director",
+      "export_file": "workflows/n8n/backups/g00-rebaseline-20261016/program-director-original.json",
+      "sha256": "df27260fe935dd2200e389084579112d8e64c700befc0fe96231ad3b51e68091",
+      "bytes": 3395,
+      "exported_via": "Authenticated n8n Cloud UI > Export JSON",
+      "verified_id": true,
+      "active": false,
+      "credential_nodes": 0,
+      "original_preservation": true
+    },
+    {
+      "workflow_id": "Vsng8tOmTK1IIAgK",
+      "name": "مسؤول الموارد والتحكم المالي — Resource and Cost Controller",
+      "export_file": "workflows/n8n/backups/g00-rebaseline-20261016/finance-original.json",
+      "sha256": "7377ffee72aa4d8aacc9b74234cf03f059ac984122e4535fd7fe01e0e6b2a043",
+      "bytes": 3642,
+      "exported_via": "Authenticated n8n Cloud UI > Export JSON",
+      "verified_id": true,
+      "active": false,
+      "credential_nodes": 0,
+      "original_preservation": true
+    },
+    {
+      "workflow_id": "O7hWODxtpfIciHwq",
+      "name": "مهندس مراقبة الذكاء الاصطناعي والتكاليف — AI Observability and Cost Engineer",
+      "export_file": "workflows/n8n/backups/g00-rebaseline-20261016/observability-original.json",
+      "sha256": "33b4f31ed0a336c726002bf0611a258e8f6a03efc2da8e9596e9ac38acc8a60a",
+      "bytes": 3407,
+      "exported_via": "Authenticated n8n Cloud UI > Export JSON",
+      "verified_id": true,
+      "active": false,
+      "credential_nodes": 0,
+      "original_preservation": true
+    },
+    {
+      "workflow_id": "94SV8TzA5AGWWtH5",
+      "name": "مدير البرنامج — Program Director V2 Mock",
+      "export_file": "workflows/n8n/backups/g00-rebaseline-20261016/program-director-v2.json",
+      "sha256": "5abe2edca351d1fa5c3fce959b79d7d1584ec97d84631099e43c3a64eb976219",
+      "bytes": 4139,
+      "exported_via": "Authenticated n8n Cloud UI > Export JSON",
+      "verified_id": true,
+      "active": false,
+      "credential_nodes": 0,
+      "original_preservation": false
+    },
+    {
+      "workflow_id": "lGKO45bElUeCXDpv",
+      "name": "مسؤول الموارد والتحكم المالي — Finance V2 Mock",
+      "export_file": "workflows/n8n/backups/g00-rebaseline-20261016/finance-v2.json",
+      "sha256": "61282c5e449d3a7059ad88290208bfa899befa596360b4aeb739552eb472e5d5",
+      "bytes": 5061,
+      "exported_via": "Authenticated n8n Cloud UI > Export JSON",
+      "verified_id": true,
+      "active": false,
+      "credential_nodes": 0,
+      "original_preservation": false
+    },
+    {
+      "workflow_id": "tbQTccAcfza2XpnI",
+      "name": "مهندس المراقبة — Observability V2 Mock",
+      "export_file": "workflows/n8n/backups/g00-rebaseline-20261016/observability-v2.json",
+      "sha256": "1e91acfd59e8ffa39944caca04ace5b71f1c83b008c232f5c3739302d87a7a5b",
+      "bytes": 3876,
+      "exported_via": "Authenticated n8n Cloud UI > Export JSON",
+      "verified_id": true,
+      "active": false,
+      "credential_nodes": 0,
+      "original_preservation": false
+    }
+  ],
+  "local_validation": {
+    "command": "powershell -NoProfile -ExecutionPolicy Bypass -File ops/validate_g00.ps1",
+    "result": "PASS",
+    "assertions_passed": 57,
+    "assertions_failed": 0
+  }
+}

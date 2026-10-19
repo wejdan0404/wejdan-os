@@ -1,0 +1,16 @@
+{
+  "schema_version": "codex-adapter-post-integration-smoke.v1",
+  "result": "PASS",
+  "timestamp": "2026-10-18T08:36:19.985Z",
+  "checks": [
+    "85 roles displayed",
+    "Codex provider option visible and selectable",
+    "synchronous Codex dispatch rejected without task insert",
+    "no model inference",
+    "no n8n execution",
+    "zero browser errors"
+  ],
+  "live_codex_calls": 0,
+  "paid_api_calls": 0,
+  "n8n_runs": 0
+}

@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>مساري</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'IBM Plex Sans Arabic','IBM Plex Sans',sans-serif;background:#F4F7FC;color:#0E121C}
+a{color:#4F5FA0}a:hover{color:#2B3358}
+</style>
+</helmet>
+<div style="width:390px;height:2080px;position:relative;overflow:hidden;background:#F4F7FC;font-family:'IBM Plex Sans Arabic','IBM Plex Sans',sans-serif;color:#0E121C">
+<main style="padding:16px 20px 108px;display:flex;flex-direction:column;gap:24px">
+
+<header style="display:flex;flex-direction:column;gap:4px">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+<h1 style="margin:0;font-size:22px;line-height:30px;font-weight:700">مساري</h1>
+<a href="WeeklyReview.dc.html" aria-label="مراجعة الأسبوع" style="width:44px;height:44px;border-radius:999px;border:1px solid #DCE3EF;background:#FFFFFF;color:#2B3358;display:flex;align-items:center;justify-content:center;box-sizing:border-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="3"></rect><path d="M8 3v4M16 3v4M4 10h16M9 14.5l2 2 4-4"></path></svg></a>
+</div>
+<p style="margin:0;font-size:13px;line-height:20px;font-weight:500;color:#5A6478">سنتي: أكتوبر 2026 ← سبتمبر 2027 · خطة مقترحة تعدّلينها متى ما بغيتي</p>
+</header>
+
+<section aria-labelledby="season-h" style="background:#FFFFFF;border:1px solid #DCE3EF;border-radius:20px;padding:16px;display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:8px">
+<h2 id="season-h" style="margin:0;font-size:18px;line-height:26px;font-weight:600">موسم الخريف</h2>
+<span style="font-size:13px;line-height:20px;font-weight:500;color:#5A6478">الأسبوع 3 من 10</span>
+</div>
+<div style="height:8px;border-radius:999px;background:#EAF1FB;overflow:hidden" role="img" aria-label="مضى 3 أسابيع من 10"><div style="width:30%;height:8px;border-radius:999px;background:#6172B5"></div></div>
+<div style="display:flex;flex-direction:column;gap:8px">
+<div style="display:flex;align-items:flex-start;gap:12px">
+<span style="flex:0 0 72px;font-size:12px;line-height:18px;font-weight:600;color:#2F6B4A;background:#E3F0E8;border-radius:999px;padding:3px 0;text-align:center">أنمّي 3/3</span>
+<span style="font-size:14px;line-height:22px;color:#0E121C">الحركة · IELTS · المسار المهني</span>
+</div>
+<div style="display:flex;align-items:flex-start;gap:12px">
+<span style="flex:0 0 72px;font-size:12px;line-height:18px;font-weight:600;color:#2B3358;background:#EAF1FB;border-radius:999px;padding:3px 0;text-align:center">أحافظ</span>
+<span style="font-size:14px;line-height:22px;color:#0E121C">النوم · العناية · البيت · المال</span>
+</div>
+<div style="display:flex;align-items:flex-start;gap:12px">
+<span style="flex:0 0 72px;font-size:12px;line-height:18px;font-weight:600;color:#5A6478;background:#EEF1F6;border-radius:999px;padding:3px 0;text-align:center">أريّح</span>
+<span style="font-size:14px;line-height:22px;color:#3A4256">KDP — مخفي من يومك لين ترجعينه</span>
+</div>
+</div>
+<a href="WeeklyReview.dc.html" style="min-height:44px;display:flex;align-items:center;font-size:16px;line-height:26px;font-weight:600;color:#4F5FA0;text-decoration:none">تعديل الموسم في المراجعة الأسبوعية</a>
+</section>
+
+<section aria-labelledby="year-h" style="display:flex;flex-direction:column;gap:12px">
+<h2 id="year-h" style="margin:0;font-size:12px;line-height:18px;font-weight:600;color:#5A6478">السنة في 4 أرباع</h2>
+<div style="background:#FFFFFF;border:1px solid #DCE3EF;border-radius:20px;padding:16px;display:flex;flex-direction:column;gap:16px">
+<div role="tablist" aria-label="أرباع السنة" style="display:grid;grid-template-columns:repeat(4, minmax(0, 1fr));gap:6px">
+<sc-for list="{{quarters}}" as="q" hint-placeholder-count="4">
+<button type="button" role="tab" aria-selected="{{q.selected}}" onClick="{{q.pick}}" style="{{q.style}}">
+<span style="font-size:14px;line-height:22px;font-weight:600">{{q.name}}</span>
+<span style="font-size:12px;line-height:18px;font-weight:500">{{q.months}}</span>
+</button>
+</sc-for>
+</div>
+<div style="position:relative;height:24px" aria-hidden="true">
+<div style="position:absolute;top:11px;right:0;left:0;height:2px;background:#DCE3EF;border-radius:999px"></div>
+<div style="position:absolute;top:11px;right:0;width:6%;height:2px;background:#6172B5;border-radius:999px"></div>
+<div style="position:absolute;top:5px;right:calc(6% - 7px);width:14px;height:14px;border-radius:999px;background:#6172B5;border:3px solid #BEDAF7;box-sizing:border-box"></div>
+<span style="position:absolute;top:0;right:calc(6% + 14px);font-size:12px;line-height:18px;font-weight:600;color:#4F5FA0;background:#FFFFFF;padding:0 4px">أنتِ هنا · 28 سبتمبر</span>
+</div>
+<div style="display:flex;flex-direction:column;gap:4px">
+<div style="display:flex;align-items:baseline;gap:8px">
+<h3 style="margin:0;font-size:18px;line-height:26px;font-weight:600">{{cur.title}}</h3>
+<span style="font-size:13px;line-height:20px;font-weight:500;color:#5A6478">{{cur.months}}</span>
+</div>
+<ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column">
+<sc-for list="{{cur.items}}" as="m" hint-placeholder-count="5">
+<li style="display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-top:1px solid #EAF1FB">
+<span style="{{m.dot}}"></span>
+<span style="flex:1;font-size:14px;line-height:22px;color:#0E121C">{{m.text}}</span>
+<span style="font-size:12px;line-height:18px;font-weight:600;color:#5A6478">{{m.domain}}</span>
+</li>
+</sc-for>
+</ul>
+</div>
+</div>
+</section>
+
+<section aria-labelledby="goals-h" style="display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;align-items:center;justify-content:space-between">
+<h2 id="goals-h" style="margin:0;font-size:12px;line-height:18px;font-weight:600;color:#5A6478">أهدافي · وكل هدف له خطوة تالية وحدة</h2>
+<span style="font-size:12px;line-height:18px;font-weight:600;color:#5A6478;background:#EEF1F6;border-radius:999px;padding:1px 8px">عيّنة</span>
+</div>
+
+<a href="Driving.dc.html" style="background:#FFFFFF;border:1px solid #DCE3EF;border-radius:20px;padding:16px;display:flex;gap:12px;align-items:flex-start;text-decoration:none;color:#0E121C">
+<span style="flex:0 0 40px;height:40px;border-radius:12px;background:#E6EAF2;color:#3A4A6B;display:flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"></circle><circle cx="12" cy="12" r="2"></circle><path d="M12 14v6.5M10.2 11.2L4 9.5M13.8 11.2L20 9.5"></path></svg></span>
+<span style="flex:1;display:flex;flex-direction:column;gap:2px">
+<span style="font-size:16px;line-height:26px;font-weight:600">رخصة القيادة</span>
+<span style="font-size:13px;line-height:20px;font-weight:500;color:#5A6478">المرحلة 1 من 5 · مشروع بالانتظار</span>
+<span style="font-size:14px;line-height:22px;color:#2B3358;background:#EAF1FB;border-radius:12px;padding:6px 10px;margin-top:6px">التالي: تأكيد المسار الرسمي عبر أبشر</span>
+</span>
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5A6478" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-top:10px"><path d="M15 6l-6 6 6 6"></path></svg>
+</a>
+
+<a href="IELTS.dc.html" style="background:#FFFFFF;border:1px solid #DCE3EF;border-radius:20px;padding:16px;display:flex;gap:12px;align-items:flex-start;text-decoration:none;color:#0E121C">
+<span style="flex:0 0 40px;height:40px;border-radius:12px;background:#E1EEFB;color:#2D5F92;display:flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h9M8.5 4v2c0 4-2 7-4.5 8.5M6 10c1.5 2.5 3.5 4 6 4.5"></path><path d="M13 20l4-9 4 9M14.5 17h5"></path></svg></span>
+<span style="flex:1;display:flex;flex-direction:column;gap:2px">
+<span style="font-size:16px;line-height:26px;font-weight:600">IELTS</span>
+<span style="font-size:13px;line-height:20px;font-weight:500;color:#5A6478">الدرجة المستهدفة تحددينها بعد الاختبار التشخيصي</span>
+<span style="font-size:14px;line-height:22px;color:#2B3358;background:#EAF1FB;border-radius:12px;padding:6px 10px;margin-top:6px">التالي: اختبار تشخيصي كامل هذا الأسبوع</span>
+</span>
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5A6478" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-top:10px"><path d="M15 6l-6 6 6 6"></path></svg>
+</a>
+
+<div style="background:#FFFFFF;border:1px solid #DCE3EF;border-radius:20px;padding:16px;display:flex;gap:12px;align-items:flex-start">
+<span style="flex:0 0 40px;height:40px;border-radius:12px;background:#F3EEDF;color:#6E5A1E;display:flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="7" width="17" height="12.5" rx="2.5"></rect><path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7M3.5 12.5h17"></path></svg></span>
+<div style="flex:1;display:flex;flex-direction:column;gap:2px">
+<span style="font-size:16px;line-height:26px;font-weight:600">المسار المهني والمعرض</span>
+<span style="font-size:13px;line-height:20px;font-weight:500;color:#5A6478">شهادة Google UX: الوحدة 3 من 8</span>
+<div style="height:8px;border-radius:999px;background:#EAF1FB;margin:6px 0 2px;overflow:hidden" role="img" aria-label="3 وحدات من 8"><div style="width:37.5%;height:8px;border-radius:999px;background:#6172B5"></div></div>
+<span style="font-size:14px;line-height:22px;color:#2B3358;background:#EAF1FB;border-radius:12px;padding:6px 10px;margin-top:6px">التالي: إنهاء درس الوحدة 3 ثم مسودة دراسة الحالة 1</span>
+</div>
+</div>
+
+<div style="display:grid;grid-template-columns:repeat(2, minmax(0, 1fr));gap:12px">
+<div style="background:#FFFFFF;border:1px solid #DCE3EF;border-radius:20px;padding:16px;display:flex;flex-direction:column;gap:6px">
+<span style="width:40px;height:40px;border-radius:12px;background:#E3F0E8;color:#2F6B4A;display:flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"></path></svg></span>
+<span style="font-size:16px;line-height:26px;font-weight:600">الصحة والجسم</span>
+<span style="font-size:14px;line-height:22px;color:#3A4256">التالي: قوة مرتين هذا الأسبوع</span>
+</div>
+<a href="Money.dc.html" style="background:#FFFFFF;border:1px solid #DCE3EF;border-radius:20px;padding:16px;display:flex;flex-direction:column;gap:6px;text-decoration:none;color:#0E121C">
+<span style="width:40px;height:40px;border-radius:12px;background:#E2F3F0;color:#23675C;display:flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="3"></rect><path d="M3 10h18M16 14.5h2"></path></svg></span>
+<span style="font-size:16px;line-height:26px;font-weight:600">المال</span>
+<span style="font-size:14px;line-height:22px;color:#3A4256">التالي: أسبوع تتبّع المصروفات</span>
+</a>
+</div>
+</section>
+
+<section aria-labelledby="proj-h" style="display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;align-items:center;justify-content:space-between">
+<h2 id="proj-h" style="margin:0;font-size:12px;line-height:18px;font-weight:600;color:#5A6478">المشاريع</h2>
+<span style="font-size:12px;line-height:18px;font-weight:600;color:#2B3358;background:#EAF1FB;border-radius:999px;padding:2px 10px">نشطة 2 من 2</span>
+</div>
+<div style="background:#FFFFFF;border:1px solid #DCE3EF;border-radius:20px;padding:16px;display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;align-items:center;gap:6px;font-size:13px;line-height:20px;font-weight:600;color:#4F5FA0"><span style="width:8px;height:8px;border-radius:999px;background:#6172B5"></span>نشطة</div>
+<div style="display:grid;grid-template-columns:repeat(2, minmax(0, 1fr));gap:8px">
+<div style="background:#F4F7FC;border-radius:16px;padding:12px;display:flex;flex-direction:column;gap:4px">
+<span style="font-size:14px;line-height:22px;font-weight:600">شهادة Google UX</span>
+<span style="font-size:13px;line-height:20px;font-weight:500;color:#5A6478">الخطوة 3 من 8</span>
+<div style="height:8px;border-radius:999px;background:#EAF1FB;overflow:hidden;margin-top:4px"><div style="width:37.5%;height:8px;background:#6172B5;border-radius:999px"></div></div>
+</div>
+<div style="background:#F4F7FC;border-radius:16px;padding:12px;display:flex;flex-direction:column;gap:4px">
+<span style="font-size:14px;line-height:22px;font-weight:600">دراسة الحالة 1</span>
+<span style="font-size:13px;line-height:20px;font-weight:500;color:#5A6478">الخطوة 1 من 6</span>
+<div style="height:8px;border-radius:999px;background:#EAF1FB;overflow:hidden;margin-top:4px"><div style="width:16.7%;height:8px;background:#6172B5;border-radius:999px"></div></div>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;border-top:1px solid #DCE3EF">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 0;border-bottom:1px solid #EAF1FB">
+<span style="font-size:14px;line-height:22px">التسجيل في مدرسة القيادة</span>
+<span style="font-size:12px;line-height:18px;font-weight:600;color:#3A4A6B;background:#E6EAF2;border-radius:999px;padding:2px 10px">بالانتظار</span>
+</div>
+<div style="display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 0">
+<span style="font-size:14px;line-height:22px;color:#3A4256">كتاب KDP</span>
+<span style="font-size:12px;line-height:18px;font-weight:600;color:#5A6478;background:#EEF1F6;border-radius:999px;padding:2px 10px">متوقف · راحة</span>
+</div>
+</div>
+<p style="margin:0;font-size:13px;line-height:20px;font-weight:500;color:#5A6478">مشروعين نشطين بس — أي مشروع جديد يروح لصندوق الأفكار أو يتبادل مكانه مع واحد.</p>
+</div>
+</section>
+
+<button type="button" style="background:#FFFFFF;border:1px solid #DCE3EF;border-radius:20px;padding:12px 16px;display:flex;align-items:center;gap:12px;min-height:44px;color:#0E121C;font-family:inherit;text-align:right;cursor:pointer">
+<span style="width:40px;height:40px;border-radius:12px;background:#FBF1D6;color:#8A6412;display:flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 13l2.5-7.5A2 2 0 0 1 8.4 4h7.2a2 2 0 0 1 1.9 1.5L20 13v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"></path><path d="M4 13h4.5l1.5 2.5h4l1.5-2.5H20"></path></svg></span>
+<span style="flex:1;display:flex;flex-direction:column">
+<span style="font-size:16px;line-height:26px;font-weight:600">صندوق الأفكار</span>
+<span style="font-size:13px;line-height:20px;font-weight:500;color:#5A6478">7 أفكار تنتظر وقتها — بدون ضغط</span>
+</span>
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5A6478" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg>
+</button>
+
+</main>
+
+<nav aria-label="التنقل الرئيسي" style="position:absolute;left:0;right:0;bottom:0;height:84px;background:#FFFFFF;border-top:1px solid #DCE3EF;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));padding:6px 8px 0;box-sizing:border-box;">
+    <a href="Main.dc.html" style="display:flex;flex-direction:column;align-items:center;gap:2px;min-height:52px;text-decoration:none;color:#5A6478;font-size:12px;line-height:18px;font-weight:600;">
+      <span style="width:4px;height:4px;"></span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>
+      <span>اليوم</span>
+    </a>
+    <a href="HabitsHub.dc.html" style="display:flex;flex-direction:column;align-items:center;gap:2px;min-height:52px;text-decoration:none;color:#5A6478;font-size:12px;line-height:18px;font-weight:600;">
+      <span style="width:4px;height:4px;"></span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21v-9"></path><path d="M12 12c0-4 3-7 8-7 0 4-3 7-8 7z"></path><path d="M12 14c0-3-2.5-5.5-7-5.5 0 3 2.5 5.5 7 5.5z"></path></svg>
+      <span>عاداتي</span>
+    </a>
+    <a href="Path.dc.html" aria-current="page" style="display:flex;flex-direction:column;align-items:center;gap:2px;min-height:52px;text-decoration:none;color:#6172B5;font-size:12px;line-height:18px;font-weight:600;">
+      <span style="width:4px;height:4px;border-radius:999px;background:#6172B5;"></span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="19" r="2"></circle><circle cx="18" cy="5" r="2"></circle><path d="M8 19h7.5a3.5 3.5 0 0 0 0-7h-7a3.5 3.5 0 0 1 0-7H16"></path></svg>
+      <span>مساري</span>
+    </a>
+    <a href="Joy.dc.html" style="display:flex;flex-direction:column;align-items:center;gap:2px;min-height:52px;text-decoration:none;color:#5A6478;font-size:12px;line-height:18px;font-weight:600;">
+      <span style="width:4px;height:4px;"></span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c.7 5.3 3 7.6 9 9-6 1.4-8.3 3.7-9 9-.7-5.3-3-7.6-9-9 6-1.4 8.3-3.7 9-9z"></path></svg>
+      <span>متعتي</span>
+    </a>
+    <a href="Me.dc.html" style="display:flex;flex-direction:column;align-items:center;gap:2px;min-height:52px;text-decoration:none;color:#5A6478;font-size:12px;line-height:18px;font-weight:600;">
+      <span style="width:4px;height:4px;"></span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"></path></svg>
+      <span>أنا</span>
+    </a>
+  </nav>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":2080}}'>
+class Component extends DCLogic {
+constructor(props){ super(props); this.state = { q: 0 }; }
+renderVals() {
+  const Q = [
+    { name: 'الربع 1', months: 'أكت–ديس', title: 'الأساس', full: 'أكتوبر – ديسمبر 2026', items: [
+      ['موعد استيقاظ ثابت ومشي يومي', 'الحركة'],
+      ['قوة مرتين بالأسبوع', 'الحركة'],
+      ['اختبار IELTS تشخيصي ومفردات يومية', 'IELTS'],
+      ['تأكيد مسار الرخصة والتسجيل', 'القيادة'],
+      ['أسبوع تتبّع مصروفات وتحويل ادخار تلقائي', 'المال'],
+      ['دورة وحدة نشطة: Google UX', 'المهني'] ] },
+    { name: 'الربع 2', months: 'ينا–مار', title: 'البناء', full: 'يناير – مارس 2027', items: [
+      ['تدرّج في تمارين القوة', 'الحركة'],
+      ['دورة مهارات IELTS كاملة واختبار تجريبي شهري', 'IELTS'],
+      ['تدريب قيادة تحت الإشراف والاختبار النظري', 'القيادة'],
+      ['دراسة الحالة 1 للمعرض', 'المهني'],
+      ['جولة بحث عن عمل أسبوعية', 'المهني'] ] },
+    { name: 'الربع 3', months: 'أبر–يون', title: 'التثبيت', full: 'أبريل – يونيو 2027', items: [
+      ['حجز اختبار IELTS لما توصل التجريبية لهدفك', 'IELTS'],
+      ['اختبار القيادة العملي', 'القيادة'],
+      ['دراسة الحالة 2 وتواصل مهني', 'المهني'],
+      ['محطة صندوق الطوارئ', 'المال'] ] },
+    { name: 'الربع 4', months: 'يول–سبت', title: 'التوسّع', full: 'يوليو – سبتمبر 2027', items: [
+      ['مراجعة موسم جديد', 'الكل'],
+      ['المحافظة على العادات التلقائية', 'الكل'],
+      ['إضافة مجال نمو جديد', 'تختارينه'] ] }
+  ];
+  const sel = this.state.q;
+  const quarters = Q.map((q, i) => ({
+    name: q.name, months: q.months,
+    selected: i === sel ? 'true' : 'false',
+    style: 'min-height:56px;border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;cursor:pointer;font-family:inherit;padding:4px 2px;' + (i === sel ? 'background:#EAF1FB;border:1px solid #9BC4EE;color:#2B3358' : 'background:#FFFFFF;border:1px solid #DCE3EF;color:#3A4256'),
+    pick: () => this.setState({ q: i })
+  }));
+  const c = Q[sel];
+  return {
+    quarters: quarters,
+    cur: {
+      title: c.title, months: c.full,
+      items: c.items.map((m, k) => ({ text: m[0], domain: m[1], dot: 'flex:0 0 8px;height:8px;margin-top:7px;border-radius:999px;' + (sel === 0 && k < 1 ? 'background:#6172B5' : 'background:#FFFFFF;border:1.5px solid #9BC4EE;box-sizing:border-box') }))
+    }
+  };
+}
+}
+</script>
+</body>
+</html>

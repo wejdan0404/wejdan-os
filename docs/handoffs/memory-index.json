@@ -1,0 +1,10 @@
+{
+  "index_version": "handoff-memory.v1",
+  "updated_at_utc": "2026-10-16T00:00:00Z",
+  "entries": [
+    {"kind":"decision-log","path":"../../ops/DECISIONS.md","status":"source_of_truth","sha256":null},
+    {"kind":"current-state","path":"../../ops/CURRENT_STATE.md","status":"source_of_truth","sha256":null},
+    {"kind":"role-registry","path":"../../roles/role_registry.json","status":"generated","sha256":null},
+    {"kind":"execution-plan","path":"../../Wejdan_Life_OS_Codex_Autonomous_n8n_Execution_Plan_v1.0.md","status":"owner_provided","sha256":null}
+  ]
+}

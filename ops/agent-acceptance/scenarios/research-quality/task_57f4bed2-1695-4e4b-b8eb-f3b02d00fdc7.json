@@ -1,0 +1,83 @@
+{
+  "schema_version": "local-production-scenario-result.v1",
+  "task_id": "task_57f4bed2-1695-4e4b-b8eb-f3b02d00fdc7",
+  "trace_id": "trace_4e233874-ead1-4414-8924-943a8cf33563",
+  "scenario_id": "research-quality",
+  "role_id": "UR-02",
+  "status": "completed",
+  "provider": "ollama-local",
+  "model": "qwen3:8b",
+  "reviewer_role_id": "UR-QA",
+  "reviewer_verdict": "PASS",
+  "reviewer_output": "{\n  \"verdict\": \"PASS\",\n  \"findings\": [\n    \"The synthetic dataset now contains consistent and complete entries with valid values for all columns, aligning with the stated validation assertions.\",\n    \"All 8 unique IDs (SYN-01 through SYN-08) are present and correctly assigned, with no duplicates or missing entries.\",\n    \"The mapped questions to columns are explicitly tied to the synthetic data values, providing clarity on how the data would be interpreted in a real-world context.\",\n    \"The dataset limitations are clearly separated from the dataset description, improving overall clarity and reducing ambiguity.\"\n  ],\n  \"missing_requirements\": [],\n  \"evidence_limits\": [\n    \"The synthetic data is fully consistent and valid, with no missing or malformed entries.\"\n  ]\n}",
+  "steps": [
+    {
+      "role_id": "UR-06",
+      "stage": "planner",
+      "task_id": "task_57f4bed2-1695-4e4b-b8eb-f3b02d00fdc7",
+      "trace_id": "trace_4e233874-ead1-4414-8924-943a8cf33563",
+      "n8n_execution_id": "607",
+      "elapsed_ms": 10459,
+      "output_sha256": "72b6ab5171068f8aa875c5b177bd00e1dd4b269f34b4083fc031a1dc11782627"
+    },
+    {
+      "role_id": "UR-07",
+      "stage": "specialist_1",
+      "task_id": "task_57f4bed2-1695-4e4b-b8eb-f3b02d00fdc7",
+      "trace_id": "trace_4e233874-ead1-4414-8924-943a8cf33563",
+      "n8n_execution_id": "608",
+      "elapsed_ms": 8771,
+      "output_sha256": "0f658c0ffc62144656f764529f5405bea2c8111f5b19c11c2e3eae153367fceb"
+    },
+    {
+      "role_id": "UR-QA",
+      "stage": "independent_review",
+      "task_id": "task_57f4bed2-1695-4e4b-b8eb-f3b02d00fdc7",
+      "trace_id": "trace_4e233874-ead1-4414-8924-943a8cf33563",
+      "n8n_execution_id": "609",
+      "elapsed_ms": 3788,
+      "output_sha256": "0453dcef286c228ffb26ed94981ea552d5f56e91f45752795df8ad2d3fd874eb"
+    },
+    {
+      "role_id": "UR-07",
+      "stage": "bounded_revision",
+      "task_id": "task_57f4bed2-1695-4e4b-b8eb-f3b02d00fdc7",
+      "trace_id": "trace_4e233874-ead1-4414-8924-943a8cf33563",
+      "n8n_execution_id": "610",
+      "elapsed_ms": 11738,
+      "output_sha256": "18a9f0aa6a715cd0b3cab65b8b44995b652e0592ac3d6613a965b6681b657306"
+    },
+    {
+      "role_id": "UR-QA",
+      "stage": "final_review",
+      "task_id": "task_57f4bed2-1695-4e4b-b8eb-f3b02d00fdc7",
+      "trace_id": "trace_4e233874-ead1-4414-8924-943a8cf33563",
+      "n8n_execution_id": "611",
+      "elapsed_ms": 2183,
+      "output_sha256": "05e171dd8424aac578fa7d41f657253d48ca79c4bde867df24a3aae328859ad9"
+    }
+  ],
+  "artifact": {
+    "path": "ops/local-live/artifacts/task_57f4bed2-1695-4e4b-b8eb-f3b02d00fdc7/research-quality-acceptance-bundle.md",
+    "bytes": 7040,
+    "sha256": "65729fedb3a830c80272e2fc14e42a0d93562bf908a11927c686177e66ca357b",
+    "provenance": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_57f4bed2-1695-4e4b-b8eb-f3b02d00fdc7",
+      "trace_id": "trace_4e233874-ead1-4414-8924-943a8cf33563",
+      "role_id": "UR-02",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T17:44:42.125Z"
+    }
+  },
+  "refusal_recovery": null,
+  "external_actions": 0,
+  "paid_api_calls": 0,
+  "live_codex_calls": 0,
+  "request": "Prepare a concise (≤700 words) synthetic research protocol for whether Arabic-first onboarding makes offline persistence understandable. No participants, interviews, observations, external citations, or real findings exist. Include exactly one synthetic table with 8 unique IDs SYN-01 through SYN-08 and columns language, onboarding_completion, persistence_explanation_recall, consent_comprehension. Use fixed values, not probability/random claims. Include a schema and validation assertions (8 rows, unique IDs, allowed values), map 3 sample questions explicitly to column names, and state which questions this dataset cannot answer. Add a future-study consent/privacy checklist, analysis plan, assumptions/unknowns and an empty report template. All rows must be explicitly synthetic method fixtures, not observations or evidence about real users. Do not provide a calendar date. Do not repeat the data table or infer findings from it.",
+  "artifact_sha256": "65729fedb3a830c80272e2fc14e42a0d93562bf908a11927c686177e66ca357b",
+  "evidence_path": "C:\\Users\\WinDows\\Desktop\\عام\\os\\ops\\agent-acceptance\\scenarios\\research-quality\\task_57f4bed2-1695-4e4b-b8eb-f3b02d00fdc7.json",
+  "recorded_at": "2026-10-18T17:44:42.127Z"
+}

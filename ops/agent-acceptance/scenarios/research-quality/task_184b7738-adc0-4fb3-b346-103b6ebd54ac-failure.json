@@ -1,0 +1,75 @@
+{
+  "scenario_id": "research-quality",
+  "task_id": "task_184b7738-adc0-4fb3-b346-103b6ebd54ac",
+  "trace_id": "trace_f2977da7-ba48-46a0-bb17-bebfc6be4bcd",
+  "status": "failed",
+  "error": "SCENARIO_DETERMINISTIC_TRUTH_CHECK_FAILED:Synthetic method dataset requires at least 8 clearly labeled SYN-* rows; found 0.|Sample research questions must map to synthetic dataset fields.",
+  "provider": "ollama-local",
+  "model": "qwen3:8b",
+  "steps": [
+    {
+      "role_id": "UR-06",
+      "stage": "planner",
+      "task_id": "task_184b7738-adc0-4fb3-b346-103b6ebd54ac",
+      "trace_id": "trace_f2977da7-ba48-46a0-bb17-bebfc6be4bcd",
+      "n8n_execution_id": "602",
+      "elapsed_ms": 13552,
+      "output_sha256": "0afec386ab8b942af4efb15926807c2662bafe150611f6c7d4f839818ed2ab2f"
+    },
+    {
+      "role_id": "UR-07",
+      "stage": "specialist_1",
+      "task_id": "task_184b7738-adc0-4fb3-b346-103b6ebd54ac",
+      "trace_id": "trace_f2977da7-ba48-46a0-bb17-bebfc6be4bcd",
+      "n8n_execution_id": "603",
+      "elapsed_ms": 15375,
+      "output_sha256": "bbac8c8106bd9a7585ffeb867fd7abeff00047158985f78936657f0748a907e6"
+    },
+    {
+      "role_id": "UR-QA",
+      "stage": "independent_review",
+      "task_id": "task_184b7738-adc0-4fb3-b346-103b6ebd54ac",
+      "trace_id": "trace_f2977da7-ba48-46a0-bb17-bebfc6be4bcd",
+      "n8n_execution_id": "604",
+      "elapsed_ms": 3043,
+      "output_sha256": "0528aea2a0802abf3ce12638068d226d4647154bbd75fca3e4b8f1e52e2496ec"
+    },
+    {
+      "role_id": "UR-07",
+      "stage": "bounded_revision",
+      "task_id": "task_184b7738-adc0-4fb3-b346-103b6ebd54ac",
+      "trace_id": "trace_f2977da7-ba48-46a0-bb17-bebfc6be4bcd",
+      "n8n_execution_id": "605",
+      "elapsed_ms": 16182,
+      "output_sha256": "8f550e68a914e8db08296623b5d245a56a7b88f79fc99adb223dea2750e33f32"
+    },
+    {
+      "role_id": "UR-QA",
+      "stage": "final_review",
+      "task_id": "task_184b7738-adc0-4fb3-b346-103b6ebd54ac",
+      "trace_id": "trace_f2977da7-ba48-46a0-bb17-bebfc6be4bcd",
+      "n8n_execution_id": "606",
+      "elapsed_ms": 2045,
+      "output_sha256": "05a1c4e41003d3f86498e3de8c45ca799eb525b4d067ac133d6430f94ca3393a"
+    }
+  ],
+  "reviewer_output": "{\n  \"verdict\": \"PASS\",\n  \"findings\": [\n    \"The synthetic dataset now includes all 8 rows and is complete.\",\n    \"All required fields (`language`, `onboarding_completion`, `persistence_explanation_recall`, and `consent_comprehension`) are present in the dataset.\",\n    \"The dataset is consistently labeled as synthetic and explicitly states that it is not real participant data.\",\n    \"The synthetic dataset includes a deterministic generation rule and validation checks.\"\n  ],\n  \"missing_requirements\": [],\n  \"evidence_limits\": [\n    \"The dataset does not include a consent/privacy checklist for any future human study.\"\n  ]\n}",
+  "reviewer_verdict": "PASS",
+  "refusal_recovery": null,
+  "recorded_at": "2026-10-18T17:43:42.939Z",
+  "draft_artifact": {
+    "path": "ops/local-live/artifacts/task_184b7738-adc0-4fb3-b346-103b6ebd54ac/research-quality-acceptance-bundle-unaccepted.md",
+    "bytes": 8785,
+    "sha256": "a6841396000dd7bdb93ee4aa31e64760b4f8863d68c894f13ed0984e0d78e319",
+    "provenance": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_184b7738-adc0-4fb3-b346-103b6ebd54ac",
+      "trace_id": "trace_f2977da7-ba48-46a0-bb17-bebfc6be4bcd",
+      "role_id": "UR-02",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T17:43:42.941Z"
+    }
+  }
+}

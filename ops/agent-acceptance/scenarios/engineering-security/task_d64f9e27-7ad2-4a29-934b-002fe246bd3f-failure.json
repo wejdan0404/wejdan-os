@@ -1,0 +1,80 @@
+{
+  "scenario_id": "engineering-security",
+  "task_id": "task_d64f9e27-7ad2-4a29-934b-002fe246bd3f",
+  "trace_id": "trace_df7bc07f-53e6-49d7-b3ee-a280025cb2d5",
+  "status": "failed",
+  "error": "SCENARIO_DETERMINISTIC_TRUTH_CHECK_FAILED:The implementation uses task_id and trace_id, not correlation_id; correct the contract description.",
+  "provider": "ollama-local",
+  "model": "qwen3:8b",
+  "steps": [
+    {
+      "role_id": "BE-04",
+      "stage": "planner",
+      "task_id": "task_d64f9e27-7ad2-4a29-934b-002fe246bd3f",
+      "trace_id": "trace_df7bc07f-53e6-49d7-b3ee-a280025cb2d5",
+      "n8n_execution_id": "627",
+      "elapsed_ms": 7938,
+      "output_sha256": "63f34c972ab0ee1954532da32bdbd7f269015a5e11d42cfe6adcdab267d52dcb"
+    },
+    {
+      "role_id": "SEC-02",
+      "stage": "specialist_1",
+      "task_id": "task_d64f9e27-7ad2-4a29-934b-002fe246bd3f",
+      "trace_id": "trace_df7bc07f-53e6-49d7-b3ee-a280025cb2d5",
+      "n8n_execution_id": "628",
+      "elapsed_ms": 7344,
+      "output_sha256": "c63efe09e37cdf7c8a5df267aecc76ca73d5a7659dc3cd25b4d29e7b3d05d9e7"
+    },
+    {
+      "role_id": "QA-02",
+      "stage": "independent_review",
+      "task_id": "task_d64f9e27-7ad2-4a29-934b-002fe246bd3f",
+      "trace_id": "trace_df7bc07f-53e6-49d7-b3ee-a280025cb2d5",
+      "n8n_execution_id": "629",
+      "elapsed_ms": 3801,
+      "output_sha256": "7df41bdcfc9c2aca5719391ebaa167dfc3f48e2c8d842a0d62e63e14968e4cd5"
+    },
+    {
+      "role_id": "SEC-02",
+      "stage": "bounded_revision",
+      "task_id": "task_d64f9e27-7ad2-4a29-934b-002fe246bd3f",
+      "trace_id": "trace_df7bc07f-53e6-49d7-b3ee-a280025cb2d5",
+      "n8n_execution_id": "630",
+      "elapsed_ms": 11164,
+      "output_sha256": "0e0bfbe7ecce1cec18a91299d6c96ae356b2ceae0f11d1c32ce092c1b15a55f6"
+    },
+    {
+      "role_id": "QA-02",
+      "stage": "final_review",
+      "task_id": "task_d64f9e27-7ad2-4a29-934b-002fe246bd3f",
+      "trace_id": "trace_df7bc07f-53e6-49d7-b3ee-a280025cb2d5",
+      "n8n_execution_id": "631",
+      "elapsed_ms": 3581,
+      "output_sha256": "85f2cee811fce9d2d239242640f0cd5c2e056f74b35c777b7defa3cd307e6362"
+    }
+  ],
+  "reviewer_output": "{\n  \"verdict\": \"PASS\",\n  \"findings\": [\n    \"The endpoint `GET /api/tasks/{task_id}/export` is correctly bound to `127.0.0.1:8766` and is not publicly accessible.\",\n    \"CORS is configured to allow `http://127.0.0.1:8765` but is not used for authorization, which is consistent with the stated design.\",\n    \"The endpoint does not include user authentication, route-level RBAC, or external data access, as specified.\",\n    \"The seven checks (schema/identity, step correlation, memory scope, approvals scope, result duplication, 404 for unknown ID, and POST 404) are all verified and implemented.\",\n    \"The synthetic data lifecycle is correctly described: created as a local SQLite task, retrieved by exact task ID, and not merged with other tasks or real records.\",\n    \"The prototype is explicitly stated to be local, inactive, and not production-deployed, which aligns with the synthetic-only review constraints.\",\n    \"The report does not claim external users are blocked by CORS, nor does it imply user authentication/authorization exists.\"\n  ],\n  \"missing_requirements\": [],\n  \"evidence_limits\": [\n    \"The report provides a direct reference to the synthetic task and trace used for testing, which satisfies the evidence limit requirement.\"\n  ]\n}",
+  "reviewer_verdict": "PASS",
+  "refusal_recovery": {
+    "attempted_tool": "shell.execute",
+    "outcome": "DENIED",
+    "error": "TASK_TOOL_GRANT_DENIED:shell.execute",
+    "recovery": "continued with local read-only synthetic plan and no shell tool"
+  },
+  "recorded_at": "2026-10-18T17:52:42.690Z",
+  "draft_artifact": {
+    "path": "ops/local-live/artifacts/task_d64f9e27-7ad2-4a29-934b-002fe246bd3f/engineering-security-acceptance-bundle-unaccepted.md",
+    "bytes": 6066,
+    "sha256": "ceb6d20880d07ba4c2697c6aab3c356d02cc630e8ed3b23ffda09f68f72980d4",
+    "provenance": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_d64f9e27-7ad2-4a29-934b-002fe246bd3f",
+      "trace_id": "trace_df7bc07f-53e6-49d7-b3ee-a280025cb2d5",
+      "role_id": "BE-02",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T17:52:42.692Z"
+    }
+  }
+}

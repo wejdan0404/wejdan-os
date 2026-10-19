@@ -1,0 +1,26 @@
+{
+  "schema_version": "local-production-scenario-run.v1",
+  "recorded_at": "2026-10-18T17:52:42.695Z",
+  "results": [
+    {
+      "scenario_id": "engineering-security",
+      "result": "FAIL",
+      "task_id": "task_d64f9e27-7ad2-4a29-934b-002fe246bd3f",
+      "trace_id": "trace_df7bc07f-53e6-49d7-b3ee-a280025cb2d5",
+      "error": "SCENARIO_DETERMINISTIC_TRUTH_CHECK_FAILED:The implementation uses task_id and trace_id, not correlation_id; correct the contract description.",
+      "step_count": 5
+    }
+  ],
+  "counts": {
+    "expected": 1,
+    "passed": 0,
+    "failed": 1
+  },
+  "safety": {
+    "paid_api_calls": 0,
+    "live_codex_calls": 0,
+    "cloud_n8n_runs": 0,
+    "external_actions": 0
+  },
+  "evidence_path": "ops/evidence/local-production-scenario-run-2026-10-18T17-52-42-695Z.json"
+}

@@ -1,0 +1,180 @@
+{
+  "schema_version": "wejdan-hq-live-readonly-acceptance.v1",
+  "tested_at": "2026-10-19T05:09:46.231Z",
+  "result": "PASS",
+  "checks": [
+    {
+      "name": "owner session required",
+      "result": "PASS",
+      "status": 401
+    },
+    {
+      "name": "local owner authentication succeeds",
+      "result": "PASS",
+      "status": 200
+    },
+    {
+      "name": "owner session cookie protected",
+      "result": "PASS"
+    },
+    {
+      "name": "life workspace is connected",
+      "result": "PASS",
+      "status": 200,
+      "workspace": "PERSONAL",
+      "mode": "LOCAL"
+    },
+    {
+      "name": "life workspace identity is isolated",
+      "result": "PASS",
+      "workspace": "PERSONAL"
+    },
+    {
+      "name": "life summary contract validated",
+      "result": "PASS",
+      "keys": [
+        "schema_version",
+        "workspace_id",
+        "generated_at",
+        "system",
+        "providers",
+        "agents",
+        "projects",
+        "tasks",
+        "approvals",
+        "artifacts",
+        "activity",
+        "trace_ref"
+      ]
+    },
+    {
+      "name": "life credentials absent from response",
+      "result": "PASS"
+    },
+    {
+      "name": "company workspace is connected",
+      "result": "PASS",
+      "status": 200,
+      "workspace": "COMPANY",
+      "mode": "MOCK"
+    },
+    {
+      "name": "company workspace identity is isolated",
+      "result": "PASS",
+      "workspace": "COMPANY"
+    },
+    {
+      "name": "company summary contract validated",
+      "result": "PASS",
+      "keys": [
+        "schema_version",
+        "workspace_id",
+        "generated_at",
+        "system",
+        "providers",
+        "agents",
+        "projects",
+        "tasks",
+        "approvals",
+        "artifacts",
+        "activity",
+        "trace_ref"
+      ]
+    },
+    {
+      "name": "company credentials absent from response",
+      "result": "PASS"
+    },
+    {
+      "name": "query filters rejected",
+      "result": "PASS",
+      "status": 400
+    },
+    {
+      "name": "write method rejected",
+      "result": "PASS",
+      "status": 405
+    },
+    {
+      "name": "read-only composer remains disabled",
+      "result": "PASS"
+    },
+    {
+      "name": "desktop UI fits viewport",
+      "result": "PASS"
+    },
+    {
+      "name": "browser has no console or page errors",
+      "result": "PASS",
+      "console": 0,
+      "page": 0
+    },
+    {
+      "name": "RTL interface enabled",
+      "result": "PASS"
+    }
+  ],
+  "workspaces": [
+    {
+      "system": "life",
+      "workspace_id": "PERSONAL",
+      "http_status": 200,
+      "connection": "Connected",
+      "source_mode": "LOCAL",
+      "agent_count": 85,
+      "task_count": 0,
+      "pending_approvals": 0,
+      "provider_usage": [
+        "UNKNOWN"
+      ],
+      "activity_items": 0,
+      "task_classification": "AVAILABLE_WITH_LEGACY_UNCLASSIFIED",
+      "unclassified_legacy_tasks": 297,
+      "synthetic_tasks": 0,
+      "projects_availability": "NOT_IN_LOCAL_RUNTIME_SCHEMA",
+      "artifacts_availability": "NOT_IN_LOCAL_RUNTIME_SCHEMA"
+    },
+    {
+      "system": "company",
+      "workspace_id": "COMPANY",
+      "http_status": 200,
+      "connection": "Connected",
+      "source_mode": "MOCK",
+      "agent_count": 29,
+      "task_count": 1,
+      "pending_approvals": 0,
+      "provider_usage": [
+        "UNKNOWN"
+      ],
+      "activity_items": 5,
+      "task_classification": "OPERATIONAL_SYNTHETIC_ARCHIVED_SEPARATED",
+      "synthetic_tasks": 89,
+      "archived_tasks": 0
+    }
+  ],
+  "security": {
+    "unauthenticated_denied": true,
+    "write_route_denied": true,
+    "query_filter_denied": true,
+    "credentials_absent_from_responses": true,
+    "composer_disabled": true
+  },
+  "browser": {
+    "consoleErrors": [],
+    "pageErrors": [],
+    "rtl": true,
+    "desktopNoOverflow": true
+  },
+  "source_secrets_stored_locally_only": true,
+  "no_source_task_content_returned": true,
+  "post_restart_recheck": {
+    "tested_at": "2026-10-19T05:14:38.207Z",
+    "hq_login_http": 200,
+    "anonymous_hq_http": 401,
+    "life_authenticated_http": 200,
+    "company_authenticated_http": 200,
+    "life_direct_anonymous_http": 403,
+    "company_direct_anonymous_http": 403,
+    "result": "PASS"
+  }
+}

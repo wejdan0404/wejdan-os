@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>Onboarding — Life Map</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'IBM Plex Sans Arabic','IBM Plex Sans',sans-serif;background:#F4F7FC;color:#0E121C}
+a{color:#4F5FA0}a:hover{color:#2B3358}
+</style>
+</helmet>
+<div style="width:390px;height:1250px;position:relative;overflow:hidden;background:#F4F7FC;box-sizing:border-box;font-family:'IBM Plex Sans Arabic','IBM Plex Sans',sans-serif;color:#0E121C;display:flex;flex-direction:column;padding:16px 20px 32px;">
+  <div style="display:flex;align-items:center;justify-content:space-between;height:44px;">
+    <a href="Onboarding1.dc.html" aria-label="رجوع" style="display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;color:#3A4256;text-decoration:none;">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg>
+    </a>
+    <div style="display:flex;align-items:center;gap:10px;">
+      <div role="progressbar" aria-label="الخطوة 2 من 6" aria-valuemin="1" aria-valuemax="6" aria-valuenow="2" style="display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:6px;width:150px;">
+        <span style="height:6px;border-radius:999px;background:#6172B5;"></span>
+        <span style="height:6px;border-radius:999px;background:#6172B5;"></span>
+        <span style="height:6px;border-radius:999px;background:#DCE3EF;"></span>
+        <span style="height:6px;border-radius:999px;background:#DCE3EF;"></span>
+        <span style="height:6px;border-radius:999px;background:#DCE3EF;"></span>
+        <span style="height:6px;border-radius:999px;background:#DCE3EF;"></span>
+      </div>
+      <span style="font-size:13px;line-height:20px;font-weight:500;color:#5A6478;"><bdi>2</bdi> من <bdi>6</bdi></span>
+    </div>
+  </div>
+
+  <h1 style="margin:16px 0 0;font-size:22px;line-height:30px;font-weight:700;">خريطة حياتك لهذا الموسم</h1>
+  <p style="margin:6px 0 0;font-size:16px;line-height:26px;color:#3A4256;">الموسم من 6 إلى 12 أسبوع. اختاري لكل مجال: نمو، صيانة، أو راحة.</p>
+
+  <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:16px;">
+    <div style="background:#FFFFFF;border:1px solid #DCE3EF;border-radius:16px;padding:10px 12px;">
+      <div style="font-size:12px;line-height:18px;font-weight:600;color:#5A6478;">نمو</div>
+      <div style="font-size:16px;line-height:24px;font-weight:600;color:#2B3358;"><bdi style="font-family:'IBM Plex Sans',sans-serif;">{{growCount}}</bdi> من <bdi style="font-family:'IBM Plex Sans',sans-serif;">3</bdi></div>
+    </div>
+    <div style="background:#FFFFFF;border:1px solid #DCE3EF;border-radius:16px;padding:10px 12px;">
+      <div style="font-size:12px;line-height:18px;font-weight:600;color:#5A6478;">صيانة</div>
+      <div style="font-size:16px;line-height:24px;font-weight:600;color:#2B3358;"><bdi style="font-family:'IBM Plex Sans',sans-serif;">{{maintainCount}}</bdi> من <bdi style="font-family:'IBM Plex Sans',sans-serif;">5</bdi></div>
+    </div>
+    <div style="background:#FFFFFF;border:1px solid #DCE3EF;border-radius:16px;padding:10px 12px;">
+      <div style="font-size:12px;line-height:18px;font-weight:600;color:#5A6478;">راحة</div>
+      <div style="font-size:16px;line-height:24px;font-weight:600;color:#2B3358;"><bdi style="font-family:'IBM Plex Sans',sans-serif;">{{restCount}}</bdi></div>
+    </div>
+  </div>
+
+  <div aria-live="polite" style="{{noteStyle}}">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:1px;"><path d="M9 18h6M10 21h4"></path><path d="M12 3a6 6 0 0 0-4 10.5c.8.8 1 1.5 1 2.5h6c0-1 .2-1.7 1-2.5A6 6 0 0 0 12 3z"></path></svg>
+    <span>{{note}}</span>
+  </div>
+
+  <ul style="list-style:none;margin:16px 0 0;padding:0 16px;background:#FFFFFF;border:1px solid #DCE3EF;border-radius:20px;">
+    <sc-for list="{{domains}}" as="d" hint-placeholder-count="12">
+      <li style="{{d.rowStyle}}">
+        <div style="display:flex;align-items:center;gap:10px;min-width:0;">
+          <span style="{{d.iconStyle}}">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{d.icon}}"></path></svg>
+          </span>
+          <span style="font-size:15px;line-height:22px;font-weight:600;">{{d.label}}</span>
+        </div>
+        <div role="group" aria-label="{{d.groupLabel}}" style="display:flex;flex:none;border:1px solid #DCE3EF;border-radius:999px;">
+          <sc-for list="{{d.opts}}" as="o" hint-placeholder-count="3">
+            <button type="button" onClick="{{o.pick}}" aria-pressed="{{o.pressed}}" style="{{o.style}}">{{o.label}}</button>
+          </sc-for>
+        </div>
+      </li>
+    </sc-for>
+  </ul>
+  <p style="margin:10px 4px 0;font-size:13px;line-height:20px;font-weight:500;color:#5A6478;">صحة المرأة وتتبّع الدورة مقفلة افتراضيًا — تقدرين تفعّلينها من الإعدادات.</p>
+
+  <div style="flex:1;"></div>
+  <a href="Onboarding3.dc.html" style="flex:none;display:flex;align-items:center;justify-content:center;height:52px;border-radius:16px;background:#6172B5;color:#FFFFFF;text-decoration:none;font-size:16px;line-height:24px;font-weight:600;">التالي</a>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":1250}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = {
+      map: { move: 'grow', sleep: 'maintain', food: 'rest', care: 'maintain', ielts: 'grow', learn: 'rest', career: 'grow', drive: 'maintain', money: 'maintain', home: 'maintain', digital: 'rest', people: 'rest' },
+      warn: ''
+    };
+  }
+  count(map, v) {
+    var n = 0;
+    Object.keys(map).forEach(function (k) { if (map[k] === v) n++; });
+    return n;
+  }
+  choose(id, v) {
+    var map = Object.assign({}, this.state.map);
+    if (map[id] === v) return;
+    if (v === 'grow' && this.count(map, 'grow') >= 3) {
+      this.setState({ warn: 'grow' });
+      return;
+    }
+    if (v === 'maintain' && this.count(map, 'maintain') >= 5) {
+      this.setState({ warn: 'maintain' });
+      return;
+    }
+    map[id] = v;
+    this.setState({ map: map, warn: '' });
+  }
+  renderVals() {
+    var self = this;
+    var map = this.state.map;
+    var tints = {
+      sage: ['#E3F0E8', '#2F6B4A'], lilac: ['#ECE8F7', '#5B4C99'], apricot: ['#FBEADF', '#9A4E1F'], rose: ['#F6E6EA', '#8A3950'],
+      sky: ['#E1EEFB', '#2D5F92'], sand: ['#F3EEDF', '#6E5A1E'], slate: ['#E6EAF2', '#3A4A6B'], mint: ['#E2F3F0', '#23675C']
+    };
+    var defs = [
+      { id: 'move', label: 'الحركة', t: 'sage', icon: 'M11.5 4.5a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0-3 0M10 21l2-6-3-3 1-4 4 3 3 1M9 12l-2 3' },
+      { id: 'sleep', label: 'النوم', t: 'lilac', icon: 'M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z' },
+      { id: 'food', label: 'الأكل', t: 'apricot', icon: 'M7 3v8M5 3v5a2 2 0 0 0 4 0V3M7 11v10M17 3c-2 0-3 2.5-3 6h3v12' },
+      { id: 'care', label: 'العناية', t: 'rose', icon: 'M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z' },
+      { id: 'ielts', label: 'IELTS', t: 'sky', icon: 'M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2zM4 21V5M9 8h6' },
+      { id: 'learn', label: 'التعلّم', t: 'sky', icon: 'M2 9l10-5 10 5-10 5zM6 11v5c2 2 10 2 12 0v-5' },
+      { id: 'career', label: 'المسار المهني', t: 'sand', icon: 'M4 8h16v11H4zM9 8V5h6v3M4 13h16' },
+      { id: 'drive', label: 'القيادة', t: 'slate', icon: 'M3 12a9 9 0 1 0 18 0a9 9 0 1 0-18 0M10 12a2 2 0 1 0 4 0a2 2 0 1 0-4 0M3.5 10.5l6.5 1M14 11.5l6.5-1M12 14v7' },
+      { id: 'money', label: 'المال', t: 'mint', icon: 'M3 7h18v10H3zM9 12a3 3 0 1 0 6 0a3 3 0 1 0-6 0' },
+      { id: 'home', label: 'البيت', t: 'rose', icon: 'M4 11l8-7 8 7v9h-5v-6H9v6H4z' },
+      { id: 'digital', label: 'الحياة الرقمية', t: 'slate', icon: 'M7 2h10v20H7zM11 18h2' },
+      { id: 'people', label: 'الناس', t: 'lilac', icon: 'M5 8a3 3 0 1 0 6 0a3 3 0 1 0-6 0M2 20c.8-3 3-5 6-5s5.2 2 6 5M15 5.5a3 3 0 1 1 1.5 5.6M17 15c2.4.4 4.2 2.2 5 5' }
+    ];
+    var OPTS = [['grow', 'نمو'], ['maintain', 'صيانة'], ['rest', 'راحة']];
+    var domains = defs.map(function (d, idx) {
+      return {
+        label: d.label, icon: d.icon,
+        groupLabel: 'حالة ' + d.label,
+        rowStyle: 'display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:64px;' + (idx > 0 ? 'border-top:1px solid #DCE3EF;' : ''),
+        iconStyle: 'flex:none;display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:999px;background:' + tints[d.t][0] + ';color:' + tints[d.t][1] + ';',
+        opts: OPTS.map(function (o) {
+          var sel = map[d.id] === o[0];
+          var selBg = o[0] === 'rest' ? '#EEF1F6' : '#EAF1FB';
+          var selInk = o[0] === 'rest' ? '#3A4256' : (o[0] === 'grow' ? '#2B3358' : '#4F5FA0');
+          return {
+            label: o[1],
+            pressed: sel ? 'true' : 'false',
+            style: 'height:44px;min-width:52px;padding:0 10px;border:0;border-radius:999px;font-family:inherit;font-size:13px;font-weight:600;cursor:pointer;background:' + (sel ? selBg : 'transparent') + ';color:' + (sel ? selInk : '#5A6478') + ';',
+            pick: function () { self.choose(d.id, o[0]); }
+          };
+        })
+      };
+    });
+    var warn = this.state.warn;
+    var notes = {
+      '': 'النمو = تركيز هذا الموسم. الراحة مو إهمال — إيقاف مؤقت، ويختفي من يومك.',
+      grow: 'ثلاثة مجالات نمو كفاية لموسم واحد. انقلي واحد للصيانة أولًا، وبعدها اختاري الجديد.',
+      maintain: 'الصيانة خفيفة بس لها حد: خمسة مجالات. خلي واحد يرتاح هذا الموسم.'
+    };
+    return {
+      domains: domains,
+      growCount: this.count(map, 'grow'),
+      maintainCount: this.count(map, 'maintain'),
+      restCount: this.count(map, 'rest'),
+      note: notes[warn],
+      noteStyle: 'display:flex;align-items:flex-start;gap:10px;margin-top:12px;padding:12px 14px;border-radius:16px;font-size:14px;line-height:22px;font-weight:500;' + (warn ? 'background:#FBF1D6;color:#8A6412;' : 'background:#EAF1FB;color:#2B3358;')
+    };
+  }
+}
+</script>
+</body>
+</html>

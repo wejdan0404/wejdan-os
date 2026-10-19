@@ -1,0 +1,25 @@
+{
+  "schema_version": "ll13-memory-governance-preparatory.v1",
+  "verified_at": "2026-10-18",
+  "status": "PREPARED_PENDING_PREDECESSORS_AND_RUNTIME_INTEGRATION",
+  "database_mode": "in-memory synthetic SQLite only",
+  "features": [
+    "Versioned task-scoped records with source task, trace, role, provider, model, stage, and evidence references",
+    "Supersedes links preserve prior content",
+    "Changed content is flagged needs_review on old and new versions rather than silently replacing it",
+    "Foreign key prevents orphan task memory",
+    "Preview/export is task-scoped",
+    "Deletion requires explicit owner action and is scoped to one task",
+    "No automatic TTL",
+    "24,000 characters per record and 64,000 characters total per task"
+  ],
+  "test": {
+    "script": "ops/local-live/runtime/test-memory-governance.mjs",
+    "result": "PASS",
+    "checks": ["provenance", "version history", "conflict flag", "task isolation", "export", "owner-only deletion", "orphan denial", "record boundary", "SQLite integrity"]
+  },
+  "live_codex_calls": 0,
+  "paid_api_calls": 0,
+  "n8n_runs": 0,
+  "limitations": ["Not yet integrated with persistent task API database or Command Center", "LL09 runtime restart and LL10 approval remain pending"]
+}

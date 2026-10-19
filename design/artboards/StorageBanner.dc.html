@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>تنبيه الحفظ</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'IBM Plex Sans Arabic','IBM Plex Sans',sans-serif;background:#F4F7FC;color:#0E121C}
+a{color:#4F5FA0}a:hover{color:#2B3358}
+</style>
+</helmet>
+<div style="width:390px;height:200px;position:relative;overflow:hidden;background:#F4F7FC;box-sizing:border-box;font-family:'IBM Plex Sans Arabic','IBM Plex Sans',sans-serif;color:#0E121C;display:flex;flex-direction:column;">
+
+  <div role="status" aria-live="polite" style="flex:none;background:#F3EEDF;padding:6px 16px;display:flex;align-items:center;gap:8px;">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6E5A1E" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5M12 8h.01"></path></svg>
+    <span style="flex:1;min-width:0;font-size:12px;line-height:18px;font-weight:500;color:#6E5A1E;">الحفظ غير متاح في هذا المتصفح — بياناتك مؤقتة</span>
+  </div>
+
+  <main style="flex:1;display:flex;flex-direction:column;gap:12px;padding:16px 20px 0;box-sizing:border-box;">
+    <header style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px;">
+      <div style="display:flex;flex-direction:column;gap:2px;">
+        <h1 style="margin:0;font-size:22px;line-height:30px;font-weight:700;color:#0E121C;">صباح الخير، وجدان</h1>
+        <div style="display:flex;align-items:center;gap:8px;">
+          <span style="font-size:13px;line-height:20px;font-weight:500;color:#5A6478;">الإثنين 28 سبتمبر</span>
+          <span style="font-size:12px;line-height:18px;font-weight:600;color:#5A6478;background:#EEF1F6;border-radius:999px;padding:0 8px;">عيّنة</span>
+        </div>
+      </div>
+      <div style="display:flex;gap:8px;">
+        <a href="MorningBrief.dc.html" aria-label="موجز الصباح" style="display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:#FFFFFF;border:1px solid #DCE3EF;color:#2B3358;text-decoration:none;box-sizing:border-box;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>
+        </a>
+        <a href="EveningShutdown.dc.html" aria-label="إغلاق اليوم" style="display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:#FFFFFF;border:1px solid #DCE3EF;color:#2B3358;text-decoration:none;box-sizing:border-box;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z"></path></svg>
+        </a>
+      </div>
+    </header>
+    <p style="margin:0;font-size:13px;line-height:20px;font-weight:500;color:#5A6478;">الشريط فوق التطبيق وليس فوق المحتوى — يظهر فقط إذا تعذّر الحفظ في المتصفح.</p>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":200}}'>
+class Component extends DCLogic {
+renderVals() { return { }; }
+}
+</script>
+</body>
+</html>

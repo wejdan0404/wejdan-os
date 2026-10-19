@@ -1,0 +1,14 @@
+
+  #  C:\Program Files\nodejs\node.exe[59080]: std::shared_ptr<InitializationResultImpl> __cdecl node::InitializeOncePerProcessInternal(const std::vector<std::string> &, ProcessInitializationFlags::Flags) at src\node.cc:1266
+  #  Assertion failed: ncrypto::CSPRNG(nullptr, 0)
+
+----- Native stack trace -----
+
+ 1: 00007FF7EED390C6 node::SetAbortHandler+54
+ 2: 00007FF7EED38C77 node::MultiIsolatePlatform::DisposeIsolate+770039
+ 3: 00007FF7EED9B00E node::InitializeOncePerProcess+2974
+ 4: 00007FF7EED9B3CD node::Start+445
+ 5: 00007FF7EEE5D312 node::AsyncResource::CallbackScope::CallbackScope+610
+ 6: 00007FF7EF06D3C4 node::AsyncResource::CallbackScope::CallbackScope+2163476
+ 7: 00007FFB5786DDA7 BaseThreadInitThunk+23
+ 8: 00007FFB5879EE4C RtlUserThreadStart+44

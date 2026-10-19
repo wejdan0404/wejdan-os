@@ -1,0 +1,298 @@
+{
+  "schema_version": "strict-sequential-gate-queue.v1",
+  "execution_mode": "STRICT_SEQUENTIAL",
+  "current_gate": "G05",
+  "status": "BLOCKED_EXTERNAL",
+  "instruction_source": "Owner request pasted 2026-10-16; governs sequence for G00-G16",
+  "previous_milestone_queue_archive": "ops/history/pre-G00-20261016/WORK_QUEUE.json",
+  "gate_count": 17,
+  "gates": [
+    {
+      "gate_id": "G00",
+      "status": "VERIFIED_COMPLETE",
+      "started_at": "2026-10-16T08:26:00+03:00",
+      "completed_at": "2026-10-16T10:55:00+03:00",
+      "acceptance_evidence": [
+        "7 exact current workflow exports and SHA-256 manifest",
+        "Per-workflow publish timeline says no publish history for all 7",
+        "All 7 active=false; zero credential nodes; credential inventory empty",
+        "4 original export hashes match preserved snapshots",
+        "ops/G00_SOURCE_DRIFT.md",
+        "ops/G00_GAP_AUDIT.md",
+        "ops/DEPENDENCY_GRAPH.md",
+        "ops/LOCAL_INVENTORY.md",
+        "ops/G00_RESTORE.md",
+        "ops/validate_g00.ps1: 57/57 assertions passed"
+      ],
+      "tests_executed": [
+        "powershell -NoProfile -ExecutionPolicy Bypass -File ops/validate_g00.ps1"
+      ],
+      "tests_passed": 57,
+      "tests_failed": 0,
+      "blocker": null,
+      "next_gate": "G01"
+    },
+    {
+      "gate_id": "G01",
+      "status": "VERIFIED_COMPLETE",
+      "started_at": "2026-10-16T10:55:00+03:00",
+      "completed_at": "2026-10-16T13:25:00+03:00",
+      "acceptance_evidence": [
+        "11 schemas; 22 fixtures; task, assignment, budget and handoff interfaces aligned",
+        "95/95 contract validator assertions",
+        "16/16 legacy acceptance assertions with validator integrated",
+        "57/57 G00 regression assertions",
+        "23/23 local G02 worker behavior assertions",
+        "ops/G01_SCHEMA_VALIDATION.md"
+      ],
+      "tests_executed": [
+        "node workflows/n8n/tests/generate-contract-fixtures.mjs",
+        "node workflows/n8n/tests/validate-contracts.mjs",
+        "powershell -NoProfile -ExecutionPolicy Bypass -File workflows/n8n/tests/run_acceptance.ps1",
+        "powershell -NoProfile -ExecutionPolicy Bypass -File ops/validate_g00.ps1",
+        "node workflows/n8n/tests/test-g02-workers.mjs"
+      ],
+      "tests_passed": 111,
+      "tests_failed": 0,
+      "blocker": null,
+      "next_gate": "G02"
+    },
+    {
+      "gate_id": "G02",
+      "status": "VERIFIED_COMPLETE",
+      "started_at": "2026-10-16T13:25:00+03:00",
+      "completed_at": "2026-10-16T14:05:00+03:00",
+      "acceptance_evidence": [
+        "Transport proof on Quwml3wkbvBrvXbx verified source entry, execution, reload and official export.",
+        "Director V3 current mock verified: v85C2ImvJ9IArbJ3; exact 15,902-character cloud-source match; 7 synthetic cases and 9 outputs audited; detail ops/G02_DIRECTOR_V3.md.",
+        "Finance V3 verified: rBYOIYaHqSr9mDIm; exact 14,065-character cloud-source match after reload; inactive harness FYUQAGnDOFUJdtlg generated ten supplied-input decisions including invalid budget, approval wait/reject, missing IDs and extra-field rejection.",
+        "Observability V3 saved as L0WmUEpHLESFF9rv; exact 14,125-character export/source match after reload; inactive harness 66Ej2OgZCmv4Nd6M execution 23 succeeded with eight monitor_event.v1 cases; child execution 24 succeeded. Worker output inspected for statuses, preserved IDs, unknown token/cost/runtime nulls, synthetic runtime separation; local malformed/duplicate/extra-field tests pass.",
+        "V2 and G00 exports remain preserved; all V3 workflows and test harnesses inactive and unpublished; no credentials/providers or paid calls.",
+        "Official n8n Code node downstream of Observability V3 used Run Once for All Items and $input.all(); parent execution #32 / child #33 full cloud run returned one independent JSON report with 8/8 fixture-matched PASS entries and zero violations. Saved report: ops/evidence/G02_observability_v3_independent_audit_parent32_child33.json.",
+        "Final four-node harness code survived reload with exact 8,330-character editor read-back; final official post-change export remains pending because Chrome browser-control debugger detached.",
+        "Auditor result is 8/8 and execution evidence is parent #32 / child #33; final harness export still required, so gate remains blocked and G03 has not started.",
+        "Official n8n export saved at workflows/n8n/backups/g02-working-20261016/observability-v3-test-harness-post-independent-audit-final-export.json; SHA-256 E937C2E33E1CA731ABB2FB5DCDD6C4BB3CB3256C62F0A41153AB880EDDA0B810; workflow version 2555c7e9-e046-4109-978f-c4d6ff011974, ID 66Ej2OgZCmv4Nd6M, inactive; 4 nodes and 3 sequential connections verified.",
+        "Reloaded editor auditor jsCode SHA-256 DE5720F80A7AF6F67A299A4D23B9934801E19DDB3A550CF2511C05219002F7F9 (8,330 chars) exactly matches exported jsCode and local source workflows/n8n/source/v3/g02/observability-v3-independent-auditor.js; SHA-256 comparison was performed over UTF-8/LF content.",
+        "Independent cloud audit evidence parent #32 / worker #33: 8/8 PASS, 0 FAIL, 0 violations; local regression tests 26/26 and 95/95."
+      ],
+      "tests_executed": [
+        "node workflows/n8n/tests/generate-g02-worker-sources.mjs",
+        "node workflows/n8n/tests/test-g02-workers.mjs: 26 passed, 0 failed; includes strict monitor_event extra-field rejection.",
+        "n8n Cloud Director V3 via harness bEAOJrHpp8zDh1uW; child execution 16: seven inputs, nine outputs.",
+        "n8n Cloud Finance V3 via harness FYUQAGnDOFUJdtlg; executions 18 and 20; ten synthetic task outcomes; schema keys and zero-spend controls audited.",
+        "n8n Cloud Observability V3 via harness 66Ej2OgZCmv4Nd6M; executions 23 and 21; worker child execution 24 (latest), 8 items; status/IDs/null usage fields inspected.",
+        "Official reload exports compared exactly against source for all three V3 Code nodes.",
+        "n8n Cloud full harness execution #32 with child #33; independent eight-item audit: 8 passed, 0 failed.",
+        "node workflows/n8n/tests/test-g02-workers.mjs: 26 passed, 0 failed.",
+        "node workflows/n8n/tests/validate-contracts.mjs: 95 passed, 0 failed.",
+        "Current saved harness post-reload official export structurally audited; four nodes and connections; active=false; no provider/credential nodes."
+      ],
+      "tests_passed": 121,
+      "tests_failed": 0,
+      "blocker": null,
+      "next_gate": "G03"
+    },
+    {
+      "gate_id": "G03",
+      "status": "VERIFIED_COMPLETE",
+      "started_at": "2026-10-16T14:05:00+03:00",
+      "completed_at": "2026-10-16T14:35:00+03:00",
+      "acceptance_evidence": [
+        "Official G03 workflow `RglRDhNIqws1YnWl` (version `d22889fe-3e73-4c08-a6d7-d074f1a858bb`) passed cloud run #46 with five cases / 5 passed / 0 failed. Child executions: Program Director #47, Finance #48, Observability #49. All six Code-node sources match local JSON source exactly. Export SHA-256 `90E46FBFF95F37ADC8D458A162AA629AE11D1795D0A925763E4C43A4259AB7B2`; inactive/unpublished, no credentials. Local G03 checks 19/19; regressions 26/26 and 95/95.",
+        "Parent pipeline contains explicit allow/skip IF branches; cloud output correlated task/trace and showed mock-worker skipped for denial, approval-pending, and invalid input. The simulated failure case remains a failed monitored outcome. Historical failed audit #42 preserved, then corrected with final PASS #46."
+      ],
+      "tests_executed": [
+        "node workflows/n8n/tests/test-g03-orchestrator.mjs: 19 passed, 0 failed.",
+        "node workflows/n8n/tests/test-g02-workers.mjs: 26 passed, 0 failed.",
+        "node workflows/n8n/tests/validate-contracts.mjs: 95 passed, 0 failed.",
+        "n8n cloud parent #46; child executions #47, #48, #49; five-case report 5/5, 0 violations."
+      ],
+      "tests_passed": 140,
+      "tests_failed": 0,
+      "blocker": null,
+      "next_gate": "G04"
+    },
+    {
+      "gate_id": "G04",
+      "status": "VERIFIED_COMPLETE",
+      "started_at": "2026-10-16T14:35:00+03:00",
+      "completed_at": "2026-10-16T15:10:00+03:00",
+      "acceptance_evidence": [
+        "Offline deterministic in-memory fixed-point mock ledger in workflows/n8n/tests/mock-ledger-v3.ps1: 26 assertions passed.",
+        "Append-only adjustment and reconciliation model is tested; unknown usage never settles as zero; pending/rejected approvals prevent reserve; separate task and planning caps; simulated kill switch.",
+        "ops/G04_FINANCIAL_CONTROL_PLANE.md and workflows/n8n/schemas/mock_ledger_event.v1.schema.json.",
+        "Persistent backend, transaction isolation/concurrency guarantees, real ledger enforcement and real provider kill switch remain unimplemented and explicitly not claimed."
+      ],
+      "tests_executed": [
+        "powershell -NoProfile -ExecutionPolicy Bypass -File workflows/n8n/tests/mock-ledger-v3.ps1: 26 passed, 0 failed."
+      ],
+      "tests_passed": 26,
+      "tests_failed": 0,
+      "blocker": null,
+      "next_gate": "G05"
+    },
+    {
+      "gate_id": "G05",
+      "status": "BLOCKED_EXTERNAL",
+      "started_at": "2026-10-16T15:10:00+03:00",
+      "completed_at": null,
+      "acceptance_evidence": [
+        "Local telemetry rollup implemented; 20/20 unit assertions.",
+        "Browser session restored; project and inactive Observability harness verified. No cloud telemetry branch installed.",
+        "Unknown/unmeasured actual cost aggregation fixed to remain null."
+      ],
+      "tests_executed": [
+        "test-telemetry-rollup.mjs 20/20",
+        "test-g02-workers.mjs 26/26",
+        "test-g03-orchestrator.mjs 19/19",
+        "mock-ledger-v3.ps1 26/26",
+        "validate-contracts.mjs 101/101"
+      ],
+      "tests_passed": 262,
+      "tests_failed": 0,
+      "blocker": "Chrome session is authenticated/readable, but this extension tab exposes no supported Playwright/DOM editing surface for safe source entry and official export in the current session. No supported n8n API connector exists. Local G05 rollup 20/20 is ready. Smallest owner action: provide/reopen a supported browser editing session with DOM locator or verified import/export access; then add telemetry branch to a separate inactive mock harness and run bounded synthetic checks. Existing verified workers untouched.",
+      "next_gate": "G06"
+    },
+    {
+      "gate_id": "G06",
+      "status": "NOT_STARTED",
+      "started_at": null,
+      "completed_at": null,
+      "acceptance_evidence": [],
+      "tests_executed": [],
+      "tests_passed": null,
+      "tests_failed": null,
+      "blocker": null,
+      "next_gate": "G07"
+    },
+    {
+      "gate_id": "G07",
+      "status": "PREPARED_BLOCKED_BY_SEQUENCE",
+      "started_at": null,
+      "completed_at": null,
+      "acceptance_evidence": [
+        "Local synthetic helper passes exact hash/task/trace binding, expiry, replay, pending and rejected cases. Evidence: ops/evidence/M07_mock_approval_test.json.",
+        "No Cloud inbox/authenticated approval endpoint exists; public endpoints and external messages were not used."
+      ],
+      "tests_executed": [
+        "powershell -NoProfile -ExecutionPolicy Bypass -File workflows/n8n/tests/mock-approval.ps1"
+      ],
+      "tests_passed": 7,
+      "tests_failed": 0,
+      "blocker": "Cloud acceptance deferred while strict prerequisite G05 is incomplete.",
+      "next_gate": "G08"
+    },
+    {
+      "gate_id": "G08",
+      "status": "PREPARED_BLOCKED_BY_SEQUENCE",
+      "started_at": null,
+      "completed_at": null,
+      "acceptance_evidence": [
+        "Local command-center smoke test passed; see ops/evidence/M08_command_center_smoke_test.json. Cloud publishing not performed."
+      ],
+      "tests_executed": [
+        "node command-center/smoke-test.mjs"
+      ],
+      "tests_passed": 8,
+      "tests_failed": 0,
+      "blocker": "Local M08 preview verified, but strict sequence prevents starting G08 until current G05 closes.",
+      "next_gate": "G09"
+    },
+    {
+      "gate_id": "G09",
+      "status": "NOT_STARTED",
+      "started_at": null,
+      "completed_at": null,
+      "acceptance_evidence": [],
+      "tests_executed": [],
+      "tests_passed": null,
+      "tests_failed": null,
+      "blocker": null,
+      "next_gate": "G10"
+    },
+    {
+      "gate_id": "G10",
+      "status": "NOT_STARTED",
+      "started_at": null,
+      "completed_at": null,
+      "acceptance_evidence": [],
+      "tests_executed": [],
+      "tests_passed": null,
+      "tests_failed": null,
+      "blocker": null,
+      "next_gate": "G11"
+    },
+    {
+      "gate_id": "G11",
+      "status": "NOT_STARTED",
+      "started_at": null,
+      "completed_at": null,
+      "acceptance_evidence": [],
+      "tests_executed": [],
+      "tests_passed": null,
+      "tests_failed": null,
+      "blocker": null,
+      "next_gate": "G12"
+    },
+    {
+      "gate_id": "G12",
+      "status": "NOT_STARTED",
+      "started_at": null,
+      "completed_at": null,
+      "acceptance_evidence": [],
+      "tests_executed": [],
+      "tests_passed": null,
+      "tests_failed": null,
+      "blocker": null,
+      "next_gate": "G13"
+    },
+    {
+      "gate_id": "G13",
+      "status": "NOT_STARTED",
+      "started_at": null,
+      "completed_at": null,
+      "acceptance_evidence": [],
+      "tests_executed": [],
+      "tests_passed": null,
+      "tests_failed": null,
+      "blocker": null,
+      "next_gate": "G14"
+    },
+    {
+      "gate_id": "G14",
+      "status": "NOT_STARTED",
+      "started_at": null,
+      "completed_at": null,
+      "acceptance_evidence": [],
+      "tests_executed": [],
+      "tests_passed": null,
+      "tests_failed": null,
+      "blocker": null,
+      "next_gate": "G15"
+    },
+    {
+      "gate_id": "G15",
+      "status": "NOT_STARTED",
+      "started_at": null,
+      "completed_at": null,
+      "acceptance_evidence": [],
+      "tests_executed": [],
+      "tests_passed": null,
+      "tests_failed": null,
+      "blocker": null,
+      "next_gate": "G16"
+    },
+    {
+      "gate_id": "G16",
+      "status": "NOT_STARTED",
+      "started_at": null,
+      "completed_at": null,
+      "acceptance_evidence": [],
+      "tests_executed": [],
+      "tests_passed": null,
+      "tests_failed": null,
+      "blocker": null,
+      "next_gate": null
+    }
+  ]
+}

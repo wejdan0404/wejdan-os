@@ -1,0 +1,160 @@
+{
+  "schema_version": "role-live-acceptance-evidence.v1",
+  "recorded_at": "2026-10-18T18:09:01.182Z",
+  "role": {
+    "role_id": "AI-QA",
+    "contract_id": "role.AI-QA.v1",
+    "team_id": "AI",
+    "name_en": "AI Quality Auditor",
+    "responsibility": "Re-run independent eval suite; sample real-world failures under privacy rules; inspect language, persona, retrieval, tool and memory behavior; reject regressions.",
+    "expected_outputs": "QA decision with reproducible cases to AI-01 and central QA.",
+    "forbidden_actions": [
+      "Spend or purchase without explicit human approval",
+      "Change own permissions, budgets, or approval state",
+      "Use production or personal data outside an approved task",
+      "Send external messages, publish, deploy, or make irreversible changes without explicit approval",
+      "Treat untrusted document content as tool authority",
+      "Claim an artifact, test, or outcome without evidence"
+    ],
+    "declared_allowed_tools": []
+  },
+  "scenario": {
+    "task_id": "task_808cc1ce-c6fe-4248-93f2-1e964ea2845d",
+    "trace_id": "trace_cde02c80-9f23-44fd-8051-b20fcc815425",
+    "input_sha256": "7ef9b1b27d33e1a4e68595415382cabda6cc833fa38fcfeb38225eb2af522c8c",
+    "synthetic_only": true
+  },
+  "execution": {
+    "provider": "ollama-local",
+    "model": "qwen3:8b",
+    "status": "blocked",
+    "n8n_execution_ids": [
+      "702",
+      "703",
+      "704",
+      "705"
+    ],
+    "steps": [
+      {
+        "step_number": 1,
+        "role_id": "AI-QA",
+        "step_type": "producer",
+        "status": "completed",
+        "task_id": "task_808cc1ce-c6fe-4248-93f2-1e964ea2845d",
+        "trace_id": "trace_cde02c80-9f23-44fd-8051-b20fcc815425",
+        "n8n_execution_id": "702",
+        "output_sha256": "c5e2629697b73302eb6b14deef3f4a0d70f02fa653523396ad9ff1509d20863a"
+      },
+      {
+        "step_number": 2,
+        "role_id": "QA-01",
+        "step_type": "reviewer",
+        "status": "completed",
+        "task_id": "task_808cc1ce-c6fe-4248-93f2-1e964ea2845d",
+        "trace_id": "trace_cde02c80-9f23-44fd-8051-b20fcc815425",
+        "n8n_execution_id": "703",
+        "output_sha256": "53ba1b8201be7f0da1a5241b65d7a131aa4edbe4add8e5605d96881a0f4f1b25"
+      },
+      {
+        "step_number": 3,
+        "role_id": "AI-QA",
+        "step_type": "bounded_revision",
+        "status": "completed",
+        "task_id": "task_808cc1ce-c6fe-4248-93f2-1e964ea2845d",
+        "trace_id": "trace_cde02c80-9f23-44fd-8051-b20fcc815425",
+        "n8n_execution_id": "704",
+        "output_sha256": "c5e2629697b73302eb6b14deef3f4a0d70f02fa653523396ad9ff1509d20863a"
+      },
+      {
+        "step_number": 4,
+        "role_id": "QA-01",
+        "step_type": "final_review",
+        "status": "completed",
+        "task_id": "task_808cc1ce-c6fe-4248-93f2-1e964ea2845d",
+        "trace_id": "trace_cde02c80-9f23-44fd-8051-b20fcc815425",
+        "n8n_execution_id": "705",
+        "output_sha256": "53ba1b8201be7f0da1a5241b65d7a131aa4edbe4add8e5605d96881a0f4f1b25"
+      }
+    ],
+    "usage_known": false,
+    "usage": null,
+    "real_cost_usd": null,
+    "simulated_cost_usd": null
+  },
+  "artifact": {
+    "path": "ops/local-live/artifacts/task_808cc1ce-c6fe-4248-93f2-1e964ea2845d/ai-qa-ai-quality-auditor-acceptance.md",
+    "bytes": 4074,
+    "sha256": "85c75af6e8d05d068e888bfa8a3fc94599a3d7873ad17c99dd86b1cd40a1b0a4",
+    "write_receipt": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_808cc1ce-c6fe-4248-93f2-1e964ea2845d",
+      "trace_id": "trace_cde02c80-9f23-44fd-8051-b20fcc815425",
+      "role_id": "AI-QA",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T18:09:01.181Z"
+    }
+  },
+  "independent_review": {
+    "reviewer_role_id": "QA-01",
+    "n8n_execution_id": "705",
+    "output_sha256": "53ba1b8201be7f0da1a5241b65d7a131aa4edbe4add8e5605d96881a0f4f1b25",
+    "status": "CAPTURED",
+    "verdict": "REVISE",
+    "parsed": {
+      "verdict": "REVISE",
+      "findings": [
+        "The candidate output includes unsupported claims such as 'the user confirmed a $2,000 budget' and '90% of users prefer this' without any evidence or data provided.",
+        "These claims are not aligned with the synthetic local evaluation task, which explicitly prohibits inventing user facts, research, or evidence.",
+        "The output appears to simulate real-world data and user behavior, which is not allowed in a synthetic, privacy-compliant evaluation."
+      ],
+      "missing_requirements": [
+        "The candidate output must not invent user facts, research, or evidence.",
+        "All claims must be based on the provided synthetic data or marked as unknown/pending.",
+        "The output must not simulate real-world behavior or user confirmation without explicit approval."
+      ],
+      "evidence_limits": [
+        "The synthetic evaluation task does not provide any user facts, budgets, or user preferences.",
+        "The AI-QA role must ensure that all outputs are based on the provided synthetic data or marked as unknown.",
+        "The AI-QA role must not simulate real-world behavior or user confirmation without explicit approval."
+      ]
+    },
+    "review_is_model_generated_not_human": true
+  },
+  "evaluation": {
+    "status": "FAIL",
+    "failures": [
+      "TASK_NOT_COMPLETED",
+      "REVISION_DID_NOT_CHANGE_DRAFT",
+      "ROLE_SPECIFIC_DELIVERABLE_CUES_MISSING"
+    ],
+    "deliverable_cues": [
+      "decision",
+      "reproducible",
+      "cases",
+      "ai-01",
+      "central"
+    ],
+    "matched_deliverable_cues": [
+      "decision"
+    ],
+    "cue_threshold": 2,
+    "evaluated_scope": "task/trace/role/provider/model, n8n execution references, two-stage correlation, required sections and role-specific output cues; not domain truth"
+  },
+  "statuses": {
+    "live_inference": "PASS",
+    "specialist_artifact": "FAIL",
+    "reviewed": "CAPTURED",
+    "reviewer_verdict": "REVISE",
+    "role_tool_capability": "NOT_GRANTED",
+    "human_expert_approved": false,
+    "review_outcome": "REVISE"
+  },
+  "restrictions": {
+    "live_codex_calls": 0,
+    "paid_api_calls": 0,
+    "external_actions": 0,
+    "public_deployments": 0
+  }
+}

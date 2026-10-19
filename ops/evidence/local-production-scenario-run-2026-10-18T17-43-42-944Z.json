@@ -1,0 +1,26 @@
+{
+  "schema_version": "local-production-scenario-run.v1",
+  "recorded_at": "2026-10-18T17:43:42.944Z",
+  "results": [
+    {
+      "scenario_id": "research-quality",
+      "result": "FAIL",
+      "task_id": "task_184b7738-adc0-4fb3-b346-103b6ebd54ac",
+      "trace_id": "trace_f2977da7-ba48-46a0-bb17-bebfc6be4bcd",
+      "error": "SCENARIO_DETERMINISTIC_TRUTH_CHECK_FAILED:Synthetic method dataset requires at least 8 clearly labeled SYN-* rows; found 0.|Sample research questions must map to synthetic dataset fields.",
+      "step_count": 5
+    }
+  ],
+  "counts": {
+    "expected": 1,
+    "passed": 0,
+    "failed": 1
+  },
+  "safety": {
+    "paid_api_calls": 0,
+    "live_codex_calls": 0,
+    "cloud_n8n_runs": 0,
+    "external_actions": 0
+  },
+  "evidence_path": "ops/evidence/local-production-scenario-run-2026-10-18T17-43-42-944Z.json"
+}

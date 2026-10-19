@@ -1,0 +1,75 @@
+{
+  "scenario_id": "research-quality",
+  "task_id": "task_9de6cdf4-964c-4ed4-98e2-3b22b6ebe60f",
+  "trace_id": "trace_18fa4279-1ebd-477c-850b-25da64a5139d",
+  "status": "failed",
+  "error": "SCENARIO_FINAL_REVIEW_NOT_PASS:REVISE",
+  "provider": "ollama-local",
+  "model": "qwen3:8b",
+  "steps": [
+    {
+      "role_id": "UR-06",
+      "stage": "planner",
+      "task_id": "task_9de6cdf4-964c-4ed4-98e2-3b22b6ebe60f",
+      "trace_id": "trace_18fa4279-1ebd-477c-850b-25da64a5139d",
+      "n8n_execution_id": "412",
+      "elapsed_ms": 13538,
+      "output_sha256": "cc4e51f4b43d4b878d3ba51e895c57d64176a991d199ef7a993196672c0d0159"
+    },
+    {
+      "role_id": "UR-07",
+      "stage": "specialist_1",
+      "task_id": "task_9de6cdf4-964c-4ed4-98e2-3b22b6ebe60f",
+      "trace_id": "trace_18fa4279-1ebd-477c-850b-25da64a5139d",
+      "n8n_execution_id": "413",
+      "elapsed_ms": 11796,
+      "output_sha256": "6fc82fec0b0eee9466451c8dd433b3e559676777b9badeeb35dccd1000dd1f7f"
+    },
+    {
+      "role_id": "UR-QA",
+      "stage": "independent_review",
+      "task_id": "task_9de6cdf4-964c-4ed4-98e2-3b22b6ebe60f",
+      "trace_id": "trace_18fa4279-1ebd-477c-850b-25da64a5139d",
+      "n8n_execution_id": "414",
+      "elapsed_ms": 3446,
+      "output_sha256": "bbfa0ff7da16e475531ad94212038a88d0beb7256e1920413483675a6b7ffc9b"
+    },
+    {
+      "role_id": "UR-07",
+      "stage": "bounded_revision",
+      "task_id": "task_9de6cdf4-964c-4ed4-98e2-3b22b6ebe60f",
+      "trace_id": "trace_18fa4279-1ebd-477c-850b-25da64a5139d",
+      "n8n_execution_id": "415",
+      "elapsed_ms": 15973,
+      "output_sha256": "7765f4da765e23507696fbb5e97ef6070c599235246a9e09c2d9ca58c398da9a"
+    },
+    {
+      "role_id": "UR-QA",
+      "stage": "final_review",
+      "task_id": "task_9de6cdf4-964c-4ed4-98e2-3b22b6ebe60f",
+      "trace_id": "trace_18fa4279-1ebd-477c-850b-25da64a5139d",
+      "n8n_execution_id": "416",
+      "elapsed_ms": 3605,
+      "output_sha256": "4fe7d140fba98cabd4089719d343db8bef838419970c25a9477d62cdde668e16"
+    }
+  ],
+  "reviewer_output": "{\n  \"verdict\": \"REVISE\",\n  \"findings\": [\n    \"The deliverable clearly labels the research plan as synthetic and acknowledges no real data collection or participants.\",\n    \"The consent and privacy checklist is explicitly marked as illustrative and acknowledges no real data collection.\",\n    \"The proposed methods are synthetic and do not involve real data collection, but the analysis plan still lacks specificity on how synthetic data will be generated and validated.\",\n    \"Sample questions are illustrative but lack alignment with the synthetic data generation process, making it unclear how they would be answered or validated.\",\n    \"The analysis plan does not specify how synthetic data will be generated, validated, or compared to real-world scenarios.\"\n  ],\n  \"missing_requirements\": [\n    \"Explicit statement that all data is synthetic and no real participants were involved.\",\n    \"Detailed synthetic data generation methodology and validation criteria.\",\n    \"Clear distinction between synthetic and real-world analysis assumptions.\",\n    \"Explicit consent and privacy handling for synthetic data (even if no real data is used).\"\n  ],\n  \"evidence_limits\": [\n    \"No actual data collection or analysis was performed, so findings cannot be validated.\",\n    \"No real user feedback or behavior was recorded, making the analysis purely hypothetical.\",\n    \"No citations or references to real-world studies or data sources were provided.\",\n    \"The synthetic data generation and analysis plan lacks specificity, making it difficult to trace or replicate.\"\n  ]\n}",
+  "reviewer_verdict": "REVISE",
+  "refusal_recovery": null,
+  "recorded_at": "2026-10-18T14:56:51.540Z",
+  "draft_artifact": {
+    "path": "ops/local-live/artifacts/task_9de6cdf4-964c-4ed4-98e2-3b22b6ebe60f/research-quality-acceptance-bundle-unaccepted.md",
+    "bytes": 9736,
+    "sha256": "7324f856f827f050fed9dd8979613cc95b52650300f4b122cf28f1afdf4babcc",
+    "provenance": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_9de6cdf4-964c-4ed4-98e2-3b22b6ebe60f",
+      "trace_id": "trace_18fa4279-1ebd-477c-850b-25da64a5139d",
+      "role_id": "UR-02",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T14:56:51.543Z"
+    }
+  }
+}

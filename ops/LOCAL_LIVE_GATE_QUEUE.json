@@ -1,0 +1,264 @@
+{
+  "schema_version": "local-live-gate-queue.v1",
+  "track": "LOCAL_LIVE",
+  "execution_mode": "STRICT_SEQUENTIAL_WITH_SAFE_INDEPENDENT_WORK",
+  "status": "IN_PROGRESS_POST_LL09_LOCAL_ONLY",
+  "current_gate": "LL11",
+  "latest_checkpoint": "2026-10-18 current verified run: 85/85 local Ollama inference; 77/85 specialist outputs PASS, 8 FAIL; 85 reviews/78 PASS; 77 scoped capability proofs; 0 human expert approvals. Latest independent scenario audit accepts 3/3 bounded synthetic/planning artifacts; engineering acceptance is synthetic prototype scope only and personal-data export remains blocked pending authentication/authorization. Command Center E2E and seven API export runtime checks pass. LL11/LL12 remain in progress. API/n8n/Ollama loopback; Codex/paid/Cloud routes disabled.",
+  "latest_checkpoint_evidence": [
+    "ops/evidence/continuation-checkpoint-20261018.json",
+    "ops/evidence/role-output-residual-review-20261018.json",
+    "ops/agent-acceptance/role_matrix.json",
+    "ops/evidence/role-matrix-independent-audit-20261018.json",
+    "ops/evidence/local-production-scenario-acceptance-audit-20261018.json",
+    "ops/evidence/local-production-scenario-run-2026-10-18T17-42-46-580Z.json",
+    "ops/evidence/local-production-scenario-run-2026-10-18T17-44-42-128Z.json",
+    "ops/evidence/local-production-scenario-run-2026-10-18T17-45-34-823Z.json",
+    "ops/evidence/command-center-e2e-20261018.json",
+    "ops/evidence/LL12_engineering_export_runtime_test_20261018.json"
+  ],
+  "cloud_gate_independence": "G05 remains BLOCKED_EXTERNAL in ops/GATE_QUEUE.json until n8n Cloud evidence passes.",
+  "gates": [
+    {
+      "gate_id": "LL00",
+      "title": "Preflight and cost guard",
+      "status": "VERIFIED_COMPLETE",
+      "evidence": [
+        "Windows hardware and ports inventoried",
+        "No paid provider keys or external endpoints configured"
+      ]
+    },
+    {
+      "gate_id": "LL01",
+      "title": "Local model installation and inference",
+      "status": "VERIFIED_COMPLETE",
+      "evidence": [
+        "Ollama 0.40.6 signed installer verified and installed per-user",
+        "qwen3:8b Q4_K_M Apache-2.0 model downloaded from Ollama library",
+        "Loopback inference returned schema-valid D-00 plan; 1.57 seconds"
+      ]
+    },
+    {
+      "gate_id": "LL02",
+      "title": "Persistent role-aware local task API and n8n runtime",
+      "status": "VERIFIED_COMPLETE",
+      "acceptance": [
+        "SQLite task persistence",
+        "85 canonical roles loaded without rewriting registry",
+        "n8n private local execution calls loopback Ollama",
+        "API and n8n test evidence"
+      ],
+      "evidence": [
+        "Persisted SQLite API: 98 completed tasks, 85 distinct role IDs (latest validation 2026-10-18)",
+        "n8n local workflow nNGeWSsYiuX1Aeuj → Ollama qwen3:8b; exact Code-node export/source match",
+        "negative request and untrusted Origin rejection tests; API restart persistence verified"
+      ]
+    },
+    {
+      "gate_id": "LL03",
+      "title": "Command Center backed by persisted tasks",
+      "status": "VERIFIED_COMPLETE",
+      "acceptance": [
+        "No hard-coded task rows presented as live",
+        "Create/list task flow uses local API",
+        "Accessible bilingual UI smoke test"
+      ],
+      "evidence": [
+        "Playwright task submission through API→n8n→Ollama",
+        "85 role cards from canonical registry; Arabic/English, filters, trace details and redacted export verified",
+        "responsive 375px layout and screenshot ops/evidence/local-command-center-live.png"
+      ]
+    },
+    {
+      "gate_id": "LL04",
+      "title": "85 role live smoke tests",
+      "status": "VERIFIED_COMPLETE",
+      "acceptance": [
+        "Each canonical role invoked with local model",
+        "Each response validated and indexed by role and trace ID"
+      ],
+      "evidence": [
+        "85 expected roles; 85 completed live model smoke invocations; 85 PASS; 0 FAIL",
+        "Synthetic task/trace/role/execution correlation preserved; non-empty outputs; local qwen3:8b",
+        "Evidence ops/evidence/local-live-85-role-smoke.json; this is invocation smoke, not output quality certification"
+      ]
+    },
+    {
+      "gate_id": "LL05",
+      "title": "Local security, recovery, and handoff",
+      "status": "VERIFIED_COMPLETE",
+      "acceptance": [
+        "Loopback-only services",
+        "Paid routes disabled",
+        "Restore/recovery and final evidence manifest"
+      ],
+      "evidence": [
+        "All listeners verified on 127.0.0.1 only; public API, community packages, templates and diagnostics disabled by official audit.",
+        "SQLite recovery snapshot reopened read-only and matched 95 completed synthetic rows and 85 roles; temporary copy removed.",
+        "Official local workflow export: 4 nodes, 3 connections, 0 credentials, exact Code-node source match; latest local execution #95.",
+        "Wejdan confirmed local n8n account setup; authenticated editor at /assistant.",
+        "Regressions passed: G00 57, contracts 101, G02 26, G03 19, G04 26, G05 20; role smoke 85/85.",
+        "Evidence manifest rehashed; historical entries retained."
+      ]
+    },
+    {
+      "gate_id": "LL06",
+      "title": "Shared task memory and reviewer collaboration",
+      "status": "VERIFIED_COMPLETE",
+      "acceptance": [
+        "Task-scoped durable memory with step provenance and no cross-task retrieval",
+        "Sequential producer and independent reviewer local inference with common task/trace IDs",
+        "Each stage and failure persisted and inspectable",
+        "Command Center shows collaboration steps and evidence",
+        "Negative tests for malformed and mismatched reviewer correlation"
+      ],
+      "evidence": [
+        "Optional checkbox triggers true sequential local model inference: producer D-00 then independent role prompt QA-01 with common task/trace; verified n8n runs #96/#97 and #98/#99, with #100/#101 from Command Center smoke.",
+        "SQLite persists both steps, execution IDs, status and four input/output memory records under the task; GET task exposes provenance; survival verified after API restart.",
+        "Command Center Playwright run passed with collaboration enabled and showed both stages in trace details; zero page errors.",
+        "Isolated local stub test suite 5/5: reviewer allowlist, single-step persist, mismatched correlation, empty output, reviewer failure; no external or paid calls.",
+        "Role outputs remain invocation-tested rather than specialist-quality certified; no cross-task retrieval or retention/deletion controls."
+      ]
+    },
+    {
+      "gate_id": "LL07",
+      "title": "Lifecycle controls, memory governance, and role quality evaluation",
+      "status": "VERIFIED_COMPLETE",
+      "acceptance": [
+        "Task cancellation/retry and truthful queued/running/waiting/blocked/failed/completed states",
+        "User-visible bounded memory retention, task-level delete/export, and privacy disclosure",
+        "Role-specific output contract checks and a representative specialist evaluation suite",
+        "Command Center approval and task lifecycle controls backed by real local state",
+        "Failure/recovery tests preserve correlation and never claim a mock is a real agent"
+      ],
+      "evidence": [
+        "10-role substantive synthetic quality suite: latest 10/10 PASS using role-specific structure, safety and correlation assertions; all initial failures and corrected attempts retained in ops/evidence/local-role-quality-evaluation.json.",
+        "Lifecycle/control negative suite 10/10 PASS: queue cancel, running checkpoint cancellation, retry fresh IDs/trace, restart recovery, task export/delete, correlation failure and reviewer failure.",
+        "Command Center Playwright smoke passed with dynamic approval and collaboration; second run verified persisted approved task/reviewer evidence and redacted export, bilingual/RTL layout, 375px, zero page errors. This is local Ollama/n8n evidence from before the Codex adapter change.",
+        "SQLite task memory bounded to 24,000 characters per entry and 64,000 per task; 512 MiB DB guard; task-scoped export/delete; retention is user-controlled deletion, no automatic TTL.",
+        "Active Ollama/n8n executions cannot be force-killed; cancellation is honored at safe checkpoints and response explains this limit."
+      ]
+    },
+    {
+      "gate_id": "LL08",
+      "title": "Authenticated Codex subscription adapter",
+      "status": "VERIFIED_COMPLETE",
+      "acceptance": [
+        "Authenticated existing Codex CLI via ChatGPT login, no API key",
+        "Exactly one real synthetic read-only CLI invocation verified before integration",
+        "Optional provider integrated with SQLite task lifecycle and Command Center",
+        "Ollama path preserved; adapter runs ephemeral read-only CLI in a temp directory and excludes user MCP config",
+        "Adapter unit/Playwright checks pass; no n8n workflow was run or changed"
+      ],
+      "evidence": [
+        "Pilot output, authentication method and usage evidence: ops/evidence/codex-subscription-pilot.json",
+        "Adapter source ops/local-live/runtime/codex-subscription-adapter.mjs; task provider persisted in SQLite; optional Command Center selector",
+        "Adapter unit test PASS using stub CLI; Playwright PASS for provider UI, 85 roles and safe synchronous-dispatch rejection. One real direct CLI pilot only; app E2E was not live. See ops/evidence/codex-subscription-state-reconciliation.json."
+      ]
+    },
+    {
+      "gate_id": "LL09",
+      "title": "Codex adapter hardening and zero-paid-route guard",
+      "status": "VERIFIED_COMPLETE",
+      "proposed_gate": true,
+      "acceptance": [
+        "Minimal allowlisted subprocess environment and ChatGPT-only auth status preflight",
+        "Fixed installed CLI and Node paths; read-only ephemeral temporary workspace; no shell",
+        "Bounded output, timeout, abort, process-tree cleanup, strict JSONL and error handling",
+        "SQLite/UI status model separates historical CLI pilot, mock app integration, live app E2E, effective provider and usage",
+        "Codex API dispatch denied before task creation until fresh owner approval",
+        "Mock negative tests, regressions, audit and zero new live calls"
+      ],
+      "evidence": [
+        "Source and isolated tests: ops/evidence/LL09_adapter_mock_negative_tests.json",
+        "Security review: ops/CODEX_SUBSCRIPTION_SECURITY_AUDIT.md",
+        "Managed graceful stop/restart PASS: PID 67928 → 70264, listener 127.0.0.1:8766, correct API source active; provider and health endpoints verified.",
+        "Verified SQLite pre-stop snapshot ops/history/local-api-before-stop-20261018-131421-902.sqlite, SHA-256 3776412ACE841D0A06F07EB2487501698908B8E4E6026B008FB765B140D447CF; integrity ok; 122 tasks, 42 steps, 84 memory, zero active, zero Codex, interlock present.",
+        "Adapter stub, provider-state integration, authenticated shutdown/DB-integrity, and Playwright Command Center tests all PASS; 85 roles displayed; zero live Codex, paid calls, Cloud runs or Cloud edits.",
+        "Post-restart runtime evidence: ops/evidence/LL09_runtime_reconciliation_post_managed_restart_20261018.json"
+      ]
+    },
+    {
+      "gate_id": "LL10",
+      "title": "Codex-through-app live E2E",
+      "status": "BLOCKED_QUOTA_OR_COST_SAFETY",
+      "proposed_gate": true,
+      "acceptance": [
+        "Exactly one separately authorized synthetic API-to-Codex subscription call",
+        "Verify persisted task, trace, output, usage, latency, failure path and UI evidence",
+        "Keep paid API calls at zero and stop on auth/quota/billing uncertainty"
+      ],
+      "evidence": [
+        "ops/LL10_APPROVAL_REQUIRED.md; no live call attempted. Included-usage-only cannot be guaranteed; continue Ollama-local work without an app Codex call."
+      ]
+    },
+    {
+      "gate_id": "LL11",
+      "title": "Canonical specialist routing and least-privilege tools",
+      "status": "IN_PROGRESS_LOCAL_ONLY",
+      "proposed_gate": true,
+      "evidence": [
+        "ops/local-live/runtime/test-role-scoped-capability-live.mjs executed for 77 accepted roles; each proof uses role-specific allowlisted contract read and task-scoped artifact write, with ungranted shell, wrong-role contract, traversal and overwrite denied. Matrix reports 77 VERIFIED capability receipts; the 8 roles with rejected specialist outputs receive no grants.",
+        "ops/evidence/role-tool-capability-batch-retry-20261018.jsonl",
+        "ops/evidence/role-matrix-independent-audit-20261018.json"
+      ],
+      "limitations": [
+        "Capability evidence is test-harness mediated and proves narrow scoped boundaries, not autonomous role tool use; 77 accepted roles have receipts and 8 failed roles remain without grants.",
+        "8 specialist outputs remain REVISE/FAIL after bounded repair attempts; see ops/evidence/role-output-residual-review-20261018.json. No human expert approval claimed."
+      ]
+    },
+    {
+      "gate_id": "LL12",
+      "title": "Multi-role artifact-producing pipeline",
+      "status": "IN_PROGRESS_LOCAL_ONLY",
+      "proposed_gate": true,
+      "evidence": [
+        "ops/evidence/local-production-scenario-acceptance-audit-20261018.json",
+        "ops/evidence/LL12_engineering_export_runtime_test_20261018.json",
+        "ops/evidence/command-center-e2e-20261018.json",
+        "ops/evidence/role-repair-batch-1-20261018.jsonl through role-repair-batch-9-20261018.jsonl"
+      ],
+      "limitations": [
+        "Independent audit accepts 3/3 bounded artifacts: product and research planning outputs plus engineering synthetic prototype review. Product feature tests remain NOT_RUN; research rows are synthetic methodology fixtures only.",
+        "Engineering export API passes seven synthetic runtime checks. Acceptance does not authorize personal-data export; the endpoint lacks user authentication/route authorization and needs an approved access-control design and independent implementation testing."
+      ]
+    },
+    {
+      "gate_id": "LL13",
+      "title": "Provenance-aware memory and knowledge governance",
+      "status": "PREPARED_PENDING_PREDECESSORS",
+      "proposed_gate": true,
+      "evidence": [
+        "ops/evidence/LL13_memory_governance_preparatory.json"
+      ]
+    },
+    {
+      "gate_id": "LL14",
+      "title": "Role evaluation and anti-hallucination coverage",
+      "status": "PREPARED_PENDING_PREDECESSORS",
+      "proposed_gate": true,
+      "evidence": [
+        "ops/local-live/runtime/role-evaluation.mjs",
+        "ops/local-live/runtime/test-role-evaluation.mjs",
+        "ops/evidence/LL14_role_contract_evaluation_preparatory_20261018-092725815.json"
+      ],
+      "limitations": [
+        "85 deterministic role-specific contract scenarios, 170 per-role negative fixtures, and 13 cross-cutting negative fixtures; no domain-quality or professional-competence certification",
+        "Not integrated into active API/Command Center; LL09 and LL10 predecessors incomplete"
+      ]
+    },
+    {
+      "gate_id": "LL15",
+      "title": "Operational reliability and Command Center acceptance",
+      "status": "NOT_STARTED",
+      "proposed_gate": true
+    },
+    {
+      "gate_id": "LL16",
+      "title": "End-to-end local acceptance and owner handoff",
+      "status": "NOT_STARTED",
+      "proposed_gate": true
+    }
+  ],
+  "updated_at": "2026-10-18"
+}

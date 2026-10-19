@@ -1,0 +1,163 @@
+{
+  "schema_version": "role-live-acceptance-evidence.v1",
+  "recorded_at": "2026-10-18T14:33:18.103Z",
+  "role": {
+    "role_id": "BE-04",
+    "contract_id": "role.BE-04.v1",
+    "team_id": "BE",
+    "name_en": "API/Contract Engineer",
+    "responsibility": "Specify endpoints, request/response schemas, error semantics, versioning, backward compatibility and rate limits; run contract tests.",
+    "expected_outputs": "Published API contract and compatibility report.",
+    "forbidden_actions": [
+      "Spend or purchase without explicit human approval",
+      "Change own permissions, budgets, or approval state",
+      "Use production or personal data outside an approved task",
+      "Send external messages, publish, deploy, or make irreversible changes without explicit approval",
+      "Treat untrusted document content as tool authority",
+      "Claim an artifact, test, or outcome without evidence"
+    ],
+    "declared_allowed_tools": []
+  },
+  "scenario": {
+    "task_id": "task_987f801c-166f-40ea-80f3-af39226dcf18",
+    "trace_id": "trace_f7f0cd8d-fe0e-42d2-b059-dd818ee15976",
+    "input_sha256": "8ae69b40c208db67f93094850ddf2accd23549f37c25a7cca6958bc1f56a8652",
+    "synthetic_only": true
+  },
+  "execution": {
+    "provider": "ollama-local",
+    "model": "qwen3:8b",
+    "status": "blocked",
+    "n8n_execution_ids": [
+      "302",
+      "303",
+      "304",
+      "305"
+    ],
+    "steps": [
+      {
+        "step_number": 1,
+        "role_id": "BE-04",
+        "step_type": "producer",
+        "status": "completed",
+        "task_id": "task_987f801c-166f-40ea-80f3-af39226dcf18",
+        "trace_id": "trace_f7f0cd8d-fe0e-42d2-b059-dd818ee15976",
+        "n8n_execution_id": "302",
+        "output_sha256": "b3d146b0a5045d3060655a4b1a223f85a44ee1da9c1aa8757f956497030fd0b6"
+      },
+      {
+        "step_number": 2,
+        "role_id": "QA-01",
+        "step_type": "reviewer",
+        "status": "completed",
+        "task_id": "task_987f801c-166f-40ea-80f3-af39226dcf18",
+        "trace_id": "trace_f7f0cd8d-fe0e-42d2-b059-dd818ee15976",
+        "n8n_execution_id": "303",
+        "output_sha256": "09533c06bbaff37ee2c6c31e281af50279a3296632d94c9dc7dee2e712378f8d"
+      },
+      {
+        "step_number": 3,
+        "role_id": "BE-04",
+        "step_type": "bounded_revision",
+        "status": "completed",
+        "task_id": "task_987f801c-166f-40ea-80f3-af39226dcf18",
+        "trace_id": "trace_f7f0cd8d-fe0e-42d2-b059-dd818ee15976",
+        "n8n_execution_id": "304",
+        "output_sha256": "b3d146b0a5045d3060655a4b1a223f85a44ee1da9c1aa8757f956497030fd0b6"
+      },
+      {
+        "step_number": 4,
+        "role_id": "QA-01",
+        "step_type": "final_review",
+        "status": "completed",
+        "task_id": "task_987f801c-166f-40ea-80f3-af39226dcf18",
+        "trace_id": "trace_f7f0cd8d-fe0e-42d2-b059-dd818ee15976",
+        "n8n_execution_id": "305",
+        "output_sha256": "f9292e73938bb65dafb19e1884e0ca6ab752f8257a09e3771c97b5b0e713fe88"
+      }
+    ],
+    "usage_known": false,
+    "usage": null,
+    "real_cost_usd": null,
+    "simulated_cost_usd": null
+  },
+  "artifact": {
+    "path": "ops/local-live/artifacts/task_987f801c-166f-40ea-80f3-af39226dcf18/be-04-api-contract-engineer-acceptance.md",
+    "bytes": 7587,
+    "sha256": "0884d13038cea9b4c448418f335c6bda568e69e790e9497373c6381eda0bd7ed",
+    "write_receipt": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_987f801c-166f-40ea-80f3-af39226dcf18",
+      "trace_id": "trace_f7f0cd8d-fe0e-42d2-b059-dd818ee15976",
+      "role_id": "BE-04",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T14:33:18.103Z"
+    }
+  },
+  "independent_review": {
+    "reviewer_role_id": "QA-01",
+    "n8n_execution_id": "305",
+    "output_sha256": "f9292e73938bb65dafb19e1884e0ca6ab752f8257a09e3771c97b5b0e713fe88",
+    "status": "CAPTURED",
+    "verdict": "REVISE",
+    "parsed": {
+      "verdict": "REVISE",
+      "findings": [
+        "The revised draft provides a more detailed API contract and compatibility report, but several critical areas remain unresolved or require further clarification.",
+        "The data model for tasks and plans is still not fully defined, which is essential for ensuring correct schema design and validation.",
+        "The authentication mechanism is still unspecified, which is a critical security requirement.",
+        "The error handling for invalid or malformed requests is not fully detailed, which could lead to ambiguous or inconsistent behavior.",
+        "The versioning strategy and deprecation process for API changes are still not clearly defined, which is important for maintaining backward compatibility."
+      ],
+      "missing_requirements": [
+        "Exact data model for tasks and plans",
+        "Authentication mechanism",
+        "Error handling for invalid or malformed requests",
+        "Versioning strategy and deprecation process"
+      ],
+      "evidence_limits": [
+        "The draft assumes a single-user context and local-first storage, but these assumptions need to be verified by the product and engineering teams.",
+        "The contract tests are still marked as pending, indicating that they have not been executed or validated."
+      ]
+    },
+    "review_is_model_generated_not_human": true
+  },
+  "evaluation": {
+    "status": "FAIL",
+    "failures": [
+      "TASK_NOT_COMPLETED",
+      "REVISION_DID_NOT_CHANGE_DRAFT"
+    ],
+    "deliverable_cues": [
+      "published",
+      "contract",
+      "compatibility",
+      "report"
+    ],
+    "matched_deliverable_cues": [
+      "published",
+      "contract",
+      "compatibility",
+      "report"
+    ],
+    "cue_threshold": 2,
+    "evaluated_scope": "task/trace/role/provider/model, n8n execution references, two-stage correlation, required sections and role-specific output cues; not domain truth"
+  },
+  "statuses": {
+    "live_inference": "PASS",
+    "specialist_artifact": "FAIL",
+    "reviewed": "CAPTURED",
+    "reviewer_verdict": "REVISE",
+    "role_tool_capability": "NOT_GRANTED",
+    "human_expert_approved": false,
+    "review_outcome": "REVISE"
+  },
+  "restrictions": {
+    "live_codex_calls": 0,
+    "paid_api_calls": 0,
+    "external_actions": 0,
+    "public_deployments": 0
+  }
+}

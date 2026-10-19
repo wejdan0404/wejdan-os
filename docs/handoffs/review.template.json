@@ -1,0 +1,18 @@
+{
+  "contract_version": "handoff-review.v1",
+  "task_id": "TASK-REPLACE",
+  "packet_sha256": "REPLACE_WITH_PACKET_SHA256",
+  "reviewer": "REPLACE_WITH_REVIEWER",
+  "reviewed_at_utc": "REPLACE_WITH_UTC_ISO8601",
+  "status": "NEEDS_REVIEW",
+  "findings": [],
+  "disagreements": [
+    {
+      "claim": "Quote or summarize the decision under review.",
+      "counter_evidence": [],
+      "impact": "Describe what changes if the disagreement is valid.",
+      "owner_decision_required": true,
+      "resolution": null
+    }
+  ]
+}

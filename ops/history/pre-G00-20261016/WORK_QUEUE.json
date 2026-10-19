@@ -1,0 +1,365 @@
+[
+  {
+    "objective": "Verify local environment, repository, n8n project and four workflows",
+    "milestone": "M00",
+    "implementation_paths": [
+      "ops/CURRENT_STATE.md"
+    ],
+    "mock_spend_sar": 0,
+    "owner_role_ar": "مدير البرنامج",
+    "tests": [
+      "Read-only file/git/workspace inventory"
+    ],
+    "task_id": "M00",
+    "next_action": "Maintain snapshot as new live facts are verified",
+    "last_checked_at": "2026-10-16 08:24 Asia/Riyadh",
+    "cloud_workflow_id": "p5MRQODVi7djfuZf",
+    "blocker": null,
+    "real_spend_sar": 0,
+    "status": "COMPLETED",
+    "evidence": [
+      "ops/CURRENT_STATE.md",
+      "n8n project and four originals verified"
+    ],
+    "owner_role_en": "Program Director",
+    "depends_on": []
+  },
+  {
+    "objective": "Preserve immutable live workflow exports and rollback evidence",
+    "milestone": "M01",
+    "implementation_paths": [
+      "workflows/n8n/backups/"
+    ],
+    "mock_spend_sar": 0,
+    "owner_role_ar": "مدير البرنامج",
+    "tests": [],
+    "task_id": "M01",
+    "next_action": "Capture remaining exact exports if UI allows; preserve timestamped files and hashes",
+    "last_checked_at": "2026-10-16 08:24 Asia/Riyadh",
+    "cloud_workflow_id": "KvMjR2lx81qsuCPL,6leaYQgPdxIgACYC,Vsng8tOmTK1IIAgK,O7hWODxtpfIciHwq",
+    "blocker": null,
+    "real_spend_sar": 0,
+    "status": "COMPLETED",
+    "evidence": [
+      "workflows/n8n/backups/",
+      "six exact exports preserved/verified"
+    ],
+    "owner_role_en": "Program Director",
+    "depends_on": []
+  },
+  {
+    "objective": "Create canonical schemas, fixtures, validators and exact 85-role registry/contracts",
+    "milestone": "M02",
+    "implementation_paths": [
+      "roles/role_registry.json",
+      "roles/contracts/",
+      "workflows/n8n/schemas/",
+      "workflows/n8n/fixtures/",
+      "workflows/n8n/tests/"
+    ],
+    "mock_spend_sar": 0,
+    "owner_role_ar": "مدير البرنامج",
+    "tests": [],
+    "task_id": "M02",
+    "next_action": "Generate from authoritative Master Plan roles and contract tables",
+    "last_checked_at": "2026-10-16 08:24 Asia/Riyadh",
+    "cloud_workflow_id": null,
+    "blocker": "Full draft-2020-12 schema validation unavailable without installing validator; local parse/contract tests pass.",
+    "real_spend_sar": 0,
+    "status": "COMPLETED",
+    "evidence": [
+      "workflows/n8n/schemas/",
+      "workflows/n8n/fixtures/",
+      "roles/role_registry.json",
+      "roles/contracts/"
+    ],
+    "owner_role_en": "Program Director",
+    "depends_on": []
+  },
+  {
+    "objective": "Convert role workflows to reusable input-driven child workers",
+    "milestone": "M03",
+    "implementation_paths": [
+      "workflows/n8n/source/"
+    ],
+    "mock_spend_sar": 0,
+    "owner_role_ar": "مدير البرنامج",
+    "tests": [],
+    "task_id": "M03",
+    "next_action": "Add supported Execute Workflow Trigger and validate worker contracts",
+    "last_checked_at": "2026-10-16 08:24 Asia/Riyadh",
+    "cloud_workflow_id": "6leaYQgPdxIgACYC,Vsng8tOmTK1IIAgK,O7hWODxtpfIciHwq",
+    "blocker": "Program Director and Finance V2 workers are input-driven and manually tested. Observability V2 trigger accepts all data but its Code node still emits six hard-coded rows. Exact inactive export is preserved; event-consuming handler and negative tests remain.",
+    "real_spend_sar": 0,
+    "status": "PARTIAL_BLOCKED",
+    "evidence": [
+      "workflows/n8n/backups/program-director-v2-mock-final-20261016.json",
+      "workflows/n8n/backups/finance-v2-mock-final-20261016.json",
+      "workflows/n8n/backups/observability-v2-mock-incomplete-20261016.json"
+    ],
+    "owner_role_en": "Program Director",
+    "depends_on": []
+  },
+  {
+    "objective": "Connect three role workflows via a safe V2 mock orchestrator",
+    "milestone": "M04",
+    "implementation_paths": [
+      "workflows/n8n/source/",
+      "workflows/n8n/docs/"
+    ],
+    "mock_spend_sar": 0,
+    "owner_role_ar": "مدير البرنامج",
+    "tests": [],
+    "task_id": "M04",
+    "next_action": "Build only after child triggers and contracts are verified",
+    "last_checked_at": "2026-10-16 08:24 Asia/Riyadh",
+    "cloud_workflow_id": null,
+    "blocker": "No verified live parent dispatcher calls the children and gathers their results. Local deterministic orchestrator template exists. Complete after M03 event-consumer handler and safe parent wiring.",
+    "real_spend_sar": 0,
+    "status": "BLOCKED",
+    "evidence": [
+      "workflows/n8n/source/v2/agent-mock-orchestrator-v2.json"
+    ],
+    "owner_role_en": "Program Director",
+    "depends_on": []
+  },
+  {
+    "objective": "Implement offline deterministic financial control semantics and mock ledger",
+    "milestone": "M05",
+    "implementation_paths": [
+      "workflows/n8n/fixtures/",
+      "workflows/n8n/tests/",
+      "docs/finops/"
+    ],
+    "mock_spend_sar": 0,
+    "owner_role_ar": "مدير البرنامج",
+    "tests": [],
+    "task_id": "M05",
+    "next_action": "Use fixed-point integer micro-units; document backend-only guarantees",
+    "last_checked_at": "2026-10-16 08:24 Asia/Riyadh",
+    "cloud_workflow_id": null,
+    "blocker": "Offline in-memory mock only; not atomic or a backend financial control.",
+    "real_spend_sar": 0,
+    "status": "COMPLETED",
+    "evidence": [
+      "workflows/n8n/tests/mock-ledger-v2.ps1",
+      "docs/finops/finops-boundaries.md"
+    ],
+    "owner_role_en": "Program Director",
+    "depends_on": []
+  },
+  {
+    "objective": "Standardize operational telemetry and honest failure handling",
+    "milestone": "M06",
+    "implementation_paths": [
+      "workflows/n8n/schemas/",
+      "workflows/n8n/docs/"
+    ],
+    "mock_spend_sar": 0,
+    "owner_role_ar": "مدير البرنامج",
+    "tests": [],
+    "task_id": "M06",
+    "next_action": "Implement UTC wall clock and separately labeled synthetic duration fields",
+    "last_checked_at": "2026-10-16 08:24 Asia/Riyadh",
+    "cloud_workflow_id": null,
+    "blocker": "Telemetry contracts and labels exist; n8n mock does not guarantee durable telemetry.",
+    "real_spend_sar": 0,
+    "status": "COMPLETED",
+    "evidence": [
+      "workflows/n8n/schemas/monitor_event.v1.schema.json",
+      "workflows/n8n/source/v2/agent-ai-observability-cost-engineer-v2.json"
+    ],
+    "owner_role_en": "Program Director",
+    "depends_on": []
+  },
+  {
+    "objective": "Build approval contracts and replay/expiry safe mock simulation",
+    "milestone": "M07",
+    "implementation_paths": [
+      "workflows/n8n/schemas/",
+      "workflows/n8n/fixtures/",
+      "docs/operations/"
+    ],
+    "mock_spend_sar": 0,
+    "owner_role_ar": "مدير البرنامج",
+    "tests": [],
+    "task_id": "M07",
+    "next_action": "Define exact action hash/expiry contract without live endpoints",
+    "last_checked_at": "2026-10-16 08:24 Asia/Riyadh",
+    "cloud_workflow_id": null,
+    "blocker": "Offline simulation only; no real human approval backend.",
+    "real_spend_sar": 0,
+    "status": "COMPLETED",
+    "evidence": [
+      "workflows/n8n/tests/mock-approval.ps1",
+      "docs/operations/mock-approval-runbook.md"
+    ],
+    "owner_role_en": "Program Director",
+    "depends_on": []
+  },
+  {
+    "objective": "Build local synthetic bilingual Command Center prototype",
+    "milestone": "M08",
+    "implementation_paths": [
+      "command-center/"
+    ],
+    "mock_spend_sar": 0,
+    "owner_role_ar": "مدير البرنامج",
+    "tests": [],
+    "task_id": "M08",
+    "next_action": "Inspect repo design cues; build standalone RTL/LTR mock view",
+    "last_checked_at": "2026-10-16 08:24 Asia/Riyadh",
+    "cloud_workflow_id": null,
+    "blocker": null,
+    "real_spend_sar": 0,
+    "status": "COMPLETED",
+    "evidence": [
+      "command-center/"
+    ],
+    "owner_role_en": "Program Director",
+    "depends_on": []
+  },
+  {
+    "objective": "Complete the 85-role registry and reusable role contract/factory",
+    "milestone": "M09",
+    "implementation_paths": [
+      "roles/",
+      "docs/agents/"
+    ],
+    "mock_spend_sar": 0,
+    "owner_role_ar": "مدير البرنامج",
+    "tests": [],
+    "task_id": "M09",
+    "next_action": "Role profiles are catalog entries, not 85 active model processes",
+    "last_checked_at": "2026-10-16 08:24 Asia/Riyadh",
+    "cloud_workflow_id": null,
+    "blocker": "85 profiles are specifications, not activated agents; 3 deterministic mock-tested roles, 82 specified.",
+    "real_spend_sar": 0,
+    "status": "COMPLETED",
+    "evidence": [
+      "roles/role_registry.json",
+      "roles/activation_matrix.md",
+      "roles/workflow-factory.ps1"
+    ],
+    "owner_role_en": "Program Director",
+    "depends_on": []
+  },
+  {
+    "objective": "Create versioned peer-collaboration memory and handoff packet",
+    "milestone": "M10",
+    "implementation_paths": [
+      "docs/handoffs/",
+      "ops/DECISIONS.md"
+    ],
+    "mock_spend_sar": 0,
+    "owner_role_ar": "مدير البرنامج",
+    "tests": [],
+    "task_id": "M10",
+    "next_action": "Write task packet template, review and disagreement format",
+    "last_checked_at": "2026-10-16 08:24 Asia/Riyadh",
+    "cloud_workflow_id": null,
+    "blocker": "Packet templates and index only; no automatic ChatGPT/Claude peer connection.",
+    "real_spend_sar": 0,
+    "status": "COMPLETED",
+    "evidence": [
+      "docs/handoffs/"
+    ],
+    "owner_role_en": "Program Director",
+    "depends_on": []
+  },
+  {
+    "objective": "Run structured offline QA and safe live mock validation",
+    "milestone": "M11",
+    "implementation_paths": [
+      "ops/TEST_MATRIX.md",
+      "workflows/n8n/tests/"
+    ],
+    "mock_spend_sar": 0,
+    "owner_role_ar": "مدير البرنامج",
+    "tests": [],
+    "task_id": "M11",
+    "next_action": "Run only bounded tests without external side effects",
+    "last_checked_at": "2026-10-16 08:24 Asia/Riyadh",
+    "cloud_workflow_id": null,
+    "blocker": "JSON parse and custom contract checks passed; full JSON Schema validator unavailable; Flutter app unchanged and not run.",
+    "real_spend_sar": 0,
+    "status": "COMPLETED",
+    "evidence": [
+      "ops/TEST_MATRIX.md",
+      "workflows/n8n/tests/"
+    ],
+    "owner_role_en": "Program Director",
+    "depends_on": []
+  },
+  {
+    "objective": "Design subscription/model adapter and entitlement mocks; do not invoke paid services",
+    "milestone": "M12",
+    "implementation_paths": [
+      "docs/architecture/",
+      "workflows/n8n/fixtures/"
+    ],
+    "mock_spend_sar": 0,
+    "owner_role_ar": "مدير البرنامج",
+    "tests": [],
+    "task_id": "M12",
+    "next_action": "Implement mock adapter and entitlement-state fixtures only",
+    "last_checked_at": "2026-10-16 08:24 Asia/Riyadh",
+    "cloud_workflow_id": null,
+    "blocker": "Mock entitlement only. Any provider credential, API call or paid service remains gated.",
+    "real_spend_sar": 0,
+    "status": "COMPLETED",
+    "evidence": [
+      "docs/architecture/provider-entitlement-mock.v1.json",
+      "docs/architecture/provider-adapter.md"
+    ],
+    "owner_role_en": "Program Director",
+    "depends_on": []
+  },
+  {
+    "objective": "Prepare non-deploying local/cloud operations and security runbooks",
+    "milestone": "M13",
+    "implementation_paths": [
+      "docs/operations/",
+      "docs/security/"
+    ],
+    "mock_spend_sar": 0,
+    "owner_role_ar": "مدير البرنامج",
+    "tests": [],
+    "task_id": "M13",
+    "next_action": "Document proposed migration, backup/restore and activation gates",
+    "last_checked_at": "2026-10-16 08:24 Asia/Riyadh",
+    "cloud_workflow_id": null,
+    "blocker": "Runbook/threat model prepared; no install, activate, publish, or deploy.",
+    "real_spend_sar": 0,
+    "status": "COMPLETED",
+    "evidence": [
+      "docs/operations/runbook.md",
+      "docs/security/threat-model.md"
+    ],
+    "owner_role_en": "Program Director",
+    "depends_on": []
+  },
+  {
+    "objective": "Consolidate checksums, milestone report and Arabic handoff",
+    "milestone": "M14",
+    "implementation_paths": [
+      "ops/"
+    ],
+    "mock_spend_sar": 0,
+    "owner_role_ar": "مدير البرنامج",
+    "tests": [],
+    "task_id": "M14",
+    "next_action": "Complete after safe milestones and evidence manifest",
+    "last_checked_at": "2026-10-16 08:24 Asia/Riyadh",
+    "cloud_workflow_id": null,
+    "blocker": null,
+    "real_spend_sar": 0,
+    "status": "COMPLETED",
+    "evidence": [
+      "ops/EVIDENCE_MANIFEST.json",
+      "ops/FINAL_HANDOFF_AR.md"
+    ],
+    "owner_role_en": "Program Director",
+    "depends_on": []
+  }
+]

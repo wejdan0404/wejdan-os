@@ -1,0 +1,196 @@
+{
+  "schema_version": "role-live-acceptance-evidence.v1",
+  "recorded_at": "2026-10-18T14:04:26.421Z",
+  "role": {
+    "role_id": "PROD-02",
+    "contract_id": "role.PROD-02.v1",
+    "team_id": "PROD",
+    "name_en": "Feature Lifecycle Owner",
+    "responsibility": "For each feature, carry it from hypothesis through discovery, design, implementation, QA, rollout and learning; coordinate all contributing teams.",
+    "expected_outputs": "Feature brief with acceptance criteria, release decision packet and post-release readout.",
+    "forbidden_actions": [
+      "Spend or purchase without explicit human approval",
+      "Change own permissions, budgets, or approval state",
+      "Use production or personal data outside an approved task",
+      "Send external messages, publish, deploy, or make irreversible changes without explicit approval",
+      "Treat untrusted document content as tool authority",
+      "Claim an artifact, test, or outcome without evidence"
+    ],
+    "declared_allowed_tools": []
+  },
+  "scenario": {
+    "task_id": "task_63edf59c-bce0-4416-bba5-8700ddb1ddf2",
+    "trace_id": "trace_52f2a72d-cf81-44aa-b6be-d2ce345dbf8a",
+    "input_sha256": "25c40456dd2d7877186af051d06254db68a91084f2a805075efbac141ae837fc",
+    "synthetic_only": true
+  },
+  "execution": {
+    "provider": "ollama-local",
+    "model": "qwen3:8b",
+    "status": "completed",
+    "n8n_execution_ids": [
+      "158",
+      "159",
+      "160",
+      "161"
+    ],
+    "steps": [
+      {
+        "step_number": 1,
+        "role_id": "PROD-02",
+        "step_type": "producer",
+        "status": "completed",
+        "task_id": "task_63edf59c-bce0-4416-bba5-8700ddb1ddf2",
+        "trace_id": "trace_52f2a72d-cf81-44aa-b6be-d2ce345dbf8a",
+        "n8n_execution_id": "158",
+        "output_sha256": "80e3216483b18bd45e21545efe81a4bdefa4bc71070529907d297a34c11efe70"
+      },
+      {
+        "step_number": 2,
+        "role_id": "QA-01",
+        "step_type": "reviewer",
+        "status": "completed",
+        "task_id": "task_63edf59c-bce0-4416-bba5-8700ddb1ddf2",
+        "trace_id": "trace_52f2a72d-cf81-44aa-b6be-d2ce345dbf8a",
+        "n8n_execution_id": "159",
+        "output_sha256": "0a944ba20606f5ed6cdc3095496be96a1fa6404aeef57d775942c2b943874789"
+      },
+      {
+        "step_number": 3,
+        "role_id": "PROD-02",
+        "step_type": "bounded_revision",
+        "status": "completed",
+        "task_id": "task_63edf59c-bce0-4416-bba5-8700ddb1ddf2",
+        "trace_id": "trace_52f2a72d-cf81-44aa-b6be-d2ce345dbf8a",
+        "n8n_execution_id": "160",
+        "output_sha256": "b02f087d87ffefe4f98eb906aef2092355db2159d3864a7d8ac1abcc10850d0c"
+      },
+      {
+        "step_number": 4,
+        "role_id": "QA-01",
+        "step_type": "final_review",
+        "status": "completed",
+        "task_id": "task_63edf59c-bce0-4416-bba5-8700ddb1ddf2",
+        "trace_id": "trace_52f2a72d-cf81-44aa-b6be-d2ce345dbf8a",
+        "n8n_execution_id": "161",
+        "output_sha256": "6c68353551ccd6a41d8d7fb70e7482107731b3db732acfaafec42a54f31cddf9"
+      }
+    ],
+    "usage_known": false,
+    "usage": null,
+    "real_cost_usd": null,
+    "simulated_cost_usd": null
+  },
+  "artifact": {
+    "path": "ops/local-live/artifacts/task_63edf59c-bce0-4416-bba5-8700ddb1ddf2/prod-02-feature-lifecycle-owner-acceptance.md",
+    "bytes": 6875,
+    "sha256": "7b2caa25843dad6c8f01f3dae9a46119dd6936c6a24ffbd7f07453e0cf717ede",
+    "write_receipt": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_63edf59c-bce0-4416-bba5-8700ddb1ddf2",
+      "trace_id": "trace_52f2a72d-cf81-44aa-b6be-d2ce345dbf8a",
+      "role_id": "PROD-02",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T14:04:26.420Z"
+    }
+  },
+  "independent_review": {
+    "reviewer_role_id": "QA-01",
+    "n8n_execution_id": "161",
+    "output_sha256": "6c68353551ccd6a41d8d7fb70e7482107731b3db732acfaafec42a54f31cddf9",
+    "status": "CAPTURED",
+    "verdict": "PASS",
+    "parsed": {
+      "verdict": "PASS",
+      "findings": [
+        "The draft includes all required release gates as defined by the QA-01 role, including Technical Readiness, UI/UX Readiness, Legal Compliance, and Product Alignment gates.",
+        "Independent test coverage verification is not explicitly provided, but the release gates and required verifications imply a structured QA process.",
+        "Explicit exceptions and owners are identified for conditional or failed release gates through the required verification steps."
+      ],
+      "missing_requirements": [
+        "Independent test coverage verification"
+      ],
+      "evidence_limits": [
+        "No explicit evidence of independent QA test coverage, though the release gates imply a QA process."
+      ]
+    },
+    "review_is_model_generated_not_human": true
+  },
+  "evaluation": {
+    "status": "PASS",
+    "failures": [],
+    "deliverable_cues": [
+      "feature",
+      "brief",
+      "acceptance",
+      "criteria",
+      "release",
+      "decision",
+      "packet",
+      "post-release",
+      "readout"
+    ],
+    "matched_deliverable_cues": [
+      "feature",
+      "brief",
+      "acceptance",
+      "criteria",
+      "release",
+      "decision",
+      "packet",
+      "post-release",
+      "readout"
+    ],
+    "cue_threshold": 2,
+    "evaluated_scope": "task/trace/role/provider/model, n8n execution references, two-stage correlation, required sections and role-specific output cues; not domain truth"
+  },
+  "statuses": {
+    "live_inference": "PASS",
+    "specialist_artifact": "PASS",
+    "reviewed": "CAPTURED",
+    "reviewer_verdict": "PASS",
+    "role_tool_capability": "VERIFIED",
+    "human_expert_approved": false,
+    "review_outcome": "PASS"
+  },
+  "restrictions": {
+    "live_codex_calls": 0,
+    "paid_api_calls": 0,
+    "external_actions": 0,
+    "public_deployments": 0
+  },
+  "tool_receipt": {
+    "schema_version": "role-tool-receipt.v1",
+    "authorized_by": "explicit synthetic task packet in this bounded test; this verifies the scoped tool boundary, not a grant to run tools autonomously",
+    "task_id": "task_63edf59c-bce0-4416-bba5-8700ddb1ddf2",
+    "trace_id": "trace_52f2a72d-cf81-44aa-b6be-d2ce345dbf8a",
+    "role_id": "PROD-02",
+    "grants": [
+      "project.read",
+      "artifact.write"
+    ],
+    "read": {
+      "path": "roles/contracts/PROD-02.v1.json",
+      "bytes": 2130,
+      "sha256": "f7e5e26f5478681fa52053f2f01d6306d31a439b33b0be955dfb23d8f61d564c"
+    },
+    "write": {
+      "path": "ops/local-live/artifacts/task_63edf59c-bce0-4416-bba5-8700ddb1ddf2/scoped-capability-receipt-prod-02.md",
+      "bytes": 617,
+      "sha256": "88f0483e6f0bd015bc37bdadbca78aa96524424f9587733179b53574728f0b98",
+      "idempotent_existing_receipt": true
+    },
+    "negative_checks": {
+      "ungranted_tool_denied": true,
+      "outside_allowlist_denied": true,
+      "unauthorized_path": "roles/contracts/D-00.v1.json",
+      "path_traversal_denied": true,
+      "overwrite_denied": true
+    },
+    "sensitive_grants": [],
+    "external_actions": 0,
+    "recorded_at": "2026-10-18T17:05:14.270Z"
+  }
+}

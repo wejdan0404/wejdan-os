@@ -1,0 +1,50 @@
+{
+ "iframe_scripts_only_plain": {
+  "nodes": 0,
+  "text": [],
+  "console": [
+   "error: Access to fetch at 'http://localhost:8790/canvaskit/chromium/canvaskit.wasm' from origin 'null' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+   "error: Failed to load resource: net::ERR_FAILED",
+   "pageerror: Failed to fetch",
+   "error: Access to script at 'http://localhost:8790/canvaskit/chromium/canvaskit.js' from origin 'null' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+   "error: Failed to load resource: net::ERR_FAILED",
+   "pageerror: Failed to fetch dynamically imported module: http://localhost:8790/canvaskit/chromium/canvaskit.js"
+  ],
+  "ext": []
+ },
+ "iframe_scripts_only_cors": {
+  "nodes": 8,
+  "text": [
+   "الحفظ غير متاح في هذا المتصفح — بياناتك مؤقتة",
+   "1 من 6",
+   "1 من 6",
+   "يومك يكون جاهز\nقبل ما تصحين",
+   "أرتّب لك اليوم: وش تسوين، ومتى، وأصغر نسخة منه — ومعه شي تحبينه.",
+   "نسخة صغيرة تكفي\nلكل عادة حد أدنى، ويُحسب إنجازًا كاملًا.",
+   "المتعة جزء من الخطة\nنربط اللي لازم يصير باللي تحبينه.",
+   "التعثّر معلومة، مو حكم\nإذا ما مشى الحال، نعدّل التصميم مو نلومك."
+  ],
+  "console": [],
+  "ext": []
+ },
+ "iframe_scripts_sameorigin": {
+  "nodes": 8,
+  "text": [
+   "1 من 6",
+   "1 من 6",
+   "يومك يكون جاهز\nقبل ما تصحين",
+   "أرتّب لك اليوم: وش تسوين، ومتى، وأصغر نسخة منه — ومعه شي تحبينه.",
+   "نسخة صغيرة تكفي\nلكل عادة حد أدنى، ويُحسب إنجازًا كاملًا.",
+   "المتعة جزء من الخطة\nنربط اللي لازم يصير باللي تحبينه.",
+   "التعثّر معلومة، مو حكم\nإذا ما مشى الحال، نعدّل التصميم مو نلومك.",
+   "بياناتك كلها على جهازك فقط"
+  ],
+  "console": [],
+  "ext": []
+ },
+ "emoji_network": {
+  "external": [],
+  "same_origin_fallback_lookups": 9,
+  "total": 27
+ }
+}

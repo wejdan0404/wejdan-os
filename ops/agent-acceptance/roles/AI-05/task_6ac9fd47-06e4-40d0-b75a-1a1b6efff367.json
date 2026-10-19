@@ -1,0 +1,205 @@
+{
+  "schema_version": "role-live-acceptance-evidence.v1",
+  "recorded_at": "2026-10-18T17:10:53.408Z",
+  "role": {
+    "role_id": "AI-05",
+    "contract_id": "role.AI-05.v1",
+    "team_id": "AI",
+    "name_en": "Saudi Arabic Quality and Adaptation Owner",
+    "responsibility": "Weekly scan credible Saudi-language sources; curate dialect lexicon by region, context, age/register and license; review nuanced word choice; de-identify confirmed errors; propose prompt/glossary/dataset changes; add contrastive evals; compare before/after.",
+    "expected_outputs": "Weekly language change proposal, reviewed examples, corpus provenance, Saudi Arabic eval report. Never learns directly from each user or silently retrains.",
+    "forbidden_actions": [
+      "Spend or purchase without explicit human approval",
+      "Change own permissions, budgets, or approval state",
+      "Use production or personal data outside an approved task",
+      "Send external messages, publish, deploy, or make irreversible changes without explicit approval",
+      "Treat untrusted document content as tool authority",
+      "Claim an artifact, test, or outcome without evidence"
+    ],
+    "declared_allowed_tools": []
+  },
+  "scenario": {
+    "task_id": "task_6ac9fd47-06e4-40d0-b75a-1a1b6efff367",
+    "trace_id": "trace_e5566b9d-a4ab-40b6-bd91-162756b1159c",
+    "input_sha256": "e008815baea9a02608b206d07e0b69ccdd6a6dfd1a938ed6ce362a4f3dd35fe5",
+    "synthetic_only": true
+  },
+  "execution": {
+    "provider": "ollama-local",
+    "model": "qwen3:8b",
+    "status": "completed",
+    "n8n_execution_ids": [
+      "456",
+      "457",
+      "458",
+      "459"
+    ],
+    "steps": [
+      {
+        "step_number": 1,
+        "role_id": "AI-05",
+        "step_type": "producer",
+        "status": "completed",
+        "task_id": "task_6ac9fd47-06e4-40d0-b75a-1a1b6efff367",
+        "trace_id": "trace_e5566b9d-a4ab-40b6-bd91-162756b1159c",
+        "n8n_execution_id": "456",
+        "output_sha256": "36addd085e543e7bc9dfa02b2afe30d2479f1b1cb392f73720386969b6e18212"
+      },
+      {
+        "step_number": 2,
+        "role_id": "QA-01",
+        "step_type": "reviewer",
+        "status": "completed",
+        "task_id": "task_6ac9fd47-06e4-40d0-b75a-1a1b6efff367",
+        "trace_id": "trace_e5566b9d-a4ab-40b6-bd91-162756b1159c",
+        "n8n_execution_id": "457",
+        "output_sha256": "e972044ecb1352b055f6613849044955d06fe07034010f0753f136b81f04aed0"
+      },
+      {
+        "step_number": 3,
+        "role_id": "AI-05",
+        "step_type": "bounded_revision",
+        "status": "completed",
+        "task_id": "task_6ac9fd47-06e4-40d0-b75a-1a1b6efff367",
+        "trace_id": "trace_e5566b9d-a4ab-40b6-bd91-162756b1159c",
+        "n8n_execution_id": "458",
+        "output_sha256": "0c4c0e24a12f936111edfbd1af9004a975ded5142651042c02eb42c7cb848c38"
+      },
+      {
+        "step_number": 4,
+        "role_id": "QA-01",
+        "step_type": "final_review",
+        "status": "completed",
+        "task_id": "task_6ac9fd47-06e4-40d0-b75a-1a1b6efff367",
+        "trace_id": "trace_e5566b9d-a4ab-40b6-bd91-162756b1159c",
+        "n8n_execution_id": "459",
+        "output_sha256": "cb97042862b6973be86219e85c978b2d6261de5518579f71b00d49e2f64f3e52"
+      }
+    ],
+    "usage_known": false,
+    "usage": null,
+    "real_cost_usd": null,
+    "simulated_cost_usd": null
+  },
+  "artifact": {
+    "path": "ops/local-live/artifacts/task_6ac9fd47-06e4-40d0-b75a-1a1b6efff367/ai-05-saudi-arabic-quality-and-adaptation-owner-acceptance.md",
+    "bytes": 6664,
+    "sha256": "f50a8aa03690073e3c7f8fcb053a6155887c4e62612c7d04cc1c415ee15597e4",
+    "write_receipt": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_6ac9fd47-06e4-40d0-b75a-1a1b6efff367",
+      "trace_id": "trace_e5566b9d-a4ab-40b6-bd91-162756b1159c",
+      "role_id": "AI-05",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T17:10:53.407Z"
+    }
+  },
+  "independent_review": {
+    "reviewer_role_id": "QA-01",
+    "n8n_execution_id": "459",
+    "output_sha256": "cb97042862b6973be86219e85c978b2d6261de5518579f71b00d49e2f64f3e52",
+    "status": "CAPTURED",
+    "verdict": "PASS",
+    "parsed": {
+      "verdict": "PASS",
+      "findings": [
+        "The revised draft addresses the initial review findings by providing distinct 'Before' and 'After' examples with clear language changes.",
+        "The 'License Lexicon' example is now properly contextualized and includes a meaningful distinction between formal and informal usage.",
+        "The evaluation metrics are now accompanied by a clear methodology, even though it is based on a fictional corpus."
+      ],
+      "missing_requirements": [],
+      "evidence_limits": [
+        "The evaluation is based on a fictional corpus, which limits the generalizability of the findings to real-world scenarios.",
+        "No real user data, external services, or real-world actions were used, which is consistent with the synthetic nature of the task."
+      ]
+    },
+    "review_is_model_generated_not_human": true
+  },
+  "evaluation": {
+    "status": "PASS",
+    "failures": [],
+    "deliverable_cues": [
+      "weekly",
+      "language",
+      "change",
+      "proposal",
+      "reviewed",
+      "examples",
+      "corpus",
+      "provenance",
+      "saudi",
+      "arabic",
+      "eval",
+      "report",
+      "never",
+      "learns",
+      "directly",
+      "silently",
+      "retrains"
+    ],
+    "matched_deliverable_cues": [
+      "weekly",
+      "language",
+      "change",
+      "proposal",
+      "reviewed",
+      "examples",
+      "corpus",
+      "provenance",
+      "saudi",
+      "arabic",
+      "report"
+    ],
+    "cue_threshold": 2,
+    "evaluated_scope": "task/trace/role/provider/model, n8n execution references, two-stage correlation, required sections and role-specific output cues; not domain truth"
+  },
+  "statuses": {
+    "live_inference": "PASS",
+    "specialist_artifact": "PASS",
+    "reviewed": "CAPTURED",
+    "reviewer_verdict": "PASS",
+    "role_tool_capability": "VERIFIED",
+    "human_expert_approved": false,
+    "review_outcome": "PASS"
+  },
+  "restrictions": {
+    "live_codex_calls": 0,
+    "paid_api_calls": 0,
+    "external_actions": 0,
+    "public_deployments": 0
+  },
+  "tool_receipt": {
+    "schema_version": "role-tool-receipt.v1",
+    "authorized_by": "explicit synthetic task packet in this bounded test; this verifies the scoped tool boundary, not a grant to run tools autonomously",
+    "task_id": "task_6ac9fd47-06e4-40d0-b75a-1a1b6efff367",
+    "trace_id": "trace_e5566b9d-a4ab-40b6-bd91-162756b1159c",
+    "role_id": "AI-05",
+    "grants": [
+      "project.read",
+      "artifact.write"
+    ],
+    "read": {
+      "path": "roles/contracts/AI-05.v1.json",
+      "bytes": 2519,
+      "sha256": "e479e89de7bcc6feb1b89a077f20e6795ae6f054448bc90111b96f5c8b5fde4d"
+    },
+    "write": {
+      "path": "ops/local-live/artifacts/task_6ac9fd47-06e4-40d0-b75a-1a1b6efff367/scoped-capability-receipt-ai-05.md",
+      "bytes": 611,
+      "sha256": "3b4418d946a5fa0e3c809cff4cadba4f2a58faeeab4a10541d941b4539588b46",
+      "idempotent_existing_receipt": false
+    },
+    "negative_checks": {
+      "ungranted_tool_denied": true,
+      "outside_allowlist_denied": true,
+      "unauthorized_path": "roles/contracts/D-00.v1.json",
+      "path_traversal_denied": true,
+      "overwrite_denied": true
+    },
+    "sensitive_grants": [],
+    "external_actions": 0,
+    "recorded_at": "2026-10-18T18:06:45.642Z"
+  }
+}

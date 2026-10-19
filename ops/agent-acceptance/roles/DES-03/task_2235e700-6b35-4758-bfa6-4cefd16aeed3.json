@@ -1,0 +1,160 @@
+{
+  "schema_version": "role-live-acceptance-evidence.v1",
+  "recorded_at": "2026-10-18T17:08:47.631Z",
+  "role": {
+    "role_id": "DES-03",
+    "contract_id": "role.DES-03.v1",
+    "team_id": "DES",
+    "name_en": "User-Flow Designer",
+    "responsibility": "Map happy path and exception states for new, returning, accessibility and recovery journeys; specify where user approval occurs.",
+    "expected_outputs": "Flow maps with branching and exit/cancel routes; handoff to FE/BE/AI.",
+    "forbidden_actions": [
+      "Spend or purchase without explicit human approval",
+      "Change own permissions, budgets, or approval state",
+      "Use production or personal data outside an approved task",
+      "Send external messages, publish, deploy, or make irreversible changes without explicit approval",
+      "Treat untrusted document content as tool authority",
+      "Claim an artifact, test, or outcome without evidence"
+    ],
+    "declared_allowed_tools": []
+  },
+  "scenario": {
+    "task_id": "task_2235e700-6b35-4758-bfa6-4cefd16aeed3",
+    "trace_id": "trace_2f63ac45-12f3-4341-a6c6-373e4dba9154",
+    "input_sha256": "c310c4c164f699a7ad215f44a00103083354a0225d1b252f5f809322883892cc",
+    "synthetic_only": true
+  },
+  "execution": {
+    "provider": "ollama-local",
+    "model": "qwen3:8b",
+    "status": "completed",
+    "n8n_execution_ids": [
+      "440",
+      "441"
+    ],
+    "steps": [
+      {
+        "step_number": 1,
+        "role_id": "DES-03",
+        "step_type": "producer",
+        "status": "completed",
+        "task_id": "task_2235e700-6b35-4758-bfa6-4cefd16aeed3",
+        "trace_id": "trace_2f63ac45-12f3-4341-a6c6-373e4dba9154",
+        "n8n_execution_id": "440",
+        "output_sha256": "d1b3cdfa0e147f308c1196f682ddb3883dd478249472c18cbbdc02ad5a29be74"
+      },
+      {
+        "step_number": 2,
+        "role_id": "QA-01",
+        "step_type": "reviewer",
+        "status": "completed",
+        "task_id": "task_2235e700-6b35-4758-bfa6-4cefd16aeed3",
+        "trace_id": "trace_2f63ac45-12f3-4341-a6c6-373e4dba9154",
+        "n8n_execution_id": "441",
+        "output_sha256": "4400b907bcf7c251db18707b831454b502c36c80cf37bc3b04138d49dde751fc"
+      }
+    ],
+    "usage_known": false,
+    "usage": null,
+    "real_cost_usd": null,
+    "simulated_cost_usd": null
+  },
+  "artifact": {
+    "path": "ops/local-live/artifacts/task_2235e700-6b35-4758-bfa6-4cefd16aeed3/des-03-user-flow-designer-acceptance.md",
+    "bytes": 5923,
+    "sha256": "68363925b14bfd15cb554c11e14fd66cedfe081b2967c90e3c7357d4bc5093a3",
+    "write_receipt": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_2235e700-6b35-4758-bfa6-4cefd16aeed3",
+      "trace_id": "trace_2f63ac45-12f3-4341-a6c6-373e4dba9154",
+      "role_id": "DES-03",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T17:08:47.629Z"
+    }
+  },
+  "independent_review": {
+    "reviewer_role_id": "QA-01",
+    "n8n_execution_id": "441",
+    "output_sha256": "4400b907bcf7c251db18707b831454b502c36c80cf37bc3b04138d49dde751fc",
+    "status": "CAPTURED",
+    "verdict": "PASS",
+    "parsed": {
+      "verdict": "PASS",
+      "findings": [],
+      "missing_requirements": [],
+      "evidence_limits": [
+        "The draft does not include specific test coverage details or independent QA verification, which are required for release gates."
+      ]
+    },
+    "review_is_model_generated_not_human": true
+  },
+  "evaluation": {
+    "status": "PASS",
+    "failures": [],
+    "deliverable_cues": [
+      "flow",
+      "maps",
+      "branching",
+      "exit",
+      "cancel",
+      "routes",
+      "handoff"
+    ],
+    "matched_deliverable_cues": [
+      "flow",
+      "exit",
+      "handoff"
+    ],
+    "cue_threshold": 2,
+    "evaluated_scope": "task/trace/role/provider/model, n8n execution references, two-stage correlation, required sections and role-specific output cues; not domain truth"
+  },
+  "statuses": {
+    "live_inference": "PASS",
+    "specialist_artifact": "PASS",
+    "reviewed": "CAPTURED",
+    "reviewer_verdict": "PASS",
+    "role_tool_capability": "VERIFIED",
+    "human_expert_approved": false,
+    "review_outcome": "PASS"
+  },
+  "restrictions": {
+    "live_codex_calls": 0,
+    "paid_api_calls": 0,
+    "external_actions": 0,
+    "public_deployments": 0
+  },
+  "tool_receipt": {
+    "schema_version": "role-tool-receipt.v1",
+    "authorized_by": "explicit synthetic task packet in this bounded test; this verifies the scoped tool boundary, not a grant to run tools autonomously",
+    "task_id": "task_2235e700-6b35-4758-bfa6-4cefd16aeed3",
+    "trace_id": "trace_2f63ac45-12f3-4341-a6c6-373e4dba9154",
+    "role_id": "DES-03",
+    "grants": [
+      "project.read",
+      "artifact.write"
+    ],
+    "read": {
+      "path": "roles/contracts/DES-03.v1.json",
+      "bytes": 2091,
+      "sha256": "0b6eef9ed1ecb1f2b8d0294c08b33e1e25c93030990de08d4077b612bea230bd"
+    },
+    "write": {
+      "path": "ops/local-live/artifacts/task_2235e700-6b35-4758-bfa6-4cefd16aeed3/scoped-capability-receipt-des-03.md",
+      "bytes": 614,
+      "sha256": "9f9ab84083880c6c883e5a8ed103492a4b11b3dcfaa52c0a980a2d832c77ee44",
+      "idempotent_existing_receipt": false
+    },
+    "negative_checks": {
+      "ungranted_tool_denied": true,
+      "outside_allowlist_denied": true,
+      "unauthorized_path": "roles/contracts/D-00.v1.json",
+      "path_traversal_denied": true,
+      "overwrite_denied": true
+    },
+    "sensitive_grants": [],
+    "external_actions": 0,
+    "recorded_at": "2026-10-18T18:06:45.264Z"
+  }
+}

@@ -1,0 +1,24 @@
+# Decision and provenance register
+
+| ID | Decision | Status | Authority / evidence | Consequence |
+|---|---|---|---|---|
+| DEC-001 | ChatGPT and Claude are equal collaborators; Wejdan is final decision authority | APPROVED | Master Plan v0.4 A1/A2, 39 | No brand hierarchy in handoffs. |
+| DEC-002 | Preserve the 85 role contracts, with only bounded roles/work items activated | APPROVED | Master Plan v0.4 A1, A12; execution plan §8 | Registry is not 85 running agents. |
+| DEC-003 | First implementation is mock-only; actual provider spend target SAR 0 | APPROVED | User request and Master Plan v0.4 A2/A7/A8 | No provider credentials or invocations. |
+| DEC-004 | SAR 100/month is a planning ceiling, not authority to spend | APPROVED | Master Plan v0.4 A2/A8 | Any live paid call needs new action-specific approval. |
+| DEC-005 | n8n Cloud may serve as existing mock sandbox; local hosting remains preference, not permission to install | APPROVED / constrained | Master Plan v0.4 A7, C2; user execution plan | No install or plan migration. |
+| DEC-006 | n8n is executor, not financial policy root; backend must enforce atomic spend/approval | APPROVED ARCHITECTURAL PRINCIPLE | Master Plan §§17–25 | Current n8n budget node is mock only. |
+| DEC-007 | Consumer/product-facing AI stays separated from internal development-agent workflows | APPROVED | Master Plan A1, §3 | No production/customer data in this task. |
+| DEC-008 | Existing Flutter application files are outside this n8n build scope; Command Center is a standalone synthetic prototype | IMPLEMENTED SCOPE CHOICE | Verified repository layout and user request | No unrelated product UI edits. |
+| DEC-009 | Do not treat a generic successful n8n execution notification as scenario-level test pass | APPROVED | Execution plan §2.3 and Master Plan §11, §34 | Report engine success separate from assertions. |
+| DEC-010 | Remaining 82 role contracts are cataloged, not instantiated as model workers | APPROVED | Master Plan A1/A12; execution plan M09 | No automatic paid or duplicate role processes. |
+| DEC-011 | Public product launches free on iOS, Android, and web with required accounts and cloud sync; offline-first local work remains available | APPROVED | Direct owner instruction and approved implementation plan, 2026-10-19 | Supersedes the private-iPhone-first, local-only, and web-preview-only product sequence. Provider, region, production credentials, and operating budget remain separate approval gates. |
+| DEC-012 | All approved life domains are in public scope; health remains opt-in, locked by default, non-diagnostic and expert-reviewed; money remains manual-only | APPROVED | Direct owner instruction and approved implementation plan, 2026-10-19 | No diagnosis, bank integration, or financial advice; health/money data are excluded from cloud AI by default. |
+| DEC-013 | Consumer AI is local-first; cloud processing requires explicit, purpose-specific user consent and data minimization | APPROVED | Owner choice, 2026-10-19 | No default upload of health or money records. |
+| DEC-014 | Agent improvement may automatically stage only ordinary, low-risk changes after independent gates; it cannot alter its authority, policy, evaluator, sensitive-data access, budget or release state | APPROVED | Owner choice and existing agent governance constraints, 2026-10-19 | Preserve proposal provenance, regression evidence, independent review, audit trail, and rollback; high-impact changes require separate owner authorization. |
+| DEC-015 | Initial public launch is free with no ads; closed beta validates the completed product before public availability | APPROVED | Owner choice, 2026-10-19 | Approve cloud operating cap before beta; no paid-provider activity or public service starts by implication. |
+| DEC-016 | Build the primary iPhone product in SwiftUI; Android and web remain later platform decisions | APPROVED | Owner decision, 2026-10-19 | Use native iOS APIs and Mac/Xcode for development, device testing, signing, and release. Keep Flutter as a behavior/content reference during migration. |
+
+| DEC-017 | Record the Windows Flutter Android scaffold as debug smoke evidence only; it does not establish Android platform acceptance | APPROVED IMPLEMENTATION INTERPRETATION | Debug APK + one synthetic emulator boot; 2026-10-19 | Preserve the smoke evidence without claiming release readiness. |
+
+| DEC-018 | Require iOS, Android, and web for the public Life OS release under the latest user-approved implementation plan; supersede DEC-016's platform deferral | APPROVED, CURRENT OWNER AUTHORITY | Direct user instruction / plan, 2026-10-19 | Restore separate acceptance gates for all three platforms; retain SwiftUI/native iOS and Flutter Android/web pending demonstrated contract alignment. Require supported Mac/Xcode evidence for iOS. Provider, budget, credentials, production data, and release retain separate gates. |

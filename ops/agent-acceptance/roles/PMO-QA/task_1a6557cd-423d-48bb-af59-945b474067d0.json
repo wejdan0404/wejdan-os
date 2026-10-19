@@ -1,0 +1,164 @@
+{
+  "schema_version": "role-live-acceptance-evidence.v1",
+  "recorded_at": "2026-10-18T18:03:05.582Z",
+  "role": {
+    "role_id": "PMO-QA",
+    "contract_id": "role.PMO-QA.v1",
+    "team_id": "PMO",
+    "name_en": "Program Quality Auditor",
+    "responsibility": "Sample task packets and status transitions; reject missing acceptance criteria, unowned decisions, or completed tasks without evidence.",
+    "expected_outputs": "QA result to PMO-01 and central QA; reopen defective tasks.",
+    "forbidden_actions": [
+      "Spend or purchase without explicit human approval",
+      "Change own permissions, budgets, or approval state",
+      "Use production or personal data outside an approved task",
+      "Send external messages, publish, deploy, or make irreversible changes without explicit approval",
+      "Treat untrusted document content as tool authority",
+      "Claim an artifact, test, or outcome without evidence"
+    ],
+    "declared_allowed_tools": []
+  },
+  "scenario": {
+    "task_id": "task_1a6557cd-423d-48bb-af59-945b474067d0",
+    "trace_id": "trace_6eabbb53-da1a-4ae9-a0c2-7b48cdc9ae1e",
+    "input_sha256": "80f5caf2da303f6965acf4954e0868af7287c0f108ef489989dbd1e33cc386d5",
+    "synthetic_only": true
+  },
+  "execution": {
+    "provider": "ollama-local",
+    "model": "qwen3:8b",
+    "status": "blocked",
+    "n8n_execution_ids": [
+      "662",
+      "663",
+      "664",
+      "665"
+    ],
+    "steps": [
+      {
+        "step_number": 1,
+        "role_id": "PMO-QA",
+        "step_type": "producer",
+        "status": "completed",
+        "task_id": "task_1a6557cd-423d-48bb-af59-945b474067d0",
+        "trace_id": "trace_6eabbb53-da1a-4ae9-a0c2-7b48cdc9ae1e",
+        "n8n_execution_id": "662",
+        "output_sha256": "443e61b317656a4e1a843c0dddf15fc171175a798d8f7b181b50eede1031cda3"
+      },
+      {
+        "step_number": 2,
+        "role_id": "QA-01",
+        "step_type": "reviewer",
+        "status": "completed",
+        "task_id": "task_1a6557cd-423d-48bb-af59-945b474067d0",
+        "trace_id": "trace_6eabbb53-da1a-4ae9-a0c2-7b48cdc9ae1e",
+        "n8n_execution_id": "663",
+        "output_sha256": "0c57d71e33759789923d4e028ec4dee44a6e4eadb5f6e35d50c3e05dfaba8a5c"
+      },
+      {
+        "step_number": 3,
+        "role_id": "PMO-QA",
+        "step_type": "bounded_revision",
+        "status": "completed",
+        "task_id": "task_1a6557cd-423d-48bb-af59-945b474067d0",
+        "trace_id": "trace_6eabbb53-da1a-4ae9-a0c2-7b48cdc9ae1e",
+        "n8n_execution_id": "664",
+        "output_sha256": "87290cd32df51799fe4e51a89ca5a24d51f3dea744660d54cbe2d27bc6898fef"
+      },
+      {
+        "step_number": 4,
+        "role_id": "QA-01",
+        "step_type": "final_review",
+        "status": "completed",
+        "task_id": "task_1a6557cd-423d-48bb-af59-945b474067d0",
+        "trace_id": "trace_6eabbb53-da1a-4ae9-a0c2-7b48cdc9ae1e",
+        "n8n_execution_id": "665",
+        "output_sha256": "da16a348a0515776baf28cd5c4fc0ec965f459e442f772e131b93ca212db8c78"
+      }
+    ],
+    "usage_known": false,
+    "usage": null,
+    "real_cost_usd": null,
+    "simulated_cost_usd": null
+  },
+  "artifact": {
+    "path": "ops/local-live/artifacts/task_1a6557cd-423d-48bb-af59-945b474067d0/pmo-qa-program-quality-auditor-acceptance.md",
+    "bytes": 3444,
+    "sha256": "e8fc237775470de4f18c6167328c23dc05ce3081565f9a555012dc515260de86",
+    "write_receipt": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_1a6557cd-423d-48bb-af59-945b474067d0",
+      "trace_id": "trace_6eabbb53-da1a-4ae9-a0c2-7b48cdc9ae1e",
+      "role_id": "PMO-QA",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T18:03:05.581Z"
+    }
+  },
+  "independent_review": {
+    "reviewer_role_id": "QA-01",
+    "n8n_execution_id": "665",
+    "output_sha256": "da16a348a0515776baf28cd5c4fc0ec965f459e442f772e131b93ca212db8c78",
+    "status": "CAPTURED",
+    "verdict": "REVISE",
+    "parsed": {
+      "verdict": "REVISE",
+      "findings": [
+        "The task packet lacks clear acceptance criteria.",
+        "The status transition from 'In Progress' to 'Completed' is not supported by evidence.",
+        "No evidence is provided to confirm the task was completed.",
+        "The decision to mark the task as completed was not owned by a designated stakeholder.",
+        "No human sign-off or approval is documented for the task completion."
+      ],
+      "missing_requirements": [
+        "Acceptance criteria for the task must be defined and documented.",
+        "Evidence of task completion must be provided.",
+        "Ownership of the decision to complete the task must be assigned.",
+        "Human sign-off or approval for task completion must be recorded."
+      ],
+      "evidence_limits": [
+        "No evidence of task completion is provided in the draft.",
+        "The status transition lacks supporting documentation.",
+        "No stakeholder ownership or sign-off is documented.",
+        "No verification of task completion is included."
+      ]
+    },
+    "review_is_model_generated_not_human": true
+  },
+  "evaluation": {
+    "status": "FAIL",
+    "failures": [
+      "TASK_NOT_COMPLETED",
+      "ROLE_SPECIFIC_DELIVERABLE_CUES_MISSING"
+    ],
+    "deliverable_cues": [
+      "result",
+      "pmo-01",
+      "central",
+      "reopen",
+      "defective",
+      "tasks"
+    ],
+    "matched_deliverable_cues": [
+      "result"
+    ],
+    "cue_threshold": 2,
+    "evaluated_scope": "task/trace/role/provider/model, n8n execution references, two-stage correlation, required sections and role-specific output cues; not domain truth"
+  },
+  "statuses": {
+    "live_inference": "PASS",
+    "specialist_artifact": "FAIL",
+    "reviewed": "CAPTURED",
+    "reviewer_verdict": "REVISE",
+    "role_tool_capability": "NOT_GRANTED",
+    "human_expert_approved": false,
+    "review_outcome": "REVISE"
+  },
+  "restrictions": {
+    "live_codex_calls": 0,
+    "paid_api_calls": 0,
+    "external_actions": 0,
+    "public_deployments": 0
+  }
+}

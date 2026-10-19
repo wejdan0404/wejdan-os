@@ -1,0 +1,170 @@
+{
+  "schema_version": "role-live-acceptance-evidence.v1",
+  "recorded_at": "2026-10-18T17:13:08.953Z",
+  "role": {
+    "role_id": "AI-12",
+    "contract_id": "role.AI-12.v1",
+    "team_id": "AI",
+    "name_en": "AI Evaluation Engineer",
+    "responsibility": "Build golden datasets of normal, ambiguous, missing, conflicting, multilingual, dialectal and malicious cases; compare model/prompt/tool versions; calibrate automated graders with human review.",
+    "expected_outputs": "Versioned eval dataset, metrics and regression gate; measure end state, not self-reported success.",
+    "forbidden_actions": [
+      "Spend or purchase without explicit human approval",
+      "Change own permissions, budgets, or approval state",
+      "Use production or personal data outside an approved task",
+      "Send external messages, publish, deploy, or make irreversible changes without explicit approval",
+      "Treat untrusted document content as tool authority",
+      "Claim an artifact, test, or outcome without evidence"
+    ],
+    "declared_allowed_tools": []
+  },
+  "scenario": {
+    "task_id": "task_f005b6b8-be3e-4518-8c49-53634f9fc626",
+    "trace_id": "trace_23f702f7-28f3-46d5-8d19-e460364355ee",
+    "input_sha256": "b51627d6cfc50f1a2b7b0868cfdc327a96adcae539068ae64d7d0f6ef0c2cb30",
+    "synthetic_only": true
+  },
+  "execution": {
+    "provider": "ollama-local",
+    "model": "qwen3:8b",
+    "status": "blocked",
+    "n8n_execution_ids": [
+      "472",
+      "473",
+      "474",
+      "475"
+    ],
+    "steps": [
+      {
+        "step_number": 1,
+        "role_id": "AI-12",
+        "step_type": "producer",
+        "status": "completed",
+        "task_id": "task_f005b6b8-be3e-4518-8c49-53634f9fc626",
+        "trace_id": "trace_23f702f7-28f3-46d5-8d19-e460364355ee",
+        "n8n_execution_id": "472",
+        "output_sha256": "e3f5517d722da44486a20827114a09357d1317f8a54880c295a9ab385ed28b90"
+      },
+      {
+        "step_number": 2,
+        "role_id": "QA-01",
+        "step_type": "reviewer",
+        "status": "completed",
+        "task_id": "task_f005b6b8-be3e-4518-8c49-53634f9fc626",
+        "trace_id": "trace_23f702f7-28f3-46d5-8d19-e460364355ee",
+        "n8n_execution_id": "473",
+        "output_sha256": "a987de19d39c8a71309e8d60369c80588f4571f2ca309cb0c98d37fe93a70103"
+      },
+      {
+        "step_number": 3,
+        "role_id": "AI-12",
+        "step_type": "bounded_revision",
+        "status": "completed",
+        "task_id": "task_f005b6b8-be3e-4518-8c49-53634f9fc626",
+        "trace_id": "trace_23f702f7-28f3-46d5-8d19-e460364355ee",
+        "n8n_execution_id": "474",
+        "output_sha256": "9b322baf80b258db43a6b8932570455507e917b0c73008c4d706b7e1e52ad78a"
+      },
+      {
+        "step_number": 4,
+        "role_id": "QA-01",
+        "step_type": "final_review",
+        "status": "completed",
+        "task_id": "task_f005b6b8-be3e-4518-8c49-53634f9fc626",
+        "trace_id": "trace_23f702f7-28f3-46d5-8d19-e460364355ee",
+        "n8n_execution_id": "475",
+        "output_sha256": "2494f83bf591c82b9402b5e051fe85268c233cbea1871315e956ad4a5da34f00"
+      }
+    ],
+    "usage_known": false,
+    "usage": null,
+    "real_cost_usd": null,
+    "simulated_cost_usd": null
+  },
+  "artifact": {
+    "path": "ops/local-live/artifacts/task_f005b6b8-be3e-4518-8c49-53634f9fc626/ai-12-ai-evaluation-engineer-acceptance.md",
+    "bytes": 9592,
+    "sha256": "f075e36919e32e87ed966f220e0c984f8e3f54f8896df85ac37398b046244595",
+    "write_receipt": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_f005b6b8-be3e-4518-8c49-53634f9fc626",
+      "trace_id": "trace_23f702f7-28f3-46d5-8d19-e460364355ee",
+      "role_id": "AI-12",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T17:13:08.951Z"
+    }
+  },
+  "independent_review": {
+    "reviewer_role_id": "QA-01",
+    "n8n_execution_id": "475",
+    "output_sha256": "2494f83bf591c82b9402b5e051fe85268c233cbea1871315e956ad4a5da34f00",
+    "status": "CAPTURED",
+    "verdict": "REVISE",
+    "parsed": {
+      "verdict": "REVISE",
+      "findings": [
+        "The dataset includes all required case types, but the gold standard answers are still based on assumptions and lack detailed examples.",
+        "The metrics section continues to rely on assumed target values rather than validated data.",
+        "The regression gate is defined but lacks specific validation criteria and verification steps.",
+        "Model and prompt versions are assumed to be v1.0 without any evidence or justification."
+      ],
+      "missing_requirements": [
+        "Detailed and varied gold standard answers for each case type, validated by human review.",
+        "Actual model and prompt versioning with evidence of testing or validation.",
+        "Validated metrics with real-world or synthetic data to support the target values.",
+        "Specific criteria for regression gate validation and verification."
+      ],
+      "evidence_limits": [
+        "No actual model or prompt versioning has been performed, and the assumption of v1.0 is not supported.",
+        "The gold standard answers are based on assumptions and lack human review or validation.",
+        "Metrics are not validated and are based on expected performance rather than actual data."
+      ]
+    },
+    "review_is_model_generated_not_human": true
+  },
+  "evaluation": {
+    "status": "FAIL",
+    "failures": [
+      "TASK_NOT_COMPLETED"
+    ],
+    "deliverable_cues": [
+      "versioned",
+      "eval",
+      "dataset",
+      "metrics",
+      "regression",
+      "gate",
+      "measure",
+      "state",
+      "self-reported",
+      "success"
+    ],
+    "matched_deliverable_cues": [
+      "versioned",
+      "eval",
+      "dataset",
+      "metrics",
+      "regression",
+      "gate"
+    ],
+    "cue_threshold": 2,
+    "evaluated_scope": "task/trace/role/provider/model, n8n execution references, two-stage correlation, required sections and role-specific output cues; not domain truth"
+  },
+  "statuses": {
+    "live_inference": "PASS",
+    "specialist_artifact": "FAIL",
+    "reviewed": "CAPTURED",
+    "reviewer_verdict": "REVISE",
+    "role_tool_capability": "NOT_GRANTED",
+    "human_expert_approved": false,
+    "review_outcome": "REVISE"
+  },
+  "restrictions": {
+    "live_codex_calls": 0,
+    "paid_api_calls": 0,
+    "external_actions": 0,
+    "public_deployments": 0
+  }
+}

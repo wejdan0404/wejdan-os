@@ -1,0 +1,166 @@
+{
+  "schema_version": "role-live-acceptance-evidence.v1",
+  "recorded_at": "2026-10-18T17:18:18.499Z",
+  "role": {
+    "role_id": "AI-03",
+    "contract_id": "role.AI-03.v1",
+    "team_id": "AI",
+    "name_en": "Model Gateway Engineer",
+    "responsibility": "Route by task/risk/cost, pin model versions, enforce provider/data policy, timeout/fallback, and measure quality under model changes.",
+    "expected_outputs": "Routing matrix, provider adapter tests and fallback evidence.",
+    "forbidden_actions": [
+      "Spend or purchase without explicit human approval",
+      "Change own permissions, budgets, or approval state",
+      "Use production or personal data outside an approved task",
+      "Send external messages, publish, deploy, or make irreversible changes without explicit approval",
+      "Treat untrusted document content as tool authority",
+      "Claim an artifact, test, or outcome without evidence"
+    ],
+    "declared_allowed_tools": []
+  },
+  "scenario": {
+    "task_id": "task_ff659fa5-672f-4aaf-9f14-8fa0f2b898b1",
+    "trace_id": "trace_77ffbb2a-d765-4a45-809a-9bbc7c3c0cc3",
+    "input_sha256": "3c652c098273847add38bb5e37f4ddbcb5002cc11d4d1a4318f04f39b781ad6e",
+    "synthetic_only": true
+  },
+  "execution": {
+    "provider": "ollama-local",
+    "model": "qwen3:8b",
+    "status": "blocked",
+    "n8n_execution_ids": [
+      "522",
+      "523",
+      "524",
+      "525"
+    ],
+    "steps": [
+      {
+        "step_number": 1,
+        "role_id": "AI-03",
+        "step_type": "producer",
+        "status": "completed",
+        "task_id": "task_ff659fa5-672f-4aaf-9f14-8fa0f2b898b1",
+        "trace_id": "trace_77ffbb2a-d765-4a45-809a-9bbc7c3c0cc3",
+        "n8n_execution_id": "522",
+        "output_sha256": "c5150f6ddde6dc3985b259937e86d6ea72572da4ee8f3a6885d4ad68de39ffea"
+      },
+      {
+        "step_number": 2,
+        "role_id": "QA-01",
+        "step_type": "reviewer",
+        "status": "completed",
+        "task_id": "task_ff659fa5-672f-4aaf-9f14-8fa0f2b898b1",
+        "trace_id": "trace_77ffbb2a-d765-4a45-809a-9bbc7c3c0cc3",
+        "n8n_execution_id": "523",
+        "output_sha256": "52d910d6cbe514cc54c645ae6d644a8a52670b412d3c41201c6d814804aeb1c8"
+      },
+      {
+        "step_number": 3,
+        "role_id": "AI-03",
+        "step_type": "bounded_revision",
+        "status": "completed",
+        "task_id": "task_ff659fa5-672f-4aaf-9f14-8fa0f2b898b1",
+        "trace_id": "trace_77ffbb2a-d765-4a45-809a-9bbc7c3c0cc3",
+        "n8n_execution_id": "524",
+        "output_sha256": "6f4a1a5d50f4ad22def50d9d833a89c723691729de7c6c6a530b512710b5ea50"
+      },
+      {
+        "step_number": 4,
+        "role_id": "QA-01",
+        "step_type": "final_review",
+        "status": "completed",
+        "task_id": "task_ff659fa5-672f-4aaf-9f14-8fa0f2b898b1",
+        "trace_id": "trace_77ffbb2a-d765-4a45-809a-9bbc7c3c0cc3",
+        "n8n_execution_id": "525",
+        "output_sha256": "076deeca6a95cf124fbdd145d41325fe064f7ec3d795b43f17c30847b58548d7"
+      }
+    ],
+    "usage_known": false,
+    "usage": null,
+    "real_cost_usd": null,
+    "simulated_cost_usd": null
+  },
+  "artifact": {
+    "path": "ops/local-live/artifacts/task_ff659fa5-672f-4aaf-9f14-8fa0f2b898b1/ai-03-model-gateway-engineer-acceptance.md",
+    "bytes": 5064,
+    "sha256": "317b235343003de1f59d1681b667f9f3011377b70e7d97126a113bcf85bdfa2f",
+    "write_receipt": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_ff659fa5-672f-4aaf-9f14-8fa0f2b898b1",
+      "trace_id": "trace_77ffbb2a-d765-4a45-809a-9bbc7c3c0cc3",
+      "role_id": "AI-03",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T17:18:18.498Z"
+    }
+  },
+  "independent_review": {
+    "reviewer_role_id": "QA-01",
+    "n8n_execution_id": "525",
+    "output_sha256": "076deeca6a95cf124fbdd145d41325fe064f7ec3d795b43f17c30847b58548d7",
+    "status": "CAPTURED",
+    "verdict": "REVISE",
+    "parsed": {
+      "verdict": "REVISE",
+      "findings": [
+        "The deliverable includes a routing matrix, provider adapter tests, and fallback evidence as requested, but all items are marked as pending with no evidence provided.",
+        "The deliverable assumes model version compatibility and fallback model capability without verification.",
+        "No real-world data, user facts, or external validation is included, which is acceptable for a synthetic task."
+      ],
+      "missing_requirements": [
+        "Evidence of model version pinning verification",
+        "Evidence of timeout handling validation",
+        "Evidence of fallback strategy execution",
+        "Evidence of fallback model behavior verification"
+      ],
+      "evidence_limits": [
+        "No evidence provided for any of the provider adapter tests",
+        "No evidence provided for fallback model behavior",
+        "Assumptions are made without real-world validation",
+        "Fallback conditions are defined but not verified"
+      ]
+    },
+    "review_is_model_generated_not_human": true
+  },
+  "evaluation": {
+    "status": "FAIL",
+    "failures": [
+      "TASK_NOT_COMPLETED"
+    ],
+    "deliverable_cues": [
+      "routing",
+      "matrix",
+      "provider",
+      "adapter",
+      "tests",
+      "fallback"
+    ],
+    "matched_deliverable_cues": [
+      "routing",
+      "matrix",
+      "provider",
+      "adapter",
+      "tests",
+      "fallback"
+    ],
+    "cue_threshold": 2,
+    "evaluated_scope": "task/trace/role/provider/model, n8n execution references, two-stage correlation, required sections and role-specific output cues; not domain truth"
+  },
+  "statuses": {
+    "live_inference": "PASS",
+    "specialist_artifact": "FAIL",
+    "reviewed": "CAPTURED",
+    "reviewer_verdict": "REVISE",
+    "role_tool_capability": "NOT_GRANTED",
+    "human_expert_approved": false,
+    "review_outcome": "REVISE"
+  },
+  "restrictions": {
+    "live_codex_calls": 0,
+    "paid_api_calls": 0,
+    "external_actions": 0,
+    "public_deployments": 0
+  }
+}

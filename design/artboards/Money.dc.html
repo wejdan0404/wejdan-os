@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>المال</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'IBM Plex Sans Arabic','IBM Plex Sans',sans-serif;background:#F4F7FC;color:#0E121C}
+a{color:#4F5FA0}a:hover{color:#2B3358}
+</style>
+</helmet>
+<div style="width:390px;height:2020px;position:relative;overflow:hidden;background:#F4F7FC;font-family:'IBM Plex Sans Arabic','IBM Plex Sans',sans-serif;color:#0E121C">
+<main style="padding:16px 20px 108px;display:flex;flex-direction:column;gap:24px">
+
+<header style="display:flex;flex-direction:column;gap:4px">
+<div style="display:flex;align-items:center;gap:12px">
+<a href="Me.dc.html" aria-label="رجوع إلى أنا" style="width:44px;height:44px;border-radius:999px;border:1px solid #DCE3EF;background:#FFFFFF;color:#2B3358;display:flex;align-items:center;justify-content:center;box-sizing:border-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
+<h1 style="margin:0;flex:1;font-size:22px;line-height:30px;font-weight:700">المال</h1>
+<span style="font-size:12px;line-height:18px;font-weight:600;color:#5A6478;background:#EEF1F6;border-radius:999px;padding:1px 8px">عيّنة</span>
+</div>
+<p style="margin:0;font-size:13px;line-height:20px;font-weight:500;color:#5A6478">سبتمبر · تسجيل يدوي — ما نربط أي حساب بنكي</p>
+</header>
+
+<section aria-labelledby="env-h" style="background:#FFFFFF;border:1px solid #DCE3EF;border-radius:20px;padding:16px;display:flex;flex-direction:column;gap:14px">
+<div style="display:flex;align-items:baseline;justify-content:space-between">
+<h2 id="env-h" style="margin:0;font-size:18px;line-height:26px;font-weight:600">ظروف الشهر</h2>
+<span style="font-size:13px;line-height:20px;font-weight:500;color:#5A6478">باقي يومين</span>
+</div>
+<sc-for list="{{envs}}" as="e" hint-placeholder-count="5">
+<div style="display:flex;flex-direction:column;gap:6px">
+<div style="display:flex;align-items:baseline;justify-content:space-between;gap:8px">
+<span style="font-size:15px;line-height:22px;font-weight:600">{{e.name}}</span>
+<span style="font-size:13px;line-height:20px;font-weight:500;color:#3A4256"><span style="font-family:'IBM Plex Sans',sans-serif;font-weight:600;color:#0E121C">{{e.spent}}</span> من {{e.plan}} ر.س</span>
+</div>
+<div style="height:8px;border-radius:999px;background:#EAF1FB;overflow:hidden" role="img" aria-label="{{e.aria}}"><div style="{{e.bar}}"></div></div>
+</div>
+</sc-for>
+<button type="button" style="height:52px;border-radius:16px;background:#6172B5;color:#FFFFFF;border:0;font-family:inherit;font-size:16px;font-weight:600;cursor:pointer;margin-top:4px">سجّلي مصروف</button>
+</section>
+
+<section aria-labelledby="save-h" style="background:#E2F3F0;border-radius:20px;padding:16px;display:flex;gap:12px;align-items:flex-start">
+<span style="flex:0 0 40px;height:40px;border-radius:12px;background:#FFFFFF;color:#23675C;display:flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.3-5.7M20 4v4h-4"></path><path d="M12 8v4l2.5 2"></path></svg></span>
+<div style="flex:1;display:flex;flex-direction:column;gap:4px">
+<h2 id="save-h" style="margin:0;font-size:16px;line-height:26px;font-weight:600;color:#0E121C">ادخار تلقائي يوم الراتب</h2>
+<p style="margin:0;font-size:14px;line-height:22px;color:#3A4256">فعّليه مرة وحدة من تطبيق بنكك، ويمشي لحاله. أي مبلغ صغير ثابت يكفي كبداية.</p>
+<span style="font-size:13px;line-height:20px;font-weight:600;color:#23675C">تذكير: 27 من كل شهر · 09:00</span>
+</div>
+</section>
+
+<section aria-labelledby="bills-h" style="display:flex;flex-direction:column;gap:12px">
+<h2 id="bills-h" style="margin:0;font-size:12px;line-height:18px;font-weight:600;color:#5A6478">الفواتير والاشتراكات · أكتوبر الجاي</h2>
+<div style="background:#FFFFFF;border:1px solid #DCE3EF;border-radius:20px;padding:16px;display:flex;flex-direction:column;gap:12px">
+<div style="display:grid;grid-template-columns:repeat(7, minmax(0, 1fr));gap:4px;text-align:center" role="img" aria-label="تقويم أكتوبر: فواتير في 1 و5 و12 و20، وأقساط في 3 و15">
+<sc-for list="{{cal}}" as="d" hint-placeholder-count="31">
+<div style="display:flex;flex-direction:column;align-items:center;gap:2px;padding:4px 0">
+<span style="{{d.num}}">{{d.n}}</span>
+<span style="{{d.dot}}"></span>
+</div>
+</sc-for>
+</div>
+<div style="display:flex;gap:16px;font-size:12px;line-height:18px;font-weight:600;color:#3A4256">
+<span style="display:flex;align-items:center;gap:6px"><span style="width:8px;height:8px;border-radius:999px;background:#23675C"></span>فاتورة أو اشتراك</span>
+<span style="display:flex;align-items:center;gap:6px"><span style="width:8px;height:8px;border-radius:2px;background:#6172B5"></span>قسط</span>
+</div>
+<div style="display:flex;flex-direction:column;border-top:1px solid #DCE3EF">
+<sc-for list="{{bills}}" as="b" hint-placeholder-count="4">
+<div style="{{b.row}}">
+<span style="flex:0 0 44px;font-family:'IBM Plex Sans',sans-serif;font-size:14px;font-weight:600;color:#23675C">{{b.day}}</span>
+<span style="flex:1;font-size:15px;line-height:22px">{{b.name}}</span>
+<span style="font-family:'IBM Plex Sans',sans-serif;font-size:14px;font-weight:600">{{b.amt}}</span>
+</div>
+</sc-for>
+</div>
+<p style="margin:0;font-size:13px;line-height:20px;font-weight:500;color:#5A6478">مراجعة شهرية: اشتراك ما تستخدمينه؟ ألغيه من إعدادات المتجر في جوالك.</p>
+</div>
+</section>
+
+<section aria-labelledby="bnpl-h" style="display:flex;flex-direction:column;gap:12px">
+<h2 id="bnpl-h" style="margin:0;font-size:12px;line-height:18px;font-weight:600;color:#5A6478">الأقساط · تابي وتمارا</h2>
+<div style="background:#FFFFFF;border:1px solid #DCE3EF;border-radius:20px;padding:4px 16px">
+<sc-for list="{{bnpl}}" as="p" hint-placeholder-count="2">
+<div style="{{p.row}}">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:8px">
+<span style="font-size:16px;line-height:26px;font-weight:600">{{p.item}}</span>
+<span style="font-size:12px;line-height:18px;font-weight:600;color:#2B3358;background:#EAF1FB;border-radius:999px;padding:2px 10px">{{p.provider}}</span>
+</div>
+<div style="display:flex;gap:4px" aria-hidden="true">
+<sc-for list="{{p.segs}}" as="s" hint-placeholder-count="4"><span style="{{s.style}}"></span></sc-for>
+</div>
+<span style="font-size:13px;line-height:20px;font-weight:500;color:#3A4256">{{p.meta}}</span>
+</div>
+</sc-for>
+</div>
+<div style="background:#EAF1FB;border-radius:16px;padding:12px 14px;font-size:14px;line-height:22px;color:#2B3358">قاعدتي قبل أي تقسيط: أوقف 10 ثوانٍ وأسأل — هل هو في خطتي؟</div>
+</section>
+
+<section aria-labelledby="wish-h" style="display:flex;flex-direction:column;gap:12px">
+<h2 id="wish-h" style="margin:0;font-size:12px;line-height:18px;font-weight:600;color:#5A6478">قائمة الأمنيات · فترة تهدئة 7 أيام</h2>
+<div style="background:#FFFFFF;border:1px solid #DCE3EF;border-radius:20px;padding:4px 16px">
+<div style="display:flex;align-items:center;gap:12px;padding:14px 0">
+<svg width="44" height="44" viewBox="0 0 44 44" role="img" aria-label="باقي 5 أيام من 7"><circle cx="22" cy="22" r="18" fill="none" stroke="#EAF1FB" stroke-width="4"></circle><circle cx="22" cy="22" r="18" fill="none" stroke="#9BC4EE" stroke-width="4" stroke-linecap="round" stroke-dasharray="113.1" stroke-dashoffset="80.8" transform="rotate(-90 22 22)"></circle><text x="22" y="26.5" text-anchor="middle" font-family="IBM Plex Sans" font-weight="600" font-size="13" fill="#0E121C">5</text></svg>
+<span style="flex:1;display:flex;flex-direction:column"><span style="font-size:16px;line-height:26px;font-weight:600">ساعة ذكية</span><span style="font-size:13px;line-height:20px;font-weight:500;color:#5A6478">باقي 5 أيام — خليها ترتاح</span></span>
+<span style="font-family:'IBM Plex Sans',sans-serif;font-size:14px;font-weight:600">899</span>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px;padding:14px 0;border-top:1px solid #DCE3EF">
+<div style="display:flex;align-items:center;gap:12px">
+<svg width="44" height="44" viewBox="0 0 44 44" role="img" aria-label="انتهت فترة التهدئة"><circle cx="22" cy="22" r="18" fill="#E2F3F0" stroke="#23675C" stroke-width="2"></circle><path d="M15 22.5l4.5 4.5L29 17.5" fill="none" stroke="#23675C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<span style="flex:1;display:flex;flex-direction:column"><span style="font-size:16px;line-height:26px;font-weight:600">لوحة رسم رقمية</span><span style="font-size:13px;line-height:20px;font-weight:500;color:#5A6478">خلصت التهدئة · لسا تبينها؟</span></span>
+<span style="font-family:'IBM Plex Sans',sans-serif;font-size:14px;font-weight:600">450</span>
+</div>
+<div style="display:flex;gap:8px">
+<button type="button" style="flex:1;min-height:44px;border-radius:14px;background:#FFFFFF;border:1px solid #9BC4EE;color:#2B3358;font-family:inherit;font-size:14px;font-weight:600;cursor:pointer">إيه، أشتريها</button>
+<button type="button" style="flex:1;min-height:44px;border-radius:14px;background:#FFFFFF;border:1px solid #DCE3EF;color:#3A4256;font-family:inherit;font-size:14px;font-weight:600;cursor:pointer">أشيلها</button>
+</div>
+</div>
+</div>
+<p style="margin:0;font-size:13px;line-height:20px;font-weight:500;color:#5A6478">مدة التهدئة تختارينها أنتِ — طريقة عملية، والدليل عليها مو محسوم.</p>
+</section>
+
+</main>
+
+<nav aria-label="التنقل الرئيسي" style="position:absolute;left:0;right:0;bottom:0;height:84px;background:#FFFFFF;border-top:1px solid #DCE3EF;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));padding:6px 8px 0;box-sizing:border-box;">
+    <a href="Main.dc.html" style="display:flex;flex-direction:column;align-items:center;gap:2px;min-height:52px;text-decoration:none;color:#5A6478;font-size:12px;line-height:18px;font-weight:600;">
+      <span style="width:4px;height:4px;"></span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>
+      <span>اليوم</span>
+    </a>
+    <a href="HabitsHub.dc.html" style="display:flex;flex-direction:column;align-items:center;gap:2px;min-height:52px;text-decoration:none;color:#5A6478;font-size:12px;line-height:18px;font-weight:600;">
+      <span style="width:4px;height:4px;"></span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21v-9"></path><path d="M12 12c0-4 3-7 8-7 0 4-3 7-8 7z"></path><path d="M12 14c0-3-2.5-5.5-7-5.5 0 3 2.5 5.5 7 5.5z"></path></svg>
+      <span>عاداتي</span>
+    </a>
+    <a href="Path.dc.html" style="display:flex;flex-direction:column;align-items:center;gap:2px;min-height:52px;text-decoration:none;color:#5A6478;font-size:12px;line-height:18px;font-weight:600;">
+      <span style="width:4px;height:4px;"></span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="19" r="2"></circle><circle cx="18" cy="5" r="2"></circle><path d="M8 19h7.5a3.5 3.5 0 0 0 0-7h-7a3.5 3.5 0 0 1 0-7H16"></path></svg>
+      <span>مساري</span>
+    </a>
+    <a href="Joy.dc.html" style="display:flex;flex-direction:column;align-items:center;gap:2px;min-height:52px;text-decoration:none;color:#5A6478;font-size:12px;line-height:18px;font-weight:600;">
+      <span style="width:4px;height:4px;"></span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c.7 5.3 3 7.6 9 9-6 1.4-8.3 3.7-9 9-.7-5.3-3-7.6-9-9 6-1.4 8.3-3.7 9-9z"></path></svg>
+      <span>متعتي</span>
+    </a>
+    <a href="Me.dc.html" aria-current="page" style="display:flex;flex-direction:column;align-items:center;gap:2px;min-height:52px;text-decoration:none;color:#6172B5;font-size:12px;line-height:18px;font-weight:600;">
+      <span style="width:4px;height:4px;border-radius:999px;background:#6172B5;"></span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"></path></svg>
+      <span>أنا</span>
+    </a>
+  </nav>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":2020}}'>
+class Component extends DCLogic {
+renderVals() {
+  const E = [['الأساسيات', 1100, 1200], ['أكل وقهوة', 520, 700], ['مواصلات', 260, 400], ['متعة', 180, 300], ['ادخار', 500, 500]];
+  const envs = E.map(e => { const p = Math.round(e[1] / e[2] * 100); return { name: e[0], spent: e[1].toLocaleString('en-US'), plan: e[2].toLocaleString('en-US'), aria: e[0] + ': ' + e[1] + ' من ' + e[2] + ' ريال',
+    bar: 'height:8px;border-radius:999px;width:' + p + '%;background:' + (e[0] === 'ادخار' ? '#23675C' : '#6172B5') }; });
+  const billDays = { 1: 1, 5: 1, 12: 1, 20: 1 };
+  const bnplDays = { 3: 1, 15: 1 };
+  const cal = [];
+  for (let d = 1; d <= 31; d++) {
+    const today = false;
+    cal.push({ n: d,
+      num: "width:28px;height:28px;border-radius:999px;display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Sans',sans-serif;font-size:13px;font-weight:500;" + (today ? 'background:#6172B5;color:#FFFFFF' : 'color:#3A4256'),
+      dot: 'width:6px;height:6px;' + (billDays[d] ? 'border-radius:999px;background:#23675C' : (bnplDays[d] ? 'border-radius:2px;background:#6172B5' : 'background:transparent')) });
+  }
+  const B = [['1', 'تخزين سحابي', '11'], ['5', 'باقة الجوال', '115'], ['12', 'اشتراك البث', '35'], ['20', 'اشتراك التعلّم', '149']];
+  const bills = B.map((b, i) => ({ day: b[0] + ' أكت', name: b[1], amt: b[2], row: 'display:flex;align-items:center;gap:8px;min-height:44px;padding:4px 0;' + (i > 0 ? 'border-top:1px solid #EAF1FB' : '') }));
+  const P = [['سماعات', 'تابي', 4, 2, 'القسط الجاي 112 ر.س · 3 أكتوبر · الدفعة 3 من 4'], ['حذاء رياضي', 'تمارا', 3, 2, 'القسط الأخير 96 ر.س · 15 أكتوبر · الدفعة 3 من 3']];
+  const bnpl = P.map((p, i) => ({ item: p[0], provider: p[1], meta: p[4],
+    row: 'display:flex;flex-direction:column;gap:8px;padding:14px 0;' + (i > 0 ? 'border-top:1px solid #DCE3EF' : ''),
+    segs: Array.from({ length: p[2] }, (_, k) => ({ style: 'flex:1;height:8px;border-radius:999px;background:' + (k < p[3] ? '#6172B5' : (k === p[3] ? '#9BC4EE' : '#EAF1FB')) })) }));
+  return { envs: envs, cal: cal, bills: bills, bnpl: bnpl };
+}
+}
+</script>
+</body>
+</html>

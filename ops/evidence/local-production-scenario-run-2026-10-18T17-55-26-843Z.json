@@ -1,0 +1,26 @@
+{
+  "schema_version": "local-production-scenario-run.v1",
+  "recorded_at": "2026-10-18T17:55:26.843Z",
+  "results": [
+    {
+      "scenario_id": "engineering-security",
+      "result": "FAIL",
+      "task_id": "task_c2e4c266-ff0d-458b-bf78-1023dd0e6488",
+      "trace_id": "trace_084c422b-624c-4fa2-a4b0-86810b81fd45",
+      "error": "SCENARIO_DETERMINISTIC_TRUTH_CHECK_FAILED:The existing task export route has no user-level RBAC; do not claim authorization that was not implemented.",
+      "step_count": 5
+    }
+  ],
+  "counts": {
+    "expected": 1,
+    "passed": 0,
+    "failed": 1
+  },
+  "safety": {
+    "paid_api_calls": 0,
+    "live_codex_calls": 0,
+    "cloud_n8n_runs": 0,
+    "external_actions": 0
+  },
+  "evidence_path": "ops/evidence/local-production-scenario-run-2026-10-18T17-55-26-843Z.json"
+}

@@ -1,0 +1,84 @@
+{
+  "scenario_id": "product-feature-design",
+  "task_id": "task_3c1c6666-3dbc-4981-b684-ddbc5ae0e07f",
+  "trace_id": "trace_7484d0cb-4f16-4e97-be18-42426c2bdef3",
+  "status": "failed",
+  "error": "SCENARIO_FINAL_REVIEW_NOT_PASS:REVISE",
+  "provider": "ollama-local",
+  "model": "qwen3:8b",
+  "steps": [
+    {
+      "role_id": "PROD-03",
+      "stage": "planner",
+      "task_id": "task_3c1c6666-3dbc-4981-b684-ddbc5ae0e07f",
+      "trace_id": "trace_7484d0cb-4f16-4e97-be18-42426c2bdef3",
+      "n8n_execution_id": "590",
+      "elapsed_ms": 15465,
+      "output_sha256": "9796a6ace7d9a7722be3c99161bf51194fb928ba44a7839e80c8144ebc8b84cd"
+    },
+    {
+      "role_id": "DES-03",
+      "stage": "specialist_1",
+      "task_id": "task_3c1c6666-3dbc-4981-b684-ddbc5ae0e07f",
+      "trace_id": "trace_7484d0cb-4f16-4e97-be18-42426c2bdef3",
+      "n8n_execution_id": "591",
+      "elapsed_ms": 15449,
+      "output_sha256": "8744ac62ac665e61852dd6dbcc7c36a7d53a76bcbae3080d3bce9dbdf2664183"
+    },
+    {
+      "role_id": "FE-02",
+      "stage": "specialist_2",
+      "task_id": "task_3c1c6666-3dbc-4981-b684-ddbc5ae0e07f",
+      "trace_id": "trace_7484d0cb-4f16-4e97-be18-42426c2bdef3",
+      "n8n_execution_id": "592",
+      "elapsed_ms": 14360,
+      "output_sha256": "3d0a0fd9ec0001b1f77fa507a8e4ad1f1e317d4b0f086f5efd6dd9a84475bdd4"
+    },
+    {
+      "role_id": "QA-02",
+      "stage": "independent_review",
+      "task_id": "task_3c1c6666-3dbc-4981-b684-ddbc5ae0e07f",
+      "trace_id": "trace_7484d0cb-4f16-4e97-be18-42426c2bdef3",
+      "n8n_execution_id": "593",
+      "elapsed_ms": 5685,
+      "output_sha256": "a96219c20005979de53987a3e21c56a82d0368bad1c2b8481bccb75d3a24e200"
+    },
+    {
+      "role_id": "FE-02",
+      "stage": "bounded_revision",
+      "task_id": "task_3c1c6666-3dbc-4981-b684-ddbc5ae0e07f",
+      "trace_id": "trace_7484d0cb-4f16-4e97-be18-42426c2bdef3",
+      "n8n_execution_id": "594",
+      "elapsed_ms": 16695,
+      "output_sha256": "e79338b2fbba9fa659dafe0e99cef38ddce1967ab2d09aa2cd07380e4ddf8f6c"
+    },
+    {
+      "role_id": "QA-02",
+      "stage": "final_review",
+      "task_id": "task_3c1c6666-3dbc-4981-b684-ddbc5ae0e07f",
+      "trace_id": "trace_7484d0cb-4f16-4e97-be18-42426c2bdef3",
+      "n8n_execution_id": "595",
+      "elapsed_ms": 5624,
+      "output_sha256": "72fa59986dc101922287e0a814b7967ae57c612040b4b3bf5523d332a08aab06"
+    }
+  ],
+  "reviewer_output": "{\n  \"verdict\": \"REVISE\",\n  \"findings\": [\n    \"The revised deliverable includes test case definitions and deterministic assertions for all proposed test types (unit, integration, E2E, accessibility).\",\n    \"The 'deferral to quiet-end' logic is now clearly defined in the test matrix and includes handling for cross-midnight boundaries.\",\n    \"The 'disable/cancel' behavior is aligned with the requirement to 'stay disabled offline' and includes explicit test assertions.\",\n    \"The 'cross-midnight boundary' handling is addressed in the test matrix with a dedicated unit test case.\",\n    \"The 'focus block overlap' scenario is covered in the test matrix with a dedicated unit test case.\",\n    \"The 'Hive persistence' and 'offline toggles' are included in integration tests with explicit test case definitions.\",\n    \"The 'missed-item neutral copy' in E2E tests is now defined with a clear test case description.\",\n    \"The 'semantic labels' and 'contrast AA' are included in accessibility tests with detailed test case definitions.\"\n  ],\n  \"missing_requirements\": [\n    \"Explicit test case definitions for all proposed test types (unit, integration, E2E, accessibility).\",\n    \"Deterministic assertions for all test cases, including setup and expected outcomes.\",\n    \"Clear definition of 'deferral to quiet-end' logic and its handling of cross-midnight boundaries.\",\n    \"Explicit test case for 'disable/cancel' behavior and its offline persistence.\",\n    \"Test case for 'focus block overlap' and its deferral logic.\",\n    \"Test case for 'Hive persistence' and 'offline toggles' with explicit assertions.\",\n    \"Definition of 'missed-item neutral copy' for E2E tests.\"\n  ],\n  \"evidence_limits\": [\n    \"No actual test execution or evidence is provided; all tests are marked as NOT_RUN.\",\n    \"The draft deliverables do not include test case IDs or deterministic assertions for any proposed test.\",\n    \"The 'deferral to quiet-end' logic is not fully defined and requires further clarification.\",\n    \"The 'disable/cancel' behavior is not fully aligned with the requirement to 'stay disabled offline' and needs explicit test assertions.\",\n    \"The 'cross-midnight boundary' handling is not addressed in the test matrix and requires a unit test case.\"\n  ]\n}",
+  "reviewer_verdict": "REVISE",
+  "refusal_recovery": null,
+  "recorded_at": "2026-10-18T17:40:54.995Z",
+  "draft_artifact": {
+    "path": "ops/local-live/artifacts/task_3c1c6666-3dbc-4981-b684-ddbc5ae0e07f/product-feature-acceptance-bundle-unaccepted.md",
+    "bytes": 8393,
+    "sha256": "0a8928729a780d990aa5c81705c13e823c2be63550016dbe91efcd65baef4cba",
+    "provenance": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_3c1c6666-3dbc-4981-b684-ddbc5ae0e07f",
+      "trace_id": "trace_7484d0cb-4f16-4e97-be18-42426c2bdef3",
+      "role_id": "PROD-01",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T17:40:54.997Z"
+    }
+  }
+}

@@ -1,0 +1,2579 @@
+{
+  "schema_version": "agent-role-readiness.v1",
+  "generated_at": "2026-10-19",
+  "binding_status": "ACTIVE_OWNER_APPROVED",
+  "activated_at": "2026-10-19",
+  "activation_evidence": "ops/local-live/runtime/test-all-role-context-usage.mjs",
+  "binding_proposal": "agents/proposals/2026-10-19-agent-capability-bindings-and-improvement-function.md",
+  "source_registry": "roles/role_registry.json",
+  "source_matrix": "ops/agent-acceptance/role_matrix.json",
+  "role_count": 85,
+  "counters": {
+    "registered": 85,
+    "routable": 85,
+    "live_inference_passed": 85,
+    "specialist_artifact_passed": 77,
+    "independently_reviewed": 85,
+    "reviewer_pass": 78,
+    "tool_capability_verified_for_role": 77,
+    "human_expert_approved": 0
+  },
+  "roles": [
+    {
+      "role_id": "D-00",
+      "name_ar": "مدير البرنامج",
+      "name_en": "Program Director",
+      "team_id": "D",
+      "contract_id": "role.D-00.v1",
+      "registry_state": "MOCK_TESTED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/D-00/task_eb4f673b-7c1d-4f62-b80b-c8e0ba20361c.json",
+      "role_card": "agents/roles/D-00.md",
+      "private_memory_scope": "agent/d-00",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 2
+    },
+    {
+      "role_id": "PMO-01",
+      "name_ar": "قائد عمليات البرنامج",
+      "name_en": "Program Operations Lead",
+      "team_id": "PMO",
+      "contract_id": "role.PMO-01.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/PMO-01/task_1bd0f09d-ff2c-4cc7-9d10-6d4fe482f92f.json",
+      "role_card": "agents/roles/PMO-01.md",
+      "private_memory_scope": "agent/pmo-01",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md",
+        "agents/skills/knowledge-curation/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 3
+    },
+    {
+      "role_id": "PMO-02",
+      "name_ar": "مدير التبعيات",
+      "name_en": "Dependency Manager",
+      "team_id": "PMO",
+      "contract_id": "role.PMO-02.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/PMO-02/task_af880137-9304-41d5-86ad-89a469755a48.json",
+      "role_card": "agents/roles/PMO-02.md",
+      "private_memory_scope": "agent/pmo-02",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md",
+        "agents/skills/knowledge-curation/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 3
+    },
+    {
+      "role_id": "PMO-03",
+      "name_ar": "مسؤول الموارد والتحكم المالي",
+      "name_en": "Resource and Cost Controller",
+      "team_id": "PMO",
+      "contract_id": "role.PMO-03.v1",
+      "registry_state": "MOCK_TESTED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/PMO-03/task_331f5c29-afc3-476e-a0fc-5fb619d9beb4.json",
+      "role_card": "agents/roles/PMO-03.md",
+      "private_memory_scope": "agent/pmo-03",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md",
+        "agents/skills/knowledge-curation/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 3
+    },
+    {
+      "role_id": "PMO-04",
+      "name_ar": "أمين القرارات والمعرفة",
+      "name_en": "Decision and Knowledge Custodian",
+      "team_id": "PMO",
+      "contract_id": "role.PMO-04.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/PMO-04/task_c2270185-8783-49fd-b529-539286e91001.json",
+      "role_card": "agents/roles/PMO-04.md",
+      "private_memory_scope": "agent/pmo-04",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md",
+        "agents/skills/knowledge-curation/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 3
+    },
+    {
+      "role_id": "PMO-05",
+      "name_ar": "مدير التغييرات ونطاق العمل",
+      "name_en": "Change and Scope Manager",
+      "team_id": "PMO",
+      "contract_id": "role.PMO-05.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/PMO-05/task_7a7a6725-806c-4d1e-858b-ea4b8e673192.json",
+      "role_card": "agents/roles/PMO-05.md",
+      "private_memory_scope": "agent/pmo-05",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md",
+        "agents/skills/knowledge-curation/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 3
+    },
+    {
+      "role_id": "PMO-QA",
+      "name_ar": "مدقق جودة إدارة البرنامج",
+      "name_en": "Program Quality Auditor",
+      "team_id": "PMO",
+      "contract_id": "role.PMO-QA.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "FAIL",
+      "review": "REJECT",
+      "tool_receipt": "NOT_GRANTED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/PMO-QA/task_685448f4-0796-4405-849d-c72118865eb0.json",
+      "role_card": "agents/roles/PMO-QA.md",
+      "private_memory_scope": "agent/pmo-qa",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md",
+        "agents/skills/knowledge-curation/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 3
+    },
+    {
+      "role_id": "PROD-01",
+      "name_ar": "قائد المنتج",
+      "name_en": "Product Lead",
+      "team_id": "PROD",
+      "contract_id": "role.PROD-01.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/PROD-01/task_dcb47ee1-5df2-4738-80bd-f01f3e408e08.json",
+      "role_card": "agents/roles/PROD-01.md",
+      "private_memory_scope": "agent/prod-01",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 2
+    },
+    {
+      "role_id": "PROD-02",
+      "name_ar": "مسؤول دورة حياة الميزة",
+      "name_en": "Feature Lifecycle Owner",
+      "team_id": "PROD",
+      "contract_id": "role.PROD-02.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/PROD-02/task_63edf59c-bce0-4416-bba5-8700ddb1ddf2.json",
+      "role_card": "agents/roles/PROD-02.md",
+      "private_memory_scope": "agent/prod-02",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 2
+    },
+    {
+      "role_id": "PROD-03",
+      "name_ar": "محلل المتطلبات",
+      "name_en": "Requirements Analyst",
+      "team_id": "PROD",
+      "contract_id": "role.PROD-03.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/PROD-03/task_9bd59bfa-593e-484d-af48-e27ed5e32969.json",
+      "role_card": "agents/roles/PROD-03.md",
+      "private_memory_scope": "agent/prod-03",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 2
+    },
+    {
+      "role_id": "PROD-04",
+      "name_ar": "مصمم رحلة الخدمة",
+      "name_en": "Service Journey Designer",
+      "team_id": "PROD",
+      "contract_id": "role.PROD-04.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/PROD-04/task_3d2a79b9-7e09-4c4d-ba4e-8dbbe476fc8a.json",
+      "role_card": "agents/roles/PROD-04.md",
+      "private_memory_scope": "agent/prod-04",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 2
+    },
+    {
+      "role_id": "PROD-05",
+      "name_ar": "محلل اكتشاف الميزات وتحسينها",
+      "name_en": "Feature Discovery and Improvement Analyst",
+      "team_id": "PROD",
+      "contract_id": "role.PROD-05.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/PROD-05/task_6f8c7ab7-9252-4b22-aa56-d395b152fab2.json",
+      "role_card": "agents/roles/PROD-05.md",
+      "private_memory_scope": "agent/prod-05",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 2
+    },
+    {
+      "role_id": "PROD-06",
+      "name_ar": "محلل الجدوى التجارية",
+      "name_en": "Commercial Feasibility Analyst",
+      "team_id": "PROD",
+      "contract_id": "role.PROD-06.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/PROD-06/task_dbfdbebd-27a8-4e4d-a96a-80957edcbc8d.json",
+      "role_card": "agents/roles/PROD-06.md",
+      "private_memory_scope": "agent/prod-06",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 2
+    },
+    {
+      "role_id": "PROD-QA",
+      "name_ar": "مدقق جودة المنتج",
+      "name_en": "Product Quality Auditor",
+      "team_id": "PROD",
+      "contract_id": "role.PROD-QA.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/PROD-QA/task_e6cb269e-084c-41cf-bd5b-bb20cef86f74.json",
+      "role_card": "agents/roles/PROD-QA.md",
+      "private_memory_scope": "agent/prod-qa",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 2
+    },
+    {
+      "role_id": "UR-01",
+      "name_ar": "قائد أبحاث المستخدمين",
+      "name_en": "User Research Lead",
+      "team_id": "UR",
+      "contract_id": "role.UR-01.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/UR-01/task_57983929-c81b-4dc9-9d29-257a18cfff17.json",
+      "role_card": "agents/roles/UR-01.md",
+      "private_memory_scope": "agent/ur-01",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 2
+    },
+    {
+      "role_id": "UR-02",
+      "name_ar": "مخطط أبحاث المستخدمين",
+      "name_en": "Research Planner",
+      "team_id": "UR",
+      "contract_id": "role.UR-02.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/UR-02/task_b1da31a7-06e7-4824-8400-ff2fd95e385a.json",
+      "role_card": "agents/roles/UR-02.md",
+      "private_memory_scope": "agent/ur-02",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 2
+    },
+    {
+      "role_id": "UR-03",
+      "name_ar": "منسق استقطاب المشاركين",
+      "name_en": "Participant Recruitment Coordinator",
+      "team_id": "UR",
+      "contract_id": "role.UR-03.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/UR-03/task_25bda969-a128-4a27-af8c-871eefdc2513.json",
+      "role_card": "agents/roles/UR-03.md",
+      "private_memory_scope": "agent/ur-03",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 2
+    },
+    {
+      "role_id": "UR-04",
+      "name_ar": "باحث المقابلات والأبحاث الميدانية",
+      "name_en": "Interview and Field Researcher",
+      "team_id": "UR",
+      "contract_id": "role.UR-04.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/UR-04/task_0b21f011-4d9e-4d8b-bcba-f2ba68060b4d.json",
+      "role_card": "agents/roles/UR-04.md",
+      "private_memory_scope": "agent/ur-04",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 2
+    },
+    {
+      "role_id": "UR-05",
+      "name_ar": "باحث قابلية الاستخدام",
+      "name_en": "Usability Researcher",
+      "team_id": "UR",
+      "contract_id": "role.UR-05.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/UR-05/task_97ab223f-425d-4c72-989f-a102de608790.json",
+      "role_card": "agents/roles/UR-05.md",
+      "private_memory_scope": "agent/ur-05",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 2
+    },
+    {
+      "role_id": "UR-06",
+      "name_ar": "محلل البيانات النوعية والكمية",
+      "name_en": "Qualitative/Quantitative Analyst",
+      "team_id": "UR",
+      "contract_id": "role.UR-06.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/UR-06/task_f4563a4c-d6b3-49d7-940a-bf754e0da6a1.json",
+      "role_card": "agents/roles/UR-06.md",
+      "private_memory_scope": "agent/ur-06",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 2
+    },
+    {
+      "role_id": "UR-07",
+      "name_ar": "أمين مستودع أبحاث المستخدمين",
+      "name_en": "Research Repository Steward",
+      "team_id": "UR",
+      "contract_id": "role.UR-07.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/UR-07/task_7ce99bea-c06e-430c-91d9-35b94c9c881c.json",
+      "role_card": "agents/roles/UR-07.md",
+      "private_memory_scope": "agent/ur-07",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 2
+    },
+    {
+      "role_id": "UR-QA",
+      "name_ar": "مدقق جودة أبحاث المستخدمين",
+      "name_en": "Research Quality Auditor",
+      "team_id": "UR",
+      "contract_id": "role.UR-QA.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/UR-QA/task_8269d70b-eea8-4965-978e-f59aa2cf9069.json",
+      "role_card": "agents/roles/UR-QA.md",
+      "private_memory_scope": "agent/ur-qa",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 2
+    },
+    {
+      "role_id": "DES-01",
+      "name_ar": "قائد تجربة المستخدم وتصميم المنتج",
+      "name_en": "UX and Product Design Lead",
+      "team_id": "DES",
+      "contract_id": "role.DES-01.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/DES-01/task_bbff9956-ea2a-4315-8866-cdab6211c5aa.json",
+      "role_card": "agents/roles/DES-01.md",
+      "private_memory_scope": "agent/des-01",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 2
+    },
+    {
+      "role_id": "DES-02",
+      "name_ar": "معماري المعلومات",
+      "name_en": "Information Architect",
+      "team_id": "DES",
+      "contract_id": "role.DES-02.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/DES-02/task_ada52e9c-85e4-4138-9aa3-d9ea20789b21.json",
+      "role_card": "agents/roles/DES-02.md",
+      "private_memory_scope": "agent/des-02",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 2
+    },
+    {
+      "role_id": "DES-03",
+      "name_ar": "مصمم تدفقات المستخدم",
+      "name_en": "User-Flow Designer",
+      "team_id": "DES",
+      "contract_id": "role.DES-03.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/DES-03/task_2235e700-6b35-4758-bfa6-4cefd16aeed3.json",
+      "role_card": "agents/roles/DES-03.md",
+      "private_memory_scope": "agent/des-03",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 2
+    },
+    {
+      "role_id": "DES-04",
+      "name_ar": "مصمم التفاعل",
+      "name_en": "Interaction Designer",
+      "team_id": "DES",
+      "contract_id": "role.DES-04.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/DES-04/task_94bb2f2f-86a0-48e1-885b-cf2f8b8e157a.json",
+      "role_card": "agents/roles/DES-04.md",
+      "private_memory_scope": "agent/des-04",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 2
+    },
+    {
+      "role_id": "DES-05",
+      "name_ar": "مصمم الواجهات المرئية",
+      "name_en": "Visual Interface Designer",
+      "team_id": "DES",
+      "contract_id": "role.DES-05.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/DES-05/task_f40d1184-a943-4e17-a53f-b684a582987f.json",
+      "role_card": "agents/roles/DES-05.md",
+      "private_memory_scope": "agent/des-05",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 2
+    },
+    {
+      "role_id": "DES-06",
+      "name_ar": "مسؤول نظام التصميم",
+      "name_en": "Design System Owner",
+      "team_id": "DES",
+      "contract_id": "role.DES-06.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/DES-06/task_2cc25e24-ceb2-4cca-bc4d-2cbe2cd61383.json",
+      "role_card": "agents/roles/DES-06.md",
+      "private_memory_scope": "agent/des-06",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 2
+    },
+    {
+      "role_id": "DES-07",
+      "name_ar": "مصمم المحتوى العربي والإنجليزي",
+      "name_en": "Arabic/English Content Designer",
+      "team_id": "DES",
+      "contract_id": "role.DES-07.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/DES-07/task_40bc393b-9236-4571-b53b-155c4192d411.json",
+      "role_card": "agents/roles/DES-07.md",
+      "private_memory_scope": "agent/des-07",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 2
+    },
+    {
+      "role_id": "DES-08",
+      "name_ar": "مصمم الحركة والرسوم المتحركة والوسائط",
+      "name_en": "Motion/Animation/Media Designer",
+      "team_id": "DES",
+      "contract_id": "role.DES-08.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/DES-08/task_d7885b5d-e18d-412d-94bf-ec5e60084133.json",
+      "role_card": "agents/roles/DES-08.md",
+      "private_memory_scope": "agent/des-08",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 2
+    },
+    {
+      "role_id": "DES-09",
+      "name_ar": "أخصائي إمكانية الوصول والتوطين",
+      "name_en": "Accessibility and Localization Specialist",
+      "team_id": "DES",
+      "contract_id": "role.DES-09.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/DES-09/task_0c04c6d3-f4df-492d-a770-d96f38b4b6ee.json",
+      "role_card": "agents/roles/DES-09.md",
+      "private_memory_scope": "agent/des-09",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 2
+    },
+    {
+      "role_id": "DES-QA",
+      "name_ar": "مدقق جودة التصميم",
+      "name_en": "Design Quality Auditor",
+      "team_id": "DES",
+      "contract_id": "role.DES-QA.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/DES-QA/task_a2cb52e4-37cb-4062-aa5c-521f3d145f29.json",
+      "role_card": "agents/roles/DES-QA.md",
+      "private_memory_scope": "agent/des-qa",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 2
+    },
+    {
+      "role_id": "AI-01",
+      "name_ar": "قائد هندسة الذكاء الاصطناعي",
+      "name_en": "AI Engineering Lead",
+      "team_id": "AI",
+      "contract_id": "role.AI-01.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/AI-01/task_5300164e-52e3-4cce-906b-7f12698b2398.json",
+      "role_card": "agents/roles/AI-01.md",
+      "private_memory_scope": "agent/ai-01",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md",
+        "agents/skills/agent-memory/SKILL.md",
+        "agents/skills/agent-improvement/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 4
+    },
+    {
+      "role_id": "AI-02",
+      "name_ar": "مهندس الوكلاء وتنسيق العمليات",
+      "name_en": "Agent/Orchestrator Engineer",
+      "team_id": "AI",
+      "contract_id": "role.AI-02.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/AI-02/task_782dff8f-f76c-4158-89f2-d64d8398fb81.json",
+      "role_card": "agents/roles/AI-02.md",
+      "private_memory_scope": "agent/ai-02",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md",
+        "agents/skills/agent-memory/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 3
+    },
+    {
+      "role_id": "AI-03",
+      "name_ar": "مهندس بوابة نماذج الذكاء الاصطناعي",
+      "name_en": "Model Gateway Engineer",
+      "team_id": "AI",
+      "contract_id": "role.AI-03.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/AI-03/task_6adc707c-4c36-4dc1-9be0-6bf81dbdf22a.json",
+      "role_card": "agents/roles/AI-03.md",
+      "private_memory_scope": "agent/ai-03",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md",
+        "agents/skills/agent-memory/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 3
+    },
+    {
+      "role_id": "AI-04",
+      "name_ar": "مهندس التعليمات والسلوك",
+      "name_en": "Instruction/Behavior Engineer",
+      "team_id": "AI",
+      "contract_id": "role.AI-04.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/AI-04/task_ff61e0c2-8b9c-457e-be0c-d336e4efdd79.json",
+      "role_card": "agents/roles/AI-04.md",
+      "private_memory_scope": "agent/ai-04",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 2
+    },
+    {
+      "role_id": "AI-05",
+      "name_ar": "مسؤول جودة اللغة السعودية وتكييفها",
+      "name_en": "Saudi Arabic Quality and Adaptation Owner",
+      "team_id": "AI",
+      "contract_id": "role.AI-05.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/AI-05/task_6ac9fd47-06e4-40d0-b75a-1a1b6efff367.json",
+      "role_card": "agents/roles/AI-05.md",
+      "private_memory_scope": "agent/ai-05",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md",
+        "agents/skills/agent-memory/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 3
+    },
+    {
+      "role_id": "AI-06",
+      "name_ar": "مسؤول حوكمة الشخصيات",
+      "name_en": "Persona Governance Owner",
+      "team_id": "AI",
+      "contract_id": "role.AI-06.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/AI-06/task_120fe7db-5a7f-4685-9634-ac26ad0df616.json",
+      "role_card": "agents/roles/AI-06.md",
+      "private_memory_scope": "agent/ai-06",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md",
+        "agents/skills/agent-memory/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 3
+    },
+    {
+      "role_id": "AI-07",
+      "name_ar": "مسؤول استخبارات الأبحاث العلمية",
+      "name_en": "Scientific Research Intelligence Owner",
+      "team_id": "AI",
+      "contract_id": "role.AI-07.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/AI-07/task_2e84f08f-79a1-4758-ba17-d8b236d95095.json",
+      "role_card": "agents/roles/AI-07.md",
+      "private_memory_scope": "agent/ai-07",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md",
+        "agents/skills/agent-memory/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 3
+    },
+    {
+      "role_id": "AI-08",
+      "name_ar": "مهندس الاسترجاع وتوليد الإجابات المعزز بالمصادر",
+      "name_en": "Retrieval/RAG Engineer",
+      "team_id": "AI",
+      "contract_id": "role.AI-08.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/AI-08/task_eb7daa9d-af3d-484f-884c-d7cf3579e2c7.json",
+      "role_card": "agents/roles/AI-08.md",
+      "private_memory_scope": "agent/ai-08",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md",
+        "agents/skills/agent-memory/SKILL.md",
+        "agents/skills/agent-improvement/SKILL.md",
+        "agents/skills/secure-agent-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 5
+    },
+    {
+      "role_id": "AI-09",
+      "name_ar": "مهندس الذاكرة",
+      "name_en": "Memory Engineer",
+      "team_id": "AI",
+      "contract_id": "role.AI-09.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/AI-09/task_0ad234d0-1815-4c40-ac88-907527f05000.json",
+      "role_card": "agents/roles/AI-09.md",
+      "private_memory_scope": "agent/ai-09",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md",
+        "agents/skills/agent-memory/SKILL.md",
+        "agents/skills/agent-improvement/SKILL.md",
+        "agents/skills/secure-agent-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 5
+    },
+    {
+      "role_id": "AI-10",
+      "name_ar": "مهندس الأدوات والتكاملات",
+      "name_en": "Tooling and Integration Engineer",
+      "team_id": "AI",
+      "contract_id": "role.AI-10.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/AI-10/task_45b0f1f7-7525-488d-b19e-d41b1b81ce32.json",
+      "role_card": "agents/roles/AI-10.md",
+      "private_memory_scope": "agent/ai-10",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md",
+        "agents/skills/agent-memory/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 3
+    },
+    {
+      "role_id": "AI-11",
+      "name_ar": "مهندس سلامة الوكلاء",
+      "name_en": "Agent Safety Engineer",
+      "team_id": "AI",
+      "contract_id": "role.AI-11.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/AI-11/task_bc4ce350-1a10-4854-8597-971806fbb018.json",
+      "role_card": "agents/roles/AI-11.md",
+      "private_memory_scope": "agent/ai-11",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md",
+        "agents/skills/agent-memory/SKILL.md",
+        "agents/skills/agent-improvement/SKILL.md",
+        "agents/skills/secure-agent-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 5
+    },
+    {
+      "role_id": "AI-12",
+      "name_ar": "مهندس تقييم الذكاء الاصطناعي",
+      "name_en": "AI Evaluation Engineer",
+      "team_id": "AI",
+      "contract_id": "role.AI-12.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/AI-12/task_505a0fa4-5d73-4f8e-b45a-73bf94024116.json",
+      "role_card": "agents/roles/AI-12.md",
+      "private_memory_scope": "agent/ai-12",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md",
+        "agents/skills/agent-memory/SKILL.md",
+        "agents/skills/agent-improvement/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 4
+    },
+    {
+      "role_id": "AI-13",
+      "name_ar": "مهندس مراقبة الذكاء الاصطناعي والتكاليف",
+      "name_en": "AI Observability and Cost Engineer",
+      "team_id": "AI",
+      "contract_id": "role.AI-13.v1",
+      "registry_state": "MOCK_TESTED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/AI-13/task_f9932471-1618-4a0f-a597-4281fac55c3c.json",
+      "role_card": "agents/roles/AI-13.md",
+      "private_memory_scope": "agent/ai-13",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md",
+        "agents/skills/agent-memory/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 3
+    },
+    {
+      "role_id": "AI-QA",
+      "name_ar": "مدقق جودة الذكاء الاصطناعي",
+      "name_en": "AI Quality Auditor",
+      "team_id": "AI",
+      "contract_id": "role.AI-QA.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "FAIL",
+      "review": "REVISE",
+      "tool_receipt": "NOT_GRANTED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/AI-QA/task_808cc1ce-c6fe-4248-93f2-1e964ea2845d.json",
+      "role_card": "agents/roles/AI-QA.md",
+      "private_memory_scope": "agent/ai-qa",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md",
+        "agents/skills/agent-memory/SKILL.md",
+        "agents/skills/agent-improvement/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 4
+    },
+    {
+      "role_id": "FE-01",
+      "name_ar": "قائد هندسة الواجهات الأمامية",
+      "name_en": "Frontend Engineering Lead",
+      "team_id": "FE",
+      "contract_id": "role.FE-01.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/FE-01/task_716c2d10-42bf-49ed-afdd-09bf4f0e34f2.json",
+      "role_card": "agents/roles/FE-01.md",
+      "private_memory_scope": "agent/fe-01",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 2
+    },
+    {
+      "role_id": "FE-02",
+      "name_ar": "مطور واجهات الويب",
+      "name_en": "Web UI Developer",
+      "team_id": "FE",
+      "contract_id": "role.FE-02.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/FE-02/task_86aeefc4-8fc7-4cfb-829e-5732549c9bf6.json",
+      "role_card": "agents/roles/FE-02.md",
+      "private_memory_scope": "agent/fe-02",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 2
+    },
+    {
+      "role_id": "FE-03",
+      "name_ar": "مطور تطبيقات الأجهزة المحمولة",
+      "name_en": "Mobile App Developer",
+      "team_id": "FE",
+      "contract_id": "role.FE-03.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "FAIL",
+      "review": "REVISE",
+      "tool_receipt": "NOT_GRANTED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/FE-03/task_981247e3-2ccf-42c8-93b5-c9056c443795.json",
+      "role_card": "agents/roles/FE-03.md",
+      "private_memory_scope": "agent/fe-03",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 2
+    },
+    {
+      "role_id": "FE-04",
+      "name_ar": "مهندس حالة التطبيق والمزامنة دون اتصال",
+      "name_en": "Client State/Offline Sync Engineer",
+      "team_id": "FE",
+      "contract_id": "role.FE-04.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/FE-04/task_8138a4e4-442b-4d9e-9a60-a1bb0cada4fc.json",
+      "role_card": "agents/roles/FE-04.md",
+      "private_memory_scope": "agent/fe-04",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 2
+    },
+    {
+      "role_id": "FE-05",
+      "name_ar": "مهندس تطبيق نظام التصميم برمجيًا",
+      "name_en": "Design System Code Engineer",
+      "team_id": "FE",
+      "contract_id": "role.FE-05.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/FE-05/task_1fb01c96-2d31-48b9-bb53-5dc4fe819f8d.json",
+      "role_card": "agents/roles/FE-05.md",
+      "private_memory_scope": "agent/fe-05",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 2
+    },
+    {
+      "role_id": "FE-06",
+      "name_ar": "مهندس أداء الواجهات وإمكانية الوصول",
+      "name_en": "Frontend Performance/Accessibility Engineer",
+      "team_id": "FE",
+      "contract_id": "role.FE-06.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/FE-06/task_c32178d4-3dda-4ccc-96e3-00c1424d6291.json",
+      "role_card": "agents/roles/FE-06.md",
+      "private_memory_scope": "agent/fe-06",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 2
+    },
+    {
+      "role_id": "FE-07",
+      "name_ar": "مراجع شيفرة الواجهات الأمامية",
+      "name_en": "Frontend Code Reviewer",
+      "team_id": "FE",
+      "contract_id": "role.FE-07.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "FAIL",
+      "review": "REVISE",
+      "tool_receipt": "NOT_GRANTED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/FE-07/task_5ae547f7-be05-43b4-8ca4-c53479a5641d.json",
+      "role_card": "agents/roles/FE-07.md",
+      "private_memory_scope": "agent/fe-07",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 2
+    },
+    {
+      "role_id": "FE-QA",
+      "name_ar": "مدقق جودة الواجهات الأمامية",
+      "name_en": "Frontend Quality Auditor",
+      "team_id": "FE",
+      "contract_id": "role.FE-QA.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "FAIL",
+      "review": "PASS",
+      "tool_receipt": "NOT_GRANTED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/FE-QA/task_f7d8833d-df10-4c01-954a-142a8de09243.json",
+      "role_card": "agents/roles/FE-QA.md",
+      "private_memory_scope": "agent/fe-qa",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 2
+    },
+    {
+      "role_id": "BE-01",
+      "name_ar": "قائد هندسة الأنظمة الخلفية",
+      "name_en": "Backend Engineering Lead",
+      "team_id": "BE",
+      "contract_id": "role.BE-01.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/BE-01/task_8acbc9e6-dce3-4086-9c8e-a18c214def12.json",
+      "role_card": "agents/roles/BE-01.md",
+      "private_memory_scope": "agent/be-01",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 2
+    },
+    {
+      "role_id": "BE-02",
+      "name_ar": "معماري النظام والحلول",
+      "name_en": "System/Solution Architect",
+      "team_id": "BE",
+      "contract_id": "role.BE-02.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/BE-02/task_cf7b4613-e46a-4fe1-b40d-d62fd188eabd.json",
+      "role_card": "agents/roles/BE-02.md",
+      "private_memory_scope": "agent/be-02",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 2
+    },
+    {
+      "role_id": "BE-03",
+      "name_ar": "مطور منطق الأعمال والمجالات",
+      "name_en": "Domain/Business-Logic Developer",
+      "team_id": "BE",
+      "contract_id": "role.BE-03.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/BE-03/task_a8b607c9-8874-4bcc-ae61-678cc275f0d0.json",
+      "role_card": "agents/roles/BE-03.md",
+      "private_memory_scope": "agent/be-03",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 2
+    },
+    {
+      "role_id": "BE-04",
+      "name_ar": "مهندس واجهات البرمجة والعقود",
+      "name_en": "API/Contract Engineer",
+      "team_id": "BE",
+      "contract_id": "role.BE-04.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/BE-04/task_ec3a6842-9f64-4f95-8e9d-21feb2bc3ded.json",
+      "role_card": "agents/roles/BE-04.md",
+      "private_memory_scope": "agent/be-04",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 2
+    },
+    {
+      "role_id": "BE-05",
+      "name_ar": "مهندس قواعد البيانات",
+      "name_en": "Database Engineer",
+      "team_id": "BE",
+      "contract_id": "role.BE-05.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/BE-05/task_5fa6ad8d-ff88-4b02-ac25-6fabd4be12b5.json",
+      "role_card": "agents/roles/BE-05.md",
+      "private_memory_scope": "agent/be-05",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 2
+    },
+    {
+      "role_id": "BE-06",
+      "name_ar": "مهندس الهوية والتفويض",
+      "name_en": "Identity/Authorization Engineer",
+      "team_id": "BE",
+      "contract_id": "role.BE-06.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/BE-06/task_6d237d02-c465-4566-9c5c-1bd1160cb095.json",
+      "role_card": "agents/roles/BE-06.md",
+      "private_memory_scope": "agent/be-06",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 2
+    },
+    {
+      "role_id": "BE-07",
+      "name_ar": "مهندس الأحداث وطوابير المهام",
+      "name_en": "Event/Queue Engineer",
+      "team_id": "BE",
+      "contract_id": "role.BE-07.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/BE-07/task_90f97bb5-0bc8-4e3d-ab3b-8c54abcf8c06.json",
+      "role_card": "agents/roles/BE-07.md",
+      "private_memory_scope": "agent/be-07",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 2
+    },
+    {
+      "role_id": "BE-08",
+      "name_ar": "مهندس تكامل التطبيق مع n8n",
+      "name_en": "Application Integration/n8n Engineer",
+      "team_id": "BE",
+      "contract_id": "role.BE-08.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/BE-08/task_0829c4a1-f95c-462e-bbf0-0b122383ca5b.json",
+      "role_card": "agents/roles/BE-08.md",
+      "private_memory_scope": "agent/be-08",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 2
+    },
+    {
+      "role_id": "BE-09",
+      "name_ar": "مراجع شيفرة الأنظمة الخلفية وإعادة هيكلتها",
+      "name_en": "Backend Code Reviewer/Refactoring Engineer",
+      "team_id": "BE",
+      "contract_id": "role.BE-09.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/BE-09/task_88a1c977-83c2-4706-8f4a-f5fe6067dda0.json",
+      "role_card": "agents/roles/BE-09.md",
+      "private_memory_scope": "agent/be-09",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 2
+    },
+    {
+      "role_id": "BE-QA",
+      "name_ar": "مدقق جودة الأنظمة الخلفية",
+      "name_en": "Backend Quality Auditor",
+      "team_id": "BE",
+      "contract_id": "role.BE-QA.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "FAIL",
+      "review": "REVISE",
+      "tool_receipt": "NOT_GRANTED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/BE-QA/task_fed5a761-ae4c-4fda-86fc-57480452315b.json",
+      "role_card": "agents/roles/BE-QA.md",
+      "private_memory_scope": "agent/be-qa",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 2
+    },
+    {
+      "role_id": "SEC-01",
+      "name_ar": "قائد الأمن السيبراني",
+      "name_en": "Security Lead",
+      "team_id": "SEC",
+      "contract_id": "role.SEC-01.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/SEC-01/task_740b1186-3e4e-4556-9022-9557dedd1ff5.json",
+      "role_card": "agents/roles/SEC-01.md",
+      "private_memory_scope": "agent/sec-01",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md",
+        "agents/skills/secure-agent-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 3
+    },
+    {
+      "role_id": "SEC-02",
+      "name_ar": "محلل نماذج التهديدات",
+      "name_en": "Threat Modeler",
+      "team_id": "SEC",
+      "contract_id": "role.SEC-02.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/SEC-02/task_4d648c1c-dc08-4277-8007-e4e1c2f4cd4c.json",
+      "role_card": "agents/roles/SEC-02.md",
+      "private_memory_scope": "agent/sec-02",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md",
+        "agents/skills/secure-agent-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 3
+    },
+    {
+      "role_id": "SEC-03",
+      "name_ar": "مهندس أمن التطبيقات",
+      "name_en": "Application Security Engineer",
+      "team_id": "SEC",
+      "contract_id": "role.SEC-03.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/SEC-03/task_504b024a-c580-4dd5-b93a-3ff673ea495d.json",
+      "role_card": "agents/roles/SEC-03.md",
+      "private_memory_scope": "agent/sec-03",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md",
+        "agents/skills/secure-agent-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 3
+    },
+    {
+      "role_id": "SEC-04",
+      "name_ar": "مختبر الاختراق",
+      "name_en": "Penetration Tester",
+      "team_id": "SEC",
+      "contract_id": "role.SEC-04.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/SEC-04/task_74859132-c901-4a43-90bf-ab351c43fa4f.json",
+      "role_card": "agents/roles/SEC-04.md",
+      "private_memory_scope": "agent/sec-04",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md",
+        "agents/skills/secure-agent-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 3
+    },
+    {
+      "role_id": "SEC-05",
+      "name_ar": "أخصائي اختبار اختراق سلامة الذكاء الاصطناعي",
+      "name_en": "AI Red Team Specialist",
+      "team_id": "SEC",
+      "contract_id": "role.SEC-05.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/SEC-05/task_e689e245-87d1-4e86-adcd-800dfb089ca4.json",
+      "role_card": "agents/roles/SEC-05.md",
+      "private_memory_scope": "agent/sec-05",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md",
+        "agents/skills/secure-agent-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 3
+    },
+    {
+      "role_id": "SEC-06",
+      "name_ar": "مسؤول الخصوصية وحماية البيانات",
+      "name_en": "Privacy/Data Protection Owner",
+      "team_id": "SEC",
+      "contract_id": "role.SEC-06.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/SEC-06/task_078be05e-57dd-4faa-b0c5-df19ef99ac32.json",
+      "role_card": "agents/roles/SEC-06.md",
+      "private_memory_scope": "agent/sec-06",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md",
+        "agents/skills/secure-agent-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 3
+    },
+    {
+      "role_id": "SEC-07",
+      "name_ar": "مهندس الأسرار وأمن سلسلة التوريد",
+      "name_en": "Secrets/Supply Chain Engineer",
+      "team_id": "SEC",
+      "contract_id": "role.SEC-07.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/SEC-07/task_cd764277-bf83-4128-b2e7-29fc8870ef34.json",
+      "role_card": "agents/roles/SEC-07.md",
+      "private_memory_scope": "agent/sec-07",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md",
+        "agents/skills/secure-agent-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 3
+    },
+    {
+      "role_id": "SEC-QA",
+      "name_ar": "مدقق جودة الأمن السيبراني",
+      "name_en": "Security Quality Auditor",
+      "team_id": "SEC",
+      "contract_id": "role.SEC-QA.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/SEC-QA/task_58fd7f16-eb52-4fd7-87d4-dec3aba5ded9.json",
+      "role_card": "agents/roles/SEC-QA.md",
+      "private_memory_scope": "agent/sec-qa",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md",
+        "agents/skills/secure-agent-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 3
+    },
+    {
+      "role_id": "INF-01",
+      "name_ar": "قائد المنصة والبنية التحتية",
+      "name_en": "Platform Lead",
+      "team_id": "INF",
+      "contract_id": "role.INF-01.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/INF-01/task_2fcfdcae-0d6e-4158-8d6f-bd321a9dcaa4.json",
+      "role_card": "agents/roles/INF-01.md",
+      "private_memory_scope": "agent/inf-01",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 2
+    },
+    {
+      "role_id": "INF-02",
+      "name_ar": "مهندس السحابة والبنية التحتية ككود",
+      "name_en": "Cloud/Infrastructure-as-Code Engineer",
+      "team_id": "INF",
+      "contract_id": "role.INF-02.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/INF-02/task_fc266748-f4ff-4050-9ac6-dfa40de67bd5.json",
+      "role_card": "agents/roles/INF-02.md",
+      "private_memory_scope": "agent/inf-02",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 2
+    },
+    {
+      "role_id": "INF-03",
+      "name_ar": "مهندس التكامل والتسليم المستمر",
+      "name_en": "CI/CD Engineer",
+      "team_id": "INF",
+      "contract_id": "role.INF-03.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/INF-03/task_47c73cf7-d4e1-4531-a361-d75ff628cdf6.json",
+      "role_card": "agents/roles/INF-03.md",
+      "private_memory_scope": "agent/inf-03",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 2
+    },
+    {
+      "role_id": "INF-04",
+      "name_ar": "مهندس موثوقية الموقع والمراقبة",
+      "name_en": "Site Reliability/Observability Engineer",
+      "team_id": "INF",
+      "contract_id": "role.INF-04.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/INF-04/task_1988f8b8-7913-4a48-a662-6cc9e577b2af.json",
+      "role_card": "agents/roles/INF-04.md",
+      "private_memory_scope": "agent/inf-04",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 2
+    },
+    {
+      "role_id": "INF-05",
+      "name_ar": "مهندس منصة n8n",
+      "name_en": "n8n Platform Engineer",
+      "team_id": "INF",
+      "contract_id": "role.INF-05.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/INF-05/task_31a17bec-a3cc-4dc9-b2e6-f435f4598abf.json",
+      "role_card": "agents/roles/INF-05.md",
+      "private_memory_scope": "agent/inf-05",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 2
+    },
+    {
+      "role_id": "INF-06",
+      "name_ar": "مهندس النسخ الاحتياطي والتعافي",
+      "name_en": "Backup/Recovery Engineer",
+      "team_id": "INF",
+      "contract_id": "role.INF-06.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/INF-06/task_a3225797-0998-4209-8f9a-f945624bac54.json",
+      "role_card": "agents/roles/INF-06.md",
+      "private_memory_scope": "agent/inf-06",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 2
+    },
+    {
+      "role_id": "INF-QA",
+      "name_ar": "مدقق جودة البنية التحتية",
+      "name_en": "Infrastructure Quality Auditor",
+      "team_id": "INF",
+      "contract_id": "role.INF-QA.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "FAIL",
+      "review": "REVISE",
+      "tool_receipt": "NOT_GRANTED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/INF-QA/task_336eceae-7850-41ee-8f16-703583f367a1.json",
+      "role_card": "agents/roles/INF-QA.md",
+      "private_memory_scope": "agent/inf-qa",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 2
+    },
+    {
+      "role_id": "QA-01",
+      "name_ar": "قائد ضمان الجودة المركزي",
+      "name_en": "Central QA Lead",
+      "team_id": "QA",
+      "contract_id": "role.QA-01.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "FAIL",
+      "review": "REVISE",
+      "tool_receipt": "NOT_GRANTED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/QA-01/task_29559cbf-055b-466d-a95f-e6e1928d52f2.json",
+      "role_card": "agents/roles/QA-01.md",
+      "private_memory_scope": "agent/qa-01",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 2
+    },
+    {
+      "role_id": "QA-02",
+      "name_ar": "مهندس استراتيجية الاختبارات",
+      "name_en": "Test Strategy Engineer",
+      "team_id": "QA",
+      "contract_id": "role.QA-02.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/QA-02/task_ecebe05a-aae4-4c04-9373-10a3dd04cb89.json",
+      "role_card": "agents/roles/QA-02.md",
+      "private_memory_scope": "agent/qa-02",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 2
+    },
+    {
+      "role_id": "QA-03",
+      "name_ar": "مختبر رحلات المستخدم الشاملة",
+      "name_en": "End-to-End Journey Tester",
+      "team_id": "QA",
+      "contract_id": "role.QA-03.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/QA-03/task_7dc1693c-c46a-49a0-9936-0576756fc67d.json",
+      "role_card": "agents/roles/QA-03.md",
+      "private_memory_scope": "agent/qa-03",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 2
+    },
+    {
+      "role_id": "QA-04",
+      "name_ar": "مختبر الأداء والموثوقية",
+      "name_en": "Performance/Reliability Tester",
+      "team_id": "QA",
+      "contract_id": "role.QA-04.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/QA-04/task_f67679c7-6392-4cab-a90a-2bdbde563a17.json",
+      "role_card": "agents/roles/QA-04.md",
+      "private_memory_scope": "agent/qa-04",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 2
+    },
+    {
+      "role_id": "QA-05",
+      "name_ar": "مدير العيوب واختبارات الانحدار",
+      "name_en": "Defect/Regression Manager",
+      "team_id": "QA",
+      "contract_id": "role.QA-05.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/QA-05/task_cacc4370-d8c5-4389-8898-c38a3885aac1.json",
+      "role_card": "agents/roles/QA-05.md",
+      "private_memory_scope": "agent/qa-05",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 2
+    },
+    {
+      "role_id": "QA-06",
+      "name_ar": "مدقق جاهزية الإصدار",
+      "name_en": "Release Readiness Auditor",
+      "team_id": "QA",
+      "contract_id": "role.QA-06.v1",
+      "registry_state": "SPECIFIED",
+      "runtime_state": "NOT_ACTIVE",
+      "live_inference": "PASS",
+      "specialist_artifact": "PASS",
+      "review": "PASS",
+      "tool_receipt": "VERIFIED",
+      "human_expert_approved": false,
+      "last_evidence": "ops/agent-acceptance/roles/QA-06/task_c54ae399-b284-4a89-9810-d6ef53961443.json",
+      "role_card": "agents/roles/QA-06.md",
+      "private_memory_scope": "agent/qa-06",
+      "project_memory_scope": "project/approved",
+      "skills": [
+        "agents/skills/role-deliverable/SKILL.md",
+        "agents/skills/team-context/SKILL.md"
+      ],
+      "knowledge_refs": [
+        "agents/knowledge/README.md",
+        "agents/knowledge/project-facts.md"
+      ],
+      "shared_context_ref": "agents/context/PROJECT_CONTEXT.md",
+      "memory_policy_ref": "agents/memory/README.md",
+      "skill_assignment_count": 2
+    }
+  ],
+  "runtime_implementation_state": "IMPLEMENTED_LOCAL_PATH_PENDING_INDEPENDENT_VALIDATION",
+  "default_tool_authority": "none; task packet required; sensitive owner approval",
+  "research_refs": [
+    "agents/research/AGENT_SYSTEM_RESEARCH.md"
+  ],
+  "skills_catalog": [
+    "agents/skills/agent-improvement/SKILL.md",
+    "agents/skills/agent-memory/SKILL.md",
+    "agents/skills/knowledge-curation/SKILL.md",
+    "agents/skills/role-deliverable/SKILL.md",
+    "agents/skills/secure-agent-context/SKILL.md",
+    "agents/skills/team-context/SKILL.md"
+  ],
+  "role_specific_skill_map": {
+    "D": [],
+    "PMO": [
+      "agents/skills/knowledge-curation/SKILL.md"
+    ],
+    "PROD": [],
+    "UR": [],
+    "DES": [],
+    "AI": [
+      "agents/skills/agent-memory/SKILL.md"
+    ],
+    "FE": [],
+    "BE": [],
+    "SEC": [
+      "agents/skills/secure-agent-context/SKILL.md"
+    ],
+    "INF": [],
+    "QA": []
+  },
+  "role_overrides": {
+    "AI-08": [
+      "agents/skills/agent-improvement/SKILL.md",
+      "agents/skills/secure-agent-context/SKILL.md"
+    ],
+    "AI-09": [
+      "agents/skills/agent-improvement/SKILL.md",
+      "agents/skills/secure-agent-context/SKILL.md"
+    ],
+    "AI-11": [
+      "agents/skills/agent-improvement/SKILL.md",
+      "agents/skills/secure-agent-context/SKILL.md"
+    ],
+    "AI-12": [
+      "agents/skills/agent-improvement/SKILL.md"
+    ],
+    "AI-QA": [
+      "agents/skills/agent-improvement/SKILL.md"
+    ],
+    "AI-01": [
+      "agents/skills/agent-improvement/SKILL.md"
+    ]
+  }
+}

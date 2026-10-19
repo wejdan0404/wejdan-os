@@ -1,0 +1,113 @@
+{
+  "schema_version": "local-live-runtime-checkpoint.v1",
+  "verified_at": "2026-10-18T07:59:41.157Z",
+  "operator_setup": {
+    "local_n8n_account_setup": "user-confirmed-complete",
+    "authenticated_ui": "http://127.0.0.1:5678/assistant"
+  },
+  "services": {
+    "n8n": {
+      "version": "2.43.7",
+      "bind": "127.0.0.1",
+      "readiness": "ok",
+      "public_api_enabled": false
+    },
+    "api": {
+      "bind": "127.0.0.1:8766",
+      "health": "ok",
+      "paid_routes_enabled": false
+    },
+    "ollama": {
+      "bind": "127.0.0.1:11434",
+      "model": "qwen3:8b",
+      "health": "ok"
+    },
+    "command_center": {
+      "bind": "127.0.0.1:8765",
+      "url": "http://127.0.0.1:8765/command-center/"
+    }
+  },
+  "workflow": {
+    "id": "nNGeWSsYiuX1Aeuj",
+    "name": "Wejdan Local Agent | Ollama",
+    "active": true,
+    "archived": false,
+    "nodes": [
+      "Local Task Webhook",
+      "Validate Local Task",
+      "Local Ollama Inference",
+      "Validate and Correlate Result"
+    ],
+    "node_count": 4,
+    "connection_count": 3,
+    "version_id": "9ec3ed59-dc3b-421e-aed4-10644ae0a423",
+    "export_path": "ops/evidence/n8n-local-agent-post-publish.json",
+    "export_sha256": "25245a4eac1377016e8ed0ac05b9fd9a3984564b548b4499d862bc3cd2859110",
+    "code_node_matches": [
+      {
+        "name": "Validate Local Task",
+        "match": true,
+        "characters": 1322,
+        "sha256": "b7a8efe7db1cf59c9b1b2e3675478b72d719fa7f588d25668eb315df7093dfeb"
+      },
+      {
+        "name": "Validate and Correlate Result",
+        "match": true,
+        "characters": 789,
+        "sha256": "6b803abe9539ca3b50a26e797db3ff0f38424e41031a73ef0b4e23d5d24fceb3"
+      }
+    ],
+    "credentials": 0,
+    "last_execution_id": "95"
+  },
+  "task_store": {
+    "total": 95,
+    "completed": 95,
+    "failed": 0,
+    "distinct_role_ids": 85,
+    "latest": {
+      "task_id": "task_7d310fb8-14ea-4c69-8006-261b776a4c8a",
+      "trace_id": "trace_32ac16e0-4904-4a06-b57d-313d0dcf716a",
+      "role_id": "QA-01",
+      "created_at": "2026-10-18T07:52:34.969Z"
+    }
+  },
+  "security": {
+    "public_api_enabled": false,
+    "community_packages_enabled": false,
+    "templates_enabled": false,
+    "diagnostics_enabled": false,
+    "risky_nodes": [
+      "n8n-nodes-base.code",
+      "n8n-nodes-base.httpRequest"
+    ],
+    "risk_scope": "fixed local Code-node validation and HTTP to loopback Ollama only"
+  },
+  "verification": {
+    "protected_rest_endpoints": [
+      {
+        "path": "/api/v1/workflows",
+        "status": 401
+      },
+      {
+        "path": "/rest/workflows",
+        "status": 401
+      }
+    ],
+    "interpretation": "authentication required; public API remains disabled per official n8n security audit"
+  },
+  "tests": {
+    "g00": "57/57",
+    "contracts": "101/101 across 12 documented-subset schemas",
+    "g02_local_workers": "26/26",
+    "g03_structure": "19/19",
+    "g04_mock_finance": "26/26",
+    "g05_telemetry": "20/20",
+    "local_role_smoke": "85/85 invocation-only"
+  },
+  "paid_provider_calls": 0,
+  "cloud_state": {
+    "g05": "BLOCKED_EXTERNAL",
+    "local_track_does_not_close_cloud_gates": true
+  }
+}

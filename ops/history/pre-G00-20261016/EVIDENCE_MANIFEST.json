@@ -1,0 +1,761 @@
+{
+  "manifest_version": "evidence-manifest.v1",
+  "generated_at": "2026-10-16T08:28:00+03:00",
+  "root": "C:\\Users\\WinDows\\Desktop\\عام\\os",
+  "entry_count": 150,
+  "excludes": [
+    "ops/EVIDENCE_MANIFEST.json (self-reference)"
+  ],
+  "entries": [
+    {
+      "path": "command-center/app.js",
+      "bytes": 16591,
+      "sha256": "76071ec8dae5cdfeb5c42487366eb8add19a6a49839a84b3d94ffd825e32119b"
+    },
+    {
+      "path": "command-center/index.html",
+      "bytes": 15268,
+      "sha256": "c96d25e1b395d26990f4b544a44d3c3737f7424776c1f9e281e26ab02995d7f7"
+    },
+    {
+      "path": "command-center/mobile-fix.css",
+      "bytes": 238,
+      "sha256": "8b3605208710d1fb4734b56ec1e9047b40b62a7c7020e310502ec0b874bcc070"
+    },
+    {
+      "path": "command-center/mock-data/dashboard.v1.json",
+      "bytes": 2490,
+      "sha256": "cb549205ad2e456fcf4d2c8e4e66f2b803e2e02b23d088df3262eda84bd443ff"
+    },
+    {
+      "path": "command-center/preview-server.mjs",
+      "bytes": 1281,
+      "sha256": "8ed67aac27f1194751b4fed187be2628b4aa7d89fb318ee83e3c970324f8c5d4"
+    },
+    {
+      "path": "command-center/smoke-test.mjs",
+      "bytes": 3116,
+      "sha256": "6136c3a2469445f44c93d87a658ddea4639403e422ac4aa28d8216ea7055ba9c"
+    },
+    {
+      "path": "command-center/styles.css",
+      "bytes": 15800,
+      "sha256": "397475964a304da5461d96194f4d414a8a31879a1af6073ca843f933503d1f55"
+    },
+    {
+      "path": "docs/architecture/provider-adapter.md",
+      "bytes": 638,
+      "sha256": "d15728765a6d7e8db2a434aa279d62c103d94fa628aaecac7e39c8ad22df7b23"
+    },
+    {
+      "path": "docs/architecture/provider-entitlement-mock.v1.json",
+      "bytes": 765,
+      "sha256": "7c3c38f4a359128b75c57be285286c99fa6026405091770eb5f114a236186c8b"
+    },
+    {
+      "path": "docs/finops/finops-boundaries.md",
+      "bytes": 1909,
+      "sha256": "6bea74dc7756ab3902d2ada0d647e40f3fdeab9f5984597121eb2d930b9bad4f"
+    },
+    {
+      "path": "docs/handoffs/memory-index.json",
+      "bytes": 565,
+      "sha256": "44d5401d157eb87ad2abd75b1b237f425d1e0da765cc3f6d196a6591b3c1114d"
+    },
+    {
+      "path": "docs/handoffs/README.md",
+      "bytes": 1290,
+      "sha256": "b681220aac898c90c1cb0506d400fd43879a73d020127f27cf658c41e61ca2f9"
+    },
+    {
+      "path": "docs/handoffs/review.template.json",
+      "bytes": 525,
+      "sha256": "b4f403fe0819bd73d7a6df5f12e1cef67e328260ae76ea72e53b2876dd453c51"
+    },
+    {
+      "path": "docs/handoffs/task-packet.template.json",
+      "bytes": 701,
+      "sha256": "a31159f41e5e0e92718d43e922814b8214effb63c2a9cddcab4652bfe97011d5"
+    },
+    {
+      "path": "docs/operations/mock-approval-runbook.md",
+      "bytes": 689,
+      "sha256": "4674a1449d8ec6a26c8ade8348949d885f830eeee0130e8aed4c692fd83a2347"
+    },
+    {
+      "path": "docs/operations/runbook.md",
+      "bytes": 1638,
+      "sha256": "cd79f7ee5d916e5f3351e060bd854f1acf32ec05f0c8c78d14345425387a87bb"
+    },
+    {
+      "path": "docs/security/threat-model.md",
+      "bytes": 1240,
+      "sha256": "2e42d849961b8cce3a0793a7ebfe79bcfc6022882db60050ed95cddc44e1394d"
+    },
+    {
+      "path": "ops/APPROVALS_NEEDED.md",
+      "bytes": 1849,
+      "sha256": "cb51c3831ad2d7f18ca9a25ed8fc2ddcbc8c249a107b1ba348df5c8b4a54a888"
+    },
+    {
+      "path": "ops/CURRENT_STATE.md",
+      "bytes": 3061,
+      "sha256": "b902ba24aceee2a7d0aa2f79c583013c12c7e588d74d65487c3d0489293720fc"
+    },
+    {
+      "path": "ops/DECISIONS.md",
+      "bytes": 2073,
+      "sha256": "8962161624ec8874bf2fdc0c3e6344c119c95a05219ffb067f81bab339193827"
+    },
+    {
+      "path": "ops/FINAL_HANDOFF_AR.md",
+      "bytes": 9017,
+      "sha256": "5e488f1f285c6b7a2f662ce7d3c52a0ce22426c97d19f25d7ce5f2a2f6e5a97b"
+    },
+    {
+      "path": "ops/PROGRESS.md",
+      "bytes": 3172,
+      "sha256": "6cd00ccbfad506fc666cee86baf564a7c01891628be0f219f578b24e33ef5171"
+    },
+    {
+      "path": "ops/TEST_MATRIX.md",
+      "bytes": 2069,
+      "sha256": "4a0c0dd92938fc596856140b7cb9cfbafa93f555b3771b2f075bf070cf5837c9"
+    },
+    {
+      "path": "ops/WORK_QUEUE.json",
+      "bytes": 12953,
+      "sha256": "eabc354d40186b5292f716f25d92a36b466bb417fca5991bd8eea029f28fcdc6"
+    },
+    {
+      "path": "roles/activation_matrix.md",
+      "bytes": 11465,
+      "sha256": "638e99f0b949915ae8988dfb1e96084ea713d8d6eae0b12e0a771ebec35ea998"
+    },
+    {
+      "path": "roles/build_role_registry.ps1",
+      "bytes": 5913,
+      "sha256": "f642b564ef6a8a34c6520f584bb1f826697a2f99a18ab814e691b5a20d4a4af8"
+    },
+    {
+      "path": "roles/contracts/AI-01.v1.json",
+      "bytes": 2199,
+      "sha256": "6c168e9a0ae5c6875005a2922491a796b6bd45d61cbb84ba3383b46302f570e1"
+    },
+    {
+      "path": "roles/contracts/AI-02.v1.json",
+      "bytes": 2207,
+      "sha256": "329cfe71b2e2f212d0e0eee9ae761f6302407036556f70242d1713735aaf9144"
+    },
+    {
+      "path": "roles/contracts/AI-03.v1.json",
+      "bytes": 2139,
+      "sha256": "2ddc0f1835c56e4ff772a1e093ade45c93cb712a78c2a3bd649ac61c12d3547c"
+    },
+    {
+      "path": "roles/contracts/AI-04.v1.json",
+      "bytes": 2150,
+      "sha256": "db2ff585d0b58a80ffa0817e41fca5d1c049d07013a3eee71a4d47fc8104e301"
+    },
+    {
+      "path": "roles/contracts/AI-05.v1.json",
+      "bytes": 2519,
+      "sha256": "e479e89de7bcc6feb1b89a077f20e6795ae6f054448bc90111b96f5c8b5fde4d"
+    },
+    {
+      "path": "roles/contracts/AI-06.v1.json",
+      "bytes": 2284,
+      "sha256": "caa46835cde73cdb02ab736160c5845648a21973139adeebae293c3c8b0393d6"
+    },
+    {
+      "path": "roles/contracts/AI-07.v1.json",
+      "bytes": 2478,
+      "sha256": "82cbec71f82ecab7bafc53dfc3dcf89ff80674f06d7180e886da64950a5b3e07"
+    },
+    {
+      "path": "roles/contracts/AI-08.v1.json",
+      "bytes": 2259,
+      "sha256": "3d8594cea23f0adc39e617bb10c50f655856e21d49d37cf8c667e72940f14d49"
+    },
+    {
+      "path": "roles/contracts/AI-09.v1.json",
+      "bytes": 2178,
+      "sha256": "ba1d484f24978cd19dd5bc331b27b6cfa20ecdaed1ca1df0c758b5467ce029e7"
+    },
+    {
+      "path": "roles/contracts/AI-10.v1.json",
+      "bytes": 2204,
+      "sha256": "492f601167d04c9079702c9ffbcf6b9cdeff1f06cd2e5115b3611e2fb6962f52"
+    },
+    {
+      "path": "roles/contracts/AI-11.v1.json",
+      "bytes": 2150,
+      "sha256": "464430cc10a6957be2b69bd1ba28f8dabfd8c61e14b19231f8860c8506ca8217"
+    },
+    {
+      "path": "roles/contracts/AI-12.v1.json",
+      "bytes": 2285,
+      "sha256": "6911b6ac49407ca345b890c4e393f5eaa1248ec856ef96642ad9cc9516626fdf"
+    },
+    {
+      "path": "roles/contracts/AI-13.v1.json",
+      "bytes": 2427,
+      "sha256": "ff4ec571d8708207c597cdf73eb91a4912d6d4e159d9396d3b80206bc58478c4"
+    },
+    {
+      "path": "roles/contracts/AI-QA.v1.json",
+      "bytes": 2173,
+      "sha256": "f4d8714e83956b38b96e621f5201a5c417ef77e107c97bde4592d3c67c941df5"
+    },
+    {
+      "path": "roles/contracts/BE-01.v1.json",
+      "bytes": 2074,
+      "sha256": "b1f704eb32652f8cc39bc389400d7339f168b585edd86432b7e3d7b545f2ae0e"
+    },
+    {
+      "path": "roles/contracts/BE-02.v1.json",
+      "bytes": 2125,
+      "sha256": "0916ea1b5261de9887543c3f847c43c413b1a4c941b14a7693808bd76d2be707"
+    },
+    {
+      "path": "roles/contracts/BE-03.v1.json",
+      "bytes": 2135,
+      "sha256": "c4e2993f407492e23e8a06cf157c6cd440ab0ded3df25f147b4ee36f95a5332b"
+    },
+    {
+      "path": "roles/contracts/BE-04.v1.json",
+      "bytes": 2093,
+      "sha256": "ebadb20b2f531a7e5c3a6539b42527bea323a16d3f98ecabcccdd87e5c018d30"
+    },
+    {
+      "path": "roles/contracts/BE-05.v1.json",
+      "bytes": 2087,
+      "sha256": "c9c4446dfa6f7d8c7ba41a0d6154486a5754c906dcda64d10a835dbe682bea3c"
+    },
+    {
+      "path": "roles/contracts/BE-06.v1.json",
+      "bytes": 2116,
+      "sha256": "626d019de8dbb307cd276b7fefefebb90b77f53bf62853a17697c53f694537f4"
+    },
+    {
+      "path": "roles/contracts/BE-07.v1.json",
+      "bytes": 2071,
+      "sha256": "c6f1ff6cb373ddc8523bea031ba286a121751f0cf7def43d7d74290dc5bc78f9"
+    },
+    {
+      "path": "roles/contracts/BE-08.v1.json",
+      "bytes": 2193,
+      "sha256": "308d2e97bbcb351e266a4a28fc1cafb6afc2573f80d81b521ea9376762ad7421"
+    },
+    {
+      "path": "roles/contracts/BE-09.v1.json",
+      "bytes": 2153,
+      "sha256": "c74d665950fd41b94e937d1a0b5b8c251d7a555c0d3e9b88fcbb7845fbd5a9c2"
+    },
+    {
+      "path": "roles/contracts/BE-QA.v1.json",
+      "bytes": 2028,
+      "sha256": "0f6acb0cf4f1fdf6d7cd23b28740e4a938a4264a92b6f81fac205dc0ce3699ee"
+    },
+    {
+      "path": "roles/contracts/D-00.v1.json",
+      "bytes": 2521,
+      "sha256": "21150b32c99a9befd54aa29d5e5f64e512bae9428cd1409fc18d5d10923bd724"
+    },
+    {
+      "path": "roles/contracts/DES-01.v1.json",
+      "bytes": 2109,
+      "sha256": "a3a6f570953205af3eb6f62a213139b060ee24c925f706cd67f86a79730e0119"
+    },
+    {
+      "path": "roles/contracts/DES-02.v1.json",
+      "bytes": 2063,
+      "sha256": "04449f63367f58d03625affecae9eb113474ac0b75d0d5de3c67304cc8d81f3c"
+    },
+    {
+      "path": "roles/contracts/DES-03.v1.json",
+      "bytes": 2091,
+      "sha256": "0b6eef9ed1ecb1f2b8d0294c08b33e1e25c93030990de08d4077b612bea230bd"
+    },
+    {
+      "path": "roles/contracts/DES-04.v1.json",
+      "bytes": 2039,
+      "sha256": "fa190238ae50ece23b81dca9e2f32781d0bfbb7fdb68cd65ee9a3b0a6b9eb198"
+    },
+    {
+      "path": "roles/contracts/DES-05.v1.json",
+      "bytes": 2104,
+      "sha256": "ef778efa1c419ec6a7c02f20aba2d7e9e93fbeba64c66410b73aebc68375cac1"
+    },
+    {
+      "path": "roles/contracts/DES-06.v1.json",
+      "bytes": 2246,
+      "sha256": "0ca454f2895b45485109fcbf67975e85ee66ce6768ab2a96bcd04cb8e5209955"
+    },
+    {
+      "path": "roles/contracts/DES-07.v1.json",
+      "bytes": 2281,
+      "sha256": "7747f3f925ec0f5a69571c4c04714dcaae43650d2816083a9ab4508271dbeff2"
+    },
+    {
+      "path": "roles/contracts/DES-08.v1.json",
+      "bytes": 2246,
+      "sha256": "719382617dd47306f4f22c9b518e1c0316c4c430193865e8c86b30425f04af1f"
+    },
+    {
+      "path": "roles/contracts/DES-09.v1.json",
+      "bytes": 2125,
+      "sha256": "2b609bd7e095f5461d26ab4f2de7203b440d83a4838f8ea2fbb04077a7bd2f4e"
+    },
+    {
+      "path": "roles/contracts/DES-QA.v1.json",
+      "bytes": 2098,
+      "sha256": "ea0ff68b554d2a5aa97a3f3d113434cb0ac2645e3b9d6d221ff421ba989201b8"
+    },
+    {
+      "path": "roles/contracts/FE-01.v1.json",
+      "bytes": 2130,
+      "sha256": "86b59ad422bb432ceeba841bf7bce2ec42181d17ac2911fed4c8967f3f27ac1c"
+    },
+    {
+      "path": "roles/contracts/FE-02.v1.json",
+      "bytes": 2007,
+      "sha256": "c915393204c0f0c6d06627ecf00f1385d6127df6bd7933b2ecab2bf5c8580b4c"
+    },
+    {
+      "path": "roles/contracts/FE-03.v1.json",
+      "bytes": 2104,
+      "sha256": "8ad13ee81b502cf5ebf92202a9cbf724e741cb8873979fc58936f34213e36b59"
+    },
+    {
+      "path": "roles/contracts/FE-04.v1.json",
+      "bytes": 2118,
+      "sha256": "b2521090c6e2a959b88efc273dd5891da494e2a466ab1673e9198caba5675785"
+    },
+    {
+      "path": "roles/contracts/FE-05.v1.json",
+      "bytes": 2042,
+      "sha256": "838b21dfd4751f25a99a3210504a195ef5c3d52632e000a57487d6188ee1534d"
+    },
+    {
+      "path": "roles/contracts/FE-06.v1.json",
+      "bytes": 2131,
+      "sha256": "0b90ad34a3ea6663e2d2c90e771e288d837a3efd08e00474b3920fb32b7c0803"
+    },
+    {
+      "path": "roles/contracts/FE-07.v1.json",
+      "bytes": 2088,
+      "sha256": "97edc9066b000a27385a0c8a171c30b5b771fc0c68ba1e6ba18d20f58b0cb653"
+    },
+    {
+      "path": "roles/contracts/FE-QA.v1.json",
+      "bytes": 2018,
+      "sha256": "425f5cfa4eb4b118e62db43042323a6ce9b05bfa134414b17f12cbd5be0d80e6"
+    },
+    {
+      "path": "roles/contracts/INF-01.v1.json",
+      "bytes": 2093,
+      "sha256": "ac8e375ddeaf50957c1acf66be40ea726a75754b9caae41ca2ba409de8f2377e"
+    },
+    {
+      "path": "roles/contracts/INF-02.v1.json",
+      "bytes": 2114,
+      "sha256": "70d0b0cb8929bdf8fd03d63ed9012f1fb47f91e0de59d0d2c04967c94de1bd5d"
+    },
+    {
+      "path": "roles/contracts/INF-03.v1.json",
+      "bytes": 2047,
+      "sha256": "c80ecf27846504be55e560ddc96acb9a45db91c9b074aab0d7d70208f2e8b072"
+    },
+    {
+      "path": "roles/contracts/INF-04.v1.json",
+      "bytes": 2114,
+      "sha256": "0a733847f35e8bf77d748f54a4b04c66173d8f9e97aa697dc02ea1b3119fe3fd"
+    },
+    {
+      "path": "roles/contracts/INF-05.v1.json",
+      "bytes": 2089,
+      "sha256": "d50ed10a73e3f0cd9778943d59a55c700c259a6228dabc1e17f1c4476157b554"
+    },
+    {
+      "path": "roles/contracts/INF-06.v1.json",
+      "bytes": 2103,
+      "sha256": "2ac17c6492e89f5c6dd8025451f2b67c130fb81f18d7e03ecd624b336a04a6c4"
+    },
+    {
+      "path": "roles/contracts/INF-QA.v1.json",
+      "bytes": 2054,
+      "sha256": "590c83d58c583ef0b79f35a5a50f86ae6a0b5b48b5a0aeb8d27cec132764a469"
+    },
+    {
+      "path": "roles/contracts/PMO-01.v1.json",
+      "bytes": 2124,
+      "sha256": "617fd74a4216030fe37502f2e995d62a1a4c15ad00deae5250124f9e93e21ebe"
+    },
+    {
+      "path": "roles/contracts/PMO-02.v1.json",
+      "bytes": 2124,
+      "sha256": "f5f3eae96e4834faaef3d50faa5e4dfcf82afadf408d53fa5adbc1f598c9bb94"
+    },
+    {
+      "path": "roles/contracts/PMO-03.v1.json",
+      "bytes": 2334,
+      "sha256": "d98b96ec4a67723265033a84989483c2cf9b3203dfe119de2e29eadfcacd5e92"
+    },
+    {
+      "path": "roles/contracts/PMO-04.v1.json",
+      "bytes": 2200,
+      "sha256": "826f4398e55b329552d5a2c71bceb95d917e4fa5d0cc3c20b0f27ad9c5b9180e"
+    },
+    {
+      "path": "roles/contracts/PMO-05.v1.json",
+      "bytes": 2123,
+      "sha256": "ae9a28d2f529585d2864a702ababc0fe7d356ea8e16eed354e5873c5904c5bcd"
+    },
+    {
+      "path": "roles/contracts/PMO-QA.v1.json",
+      "bytes": 2086,
+      "sha256": "78f4adec9f21c8fc73186c850620375ea84c2e89848af3d096d8b0649721a4ec"
+    },
+    {
+      "path": "roles/contracts/PROD-01.v1.json",
+      "bytes": 2104,
+      "sha256": "4f5f8bf0767ca1682e3147ba813d7123540047df8a7ac6ef72af11e0c7347823"
+    },
+    {
+      "path": "roles/contracts/PROD-02.v1.json",
+      "bytes": 2130,
+      "sha256": "f7e5e26f5478681fa52053f2f01d6306d31a439b33b0be955dfb23d8f61d564c"
+    },
+    {
+      "path": "roles/contracts/PROD-03.v1.json",
+      "bytes": 2128,
+      "sha256": "4d87fd1566db79373af075e7fcf182095dde0b864f70cdadd41a08a30565871e"
+    },
+    {
+      "path": "roles/contracts/PROD-04.v1.json",
+      "bytes": 2024,
+      "sha256": "79d38ef8fb32f7bfb7324810e14ee3ff69d94c29e597863c4f4bc503adc00c5a"
+    },
+    {
+      "path": "roles/contracts/PROD-05.v1.json",
+      "bytes": 2204,
+      "sha256": "93c0238d88bd945631a1c90fbf0bdf8344c02da4c76955bb5438d3f708ae1049"
+    },
+    {
+      "path": "roles/contracts/PROD-06.v1.json",
+      "bytes": 2149,
+      "sha256": "c84b9cda95f04036608c4f2bad56717be8d94eae2489feb033cb5d89668a93a4"
+    },
+    {
+      "path": "roles/contracts/PROD-QA.v1.json",
+      "bytes": 2057,
+      "sha256": "5fbeed0ef0ec1cd839e15332f79fe2abd2e314ffe4737c6649396043b962075a"
+    },
+    {
+      "path": "roles/contracts/QA-01.v1.json",
+      "bytes": 2064,
+      "sha256": "3a6aaf921e9b3160578be92f76c93b5525a30d70c9dc98a8f4f4d068a28fb4f9"
+    },
+    {
+      "path": "roles/contracts/QA-02.v1.json",
+      "bytes": 2071,
+      "sha256": "bf8a9566ab7def11ce8e1e2663f5bcbfa48e245aa5be7b80cd905623f304f91c"
+    },
+    {
+      "path": "roles/contracts/QA-03.v1.json",
+      "bytes": 2048,
+      "sha256": "fdcff0700c838444045bd5f195aa3c51dd74906ba3f10c2899655721bbc956d0"
+    },
+    {
+      "path": "roles/contracts/QA-04.v1.json",
+      "bytes": 2031,
+      "sha256": "4673a54fcacae430ac0c20cc1d486869af0f3c696742f1c666c52787fc24061b"
+    },
+    {
+      "path": "roles/contracts/QA-05.v1.json",
+      "bytes": 2057,
+      "sha256": "cde266d4a4e1b19bfa88d72d58b796a4ffabe4c9d55b21f9bd094b87650174eb"
+    },
+    {
+      "path": "roles/contracts/QA-06.v1.json",
+      "bytes": 2083,
+      "sha256": "7d7c5428075aecfa167106bf4becc41fbf42e4bfd7d6215e5630f9dfddf9ab18"
+    },
+    {
+      "path": "roles/contracts/SEC-01.v1.json",
+      "bytes": 2063,
+      "sha256": "c92dc24e5163cf7f5dfb4ef8e1ffe3d05e3a721b91aff7994a178b615b0c6c08"
+    },
+    {
+      "path": "roles/contracts/SEC-02.v1.json",
+      "bytes": 2006,
+      "sha256": "1af3f3dcd5f9d63e4b4ec08cf9069554fcc06d2b0acb9df89197c8f7535909c5"
+    },
+    {
+      "path": "roles/contracts/SEC-03.v1.json",
+      "bytes": 2051,
+      "sha256": "cbb5a19530712d8c20511560ea90020174c5976d55a72c646735631fb215287e"
+    },
+    {
+      "path": "roles/contracts/SEC-04.v1.json",
+      "bytes": 2041,
+      "sha256": "8c6a0fd2c01446f8f6e1ecf59071da637887c19e9dbacc85431bfdcebb7ea5f5"
+    },
+    {
+      "path": "roles/contracts/SEC-05.v1.json",
+      "bytes": 2124,
+      "sha256": "82a65070953797104b463befbdc9542abec9b1ceb5d1549c1b3d86906443fc35"
+    },
+    {
+      "path": "roles/contracts/SEC-06.v1.json",
+      "bytes": 2170,
+      "sha256": "0a69fb8a1ca66c1b89d01db60d73647ee39975f42ee52b4cc5eb4b5b74946532"
+    },
+    {
+      "path": "roles/contracts/SEC-07.v1.json",
+      "bytes": 2069,
+      "sha256": "5ef6dc8151d6cef4fc649469d46bdb873c8eebc31934fbca44264ff25ec92f4b"
+    },
+    {
+      "path": "roles/contracts/SEC-QA.v1.json",
+      "bytes": 2048,
+      "sha256": "a8e40970e4a06200c9ee14eb1712deab952005fce8ea0ee615c5a904b1fed386"
+    },
+    {
+      "path": "roles/contracts/UR-01.v1.json",
+      "bytes": 2138,
+      "sha256": "010a1f1bd14bcde07c5c9994cdc0aba5fbb99842f2a4f5d80385376e3bc33596"
+    },
+    {
+      "path": "roles/contracts/UR-02.v1.json",
+      "bytes": 2151,
+      "sha256": "8ec444c5ddb0964c2b6a6b5327f23e17cef521adab1851739493612ec9926d91"
+    },
+    {
+      "path": "roles/contracts/UR-03.v1.json",
+      "bytes": 2169,
+      "sha256": "b71e55a44f983dcfb1905525f23dfe68ebf72348aecd0f919adb97b12e5557b5"
+    },
+    {
+      "path": "roles/contracts/UR-04.v1.json",
+      "bytes": 2166,
+      "sha256": "92d0b6957705a889e796e0f5578034d30a597e5783f400b6ccd0ce033bfc1b37"
+    },
+    {
+      "path": "roles/contracts/UR-05.v1.json",
+      "bytes": 2085,
+      "sha256": "bf7176cc89d9eaaeb9f968ecccf9e19e8c7e0e5ccf5de8b0282ead7074cf3005"
+    },
+    {
+      "path": "roles/contracts/UR-06.v1.json",
+      "bytes": 2186,
+      "sha256": "1d57fd3e0d2b1208d4aacd220436bc3f51d0030ff00ef332a9e9234e27e52302"
+    },
+    {
+      "path": "roles/contracts/UR-07.v1.json",
+      "bytes": 2171,
+      "sha256": "10f32c45aacc817a91e795fc06a6bdc9e44d9525feda7f0e7cb9ce8ee70acedc"
+    },
+    {
+      "path": "roles/contracts/UR-QA.v1.json",
+      "bytes": 2183,
+      "sha256": "2fe495df2e776257ff3ddec7bc1788ff0889e1a918a79fa563605531705ddb19"
+    },
+    {
+      "path": "roles/role_registry.json",
+      "bytes": 197958,
+      "sha256": "3c5da0f3c5288d8044c98bb93458986de4803a1980c4d25d1412884fa9d9206a"
+    },
+    {
+      "path": "roles/workflow-factory.ps1",
+      "bytes": 1783,
+      "sha256": "8ce02468e377ac10ce17c261cb262bbfed533ec581802eb6f5d71837b3f5d9a3"
+    },
+    {
+      "path": "Wejdan_Life_OS_Codex_Autonomous_n8n_Execution_Plan_v1.0.md",
+      "bytes": 50601,
+      "sha256": "2d49928fe96c70da6b64f7f08714b4568328cb5ef542d18285af6ad7ec8c28ef"
+    },
+    {
+      "path": "Wejdan_Life_OS_Shared_Master_Plan_ChatGPT_Claude_v0.4.md",
+      "bytes": 245027,
+      "sha256": "5e78aa5104086e37f5739278f04203463a6a409b123e2e0e104942a79e73b2bd"
+    },
+    {
+      "path": "workflows/n8n/backups/agent-ai-observability-cost-engineer-export-20261016.json",
+      "bytes": 3407,
+      "sha256": "33b4f31ed0a336c726002bf0611a258e8f6a03efc2da8e9596e9ac38acc8a60a"
+    },
+    {
+      "path": "workflows/n8n/backups/agent-ai-observability-cost-engineer-export.json",
+      "bytes": 3407,
+      "sha256": "33b4f31ed0a336c726002bf0611a258e8f6a03efc2da8e9596e9ac38acc8a60a"
+    },
+    {
+      "path": "workflows/n8n/backups/agent-program-director-export-20261016.json",
+      "bytes": 3395,
+      "sha256": "df27260fe935dd2200e389084579112d8e64c700befc0fe96231ad3b51e68091"
+    },
+    {
+      "path": "workflows/n8n/backups/agent-resource-cost-controller-export-20261016.json",
+      "bytes": 3642,
+      "sha256": "7377ffee72aa4d8aacc9b74234cf03f059ac984122e4535fd7fe01e0e6b2a043"
+    },
+    {
+      "path": "workflows/n8n/backups/existing-financial-runtime-pilot-original-export.json",
+      "bytes": 14097,
+      "sha256": "bdb3409e95ec24e8ec21b329177b2dc73d23fca2e2d164cb1dcf9c90c953182c"
+    },
+    {
+      "path": "workflows/n8n/backups/finance-v2-mock-final-20261016.json",
+      "bytes": 5061,
+      "sha256": "61282c5e449d3a7059ad88290208bfa899befa596360b4aeb739552eb472e5d5"
+    },
+    {
+      "path": "workflows/n8n/backups/observability-export-notes.md",
+      "bytes": 859,
+      "sha256": "6c933fc2c34a664f778924e28b522ef5fb3f4ec43f9367722227c50d186ed3e2"
+    },
+    {
+      "path": "workflows/n8n/backups/observability-v2-mock-incomplete-20261016.json",
+      "bytes": 3876,
+      "sha256": "1e91acfd59e8ffa39944caca04ace5b71f1c83b008c232f5c3739302d87a7a5b"
+    },
+    {
+      "path": "workflows/n8n/backups/program-director-v2-mock-20261016.json",
+      "bytes": 4107,
+      "sha256": "d05d562a6571f9979e8d5302aa06fbb11a8bb80bc6d05c8996479ba660c7ef09"
+    },
+    {
+      "path": "workflows/n8n/backups/program-director-v2-mock-final-20261016.json",
+      "bytes": 4139,
+      "sha256": "5abe2edca351d1fa5c3fce959b79d7d1584ec97d84631099e43c3a64eb976219"
+    },
+    {
+      "path": "workflows/n8n/docs/subworkflow-integration.md",
+      "bytes": 2669,
+      "sha256": "19ad9bb165af8cb252046a95017c24a45e0162f0c3de6596c7919ded72331dd2"
+    },
+    {
+      "path": "workflows/n8n/fixtures/mock_cases.v1.json",
+      "bytes": 2466,
+      "sha256": "76a84c09bb60c48ce4168db839ac33436f1cc066f8884806e8c4b9ccf72a9746"
+    },
+    {
+      "path": "workflows/n8n/fixtures/task.v1.valid.json",
+      "bytes": 1480,
+      "sha256": "d286cfd2c99ec3b2647cad498acbd457ca821e86335091455db09c3c24b9ddf5"
+    },
+    {
+      "path": "workflows/n8n/README.md",
+      "bytes": 3238,
+      "sha256": "e053f961e70a32a0e68c7b2b1dcaf4728a30570efce142c0a4b22a0400c4ac8c"
+    },
+    {
+      "path": "workflows/n8n/schemas/agent_profile.v1.schema.json",
+      "bytes": 1665,
+      "sha256": "c4628b458b154f1ba2d5c4cd11a305a90934f3eaeb785278b6ed5bd5eaf3f040"
+    },
+    {
+      "path": "workflows/n8n/schemas/approval_request.v1.schema.json",
+      "bytes": 1503,
+      "sha256": "41a66d1e59c3fb225a6162344d197fd16715095a2982f43c981da984a92d683a"
+    },
+    {
+      "path": "workflows/n8n/schemas/budget_decision.v1.schema.json",
+      "bytes": 1180,
+      "sha256": "e14cda626c0630d904a3e024d252e3cab20c735366828bfdc5181478dc76f3bc"
+    },
+    {
+      "path": "workflows/n8n/schemas/execution_result.v1.schema.json",
+      "bytes": 2165,
+      "sha256": "db7e5a875f176210406c557a55f38f6459879269c17201cb589316dd4a22008d"
+    },
+    {
+      "path": "workflows/n8n/schemas/monitor_event.v1.schema.json",
+      "bytes": 1555,
+      "sha256": "89e067f70bccc35998066b8b1ca6678a0438f6015d3e669d7b0de11222b0e21f"
+    },
+    {
+      "path": "workflows/n8n/schemas/task.v1.schema.json",
+      "bytes": 3798,
+      "sha256": "1f171267cc69f535128e003bdc0dc404fff5b7069f06e80bbd00ab4ca3fa28a7"
+    },
+    {
+      "path": "workflows/n8n/source/agent-ai-observability-cost-engineer.json",
+      "bytes": 3407,
+      "sha256": "33b4f31ed0a336c726002bf0611a258e8f6a03efc2da8e9596e9ac38acc8a60a"
+    },
+    {
+      "path": "workflows/n8n/source/agent-program-director-live-export.json",
+      "bytes": 3395,
+      "sha256": "df27260fe935dd2200e389084579112d8e64c700befc0fe96231ad3b51e68091"
+    },
+    {
+      "path": "workflows/n8n/source/agent-program-director.json",
+      "bytes": 5062,
+      "sha256": "06f91f3456828b612fb031073ea1572e5296dc0ed65957543380e326831f5c1a"
+    },
+    {
+      "path": "workflows/n8n/source/agent-resource-cost-controller-live-export.json",
+      "bytes": 3642,
+      "sha256": "7377ffee72aa4d8aacc9b74234cf03f059ac984122e4535fd7fe01e0e6b2a043"
+    },
+    {
+      "path": "workflows/n8n/source/agent-resource-cost-controller.json",
+      "bytes": 4207,
+      "sha256": "3ae931825a0dfc3397213844c79e8b9135ab21c8991c1452c1a0dab493b2ea00"
+    },
+    {
+      "path": "workflows/n8n/source/generated-role-stubs/role-profiles.v1.json",
+      "bytes": 44412,
+      "sha256": "933a516c4eefb4f26566882a046be6bc5eacee78dc1e599ad750f768d6797a03"
+    },
+    {
+      "path": "workflows/n8n/source/v2/agent-ai-observability-cost-engineer-v2.json",
+      "bytes": 2629,
+      "sha256": "7ec86ae237702174071e5f65ac9c0fcf83e03e4a23577d3397c43aec45471bc1"
+    },
+    {
+      "path": "workflows/n8n/source/v2/agent-mock-orchestrator-v2.json",
+      "bytes": 3838,
+      "sha256": "bd4a2f5ba95fb00f926d82c01842621bd260b8e6f302b787332d7c8e02876683"
+    },
+    {
+      "path": "workflows/n8n/source/v2/agent-program-director-v2.json",
+      "bytes": 2741,
+      "sha256": "1ae41dda1535123dc3d26ae2d790d89e72bc3e2dcd7984703d561f0e0f5d2762"
+    },
+    {
+      "path": "workflows/n8n/source/v2/agent-resource-cost-controller-v2.json",
+      "bytes": 2725,
+      "sha256": "113be5c4ccce26f86b9f7ffd510cb46afa646b1b88563cbd37456b5ef5e2cb5d"
+    },
+    {
+      "path": "workflows/n8n/tests/mock-approval.ps1",
+      "bytes": 2409,
+      "sha256": "5dc4131892605821cf805de5dd29b4ee3307bb8de475af61772f66b174466342"
+    },
+    {
+      "path": "workflows/n8n/tests/mock-ledger-v2.ps1",
+      "bytes": 3305,
+      "sha256": "7c761ccb3b6ea86d916580f0d3c231b363c912df78b8eb97cae692d0085b2107"
+    },
+    {
+      "path": "workflows/n8n/tests/mock-ledger.ps1",
+      "bytes": 1659,
+      "sha256": "81c329de0e5a2452ce92270323ccc050ad34e213c6e0135c053ac09cef7eba2b"
+    },
+    {
+      "path": "workflows/n8n/tests/run_acceptance.ps1",
+      "bytes": 5889,
+      "sha256": "4aaa819bfc25dfda50f7887d55047a069c4d447762f5498467df81fce962a55d"
+    },
+    {
+      "path": "workflows/n8n/tests/update-role-evidence.ps1",
+      "bytes": 1271,
+      "sha256": "a6d0cdd6f94fd49b82378b9ee02c14db8bab9c54d6bd11cb3cb384260fd164e3"
+    }
+  ]
+}

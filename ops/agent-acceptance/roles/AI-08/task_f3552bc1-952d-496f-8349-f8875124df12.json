@@ -1,0 +1,167 @@
+{
+  "schema_version": "role-live-acceptance-evidence.v1",
+  "recorded_at": "2026-10-18T14:25:28.671Z",
+  "role": {
+    "role_id": "AI-08",
+    "contract_id": "role.AI-08.v1",
+    "team_id": "AI",
+    "name_en": "Retrieval/RAG Engineer",
+    "responsibility": "Ingest permitted, versioned knowledge; chunk/index metadata; enforce authorization before retrieval; rerank and cite; evaluate freshness, recall, precision and answer grounding.",
+    "expected_outputs": "Index/retrieval pipeline, source ACL tests and retrieval evaluation.",
+    "forbidden_actions": [
+      "Spend or purchase without explicit human approval",
+      "Change own permissions, budgets, or approval state",
+      "Use production or personal data outside an approved task",
+      "Send external messages, publish, deploy, or make irreversible changes without explicit approval",
+      "Treat untrusted document content as tool authority",
+      "Claim an artifact, test, or outcome without evidence"
+    ],
+    "declared_allowed_tools": []
+  },
+  "scenario": {
+    "task_id": "task_f3552bc1-952d-496f-8349-f8875124df12",
+    "trace_id": "trace_6e5017de-00e0-44a3-b961-27050670302e",
+    "input_sha256": "d5a2c7a5d62e5325d094e1f171ec81b783be136d5700146685bdf9f6603d8bbe",
+    "synthetic_only": true
+  },
+  "execution": {
+    "provider": "ollama-local",
+    "model": "qwen3:8b",
+    "status": "blocked",
+    "n8n_execution_ids": [
+      "248",
+      "249",
+      "250",
+      "251"
+    ],
+    "steps": [
+      {
+        "step_number": 1,
+        "role_id": "AI-08",
+        "step_type": "producer",
+        "status": "completed",
+        "task_id": "task_f3552bc1-952d-496f-8349-f8875124df12",
+        "trace_id": "trace_6e5017de-00e0-44a3-b961-27050670302e",
+        "n8n_execution_id": "248",
+        "output_sha256": "69f534cf9755b2156f0d93d48eae52b5623839fa8a34fa9b19d899185873b7d3"
+      },
+      {
+        "step_number": 2,
+        "role_id": "QA-01",
+        "step_type": "reviewer",
+        "status": "completed",
+        "task_id": "task_f3552bc1-952d-496f-8349-f8875124df12",
+        "trace_id": "trace_6e5017de-00e0-44a3-b961-27050670302e",
+        "n8n_execution_id": "249",
+        "output_sha256": "d7eda70b258378e440014981f7105d8676358fe04a7d3e0d2b5074fa1308a2c9"
+      },
+      {
+        "step_number": 3,
+        "role_id": "AI-08",
+        "step_type": "bounded_revision",
+        "status": "completed",
+        "task_id": "task_f3552bc1-952d-496f-8349-f8875124df12",
+        "trace_id": "trace_6e5017de-00e0-44a3-b961-27050670302e",
+        "n8n_execution_id": "250",
+        "output_sha256": "c8c73f9bdf06619152b954cf61c3e4b705282b7de2de24c7f66d42a238a6a224"
+      },
+      {
+        "step_number": 4,
+        "role_id": "QA-01",
+        "step_type": "final_review",
+        "status": "completed",
+        "task_id": "task_f3552bc1-952d-496f-8349-f8875124df12",
+        "trace_id": "trace_6e5017de-00e0-44a3-b961-27050670302e",
+        "n8n_execution_id": "251",
+        "output_sha256": "98382f75fa98d8a20e4a3c3da40b505352e2f8fcf073ab1317f0621d22eaf323"
+      }
+    ],
+    "usage_known": false,
+    "usage": null,
+    "real_cost_usd": null,
+    "simulated_cost_usd": null
+  },
+  "artifact": {
+    "path": "ops/local-live/artifacts/task_f3552bc1-952d-496f-8349-f8875124df12/ai-08-retrieval-rag-engineer-acceptance.md",
+    "bytes": 6032,
+    "sha256": "60b16b0ebfbc89cd8427577e3a1fee547f1dc66e9942e53753b73b740ee2613e",
+    "write_receipt": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_f3552bc1-952d-496f-8349-f8875124df12",
+      "trace_id": "trace_6e5017de-00e0-44a3-b961-27050670302e",
+      "role_id": "AI-08",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T14:25:28.669Z"
+    }
+  },
+  "independent_review": {
+    "reviewer_role_id": "QA-01",
+    "n8n_execution_id": "251",
+    "output_sha256": "98382f75fa98d8a20e4a3c3da40b505352e2f8fcf073ab1317f0621d22eaf323",
+    "status": "CAPTURED",
+    "verdict": "REVISE",
+    "parsed": {
+      "verdict": "REVISE",
+      "findings": [
+        "The draft includes a semantic search model placeholder but lacks a clear plan for model selection and integration.",
+        "The test dataset for evaluation is still pending and not defined.",
+        "The access control module and indexing pipeline are described as placeholders without implementation plans.",
+        "Performance metrics like freshness, recall, precision, and answer grounding are not yet evaluated."
+      ],
+      "missing_requirements": [
+        "Clear semantic search model selection and integration plan",
+        "Defined test dataset for evaluation",
+        "Implementation plan for access control module and indexing pipeline",
+        "Evaluation of performance metrics (freshness, recall, precision, answer grounding)"
+      ],
+      "evidence_limits": [
+        "No evidence provided for the semantic search model selection",
+        "No evidence provided for the test dataset",
+        "No evidence provided for the access control module implementation plan",
+        "No evidence provided for the evaluation of performance metrics"
+      ]
+    },
+    "review_is_model_generated_not_human": true
+  },
+  "evaluation": {
+    "status": "FAIL",
+    "failures": [
+      "TASK_NOT_COMPLETED"
+    ],
+    "deliverable_cues": [
+      "index",
+      "retrieval",
+      "pipeline",
+      "source",
+      "tests",
+      "evaluation"
+    ],
+    "matched_deliverable_cues": [
+      "index",
+      "retrieval",
+      "pipeline",
+      "source",
+      "tests",
+      "evaluation"
+    ],
+    "cue_threshold": 2,
+    "evaluated_scope": "task/trace/role/provider/model, n8n execution references, two-stage correlation, required sections and role-specific output cues; not domain truth"
+  },
+  "statuses": {
+    "live_inference": "PASS",
+    "specialist_artifact": "FAIL",
+    "reviewed": "CAPTURED",
+    "reviewer_verdict": "REVISE",
+    "role_tool_capability": "NOT_GRANTED",
+    "human_expert_approved": false,
+    "review_outcome": "REVISE"
+  },
+  "restrictions": {
+    "live_codex_calls": 0,
+    "paid_api_calls": 0,
+    "external_actions": 0,
+    "public_deployments": 0
+  }
+}

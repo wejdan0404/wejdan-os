@@ -1,0 +1,39 @@
+{
+  "schema_version": "wejdan-android-scaffold-smoke.v1",
+  "recorded_at": "2026-10-19",
+  "status": "LOCAL_SYNTHETIC_SMOKE_ONLY",
+  "product_direction": "DEC-018 requires iOS, Android and web, superseding DEC-016 platform deferral. This artifact validates the Flutter Android reference scaffold only.",
+  "environment": {
+    "flutter": "3.47.5",
+    "dart": "3.13.4",
+    "jdk": "21.0.12.101-hotspot",
+    "android_sdk": "36.1",
+    "emulator": "emulator-5554 / Android API 36",
+    "host": "Windows 11",
+    "package_id": "com.wejdan.wejdan_life_os"
+  },
+  "build": {
+    "command": "flutter build apk --debug --no-pub",
+    "result": "PASS",
+    "artifact": "build/app/outputs/flutter-apk/app-debug.apk",
+    "bytes": 177293160,
+    "sha256": "C4FECEE730FC2294FD5902E8997BE83326602330F87A13184F8669AC7E457071",
+    "release_signing": "debug key only"
+  },
+  "integration": {
+    "command": "flutter test integration_test/app_smoke_test.dart -d emulator-5554 --no-pub",
+    "result": "PASS",
+    "scenario": "app boots → skip onboarding (sample) → Today renders",
+    "cases_passed": 1,
+    "data": "synthetic sample profile",
+    "biometric_device_acceptance": "NOT_RUN",
+    "notification_os_delivery": "NOT_RUN",
+    "store_acceptance": "NOT_RUN"
+  },
+  "limits": [
+    "Not a release build or store submission.",
+    "No production account, sync, auth provider, server, budget, or user data.",
+    "One synthetic emulator app-smoke does not establish full Android platform acceptance.",
+    "No physical Android device or biometric hardware verified."
+  ]
+}

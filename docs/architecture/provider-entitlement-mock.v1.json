@@ -1,0 +1,10 @@
+{
+  "adapter_contract": "provider-entitlement.v1",
+  "mode": "MOCK_ONLY",
+  "providers": [
+    {"provider":"claude_subscription","product_access":"UNKNOWN_UNVERIFIED","api_entitlement":"NOT_INCLUDED_BY_ASSUMPTION","credential_present":false,"enabled":false},
+    {"provider":"claude_api_console","product_access":"NOT_VERIFIED","api_entitlement":"UNKNOWN_UNVERIFIED","credential_present":false,"enabled":false},
+    {"provider":"openai_api","product_access":"NOT_VERIFIED","api_entitlement":"UNKNOWN_UNVERIFIED","credential_present":false,"enabled":false}
+  ],
+  "rules": ["Never infer API access from a chat subscription.","Unknown entitlement blocks provider execution.","No credentials or live SDK calls are configured.","This fixture authorizes zero spend."]
+}

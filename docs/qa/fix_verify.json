@@ -1,0 +1,79 @@
+{
+ "idb_throws": {
+  "nodes": 17,
+  "banner": true,
+  "first": [
+   "الحفظ غير متاح في هذا المتصفح — بياناتك مؤقتة1 من 61 من 6يوم",
+   "الحفظ غير متاح في هذا المتصفح — بياناتك مؤقتة1 من 61 من 6يوم",
+   "الحفظ غير متاح في هذا المتصفح — بياناتك مؤقتة"
+  ],
+  "pageerrors": []
+ },
+ "idb_onerror": {
+  "nodes": 17,
+  "banner": true,
+  "first": [
+   "الحفظ غير متاح في هذا المتصفح — بياناتك مؤقتة1 من 61 من 6يوم",
+   "الحفظ غير متاح في هذا المتصفح — بياناتك مؤقتة1 من 61 من 6يوم",
+   "الحفظ غير متاح في هذا المتصفح — بياناتك مؤقتة"
+  ],
+  "pageerrors": []
+ },
+ "idb_hangs": {
+  "nodes": 17,
+  "banner": true,
+  "first": [
+   "الحفظ غير متاح في هذا المتصفح — بياناتك مؤقتة1 من 61 من 6يوم",
+   "الحفظ غير متاح في هذا المتصفح — بياناتك مؤقتة1 من 61 من 6يوم",
+   "الحفظ غير متاح في هذا المتصفح — بياناتك مؤقتة"
+  ],
+  "pageerrors": []
+ },
+ "iframe_scripts_only_plain": {
+  "nodes": 0,
+  "banner": false,
+  "first": [],
+  "sw_errors": [],
+  "errors": [
+   "error: Access to fetch at 'http://localhost:8790/canvaskit/chromium/canvaskit.wasm' from origin 'null' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+   "error: Failed to load resource: net::ERR_FAILED",
+   "pageerror: Failed to fetch",
+   "error: Access to script at 'http://localhost:8790/canvaskit/chromium/canvaskit.js' from origin 'null' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+  ]
+ },
+ "iframe_scripts_only_cors": {
+  "nodes": 17,
+  "banner": true,
+  "first": [
+   "الحفظ غير متاح في هذا المتصفح — بياناتك مؤقتة1 من 61 من 6يوم",
+   "الحفظ غير متاح في هذا المتصفح — بياناتك مؤقتة1 من 61 من 6يوم",
+   "الحفظ غير متاح في هذا المتصفح — بياناتك مؤقتة"
+  ],
+  "sw_errors": [],
+  "errors": []
+ },
+ "iframe_scripts_sameorigin": {
+  "nodes": 15,
+  "banner": false,
+  "first": [
+   "1 من 61 من 6يومك يكون جاهز\nقبل ما تصحينأرتّب لك اليوم: وش تس",
+   "1 من 61 من 6يومك يكون جاهز\nقبل ما تصحينأرتّب لك اليوم: وش تس",
+   "1 من 61 من 6يومك يكون جاهز\nقبل ما تصحينأرتّب لك اليوم: وش تس"
+  ],
+  "sw_errors": [],
+  "errors": []
+ },
+ "network": {
+  "title": "Wejdan Life OS — وجدان",
+  "text_fields": 1,
+  "total_requests": 27,
+  "external": [],
+  "same_origin_font_fallback": [
+   "http://localhost:8790/no-fallback-fonts/notocoloremoji/v32/Yq6P-KqIXTD0t4D9z1ESnKM3-HpFabsE4tq3luCC7p-aXxcn.9.woff2",
+   "http://localhost:8790/no-fallback-fonts/notosanshk/v32/nKKF-GM_FYFRJvXzVXaAPe97P1KHynJFP716qHB--oD7kYrUzT7-NvA3pTohjc3XVtNXX8A7gG1LO2KAPAw.119.woff2",
+   "http://localhost:8790/no-fallback-fonts/notosansjp/v53/-F6jfjtqLzI2JPCgQBnw7HFyzSD-AsregP8VFBEj756wwr4v0qHnANADNsISRDl2PRkiiWsg.116.woff2",
+   "http://localhost:8790/no-fallback-fonts/notosansjp/v53/-F6jfjtqLzI2JPCgQBnw7HFyzSD-AsregP8VFBEj756wwr4v0qHnANADNsISRDl2PRkiiWsg.117.woff2",
+   "http://localhost:8790/no-fallback-fonts/notosanskr/v36/PbyxFmXiEBPT4ITbgNA5Cgms3VYcOA-vvnIzzuoyeLGC5nwuDo-KBTUm6CryotyJROlrnQ.112.woff2"
+  ]
+ }
+}

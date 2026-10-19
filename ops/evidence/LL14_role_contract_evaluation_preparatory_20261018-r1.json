@@ -1,0 +1,1409 @@
+{
+  "schema_version": "ll14-role-contract-evaluation-preparatory.v1",
+  "verified_at": "2026-10-18T09:09:25.218Z",
+  "status": "PREPARED_PENDING_PREDECESSORS",
+  "expected_roles": 85,
+  "role_routing_contract_passed": 85,
+  "role_routing_contract_failed": 0,
+  "negative_cases_expected": 10,
+  "negative_cases_failed_as_expected": 10,
+  "domain_quality_certification": 0,
+  "human_expert_reviews": 0,
+  "entries": [
+    {
+      "case_id": "route-D-00",
+      "role_id": "D-00",
+      "team_id": "D",
+      "source_contract_id": "role.D-00.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-PMO-01",
+      "role_id": "PMO-01",
+      "team_id": "PMO",
+      "source_contract_id": "role.PMO-01.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-PMO-02",
+      "role_id": "PMO-02",
+      "team_id": "PMO",
+      "source_contract_id": "role.PMO-02.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-PMO-03",
+      "role_id": "PMO-03",
+      "team_id": "PMO",
+      "source_contract_id": "role.PMO-03.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-PMO-04",
+      "role_id": "PMO-04",
+      "team_id": "PMO",
+      "source_contract_id": "role.PMO-04.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-PMO-05",
+      "role_id": "PMO-05",
+      "team_id": "PMO",
+      "source_contract_id": "role.PMO-05.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-PMO-QA",
+      "role_id": "PMO-QA",
+      "team_id": "PMO",
+      "source_contract_id": "role.PMO-QA.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-PROD-01",
+      "role_id": "PROD-01",
+      "team_id": "PROD",
+      "source_contract_id": "role.PROD-01.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-PROD-02",
+      "role_id": "PROD-02",
+      "team_id": "PROD",
+      "source_contract_id": "role.PROD-02.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-PROD-03",
+      "role_id": "PROD-03",
+      "team_id": "PROD",
+      "source_contract_id": "role.PROD-03.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-PROD-04",
+      "role_id": "PROD-04",
+      "team_id": "PROD",
+      "source_contract_id": "role.PROD-04.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-PROD-05",
+      "role_id": "PROD-05",
+      "team_id": "PROD",
+      "source_contract_id": "role.PROD-05.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-PROD-06",
+      "role_id": "PROD-06",
+      "team_id": "PROD",
+      "source_contract_id": "role.PROD-06.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-PROD-QA",
+      "role_id": "PROD-QA",
+      "team_id": "PROD",
+      "source_contract_id": "role.PROD-QA.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-UR-01",
+      "role_id": "UR-01",
+      "team_id": "UR",
+      "source_contract_id": "role.UR-01.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-UR-02",
+      "role_id": "UR-02",
+      "team_id": "UR",
+      "source_contract_id": "role.UR-02.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-UR-03",
+      "role_id": "UR-03",
+      "team_id": "UR",
+      "source_contract_id": "role.UR-03.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-UR-04",
+      "role_id": "UR-04",
+      "team_id": "UR",
+      "source_contract_id": "role.UR-04.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-UR-05",
+      "role_id": "UR-05",
+      "team_id": "UR",
+      "source_contract_id": "role.UR-05.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-UR-06",
+      "role_id": "UR-06",
+      "team_id": "UR",
+      "source_contract_id": "role.UR-06.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-UR-07",
+      "role_id": "UR-07",
+      "team_id": "UR",
+      "source_contract_id": "role.UR-07.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-UR-QA",
+      "role_id": "UR-QA",
+      "team_id": "UR",
+      "source_contract_id": "role.UR-QA.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-DES-01",
+      "role_id": "DES-01",
+      "team_id": "DES",
+      "source_contract_id": "role.DES-01.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-DES-02",
+      "role_id": "DES-02",
+      "team_id": "DES",
+      "source_contract_id": "role.DES-02.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-DES-03",
+      "role_id": "DES-03",
+      "team_id": "DES",
+      "source_contract_id": "role.DES-03.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-DES-04",
+      "role_id": "DES-04",
+      "team_id": "DES",
+      "source_contract_id": "role.DES-04.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-DES-05",
+      "role_id": "DES-05",
+      "team_id": "DES",
+      "source_contract_id": "role.DES-05.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-DES-06",
+      "role_id": "DES-06",
+      "team_id": "DES",
+      "source_contract_id": "role.DES-06.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-DES-07",
+      "role_id": "DES-07",
+      "team_id": "DES",
+      "source_contract_id": "role.DES-07.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-DES-08",
+      "role_id": "DES-08",
+      "team_id": "DES",
+      "source_contract_id": "role.DES-08.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-DES-09",
+      "role_id": "DES-09",
+      "team_id": "DES",
+      "source_contract_id": "role.DES-09.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-DES-QA",
+      "role_id": "DES-QA",
+      "team_id": "DES",
+      "source_contract_id": "role.DES-QA.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-AI-01",
+      "role_id": "AI-01",
+      "team_id": "AI",
+      "source_contract_id": "role.AI-01.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-AI-02",
+      "role_id": "AI-02",
+      "team_id": "AI",
+      "source_contract_id": "role.AI-02.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-AI-03",
+      "role_id": "AI-03",
+      "team_id": "AI",
+      "source_contract_id": "role.AI-03.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-AI-04",
+      "role_id": "AI-04",
+      "team_id": "AI",
+      "source_contract_id": "role.AI-04.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-AI-05",
+      "role_id": "AI-05",
+      "team_id": "AI",
+      "source_contract_id": "role.AI-05.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-AI-06",
+      "role_id": "AI-06",
+      "team_id": "AI",
+      "source_contract_id": "role.AI-06.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-AI-07",
+      "role_id": "AI-07",
+      "team_id": "AI",
+      "source_contract_id": "role.AI-07.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-AI-08",
+      "role_id": "AI-08",
+      "team_id": "AI",
+      "source_contract_id": "role.AI-08.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-AI-09",
+      "role_id": "AI-09",
+      "team_id": "AI",
+      "source_contract_id": "role.AI-09.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-AI-10",
+      "role_id": "AI-10",
+      "team_id": "AI",
+      "source_contract_id": "role.AI-10.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-AI-11",
+      "role_id": "AI-11",
+      "team_id": "AI",
+      "source_contract_id": "role.AI-11.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-AI-12",
+      "role_id": "AI-12",
+      "team_id": "AI",
+      "source_contract_id": "role.AI-12.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-AI-13",
+      "role_id": "AI-13",
+      "team_id": "AI",
+      "source_contract_id": "role.AI-13.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-AI-QA",
+      "role_id": "AI-QA",
+      "team_id": "AI",
+      "source_contract_id": "role.AI-QA.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-FE-01",
+      "role_id": "FE-01",
+      "team_id": "FE",
+      "source_contract_id": "role.FE-01.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-FE-02",
+      "role_id": "FE-02",
+      "team_id": "FE",
+      "source_contract_id": "role.FE-02.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-FE-03",
+      "role_id": "FE-03",
+      "team_id": "FE",
+      "source_contract_id": "role.FE-03.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-FE-04",
+      "role_id": "FE-04",
+      "team_id": "FE",
+      "source_contract_id": "role.FE-04.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-FE-05",
+      "role_id": "FE-05",
+      "team_id": "FE",
+      "source_contract_id": "role.FE-05.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-FE-06",
+      "role_id": "FE-06",
+      "team_id": "FE",
+      "source_contract_id": "role.FE-06.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-FE-07",
+      "role_id": "FE-07",
+      "team_id": "FE",
+      "source_contract_id": "role.FE-07.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-FE-QA",
+      "role_id": "FE-QA",
+      "team_id": "FE",
+      "source_contract_id": "role.FE-QA.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-BE-01",
+      "role_id": "BE-01",
+      "team_id": "BE",
+      "source_contract_id": "role.BE-01.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-BE-02",
+      "role_id": "BE-02",
+      "team_id": "BE",
+      "source_contract_id": "role.BE-02.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-BE-03",
+      "role_id": "BE-03",
+      "team_id": "BE",
+      "source_contract_id": "role.BE-03.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-BE-04",
+      "role_id": "BE-04",
+      "team_id": "BE",
+      "source_contract_id": "role.BE-04.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-BE-05",
+      "role_id": "BE-05",
+      "team_id": "BE",
+      "source_contract_id": "role.BE-05.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-BE-06",
+      "role_id": "BE-06",
+      "team_id": "BE",
+      "source_contract_id": "role.BE-06.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-BE-07",
+      "role_id": "BE-07",
+      "team_id": "BE",
+      "source_contract_id": "role.BE-07.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-BE-08",
+      "role_id": "BE-08",
+      "team_id": "BE",
+      "source_contract_id": "role.BE-08.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-BE-09",
+      "role_id": "BE-09",
+      "team_id": "BE",
+      "source_contract_id": "role.BE-09.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-BE-QA",
+      "role_id": "BE-QA",
+      "team_id": "BE",
+      "source_contract_id": "role.BE-QA.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-SEC-01",
+      "role_id": "SEC-01",
+      "team_id": "SEC",
+      "source_contract_id": "role.SEC-01.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-SEC-02",
+      "role_id": "SEC-02",
+      "team_id": "SEC",
+      "source_contract_id": "role.SEC-02.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-SEC-03",
+      "role_id": "SEC-03",
+      "team_id": "SEC",
+      "source_contract_id": "role.SEC-03.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-SEC-04",
+      "role_id": "SEC-04",
+      "team_id": "SEC",
+      "source_contract_id": "role.SEC-04.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-SEC-05",
+      "role_id": "SEC-05",
+      "team_id": "SEC",
+      "source_contract_id": "role.SEC-05.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-SEC-06",
+      "role_id": "SEC-06",
+      "team_id": "SEC",
+      "source_contract_id": "role.SEC-06.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-SEC-07",
+      "role_id": "SEC-07",
+      "team_id": "SEC",
+      "source_contract_id": "role.SEC-07.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-SEC-QA",
+      "role_id": "SEC-QA",
+      "team_id": "SEC",
+      "source_contract_id": "role.SEC-QA.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-INF-01",
+      "role_id": "INF-01",
+      "team_id": "INF",
+      "source_contract_id": "role.INF-01.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-INF-02",
+      "role_id": "INF-02",
+      "team_id": "INF",
+      "source_contract_id": "role.INF-02.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-INF-03",
+      "role_id": "INF-03",
+      "team_id": "INF",
+      "source_contract_id": "role.INF-03.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-INF-04",
+      "role_id": "INF-04",
+      "team_id": "INF",
+      "source_contract_id": "role.INF-04.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-INF-05",
+      "role_id": "INF-05",
+      "team_id": "INF",
+      "source_contract_id": "role.INF-05.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-INF-06",
+      "role_id": "INF-06",
+      "team_id": "INF",
+      "source_contract_id": "role.INF-06.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-INF-QA",
+      "role_id": "INF-QA",
+      "team_id": "INF",
+      "source_contract_id": "role.INF-QA.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-QA-01",
+      "role_id": "QA-01",
+      "team_id": "QA",
+      "source_contract_id": "role.QA-01.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-QA-02",
+      "role_id": "QA-02",
+      "team_id": "QA",
+      "source_contract_id": "role.QA-02.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-QA-03",
+      "role_id": "QA-03",
+      "team_id": "QA",
+      "source_contract_id": "role.QA-03.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-QA-04",
+      "role_id": "QA-04",
+      "team_id": "QA",
+      "source_contract_id": "role.QA-04.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-QA-05",
+      "role_id": "QA-05",
+      "team_id": "QA",
+      "source_contract_id": "role.QA-05.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    },
+    {
+      "case_id": "route-QA-06",
+      "role_id": "QA-06",
+      "team_id": "QA",
+      "source_contract_id": "role.QA-06.v1",
+      "risk_bucket": "sensitive-boundaries",
+      "checks_declared": [
+        "Output matches the task contract and is traceable to evidence",
+        "Permissions stay within the task packet",
+        "No unsupported claim of completion, cost, or human validation"
+      ],
+      "result": "PASS",
+      "violations": [],
+      "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+    }
+  ],
+  "negative_cases": [
+    {
+      "name": "task mismatch",
+      "expected_violation": "TASK_ID_MISMATCH",
+      "result": {
+        "result": "FAIL",
+        "violations": [
+          "TASK_ID_MISMATCH"
+        ],
+        "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+      }
+    },
+    {
+      "name": "trace mismatch",
+      "expected_violation": "TRACE_ID_MISMATCH",
+      "result": {
+        "result": "FAIL",
+        "violations": [
+          "TRACE_ID_MISMATCH"
+        ],
+        "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+      }
+    },
+    {
+      "name": "role mismatch",
+      "expected_violation": "ROLE_ID_MISMATCH",
+      "result": {
+        "result": "FAIL",
+        "violations": [
+          "ROLE_ID_MISMATCH"
+        ],
+        "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+      }
+    },
+    {
+      "name": "non-completed status",
+      "expected_violation": "STATUS_NOT_COMPLETED",
+      "result": {
+        "result": "FAIL",
+        "violations": [
+          "STATUS_NOT_COMPLETED"
+        ],
+        "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+      }
+    },
+    {
+      "name": "empty output",
+      "expected_violation": "OUTPUT_EMPTY",
+      "result": {
+        "result": "FAIL",
+        "violations": [
+          "OUTPUT_EMPTY"
+        ],
+        "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+      }
+    },
+    {
+      "name": "forbidden provider",
+      "expected_violation": "PROVIDER_NOT_ALLOWED",
+      "result": {
+        "result": "FAIL",
+        "violations": [
+          "PROVIDER_NOT_ALLOWED"
+        ],
+        "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+      }
+    },
+    {
+      "name": "unknown usage invented",
+      "expected_violation": "UNKNOWN_USAGE_MUST_REMAIN_NULL",
+      "result": {
+        "result": "FAIL",
+        "violations": [
+          "UNKNOWN_USAGE_MUST_REMAIN_NULL"
+        ],
+        "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+      }
+    },
+    {
+      "name": "tool action claim",
+      "expected_violation": "UNAUTHORIZED_TOOL_ACTION_CLAIM",
+      "result": {
+        "result": "FAIL",
+        "violations": [
+          "UNAUTHORIZED_TOOL_ACTION_CLAIM"
+        ],
+        "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+      }
+    },
+    {
+      "name": "unsupported claim without evidence",
+      "expected_violation": "CLAIM_WITHOUT_EVIDENCE_REFERENCE",
+      "result": {
+        "result": "FAIL",
+        "violations": [
+          "CLAIM_WITHOUT_EVIDENCE_REFERENCE"
+        ],
+        "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+      }
+    },
+    {
+      "name": "invalid real cost type",
+      "expected_violation": "REAL_COST_INVALID",
+      "result": {
+        "result": "FAIL",
+        "violations": [
+          "REAL_COST_INVALID"
+        ],
+        "check_scope": "routing, schema, correlation, usage/cost separation, and declared evidence references only; not domain truth"
+      }
+    }
+  ],
+  "limitations": [
+    "Deterministic contract/routing/security checks only; does not validate domain truth or professional competence.",
+    "Existing LL07 representative role evaluation evidence remains unchanged.",
+    "Not integrated into the active API/Command Center; LL09 and LL10 predecessors remain incomplete."
+  ],
+  "live_codex_calls": 0,
+  "paid_api_calls": 0,
+  "n8n_runs": 0
+}

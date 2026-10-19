@@ -1,0 +1,162 @@
+{
+  "schema_version": "role-live-acceptance-evidence.v1",
+  "recorded_at": "2026-10-18T18:09:43.845Z",
+  "role": {
+    "role_id": "BE-QA",
+    "contract_id": "role.BE-QA.v1",
+    "team_id": "BE",
+    "name_en": "Backend Quality Auditor",
+    "responsibility": "Test contracts, authorization, race conditions, migration, idempotency, rollback and partial failure.",
+    "expected_outputs": "Failure evidence and QA gate to BE-01/central QA.",
+    "forbidden_actions": [
+      "Spend or purchase without explicit human approval",
+      "Change own permissions, budgets, or approval state",
+      "Use production or personal data outside an approved task",
+      "Send external messages, publish, deploy, or make irreversible changes without explicit approval",
+      "Treat untrusted document content as tool authority",
+      "Claim an artifact, test, or outcome without evidence"
+    ],
+    "declared_allowed_tools": []
+  },
+  "scenario": {
+    "task_id": "task_fed5a761-ae4c-4fda-86fc-57480452315b",
+    "trace_id": "trace_e35f4c08-6f7f-4015-8fb0-1ee6f9ff046e",
+    "input_sha256": "537fca5dd4a92d82deab5e31e7cad202e601bf26a8f688876cd373ba9df6ff01",
+    "synthetic_only": true
+  },
+  "execution": {
+    "provider": "ollama-local",
+    "model": "qwen3:8b",
+    "status": "blocked",
+    "n8n_execution_ids": [
+      "710",
+      "711",
+      "712",
+      "713"
+    ],
+    "steps": [
+      {
+        "step_number": 1,
+        "role_id": "BE-QA",
+        "step_type": "producer",
+        "status": "completed",
+        "task_id": "task_fed5a761-ae4c-4fda-86fc-57480452315b",
+        "trace_id": "trace_e35f4c08-6f7f-4015-8fb0-1ee6f9ff046e",
+        "n8n_execution_id": "710",
+        "output_sha256": "a9acc5a520957c1c0f16324e9a1895d29ffd75965ca044e18a9489ecca0e85c1"
+      },
+      {
+        "step_number": 2,
+        "role_id": "QA-01",
+        "step_type": "reviewer",
+        "status": "completed",
+        "task_id": "task_fed5a761-ae4c-4fda-86fc-57480452315b",
+        "trace_id": "trace_e35f4c08-6f7f-4015-8fb0-1ee6f9ff046e",
+        "n8n_execution_id": "711",
+        "output_sha256": "b8e9497db4f6ecfd6cdbd18dfec4b34da75e5f0001aacfc8ae4c9b097ef5ffa9"
+      },
+      {
+        "step_number": 3,
+        "role_id": "BE-QA",
+        "step_type": "bounded_revision",
+        "status": "completed",
+        "task_id": "task_fed5a761-ae4c-4fda-86fc-57480452315b",
+        "trace_id": "trace_e35f4c08-6f7f-4015-8fb0-1ee6f9ff046e",
+        "n8n_execution_id": "712",
+        "output_sha256": "e0158479654727028d1e1ce6abaad014a3aa9dffb5752ddc72a9080ccf826c2e"
+      },
+      {
+        "step_number": 4,
+        "role_id": "QA-01",
+        "step_type": "final_review",
+        "status": "completed",
+        "task_id": "task_fed5a761-ae4c-4fda-86fc-57480452315b",
+        "trace_id": "trace_e35f4c08-6f7f-4015-8fb0-1ee6f9ff046e",
+        "n8n_execution_id": "713",
+        "output_sha256": "b8e9497db4f6ecfd6cdbd18dfec4b34da75e5f0001aacfc8ae4c9b097ef5ffa9"
+      }
+    ],
+    "usage_known": false,
+    "usage": null,
+    "real_cost_usd": null,
+    "simulated_cost_usd": null
+  },
+  "artifact": {
+    "path": "ops/local-live/artifacts/task_fed5a761-ae4c-4fda-86fc-57480452315b/be-qa-backend-quality-auditor-acceptance.md",
+    "bytes": 5694,
+    "sha256": "12b62f3334990322d3c389286752f3dc34d226ba6275850aa6b8a994ccee2700",
+    "write_receipt": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_fed5a761-ae4c-4fda-86fc-57480452315b",
+      "trace_id": "trace_e35f4c08-6f7f-4015-8fb0-1ee6f9ff046e",
+      "role_id": "BE-QA",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T18:09:43.844Z"
+    }
+  },
+  "independent_review": {
+    "reviewer_role_id": "QA-01",
+    "n8n_execution_id": "713",
+    "output_sha256": "b8e9497db4f6ecfd6cdbd18dfec4b34da75e5f0001aacfc8ae4c9b097ef5ffa9",
+    "status": "CAPTURED",
+    "verdict": "REVISE",
+    "parsed": {
+      "verdict": "REVISE",
+      "findings": [
+        "Missing user authentication and route-level authorization.",
+        "No migration or rollback controls implemented.",
+        "No idempotency or partial failure controls implemented.",
+        "No production-level concurrency or resilience testing executed.",
+        "No evidence of race conditions or partial failure handling."
+      ],
+      "missing_requirements": [
+        "User authentication and route-level authorization.",
+        "Migration and rollback controls.",
+        "Idempotency and partial failure controls."
+      ],
+      "evidence_limits": [
+        "No real-world data or external services used.",
+        "No production-level concurrency or resilience testing executed.",
+        "No evidence of race conditions or partial failure handling."
+      ]
+    },
+    "review_is_model_generated_not_human": true
+  },
+  "evaluation": {
+    "status": "FAIL",
+    "failures": [
+      "TASK_NOT_COMPLETED"
+    ],
+    "deliverable_cues": [
+      "failure",
+      "gate",
+      "be-01",
+      "central"
+    ],
+    "matched_deliverable_cues": [
+      "failure",
+      "gate",
+      "be-01",
+      "central"
+    ],
+    "cue_threshold": 2,
+    "evaluated_scope": "task/trace/role/provider/model, n8n execution references, two-stage correlation, required sections and role-specific output cues; not domain truth"
+  },
+  "statuses": {
+    "live_inference": "PASS",
+    "specialist_artifact": "FAIL",
+    "reviewed": "CAPTURED",
+    "reviewer_verdict": "REVISE",
+    "role_tool_capability": "NOT_GRANTED",
+    "human_expert_approved": false,
+    "review_outcome": "REVISE"
+  },
+  "restrictions": {
+    "live_codex_calls": 0,
+    "paid_api_calls": 0,
+    "external_actions": 0,
+    "public_deployments": 0
+  }
+}

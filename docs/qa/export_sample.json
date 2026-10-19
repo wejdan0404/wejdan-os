@@ -1,0 +1,1622 @@
+{
+  "schemaVersion": 1,
+  "exportedAt": "2026-09-28T16:48:52.963",
+  "boxes": {
+    "domains": [
+      {
+        "id": "admin",
+        "nameAr": "الأمور الإدارية",
+        "nameEn": "Life admin",
+        "state": "rest",
+        "sensitive": false,
+        "enabled": true,
+        "parent": null,
+        "sortOrder": 12
+      },
+      {
+        "id": "aquarium",
+        "nameAr": "حوض السمك",
+        "nameEn": "Aquarium",
+        "state": "rest",
+        "sensitive": false,
+        "enabled": true,
+        "parent": "home",
+        "sortOrder": 16
+      },
+      {
+        "id": "care",
+        "nameAr": "العناية (بشرة، شعر، أسنان)",
+        "nameEn": "Care (skin, hair, teeth)",
+        "state": "maintain",
+        "sensitive": false,
+        "enabled": true,
+        "parent": null,
+        "sortOrder": 3
+      },
+      {
+        "id": "career",
+        "nameAr": "المسار المهني والبورتفوليو",
+        "nameEn": "Career & Portfolio",
+        "state": "grow",
+        "sensitive": false,
+        "enabled": true,
+        "parent": null,
+        "sortOrder": 7
+      },
+      {
+        "id": "digital",
+        "nameAr": "الحياة الرقمية",
+        "nameEn": "Digital life",
+        "state": "rest",
+        "sensitive": false,
+        "enabled": true,
+        "parent": null,
+        "sortOrder": 11
+      },
+      {
+        "id": "driving",
+        "nameAr": "القيادة",
+        "nameEn": "Driving",
+        "state": "rest",
+        "sensitive": false,
+        "enabled": true,
+        "parent": null,
+        "sortOrder": 8
+      },
+      {
+        "id": "faith",
+        "nameAr": "الإيمان والمعنى",
+        "nameEn": "Faith & Meaning",
+        "state": "rest",
+        "sensitive": false,
+        "enabled": true,
+        "parent": null,
+        "sortOrder": 15
+      },
+      {
+        "id": "food",
+        "nameAr": "الأكل",
+        "nameEn": "Food",
+        "state": "rest",
+        "sensitive": false,
+        "enabled": true,
+        "parent": null,
+        "sortOrder": 2
+      },
+      {
+        "id": "health",
+        "nameAr": "الصحة والحركة",
+        "nameEn": "Health & Movement",
+        "state": "grow",
+        "sensitive": false,
+        "enabled": true,
+        "parent": null,
+        "sortOrder": 0
+      },
+      {
+        "id": "home",
+        "nameAr": "البيت",
+        "nameEn": "Home",
+        "state": "maintain",
+        "sensitive": false,
+        "enabled": true,
+        "parent": null,
+        "sortOrder": 10
+      },
+      {
+        "id": "ielts",
+        "nameAr": "الآيلتس والإنجليزي",
+        "nameEn": "IELTS & English",
+        "state": "grow",
+        "sensitive": false,
+        "enabled": true,
+        "parent": null,
+        "sortOrder": 5
+      },
+      {
+        "id": "joy",
+        "nameAr": "المتعة والترفيه",
+        "nameEn": "Joy & Leisure",
+        "state": "rest",
+        "sensitive": false,
+        "enabled": true,
+        "parent": null,
+        "sortOrder": 13
+      },
+      {
+        "id": "learning",
+        "nameAr": "التعلّم والمهارات",
+        "nameEn": "Learning & Skills",
+        "state": "rest",
+        "sensitive": false,
+        "enabled": true,
+        "parent": null,
+        "sortOrder": 6
+      },
+      {
+        "id": "money",
+        "nameAr": "المال",
+        "nameEn": "Money",
+        "state": "maintain",
+        "sensitive": false,
+        "enabled": true,
+        "parent": null,
+        "sortOrder": 9
+      },
+      {
+        "id": "people",
+        "nameAr": "الناس والتواصل",
+        "nameEn": "People & Connection",
+        "state": "rest",
+        "sensitive": false,
+        "enabled": true,
+        "parent": null,
+        "sortOrder": 14
+      },
+      {
+        "id": "sleep",
+        "nameAr": "النوم والطاقة",
+        "nameEn": "Sleep & Energy",
+        "state": "maintain",
+        "sensitive": false,
+        "enabled": true,
+        "parent": null,
+        "sortOrder": 1
+      },
+      {
+        "id": "womensHealth",
+        "nameAr": "صحة المرأة",
+        "nameEn": "Women's health",
+        "state": "rest",
+        "sensitive": true,
+        "enabled": false,
+        "parent": null,
+        "sortOrder": 4
+      }
+    ],
+    "seasons": [
+      {
+        "id": "s_1",
+        "titleAr": "موسم الأساسات",
+        "titleEn": "Foundations season",
+        "startDate": "2026-09-28",
+        "plannedEndDate": null,
+        "endedDate": null,
+        "states": {
+          "health": "grow",
+          "sleep": "maintain",
+          "food": "rest",
+          "care": "maintain",
+          "womensHealth": "rest",
+          "ielts": "grow",
+          "learning": "rest",
+          "career": "grow",
+          "driving": "rest",
+          "money": "maintain",
+          "home": "maintain",
+          "digital": "rest",
+          "admin": "rest",
+          "joy": "rest",
+          "people": "rest",
+          "faith": "rest",
+          "aquarium": "rest"
+        }
+      }
+    ],
+    "habits": [
+      {
+        "id": "h_1790613690978000_0",
+        "domain": "health",
+        "titleAr": "test",
+        "titleEn": "Weekly aerobic activity target",
+        "actionId": "BODY-01",
+        "goal": "test",
+        "cue": "بعد صلاة العصر في أيام تمرينك المنزلي الـ4؛ والمشي يكمّل باقي الأيام.",
+        "ifThen": "إذا جا وقت العصر في يوم تمرين وحسّيت طاقتي قليلة، فأسوّي النسخة الصغيرة 10 د بدل ما أتركه.",
+        "minimumText": "10 د مشي سريع أو مقطع رقص على أغنية واحدة — وتنحسب من مجموع الأسبوع.",
+        "normalText": "جلسة متوسطة 30-40 د (مشي سريع أو كارديو في البيت) في حوالي 4-5 أيام بالأسبوع، عشان توصلين 150-300 د.",
+        "bonusText": "أضيفي 1-2 جلسة فترات عالية الشدة (مثل الدرج أو رقص سريع) — في حساب الإرشادات، 1 د عالية الشدة تعادل تقريبًا 2 د متوسطة.",
+        "joyPairing": "اربطيها بقائمة أغاني أو بودكاست تحبينه وما تسمعينه إلا وقت الحركة؛ وبدّلي النوع كل أسبوع (مشي، رقص، دراجة) للتجديد.",
+        "frictionDown": "شريط دقائق أسبوعي في التطبيق يضيف المشي والتمارين تلقائيًا؛ الحذاء والمفرش في مكان ظاهر؛ فيديو التمرين مختار ومجهّز من الليلة اللي قبل.",
+        "frictionUp": "حطّي تطبيقات الترفيه في الجوال خلف اختصار «بعد الحركة» في أيام التمرين.",
+        "reminder": {
+          "enabled": false,
+          "offsetMin": 0,
+          "textAr": null,
+          "textEn": null
+        },
+        "priority": "core",
+        "schedule": {
+          "weekdays": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "anchor": {
+            "type": "slot",
+            "minute": null,
+            "prayer": null,
+            "slot": "afternoon",
+            "offsetMin": 0
+          }
+        },
+        "durationMin": 35,
+        "minimumDurationMin": 12,
+        "status": "active",
+        "routineId": null,
+        "alternationGroup": null,
+        "essential": false,
+        "shrunkToMinimum": false,
+        "comebackPending": false,
+        "sortOrder": 0,
+        "createdDate": "2026-09-28"
+      },
+      {
+        "id": "h_1790613743710000_0",
+        "domain": "health",
+        "titleAr": "test",
+        "titleEn": "Exercise snacks (short vigorous bursts)",
+        "actionId": "BODY-04",
+        "goal": "test",
+        "cue": "كل ما تطلعين الدرج أو قبل ما تجلسين للمذاكرة.",
+        "ifThen": "إذا وصلت مبنى فيه درج، فأطلع أول الأدوار بسرعة.",
+        "minimumText": "دفعة وحدة لمدة 1 د (مثل طلوع الدرج بسرعة).",
+        "normalText": "3 دفعات على مدار اليوم.",
+        "bonusText": "استخدميها في أيام الراحة من التمرين عشان يستمر الزخم.",
+        "joyPairing": "خليها لعبة: دفعة «اسبقي الكورس» في الأغنية؛ واحتفال سلسلة في التطبيق.",
+        "frictionDown": "بدون أدوات وبدون تغيير ملابس.",
+        "frictionUp": "خلّي الدرج بدل المصعد قاعدة افتراضية.",
+        "reminder": {
+          "enabled": false,
+          "offsetMin": 0,
+          "textAr": null,
+          "textEn": null
+        },
+        "priority": "optional",
+        "schedule": {
+          "weekdays": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "anchor": {
+            "type": "slot",
+            "minute": null,
+            "prayer": null,
+            "slot": "anytime",
+            "offsetMin": 0
+          }
+        },
+        "durationMin": 3,
+        "minimumDurationMin": 1,
+        "status": "active",
+        "routineId": null,
+        "alternationGroup": null,
+        "essential": false,
+        "shrunkToMinimum": false,
+        "comebackPending": false,
+        "sortOrder": 0,
+        "createdDate": "2026-09-28"
+      },
+      {
+        "id": "h_1790613774259000_0",
+        "domain": "ielts",
+        "titleAr": "test",
+        "titleEn": "Extensive reading for pleasure",
+        "actionId": "GROW-08",
+        "goal": "test",
+        "cue": "بعد العشاء / قبل تهدئة النوم (ورق أو حبر إلكتروني بدل الجوال).",
+        "ifThen": "إذا دخلت السرير، فأقرأ فصل/مقال إنجليزي واحد قبل أي تصفح.",
+        "minimumText": "اقري صفحة 1.",
+        "normalText": "اقري مقال أو فصل واحد.",
+        "bonusText": "احفظي 2-3 عبارات مفيدة في مجموعة المفردات.",
+        "joyPairing": "اقري مواضيع تحبينها أصلًا (قصص تصميم، دراسات حالة منتجات، روايات) في ركن قراءة دافي مع مشروب دافي.",
+        "frictionDown": "خلي قائمة قراءة في التطبيق؛ وقارئ إلكتروني أو مقالات مطبوعة جنب السرير.",
+        "frictionUp": "تطبيقات السوشال بعيد عن مكان الشحن في غرفة النوم.",
+        "reminder": {
+          "enabled": false,
+          "offsetMin": 0,
+          "textAr": null,
+          "textEn": null
+        },
+        "priority": "recommended",
+        "schedule": {
+          "weekdays": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "anchor": {
+            "type": "slot",
+            "minute": null,
+            "prayer": null,
+            "slot": "night",
+            "offsetMin": 0
+          }
+        },
+        "durationMin": 20,
+        "minimumDurationMin": 7,
+        "status": "active",
+        "routineId": null,
+        "alternationGroup": null,
+        "essential": false,
+        "shrunkToMinimum": false,
+        "comebackPending": false,
+        "sortOrder": 0,
+        "createdDate": "2026-09-28"
+      },
+      {
+        "id": "h_cleanse",
+        "domain": "care",
+        "titleAr": "تنظيف لطيف وترطيب",
+        "titleEn": "Gentle cleanse and moisturize",
+        "actionId": "FOOD-21",
+        "goal": "",
+        "cue": "الصباح بعد الوضوء/تفريش الأسنان؛ الليل قبل النوم؛ بعد التمارين.",
+        "ifThen": "إذا خلّصت التمرين، فأغسل وجهي قبل أي شي.",
+        "minimumText": "تنظيف الليل بس.",
+        "normalText": "تنظيف صباح + ليل، وبعد التمرين؛ ومرطب إذا جافة.",
+        "bonusText": "راجعي منتجاتك كل 3 شهور؛ وشيلي اللي يحرق أو يهيّج.",
+        "joyPairing": "خلي روتين الليل إشارة تهدئة (إضاءة خافتة، ريحتك المفضلة).",
+        "frictionDown": "خلي الغسول + المرطب + الواقي مع بعض كطقم من 3 خطوات.",
+        "frictionUp": "",
+        "reminder": {
+          "enabled": false,
+          "offsetMin": 0,
+          "textAr": null,
+          "textEn": null
+        },
+        "priority": "core",
+        "schedule": {
+          "weekdays": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "anchor": {
+            "type": "sleep",
+            "minute": null,
+            "prayer": null,
+            "slot": "anytime",
+            "offsetMin": 0
+          }
+        },
+        "durationMin": 3,
+        "minimumDurationMin": 2,
+        "status": "active",
+        "routineId": "r_night",
+        "alternationGroup": null,
+        "essential": false,
+        "shrunkToMinimum": false,
+        "comebackPending": false,
+        "sortOrder": 22,
+        "createdDate": "2026-09-28"
+      },
+      {
+        "id": "h_dental",
+        "domain": "care",
+        "titleAr": "الأسنان مرتين والخيط",
+        "titleEn": "Brush twice daily + clean between teeth",
+        "actionId": "FOOD-23",
+        "goal": "",
+        "cue": "بعد الفطور وكآخر خطوة قبل النوم.",
+        "ifThen": "إذا خلّصت تفريش الليل، فأستخدم الخيط على طول.",
+        "minimumText": "تفريش الليل، 2 د.",
+        "normalText": "تفريش صباح + ليل؛ وتنظيف بين الأسنان بالليل.",
+        "bonusText": "موعد أسنان محجوز حسب الفترة اللي ينصح فيها طبيبك.",
+        "joyPairing": "أغنية 2 د أو مقطع مفردات IELTS مدته 2 د وقت التفريش.",
+        "frictionDown": "أعواد الخيط جنب الفرشاة؛ وطقم سفر في الشنطة.",
+        "frictionUp": "",
+        "reminder": {
+          "enabled": false,
+          "offsetMin": 0,
+          "textAr": null,
+          "textEn": null
+        },
+        "priority": "core",
+        "schedule": {
+          "weekdays": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "anchor": {
+            "type": "sleep",
+            "minute": null,
+            "prayer": null,
+            "slot": "anytime",
+            "offsetMin": 0
+          }
+        },
+        "durationMin": 4,
+        "minimumDurationMin": 2,
+        "status": "active",
+        "routineId": "r_night",
+        "alternationGroup": null,
+        "essential": true,
+        "shrunkToMinimum": false,
+        "comebackPending": false,
+        "sortOrder": 23,
+        "createdDate": "2026-09-28"
+      },
+      {
+        "id": "h_focus",
+        "domain": "career",
+        "titleAr": "بلوك تركيز لمهمة وحدة",
+        "titleEn": "Single-task focus block (phone out of reach)",
+        "actionId": "GROW-22",
+        "goal": "",
+        "cue": "بعد الفجر/روتين الصباح للبلوك 1؛ بعد الظهر للبلوك 2.",
+        "ifThen": "إذا بدأت بلوك تركيز، فأحط جوالي في الغرفة الثانية أول.",
+        "minimumText": "بلوك مهمة وحدة 15 د.",
+        "normalText": "2 بلوكات كل واحد حوالي 45 د مع استراحة حركة 5-10 د بينهم.",
+        "bonusText": "بلوك ثالث لشغل خفيف (إداري، تحديث المتتبّع).",
+        "joyPairing": "موسيقى تركيز خاصة فيك + مشروبك المفضل + طقس «خلصت» (علامة صح في التطبيق).",
+        "frictionDown": "البلوك ومهمته مكتوبة من الليلة اللي قبل؛ والمواد مفتوحة.",
+        "frictionUp": "الجوال في غرفة ثانية؛ وحاجب المواقع شغّال وقت البلوكات.",
+        "reminder": {
+          "enabled": false,
+          "offsetMin": 0,
+          "textAr": null,
+          "textEn": null
+        },
+        "priority": "core",
+        "schedule": {
+          "weekdays": [
+            7,
+            1,
+            2,
+            3,
+            4
+          ],
+          "anchor": {
+            "type": "wake",
+            "minute": null,
+            "prayer": null,
+            "slot": "morning",
+            "offsetMin": 90
+          }
+        },
+        "durationMin": 90,
+        "minimumDurationMin": 15,
+        "status": "active",
+        "routineId": null,
+        "alternationGroup": null,
+        "essential": false,
+        "shrunkToMinimum": false,
+        "comebackPending": false,
+        "sortOrder": 2,
+        "createdDate": "2026-09-28"
+      },
+      {
+        "id": "h_room_reset",
+        "domain": "home",
+        "titleAr": "ترتيب سريع للغرفة",
+        "titleEn": "Daily 10-minute room reset",
+        "actionId": "LIFE-13",
+        "goal": "",
+        "cue": "مباشرة بعد صلاة العشاء، أو قبل روتين العناية الليلي.",
+        "ifThen": "إذا خلّصت صلاة العشاء، فأشغّل مؤقت الترتيب 10 د.",
+        "minimumText": "فضّي سطح واحد (المكتب أو السرير).",
+        "normalText": "ترتيب الغرفة كاملة بمؤقت 10 د.",
+        "bonusText": "جهّزي لبس وشنطة بكرة.",
+        "joyPairing": "أغنية مفضلة وحدة أو حلقة بودكاست = وقت الترتيب؛ وولّعي بخور/ريحة بعده.",
+        "frictionDown": "سلة ملابس و«صينية رمي» جنب الباب؛ وأغراض أقل على الأسطح.",
+        "frictionUp": "الجوال يشحن برّا الغرفة لين يخلص الترتيب.",
+        "reminder": {
+          "enabled": false,
+          "offsetMin": 0,
+          "textAr": null,
+          "textEn": null
+        },
+        "priority": "recommended",
+        "schedule": {
+          "weekdays": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "anchor": {
+            "type": "sleep",
+            "minute": null,
+            "prayer": null,
+            "slot": "anytime",
+            "offsetMin": 0
+          }
+        },
+        "durationMin": 10,
+        "minimumDurationMin": 3,
+        "status": "active",
+        "routineId": "r_night",
+        "alternationGroup": null,
+        "essential": false,
+        "shrunkToMinimum": false,
+        "comebackPending": false,
+        "sortOrder": 20,
+        "createdDate": "2026-09-28"
+      },
+      {
+        "id": "h_strength",
+        "domain": "health",
+        "titleAr": "تمارين القوة في البيت",
+        "titleEn": "Home strength training with progression",
+        "actionId": "BODY-05",
+        "goal": "",
+        "cue": "بعد صلاة العصر في 2-3 من أيام تمرينك المنزلي الـ4 (مثل الأحد/الثلاثاء/الخميس).",
+        "ifThen": "إذا قدرت أسوّي 2 تكرار زيادة عن هدفي في تمرين لمدة جلستين، فأنتقل للنسخة الأصعب أو وزن أثقل.",
+        "minimumText": "دورة وحدة: سكوات، ضغط (على الجدار/الركب)، جسر الورك، سحب بالحبل المطاطي — مجموعة 1 لكل تمرين.",
+        "normalText": "جلسة لكامل الجسم 20-30 د، 1-3 مجموعات لكل تمرين، تكرارات بين 8-12 لين قرب التعب.",
+        "bonusText": "أضيفي جلسة ثالثة بالأسبوع أو نسخة أصعب (سكوات مفصول، ضغط مرتفع).",
+        "joyPairing": "قائمة أغاني حماسية (BODY-11)؛ «حركة جديدة للأسبوع» للتجديد؛ وسجّلي شارة إنجاز شخصي لما تفتحين نسخة أصعب.",
+        "frictionDown": "المفرش والأحبال تبقى برّا؛ روتين واحد محفوظ مع فيديوهات توضيحية؛ ما فيه قرار تاخذينه في نفس اليوم.",
+        "frictionUp": "التمرين يبدأ قبل وقت السوشال ميديا بعد العصر.",
+        "reminder": {
+          "enabled": true,
+          "offsetMin": 0,
+          "textAr": null,
+          "textEn": null
+        },
+        "priority": "core",
+        "schedule": {
+          "weekdays": [
+            7,
+            2,
+            4
+          ],
+          "anchor": {
+            "type": "prayer",
+            "minute": null,
+            "prayer": "asr",
+            "slot": "afternoon",
+            "offsetMin": 15
+          }
+        },
+        "durationMin": 30,
+        "minimumDurationMin": 10,
+        "status": "active",
+        "routineId": null,
+        "alternationGroup": "movement",
+        "essential": false,
+        "shrunkToMinimum": false,
+        "comebackPending": false,
+        "sortOrder": 4,
+        "createdDate": "2026-09-28"
+      },
+      {
+        "id": "h_sunscreen",
+        "domain": "care",
+        "titleAr": "واقي شمس يوميًا",
+        "titleEn": "Daily sunscreen",
+        "actionId": "FOOD-20",
+        "goal": "",
+        "cue": "بعد غسيل الوجه الصباحي، قبل المرطب/المكياج — أو عند الباب مع المفاتيح.",
+        "ifThen": "إذا مسكت مفاتيح السيارة أو الشنطة، فأتأكد إني حاطة واقي.",
+        "minimumText": "الوجه واليدين قبل أي وقت برّا.",
+        "normalText": "كل صباح على الجلد المكشوف + تجديد في الأيام الطويلة برّا (دروس السواقة، المشي).",
+        "bonusText": "خلي واقي ثاني في الشنطة/السيارة للتجديد.",
+        "joyPairing": "اختاري قوام وريحة تحبينها فعلًا؛ وخليه جزء من روتين عناية صباحي حلو.",
+        "frictionDown": "الواقي جنب فرشاة الأسنان، وواحد في السيارة.",
+        "frictionUp": "",
+        "reminder": {
+          "enabled": false,
+          "offsetMin": 0,
+          "textAr": null,
+          "textEn": null
+        },
+        "priority": "core",
+        "schedule": {
+          "weekdays": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "anchor": {
+            "type": "wake",
+            "minute": null,
+            "prayer": null,
+            "slot": "anytime",
+            "offsetMin": 0
+          }
+        },
+        "durationMin": 2,
+        "minimumDurationMin": 1,
+        "status": "active",
+        "routineId": "r_morning",
+        "alternationGroup": null,
+        "essential": false,
+        "shrunkToMinimum": false,
+        "comebackPending": false,
+        "sortOrder": 11,
+        "createdDate": "2026-09-28"
+      },
+      {
+        "id": "h_vocab",
+        "domain": "ielts",
+        "titleAr": "مفردات يومية متباعدة",
+        "titleEn": "Daily spaced vocabulary",
+        "actionId": "GROW-07",
+        "goal": "",
+        "cue": "مع قهوة/شاي الصباح، أو وقت الانتظار (طابور، راكبة في السيارة).",
+        "ifThen": "إذا صبّيت قهوة الصباح، فأفتح مجموعة المفردات وأخلّص البطاقات المستحقة.",
+        "minimumText": "خلّصي 5 بطاقات مستحقة.",
+        "normalText": "مفردات + بلوك مهارة اليوم (حوالي 30-60 د).",
+        "bonusText": "استخدمي 3 من كلمات اليوم في إجابة محادثة 1 د (مرتبطة بـSpeaking).",
+        "joyPairing": "اختاري كلمات من مواضيع تحبينها (تصميم، تقنية، علم نفس) — واستخدميها في قصة IELTS Speaking Part 2.",
+        "frictionDown": "ويدجت للمجموعة على الجوال؛ وأضيفي الكلمات بضغطة وحدة وأنتِ تقرين.",
+        "frictionUp": "حطي أيقونة المجموعة مكان تطبيقات السوشال على الشاشة الرئيسية.",
+        "reminder": {
+          "enabled": true,
+          "offsetMin": 0,
+          "textAr": null,
+          "textEn": null
+        },
+        "priority": "core",
+        "schedule": {
+          "weekdays": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "anchor": {
+            "type": "slot",
+            "minute": null,
+            "prayer": null,
+            "slot": "morning",
+            "offsetMin": 0
+          }
+        },
+        "durationMin": 45,
+        "minimumDurationMin": 5,
+        "status": "active",
+        "routineId": null,
+        "alternationGroup": null,
+        "essential": false,
+        "shrunkToMinimum": false,
+        "comebackPending": false,
+        "sortOrder": 1,
+        "createdDate": "2026-09-28"
+      },
+      {
+        "id": "h_wake",
+        "domain": "sleep",
+        "titleAr": "موعد صحيان ثابت",
+        "titleEn": "Consistent wake time",
+        "actionId": "BODY-15",
+        "goal": "",
+        "cue": "اربطي وقت الصحيان بالفجر أو بمنبّه ثابت بعده.",
+        "ifThen": "إذا سهرت، فأصحى بوقتي المعتاد برضو وآخذ قيلولة قصيرة بداية العصرية إذا احتجت (BODY-20).",
+        "minimumText": "نفس وقت الصحيان في أيام الأسبوع؛ والويكند ضمن نطاق صغير تختارينه.",
+        "normalText": "نفس وقت الصحيان والنوم كل الـ7 أيام.",
+        "bonusText": "مشي في ضوء الصباح بعد الصحيان مباشرة (BODY-18).",
+        "joyPairing": "طقس صباحي تنتظرينه (مشروبك المفضل، شمس، قائمة أغاني).",
+        "frictionDown": "منبّه واحد متكرر؛ وخطة اليوم في التطبيق تبدأ بنفس الوقت يوميًا.",
+        "frictionUp": "المنبّه في الطرف الثاني من الغرفة.",
+        "reminder": {
+          "enabled": false,
+          "offsetMin": 0,
+          "textAr": null,
+          "textEn": null
+        },
+        "priority": "core",
+        "schedule": {
+          "weekdays": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "anchor": {
+            "type": "wake",
+            "minute": null,
+            "prayer": null,
+            "slot": "anytime",
+            "offsetMin": 0
+          }
+        },
+        "durationMin": 1,
+        "minimumDurationMin": 1,
+        "status": "active",
+        "routineId": "r_morning",
+        "alternationGroup": null,
+        "essential": false,
+        "shrunkToMinimum": false,
+        "comebackPending": false,
+        "sortOrder": 10,
+        "createdDate": "2026-09-28"
+      },
+      {
+        "id": "h_walk",
+        "domain": "health",
+        "titleAr": "المشي اليومي والخطوات",
+        "titleEn": "Daily walk / step count",
+        "actionId": "BODY-02",
+        "goal": "",
+        "cue": "بعد صلاة المغرب (الوقت الأبرد) أو مباشرة بعد مكالمة — «امشي وتكلّمي».",
+        "ifThen": "إذا وصلت الساعة 8 مساءً وخطواتي أقل من 5,000، فأمشي 15 د داخل البيت وأنا أسمع البودكاست.",
+        "minimumText": "1,000 خطوة إضافية: مشي 10 د في البيت أو ممر المول.",
+        "normalText": "توصلين حوالي 7,000 خطوة يوميًا في أغلب الأيام.",
+        "bonusText": "8,000-10,000 خطوة بمشوار مسائي أطول مع صديقة أو أحد من العائلة.",
+        "joyPairing": "مكالمات وأنتِ تمشين مع صديقة؛ كتاب صوتي أو بودكاست استماع IELTS ما تسمعينه إلا وقت المشي (ربط المتعة)؛ المولات أو الكورنيش عشان المنظر.",
+        "frictionDown": "ويدجت الخطوات على الشاشة الرئيسية؛ مسار مشي محفوظ مسبقًا؛ حذاء مريح جنب الباب.",
+        "frictionUp": "خلّي الوضع الافتراضي إنك تردين على المكالمات وأنتِ واقفة أو تمشين.",
+        "reminder": {
+          "enabled": true,
+          "offsetMin": 0,
+          "textAr": null,
+          "textEn": null
+        },
+        "priority": "core",
+        "schedule": {
+          "weekdays": [
+            1,
+            3,
+            5,
+            6
+          ],
+          "anchor": {
+            "type": "prayer",
+            "minute": null,
+            "prayer": "maghrib",
+            "slot": "evening",
+            "offsetMin": 10
+          }
+        },
+        "durationMin": 30,
+        "minimumDurationMin": 10,
+        "status": "active",
+        "routineId": null,
+        "alternationGroup": "movement",
+        "essential": false,
+        "shrunkToMinimum": true,
+        "comebackPending": true,
+        "sortOrder": 3,
+        "createdDate": "2026-09-28"
+      },
+      {
+        "id": "h_wind_down",
+        "domain": "sleep",
+        "titleAr": "تهدئة المساء بلا شاشات",
+        "titleEn": "Evening wind-down: dim light, devices off",
+        "actionId": "BODY-17",
+        "goal": "",
+        "cue": "بعد صلاة العشاء: انتقلي للإضاءات الدافية/الخافتة.",
+        "ifThen": "إذا لقيت نفسي أتصفح بعد وقت التهدئة، فأحط الجوال على الشاحن برّا غرفتي.",
+        "minimumText": "الجوال بعيد قبل النوم بـ30 د.",
+        "normalText": "إضاءة خافتة قبل النوم بحوالي 3 ساعات؛ وآخر 30-60 د بدون شاشات (كتاب ورقي، إطالة، كتابة يوميات).",
+        "bonusText": "الجوال يشحن برّا غرفة النوم.",
+        "joyPairing": "رواية ورقية أو قصة إنجليزية (IELTS) تستمتعين فيها وما تقرينها إلا في السرير؛ إطالة هادية (BODY-06).",
+        "frictionDown": "جدولة في البيت الذكي أو الجوال للإضاءة الخافتة ووضع عدم الإزعاج.",
+        "frictionUp": "حدود على تطبيقات السوشال والفيديو بعد بداية وقت التهدئة.",
+        "reminder": {
+          "enabled": false,
+          "offsetMin": 0,
+          "textAr": null,
+          "textEn": null
+        },
+        "priority": "core",
+        "schedule": {
+          "weekdays": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "anchor": {
+            "type": "sleep",
+            "minute": null,
+            "prayer": null,
+            "slot": "anytime",
+            "offsetMin": 0
+          }
+        },
+        "durationMin": 30,
+        "minimumDurationMin": 30,
+        "status": "active",
+        "routineId": "r_night",
+        "alternationGroup": null,
+        "essential": true,
+        "shrunkToMinimum": false,
+        "comebackPending": false,
+        "sortOrder": 21,
+        "createdDate": "2026-09-28"
+      }
+    ],
+    "routines": [
+      {
+        "id": "r_morning",
+        "titleAr": "روتين الصباح",
+        "titleEn": "Morning routine",
+        "section": "morningChain",
+        "anchor": {
+          "type": "wake",
+          "minute": null,
+          "prayer": null,
+          "slot": "anytime",
+          "offsetMin": 0
+        },
+        "steps": [
+          {
+            "id": "rs_wake",
+            "habitId": "h_wake",
+            "titleAr": "",
+            "titleEn": "",
+            "actionId": null,
+            "domain": "care",
+            "minimumText": "",
+            "normalText": "",
+            "durationMin": 5,
+            "minimumDurationMin": 2,
+            "essential": false
+          },
+          {
+            "id": "rs_morning_cleanse",
+            "habitId": null,
+            "titleAr": "تنظيف لطيف وترطيب (صباحًا)",
+            "titleEn": "Gentle cleanse and moisturize (morning)",
+            "actionId": "FOOD-21",
+            "domain": "care",
+            "minimumText": "",
+            "normalText": "تنظيف صباح + ليل، وبعد التمرين؛ ومرطب إذا جافة.",
+            "durationMin": 3,
+            "minimumDurationMin": 1,
+            "essential": false
+          },
+          {
+            "id": "rs_sunscreen",
+            "habitId": "h_sunscreen",
+            "titleAr": "",
+            "titleEn": "",
+            "actionId": null,
+            "domain": "care",
+            "minimumText": "",
+            "normalText": "",
+            "durationMin": 5,
+            "minimumDurationMin": 2,
+            "essential": false
+          },
+          {
+            "id": "rs_morning_brush",
+            "habitId": null,
+            "titleAr": "الأسنان مرتين والخيط (صباحًا)",
+            "titleEn": "Brush twice daily + clean between teeth (morning)",
+            "actionId": "FOOD-23",
+            "domain": "care",
+            "minimumText": "",
+            "normalText": "تفريش صباح + ليل؛ وتنظيف بين الأسنان بالليل.",
+            "durationMin": 4,
+            "minimumDurationMin": 2,
+            "essential": false
+          }
+        ],
+        "weekdays": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "active": true
+      },
+      {
+        "id": "r_night",
+        "titleAr": "روتين الليل",
+        "titleEn": "Night routine",
+        "section": "eveningChain",
+        "anchor": {
+          "type": "sleep",
+          "minute": null,
+          "prayer": null,
+          "slot": "anytime",
+          "offsetMin": -60
+        },
+        "steps": [
+          {
+            "id": "rs_room_reset",
+            "habitId": "h_room_reset",
+            "titleAr": "",
+            "titleEn": "",
+            "actionId": null,
+            "domain": "care",
+            "minimumText": "",
+            "normalText": "",
+            "durationMin": 5,
+            "minimumDurationMin": 2,
+            "essential": false
+          },
+          {
+            "id": "rs_wind_down",
+            "habitId": "h_wind_down",
+            "titleAr": "",
+            "titleEn": "",
+            "actionId": null,
+            "domain": "care",
+            "minimumText": "",
+            "normalText": "",
+            "durationMin": 5,
+            "minimumDurationMin": 2,
+            "essential": false
+          },
+          {
+            "id": "rs_cleanse",
+            "habitId": "h_cleanse",
+            "titleAr": "",
+            "titleEn": "",
+            "actionId": null,
+            "domain": "care",
+            "minimumText": "",
+            "normalText": "",
+            "durationMin": 5,
+            "minimumDurationMin": 2,
+            "essential": false
+          },
+          {
+            "id": "rs_dental",
+            "habitId": "h_dental",
+            "titleAr": "",
+            "titleEn": "",
+            "actionId": null,
+            "domain": "care",
+            "minimumText": "",
+            "normalText": "",
+            "durationMin": 5,
+            "minimumDurationMin": 2,
+            "essential": false
+          }
+        ],
+        "weekdays": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "active": true
+      }
+    ],
+    "weeklyTasks": [
+      {
+        "id": "wt_admin",
+        "domain": "admin",
+        "titleAr": "وقت المهام الإدارية",
+        "titleEn": "Weekly life-admin block with errand batching",
+        "actionId": "LIFE-16",
+        "minimumText": "خلّصي 2 مهام من الصندوق الإداري.",
+        "normalText": "خلّصي القائمة الإدارية كاملة وخططي المشاوير حسب المنطقة.",
+        "durationMin": 45,
+        "minimumDurationMin": 10,
+        "preferredWeekdays": [
+          7
+        ],
+        "anchor": {
+          "type": "prayer",
+          "minute": null,
+          "prayer": "asr",
+          "slot": "afternoon",
+          "offsetMin": 60
+        },
+        "timesPerWeek": 1,
+        "pinned": true,
+        "isWeeklyReview": false,
+        "active": true,
+        "sortOrder": 3
+      },
+      {
+        "id": "wt_ielts_writing",
+        "domain": "ielts",
+        "titleAr": "كتابة مع تصحيح",
+        "titleEn": "Writing with corrective feedback",
+        "actionId": "GROW-10",
+        "minimumText": "اكتبي مقدمة Task 2 وحدة + خطة الفقرات (10 د).",
+        "normalText": "Task واحدة بوقت محدد (Task 1: حوالي 20 د / Task 2: حوالي 40 د ضمن ورقة الـ60 د)، ملاحظات، وإعادة كتابة فقرة وحدة.",
+        "durationMin": 60,
+        "minimumDurationMin": 10,
+        "preferredWeekdays": [
+          1
+        ],
+        "anchor": {
+          "type": "prayer",
+          "minute": null,
+          "prayer": "dhuhr",
+          "slot": "midday",
+          "offsetMin": 15
+        },
+        "timesPerWeek": 1,
+        "pinned": false,
+        "isWeeklyReview": false,
+        "active": true,
+        "sortOrder": 1
+      },
+      {
+        "id": "wt_meal_plan",
+        "domain": "food",
+        "titleAr": "خطة وجبات أسبوعية",
+        "titleEn": "Weekly meal plan",
+        "actionId": "FOOD-08",
+        "minimumText": "قرري غدا وعشا بكرة بس.",
+        "normalText": "خططي 5-7 وجبات أساسية للأسبوع في التطبيق.",
+        "durationMin": 15,
+        "minimumDurationMin": 5,
+        "preferredWeekdays": [
+          5
+        ],
+        "anchor": {
+          "type": "prayer",
+          "minute": null,
+          "prayer": "maghrib",
+          "slot": "evening",
+          "offsetMin": 15
+        },
+        "timesPerWeek": 1,
+        "pinned": true,
+        "isWeeklyReview": false,
+        "active": true,
+        "sortOrder": 2
+      },
+      {
+        "id": "wt_weekly_review",
+        "domain": "joy",
+        "titleAr": "المراجعة الأسبوعية",
+        "titleEn": "Weekly review",
+        "actionId": "JOY-09",
+        "minimumText": "5 د: 1 إنجاز، 1 درس، أهم 3 للأسبوع الجاي.",
+        "normalText": "مراجعة منظمة 20–30 د.",
+        "durationMin": 25,
+        "minimumDurationMin": 5,
+        "preferredWeekdays": [
+          6
+        ],
+        "anchor": {
+          "type": "slot",
+          "minute": null,
+          "prayer": null,
+          "slot": "evening",
+          "offsetMin": 60
+        },
+        "timesPerWeek": 1,
+        "pinned": false,
+        "isWeeklyReview": true,
+        "active": true,
+        "sortOrder": 4
+      }
+    ],
+    "projects": [],
+    "goals": [
+      {
+        "id": "g_career",
+        "domain": "career",
+        "titleAr": "المسار المهني والبورتفوليو",
+        "titleEn": "Career & portfolio",
+        "targetNote": "",
+        "milestones": [
+          {
+            "id": "m_car_1",
+            "titleAr": "كورس واحد نشط (Google UX)",
+            "titleEn": "One active course (Google UX)",
+            "quarter": 1,
+            "done": false,
+            "doneDate": null,
+            "rewardJoyId": null
+          },
+          {
+            "id": "m_car_2",
+            "titleAr": "دراسة حالة #1 في البورتفوليو + بداية سبرنت البحث الأسبوعي عن وظيفة",
+            "titleEn": "Portfolio case study #1 + weekly job-search sprint begins",
+            "quarter": 2,
+            "done": false,
+            "doneDate": null,
+            "rewardJoyId": null
+          },
+          {
+            "id": "m_car_3",
+            "titleAr": "دراسة حالة #2 + بناء علاقات مهنية",
+            "titleEn": "Case study #2 + networking",
+            "quarter": 3,
+            "done": false,
+            "doneDate": null,
+            "rewardJoyId": null
+          }
+        ],
+        "linkedHabitIds": [
+          "h_focus"
+        ],
+        "linkedProjectIds": [],
+        "sortOrder": 3
+      },
+      {
+        "id": "g_driving",
+        "domain": "driving",
+        "titleAr": "رخصة القيادة",
+        "titleEn": "Driving licence",
+        "targetNote": "",
+        "milestones": [
+          {
+            "id": "m_drv_1",
+            "titleAr": "تأكيد مسار الرخصة الرسمي في أبشر والتسجيل في مدرسة قيادة",
+            "titleEn": "Confirm the official licence path on Absher and enrol in a driving school",
+            "quarter": 1,
+            "done": false,
+            "doneDate": null,
+            "rewardJoyId": null
+          },
+          {
+            "id": "m_drv_2",
+            "titleAr": "تدريب قيادة تحت الإشراف + اختبار النظري",
+            "titleEn": "Supervised driving practice + theory test",
+            "quarter": 2,
+            "done": false,
+            "doneDate": null,
+            "rewardJoyId": null
+          },
+          {
+            "id": "m_drv_3",
+            "titleAr": "اختبار القيادة",
+            "titleEn": "Driving test",
+            "quarter": 3,
+            "done": false,
+            "doneDate": null,
+            "rewardJoyId": null
+          }
+        ],
+        "linkedHabitIds": [],
+        "linkedProjectIds": [],
+        "sortOrder": 1
+      },
+      {
+        "id": "g_health",
+        "domain": "health",
+        "titleAr": "الصحة والجسم",
+        "titleEn": "Health & body",
+        "targetNote": "",
+        "milestones": [
+          {
+            "id": "m_hl_1",
+            "titleAr": "ثبات موعد النوم والاستيقاظ + مشي يومي + قوة مرتين أسبوعيًا على الأقل",
+            "titleEn": "Sleep/wake anchor + daily walk + strength at least 2×/week",
+            "quarter": 1,
+            "done": false,
+            "doneDate": null,
+            "rewardJoyId": null
+          },
+          {
+            "id": "m_hl_2",
+            "titleAr": "تدرّج في تمارين القوة",
+            "titleEn": "Strength progression",
+            "quarter": 2,
+            "done": false,
+            "doneDate": null,
+            "rewardJoyId": null
+          },
+          {
+            "id": "m_hl_4",
+            "titleAr": "المحافظة على العادات التلقائية",
+            "titleEn": "Maintain automatic habits",
+            "quarter": 4,
+            "done": false,
+            "doneDate": null,
+            "rewardJoyId": null
+          }
+        ],
+        "linkedHabitIds": [
+          "h_walk",
+          "h_strength",
+          "h_wake"
+        ],
+        "linkedProjectIds": [],
+        "sortOrder": 4
+      },
+      {
+        "id": "g_ielts",
+        "domain": "ielts",
+        "titleAr": "الآيلتس",
+        "titleEn": "IELTS",
+        "targetNote": "",
+        "milestones": [
+          {
+            "id": "m_ie_1",
+            "titleAr": "اختبار تشخيصي + مفردات يومية",
+            "titleEn": "Diagnostic test + daily vocabulary",
+            "quarter": 1,
+            "done": false,
+            "doneDate": null,
+            "rewardJoyId": null
+          },
+          {
+            "id": "m_ie_2",
+            "titleAr": "تدوير كامل للمهارات + اختبار تجريبي شهري",
+            "titleEn": "Full skill rotation + monthly mock test",
+            "quarter": 2,
+            "done": false,
+            "doneDate": null,
+            "rewardJoyId": null
+          },
+          {
+            "id": "m_ie_3",
+            "titleAr": "حجز الاختبار عندما تصل التجريبية لهدفك (أنتِ تحددينه)",
+            "titleEn": "Book the test when mocks reach your target (you set it)",
+            "quarter": 3,
+            "done": false,
+            "doneDate": null,
+            "rewardJoyId": null
+          }
+        ],
+        "linkedHabitIds": [
+          "h_vocab"
+        ],
+        "linkedProjectIds": [],
+        "sortOrder": 2
+      },
+      {
+        "id": "g_money",
+        "domain": "money",
+        "titleAr": "المال",
+        "titleEn": "Money",
+        "targetNote": "",
+        "milestones": [
+          {
+            "id": "m_mo_1",
+            "titleAr": "أسبوع تتبّع المصروف + تفعيل الادخار التلقائي",
+            "titleEn": "Spending-tracking week + auto-save set up",
+            "quarter": 1,
+            "done": false,
+            "doneDate": null,
+            "rewardJoyId": null
+          },
+          {
+            "id": "m_mo_3",
+            "titleAr": "مرحلة صندوق الطوارئ (المبلغ تحددينه)",
+            "titleEn": "Emergency fund milestone (amount you set)",
+            "quarter": 3,
+            "done": false,
+            "doneDate": null,
+            "rewardJoyId": null
+          }
+        ],
+        "linkedHabitIds": [],
+        "linkedProjectIds": [],
+        "sortOrder": 5
+      }
+    ],
+    "logs": [
+      {
+        "id": "log_1790613362527000_3",
+        "itemId": "h_focus",
+        "kind": "habit",
+        "date": "2026-09-28",
+        "level": "minimum",
+        "durationMin": null,
+        "enjoyment": null,
+        "note": null,
+        "loggedAt": "2026-09-28T16:36:02.527",
+        "minuteOfDay": 996
+      },
+      {
+        "id": "log_1790613416814000_1",
+        "itemId": "h_walk",
+        "kind": "habit",
+        "date": "2026-09-28",
+        "level": "normal",
+        "durationMin": null,
+        "enjoyment": null,
+        "note": null,
+        "loggedAt": "2026-09-28T16:36:56.814",
+        "minuteOfDay": 996
+      },
+      {
+        "id": "log_1790613439002000_0",
+        "itemId": "joymap_reading",
+        "kind": "joy",
+        "date": "2026-09-28",
+        "level": "normal",
+        "durationMin": null,
+        "enjoyment": null,
+        "note": null,
+        "loggedAt": "2026-09-28T16:37:19.002",
+        "minuteOfDay": 997
+      },
+      {
+        "id": "log_1790614047644000_0",
+        "itemId": "wt_weekly_review",
+        "kind": "weeklyTask",
+        "date": "2026-09-28",
+        "level": "normal",
+        "durationMin": 1,
+        "enjoyment": null,
+        "note": null,
+        "loggedAt": "2026-09-28T16:47:27.594",
+        "minuteOfDay": 1007
+      }
+    ],
+    "dayPlans": [],
+    "energyChecks": [
+      {
+        "date": "2026-09-28",
+        "mode": "green",
+        "at": "2026-09-28T16:34:36.383"
+      }
+    ],
+    "strengthChecks": [],
+    "joyItems": [
+      {
+        "id": "joy_beans",
+        "kind": "earned",
+        "titleAr": "حبوب قهوة جديدة",
+        "titleEn": "New coffee beans",
+        "size": "quick",
+        "price": 60,
+        "bundledHabitId": null,
+        "costsMoney": true,
+        "keepFree": false,
+        "active": true
+      },
+      {
+        "id": "joy_book",
+        "kind": "earned",
+        "titleAr": "كتاب جديد",
+        "titleEn": "A new book",
+        "size": "medium",
+        "price": 120,
+        "bundledHabitId": null,
+        "costsMoney": true,
+        "keepFree": false,
+        "active": true
+      },
+      {
+        "id": "joy_coffee_book",
+        "kind": "free",
+        "titleAr": "قهوة وكتاب",
+        "titleEn": "Coffee & a book",
+        "size": "medium",
+        "price": null,
+        "bundledHabitId": null,
+        "costsMoney": false,
+        "keepFree": true,
+        "active": true
+      },
+      {
+        "id": "joy_outing",
+        "kind": "earned",
+        "titleAr": "طلعة مع صديقة",
+        "titleEn": "An outing with a friend",
+        "size": "big",
+        "price": 200,
+        "bundledHabitId": null,
+        "costsMoney": true,
+        "keepFree": false,
+        "active": true
+      },
+      {
+        "id": "joy_podcast",
+        "kind": "bundled",
+        "titleAr": "بودكاست — فقط وقت المشي",
+        "titleEn": "Podcast — only while walking",
+        "size": "quick",
+        "price": null,
+        "bundledHabitId": "h_walk",
+        "costsMoney": false,
+        "keepFree": false,
+        "active": true
+      },
+      {
+        "id": "joy_series",
+        "kind": "bundled",
+        "titleAr": "حلقة مسلسل — فقط مع تمرين القوة",
+        "titleEn": "A series episode — only with strength training",
+        "size": "medium",
+        "price": null,
+        "bundledHabitId": "h_strength",
+        "costsMoney": false,
+        "keepFree": false,
+        "active": true
+      },
+      {
+        "id": "joymap_reading",
+        "kind": "free",
+        "titleAr": "قراءة",
+        "titleEn": "Reading",
+        "size": "quick",
+        "price": null,
+        "bundledHabitId": null,
+        "costsMoney": false,
+        "keepFree": true,
+        "active": true
+      }
+    ],
+    "sparkTxns": [
+      {
+        "id": "spk_1790613315616000_1",
+        "date": "2026-09-28",
+        "amount": 1,
+        "reason": "completion",
+        "refId": "log_1790613315616000_0",
+        "at": "2026-09-28T16:35:15.616"
+      },
+      {
+        "id": "spk_1790613350896000_1",
+        "date": "2026-09-28",
+        "amount": 1,
+        "reason": "completion",
+        "refId": "log_1790613350896000_0",
+        "at": "2026-09-28T16:35:50.896"
+      },
+      {
+        "id": "spk_1790613352597000_2",
+        "date": "2026-09-28",
+        "amount": -1,
+        "reason": "reversal",
+        "refId": "log_1790613350896000_0",
+        "at": "2026-09-28T16:35:52.597"
+      },
+      {
+        "id": "spk_1790613362527000_4",
+        "date": "2026-09-28",
+        "amount": 1,
+        "reason": "completion",
+        "refId": "log_1790613362527000_3",
+        "at": "2026-09-28T16:36:02.527"
+      },
+      {
+        "id": "spk_1790613377546000_5",
+        "date": "2026-09-28",
+        "amount": -1,
+        "reason": "reversal",
+        "refId": "log_1790613315616000_0",
+        "at": "2026-09-28T16:36:17.546"
+      },
+      {
+        "id": "spk_1790613377808000_7",
+        "date": "2026-09-28",
+        "amount": 3,
+        "reason": "completion",
+        "refId": "log_1790613377808000_6",
+        "at": "2026-09-28T16:36:17.808"
+      },
+      {
+        "id": "spk_1790613406607000_0",
+        "date": "2026-09-28",
+        "amount": -3,
+        "reason": "reversal",
+        "refId": "log_1790613377808000_6",
+        "at": "2026-09-28T16:36:46.606"
+      },
+      {
+        "id": "spk_1790613416815000_2",
+        "date": "2026-09-28",
+        "amount": 2,
+        "reason": "completion",
+        "refId": "log_1790613416814000_1",
+        "at": "2026-09-28T16:36:56.814"
+      },
+      {
+        "id": "spk_1790614047644000_1",
+        "date": "2026-09-28",
+        "amount": 5,
+        "reason": "weeklyReview",
+        "refId": "log_1790614047644000_0",
+        "at": "2026-09-28T16:47:27.594"
+      }
+    ],
+    "experiments": [],
+    "vocabCards": [],
+    "mockTests": [],
+    "drivingSessions": [],
+    "moneyEnvelopes": [],
+    "bills": [],
+    "bnplItems": [],
+    "wishItems": [],
+    "adminDocs": [],
+    "fixedEvents": [
+      {
+        "id": "focus_1790613862659000_0",
+        "title": "Focus",
+        "startMinute": 1004,
+        "endMinute": 1029,
+        "date": "2026-09-28",
+        "weekdays": [],
+        "isFocusBlock": true
+      }
+    ],
+    "nudgeRecords": [],
+    "errands": [],
+    "cycleEntries": [],
+    "weeklyReviews": [
+      {
+        "id": "2026-09-27",
+        "date": "2026-09-28",
+        "chapterTitle": "test",
+        "wins": [
+          "المشي اليومي والخطوات: 1 من 4",
+          "بلوك تركيز لمهمة وحدة: 1 من 5"
+        ],
+        "blockers": [],
+        "top3": [],
+        "experimentId": null,
+        "durationSec": 17
+      }
+    ]
+  },
+  "meta": {
+    "settings": {
+      "language": "en",
+      "theme": "dark",
+      "notificationCap": 6,
+      "quietStartMinute": 1380,
+      "quietEndMinute": 420,
+      "wakeMinute": 360,
+      "sleepMinute": 1380,
+      "prayerAnchorsEnabled": false,
+      "latitude": 21.4225,
+      "longitude": 39.8262,
+      "utcOffsetMinutes": 180,
+      "timeZoneName": "Asia/Riyadh",
+      "cycleModule": false,
+      "pcosModule": false,
+      "aquariumModule": true,
+      "appLock": false,
+      "forgivingStreak": false,
+      "dailyBudgetMin": 150,
+      "budgetByWeekday": {},
+      "ieltsWeakestSkill": "writing",
+      "weekStartsOn": 7,
+      "eveningShutdownBeforeSleepMin": 90,
+      "onboardingDone": true,
+      "lastSeasonReview": null,
+      "firstActionPin": null
+    },
+    "openedDays": [
+      "2026-09-28"
+    ],
+    "firstRunDate": "2026-09-28",
+    "moduleState": {
+      "drivingStepsDone": [],
+      "drivingServiceLink": "",
+      "ieltsFeedbackChecks": [],
+      "homeZoneOffset": 0,
+      "autoSaveDay": null,
+      "autoSaveMinute": 540,
+      "freshStartDismissed": null,
+      "resetMinutes": 10
+    }
+  }
+}

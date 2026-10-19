@@ -1,0 +1,107 @@
+{
+  "schema_version": "flutter-browser-navigation.v1",
+  "recorded_at": "2026-10-18T17:28:40.630Z",
+  "result": "PASS",
+  "scope": "fresh headless system Chrome, loopback Flutter web release build, 375x812; direct navigation to all primary tabs and nested routes",
+  "checks": [
+    {
+      "path": "/today",
+      "label": "Today",
+      "result": "PASS",
+      "browser_path": "/today"
+    },
+    {
+      "path": "/path",
+      "label": "Professional",
+      "result": "PASS",
+      "browser_path": "/path"
+    },
+    {
+      "path": "/habits",
+      "label": "Care",
+      "result": "PASS",
+      "browser_path": "/habits"
+    },
+    {
+      "path": "/me",
+      "label": "Me",
+      "result": "PASS",
+      "browser_path": "/me"
+    },
+    {
+      "path": "/habits/joy",
+      "label": "Joy nested under Care",
+      "result": "PASS",
+      "browser_path": "/habits/joy"
+    },
+    {
+      "path": "/habits/joy/reward",
+      "label": "Reward nested route",
+      "result": "PASS",
+      "browser_path": "/habits/joy/reward"
+    },
+    {
+      "path": "/path/ielts",
+      "label": "IELTS nested route",
+      "result": "PASS",
+      "browser_path": "/path/ielts"
+    },
+    {
+      "path": "/path/driving",
+      "label": "Driving nested route",
+      "result": "PASS",
+      "browser_path": "/path/driving"
+    },
+    {
+      "path": "/me/insights",
+      "label": "Me insights",
+      "result": "PASS",
+      "browser_path": "/me/insights"
+    },
+    {
+      "path": "/me/money",
+      "label": "Me money",
+      "result": "PASS",
+      "browser_path": "/me/money"
+    },
+    {
+      "path": "/me/home",
+      "label": "Me home administration",
+      "result": "PASS",
+      "browser_path": "/me/home"
+    },
+    {
+      "path": "/me/evidence",
+      "label": "Me evidence library",
+      "result": "PASS",
+      "browser_path": "/me/evidence"
+    },
+    {
+      "path": "/me/settings",
+      "label": "Me nested route",
+      "result": "PASS",
+      "browser_path": "/me/settings"
+    },
+    {
+      "path": "/me/help",
+      "label": "Me help and safety",
+      "result": "PASS",
+      "browser_path": "/me/help"
+    },
+    {
+      "path": "/me/cycle",
+      "label": "Me sensitive cycle module",
+      "result": "PASS",
+      "browser_path": "/me/cycle"
+    },
+    {
+      "path": "/me/pcos",
+      "label": "Me sensitive PCOS module",
+      "result": "PASS",
+      "browser_path": "/me/pcos"
+    }
+  ],
+  "page_errors": [],
+  "external_requests": [],
+  "paid_calls": 0
+}

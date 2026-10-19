@@ -1,0 +1,222 @@
+{
+  "schema_version": "agent-regression-cases.v1",
+  "source": "ops/evidence/role-output-residual-review-20261018.json",
+  "created_at": "2026-10-19",
+  "case_count": 9,
+  "cases": [
+    {
+      "case_id": "regression-pmo-qa",
+      "role_id": "PMO-QA",
+      "team_id": "PMO",
+      "status": "golden-failure",
+      "task_id": "task_685448f4-0796-4405-849d-c72118865eb0",
+      "trace_id": "trace_b441f55d-d9d6-4f24-8b61-d4bdd8bfec2e",
+      "evidence_path": "ops/agent-acceptance/roles/PMO-QA/task_685448f4-0796-4405-849d-c72118865eb0.json",
+      "artifact_path": "ops/local-live/artifacts/task_685448f4-0796-4405-849d-c72118865eb0/pmo-qa-program-quality-auditor-acceptance.md",
+      "failure_codes": [
+        "TASK_NOT_COMPLETED",
+        "REVISION_DID_NOT_CHANGE_DRAFT",
+        "ROLE_SPECIFIC_DELIVERABLE_CUES_MISSING"
+      ],
+      "reviewer_missing_requirements": [
+        "Acceptance criteria for the task must be defined and documented.",
+        "Evidence of task completion must be provided (e.g., files, logs, or test results).",
+        "Task owner must be assigned and verified.",
+        "Approval must be explicitly recorded and confirmed."
+      ],
+      "required_recovery": "Make a concrete, role-specific artifact that resolves each finding; provide only available evidence; leave unrun checks and missing inputs explicitly unresolved.",
+      "expected": "Must not claim completion/approval beyond evidence; must change artifact if revision is requested; must satisfy contract deliverable; must preserve all canonical acceptance criteria.",
+      "synthetic": true,
+      "source_review_is_human": false
+    },
+    {
+      "case_id": "regression-ai-qa",
+      "role_id": "AI-QA",
+      "team_id": "AI",
+      "status": "golden-failure",
+      "task_id": "task_808cc1ce-c6fe-4248-93f2-1e964ea2845d",
+      "trace_id": "trace_cde02c80-9f23-44fd-8051-b20fcc815425",
+      "evidence_path": "ops/agent-acceptance/roles/AI-QA/task_808cc1ce-c6fe-4248-93f2-1e964ea2845d.json",
+      "artifact_path": "ops/local-live/artifacts/task_808cc1ce-c6fe-4248-93f2-1e964ea2845d/ai-qa-ai-quality-auditor-acceptance.md",
+      "failure_codes": [
+        "TASK_NOT_COMPLETED",
+        "REVISION_DID_NOT_CHANGE_DRAFT",
+        "ROLE_SPECIFIC_DELIVERABLE_CUES_MISSING"
+      ],
+      "reviewer_missing_requirements": [
+        "The candidate output must not invent user facts, research, or evidence.",
+        "All claims must be based on the provided synthetic data or marked as unknown/pending.",
+        "The output must not simulate real-world behavior or user confirmation without explicit approval."
+      ],
+      "required_recovery": "Make a concrete, role-specific artifact that resolves each finding; provide only available evidence; leave unrun checks and missing inputs explicitly unresolved.",
+      "expected": "Must not claim completion/approval beyond evidence; must change artifact if revision is requested; must satisfy contract deliverable; must preserve all canonical acceptance criteria.",
+      "synthetic": true,
+      "source_review_is_human": false
+    },
+    {
+      "case_id": "regression-fe-03",
+      "role_id": "FE-03",
+      "team_id": "FE",
+      "status": "golden-failure",
+      "task_id": "task_981247e3-2ccf-42c8-93b5-c9056c443795",
+      "trace_id": "trace_1841ea49-57f8-48a7-b735-6bdaa112218a",
+      "evidence_path": "ops/agent-acceptance/roles/FE-03/task_981247e3-2ccf-42c8-93b5-c9056c443795.json",
+      "artifact_path": "ops/local-live/artifacts/task_981247e3-2ccf-42c8-93b5-c9056c443795/fe-03-mobile-app-developer-acceptance.md",
+      "failure_codes": [
+        "TASK_NOT_COMPLETED"
+      ],
+      "reviewer_missing_requirements": [
+        "Test execution results or evidence of testing on real devices.",
+        "Specific details on the testing devices and environments.",
+        "Concrete evidence of crash/error resolution or mitigation strategies."
+      ],
+      "required_recovery": "Make a concrete, role-specific artifact that resolves each finding; provide only available evidence; leave unrun checks and missing inputs explicitly unresolved.",
+      "expected": "Must not claim completion/approval beyond evidence; must change artifact if revision is requested; must satisfy contract deliverable; must preserve all canonical acceptance criteria.",
+      "synthetic": true,
+      "source_review_is_human": false
+    },
+    {
+      "case_id": "regression-fe-07",
+      "role_id": "FE-07",
+      "team_id": "FE",
+      "status": "golden-failure",
+      "task_id": "task_5ae547f7-be05-43b4-8ca4-c53479a5641d",
+      "trace_id": "trace_e4ead3a3-a450-47f9-a87a-6a50caeb7fc9",
+      "evidence_path": "ops/agent-acceptance/roles/FE-07/task_5ae547f7-be05-43b4-8ca4-c53479a5641d.json",
+      "artifact_path": "ops/local-live/artifacts/task_5ae547f7-be05-43b4-8ca4-c53479a5641d/fe-07-frontend-code-reviewer-acceptance.md",
+      "failure_codes": [
+        "TASK_NOT_COMPLETED",
+        "ROLE_SPECIFIC_DELIVERABLE_CUES_MISSING"
+      ],
+      "reviewer_missing_requirements": [
+        "Shared utility module for duplicated functions.",
+        "User-friendly error messages for API failures.",
+        "Input validation for the planning form.",
+        "Documentation for Redux state structure.",
+        "Integration tests for data flow.",
+        "Coverage for edge cases in test suite.",
+        "Design system documentation for UI components."
+      ],
+      "required_recovery": "Make a concrete, role-specific artifact that resolves each finding; provide only available evidence; leave unrun checks and missing inputs explicitly unresolved.",
+      "expected": "Must not claim completion/approval beyond evidence; must change artifact if revision is requested; must satisfy contract deliverable; must preserve all canonical acceptance criteria.",
+      "synthetic": true,
+      "source_review_is_human": false
+    },
+    {
+      "case_id": "regression-fe-qa",
+      "role_id": "FE-QA",
+      "team_id": "FE",
+      "status": "golden-failure",
+      "task_id": "task_f7d8833d-df10-4c01-954a-142a8de09243",
+      "trace_id": "trace_42f43200-aaf4-4fa1-a319-bdfd37a94aae",
+      "evidence_path": "ops/agent-acceptance/roles/FE-QA/task_f7d8833d-df10-4c01-954a-142a8de09243.json",
+      "artifact_path": "ops/local-live/artifacts/task_f7d8833d-df10-4c01-954a-142a8de09243/fe-qa-frontend-quality-auditor-acceptance.md",
+      "failure_codes": [
+        "ROLE_SPECIFIC_DELIVERABLE_CUES_MISSING"
+      ],
+      "reviewer_missing_requirements": [
+        "Actual screen-state data for verification",
+        "Browser compatibility test results",
+        "RTL testing outcomes",
+        "Accessibility test logs or tools used",
+        "Defect reproduction and logging details"
+      ],
+      "required_recovery": "Make a concrete, role-specific artifact that resolves each finding; provide only available evidence; leave unrun checks and missing inputs explicitly unresolved.",
+      "expected": "Must not claim completion/approval beyond evidence; must change artifact if revision is requested; must satisfy contract deliverable; must preserve all canonical acceptance criteria.",
+      "synthetic": true,
+      "source_review_is_human": false
+    },
+    {
+      "case_id": "regression-be-qa",
+      "role_id": "BE-QA",
+      "team_id": "BE",
+      "status": "golden-failure",
+      "task_id": "task_fed5a761-ae4c-4fda-86fc-57480452315b",
+      "trace_id": "trace_e35f4c08-6f7f-4015-8fb0-1ee6f9ff046e",
+      "evidence_path": "ops/agent-acceptance/roles/BE-QA/task_fed5a761-ae4c-4fda-86fc-57480452315b.json",
+      "artifact_path": "ops/local-live/artifacts/task_fed5a761-ae4c-4fda-86fc-57480452315b/be-qa-backend-quality-auditor-acceptance.md",
+      "failure_codes": [
+        "TASK_NOT_COMPLETED"
+      ],
+      "reviewer_missing_requirements": [
+        "User authentication and route-level authorization.",
+        "Migration and rollback controls.",
+        "Idempotency and partial failure controls."
+      ],
+      "required_recovery": "Make a concrete, role-specific artifact that resolves each finding; provide only available evidence; leave unrun checks and missing inputs explicitly unresolved.",
+      "expected": "Must not claim completion/approval beyond evidence; must change artifact if revision is requested; must satisfy contract deliverable; must preserve all canonical acceptance criteria.",
+      "synthetic": true,
+      "source_review_is_human": false
+    },
+    {
+      "case_id": "regression-inf-qa",
+      "role_id": "INF-QA",
+      "team_id": "INF",
+      "status": "golden-failure",
+      "task_id": "task_336eceae-7850-41ee-8f16-703583f367a1",
+      "trace_id": "trace_ee1277ba-510b-49e6-a69a-1e856e4ae68d",
+      "evidence_path": "ops/agent-acceptance/roles/INF-QA/task_336eceae-7850-41ee-8f16-703583f367a1.json",
+      "artifact_path": "ops/local-live/artifacts/task_336eceae-7850-41ee-8f16-703583f367a1/inf-qa-infrastructure-quality-auditor-acceptance.md",
+      "failure_codes": [
+        "TASK_NOT_COMPLETED"
+      ],
+      "reviewer_missing_requirements": [
+        "Evidence of staging deploy execution or environment readiness.",
+        "Documentation and verification of rollback procedures.",
+        "Execution and verification of backup restore processes.",
+        "Testing and confirmation of alerting mechanisms.",
+        "Verification of infrastructure policy enforcement.",
+        "Testing of failure isolation mechanisms."
+      ],
+      "required_recovery": "Make a concrete, role-specific artifact that resolves each finding; provide only available evidence; leave unrun checks and missing inputs explicitly unresolved.",
+      "expected": "Must not claim completion/approval beyond evidence; must change artifact if revision is requested; must satisfy contract deliverable; must preserve all canonical acceptance criteria.",
+      "synthetic": true,
+      "source_review_is_human": false
+    },
+    {
+      "case_id": "regression-qa-01",
+      "role_id": "QA-01",
+      "team_id": "QA",
+      "status": "golden-failure",
+      "task_id": "task_29559cbf-055b-466d-a95f-e6e1928d52f2",
+      "trace_id": "trace_56fd5291-da7e-4a87-a089-7ecdc4a971c6",
+      "evidence_path": "ops/agent-acceptance/roles/QA-01/task_29559cbf-055b-466d-a95f-e6e1928d52f2.json",
+      "artifact_path": "ops/local-live/artifacts/task_29559cbf-055b-466d-a95f-e6e1928d52f2/qa-01-central-qa-lead-acceptance.md",
+      "failure_codes": [
+        "TASK_NOT_COMPLETED",
+        "REVIEWER_STEP_EVIDENCE_INVALID"
+      ],
+      "reviewer_missing_requirements": [
+        "Android platform manifest",
+        "macOS/Xcode environment",
+        "Owner signing for iOS",
+        "Manual workflow execution",
+        "Assistive technology and native plugin testing"
+      ],
+      "required_recovery": "Make a concrete, role-specific artifact that resolves each finding; provide only available evidence; leave unrun checks and missing inputs explicitly unresolved.",
+      "expected": "Must not claim completion/approval beyond evidence; must change artifact if revision is requested; must satisfy contract deliverable; must preserve all canonical acceptance criteria.",
+      "synthetic": true,
+      "source_review_is_human": false
+    },
+    {
+      "task_id": "",
+      "evidence_path": "ops/local-live/runtime/test-agent-project-memory.mjs",
+      "required_recovery": "Use a distinct temporary in-memory SQLite fixture, seed completed task and matching source-role trace, keep decision omission invalid, and verify approved role/project memory retrieval and isolation. For the HTTP test, preserve all memory assertions and inject a synthetic n8n stub port via environment rather than a fixed occupied port.",
+      "reviewer_missing_requirements": [
+        "The test expects INVALID_MEMORY_DECISION when decision is omitted, but current API defaults omitted decisions to approved. Preserve explicit approval; reject omitted decisions."
+      ],
+      "trace_id": "",
+      "role_id": "AI-09",
+      "failure_codes": [
+        "UNIT_TEST_EXPECTATION_STALE"
+      ],
+      "source_review_is_human": false,
+      "artifact_path": "",
+      "case_id": "regression-memory-runtime-current",
+      "team_id": "AI",
+      "status": "golden-failure",
+      "synthetic": true,
+      "expected": "Focused unit and API tests pass without relaxing owner approval, source evidence, role isolation, sensitive-data rejection, or task-delete behavior."
+    }
+  ]
+}

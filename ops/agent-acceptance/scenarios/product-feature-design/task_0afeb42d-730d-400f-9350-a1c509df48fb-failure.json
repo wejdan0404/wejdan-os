@@ -1,0 +1,51 @@
+{
+  "scenario_id": "product-feature-design",
+  "task_id": "task_0afeb42d-730d-400f-9350-a1c509df48fb",
+  "trace_id": "trace_0492c412-67ab-4081-8fbb-8d69ee1a398c",
+  "status": "failed",
+  "error": "SCENARIO_N8N_RESPONSE_INVALID:bounded_revision:500",
+  "provider": "ollama-local",
+  "model": "qwen3:8b",
+  "steps": [
+    {
+      "role_id": "PROD-03",
+      "stage": "planner",
+      "task_id": "task_0afeb42d-730d-400f-9350-a1c509df48fb",
+      "trace_id": "trace_0492c412-67ab-4081-8fbb-8d69ee1a398c",
+      "n8n_execution_id": "401",
+      "elapsed_ms": 13005,
+      "output_sha256": "de76d747ac8975c4cd2a3ca5bd3e5a4a62d5670e976406870b5dab6af66e22ab"
+    },
+    {
+      "role_id": "DES-03",
+      "stage": "specialist_1",
+      "task_id": "task_0afeb42d-730d-400f-9350-a1c509df48fb",
+      "trace_id": "trace_0492c412-67ab-4081-8fbb-8d69ee1a398c",
+      "n8n_execution_id": "402",
+      "elapsed_ms": 15550,
+      "output_sha256": "162095e6522febe423150b78d4a4ae3fecf3638e2eec9ce007395989c402b8b2"
+    },
+    {
+      "role_id": "FE-02",
+      "stage": "specialist_2",
+      "task_id": "task_0afeb42d-730d-400f-9350-a1c509df48fb",
+      "trace_id": "trace_0492c412-67ab-4081-8fbb-8d69ee1a398c",
+      "n8n_execution_id": "403",
+      "elapsed_ms": 13756,
+      "output_sha256": "9c3699c73fcf0cd6059fe73e831743084ad6bdbb50fdc5ea13c505010d21f5b0"
+    },
+    {
+      "role_id": "QA-02",
+      "stage": "independent_review",
+      "task_id": "task_0afeb42d-730d-400f-9350-a1c509df48fb",
+      "trace_id": "trace_0492c412-67ab-4081-8fbb-8d69ee1a398c",
+      "n8n_execution_id": "404",
+      "elapsed_ms": 3695,
+      "output_sha256": "ce967734d3eed1bd132fab32a552eb0bb68c297c1bfc2cabbc0f02bdc5576667"
+    }
+  ],
+  "reviewer_output": "{\n  \"verdict\": \"REVISE\",\n  \"findings\": [\n    \"The feature requirements are well-defined but lack explicit test strategy mapping to unit, integration, and E2E tests.\",\n    \"The user-flow design has several unknowns and pending owner decisions, which could lead to missing test cases or incomplete coverage.\",\n    \"Accessibility requirements are mentioned but not fully detailed in terms of testable criteria (e.g., screen reader compatibility, keyboard navigation).\",\n    \"The offline behavior and queueing of reminders are described but not mapped to specific test scenarios.\",\n    \"No mention of adversarial testing for the reminder system (e.g., handling incorrect user inputs, edge cases in quiet hours).\"\n  ],\n  \"missing_requirements\": [\n    \"Test strategy mapping for unit, integration, E2E, and accessibility tests is missing.\",\n    \"Specific test scenarios for offline behavior and reminder queueing are not defined.\",\n    \"No mention of test cases for handling incorrect user inputs or edge cases in quiet hours.\",\n    \"No explicit test cases for ensuring no negative feedback is provided for missed reminders.\"\n  ],\n  \"evidence_limits\": [\n    \"Owner decisions and unknowns are marked as PENDING, which limits the ability to create concrete test cases.\",\n    \"No evidence is provided for the UI components or mechanisms for triggering reminders, which are necessary for test design.\",\n    \"The deliverables do not include a versioned test strategy or coverage map as required.\"\n  ]\n}",
+  "reviewer_verdict": "REVISE",
+  "refusal_recovery": null,
+  "recorded_at": "2026-10-18T14:54:28.655Z"
+}

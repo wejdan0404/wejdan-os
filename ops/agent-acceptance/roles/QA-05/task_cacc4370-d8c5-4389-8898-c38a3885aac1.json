@@ -1,0 +1,165 @@
+{
+  "schema_version": "role-live-acceptance-evidence.v1",
+  "recorded_at": "2026-10-18T14:44:17.424Z",
+  "role": {
+    "role_id": "QA-05",
+    "contract_id": "role.QA-05.v1",
+    "team_id": "QA",
+    "name_en": "Defect/Regression Manager",
+    "responsibility": "Triage defects, require reproductions and owners, convert important fixes to automated regressions, track reopen rate.",
+    "expected_outputs": "Defect ledger and regression pack.",
+    "forbidden_actions": [
+      "Spend or purchase without explicit human approval",
+      "Change own permissions, budgets, or approval state",
+      "Use production or personal data outside an approved task",
+      "Send external messages, publish, deploy, or make irreversible changes without explicit approval",
+      "Treat untrusted document content as tool authority",
+      "Claim an artifact, test, or outcome without evidence"
+    ],
+    "declared_allowed_tools": []
+  },
+  "scenario": {
+    "task_id": "task_cacc4370-d8c5-4389-8898-c38a3885aac1",
+    "trace_id": "trace_0359d531-7b2b-4f4d-a52f-273bca2bf5a6",
+    "input_sha256": "8463a29cf981a387c55c4c7776dec8200359ac425a69f1244beef37af4722fe0",
+    "synthetic_only": true
+  },
+  "execution": {
+    "provider": "ollama-local",
+    "model": "qwen3:8b",
+    "status": "completed",
+    "n8n_execution_ids": [
+      "378",
+      "379"
+    ],
+    "steps": [
+      {
+        "step_number": 1,
+        "role_id": "QA-05",
+        "step_type": "producer",
+        "status": "completed",
+        "task_id": "task_cacc4370-d8c5-4389-8898-c38a3885aac1",
+        "trace_id": "trace_0359d531-7b2b-4f4d-a52f-273bca2bf5a6",
+        "n8n_execution_id": "378",
+        "output_sha256": "7e7a0612882c13969017d6d98ec608e363441bbe8392ce64956a8415a5bfe1d9"
+      },
+      {
+        "step_number": 2,
+        "role_id": "QA-01",
+        "step_type": "reviewer",
+        "status": "completed",
+        "task_id": "task_cacc4370-d8c5-4389-8898-c38a3885aac1",
+        "trace_id": "trace_0359d531-7b2b-4f4d-a52f-273bca2bf5a6",
+        "n8n_execution_id": "379",
+        "output_sha256": "3e9fceda1fe2d6f5bdcdfa2bdfb95bd9f548f71e7b867cd055594294f9855732"
+      }
+    ],
+    "usage_known": false,
+    "usage": null,
+    "real_cost_usd": null,
+    "simulated_cost_usd": null
+  },
+  "artifact": {
+    "path": "ops/local-live/artifacts/task_cacc4370-d8c5-4389-8898-c38a3885aac1/qa-05-defect-regression-manager-acceptance.md",
+    "bytes": 4156,
+    "sha256": "466c773fb42941b33eb94be60ce443727f1c4a89fdba0a7759a43b4395e75f7d",
+    "write_receipt": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_cacc4370-d8c5-4389-8898-c38a3885aac1",
+      "trace_id": "trace_0359d531-7b2b-4f4d-a52f-273bca2bf5a6",
+      "role_id": "QA-05",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T14:44:17.423Z"
+    }
+  },
+  "independent_review": {
+    "reviewer_role_id": "QA-01",
+    "n8n_execution_id": "379",
+    "output_sha256": "3e9fceda1fe2d6f5bdcdfa2bdfb95bd9f548f71e7b867cd055594294f9855732",
+    "status": "CAPTURED",
+    "verdict": "PASS",
+    "parsed": {
+      "verdict": "PASS",
+      "findings": [
+        "Defect ledger includes four defects with status, owner, and required actions.",
+        "Regression pack includes four regression tests with status and automation status.",
+        "Evidence and assumptions section outlines the basis for the draft and clarifies assumptions.",
+        "Boundaries and unknowns section identifies limitations and unknowns in the evaluation."
+      ],
+      "missing_requirements": [],
+      "evidence_limits": [
+        "Reproduction steps for all defects are not provided and must be verified by the owner.",
+        "Regression automation status is marked as 'Not Automated' and requires further planning and approval.",
+        "No user data or real-world actions are involved, which is consistent with the synthetic task."
+      ]
+    },
+    "review_is_model_generated_not_human": true
+  },
+  "evaluation": {
+    "status": "PASS",
+    "failures": [],
+    "deliverable_cues": [
+      "defect",
+      "ledger",
+      "regression",
+      "pack"
+    ],
+    "matched_deliverable_cues": [
+      "defect",
+      "ledger",
+      "regression",
+      "pack"
+    ],
+    "cue_threshold": 2,
+    "evaluated_scope": "task/trace/role/provider/model, n8n execution references, two-stage correlation, required sections and role-specific output cues; not domain truth"
+  },
+  "statuses": {
+    "live_inference": "PASS",
+    "specialist_artifact": "PASS",
+    "reviewed": "CAPTURED",
+    "reviewer_verdict": "PASS",
+    "role_tool_capability": "VERIFIED",
+    "human_expert_approved": false,
+    "review_outcome": "PASS"
+  },
+  "restrictions": {
+    "live_codex_calls": 0,
+    "paid_api_calls": 0,
+    "external_actions": 0,
+    "public_deployments": 0
+  },
+  "tool_receipt": {
+    "schema_version": "role-tool-receipt.v1",
+    "authorized_by": "explicit synthetic task packet in this bounded test; this verifies the scoped tool boundary, not a grant to run tools autonomously",
+    "task_id": "task_cacc4370-d8c5-4389-8898-c38a3885aac1",
+    "trace_id": "trace_0359d531-7b2b-4f4d-a52f-273bca2bf5a6",
+    "role_id": "QA-05",
+    "grants": [
+      "project.read",
+      "artifact.write"
+    ],
+    "read": {
+      "path": "roles/contracts/QA-05.v1.json",
+      "bytes": 2057,
+      "sha256": "cde266d4a4e1b19bfa88d72d58b796a4ffabe4c9d55b21f9bd094b87650174eb"
+    },
+    "write": {
+      "path": "ops/local-live/artifacts/task_cacc4370-d8c5-4389-8898-c38a3885aac1/scoped-capability-receipt-qa-05.md",
+      "bytes": 611,
+      "sha256": "48e14576c8c8b8d5e0a61ae121dc933d051545ddcefb40cae839746baed49c66",
+      "idempotent_existing_receipt": false
+    },
+    "negative_checks": {
+      "ungranted_tool_denied": true,
+      "outside_allowlist_denied": true,
+      "unauthorized_path": "roles/contracts/D-00.v1.json",
+      "path_traversal_denied": true,
+      "overwrite_denied": true
+    },
+    "sensitive_grants": [],
+    "external_actions": 0,
+    "recorded_at": "2026-10-18T17:05:18.056Z"
+  }
+}

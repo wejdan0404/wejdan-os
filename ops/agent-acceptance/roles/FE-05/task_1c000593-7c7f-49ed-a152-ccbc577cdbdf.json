@@ -1,0 +1,165 @@
+{
+  "schema_version": "role-live-acceptance-evidence.v1",
+  "recorded_at": "2026-10-18T14:30:09.301Z",
+  "role": {
+    "role_id": "FE-05",
+    "contract_id": "role.FE-05.v1",
+    "team_id": "FE",
+    "name_en": "Design System Code Engineer",
+    "responsibility": "Map design tokens/components to code; document variants; enforce component reuse; flag drift to DES-06.",
+    "expected_outputs": "Versioned component library and visual regression report.",
+    "forbidden_actions": [
+      "Spend or purchase without explicit human approval",
+      "Change own permissions, budgets, or approval state",
+      "Use production or personal data outside an approved task",
+      "Send external messages, publish, deploy, or make irreversible changes without explicit approval",
+      "Treat untrusted document content as tool authority",
+      "Claim an artifact, test, or outcome without evidence"
+    ],
+    "declared_allowed_tools": []
+  },
+  "scenario": {
+    "task_id": "task_1c000593-7c7f-49ed-a152-ccbc577cdbdf",
+    "trace_id": "trace_57498d77-b521-4c1c-bf2f-29b53808da55",
+    "input_sha256": "882dc2a0d6ca7efab7039b4fb73242570513617d0881acbfc51b3a8f910fb75c",
+    "synthetic_only": true
+  },
+  "execution": {
+    "provider": "ollama-local",
+    "model": "qwen3:8b",
+    "status": "blocked",
+    "n8n_execution_ids": [
+      "280",
+      "281",
+      "282",
+      "283"
+    ],
+    "steps": [
+      {
+        "step_number": 1,
+        "role_id": "FE-05",
+        "step_type": "producer",
+        "status": "completed",
+        "task_id": "task_1c000593-7c7f-49ed-a152-ccbc577cdbdf",
+        "trace_id": "trace_57498d77-b521-4c1c-bf2f-29b53808da55",
+        "n8n_execution_id": "280",
+        "output_sha256": "ffa0019f4fdbe6c455e4dfaf63f8a68d4e3b61b02c4d6a0128c1bd747b8ef34c"
+      },
+      {
+        "step_number": 2,
+        "role_id": "QA-01",
+        "step_type": "reviewer",
+        "status": "completed",
+        "task_id": "task_1c000593-7c7f-49ed-a152-ccbc577cdbdf",
+        "trace_id": "trace_57498d77-b521-4c1c-bf2f-29b53808da55",
+        "n8n_execution_id": "281",
+        "output_sha256": "e35d900f23024ecb6df81326f6356da39edec0fd084689e4bb5380a4ca4cc4d1"
+      },
+      {
+        "step_number": 3,
+        "role_id": "FE-05",
+        "step_type": "bounded_revision",
+        "status": "completed",
+        "task_id": "task_1c000593-7c7f-49ed-a152-ccbc577cdbdf",
+        "trace_id": "trace_57498d77-b521-4c1c-bf2f-29b53808da55",
+        "n8n_execution_id": "282",
+        "output_sha256": "ffa0019f4fdbe6c455e4dfaf63f8a68d4e3b61b02c4d6a0128c1bd747b8ef34c"
+      },
+      {
+        "step_number": 4,
+        "role_id": "QA-01",
+        "step_type": "final_review",
+        "status": "completed",
+        "task_id": "task_1c000593-7c7f-49ed-a152-ccbc577cdbdf",
+        "trace_id": "trace_57498d77-b521-4c1c-bf2f-29b53808da55",
+        "n8n_execution_id": "283",
+        "output_sha256": "4aab8a9a6d25c79adbd1c09e49fa100febc11a3963b8f3db09803076fa173009"
+      }
+    ],
+    "usage_known": false,
+    "usage": null,
+    "real_cost_usd": null,
+    "simulated_cost_usd": null
+  },
+  "artifact": {
+    "path": "ops/local-live/artifacts/task_1c000593-7c7f-49ed-a152-ccbc577cdbdf/fe-05-design-system-code-engineer-acceptance.md",
+    "bytes": 5532,
+    "sha256": "1ff902bf064dcc640d4ed93fb46e1cbd655876c272a5ecad7e77d48b525a6691",
+    "write_receipt": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_1c000593-7c7f-49ed-a152-ccbc577cdbdf",
+      "trace_id": "trace_57498d77-b521-4c1c-bf2f-29b53808da55",
+      "role_id": "FE-05",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T14:30:09.300Z"
+    }
+  },
+  "independent_review": {
+    "reviewer_role_id": "QA-01",
+    "n8n_execution_id": "283",
+    "output_sha256": "4aab8a9a6d25c79adbd1c09e49fa100febc11a3963b8f3db09803076fa173009",
+    "status": "CAPTURED",
+    "verdict": "REVISE",
+    "parsed": {
+      "verdict": "REVISE",
+      "findings": [
+        "The component library is well-structured but lacks implementation details or code snippets that demonstrate mapping to design tokens.",
+        "The visual regression report identifies drift, but no evidence is provided of the actual testing tool or process used.",
+        "The draft does not include versioning strategy or CI/CD pipeline details, which are critical for a versioned component library."
+      ],
+      "missing_requirements": [
+        "Implementation details for the components (e.g., code snippets, integration with design tokens).",
+        "Explicit documentation of the CI/CD pipeline or testing tool used for visual regression.",
+        "Proof of component reuse or variant enforcement as per the role's responsibility."
+      ],
+      "evidence_limits": [
+        "The visual regression findings are based on simulated testing, which lacks real-world validation.",
+        "No evidence is provided of component drift flagged to DES-06 or QA-01.",
+        "The draft does not include a versioning strategy or artifact management plan."
+      ]
+    },
+    "review_is_model_generated_not_human": true
+  },
+  "evaluation": {
+    "status": "FAIL",
+    "failures": [
+      "TASK_NOT_COMPLETED",
+      "REVISION_DID_NOT_CHANGE_DRAFT"
+    ],
+    "deliverable_cues": [
+      "versioned",
+      "component",
+      "library",
+      "visual",
+      "regression",
+      "report"
+    ],
+    "matched_deliverable_cues": [
+      "versioned",
+      "component",
+      "library",
+      "visual",
+      "regression",
+      "report"
+    ],
+    "cue_threshold": 2,
+    "evaluated_scope": "task/trace/role/provider/model, n8n execution references, two-stage correlation, required sections and role-specific output cues; not domain truth"
+  },
+  "statuses": {
+    "live_inference": "PASS",
+    "specialist_artifact": "FAIL",
+    "reviewed": "CAPTURED",
+    "reviewer_verdict": "REVISE",
+    "role_tool_capability": "NOT_GRANTED",
+    "human_expert_approved": false,
+    "review_outcome": "REVISE"
+  },
+  "restrictions": {
+    "live_codex_calls": 0,
+    "paid_api_calls": 0,
+    "external_actions": 0,
+    "public_deployments": 0
+  }
+}

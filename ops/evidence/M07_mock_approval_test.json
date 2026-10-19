@@ -1,0 +1,17 @@
+{
+  "gate": "M07",
+  "status": "VERIFIED_LOCAL_MOCK",
+  "test_file": "workflows/n8n/tests/mock-approval.ps1",
+  "result": "PASS",
+  "cases": [
+    "approved fixture exact action hash/task/trace",
+    "pending non-authorizing",
+    "rejected remains rejected",
+    "expiry rejected",
+    "changed action rejected",
+    "task/trace mismatch rejected",
+    "replay rejected"
+  ],
+  "cloud_status": "NOT_WIRED",
+  "scope": "Offline synthetic-only helper, not authenticated approval service or inbox."
+}

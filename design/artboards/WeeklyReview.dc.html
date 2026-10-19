@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>مراجعة الأسبوع</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'IBM Plex Sans Arabic','IBM Plex Sans',sans-serif;background:#F4F7FC;color:#0E121C}
+a{color:#4F5FA0}a:hover{color:#2B3358}
+</style>
+</helmet>
+<div style="width:390px;height:844px;position:relative;overflow:hidden;background:#F4F7FC;font-family:'IBM Plex Sans Arabic','IBM Plex Sans',sans-serif;color:#0E121C">
+<main style="padding:16px 20px 132px;display:flex;flex-direction:column;gap:20px">
+
+<header style="display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;align-items:center;gap:12px">
+<div style="flex:1;display:flex;flex-direction:column">
+<h1 style="margin:0;font-size:22px;line-height:30px;font-weight:700">مراجعة الأسبوع</h1>
+<span style="font-size:13px;line-height:20px;font-weight:500;color:#5A6478">الفصل 3 · حوالي 10 دقائق</span>
+</div>
+<span style="font-family:'IBM Plex Sans',sans-serif;font-size:14px;font-weight:600;color:#4F5FA0" aria-live="polite">{{nav.count}}</span>
+<a href="Me.dc.html" aria-label="إغلاق المراجعة" style="flex:none;width:44px;height:44px;border-radius:999px;border:1px solid #DCE3EF;background:#FFFFFF;color:#2B3358;display:flex;align-items:center;justify-content:center;box-sizing:border-box"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></a>
+</div>
+<div style="display:grid;grid-template-columns:repeat(8, minmax(0, 1fr));gap:4px" role="img" aria-label="{{nav.progLabel}}">
+<sc-for list="{{segs}}" as="g" hint-placeholder-count="8"><span style="{{g.style}}"></span></sc-for>
+</div>
+<span style="font-size:12px;line-height:18px;font-weight:600;color:#5A6478">{{nav.label}}</span>
+</header>
+
+<sc-if value="{{st.s0}}" hint-placeholder-val="{{true}}">
+<section style="display:flex;flex-direction:column;gap:16px">
+<h2 style="margin:0;font-size:22px;line-height:30px;font-weight:700">وش مشى صح هالأسبوع؟</h2>
+<p style="margin:0;font-size:16px;line-height:26px;color:#3A4256">جمعنا لك اللي لاحظناه. أشري على اللي تفتخرين فيه.</p>
+<div style="display:flex;flex-direction:column;gap:8px">
+<sc-for list="{{wins}}" as="w" hint-placeholder-count="4">
+<button type="button" role="checkbox" aria-checked="{{w.checked}}" onClick="{{w.toggle}}" style="{{w.style}}">
+<span style="{{w.box}}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span>
+<span style="flex:1;font-size:16px;line-height:24px;font-weight:600;text-align:right">{{w.text}}</span>
+</button>
+</sc-for>
+</div>
+<label for="win-extra" style="font-size:14px;line-height:22px;font-weight:600;margin-top:4px">إنجاز ثاني تبين تذكرينه</label>
+<input id="win-extra" type="text" placeholder="مثلًا: كلمت صديقتي بعد فترة" style="height:52px;border-radius:14px;border:1px solid #DCE3EF;background:#FFFFFF;padding:0 14px;font-family:inherit;font-size:16px;color:#0E121C;box-sizing:border-box">
+<span style="font-size:12px;line-height:18px;font-weight:600;color:#5A6478;align-self:flex-start;background:#EEF1F6;border-radius:999px;padding:1px 8px">عيّنة</span>
+</section>
+</sc-if>
+
+<sc-if value="{{st.s1}}" hint-placeholder-val="{{false}}">
+<section style="display:flex;flex-direction:column;gap:16px">
+<h2 style="margin:0;font-size:22px;line-height:30px;font-weight:700">وش اللي عطّلك؟</h2>
+<p style="margin:0;font-size:16px;line-height:26px;color:#3A4256">ليش ما مشى الحال؟ نعدّل التصميم، مو نلومك. اختاري كل اللي ينطبق.</p>
+<div style="display:flex;flex-wrap:wrap;gap:8px">
+<sc-for list="{{blocks}}" as="b" hint-placeholder-count="8">
+<button type="button" aria-pressed="{{b.pressed}}" onClick="{{b.toggle}}" style="{{b.style}}">{{b.label}}</button>
+</sc-for>
+</div>
+<div style="background:#EAF1FB;border-radius:20px;padding:14px 16px;display:flex;flex-direction:column;gap:4px">
+<span style="font-size:12px;line-height:18px;font-weight:600;color:#4F5FA0">اقتراح تعديل وحد</span>
+<p style="margin:0;font-size:15px;line-height:24px;color:#2B3358">{{fix.text}}</p>
+</div>
+</section>
+</sc-if>
+
+<sc-if value="{{st.s2}}" hint-placeholder-val="{{false}}">
+<section style="display:flex;flex-direction:column;gap:14px">
+<h2 style="margin:0;font-size:22px;line-height:30px;font-weight:700">فحص القوة: المشي السريع</h2>
+<p style="margin:0;font-size:15px;line-height:24px;color:#3A4256">4 جمل، 20 ثانية. 1 = ما أوافق أبدًا · 5 = أوافق تمامًا.</p>
+<sc-for list="{{srbai}}" as="q" hint-placeholder-count="4">
+<div role="radiogroup" aria-label="{{q.text}}" style="background:#FFFFFF;border:1px solid #DCE3EF;border-radius:20px;padding:12px 14px;display:flex;flex-direction:column;gap:10px">
+<span style="font-size:16px;line-height:24px;font-weight:600">{{q.text}}</span>
+<div style="display:grid;grid-template-columns:repeat(5, minmax(0, 1fr));gap:6px">
+<sc-for list="{{q.opts}}" as="o" hint-placeholder-count="5">
+<button type="button" role="radio" aria-checked="{{o.checked}}" aria-label="{{o.aria}}" onClick="{{o.pick}}" style="{{o.style}}">{{o.n}}</button>
+</sc-for>
+</div>
+</div>
+</sc-for>
+<span style="font-size:13px;line-height:20px;font-weight:500;color:#5A6478">{{srbaiSum.text}}</span>
+</section>
+</sc-if>
+
+<sc-if value="{{st.s3}}" hint-placeholder-val="{{false}}">
+<section style="display:flex;flex-direction:column;gap:14px">
+<h2 style="margin:0;font-size:22px;line-height:30px;font-weight:700">تعديل الموسم</h2>
+<p style="margin:0;font-size:15px;line-height:24px;color:#3A4256">أنمّي 3 بالكثير · أحافظ 5 · والباقي يرتاح.</p>
+<div style="background:#FFFFFF;border:1px solid #DCE3EF;border-radius:20px;padding:4px 14px">
+<sc-for list="{{season}}" as="d" hint-placeholder-count="6">
+<div style="{{d.row}}">
+<span style="flex:1;font-size:15px;line-height:22px;font-weight:600">{{d.name}}</span>
+<div role="radiogroup" aria-label="{{d.name}}" style="display:flex;gap:4px;background:#F4F7FC;border-radius:12px;padding:3px">
+<sc-for list="{{d.opts}}" as="o" hint-placeholder-count="3">
+<button type="button" role="radio" aria-checked="{{o.checked}}" onClick="{{o.pick}}" style="{{o.style}}">{{o.label}}</button>
+</sc-for>
+</div>
+</div>
+</sc-for>
+</div>
+<span style="font-size:13px;line-height:20px;font-weight:500;color:#5A6478">{{seasonNote.text}}</span>
+</section>
+</sc-if>
+
+<sc-if value="{{st.s4}}" hint-placeholder-val="{{false}}">
+<section style="display:flex;flex-direction:column;gap:14px">
+<h2 style="margin:0;font-size:22px;line-height:30px;font-weight:700">أهم 3 للأسبوع الجاي</h2>
+<p style="margin:0;font-size:15px;line-height:24px;color:#3A4256">ثلاث بس. الباقي يمشي بالنسخة الصغيرة.</p>
+<div style="display:flex;flex-direction:column;gap:6px">
+<label for="t1" style="font-size:13px;line-height:20px;font-weight:600;color:#3A4256">الأولى</label>
+<input id="t1" type="text" value="اختبار IELTS التشخيصي كامل" style="height:52px;border-radius:14px;border:1px solid #DCE3EF;background:#FFFFFF;padding:0 14px;font-family:inherit;font-size:16px;color:#0E121C;box-sizing:border-box">
+</div>
+<div style="display:flex;flex-direction:column;gap:6px">
+<label for="t2" style="font-size:13px;line-height:20px;font-weight:600;color:#3A4256">الثانية</label>
+<input id="t2" type="text" value="تأكيد مسار الرخصة عبر أبشر" style="height:52px;border-radius:14px;border:1px solid #DCE3EF;background:#FFFFFF;padding:0 14px;font-family:inherit;font-size:16px;color:#0E121C;box-sizing:border-box">
+</div>
+<div style="display:flex;flex-direction:column;gap:6px">
+<label for="t3" style="font-size:13px;line-height:20px;font-weight:600;color:#3A4256">الثالثة</label>
+<input id="t3" type="text" value="إنهاء درس الوحدة 3 من Google UX" style="height:52px;border-radius:14px;border:1px solid #DCE3EF;background:#FFFFFF;padding:0 14px;font-family:inherit;font-size:16px;color:#0E121C;box-sizing:border-box">
+</div>
+</section>
+</sc-if>
+
+<sc-if value="{{st.s5}}" hint-placeholder-val="{{false}}">
+<section style="display:flex;flex-direction:column;gap:14px">
+<h2 style="margin:0;font-size:22px;line-height:30px;font-weight:700">تجربة الأسبوع</h2>
+<p style="margin:0;font-size:15px;line-height:24px;color:#3A4256">نغيّر شي واحد بس ونقيس الإنجاز والمتعة. القرار بعدها لك.</p>
+<div role="radiogroup" aria-label="تجربة الأسبوع" style="display:flex;flex-direction:column;gap:8px">
+<sc-for list="{{exps}}" as="e" hint-placeholder-count="3">
+<button type="button" role="radio" aria-checked="{{e.checked}}" onClick="{{e.pick}}" style="{{e.style}}">
+<span style="{{e.radio}}"></span>
+<span style="flex:1;display:flex;flex-direction:column;text-align:right">
+<span style="font-size:16px;line-height:24px;font-weight:600">{{e.title}}</span>
+<span style="font-size:13px;line-height:20px;font-weight:500;color:#5A6478">{{e.how}}</span>
+</span>
+</button>
+</sc-for>
+</div>
+<span style="font-size:13px;line-height:20px;font-weight:500;color:#5A6478">أسبوع واحد يعطي إشارة، مو حكم نهائي.</span>
+</section>
+</sc-if>
+
+<sc-if value="{{st.s6}}" hint-placeholder-val="{{false}}">
+<section style="display:flex;flex-direction:column;gap:14px">
+<h2 style="margin:0;font-size:22px;line-height:30px;font-weight:700">عنوان الفصل</h2>
+<p style="margin:0;font-size:15px;line-height:24px;color:#3A4256">كل أسبوع فصل من قصتك. سمّيه بكلمات تشبهك.</p>
+<label for="chapter" style="font-size:13px;line-height:20px;font-weight:600;color:#3A4256">الفصل 3</label>
+<input id="chapter" type="text" value="رجعت للمشي" style="height:56px;border-radius:14px;border:1px solid #9BC4EE;background:#FFFFFF;padding:0 14px;font-family:inherit;font-size:18px;font-weight:600;color:#0E121C;box-sizing:border-box">
+<div style="background:#FFFFFF;border:1px solid #DCE3EF;border-radius:20px;padding:16px;display:flex;flex-direction:column;gap:8px">
+<span style="font-size:12px;line-height:18px;font-weight:600;color:#5A6478">بطاقة الفصل</span>
+<span style="font-size:18px;line-height:26px;font-weight:600">الفصل 3 · رجعت للمشي</span>
+<span style="font-size:14px;line-height:22px;color:#3A4256">3 إنجازات · رجعة وحدة بعد غياب · درس: المشي بعد العصر أسهل من الصبح.</span>
+</div>
+</section>
+</sc-if>
+
+<sc-if value="{{st.s7}}" hint-placeholder-val="{{false}}">
+<section style="display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center;padding-top:24px">
+<svg width="120" height="72" viewBox="0 0 120 72" aria-hidden="true"><path d="M60 6 C61.8 22 68 28 84 30 C68 32 61.8 38 60 54 C58.2 38 52 32 36 30 C52 28 58.2 22 60 6Z" fill="#E0A93B"></path><path d="M26 36 C26.6 41 28.6 43 33.5 43.5 C28.6 44 26.6 46 26 51 C25.4 46 23.4 44 18.5 43.5 C23.4 43 25.4 41 26 36Z" fill="#F2CD7A"></path><path d="M96 40 C96.5 44 98 45.5 102 46 C98 46.5 96.5 48 96 52 C95.5 48 94 46.5 90 46 C94 45.5 95.5 44 96 40Z" fill="#9BC4EE"></path><circle cx="44" cy="64" r="2" fill="#BEDAF7"></circle><circle cx="80" cy="10" r="2" fill="#F2CD7A"></circle></svg>
+<h2 style="margin:0;font-size:28px;line-height:36px;font-weight:700">سكّرتي الفصل 3</h2>
+<div style="display:flex;align-items:center;gap:6px;background:#FBF1D6;border-radius:999px;padding:6px 16px">
+<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 C12.8 8.5 15.5 11.2 22 12 C15.5 12.8 12.8 15.5 12 22 C11.2 15.5 8.5 12.8 2 12 C8.5 11.2 11.2 8.5 12 2Z" fill="#E0A93B"></path></svg>
+<span style="font-family:'IBM Plex Sans',sans-serif;font-size:18px;font-weight:600;color:#8A6412">+10</span>
+<span style="font-size:14px;font-weight:600;color:#8A6412">شرارات المراجعة</span>
+</div>
+<p style="margin:0;font-size:16px;line-height:26px;color:#3A4256">رجعتي للمشي بعد يومين — وهذا أهم جزء. الأسبوع الجاي جاهز بثلاث أولويات وتجربة وحدة.</p>
+</section>
+</sc-if>
+
+</main>
+
+<div style="position:absolute;left:0;right:0;bottom:0;background:#FFFFFF;border-top:1px solid #DCE3EF;padding:12px 20px 28px;display:flex;align-items:center;gap:12px">
+<sc-if value="{{nav.hasBack}}" hint-placeholder-val="{{false}}">
+<button type="button" onClick="{{nav.back}}" style="min-height:52px;min-width:72px;background:none;border:0;font-family:inherit;font-size:16px;font-weight:600;color:#4F5FA0;cursor:pointer">رجوع</button>
+</sc-if>
+<sc-if value="{{nav.notLast}}" hint-placeholder-val="{{true}}">
+<button type="button" onClick="{{nav.next}}" style="flex:1;height:52px;border-radius:16px;background:#6172B5;color:#FFFFFF;border:0;font-family:inherit;font-size:16px;font-weight:600;cursor:pointer">التالي</button>
+</sc-if>
+<sc-if value="{{nav.isLast}}" hint-placeholder-val="{{false}}">
+<a href="Me.dc.html" style="flex:1;height:52px;border-radius:16px;background:#6172B5;color:#FFFFFF;text-decoration:none;font-size:16px;font-weight:600;display:flex;align-items:center;justify-content:center">خلصنا</a>
+</sc-if>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+constructor(props){
+  super(props);
+  this.state = { step: 0, wins: [true, true, false, true], blocks: [false, true, false, true, false, false, false, false], srbai: [3, 3, 2, 2],
+    season: [0, 0, 0, 1, 1, 2], exp: 1 };
+}
+renderVals() {
+  const N = 8;
+  const step = this.state.step;
+  const names = ['الإنجازات', 'العوائق', 'فحص القوة', 'الموسم', 'أهم 3', 'التجربة', 'عنوان الفصل', 'الشرارات'];
+  const segs = names.map((n, i) => ({ style: 'height:6px;border-radius:999px;background:' + (i <= step ? '#6172B5' : '#DCE3EF') }));
+  const st = {};
+  for (let i = 0; i < N; i++) st['s' + i] = step === i;
+  const W = ['مشيتي 5 أيام من 7', 'رجعتي للمفردات بعد يومين غياب', 'قوة مرة وحدة بدل مرتين', 'أنهيتي الدرس الثاني من الوحدة 3'];
+  const wins = W.map((t, i) => {
+    const on = this.state.wins[i];
+    return { text: t, checked: on ? 'true' : 'false',
+      style: 'min-height:56px;display:flex;align-items:center;gap:12px;border-radius:16px;padding:10px 14px;font-family:inherit;cursor:pointer;color:#0E121C;' + (on ? 'background:#FFFFFF;border:1px solid #9BC4EE' : 'background:#FFFFFF;border:1px solid #DCE3EF'),
+      box: 'flex:0 0 28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;box-sizing:border-box;' + (on ? 'background:#6172B5;border:2px solid #6172B5' : 'background:#FFFFFF;border:2px solid #9BC4EE'),
+      toggle: () => { const n = this.state.wins.slice(); n[i] = !n[i]; this.setState({ wins: n }); } };
+  });
+  const BL = ['نسيت', 'الوقت ما ناسب', 'كبيرة مرة', 'تعبانة', 'مو ممتعة', 'المكان ما ناسب', 'مشغولة', 'مو مهمة الحين'];
+  const FIX = ['نضيف تذكير عند إشارتها بدل وقت ثابت.', 'ننقل تمارين القوة لبعد العصر، مكان المشي اللي ماشي معك.', 'نصغّرها: 10 دقائق هي النسخة العادية هالأسبوع.', 'أيام التعب نخليها للنسخة الصغيرة تلقائيًا.', 'نربطها بمتعة: قائمة أغاني ما تسمعينها إلا وقتها.', 'نجهز المكان من الليل: السجادة والجوال على الحامل.', 'نحجز لها وقت ثابت في يومك قبل ما يمتلي.', 'نحطها في الراحة هذا الموسم — بدون ذنب.'];
+  const chip = (on) => 'min-height:44px;padding:0 16px;border-radius:999px;font-family:inherit;font-size:15px;font-weight:600;cursor:pointer;' + (on ? 'background:#EAF1FB;border:1px solid #9BC4EE;color:#2B3358' : 'background:#FFFFFF;border:1px solid #DCE3EF;color:#3A4256');
+  const blocks = BL.map((l, i) => ({ label: l, pressed: this.state.blocks[i] ? 'true' : 'false', style: chip(this.state.blocks[i]),
+    toggle: () => { const n = this.state.blocks.slice(); n[i] = !n[i]; this.setState({ blocks: n }); } }));
+  const firstBlock = this.state.blocks.indexOf(true);
+  const Q = ['أسويها تلقائيًا', 'أسويها بدون ما أفكر', 'أسويها بدون ما أتذكر عمدًا', 'أبدأ فيها قبل ما أنتبه'];
+  const srbai = Q.map((t, qi) => ({ text: t,
+    opts: [1, 2, 3, 4, 5].map(v => {
+      const on = this.state.srbai[qi] === v;
+      return { n: v, checked: on ? 'true' : 'false', aria: v + ' من 5',
+        style: "height:44px;border-radius:12px;font-family:'IBM Plex Sans',sans-serif;font-size:16px;font-weight:600;cursor:pointer;" + (on ? 'background:#6172B5;border:1px solid #6172B5;color:#FFFFFF' : 'background:#F4F7FC;border:1px solid #DCE3EF;color:#3A4256'),
+        pick: () => { const n = this.state.srbai.slice(); n[qi] = v; this.setState({ srbai: n }); } };
+    }) }));
+  const avg = this.state.srbai.reduce((a, b) => a + b, 0) / 4;
+  const stages = ['بذرة', 'برعم', 'تنمو', 'متجذّرة', 'تلقائية'];
+  const stage = stages[Math.min(4, Math.max(0, Math.round(avg) - 1))];
+  const D = ['الحركة', 'IELTS', 'المسار المهني', 'النوم', 'المال', 'KDP'];
+  const L = ['أنمّي', 'أحافظ', 'أريّح'];
+  const season = D.map((name, di) => ({ name: name,
+    row: 'display:flex;align-items:center;gap:8px;padding:10px 0;' + (di > 0 ? 'border-top:1px solid #EAF1FB' : ''),
+    opts: L.map((l, li) => {
+      const on = this.state.season[di] === li;
+      return { label: l, checked: on ? 'true' : 'false',
+        style: 'min-height:44px;min-width:56px;padding:0 8px;border-radius:10px;border:0;font-family:inherit;font-size:14px;font-weight:600;cursor:pointer;' + (on ? 'background:#FFFFFF;color:#2B3358;box-shadow:0 2px 8px rgba(14,18,28,.06)' : 'background:transparent;color:#5A6478'),
+        pick: () => { const n = this.state.season.slice(); n[di] = li; this.setState({ season: n }); } };
+    }) }));
+  const growN = this.state.season.filter(x => x === 0).length;
+  const E = [['المفردات: صباح أو مساء؟', 'أسبوع بعد الفطور، أسبوع بعد العشاء'], ['البودكاست مع المشي', 'نشغّله وقت المشي بس ونقارن بالأسبوع اللي قبله'], ['تذكير أقل', 'تذكيرين باليوم بدل ثلاثة']];
+  const exps = E.map((e, i) => {
+    const on = this.state.exp === i;
+    return { title: e[0], how: e[1], checked: on ? 'true' : 'false',
+      style: 'min-height:64px;display:flex;align-items:center;gap:12px;border-radius:16px;padding:12px 14px;font-family:inherit;cursor:pointer;color:#0E121C;background:#FFFFFF;' + (on ? 'border:1px solid #9BC4EE' : 'border:1px solid #DCE3EF'),
+      radio: 'flex:0 0 22px;height:22px;border-radius:999px;box-sizing:border-box;' + (on ? 'border:7px solid #6172B5;background:#FFFFFF' : 'border:2px solid #9BC4EE;background:#FFFFFF'),
+      pick: () => this.setState({ exp: i }) };
+  });
+  return {
+    segs: segs, st: st, wins: wins, blocks: blocks, srbai: srbai, season: season, exps: exps,
+    fix: { text: firstBlock < 0 ? 'ما فيه عائق؟ ممتاز — نكمّل بنفس التصميم.' : FIX[firstBlock] },
+    srbaiSum: { text: 'متوسطك ' + avg.toFixed(1) + ' من 5 — مرحلتها: ' + stage + '. هذي قراءتك أنتِ، مو امتحان.' },
+    seasonNote: { text: growN > 3 ? 'عندك ' + growN + ' في النمو — الحد 3. وحدة منها تنقل للمحافظة؟' : 'في النمو: ' + growN + ' من 3.' },
+    nav: {
+      count: (step + 1) + ' من ' + N,
+      label: names[step],
+      progLabel: 'الخطوة ' + (step + 1) + ' من ' + N + ': ' + names[step],
+      hasBack: step > 0, notLast: step < N - 1, isLast: step === N - 1,
+      next: () => this.setState({ step: Math.min(N - 1, step + 1) }),
+      back: () => this.setState({ step: Math.max(0, step - 1) })
+    }
+  };
+}
+}
+</script>
+</body>
+</html>

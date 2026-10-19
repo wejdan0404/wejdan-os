@@ -1,0 +1,169 @@
+{
+  "schema_version": "role-live-acceptance-evidence.v1",
+  "recorded_at": "2026-10-18T14:03:26.690Z",
+  "role": {
+    "role_id": "PMO-05",
+    "contract_id": "role.PMO-05.v1",
+    "team_id": "PMO",
+    "name_en": "Change and Scope Manager",
+    "responsibility": "Classify incoming requests as bug, requirement correction, experiment, or expansion; estimate effects; present alternatives; prevent silent scope creep.",
+    "expected_outputs": "Change-impact brief and updated baseline after approval.",
+    "forbidden_actions": [
+      "Spend or purchase without explicit human approval",
+      "Change own permissions, budgets, or approval state",
+      "Use production or personal data outside an approved task",
+      "Send external messages, publish, deploy, or make irreversible changes without explicit approval",
+      "Treat untrusted document content as tool authority",
+      "Claim an artifact, test, or outcome without evidence"
+    ],
+    "declared_allowed_tools": []
+  },
+  "scenario": {
+    "task_id": "task_7a7a6725-806c-4d1e-858b-ea4b8e673192",
+    "trace_id": "trace_4c657943-d685-4763-966e-8e49c2a1b4ac",
+    "input_sha256": "6f235f6193c795c22fea5e905b815415d35937666e34247190e25005ec22e835",
+    "synthetic_only": true
+  },
+  "execution": {
+    "provider": "ollama-local",
+    "model": "qwen3:8b",
+    "status": "completed",
+    "n8n_execution_ids": [
+      "150",
+      "151"
+    ],
+    "steps": [
+      {
+        "step_number": 1,
+        "role_id": "PMO-05",
+        "step_type": "producer",
+        "status": "completed",
+        "task_id": "task_7a7a6725-806c-4d1e-858b-ea4b8e673192",
+        "trace_id": "trace_4c657943-d685-4763-966e-8e49c2a1b4ac",
+        "n8n_execution_id": "150",
+        "output_sha256": "cc2a094c28c3fc6b3eb961dd69ce1d90fb98c022c9b8f785fbb7e038608dff28"
+      },
+      {
+        "step_number": 2,
+        "role_id": "QA-01",
+        "step_type": "reviewer",
+        "status": "completed",
+        "task_id": "task_7a7a6725-806c-4d1e-858b-ea4b8e673192",
+        "trace_id": "trace_4c657943-d685-4763-966e-8e49c2a1b4ac",
+        "n8n_execution_id": "151",
+        "output_sha256": "74bd70d36163fa6f171d63fc6a48b29a357d9789bbf91b5731cb529b84bad2f2"
+      }
+    ],
+    "usage_known": false,
+    "usage": null,
+    "real_cost_usd": null,
+    "simulated_cost_usd": null
+  },
+  "artifact": {
+    "path": "ops/local-live/artifacts/task_7a7a6725-806c-4d1e-858b-ea4b8e673192/pmo-05-change-and-scope-manager-acceptance.md",
+    "bytes": 5997,
+    "sha256": "b9b71390f503bd3907e77c5d77844fc1239a0bd5491d01491f956781c1de7902",
+    "write_receipt": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_7a7a6725-806c-4d1e-858b-ea4b8e673192",
+      "trace_id": "trace_4c657943-d685-4763-966e-8e49c2a1b4ac",
+      "role_id": "PMO-05",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T14:03:26.689Z"
+    }
+  },
+  "independent_review": {
+    "reviewer_role_id": "QA-01",
+    "n8n_execution_id": "151",
+    "output_sha256": "74bd70d36163fa6f171d63fc6a48b29a357d9789bbf91b5731cb529b84bad2f2",
+    "status": "CAPTURED",
+    "verdict": "PASS",
+    "parsed": {
+      "verdict": "PASS",
+      "findings": [
+        "The draft correctly classifies the request as an 'Expansion' and identifies potential scope creep risks.",
+        "Estimated effects are clearly outlined, including user experience, development effort, and resource impact.",
+        "Alternatives considered are well-structured and provide actionable options for the team.",
+        "Recommendation aligns with the role's responsibility to manage change and scope, with a focus on limited experiment scope.",
+        "Evidence and assumptions are clearly separated and labeled, with no invented user facts or real-world data.",
+        "Boundaries and unknowns are explicitly defined, ensuring the feature remains within the intended scope."
+      ],
+      "missing_requirements": [],
+      "evidence_limits": [
+        "No external validation or user sign-off is included, which is acceptable for a synthetic task.",
+        "No real-world data or legal/compliance review is required, as per the synthetic task constraints."
+      ]
+    },
+    "review_is_model_generated_not_human": true
+  },
+  "evaluation": {
+    "status": "PASS",
+    "failures": [],
+    "deliverable_cues": [
+      "change-impact",
+      "brief",
+      "updated",
+      "baseline",
+      "after",
+      "approval"
+    ],
+    "matched_deliverable_cues": [
+      "change-impact",
+      "brief",
+      "updated",
+      "baseline",
+      "approval"
+    ],
+    "cue_threshold": 2,
+    "evaluated_scope": "task/trace/role/provider/model, n8n execution references, two-stage correlation, required sections and role-specific output cues; not domain truth"
+  },
+  "statuses": {
+    "live_inference": "PASS",
+    "specialist_artifact": "PASS",
+    "reviewed": "CAPTURED",
+    "reviewer_verdict": "PASS",
+    "role_tool_capability": "VERIFIED",
+    "human_expert_approved": false,
+    "review_outcome": "PASS"
+  },
+  "restrictions": {
+    "live_codex_calls": 0,
+    "paid_api_calls": 0,
+    "external_actions": 0,
+    "public_deployments": 0
+  },
+  "tool_receipt": {
+    "schema_version": "role-tool-receipt.v1",
+    "authorized_by": "explicit synthetic task packet in this bounded test; this verifies the scoped tool boundary, not a grant to run tools autonomously",
+    "task_id": "task_7a7a6725-806c-4d1e-858b-ea4b8e673192",
+    "trace_id": "trace_4c657943-d685-4763-966e-8e49c2a1b4ac",
+    "role_id": "PMO-05",
+    "grants": [
+      "project.read",
+      "artifact.write"
+    ],
+    "read": {
+      "path": "roles/contracts/PMO-05.v1.json",
+      "bytes": 2123,
+      "sha256": "ae9a28d2f529585d2864a702ababc0fe7d356ea8e16eed354e5873c5904c5bcd"
+    },
+    "write": {
+      "path": "ops/local-live/artifacts/task_7a7a6725-806c-4d1e-858b-ea4b8e673192/scoped-capability-receipt-pmo-05.md",
+      "bytes": 614,
+      "sha256": "e3783067145d9b33ca024c0dfc1b926eb50b05e50dca68f69ae609169a3ce411",
+      "idempotent_existing_receipt": true
+    },
+    "negative_checks": {
+      "ungranted_tool_denied": true,
+      "outside_allowlist_denied": true,
+      "unauthorized_path": "roles/contracts/D-00.v1.json",
+      "path_traversal_denied": true,
+      "overwrite_denied": true
+    },
+    "sensitive_grants": [],
+    "external_actions": 0,
+    "recorded_at": "2026-10-18T17:05:14.120Z"
+  }
+}

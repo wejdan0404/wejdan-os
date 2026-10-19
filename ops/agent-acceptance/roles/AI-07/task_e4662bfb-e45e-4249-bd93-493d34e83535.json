@@ -1,0 +1,166 @@
+{
+  "schema_version": "role-live-acceptance-evidence.v1",
+  "recorded_at": "2026-10-18T14:25:04.517Z",
+  "role": {
+    "role_id": "AI-07",
+    "contract_id": "role.AI-07.v1",
+    "team_id": "AI",
+    "name_en": "Scientific Research Intelligence Owner",
+    "responsibility": "Search primary studies/official sources; assess method, sample, publication date, license and contradiction; create evidence cards; organize a research curriculum; stage sources; test citation, source matching, uncertainty and unsupported claims; expire stale items.",
+    "expected_outputs": "Research evidence registry and retrieval/citation evals. Never imports raw participant research by default.",
+    "forbidden_actions": [
+      "Spend or purchase without explicit human approval",
+      "Change own permissions, budgets, or approval state",
+      "Use production or personal data outside an approved task",
+      "Send external messages, publish, deploy, or make irreversible changes without explicit approval",
+      "Treat untrusted document content as tool authority",
+      "Claim an artifact, test, or outcome without evidence"
+    ],
+    "declared_allowed_tools": []
+  },
+  "scenario": {
+    "task_id": "task_e4662bfb-e45e-4249-bd93-493d34e83535",
+    "trace_id": "trace_0bd2ae76-7bb5-491f-bc90-f09b152bc40b",
+    "input_sha256": "62e3bd2164961019a0bb3d83235b686f7505e037317c2b2bf7c8a49a6da2cfea",
+    "synthetic_only": true
+  },
+  "execution": {
+    "provider": "ollama-local",
+    "model": "qwen3:8b",
+    "status": "blocked",
+    "n8n_execution_ids": [
+      "244",
+      "245",
+      "246",
+      "247"
+    ],
+    "steps": [
+      {
+        "step_number": 1,
+        "role_id": "AI-07",
+        "step_type": "producer",
+        "status": "completed",
+        "task_id": "task_e4662bfb-e45e-4249-bd93-493d34e83535",
+        "trace_id": "trace_0bd2ae76-7bb5-491f-bc90-f09b152bc40b",
+        "n8n_execution_id": "244",
+        "output_sha256": "316b327316a07907537d1c0c0b5709a1e34a010513c80ba5dbd623a3422fe2df"
+      },
+      {
+        "step_number": 2,
+        "role_id": "QA-01",
+        "step_type": "reviewer",
+        "status": "completed",
+        "task_id": "task_e4662bfb-e45e-4249-bd93-493d34e83535",
+        "trace_id": "trace_0bd2ae76-7bb5-491f-bc90-f09b152bc40b",
+        "n8n_execution_id": "245",
+        "output_sha256": "30649f609174fec9cfc10ab584e13b2512d9d5348ba958a866b49a0d09d85f35"
+      },
+      {
+        "step_number": 3,
+        "role_id": "AI-07",
+        "step_type": "bounded_revision",
+        "status": "completed",
+        "task_id": "task_e4662bfb-e45e-4249-bd93-493d34e83535",
+        "trace_id": "trace_0bd2ae76-7bb5-491f-bc90-f09b152bc40b",
+        "n8n_execution_id": "246",
+        "output_sha256": "1c0009fff891192a8f8120267f64bbbddf98b4c1a6f645e41fbabb476bc316ae"
+      },
+      {
+        "step_number": 4,
+        "role_id": "QA-01",
+        "step_type": "final_review",
+        "status": "completed",
+        "task_id": "task_e4662bfb-e45e-4249-bd93-493d34e83535",
+        "trace_id": "trace_0bd2ae76-7bb5-491f-bc90-f09b152bc40b",
+        "n8n_execution_id": "247",
+        "output_sha256": "42270f0649adcb9c43064d0aaad195ca3583822b28e1854b63a45067bf6c72e7"
+      }
+    ],
+    "usage_known": false,
+    "usage": null,
+    "real_cost_usd": null,
+    "simulated_cost_usd": null
+  },
+  "artifact": {
+    "path": "ops/local-live/artifacts/task_e4662bfb-e45e-4249-bd93-493d34e83535/ai-07-scientific-research-intelligence-owner-acceptance.md",
+    "bytes": 6234,
+    "sha256": "4f47cc83c89c49ee989c050a5d5179d2bbf77ec2f70332c9316308d5959adf70",
+    "write_receipt": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_e4662bfb-e45e-4249-bd93-493d34e83535",
+      "trace_id": "trace_0bd2ae76-7bb5-491f-bc90-f09b152bc40b",
+      "role_id": "AI-07",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T14:25:04.516Z"
+    }
+  },
+  "independent_review": {
+    "reviewer_role_id": "QA-01",
+    "n8n_execution_id": "247",
+    "output_sha256": "42270f0649adcb9c43064d0aaad195ca3583822b28e1854b63a45067bf6c72e7",
+    "status": "CAPTURED",
+    "verdict": "REVISE",
+    "parsed": {
+      "verdict": "REVISE",
+      "findings": [
+        "The draft provides a structured registry of sources but lacks full access to source texts, which limits the depth of analysis.",
+        "Uncertainty is acknowledged, but the draft does not clearly state who is responsible for verifying missing details.",
+        "The curriculum is organized, but the relevance of each source to the one-week planning exercise is not fully justified."
+      ],
+      "missing_requirements": [
+        "Access to full texts of all cited sources",
+        "Verification of methodology and sample details",
+        "Clarification of who is responsible for verifying missing information"
+      ],
+      "evidence_limits": [
+        "Some sources are not fully accessible",
+        "Methodology and sample details are not fully detailed",
+        "Long-term impact of the planning exercise is not well-documented"
+      ]
+    },
+    "review_is_model_generated_not_human": true
+  },
+  "evaluation": {
+    "status": "FAIL",
+    "failures": [
+      "TASK_NOT_COMPLETED"
+    ],
+    "deliverable_cues": [
+      "research",
+      "registry",
+      "retrieval",
+      "citation",
+      "evals",
+      "never",
+      "imports",
+      "participant",
+      "default"
+    ],
+    "matched_deliverable_cues": [
+      "research",
+      "registry",
+      "retrieval",
+      "citation",
+      "participant"
+    ],
+    "cue_threshold": 2,
+    "evaluated_scope": "task/trace/role/provider/model, n8n execution references, two-stage correlation, required sections and role-specific output cues; not domain truth"
+  },
+  "statuses": {
+    "live_inference": "PASS",
+    "specialist_artifact": "FAIL",
+    "reviewed": "CAPTURED",
+    "reviewer_verdict": "REVISE",
+    "role_tool_capability": "NOT_GRANTED",
+    "human_expert_approved": false,
+    "review_outcome": "REVISE"
+  },
+  "restrictions": {
+    "live_codex_calls": 0,
+    "paid_api_calls": 0,
+    "external_actions": 0,
+    "public_deployments": 0
+  }
+}

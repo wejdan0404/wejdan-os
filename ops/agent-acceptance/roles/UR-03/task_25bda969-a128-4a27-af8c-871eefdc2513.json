@@ -1,0 +1,198 @@
+{
+  "schema_version": "role-live-acceptance-evidence.v1",
+  "recorded_at": "2026-10-18T14:14:35.570Z",
+  "role": {
+    "role_id": "UR-03",
+    "contract_id": "role.UR-03.v1",
+    "team_id": "UR",
+    "name_en": "Participant Recruitment Coordinator",
+    "responsibility": "Build screener; recruit across intended user diversity; handle scheduling and consent; track compensation and participant metadata separately from findings.",
+    "expected_outputs": "Recruitment log and consent evidence; sensitive details never enter general AI context.",
+    "forbidden_actions": [
+      "Spend or purchase without explicit human approval",
+      "Change own permissions, budgets, or approval state",
+      "Use production or personal data outside an approved task",
+      "Send external messages, publish, deploy, or make irreversible changes without explicit approval",
+      "Treat untrusted document content as tool authority",
+      "Claim an artifact, test, or outcome without evidence"
+    ],
+    "declared_allowed_tools": []
+  },
+  "scenario": {
+    "task_id": "task_25bda969-a128-4a27-af8c-871eefdc2513",
+    "trace_id": "trace_5eca331a-4c98-4144-8ac9-ac657030ec08",
+    "input_sha256": "e64bda1fc9b4770feff8ccff1555294fb7ff271192606860a56a27396ea8ba36",
+    "synthetic_only": true
+  },
+  "execution": {
+    "provider": "ollama-local",
+    "model": "qwen3:8b",
+    "status": "completed",
+    "n8n_execution_ids": [
+      "178",
+      "179",
+      "180",
+      "181"
+    ],
+    "steps": [
+      {
+        "step_number": 1,
+        "role_id": "UR-03",
+        "step_type": "producer",
+        "status": "completed",
+        "task_id": "task_25bda969-a128-4a27-af8c-871eefdc2513",
+        "trace_id": "trace_5eca331a-4c98-4144-8ac9-ac657030ec08",
+        "n8n_execution_id": "178",
+        "output_sha256": "1d9ef24ccdd0b13f4aada58a8d4af642ffcde333c530d119473def5197516555"
+      },
+      {
+        "step_number": 2,
+        "role_id": "QA-01",
+        "step_type": "reviewer",
+        "status": "completed",
+        "task_id": "task_25bda969-a128-4a27-af8c-871eefdc2513",
+        "trace_id": "trace_5eca331a-4c98-4144-8ac9-ac657030ec08",
+        "n8n_execution_id": "179",
+        "output_sha256": "9cfedb260d15ac3101f74542766715fc70d8de9683a57910d3dce555c4cf5051"
+      },
+      {
+        "step_number": 3,
+        "role_id": "UR-03",
+        "step_type": "bounded_revision",
+        "status": "completed",
+        "task_id": "task_25bda969-a128-4a27-af8c-871eefdc2513",
+        "trace_id": "trace_5eca331a-4c98-4144-8ac9-ac657030ec08",
+        "n8n_execution_id": "180",
+        "output_sha256": "5ee3c63cc4df2936fd8ea1ac049014275bd8cd8e91cd38eb38b82da5e5df909e"
+      },
+      {
+        "step_number": 4,
+        "role_id": "QA-01",
+        "step_type": "final_review",
+        "status": "completed",
+        "task_id": "task_25bda969-a128-4a27-af8c-871eefdc2513",
+        "trace_id": "trace_5eca331a-4c98-4144-8ac9-ac657030ec08",
+        "n8n_execution_id": "181",
+        "output_sha256": "7b2d1adb9a59047134db1789b91e9ee2984ad0bf868df54dcd823682e8601181"
+      }
+    ],
+    "usage_known": false,
+    "usage": null,
+    "real_cost_usd": null,
+    "simulated_cost_usd": null
+  },
+  "artifact": {
+    "path": "ops/local-live/artifacts/task_25bda969-a128-4a27-af8c-871eefdc2513/ur-03-participant-recruitment-coordinator-acceptance.md",
+    "bytes": 4526,
+    "sha256": "6e9cc9d342c218cc0af114ae396f77f0d196ef1344b5dcd0ab5040155da174ac",
+    "write_receipt": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_25bda969-a128-4a27-af8c-871eefdc2513",
+      "trace_id": "trace_5eca331a-4c98-4144-8ac9-ac657030ec08",
+      "role_id": "UR-03",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T14:14:35.569Z"
+    }
+  },
+  "independent_review": {
+    "reviewer_role_id": "QA-01",
+    "n8n_execution_id": "181",
+    "output_sha256": "7b2d1adb9a59047134db1789b91e9ee2984ad0bf868df54dcd823682e8601181",
+    "status": "CAPTURED",
+    "verdict": "PASS",
+    "parsed": {
+      "verdict": "PASS",
+      "findings": [
+        "Draft recruitment log and consent evidence provided with clear placeholders for pending actions",
+        "Evidence and assumptions section clearly outlines the current state of the recruitment process",
+        "Boundaries and unknowns section identifies critical missing requirements and dependencies",
+        "No sensitive details are included in the general AI context"
+      ],
+      "missing_requirements": [
+        "Legal review of consent form",
+        "Finalized compensation structure",
+        "Tool selection for scheduling",
+        "Participant diversity tracking plan"
+      ],
+      "evidence_limits": [
+        "Consent form is not finalized",
+        "Compensation details are pending",
+        "No tool use or scheduling system is in place",
+        "No actual recruitment data or participant metadata"
+      ]
+    },
+    "review_is_model_generated_not_human": true
+  },
+  "evaluation": {
+    "status": "PASS",
+    "failures": [],
+    "deliverable_cues": [
+      "recruitment",
+      "consent",
+      "sensitive",
+      "details",
+      "never",
+      "enter",
+      "general",
+      "context"
+    ],
+    "matched_deliverable_cues": [
+      "recruitment",
+      "consent",
+      "sensitive",
+      "details",
+      "general"
+    ],
+    "cue_threshold": 2,
+    "evaluated_scope": "task/trace/role/provider/model, n8n execution references, two-stage correlation, required sections and role-specific output cues; not domain truth"
+  },
+  "statuses": {
+    "live_inference": "PASS",
+    "specialist_artifact": "PASS",
+    "reviewed": "CAPTURED",
+    "reviewer_verdict": "PASS",
+    "role_tool_capability": "VERIFIED",
+    "human_expert_approved": false,
+    "review_outcome": "PASS"
+  },
+  "restrictions": {
+    "live_codex_calls": 0,
+    "paid_api_calls": 0,
+    "external_actions": 0,
+    "public_deployments": 0
+  },
+  "tool_receipt": {
+    "schema_version": "role-tool-receipt.v1",
+    "authorized_by": "explicit synthetic task packet in this bounded test; this verifies the scoped tool boundary, not a grant to run tools autonomously",
+    "task_id": "task_25bda969-a128-4a27-af8c-871eefdc2513",
+    "trace_id": "trace_5eca331a-4c98-4144-8ac9-ac657030ec08",
+    "role_id": "UR-03",
+    "grants": [
+      "project.read",
+      "artifact.write"
+    ],
+    "read": {
+      "path": "roles/contracts/UR-03.v1.json",
+      "bytes": 2169,
+      "sha256": "b71e55a44f983dcfb1905525f23dfe68ebf72348aecd0f919adb97b12e5557b5"
+    },
+    "write": {
+      "path": "ops/local-live/artifacts/task_25bda969-a128-4a27-af8c-871eefdc2513/scoped-capability-receipt-ur-03.md",
+      "bytes": 611,
+      "sha256": "9ed53db6bcdc2cb73ce2e00f6ff94917e8f03a89a163a0df3640485d229a322e",
+      "idempotent_existing_receipt": true
+    },
+    "negative_checks": {
+      "ungranted_tool_denied": true,
+      "outside_allowlist_denied": true,
+      "unauthorized_path": "roles/contracts/D-00.v1.json",
+      "path_traversal_denied": true,
+      "overwrite_denied": true
+    },
+    "sensitive_grants": [],
+    "external_actions": 0,
+    "recorded_at": "2026-10-18T17:05:14.788Z"
+  }
+}

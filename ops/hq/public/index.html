@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark light" />
+  <link rel="icon" href="data:," />
+  <title>Wejdan HQ — مركز التحكم</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="Wejdan HQ الصفحة الرئيسية"><span class="brand-mark">W</span><span><b>WEJDAN HQ</b><small>مركز التحكم الموحد</small></span></a>
+      <div class="read-only-pill"><span></span> قراءة فقط</div>
+    </header>
+    <main>
+      <section id="workspace">
+        <section class="welcome-row">
+          <div><span class="eyebrow">نظرة مستقلة لكل مساحة</span><h1>أهلًا بكِ في مركز التحكم</h1><p>كل نظام يحتفظ بقاعدته وذاكرته وصلاحياته. يعرض HQ أعدادًا وحالات مجمعة فقط.</p></div>
+
+        </section>
+
+        <section class="workspace-switch" aria-label="اختيار المساحة">
+          <button type="button" data-system="life" aria-pressed="true"><span class="workspace-icon life-icon">L</span><span><b>Life OS</b><small>المساحة الشخصية</small></span><i id="life-state" class="connection-state needs">Needs Configuration</i></button>
+          <button type="button" data-system="company" aria-pressed="false"><span class="workspace-icon company-icon">C</span><span><b>Company OS</b><small>مساحة الشركة</small></span><i id="company-state" class="connection-state needs">Needs Configuration</i></button>
+        </section>
+
+        <div class="scope-banner"><b id="scope-label">Life OS</b><span>ملخص من المصدر المحدد. لا محادثات أو محتوى مهام أو ذاكرة مشتركة.</span><button id="refresh" type="button" aria-label="تحديث الملخص">تحديث</button></div>
+
+        <section id="summary-card" class="summary-card" aria-live="polite">
+          <div class="loading-state">جارٍ التحقق من الاتصال الآمن…</div>
+        </section>
+
+        <section class="disabled-feature" aria-labelledby="conversation-title">
+          <div class="disabled-icon" aria-hidden="true">✦</div>
+          <div class="disabled-copy"><span class="eyebrow">مرحلة لاحقة</span><h2 id="conversation-title">محادثة موحدة وإرسال المهام</h2><p>غير مفعلة. لن يرسل HQ طلبات أو ينشئ مهامًا في وضع القراءة المحلي.</p></div>
+          <form id="disabled-composer" aria-label="محادثة معطلة"><label class="sr-only" for="disabled-message">رسالة</label><textarea id="disabled-message" disabled placeholder="المحادثة الموحدة غير متاحة في مرحلة القراءة فقط"></textarea><button type="button" disabled>إرسال</button></form>
+        </section>
+        <footer><span>المصدر: <b id="footer-workspace">Life OS</b></span><span>لا تُدمج قواعد البيانات · لا تُنسخ المحادثات أو الذاكرة</span></footer>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

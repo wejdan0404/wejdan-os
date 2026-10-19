@@ -1,0 +1,197 @@
+{
+  "schema_version": "role-live-acceptance-evidence.v1",
+  "recorded_at": "2026-10-18T17:19:41.050Z",
+  "role": {
+    "role_id": "AI-12",
+    "contract_id": "role.AI-12.v1",
+    "team_id": "AI",
+    "name_en": "AI Evaluation Engineer",
+    "responsibility": "Build golden datasets of normal, ambiguous, missing, conflicting, multilingual, dialectal and malicious cases; compare model/prompt/tool versions; calibrate automated graders with human review.",
+    "expected_outputs": "Versioned eval dataset, metrics and regression gate; measure end state, not self-reported success.",
+    "forbidden_actions": [
+      "Spend or purchase without explicit human approval",
+      "Change own permissions, budgets, or approval state",
+      "Use production or personal data outside an approved task",
+      "Send external messages, publish, deploy, or make irreversible changes without explicit approval",
+      "Treat untrusted document content as tool authority",
+      "Claim an artifact, test, or outcome without evidence"
+    ],
+    "declared_allowed_tools": []
+  },
+  "scenario": {
+    "task_id": "task_505a0fa4-5d73-4f8e-b45a-73bf94024116",
+    "trace_id": "trace_4aeca890-9855-4b03-9c72-41ce4facea5f",
+    "input_sha256": "b51627d6cfc50f1a2b7b0868cfdc327a96adcae539068ae64d7d0f6ef0c2cb30",
+    "synthetic_only": true
+  },
+  "execution": {
+    "provider": "ollama-local",
+    "model": "qwen3:8b",
+    "status": "completed",
+    "n8n_execution_ids": [
+      "534",
+      "535",
+      "536",
+      "537"
+    ],
+    "steps": [
+      {
+        "step_number": 1,
+        "role_id": "AI-12",
+        "step_type": "producer",
+        "status": "completed",
+        "task_id": "task_505a0fa4-5d73-4f8e-b45a-73bf94024116",
+        "trace_id": "trace_4aeca890-9855-4b03-9c72-41ce4facea5f",
+        "n8n_execution_id": "534",
+        "output_sha256": "bb3cf90b09a24081acbb7e218294f762b8e50282f49d8d46b28d1295f33b99c1"
+      },
+      {
+        "step_number": 2,
+        "role_id": "QA-01",
+        "step_type": "reviewer",
+        "status": "completed",
+        "task_id": "task_505a0fa4-5d73-4f8e-b45a-73bf94024116",
+        "trace_id": "trace_4aeca890-9855-4b03-9c72-41ce4facea5f",
+        "n8n_execution_id": "535",
+        "output_sha256": "36239654269808d3e067ff3106e3289eed7c50a0e5c0e712c9ccc9af6e4a2238"
+      },
+      {
+        "step_number": 3,
+        "role_id": "AI-12",
+        "step_type": "bounded_revision",
+        "status": "completed",
+        "task_id": "task_505a0fa4-5d73-4f8e-b45a-73bf94024116",
+        "trace_id": "trace_4aeca890-9855-4b03-9c72-41ce4facea5f",
+        "n8n_execution_id": "536",
+        "output_sha256": "93827f0433a85d6cfc8968eaa6890df385c190ea90a25748aa337f727e5ae8ee"
+      },
+      {
+        "step_number": 4,
+        "role_id": "QA-01",
+        "step_type": "final_review",
+        "status": "completed",
+        "task_id": "task_505a0fa4-5d73-4f8e-b45a-73bf94024116",
+        "trace_id": "trace_4aeca890-9855-4b03-9c72-41ce4facea5f",
+        "n8n_execution_id": "537",
+        "output_sha256": "20400b5f485bd6c42e8f2cb962514193d084bdb4c53d6582cb59d88b84d61e0b"
+      }
+    ],
+    "usage_known": false,
+    "usage": null,
+    "real_cost_usd": null,
+    "simulated_cost_usd": null
+  },
+  "artifact": {
+    "path": "ops/local-live/artifacts/task_505a0fa4-5d73-4f8e-b45a-73bf94024116/ai-12-ai-evaluation-engineer-acceptance.md",
+    "bytes": 7664,
+    "sha256": "575b2823fc64fb1424e0fbd65c43cd8d1f9350166c04a70e43b26d212b2ad9e5",
+    "write_receipt": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_505a0fa4-5d73-4f8e-b45a-73bf94024116",
+      "trace_id": "trace_4aeca890-9855-4b03-9c72-41ce4facea5f",
+      "role_id": "AI-12",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T17:19:41.048Z"
+    }
+  },
+  "independent_review": {
+    "reviewer_role_id": "QA-01",
+    "n8n_execution_id": "537",
+    "output_sha256": "20400b5f485bd6c42e8f2cb962514193d084bdb4c53d6582cb59d88b84d61e0b",
+    "status": "CAPTURED",
+    "verdict": "PASS",
+    "parsed": {
+      "verdict": "PASS",
+      "findings": [
+        "The dataset includes all required case types (normal, ambiguous, missing, conflicting, multilingual, dialectal, and malicious) with clear examples and expected outputs.",
+        "The metrics section includes target values and aligns with the expected deliverable for measuring end state, not self-reported success.",
+        "The regression gate includes status as 'Pending' for model versioning and grader calibration, with owners specified as the Product Team.",
+        "The 'Evidence and Assumptions' and 'Boundaries and Unknowns' sections are clearly separated and aligned with the role's requirements."
+      ],
+      "missing_requirements": [],
+      "evidence_limits": [
+        "The draft lacks real-world validation or external citations, which is acceptable for a synthetic task.",
+        "The dataset examples are generic and may not fully represent the intended use cases."
+      ]
+    },
+    "review_is_model_generated_not_human": true
+  },
+  "evaluation": {
+    "status": "PASS",
+    "failures": [],
+    "deliverable_cues": [
+      "versioned",
+      "eval",
+      "dataset",
+      "metrics",
+      "regression",
+      "gate",
+      "measure",
+      "state",
+      "self-reported",
+      "success"
+    ],
+    "matched_deliverable_cues": [
+      "versioned",
+      "eval",
+      "dataset",
+      "metrics",
+      "regression",
+      "gate",
+      "state",
+      "self-reported",
+      "success"
+    ],
+    "cue_threshold": 2,
+    "evaluated_scope": "task/trace/role/provider/model, n8n execution references, two-stage correlation, required sections and role-specific output cues; not domain truth"
+  },
+  "statuses": {
+    "live_inference": "PASS",
+    "specialist_artifact": "PASS",
+    "reviewed": "CAPTURED",
+    "reviewer_verdict": "PASS",
+    "role_tool_capability": "VERIFIED",
+    "human_expert_approved": false,
+    "review_outcome": "PASS"
+  },
+  "restrictions": {
+    "live_codex_calls": 0,
+    "paid_api_calls": 0,
+    "external_actions": 0,
+    "public_deployments": 0
+  },
+  "tool_receipt": {
+    "schema_version": "role-tool-receipt.v1",
+    "authorized_by": "explicit synthetic task packet in this bounded test; this verifies the scoped tool boundary, not a grant to run tools autonomously",
+    "task_id": "task_505a0fa4-5d73-4f8e-b45a-73bf94024116",
+    "trace_id": "trace_4aeca890-9855-4b03-9c72-41ce4facea5f",
+    "role_id": "AI-12",
+    "grants": [
+      "project.read",
+      "artifact.write"
+    ],
+    "read": {
+      "path": "roles/contracts/AI-12.v1.json",
+      "bytes": 2285,
+      "sha256": "6911b6ac49407ca345b890c4e393f5eaa1248ec856ef96642ad9cc9516626fdf"
+    },
+    "write": {
+      "path": "ops/local-live/artifacts/task_505a0fa4-5d73-4f8e-b45a-73bf94024116/scoped-capability-receipt-ai-12.md",
+      "bytes": 611,
+      "sha256": "a4f7dd02ffd54ce25828aeda031ace05bcbf7fc24509f51e79a83e2d23af78e4",
+      "idempotent_existing_receipt": false
+    },
+    "negative_checks": {
+      "ungranted_tool_denied": true,
+      "outside_allowlist_denied": true,
+      "unauthorized_path": "roles/contracts/D-00.v1.json",
+      "path_traversal_denied": true,
+      "overwrite_denied": true
+    },
+    "sensitive_grants": [],
+    "external_actions": 0,
+    "recorded_at": "2026-10-18T18:06:45.951Z"
+  }
+}

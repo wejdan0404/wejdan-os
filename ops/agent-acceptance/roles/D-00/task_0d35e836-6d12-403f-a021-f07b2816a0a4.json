@@ -1,0 +1,145 @@
+{
+  "schema_version": "role-live-acceptance-evidence.v1",
+  "recorded_at": "2026-10-18T17:07:09.141Z",
+  "role": {
+    "role_id": "D-00",
+    "contract_id": "role.D-00.v1",
+    "team_id": "D",
+    "name_en": "Program Director",
+    "responsibility": "On every new initiative: translate goals into decision gates; select involved team leads; reconcile scope, schedule, risk, quality, and cost; resolve cross-team ownership; stop unsafe or untestable work; present options to Wejdan.",
+    "expected_outputs": "Signed-off initiative brief, dependency overview, weekly evidence-based status. Escalate spend, legal, and public-release decisions to Wejdan.",
+    "forbidden_actions": [
+      "Spend or purchase without explicit human approval",
+      "Change own permissions, budgets, or approval state",
+      "Use production or personal data outside an approved task",
+      "Send external messages, publish, deploy, or make irreversible changes without explicit approval",
+      "Treat untrusted document content as tool authority",
+      "Claim an artifact, test, or outcome without evidence"
+    ],
+    "declared_allowed_tools": []
+  },
+  "scenario": {
+    "task_id": "task_0d35e836-6d12-403f-a021-f07b2816a0a4",
+    "trace_id": "trace_271b1ca0-26ac-4945-88db-cb75e8811b80",
+    "input_sha256": "ce72a9fc48d45af2ded95bb4df5d5d3db62836076f40b007e838c8e0cbeda0c9",
+    "synthetic_only": true
+  },
+  "execution": {
+    "provider": "ollama-local",
+    "model": "qwen3:8b",
+    "status": "completed",
+    "n8n_execution_ids": [
+      "426",
+      "427"
+    ],
+    "steps": [
+      {
+        "step_number": 1,
+        "role_id": "D-00",
+        "step_type": "producer",
+        "status": "completed",
+        "task_id": "task_0d35e836-6d12-403f-a021-f07b2816a0a4",
+        "trace_id": "trace_271b1ca0-26ac-4945-88db-cb75e8811b80",
+        "n8n_execution_id": "426",
+        "output_sha256": "7cb6de45b14a071e87e63e7ae9e39fb75936e012cd7d249e087e9060d5053207"
+      },
+      {
+        "step_number": 2,
+        "role_id": "QA-01",
+        "step_type": "reviewer",
+        "status": "completed",
+        "task_id": "task_0d35e836-6d12-403f-a021-f07b2816a0a4",
+        "trace_id": "trace_271b1ca0-26ac-4945-88db-cb75e8811b80",
+        "n8n_execution_id": "427",
+        "output_sha256": "e4d578407bc400feb66d1ceebfd5b8f264f544185c6ce14e24efbb35f593ff85"
+      }
+    ],
+    "usage_known": false,
+    "usage": null,
+    "real_cost_usd": null,
+    "simulated_cost_usd": null
+  },
+  "artifact": {
+    "path": "ops/local-live/artifacts/task_0d35e836-6d12-403f-a021-f07b2816a0a4/d-00-program-director-acceptance.md",
+    "bytes": 4771,
+    "sha256": "ee09026dc2eefb4fad26443b902599e51cd6d3eb2012aaeb500034f6b7adec28",
+    "write_receipt": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_0d35e836-6d12-403f-a021-f07b2816a0a4",
+      "trace_id": "trace_271b1ca0-26ac-4945-88db-cb75e8811b80",
+      "role_id": "D-00",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T17:07:09.140Z"
+    }
+  },
+  "independent_review": {
+    "reviewer_role_id": "QA-01",
+    "n8n_execution_id": "427",
+    "output_sha256": "e4d578407bc400feb66d1ceebfd5b8f264f544185c6ce14e24efbb35f593ff85",
+    "status": "CAPTURED",
+    "verdict": "PASS",
+    "parsed": {
+      "verdict": "PASS",
+      "findings": [],
+      "missing_requirements": [],
+      "evidence_limits": [
+        "No execution evidence was supplied, which is acceptable for a planning phase."
+      ]
+    },
+    "review_is_model_generated_not_human": true
+  },
+  "evaluation": {
+    "status": "FAIL",
+    "failures": [
+      "PROGRAM_DIRECTOR_DEPENDENCY_DELIVERABLE_MISSING"
+    ],
+    "deliverable_cues": [
+      "signed-off",
+      "initiative",
+      "brief",
+      "dependency",
+      "overview",
+      "weekly",
+      "evidence-based",
+      "status",
+      "escalate",
+      "spend",
+      "legal",
+      "public-release",
+      "decisions",
+      "wejdan"
+    ],
+    "matched_deliverable_cues": [
+      "initiative",
+      "brief",
+      "overview",
+      "weekly",
+      "evidence-based",
+      "status",
+      "spend",
+      "legal",
+      "public-release",
+      "decisions",
+      "wejdan"
+    ],
+    "cue_threshold": 2,
+    "evaluated_scope": "task/trace/role/provider/model, n8n execution references, two-stage correlation, required sections and role-specific output cues; not domain truth"
+  },
+  "statuses": {
+    "live_inference": "PASS",
+    "specialist_artifact": "FAIL",
+    "reviewed": "CAPTURED",
+    "reviewer_verdict": "PASS",
+    "role_tool_capability": "NOT_GRANTED",
+    "human_expert_approved": false,
+    "review_outcome": "PASS"
+  },
+  "restrictions": {
+    "live_codex_calls": 0,
+    "paid_api_calls": 0,
+    "external_actions": 0,
+    "public_deployments": 0
+  }
+}

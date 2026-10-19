@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#F4F7FC">
+  <title>لوحة مشروع Wejdan OS</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="mobile-fix.css">
+  <script src="app.js" defer></script>
+  <script src="delegations.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">تجاوز إلى المحتوى الرئيسي / Skip to content</a>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark" aria-hidden="true">W</span><div><p class="eyebrow">WEJDAN LIFE OS · APP CONTROL</p><p class="brand-title" data-i18n="projectDashboard">تشغيل تطبيق وجدان</p></div></div>
+    <div class="top-actions"><span class="data-stamp"><span class="status-dot" aria-hidden="true"></span><span data-i18n="sampleData">بيانات عيّنة · محلية فقط</span></span><button id="lang-toggle" class="button quiet" type="button" aria-label="Switch language">English</button></div>
+  </header>
+  <div class="app-shell">
+    <main id="main" class="main-content" tabindex="-1">
+      <section id="overview" aria-labelledby="page-title">
+        <div class="page-heading"><div><p class="eyebrow" data-i18n="operatingView">تطبيق وجدان · مركز التشغيل</p><h1 id="page-title" data-i18n="projectDashboard">ماذا ننجز الآن؟</h1><p class="intro" data-i18n="projectDashboardIntro">من هنا تحددين هدف التطبيق، تعتمدين خطة العمل، وتتابعين ما ينفذه كل وكيل.</p></div><div class="heading-actions"><button type="button" class="button quiet" id="refresh-data"><span aria-hidden="true">↻</span><span data-i18n="refresh">تحديث الحالة</span></button><button type="button" class="button primary" id="export-report"><span aria-hidden="true">↓</span><span data-i18n="export">حفظ ملخص</span></button></div></div>
+        <div class="notice" role="note"><span class="notice-icon" aria-hidden="true">i</span><p><strong data-i18n="liveLocal">تشغيل محلي</strong><span data-i18n="liveNotice"> الطلبات تُنفذ عبر n8n المحلي وOllama، وتُحفظ في قاعدة محلية. لا أدوات أو اتصالات مدفوعة أو إجراءات خارجية.</span></p></div>
+        <section class="agent-control panel" aria-labelledby="agent-control-title">
+          <div class="panel-heading"><div><p class="eyebrow" data-i18n="agentOverviewEyebrow">حالة مبنية على السجلات</p><h2 id="agent-control-title" data-i18n="agentOverviewTitle">مركز تشغيل الوكلاء</h2></div><span id="readiness-stamp" class="pill neutral">—</span></div>
+          <p class="catalog-note" data-i18n="agentOverviewNote">عقود الأدوار، جاهزية الأدلة، والنشاط الجاري حالات منفصلة. الوكلاء يعملون عند الطلب فقط.</p>
+          <div id="project-stage" class="project-stage" role="status"></div>
+          <div id="agent-readiness" class="agent-readiness"><p class="empty-state" data-i18n="loadingAgents">جارٍ تحميل حالة سجل الوكلاء…</p></div>
+          <p id="agent-source" class="catalog-note" data-i18n="agentSource">المصدر: سجل العقود وسجل الجاهزية وسجل مهام SQLite المحلي.</p>
+        </section>
+        <section class="metric-grid" aria-labelledby="metrics-title">
+          <h2 id="metrics-title" class="sr-only" data-i18n="tasksTotal">المؤشرات الرئيسية / Key metrics</h2>
+          <article class="metric-card"><div class="metric-top"><span data-i18n="tasksTotal">إجمالي المهام المحلية</span><span class="metric-icon blue" aria-hidden="true">↗</span></div><strong id="metric-total" class="metric-value">0</strong><p class="metric-foot"><span data-i18n="persistedTasks">سجل SQLite المحلي</span></p></article>
+          <article class="metric-card"><div class="metric-top"><span data-i18n="completedTasks">مهام مكتملة</span><span class="metric-icon green" aria-hidden="true">✓</span></div><strong id="metric-completed" class="metric-value">0</strong><p class="metric-foot"><span class="pill success" data-i18n="runtimeEvidence">دليل تنفيذ</span></p></article>
+          <article class="metric-card"><div class="metric-top"><span data-i18n="providerCost">تكلفة المزوّد</span><span class="metric-icon gold" aria-hidden="true">ر.س</span></div><strong class="metric-value" data-i18n="unmeteredLocal">محلي</strong><p class="metric-foot"><span class="pill neutral" data-i18n="powerCostNote">الكهرباء غير محسوبة</span></p></article>
+          <article class="metric-card"><div class="metric-top"><span data-i18n="needsAttention">تحتاج مراجعة</span><span class="metric-icon lilac" aria-hidden="true">…</span></div><strong id="metric-failed" class="metric-value">0</strong><p class="metric-foot"><span data-i18n="failedTasks">مهام فاشلة محفوظة</span></p></article>
+        </section>
+      </section>
+      <section id="project-room" class="panel project-room" aria-labelledby="project-room-title">
+        <div class="panel-heading"><div><p class="eyebrow">WEJDAN OS · PROJECT CONTROL</p><h2 id="project-room-title" data-i18n="projectRoom">غرفة مشروع Wejdan OS</h2></div><span class="pill neutral" data-i18n="directorRule">مدير البرنامج · تخطيط قائم على قواعد</span></div>
+        <p class="catalog-note" data-i18n="projectIntro">اكتبي الهدف، راجعي الخطة ومعايير القبول والمراجع، ثم اعتمديها مرة واحدة لبدء التنفيذ المحلي المتتابع.</p>
+        <a class="button plan-link" href="plan.html"><span aria-hidden="true">▤</span><span data-i18n="viewFullPlan">عرض الخطة الكاملة لكل فريق</span></a>
+        <form id="project-form" class="project-form">
+          <label for="project-name" data-i18n="projectName">اسم المشروع</label><input id="project-name" maxlength="100" required placeholder="مثال: تطوير مركز التحكم" data-placeholder-ar="مثال: تطوير مركز التحكم" data-placeholder-en="e.g. Improve the command center">
+          <label for="project-goal" data-i18n="projectGoal">الهدف أو الطلب</label><textarea id="project-goal" maxlength="5000" rows="3" required placeholder="ما النتيجة التي تريدين الوصول إليها؟" data-placeholder-ar="ما النتيجة التي تريدين الوصول إليها؟" data-placeholder-en="What outcome do you want?"></textarea>
+        <div class="project-actions"><button class="button quiet" id="plan-project" type="button" data-i18n="makePlan">كوّني خطة</button><button class="button primary" id="approve-project" type="button" hidden data-i18n="approveProjectPlan">اعتماد الخطة وبدء التنفيذ</button><button class="button primary" id="run-project" type="button" hidden data-i18n="continueProject">متابعة التنفيذ</button></div>
+        </form>
+        <div id="project-plan" class="project-plan"><p data-i18n="planEmpty">ستظهر الخطة هنا بعد إدخال الهدف.</p></div>
+        <p id="project-status" class="catalog-note" role="status"></p>
+      </section>
+      <div class="content-grid">
+        <section id="operations" class="panel operations-panel" aria-labelledby="operations-title">
+          <div class="panel-heading"><div><p class="eyebrow" data-i18n="recentActivity">آخر النشاط المحلي</p><h2 id="operations-title" data-i18n="recentOperations">العمليات الأخيرة</h2></div></div>
+          <form id="task-form" class="local-task-form">
+            <label for="new-task-input" data-i18n="newTask">مهمة جديدة</label>
+            <textarea id="new-task-input" required maxlength="12000" rows="3" aria-describedby="task-safety-note" placeholder="اكتبي طلبًا اصطناعيًا أو غير حساس…"></textarea>
+            <label for="new-task-role" data-i18n="chooseRole">اختاري الدور</label>
+            <select id="new-task-role" required></select>
+            <label for="new-task-provider" data-i18n="providerLabel">المزوّد</label>
+            <select id="new-task-provider"><option value="ollama-local" data-i18n="ollamaProvider">Ollama محلي (n8n)</option><option value="codex-subscription" data-i18n="codexProvider" disabled>Codex — approval required</option></select>
+            <label class="collaboration-option"><input id="task-collaborate" type="checkbox"><span data-i18n="taskCollab">أضيفي مراجعة مستقلة من QA‑01 (استدلال محلي إضافي)</span></label>
+            <label class="collaboration-option"><input id="task-requires-approval" type="checkbox"><span data-i18n="taskNeedsApproval">أوقفي المهمة عند بوابة مراجعة بشرية (قرار محلي فقط)</span></label>
+            <button class="button primary" id="submit-task" type="submit" data-i18n="runLocally">تشغيل محلي</button>
+            <p id="task-safety-note" class="catalog-note" data-i18n="localTaskSafety">لا تستخدمي بيانات شخصية أو سرية. الدور ينتج نصًا فقط ولا يملك أدوات.</p>
+            <p id="task-submit-status" class="sr-only" role="status"></p>
+          </form>
+          <div class="filters"><label class="search-label"><span class="sr-only" data-i18n="searchTasks">ابحثي عن مهمة</span><span aria-hidden="true">⌕</span><input id="task-search" type="search" placeholder="ابحثي عن مهمة…" data-placeholder-ar="ابحثي عن مهمة…" data-placeholder-en="Search tasks…"></label><label class="sr-only" for="status-filter" data-i18n="filterStatus">تصفية حسب الحالة</label><select id="status-filter"><option value="all" data-i18n="allStatuses">كل الحالات</option><option value="completed" data-i18n="completed">مكتملة</option><option value="waiting" data-i18n="waiting">بانتظار</option><option value="failed" data-i18n="needsReview">تحتاج مراجعة</option></select></div>
+          <div class="table-wrap" role="region" aria-labelledby="operations-title" tabindex="0"><table><caption class="sr-only" data-i18n="operationsCaption">المهام المحلية المسجلة مع معرفات التتبع</caption><thead><tr><th scope="col" data-i18n="taskName">المهمة</th><th scope="col" data-i18n="role">الدور</th><th scope="col" data-i18n="status">الحالة</th><th scope="col" data-i18n="runtime">المدة</th><th scope="col"><span class="sr-only" data-i18n="details">التفاصيل</span></th></tr></thead><tbody id="operations-body"></tbody></table></div>
+          <p id="empty-state" class="empty-state" hidden data-i18n="noResults">ما لقينا مهام تطابق هذا البحث.</p>
+        </section>
+        <section id="infrastructure" class="panel status-panel" aria-labelledby="health-title">
+          <div class="panel-heading"><div><p class="eyebrow" data-i18n="systemSnapshot">ملخص النظام</p><h2 id="health-title" data-i18n="infrastructure">البنية التحتية</h2></div><span class="pill warning" data-i18n="notConnected">غير متصل</span></div>
+          <div class="health-row"><span class="health-icon neutral-icon" aria-hidden="true">⌘</span><div class="health-copy"><strong>n8n local</strong><small>127.0.0.1</small></div><span class="health-state muted" data-i18n="unverified">غير متصل</span></div>
+          <div class="health-row"><span class="health-icon neutral-icon" aria-hidden="true">◇</span><div class="health-copy"><strong id="model-name">Ollama · qwen3:8b</strong><small id="model-detail" data-i18n="noProviderCalls">Ollama محلي · استدلال مباشر</small></div><span id="model-state" class="health-state good" data-i18n="localReady">جاهز محليًا</span></div>
+          <p id="codex-provider-evidence" class="catalog-note">Codex CLI pilot evidence exists; app live execution is unverified.</p>
+          <div class="health-row"><span class="health-icon neutral-icon" aria-hidden="true">▤</span><div class="health-copy"><strong data-i18n="ledger">سجل التكاليف</strong><small data-i18n="localOnly">محاكاة محلية داخل الذاكرة</small></div><span class="health-state good" data-i18n="mock">محاكاة</span></div>
+          <section class="plan-card" aria-labelledby="provider-billing-title">
+            <div class="plan-heading"><h3 id="provider-billing-title" data-i18n="providerBilling">فواتير مزوّد API</h3></div>
+            <strong data-i18n="noPaidProvider">لا يوجد مسار مدفوع</strong>
+            <p><span data-i18n="paidCallsObserved">استدعاءات API مدفوعة مرصودة</span><b>0</b></p>
+            <p><span data-i18n="localEnergy">الكهرباء والتكلفة المحلية</span><b data-i18n="notMeasured">غير مقاسة</b></p>
+          </section>
+        </section>
+      </div>
+      <section id="finance" class="panel compact-panel finance-panel" aria-labelledby="finance-title"><div class="panel-heading"><h2 id="finance-title" data-i18n="finance">المالية</h2><span class="pill neutral" data-i18n="simulated">محاكاة</span></div><p data-i18n="financeDetail">القرارات المحلية تستخدم وحدات صحيحة وتمنع الإنفاق. الحجز والتسوية غير ذريين وغير دائمين.</p><a href="../docs/finops/finops-boundaries.md" data-i18n="readBoundaries">اقرئي حدود السجل المالي</a></section>
+      <div class="lower-grid">
+        <section id="company-delegations" class="panel inbox-panel" aria-labelledby="company-delegations-title"><div class="panel-heading"><div><p class="eyebrow">Company OS · حزم مهام محدودة</p><h2 id="company-delegations-title">طلبات واردة من مدير الشركة</h2></div><button type="button" class="button quiet" id="refresh-company-delegations">تحديث</button></div><p class="catalog-note">لا تُنشأ مهمة أو تُشغّل بمجرد وصول الطلب. راجعي النص، ثم وافقي داخل Life OS؛ تشغيل المهمة يحتاج ضغط زر مستقل. لا يشارك النظام محادثات أو ذاكرة.</p><div id="company-delegations-status" role="status" aria-live="polite">جارٍ فحص صندوق الطلبات…</div><div id="company-delegations-list" class="inbox-list"></div></section>
+        <section id="inbox" class="panel inbox-panel" aria-labelledby="inbox-title"><div class="panel-heading"><div><p class="eyebrow" data-i18n="nextInLine">ما ينتظر</p><h2 id="inbox-title" data-i18n="taskInbox">صندوق المهام</h2></div><span id="inbox-count" class="count-badge">0</span></div><div id="inbox-list" class="inbox-list"><p data-i18n="noWaitingTasks">لا توجد مهام بانتظار المعالجة.</p></div></section>
+        <section id="approvals" class="panel approvals-panel" aria-labelledby="approvals-title"><div class="panel-heading"><div><p class="eyebrow" data-i18n="humanGate">بوابة بشرية</p><h2 id="approvals-title" data-i18n="approvals">الموافقات</h2></div><span id="approval-count" class="pill neutral">0</span></div><p class="catalog-note" data-i18n="approvalIsRecordOnly">الموافقة تسجل مراجعتك المحلية فقط؛ لا تمنح صلاحيات أدوات أو إجراءات خارجية.</p><div id="approval-list" class="approval-list"><p data-i18n="noApprovals">لا توجد طلبات مراجعة.</p></div></section>
+      </div>
+      <section id="roles" class="panel roles-panel" aria-labelledby="roles-title"><div class="panel-heading"><div><p class="eyebrow" data-i18n="teamCatalog">دليل الفريق</p><h2 id="roles-title" data-i18n="roles">الأدوار</h2></div><span class="role-total"><strong>85</strong><span data-i18n="specifiedRoles">دورًا محددًا</span></span></div><div class="role-filters"><label for="team-filter" data-i18n="team">الفريق</label><select id="team-filter"><option value="all" data-i18n="allTeams">كل الفرق</option></select><label for="role-status-filter" data-i18n="activation">التفعيل</label><select id="role-status-filter"><option value="all" data-i18n="allActivation">كل الحالات</option><option value="specified" data-i18n="specified">محدّد</option><option value="mock" data-i18n="mockTested">اختبار محاكاة</option></select><label class="search-label role-search"><span aria-hidden="true">⌕</span><span class="sr-only" data-i18n="searchRoles">ابحثي عن دور</span><input id="role-search" type="search" placeholder="ابحثي عن دور…" data-placeholder-ar="ابحثي عن دور…" data-placeholder-en="Search roles…"></label></div><p id="role-results-count" class="sr-only" role="status" aria-live="polite"></p><div id="role-list" class="role-list" role="region" aria-labelledby="roles-title" tabindex="0"></div><p id="role-empty" class="empty-state" hidden data-i18n="filtersNone">لا توجد أدوار مطابقة.</p><p class="catalog-note" data-i18n="rolesAreNotAgents">هذه عقود وسجلات أدوار؛ لا تعني وجود 85 وكيل ذكاء اصطناعي نشط.</p><a class="button plan-link" href="plan.html" data-i18n="viewFullPlan">عرض الخطة الكاملة لكل فريق</a></section>
+      <section id="quality" class="panel compact-panel quality-panel" aria-labelledby="quality-title"><div class="panel-heading"><h2 id="quality-title" data-i18n="quality">الجودة والتقييم</h2><span class="pill success" data-i18n="offlineChecks">فحوص محلية</span></div><p data-i18n="qualityDetail">تظهر نتائج الاختبارات المنفذة في سجل التسليم. لا توجد مراجعة بشرية معتمدة لهذا النموذج.</p><a href="../ops/TEST_MATRIX.md" data-i18n="readTestMatrix">عرض مصفوفة الاختبارات</a></section>
+      <footer class="page-footer"><span>Wejdan Life OS · <span data-i18n="localPrototype">نموذج محلي قابل للمراجعة</span></span><span data-i18n="noPersonalData">الجسر المحلي يشارك نص المهمة فقط بعد الموافقة.</span></footer>
+    </main>
+    <aside class="sidebar">
+      <p class="nav-caption" data-i18n="workspace">مساحة العمل</p>
+      <nav class="nav-list" aria-label="التنقل الرئيسي / Main navigation">
+        <a class="nav-link selected" href="#overview" aria-current="page"><span aria-hidden="true">◫</span><span data-i18n="overview">نظرة عامة</span></a>
+        <a class="nav-link" href="#project-room"><span aria-hidden="true">▣</span><span data-i18n="projectRoom">غرفة المشروع</span></a>
+        <a class="nav-link" href="#operations"><span aria-hidden="true">↗</span><span data-i18n="operations">العمليات</span><span id="task-count" class="nav-count">0</span></a>
+        <a class="nav-link" href="#inbox"><span aria-hidden="true">▤</span><span data-i18n="taskInbox">صندوق المهام</span></a>
+        <a class="nav-link" href="#infrastructure"><span aria-hidden="true">▦</span><span data-i18n="infrastructure">البنية التحتية</span></a>
+        <a class="nav-link" href="#finance"><span aria-hidden="true">◈</span><span data-i18n="finance">المالية</span></a>
+        <a class="nav-link" href="#roles"><span aria-hidden="true">◎</span><span data-i18n="roles">الأدوار</span><span class="nav-count">85</span></a>
+        <a class="nav-link" href="#approvals"><span aria-hidden="true">☷</span><span data-i18n="approvals">الموافقات</span></a>
+        <a class="nav-link" href="#quality"><span aria-hidden="true">⌁</span><span data-i18n="quality">الجودة والتقييم</span></a>
+      </nav>
+      <div class="side-note"><span class="note-mark" aria-hidden="true">✦</span><p data-i18n="noLiveControls">عناصر التحكم الحيّة غير متاحة في هذا النموذج المحلي.</p></div>
+      <div class="profile"><span class="avatar" aria-hidden="true">W</span><div><strong>Wejdan</strong><small data-i18n="owner">مالكة مساحة العمل</small></div><span class="profile-more" aria-hidden="true">···</span></div>
+    </aside>
+  </div>
+  <dialog id="task-dialog" aria-labelledby="dialog-title"><div class="dialog-header"><h2 id="dialog-title" tabindex="-1" data-i18n="taskDetails">تفاصيل المهمة</h2><button type="button" class="icon-button" id="dialog-close" aria-label="إغلاق / Close">×</button></div><div id="dialog-content"></div></dialog>
+</body>
+</html>

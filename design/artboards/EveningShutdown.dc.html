@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>Evening Shutdown</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'IBM Plex Sans Arabic','IBM Plex Sans',sans-serif;background:#F4F7FC;color:#0E121C}
+a{color:#4F5FA0}a:hover{color:#2B3358}
+</style>
+</helmet>
+<div style="width:390px;height:1100px;position:relative;overflow:hidden;background:#F4F7FC;box-sizing:border-box;font-family:'IBM Plex Sans Arabic','IBM Plex Sans',sans-serif;color:#0E121C;display:flex;flex-direction:column;padding:16px 20px 32px;">
+  <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;">
+    <span style="font-size:13px;line-height:20px;font-weight:500;color:#5A6478;">الإثنين 28 سبتمبر · <bdi>21:40</bdi></span>
+    <a href="Main.dc.html" aria-label="إغلاق" style="flex:none;display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:#FFFFFF;border:1px solid #DCE3EF;color:#3A4256;text-decoration:none;box-sizing:border-box;">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+    </a>
+  </div>
+
+  <div style="display:flex;align-items:center;gap:12px;margin-top:12px;">
+    <span style="flex:none;display:flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:999px;background:#ECE8F7;color:#5B4C99;">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z"></path></svg>
+    </span>
+    <div>
+      <h1 style="margin:0;font-size:22px;line-height:30px;font-weight:700;">نقفل اليوم بهدوء</h1>
+      <p style="margin:0;font-size:14px;line-height:22px;color:#3A4256;">أنجزتي <bdi>4</bdi> من <bdi>6</bdi> — يوم حلو. <span style="font-size:12px;font-weight:600;color:#5A6478;background:#EEF1F6;border-radius:999px;padding:0 8px;">عيّنة</span></p>
+    </div>
+  </div>
+
+  <section aria-label="اللي ما صار" style="margin-top:24px;display:flex;flex-direction:column;gap:10px;">
+    <div>
+      <h2 style="margin:0;font-size:18px;line-height:26px;font-weight:600;">اللي ما صار اليوم</h2>
+      <p style="margin:2px 0 0;font-size:14px;line-height:22px;color:#5A6478;">قرار سريع لكل وحدة، وبعدها تطلع من بالك.</p>
+    </div>
+    <sc-for list="{{leftovers}}" as="t" hint-placeholder-count="2">
+      <article style="background:#FFFFFF;border:1px solid #DCE3EF;border-radius:20px;padding:14px 16px;display:flex;flex-direction:column;gap:10px;">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;">
+          <div>
+            <div style="font-size:16px;line-height:24px;font-weight:600;">{{t.title}}</div>
+            <div style="font-size:13px;line-height:20px;font-weight:500;color:#5A6478;">{{t.status}}</div>
+          </div>
+        </div>
+        <div role="group" aria-label="{{t.group}}" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;">
+          <sc-for list="{{t.opts}}" as="o" hint-placeholder-count="3">
+            <button type="button" onClick="{{o.pick}}" aria-pressed="{{o.pressed}}" style="{{o.style}}">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{o.icon}}"></path></svg>
+              {{o.label}}
+            </button>
+          </sc-for>
+        </div>
+      </article>
+    </sc-for>
+  </section>
+
+  <section aria-label="أول خطوة بكرة" style="margin-top:24px;display:flex;flex-direction:column;gap:10px;">
+    <h2 style="margin:0;font-size:18px;line-height:26px;font-weight:600;">أول خطوة بكرة</h2>
+    <div role="radiogroup" aria-label="أول خطوة بكرة" style="display:flex;flex-direction:column;gap:8px;">
+      <sc-for list="{{firsts}}" as="f" hint-placeholder-count="2">
+        <button type="button" role="radio" onClick="{{f.pick}}" aria-checked="{{f.checked}}" style="{{f.style}}">
+          <span style="{{f.radio}}"></span>
+          <span style="display:flex;flex-direction:column;flex:1;min-width:0;text-align:right;">
+            <span style="font-size:15px;line-height:22px;font-weight:600;color:#0E121C;">{{f.title}}</span>
+            <span style="font-size:13px;line-height:20px;font-weight:500;color:#5A6478;">{{f.meta}}</span>
+          </span>
+        </button>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="margin-top:24px;display:flex;flex-direction:column;gap:8px;">
+    <label for="savor" style="display:flex;align-items:center;gap:6px;font-size:18px;line-height:26px;font-weight:600;">
+      <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 C12.8 8.5 15.5 11.2 22 12 C15.5 12.8 12.8 15.5 12 22 C11.2 15.5 8.5 12.8 2 12 C8.5 11.2 11.2 8.5 12 2Z" fill="#E0A93B"></path></svg>
+      لحظة حلوة اليوم
+      <span style="font-size:13px;line-height:20px;font-weight:500;color:#5A6478;">(اختياري)</span>
+    </label>
+    <input id="savor" type="text" placeholder="مثلًا: القهوة مع الكتاب العصر" style="height:52px;border:1px solid #DCE3EF;border-radius:16px;padding:0 14px;font-family:inherit;font-size:15px;color:#0E121C;background:#FFFFFF;box-sizing:border-box;width:100%;">
+  </section>
+
+  <section aria-label="سلسلة المساء" style="margin-top:24px;background:#FFFFFF;border:1px solid #DCE3EF;border-radius:20px;padding:16px;display:flex;flex-direction:column;gap:10px;">
+    <div style="display:flex;align-items:center;justify-content:space-between;">
+      <span style="font-size:16px;line-height:24px;font-weight:600;">سلسلة المساء</span>
+      <span style="font-size:13px;line-height:20px;font-weight:500;color:#5A6478;">نحو <bdi>25</bdi> د · النوم <bdi>23:30</bdi></span>
+    </div>
+    <ol style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;">
+      <li style="display:flex;align-items:center;gap:8px;height:40px;padding:0 10px;border-radius:14px;background:#ECE8F7;color:#5B4C99;font-size:13px;font-weight:600;"><span style="display:flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:999px;background:#FFFFFF;font-family:'IBM Plex Sans',sans-serif;font-size:12px;">1</span>إطفاء الشاشات</li>
+      <li style="display:flex;align-items:center;gap:8px;height:40px;padding:0 10px;border-radius:14px;background:#ECE8F7;color:#5B4C99;font-size:13px;font-weight:600;"><span style="display:flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:999px;background:#FFFFFF;font-family:'IBM Plex Sans',sans-serif;font-size:12px;">2</span>العناية</li>
+      <li style="display:flex;align-items:center;gap:8px;height:40px;padding:0 10px;border-radius:14px;background:#ECE8F7;color:#5B4C99;font-size:13px;font-weight:600;"><span style="display:flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:999px;background:#FFFFFF;font-family:'IBM Plex Sans',sans-serif;font-size:12px;">3</span>تنظيف الأسنان</li>
+      <li style="display:flex;align-items:center;gap:8px;height:40px;padding:0 10px;border-radius:14px;background:#ECE8F7;color:#5B4C99;font-size:13px;font-weight:600;"><span style="display:flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:999px;background:#FFFFFF;font-family:'IBM Plex Sans',sans-serif;font-size:12px;">4</span>كتاب</li>
+    </ol>
+  </section>
+
+  <div style="flex:1;"></div>
+  <a href="RoutinePlayer.dc.html" style="flex:none;display:flex;align-items:center;justify-content:center;height:52px;margin-top:20px;border-radius:16px;background:#6172B5;color:#FFFFFF;text-decoration:none;font-size:16px;line-height:24px;font-weight:600;">ابدئي سلسلة المساء</a>
+  <a href="Main.dc.html" style="flex:none;display:flex;align-items:center;justify-content:center;min-height:44px;margin-top:6px;color:#4F5FA0;text-decoration:none;font-size:16px;line-height:24px;font-weight:600;">لاحقًا</a>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":1100}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { choice: { study: 'move', room: 'letgo' }, first: 'vocab' };
+  }
+  renderVals() {
+    var self = this;
+    var st = this.state;
+    var OPTS = [
+      { id: 'move', label: 'بكرة', icon: 'M20 12H6M11 6l-6 6 6 6' },
+      { id: 'park', label: 'لاحقًا', icon: 'M3 4h18v5H3zM5 9v10h14V9M10 13h4' },
+      { id: 'letgo', label: 'نتركها', icon: 'M20 12a8 8 0 1 1-16 0a8 8 0 1 1 16 0M8 12h8' }
+    ];
+    var items = [
+      { id: 'study', title: 'دراسة شهادة Google UX', status: 'ما بدأت اليوم' },
+      { id: 'room', title: 'ترتيب الغرفة', status: 'ما بدأت اليوم' }
+    ];
+    var notes = { move: 'تنتقل لبكرة', park: 'تنحفظ لوقت لاحق', letgo: 'نتركها — عادي' };
+    var leftovers = items.map(function (t) {
+      var cur = st.choice[t.id];
+      return {
+        title: t.title,
+        status: t.status + ' · ' + notes[cur],
+        group: 'قرار: ' + t.title,
+        opts: OPTS.map(function (o) {
+          var sel = cur === o.id;
+          return {
+            label: o.label, icon: o.icon,
+            pressed: sel ? 'true' : 'false',
+            style: 'display:flex;align-items:center;justify-content:center;gap:6px;height:44px;border-radius:999px;font-family:inherit;font-size:14px;font-weight:600;cursor:pointer;box-sizing:border-box;' + (sel ? 'background:#EAF1FB;border:1px solid #9BC4EE;color:#2B3358;' : 'background:#FFFFFF;border:1px solid #DCE3EF;color:#3A4256;'),
+            pick: function () { var c = Object.assign({}, st.choice); c[t.id] = o.id; self.setState({ choice: c }); }
+          };
+        })
+      };
+    });
+    var fdefs = [
+      { id: 'vocab', title: 'مراجعة مفردات IELTS', meta: 'بعد الفطور · أدنى 3 د' },
+      { id: 'study', title: 'دراسة شهادة Google UX', meta: 'بعد الفطور · أدنى 15 د' }
+    ];
+    var firsts = fdefs.map(function (f) {
+      var sel = st.first === f.id;
+      return {
+        title: f.title, meta: f.meta,
+        checked: sel ? 'true' : 'false',
+        style: 'display:flex;align-items:center;gap:12px;width:100%;min-height:64px;padding:10px 16px;border-radius:20px;cursor:pointer;font-family:inherit;box-sizing:border-box;background:#FFFFFF;' + (sel ? 'border:2px solid #9BC4EE;' : 'border:1px solid #DCE3EF;'),
+        radio: 'flex:none;width:22px;height:22px;border-radius:999px;box-sizing:border-box;' + (sel ? 'border:7px solid #6172B5;background:#FFFFFF;' : 'border:2px solid #9BC4EE;background:#FFFFFF;'),
+        pick: function () { self.setState({ first: f.id }); }
+      };
+    });
+    return { leftovers: leftovers, firsts: firsts };
+  }
+}
+</script>
+</body>
+</html>

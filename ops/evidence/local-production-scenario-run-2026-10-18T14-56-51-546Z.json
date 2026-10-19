@@ -1,0 +1,26 @@
+{
+  "schema_version": "local-production-scenario-run.v1",
+  "recorded_at": "2026-10-18T14:56:51.546Z",
+  "results": [
+    {
+      "scenario_id": "research-quality",
+      "result": "FAIL",
+      "task_id": "task_9de6cdf4-964c-4ed4-98e2-3b22b6ebe60f",
+      "trace_id": "trace_18fa4279-1ebd-477c-850b-25da64a5139d",
+      "error": "SCENARIO_FINAL_REVIEW_NOT_PASS:REVISE",
+      "step_count": 5
+    }
+  ],
+  "counts": {
+    "expected": 1,
+    "passed": 0,
+    "failed": 1
+  },
+  "safety": {
+    "paid_api_calls": 0,
+    "live_codex_calls": 0,
+    "cloud_n8n_runs": 0,
+    "external_actions": 0
+  },
+  "evidence_path": "ops/evidence/local-production-scenario-run-2026-10-18T14-56-51-546Z.json"
+}

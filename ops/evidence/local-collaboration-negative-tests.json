@@ -1,0 +1,41 @@
+{
+  "schema_version": "local-collaboration-test.v1",
+  "tested_at": "2026-10-18T08:04:29.515Z",
+  "result": "PASS",
+  "checks": [
+    {
+      "name": "unknown reviewer rejected before task/inference",
+      "result": "PASS",
+      "detail": "HTTP 400; tasks 0→0"
+    },
+    {
+      "name": "single-stage local dispatch and memory persistence",
+      "result": "PASS",
+      "detail": "{\"status\":\"completed\",\"steps\":1,\"memory\":2}"
+    },
+    {
+      "name": "mismatched task/trace/role correlation fails closed and persists",
+      "result": "PASS",
+      "detail": "{\"http\":502,\"task_status\":\"failed\",\"step_status\":\"failed\"}"
+    },
+    {
+      "name": "empty model output fails closed and persists",
+      "result": "PASS",
+      "detail": "{\"http\":502,\"error\":\"LOCAL_EMPTY_OUTPUT\"}"
+    },
+    {
+      "name": "reviewer correlation failure preserves producer and fails overall task",
+      "result": "PASS",
+      "detail": "{\"http\":502,\"task_status\":\"failed\",\"step_statuses\":[\"completed\",\"failed\"]}"
+    }
+  ],
+  "mock_only": true,
+  "external_calls": 0,
+  "paid_provider_calls": 0,
+  "bindings": [
+    "127.0.0.1"
+  ],
+  "stub_endpoint": "http://127.0.0.1:8768",
+  "api_port": 8767,
+  "note": "Stub outputs validate API handling only; real producer-reviewer inference is evidenced separately by local n8n executions."
+}

@@ -1,0 +1,161 @@
+{
+  "schema_version": "role-live-acceptance-evidence.v1",
+  "recorded_at": "2026-10-18T14:38:17.176Z",
+  "role": {
+    "role_id": "SEC-07",
+    "contract_id": "role.SEC-07.v1",
+    "team_id": "SEC",
+    "name_en": "Secrets/Supply Chain Engineer",
+    "responsibility": "Rotate and scope keys; scan repository/images/dependencies; document SBOM/provenance and external plugin risks.",
+    "expected_outputs": "Secrets and supply-chain review with remediation logs.",
+    "forbidden_actions": [
+      "Spend or purchase without explicit human approval",
+      "Change own permissions, budgets, or approval state",
+      "Use production or personal data outside an approved task",
+      "Send external messages, publish, deploy, or make irreversible changes without explicit approval",
+      "Treat untrusted document content as tool authority",
+      "Claim an artifact, test, or outcome without evidence"
+    ],
+    "declared_allowed_tools": []
+  },
+  "scenario": {
+    "task_id": "task_adf24675-c66b-4cf7-b4cb-3f6e9e85156a",
+    "trace_id": "trace_68d72874-608e-43cd-8384-1241e1509e21",
+    "input_sha256": "8a2129ce7556037b7ac8726dc5b0a69bb8dba2f8fa747572b5d469e1780ac6e3",
+    "synthetic_only": true
+  },
+  "execution": {
+    "provider": "ollama-local",
+    "model": "qwen3:8b",
+    "status": "blocked",
+    "n8n_execution_ids": [
+      "338",
+      "339",
+      "340",
+      "341"
+    ],
+    "steps": [
+      {
+        "step_number": 1,
+        "role_id": "SEC-07",
+        "step_type": "producer",
+        "status": "completed",
+        "task_id": "task_adf24675-c66b-4cf7-b4cb-3f6e9e85156a",
+        "trace_id": "trace_68d72874-608e-43cd-8384-1241e1509e21",
+        "n8n_execution_id": "338",
+        "output_sha256": "99f1db3d549afea19b50b3a50e13e21cc60ad755a0cf5c71b6680fbf38715dcd"
+      },
+      {
+        "step_number": 2,
+        "role_id": "QA-01",
+        "step_type": "reviewer",
+        "status": "completed",
+        "task_id": "task_adf24675-c66b-4cf7-b4cb-3f6e9e85156a",
+        "trace_id": "trace_68d72874-608e-43cd-8384-1241e1509e21",
+        "n8n_execution_id": "339",
+        "output_sha256": "53d40ea87015f552440563aed1dc176a33274c22f89d33fbd017a3f6ce85d4f9"
+      },
+      {
+        "step_number": 3,
+        "role_id": "SEC-07",
+        "step_type": "bounded_revision",
+        "status": "completed",
+        "task_id": "task_adf24675-c66b-4cf7-b4cb-3f6e9e85156a",
+        "trace_id": "trace_68d72874-608e-43cd-8384-1241e1509e21",
+        "n8n_execution_id": "340",
+        "output_sha256": "0cb113de8d4f144acac976bb86c89e3b4641183c657bd6063d5772412228e997"
+      },
+      {
+        "step_number": 4,
+        "role_id": "QA-01",
+        "step_type": "final_review",
+        "status": "completed",
+        "task_id": "task_adf24675-c66b-4cf7-b4cb-3f6e9e85156a",
+        "trace_id": "trace_68d72874-608e-43cd-8384-1241e1509e21",
+        "n8n_execution_id": "341",
+        "output_sha256": "7b643d03c0ed3bceb7483b83fb2a6fb98b1582c9a1eec55ec786f422c7d563dc"
+      }
+    ],
+    "usage_known": false,
+    "usage": null,
+    "real_cost_usd": null,
+    "simulated_cost_usd": null
+  },
+  "artifact": {
+    "path": "ops/local-live/artifacts/task_adf24675-c66b-4cf7-b4cb-3f6e9e85156a/sec-07-security-supply-chain-engineer-acceptance.md",
+    "bytes": 4439,
+    "sha256": "2a2b27339381b93bb6ff7727a0c79f317ff95f26c5fc56aeec0bcc7be672ce19",
+    "write_receipt": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_adf24675-c66b-4cf7-b4cb-3f6e9e85156a",
+      "trace_id": "trace_68d72874-608e-43cd-8384-1241e1509e21",
+      "role_id": "SEC-07",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T14:38:17.174Z"
+    }
+  },
+  "independent_review": {
+    "reviewer_role_id": "QA-01",
+    "n8n_execution_id": "341",
+    "output_sha256": "7b643d03c0ed3bceb7483b83fb2a6fb98b1582c9a1eec55ec786f422c7d563dc",
+    "status": "CAPTURED",
+    "verdict": "REVISE",
+    "parsed": {
+      "verdict": "REVISE",
+      "findings": [
+        "The draft lacks concrete evidence of dependency scanning and SBOM generation, which are required by the task.",
+        "No tool usage is mentioned, which is a critical requirement for dependency scanning and SBOM documentation.",
+        "The status of key rotation and plugin risk assessment is pending, but no verification or approval steps are outlined."
+      ],
+      "missing_requirements": [
+        "Tool usage for dependency scanning and SBOM generation must be specified.",
+        "Evidence of key rotation and plugin usage must be included.",
+        "Approval steps for key rotation must be clearly defined."
+      ],
+      "evidence_limits": [
+        "No actual evidence of repository or image dependencies is provided.",
+        "No SBOM or proven,ance tracking is documented.",
+        "No external plugin usage is confirmed."
+      ]
+    },
+    "review_is_model_generated_not_human": true
+  },
+  "evaluation": {
+    "status": "FAIL",
+    "failures": [
+      "TASK_NOT_COMPLETED"
+    ],
+    "deliverable_cues": [
+      "secrets",
+      "supply-chain",
+      "review",
+      "remediation",
+      "logs"
+    ],
+    "matched_deliverable_cues": [
+      "secrets",
+      "supply-chain",
+      "review",
+      "remediation"
+    ],
+    "cue_threshold": 2,
+    "evaluated_scope": "task/trace/role/provider/model, n8n execution references, two-stage correlation, required sections and role-specific output cues; not domain truth"
+  },
+  "statuses": {
+    "live_inference": "PASS",
+    "specialist_artifact": "FAIL",
+    "reviewed": "CAPTURED",
+    "reviewer_verdict": "REVISE",
+    "role_tool_capability": "NOT_GRANTED",
+    "human_expert_approved": false,
+    "review_outcome": "REVISE"
+  },
+  "restrictions": {
+    "live_codex_calls": 0,
+    "paid_api_calls": 0,
+    "external_actions": 0,
+    "public_deployments": 0
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "schema_version": "role-live-acceptance-evidence.v1",
+  "recorded_at": "2026-10-18T17:14:55.427Z",
+  "role": {
+    "role_id": "BE-03",
+    "contract_id": "role.BE-03.v1",
+    "team_id": "BE",
+    "name_en": "Domain/Business-Logic Developer",
+    "responsibility": "Implement deterministic feature rules, state transitions, transactions, validation and compensating actions; write unit/integration tests.",
+    "expected_outputs": "Tested domain module; no sensitive rule delegated to a prompt.",
+    "forbidden_actions": [
+      "Spend or purchase without explicit human approval",
+      "Change own permissions, budgets, or approval state",
+      "Use production or personal data outside an approved task",
+      "Send external messages, publish, deploy, or make irreversible changes without explicit approval",
+      "Treat untrusted document content as tool authority",
+      "Claim an artifact, test, or outcome without evidence"
+    ],
+    "declared_allowed_tools": []
+  },
+  "scenario": {
+    "task_id": "task_a8b607c9-8874-4bcc-ae61-678cc275f0d0",
+    "trace_id": "trace_87a00382-709e-46b3-a753-31208436e346",
+    "input_sha256": "3de9b9956dcab3d3c5e89c6e5c946489a8efad2852e766c8b7937e4b39602112",
+    "synthetic_only": true
+  },
+  "execution": {
+    "provider": "ollama-local",
+    "model": "qwen3:8b",
+    "status": "completed",
+    "n8n_execution_ids": [
+      "492",
+      "493"
+    ],
+    "steps": [
+      {
+        "step_number": 1,
+        "role_id": "BE-03",
+        "step_type": "producer",
+        "status": "completed",
+        "task_id": "task_a8b607c9-8874-4bcc-ae61-678cc275f0d0",
+        "trace_id": "trace_87a00382-709e-46b3-a753-31208436e346",
+        "n8n_execution_id": "492",
+        "output_sha256": "392897afdea70421e8a0ecaf25e1d0b10b983e4d51aae09e53651f9b0e58dce3"
+      },
+      {
+        "step_number": 2,
+        "role_id": "QA-01",
+        "step_type": "reviewer",
+        "status": "completed",
+        "task_id": "task_a8b607c9-8874-4bcc-ae61-678cc275f0d0",
+        "trace_id": "trace_87a00382-709e-46b3-a753-31208436e346",
+        "n8n_execution_id": "493",
+        "output_sha256": "0de2789fc7404ba7d5238caf0c1e2948cb29510e83d27839a7c531482107a7c7"
+      }
+    ],
+    "usage_known": false,
+    "usage": null,
+    "real_cost_usd": null,
+    "simulated_cost_usd": null
+  },
+  "artifact": {
+    "path": "ops/local-live/artifacts/task_a8b607c9-8874-4bcc-ae61-678cc275f0d0/be-03-domain-business-logic-developer-acceptance.md",
+    "bytes": 4961,
+    "sha256": "e71905a109dd29990bcaf1af423842b3f78e686f8a5d4961727df106e2f4d30c",
+    "write_receipt": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_a8b607c9-8874-4bcc-ae61-678cc275f0d0",
+      "trace_id": "trace_87a00382-709e-46b3-a753-31208436e346",
+      "role_id": "BE-03",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T17:14:55.426Z"
+    }
+  },
+  "independent_review": {
+    "reviewer_role_id": "QA-01",
+    "n8n_execution_id": "493",
+    "output_sha256": "0de2789fc7404ba7d5238caf0c1e2948cb29510e83d27839a7c531482107a7c7",
+    "status": "CAPTURED",
+    "verdict": "PASS",
+    "parsed": {
+      "verdict": "PASS",
+      "findings": [],
+      "missing_requirements": [],
+      "evidence_limits": []
+    },
+    "review_is_model_generated_not_human": true
+  },
+  "evaluation": {
+    "status": "PASS",
+    "failures": [],
+    "deliverable_cues": [
+      "tested",
+      "domain",
+      "module",
+      "sensitive",
+      "rule",
+      "delegated",
+      "prompt"
+    ],
+    "matched_deliverable_cues": [
+      "domain",
+      "module"
+    ],
+    "cue_threshold": 2,
+    "evaluated_scope": "task/trace/role/provider/model, n8n execution references, two-stage correlation, required sections and role-specific output cues; not domain truth"
+  },
+  "statuses": {
+    "live_inference": "PASS",
+    "specialist_artifact": "PASS",
+    "reviewed": "CAPTURED",
+    "reviewer_verdict": "PASS",
+    "role_tool_capability": "VERIFIED",
+    "human_expert_approved": false,
+    "review_outcome": "PASS"
+  },
+  "restrictions": {
+    "live_codex_calls": 0,
+    "paid_api_calls": 0,
+    "external_actions": 0,
+    "public_deployments": 0
+  },
+  "tool_receipt": {
+    "schema_version": "role-tool-receipt.v1",
+    "authorized_by": "explicit synthetic task packet in this bounded test; this verifies the scoped tool boundary, not a grant to run tools autonomously",
+    "task_id": "task_a8b607c9-8874-4bcc-ae61-678cc275f0d0",
+    "trace_id": "trace_87a00382-709e-46b3-a753-31208436e346",
+    "role_id": "BE-03",
+    "grants": [
+      "project.read",
+      "artifact.write"
+    ],
+    "read": {
+      "path": "roles/contracts/BE-03.v1.json",
+      "bytes": 2135,
+      "sha256": "c4e2993f407492e23e8a06cf157c6cd440ab0ded3df25f147b4ee36f95a5332b"
+    },
+    "write": {
+      "path": "ops/local-live/artifacts/task_a8b607c9-8874-4bcc-ae61-678cc275f0d0/scoped-capability-receipt-be-03.md",
+      "bytes": 611,
+      "sha256": "906a2de0660fc5909ab9d6ee730834af0107512cccacecfa9b04051ef76d668d",
+      "idempotent_existing_receipt": false
+    },
+    "negative_checks": {
+      "ungranted_tool_denied": true,
+      "outside_allowlist_denied": true,
+      "unauthorized_path": "roles/contracts/D-00.v1.json",
+      "path_traversal_denied": true,
+      "overwrite_denied": true
+    },
+    "sensitive_grants": [],
+    "external_actions": 0,
+    "recorded_at": "2026-10-18T18:06:46.107Z"
+  }
+}

@@ -1,0 +1,2112 @@
+{
+  "@@locale": "ar",
+  "whyGrowFocus": "من تركيز موسمك: {domain}",
+  "@whyGrowFocus": {
+    "placeholders": {
+      "domain": {
+        "type": "String"
+      }
+    }
+  },
+  "whyStrengthDay": "يوم القوة {n} من {total} هذا الأسبوع",
+  "@whyStrengthDay": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "whyWalkDay": "يوم مشي — عضلاتك ترتاح بين أيام القوة",
+  "whyIeltsRotation": "مفرداتك + مهارة اليوم: {skill}",
+  "@whyIeltsRotation": {
+    "placeholders": {
+      "skill": {
+        "type": "String"
+      }
+    }
+  },
+  "whyVocabDue": "{count} بطاقة تنتظر المراجعة — تكرار متباعد",
+  "@whyVocabDue": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "whyComeback": "رجعتي — وهذا أهم جزء",
+  "whyMaintainLight": "صيانة خفيفة: {domain}",
+  "@whyMaintainLight": {
+    "placeholders": {
+      "domain": {
+        "type": "String"
+      }
+    }
+  },
+  "whyChainStep": "خطوة من {routine}",
+  "@whyChainStep": {
+    "placeholders": {
+      "routine": {
+        "type": "String"
+      }
+    }
+  },
+  "whyWeeklyDue": "مهمة هذا الأسبوع — يومها اليوم",
+  "whyWeeklyCarried": "مهمة هذا الأسبوع — تنتظرك من يوم {day}",
+  "@whyWeeklyCarried": {
+    "placeholders": {
+      "day": {
+        "type": "String"
+      }
+    }
+  },
+  "whyWeeklyReview": "نهاية الأسبوع — وقت نقفل الفصل بهدوء",
+  "whyProjectNext": "الخطوة التالية في {project}",
+  "@whyProjectNext": {
+    "placeholders": {
+      "project": {
+        "type": "String"
+      }
+    }
+  },
+  "whyFreeJoy": "متعة لك — بدون شروط",
+  "whyRedEssential": "يوم هادئ — نسخة صغيرة تكفي اليوم",
+  "whyYellowMinimum": "طاقتك متوسطة — النسخة الصغيرة تكفي",
+  "whyTimeTrimmed": "يومك مزدحم — النسخة الصغيرة تناسب وقتك",
+  "ieltsSkillReading": "القراءة",
+  "ieltsSkillListening": "الاستماع",
+  "ieltsSkillWriting": "الكتابة",
+  "ieltsSkillSpeaking": "المحادثة",
+  "ieltsSkillMixedReadingListening": "قراءة واستماع معًا",
+  "ieltsSkillLightReview": "مراجعة خفيفة أو اختبار تجريبي",
+  "weekday1": "الاثنين",
+  "weekday2": "الثلاثاء",
+  "weekday3": "الأربعاء",
+  "weekday4": "الخميس",
+  "weekday5": "الجمعة",
+  "weekday6": "السبت",
+  "weekday7": "الأحد",
+  "nudgeMorningTitle": "صباح الخير — يومك جاهز",
+  "nudgeMorningBody": "أول خطوة: {first}",
+  "@nudgeMorningBody": {
+    "placeholders": {
+      "first": {
+        "type": "String"
+      }
+    }
+  },
+  "nudgeMorningBodyEmpty": "خذي نفس وشوفي خطتك",
+  "nudgeAnchoredBody": "نسخة صغيرة تكفي اليوم",
+  "nudgeEveningTitle": "إغلاق اليوم",
+  "nudgeEveningBody": "دقيقتين نرتب بكرة ونبدأ التهدئة",
+  "nudgeActionDone": "تم — نسخة صغيرة",
+  "nudgeActionSnooze": "بعد 30 دقيقة",
+  "nudgeActionSkip": "تخطي اليوم",
+  "appTitle": "Wejdan Life OS — وجدان",
+  "tabToday": "اليوم",
+  "tabHabits": "العناية",
+  "tabPath": "مهني",
+  "tabJoy": "متعتي",
+  "tabMe": "أنا",
+  "energyGreen": "طاقة عالية",
+  "energyYellow": "طاقة متوسطة",
+  "energyRed": "يوم هادئ",
+  "levelMinimum": "نسخة صغيرة",
+  "levelNormal": "النسخة العادية",
+  "levelBonus": "إضافي",
+  "levelSkipped": "تخطيت اليوم",
+  "tierCore": "الأساسي",
+  "tierMaintain": "صيانة",
+  "tierJoy": "متعة",
+  "tierChain": "روتين",
+  "tierSystem": "طقس أسبوعي",
+  "sectionMorningChain": "روتين الصباح",
+  "sectionDay": "خلال اليوم",
+  "sectionEveningChain": "روتين المساء",
+  "thisWeekStrip": "هذا الأسبوع",
+  "stageSeed": "بذرة",
+  "stageSprout": "برعم",
+  "stageGrowing": "تنمو",
+  "stageRooted": "متجذّرة",
+  "stageAutomatic": "تلقائية",
+  "missForgot": "نسيت",
+  "missBadTime": "الوقت ما كان مناسب",
+  "missTooBig": "كانت كبيرة",
+  "missTired": "كنت تعبانة",
+  "missNotEnjoyable": "ما كانت ممتعة",
+  "missPlaceDidntFit": "المكان ما ناسب",
+  "missBusy": "كنت مشغولة",
+  "missNotImportantNow": "مو مهمة الحين",
+  "recoveryTitle": "وش صار؟ خلينا نعدل التصميم مو نلومك",
+  "changeMoveCueAddReminder": "نربطها بإشارة أوضح ونفعّل تذكير واحد",
+  "changeSwapTime": "ننقلها لوقت يناسبك أكثر",
+  "changeShrinkToMinimum": "نصغّرها للنسخة الصغيرة",
+  "changeMinimumAndMoveEarlier": "نسخة صغيرة وفي وقت أبكر",
+  "changeAddJoyPairing": "نضيف لها متعة مرافقة أو نغير النشاط",
+  "changeChangePlacePrepare": "نغير المكان أو نجهزه مسبقًا",
+  "changeShrinkAndReschedule": "نصغّرها ونخفف أيامها",
+  "changePauseToRest": "نريّحها هذا الموسم",
+  "comebackCelebration": "رجعتي — هذا أهم جزء",
+  "sparksLabel": "شرارات",
+  "sparkReasonCompletion": "بداية",
+  "sparkReasonComeback": "عودة",
+  "sparkReasonWeeklyReview": "مراجعة أسبوعية",
+  "sparkReasonExperiment": "تجربة",
+  "sparkReasonRedeem": "مكافأة",
+  "sparkReasonReversal": "تراجع",
+  "sparkReasonAdjustment": "تعديل",
+  "undo": "تراجع",
+  "smallVersionEnough": "نسخة صغيرة تكفي اليوم",
+  "whyLabel": "لماذا؟",
+  "helpSafetyLink": "المساعدة والأمان",
+  "helpMoh": "وزارة الصحة 937",
+  "helpEmergency": "الطوارئ 997 / 911",
+  "placeholderHomeTitle": "خطة اليوم",
+  "placeholderLoading": "نجهز يومك…",
+  "placeholderError": "صار خطأ في التحميل",
+  "userName": "وجدان",
+  "greetingMorning": "صباح الخير، {name}",
+  "@greetingMorning": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "greetingEvening": "مساء الخير، {name}",
+  "@greetingEvening": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "months": "يناير,فبراير,مارس,أبريل,مايو,يونيو,يوليو,أغسطس,سبتمبر,أكتوبر,نوفمبر,ديسمبر",
+  "minutesShort": "{m} د",
+  "@minutesShort": {
+    "placeholders": {
+      "m": {
+        "type": "String"
+      }
+    }
+  },
+  "minutesPlus": "{m}+ د",
+  "@minutesPlus": {
+    "placeholders": {
+      "m": {
+        "type": "String"
+      }
+    }
+  },
+  "close": "إغلاق",
+  "back": "رجوع",
+  "next": "التالي",
+  "cancel": "إلغاء",
+  "save": "حفظ",
+  "add": "إضافة",
+  "change": "تغيير",
+  "optional": "(اختياري)",
+  "later": "لاحقًا",
+  "more": "أكثر",
+  "fewer": "أقل",
+  "pause": "إيقاف مؤقت",
+  "resume": "متابعة",
+  "suggested": "مقترح",
+  "xOfY": "{x} من {y}",
+  "@xOfY": {
+    "placeholders": {
+      "x": {
+        "type": "String"
+      },
+      "y": {
+        "type": "String"
+      }
+    }
+  },
+  "stepOf": "الخطوة {n} من {total}",
+  "@stepOf": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "itemNotFound": "ما لقينا هذا العنصر — يمكن تغيّرت خطة اليوم.",
+  "mainNavigation": "التنقل الرئيسي",
+  "doneShort": "تم",
+  "skippedShort": "تخطيتها",
+  "backToToday": "ارجعي لليوم",
+  "energyChipGreen": "طاقتي: جيدة",
+  "energyChipYellow": "طاقتي: متوسطة",
+  "energyChipRed": "طاقتي: منخفضة",
+  "energyGood": "جيدة",
+  "energyGoodSub": "يوم عادي",
+  "energyMid": "متوسطة",
+  "energyMidSub": "نسخ أخف",
+  "energyLow": "منخفضة",
+  "energyLowSub": "الحد الأدنى",
+  "levelGroupLabel": "مستوى الإنجاز",
+  "levelShortMin": "أدنى",
+  "levelShortNormal": "عادي",
+  "levelShortBonus": "إضافي",
+  "domainHealth": "الحركة",
+  "domainSleep": "النوم",
+  "domainFood": "الأكل",
+  "domainCare": "العناية",
+  "domainWomensHealth": "صحة المرأة",
+  "domainIelts": "IELTS",
+  "domainLearning": "التعلّم",
+  "domainCareer": "المسار المهني",
+  "domainDriving": "القيادة",
+  "domainMoney": "المال",
+  "domainHome": "البيت",
+  "domainDigital": "الحياة الرقمية",
+  "domainAdmin": "الأمور الإدارية",
+  "domainJoy": "المتعة",
+  "domainPeople": "الناس",
+  "domainFaith": "الإيمان والمعنى",
+  "domainAquarium": "حوض السمك",
+  "prayerFajr": "الفجر",
+  "prayerDhuhr": "الظهر",
+  "prayerAsr": "العصر",
+  "prayerMaghrib": "المغرب",
+  "prayerIsha": "العشاء",
+  "slotMorning": "الصباح",
+  "slotMidday": "الظهيرة",
+  "slotAfternoon": "العصرية",
+  "slotEvening": "المساء",
+  "slotNight": "الليل",
+  "slotAnytime": "أي وقت",
+  "dayLabel": "النهار",
+  "cueAfter": "بعد {p}",
+  "@cueAfter": {
+    "placeholders": {
+      "p": {
+        "type": "String"
+      }
+    }
+  },
+  "cueBefore": "قبل {p}",
+  "@cueBefore": {
+    "placeholders": {
+      "p": {
+        "type": "String"
+      }
+    }
+  },
+  "cueAfterWake": "بعد الاستيقاظ",
+  "cueBeforeSleep": "قبل النوم",
+  "fixedTime": "وقت محدد",
+  "morningBriefTitle": "موجز الصباح",
+  "eveningShutdownTitle": "إغلاق اليوم",
+  "weekMomentum": "زخم\nالأسبوع",
+  "weekMomentumOneLine": "زخم الأسبوع",
+  "momentum": "الزخم",
+  "dayReady": "يومك جاهز",
+  "dayReadySubGreen": "على قد طاقتك اليوم، ونسخة صغيرة تكفي",
+  "dayReadySubYellow": "طاقتك متوسطة — خففنا النسخ اليوم",
+  "dayReadySubRed": "يوم هادئ — الحد الأدنى يكفي",
+  "dayShapeLabel": "شكل يومك",
+  "dayProgress": "تقدم اليوم",
+  "doneOf": "{done} من {total}",
+  "@doneOf": {
+    "placeholders": {
+      "done": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tilesCore": "أساسية",
+  "tilesMaintain": "صيانة",
+  "tilesJoy": "متعة",
+  "coreSection": "الأساسيات · {n}",
+  "@coreSection": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "anyVersionCounts": "أي نسخة تُحسب إنجازًا",
+  "maintainSection": "الصيانة · {n} · خفيفة",
+  "@maintainSection": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "eveningSection": "المساء",
+  "freeJoySection": "متعة حرة",
+  "freeJoySub": "لك بدون شروط — ما تحتاجين تستحقينها",
+  "chainDone": "اكتملت · {done} من {total} · بدأت {time}",
+  "@chainDone": {
+    "placeholders": {
+      "done": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "chainProgress": "{done} من {total} · تبدأ {time}",
+  "@chainProgress": {
+    "placeholders": {
+      "done": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "openChain": "فتح {title}",
+  "@openChain": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "checkLabel": "تم: {title}",
+  "@checkLabel": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "uncheckLabel": "إلغاء إنجاز {title}",
+  "@uncheckLabel": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "joyCheckLabel": "استمتعت: {title}",
+  "@joyCheckLabel": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "joyPlus": "+ {b}",
+  "@joyPlus": {
+    "placeholders": {
+      "b": {
+        "type": "String"
+      }
+    }
+  },
+  "doneLogged": "انحسبت — {level}",
+  "@doneLogged": {
+    "placeholders": {
+      "level": {
+        "type": "String"
+      }
+    }
+  },
+  "joyLogged": "استمتعي — هذي لك",
+  "startSession": "ابدئي الجلسة",
+  "thisWeekAnyDay": "أي يوم",
+  "recoveryBannerTitle": "نعدّل تصميم {title}؟",
+  "@recoveryBannerTitle": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "recoveryBannerSub": "ما مشى الحال كم مرة — نعدّل التصميم، مو نلومك",
+  "calmDayTitle": "يوم هادئ",
+  "calmDayBody": "أشياء صغيرة ومتعة لك — هذا يكفي تمامًا. الباقي يرتاح اليوم بدون ما ينقص شي.",
+  "minimumOnly": "الحد الأدنى فقط · {done} من {total}",
+  "@minimumOnly": {
+    "placeholders": {
+      "done": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "restingNote": "{items} ترتاح اليوم. يوم هادئ مو تراجع — ولا شي يرجع للصفر.",
+  "@restingNote": {
+    "placeholders": {
+      "items": {
+        "type": "String"
+      }
+    }
+  },
+  "helpLinkRed": "إذا الأمور ثقيلة جدًا: المساعدة موجودة",
+  "helpIntro": "إذا حسيتي إن الأمور أثقل من المعتاد لفترة، الحديث مع مختص خطوة قوية. هذا التطبيق ما يشخّص ولا يتابع حالتك النفسية.",
+  "helpNote": "في الطوارئ اتصلي مباشرة.",
+  "quickAddTitle": "إضافة سريعة",
+  "quickAddHabit": "عادة جديدة",
+  "quickAddHabitSub": "نصممها خطوة خطوة في الاستوديو",
+  "quickAddBlock": "موعد ثابت اليوم",
+  "quickAddBlockSub": "الخطة تتكيف حول وقتك",
+  "quickAddFocus": "جلسة تركيز الآن",
+  "quickAddFocusSub": "مؤقت وتنبيهات صامتة",
+  "blockTitleHint": "وش الموعد؟ مثلًا: محاضرة",
+  "startsAt": "تبدأ {t}",
+  "@startsAt": {
+    "placeholders": {
+      "t": {
+        "type": "String"
+      }
+    }
+  },
+  "coreHabit": "عادة أساسية",
+  "maintainHabit": "عادة صيانة",
+  "growthStage": "مرحلة النمو",
+  "last4Weeks": "آخر 4 أسابيع",
+  "legendFull": "كامل",
+  "legendMin": "أدنى",
+  "legendRest": "راحة",
+  "gridSummary": "أنجزتيها {n} مرة في آخر 4 أسابيع",
+  "@gridSummary": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "designSection": "التصميم",
+  "fieldCue": "الإشارة",
+  "fieldVersions": "النسخ",
+  "fieldIfThen": "إذا... فإني",
+  "fieldEasy": "أسهّلها",
+  "fieldJoy": "المتعة",
+  "minimumIs": "النسخة الصغيرة:",
+  "doseLabel": "الجرعة حسب المصدر",
+  "sourceLanguageNote": "نص الدليل بلغته الأصلية (الإنجليزية).",
+  "sourcesCount": "المصادر · {n}",
+  "@sourcesCount": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "openSource": "فتح المصدر",
+  "linkOpenFailed": "ما قدرنا نفتح الرابط",
+  "noEvidenceLinked": "ما فيه دليل مربوط بهذا العنصر.",
+  "evidenceGuideline": "دليل قوي · إرشادات رسمية",
+  "evidenceSrMa": "دليل قوي · مراجعة منهجية",
+  "evidenceRct": "دليل جيد · تجارب مضبوطة",
+  "evidenceObservational": "دليل متوسط · رصدي",
+  "evidenceExpert": "رأي خبراء",
+  "editHabitDesign": "عدّلي تصميم العادة",
+  "markDoneMinimum": "سجّليها منجزة (نسخة صغيرة)",
+  "evidenceLibrary": "مكتبة الأدلة",
+  "briefQuestion": "كيف طاقتك اليوم؟ اختاري وحدة، والخطة تتكيّف معك.",
+  "shapeLine": "{core} أساسية · {maintain} صيانة · {joy} متعة",
+  "@shapeLine": {
+    "placeholders": {
+      "core": {
+        "type": "String"
+      },
+      "maintain": {
+        "type": "String"
+      },
+      "joy": {
+        "type": "String"
+      }
+    }
+  },
+  "shapeRed": "{n} أشياء صغيرة + متعة",
+  "@shapeRed": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "shapeSubGreen": "خطتك العادية، ولكل عادة نسخة صغيرة إذا احتجتيها.",
+  "shapeSubYellow": "نسخ أخف وعادتين أساسيتين كحد أقصى.",
+  "shapeSubRed": "الأساسيات بأصغر نسخة ومتعة لك — بدون ذنب.",
+  "firstStep": "أول خطوة",
+  "startMyDay": "ابدئي يومي",
+  "startMorningChainNow": "شغّلي سلسلة الصباح مباشرة",
+  "chainComplete": "اكتملت السلسلة",
+  "chainCompleteTitle": "{title} — اكتملت",
+  "@chainCompleteTitle": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "chainCompleteSub": "سلسلة كاملة بدون تفكير — هذا بالضبط اللي نبنيه.",
+  "timeLeft": "باقي {t}",
+  "@timeLeft": {
+    "placeholders": {
+      "t": {
+        "type": "String"
+      }
+    }
+  },
+  "stepsLabel": "الخطوات",
+  "currentStep": "الحالية",
+  "doneNext": "تم، التالي: {next}",
+  "@doneNext": {
+    "placeholders": {
+      "next": {
+        "type": "String"
+      }
+    }
+  },
+  "doneFinish": "تم، أنهي السلسلة",
+  "skipStepToday": "تخطّي هذه الخطوة اليوم",
+  "focusSession": "جلسة تركيز",
+  "freeFocusTitle": "جلسة تركيز حرة",
+  "nudgesSilenced": "التنبيهات صامتة",
+  "remaining": "متبقي",
+  "readyWhenYouAre": "جاهزة لما تكونين جاهزة",
+  "sessionLength": "مدة الجلسة",
+  "attemptFirstTitle": "حاولي أولًا ثم اسألي الذكاء الاصطناعي",
+  "attemptFirstBody": "اكتبي محاولتك ولو ناقصة — المحاولة قبل الجواب تثبّت الفهم.",
+  "attemptHint": "محاولتي...",
+  "phoneAwayTitle": "بعّدي الجوال عنك",
+  "phoneAwayBody": "في غرفة ثانية أو بالشنطة — مو على الطاولة.",
+  "phoneAwayAction": "بعّدته",
+  "phoneAwayDone": "بعيد",
+  "endSession": "إنهاء الجلسة",
+  "leaveFocusTitle": "ننهي الجلسة؟",
+  "leaveFocusBody": "نحفظ الوقت اللي اشتغلتيه — حتى الجلسة القصيرة تُحسب.",
+  "keepGoing": "أكمل",
+  "sessionDoneTitle": "خلصت الجلسة",
+  "recallPrompt": "بدون ما تشوفين ملاحظاتك: وش أهم شي تتذكرينه من الجلسة؟",
+  "recallHint": "3 أشياء تتذكرينها...",
+  "recallWhy": "الاسترجاع بعد الدراسة يثبّت التعلم أكثر من إعادة القراءة.",
+  "sessionNotePrompt": "كلمة عن الجلسة؟ (اختياري)",
+  "sessionNoteHint": "وش أنجزتي؟",
+  "saveSession": "احفظي الجلسة",
+  "discardSession": "بدون حفظ",
+  "recoveryQuestion": "ليش ما مشى الحال؟",
+  "recoverySub": "نعدّل التصميم، مو نلومك. اختاري اللي ينطبق.",
+  "recoveryContext": "{title} · آخر {n} مرات ما صارت",
+  "@recoveryContext": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      },
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "proposedChange": "تعديل مقترح",
+  "before": "قبل",
+  "after": "بعد",
+  "afterShrink": "{desc} — والباقي إضافي إذا حبّيتي",
+  "@afterShrink": {
+    "placeholders": {
+      "desc": {
+        "type": "String"
+      }
+    }
+  },
+  "afterJoy": "نربطها بمتعة تختارينها",
+  "afterPlace": "مكان مجهّز مسبقًا",
+  "afterRest": "ترتاح هذا الموسم — ترجع لما تبين",
+  "oneReminderOn": "تذكير واحد",
+  "daysPerWeek": "{n} أيام بالأسبوع",
+  "@daysPerWeek": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "joyPairingHint": "وش المتعة اللي تبينها معها؟",
+  "placeHint": "وين المكان الأنسب؟ وش نجهّز؟",
+  "acceptChange": "اعتمدي التعديل",
+  "editMyself": "أعدّله بنفسي",
+  "recoveryDoneBody": "التصميم الجديد جاهز، وأول مرة ترجعين لها تاخذين شرارات مضاعفة.",
+  "shutdownTitle": "نقفل اليوم بهدوء",
+  "shutdownDone": "أنجزتي {done} من {total} — يوم حلو.",
+  "@shutdownDone": {
+    "placeholders": {
+      "done": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "whatHappened": "اللي ما صار اليوم",
+  "whatHappenedSub": "قرار سريع لكل وحدة، وبعدها تطلع من بالك.",
+  "noLeftovers": "ما فيه شي معلّق — كل شي انحسب اليوم.",
+  "notStartedToday": "ما بدأت اليوم",
+  "leftoverTomorrow": "بكرة",
+  "leftoverLater": "لاحقًا",
+  "leftoverLetGo": "نتركها",
+  "leftoverTomorrowSub": "تنتقل لبكرة",
+  "leftoverLaterSub": "ترجع في يومها القادم",
+  "leftoverLetGoSub": "نتركها — عادي",
+  "tomorrowFirst": "أول خطوة بكرة",
+  "minimumMinutes": "أدنى {m}",
+  "@minimumMinutes": {
+    "placeholders": {
+      "m": {
+        "type": "String"
+      }
+    }
+  },
+  "sweetMoment": "لحظة حلوة اليوم",
+  "sweetMomentHint": "مثلًا: القهوة مع الكتاب العصر",
+  "eveningChainTitle": "سلسلة المساء",
+  "chainAbout": "نحو {min} د · النوم {sleep}",
+  "@chainAbout": {
+    "placeholders": {
+      "min": {
+        "type": "String"
+      },
+      "sleep": {
+        "type": "String"
+      }
+    }
+  },
+  "startEveningChain": "ابدئي سلسلة المساء",
+  "closeTheDay": "أقفلي اليوم",
+  "onbStart": "يلا نبدأ",
+  "onbFinish": "يومي الأول جاهز",
+  "onbWelcomeTitle": "يومك يكون جاهز\nقبل ما تصحين",
+  "onbWelcomeBody": "أرتّب لك اليوم: وش تسوين، ومتى، وأصغر نسخة منه — ومعه شي تحبينه.",
+  "onbF1Title": "نسخة صغيرة تكفي",
+  "onbF1Sub": "لكل عادة حد أدنى، ويُحسب إنجازًا كاملًا.",
+  "onbF2Title": "المتعة جزء من الخطة",
+  "onbF2Sub": "نربط اللي لازم يصير باللي تحبينه.",
+  "onbF3Title": "التعثّر معلومة، مو حكم",
+  "onbF3Sub": "إذا ما مشى الحال، نعدّل التصميم مو نلومك.",
+  "onbLocalOnly": "بياناتك كلها على جهازك فقط",
+  "onbUseSample": "استخدمي الملف التجريبي",
+  "lifeMapTitle": "خريطة حياتك لهذا الموسم",
+  "lifeMapBody": "الموسم من 6 إلى 12 أسبوع. اختاري لكل مجال: نمو، صيانة، أو راحة.",
+  "lifeMapHint": "النمو = تركيز هذا الموسم. الراحة مو إهمال — إيقاف مؤقت، ويختفي من يومك.",
+  "stateGrow": "نمو",
+  "stateMaintain": "صيانة",
+  "stateRest": "راحة",
+  "capacityReached": "وصلتي الحد لهذا الموسم — بدّلي مجال ثاني أول.",
+  "sensitiveModulesNote": "صحة المرأة وتتبّع الدورة مقفلة افتراضيًا — تقدرين تفعّلينها من الإعدادات.",
+  "timesTitle": "متى يبدأ يومك وينتهي؟",
+  "timesBody": "نربط العادات بإشارات ثابتة من يومك، مو بساعة عشوائية.",
+  "wakeTime": "الاستيقاظ",
+  "sleepTime": "النوم",
+  "tapToChange": "اضغطي للتغيير",
+  "prayerAnchors": "أوقات الصلاة كإشارات",
+  "prayerAnchorsSub": "اختياري · أم القرى · مكة المكرمة — تقدرين تغيّرينها لاحقًا",
+  "timesPreview": "روتين الصباح يبدأ {wake}، وإغلاق اليوم حوالي {shutdown}.",
+  "@timesPreview": {
+    "placeholders": {
+      "wake": {
+        "type": "String"
+      },
+      "shutdown": {
+        "type": "String"
+      }
+    }
+  },
+  "starterTitle": "عادات البداية",
+  "starterBody": "اختاري لين 5 من مجالات النمو — نبدأ صغير ونكبر بهدوء.",
+  "joyMapTitle": "خريطة متعتك",
+  "joyMapBody": "وش يفرّحك؟ اختاري كل اللي ينطبق — ما فيه إجابة غلط.",
+  "somethingElse": "شي ثاني",
+  "somethingElseHint": "وش يفرّحك؟",
+  "shoppingNote": "التسوّق يظهر معه تذكير لطيف بالميزانية.",
+  "bundlesTitle": "باقات: متعة محجوزة لعادة",
+  "bundlesBody": "شي تحبينه تخلينه لوقت عادة — بدون أقفال.",
+  "privacyTitle": "التنبيهات والخصوصية",
+  "privacyBody": "قليل من التنبيهات، وكلها مرتبطة بإشارات يومك.",
+  "notifCapTitle": "حد التنبيهات اليومي",
+  "notifCapSub": "بدون تنبيهات بين {start} و{end}",
+  "@notifCapSub": {
+    "placeholders": {
+      "start": {
+        "type": "String"
+      },
+      "end": {
+        "type": "String"
+      }
+    }
+  },
+  "perDay": "{n} باليوم",
+  "@perDay": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "allowNotifications": "اسمحي بالتنبيهات",
+  "notificationsAllowed": "التنبيهات مسموحة",
+  "notificationsNotAllowed": "ما انسمح — تقدرين تغيّرينه من إعدادات الجهاز",
+  "notificationsWebNote": "في نسخة المعاينة على الويب ما فيه تنبيهات.",
+  "appLockTitle": "قفل التطبيق",
+  "appLockSub": "Face ID للأقسام الحساسة",
+  "privacyPoint1": "كل بياناتك على جهازك — بدون حساب ولا سيرفر.",
+  "privacyPoint2": "بدون تحليلات ولا تتبّع.",
+  "privacyPoint3": "تصدير أو حذف كل شي من الإعدادات بأي وقت.",
+  "studioTitle": "استوديو العادات",
+  "studioSub": "نصمّم العادة خطوة خطوة — واضحة، سهلة البداية، وممتعة.",
+  "studioStepOf": "الخطوة {n} من {total}",
+  "@studioStepOf": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "fromLibrary": "مقترح من مكتبة الأدلة",
+  "fromLibrarySub": "{name} — عبّأنا الحقول، عدّلي اللي تبين.",
+  "@fromLibrarySub": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "noLibraryLink": "اختاري إجراء من المكتبة لتعبئة الحقول",
+  "searchLibrary": "ابحثي في المكتبة",
+  "fGoal": "الهدف",
+  "fBehavior": "السلوك",
+  "fVersions": "النسخ: أدنى · عادي · إضافي",
+  "fCue": "الإشارة",
+  "fPrepare": "التحضير",
+  "fJoy": "ربط بمتعة",
+  "fIfThen": "خطة إذا... فإني",
+  "fFrictionUp": "صعّبي المُغري",
+  "fReminder": "التذكير",
+  "goalEmpty": "ليش هذي العادة مهمة لك؟",
+  "goalHelp": "بكلماتك: وش تبين يصير لما تثبت العادة؟",
+  "goalHint": "مثلًا: أرفع درجتي في IELTS",
+  "behaviorHelp": "سلوك واضح تقدرين تشوفينه — مو نية عامة.",
+  "behaviorHint": "مثلًا: أراجع بطاقات المفردات المستحقة",
+  "behaviorRequired": "اكتبي السلوك أول",
+  "versionsHelp": "الأدنى يُحسب إنجازًا كاملًا. خليه صغير لدرجة يصعب ترفضينه.",
+  "versionsSummary": "أدنى {min} · عادي {normal} · إضافي {bonus}",
+  "@versionsSummary": {
+    "placeholders": {
+      "min": {
+        "type": "String"
+      },
+      "normal": {
+        "type": "String"
+      },
+      "bonus": {
+        "type": "String"
+      }
+    }
+  },
+  "cueHelp": "بعد وش؟ اربطيها بشي يصير كل يوم.",
+  "cueTextHint": "وصف الإشارة بكلماتك",
+  "onDays": "الأيام",
+  "prepareHelp": "وش تجهّزين مسبقًا عشان البداية تكون بدون تفكير؟",
+  "joyHelp": "وش تحبين يرافقها؟ متعة تخلينها لوقتها بس.",
+  "ifThenHelp": "وش ممكن يعطّلك؟ وش بتسوين وقتها؟",
+  "ifThenHint": "إذا ... فإني ...",
+  "frictionUpHelp": "وش المغري اللي ينافسها؟ كيف نبعده خطوة؟",
+  "reminderHelp": "تذكير واحد كحد أقصى، مرتبط بالإشارة. الأفضل إن السلسلة تكفي.",
+  "oneReminderAtCue": "تذكير واحد وقت الإشارة",
+  "reminderOn": "تذكير واحد وقت الإشارة",
+  "reminderOffSummary": "بدون تذكير",
+  "nextField": "التالي: {f}",
+  "@nextField": {
+    "placeholders": {
+      "f": {
+        "type": "String"
+      }
+    }
+  },
+  "saveHabit": "احفظي العادة",
+  "saveAsDraft": "احفظيها كمسودة",
+  "savedHabit": "انحفظت العادة — بتظهر في خطتك",
+  "savedDraft": "انحفظت كمسودة — موقوفة لين تفعّلينها",
+  "swapOrParkTitle": "نبدّل أو نأجّل؟",
+  "capCoreHabits": "عندك {max} عادات أساسية — هذا الحد عشان ما يثقل يومك.",
+  "@capCoreHabits": {
+    "placeholders": {
+      "max": {
+        "type": "String"
+      }
+    }
+  },
+  "capGrow": "{max} مجالات نمو كحد أقصى في الموسم.",
+  "@capGrow": {
+    "placeholders": {
+      "max": {
+        "type": "String"
+      }
+    }
+  },
+  "capMaintain": "{max} مجالات صيانة كحد أقصى.",
+  "@capMaintain": {
+    "placeholders": {
+      "max": {
+        "type": "String"
+      }
+    }
+  },
+  "capProjects": "{max} مشاريع نشطة كحد أقصى.",
+  "@capProjects": {
+    "placeholders": {
+      "max": {
+        "type": "String"
+      }
+    }
+  },
+  "capCourses": "كورس واحد نشط بكل مرة ({max}).",
+  "@capCourses": {
+    "placeholders": {
+      "max": {
+        "type": "String"
+      }
+    }
+  },
+  "swapWith": "بدّليها مع:",
+  "swap": "بدّلي",
+  "parkIt": "أجّليها (موقوفة)",
+  "placeholderHabits": "استوديو العادات، المكتبة، والحديقة — قريبًا هنا.",
+  "placeholderPath": "أهداف السنة والمشاريع والمواسم — قريبًا هنا.",
+  "placeholderJoy": "خريطة المتعة والشرارات والمكافآت — قريبًا هنا.",
+  "placeholderMe": "المراجعة الأسبوعية والإعدادات — قريبًا هنا.",
+  "quickPrefs": "تفضيلات سريعة",
+  "languageLabel": "اللغة",
+  "themeLabel": "المظهر",
+  "themeSystem": "تلقائي",
+  "themeLight": "فاتح",
+  "themeDark": "داكن",
+  "appearancePalettes": "لوحة الألوان",
+  "paletteCalmSky": "سماء هادئة",
+  "paletteLavender": "لافندر",
+  "paletteOcean": "محيط",
+  "paletteForest": "غابة",
+  "paletteRose": "وردي داكن",
+  "paletteTerracotta": "طيني",
+  "paletteMidnight": "ليلي",
+  "customAccentColor": "لون مخصص",
+  "customColorHint": "أدخل رمز اللون مثل #6172B5",
+  "applyCustomColor": "تطبيق اللون",
+  "invalidCustomColor": "أدخل لونًا صالحًا يحقق وضوحًا كافيًا مع النص الأبيض.",
+  "cardStyle": "تصميم البطاقات",
+  "cardStyleOutlined": "محددة",
+  "cardStyleSoft": "ناعمة",
+  "cardStyleMinimal": "بسيطة",
+  "appearancePreview": "معاينة المظهر",
+  "previewAction": "زر تجريبي",
+  "resetAppearance": "استعادة المظهر الافتراضي",
+  "replayOnboarding": "أعيدي التهيئة",
+  "minutesOf": "دقائق {level}",
+  "@minutesOf": {
+    "placeholders": {
+      "level": {
+        "type": "String"
+      }
+    }
+  },
+  "partMorning": "صباحًا",
+  "partNoon": "ظهرًا",
+  "partAfternoon": "عصرًا",
+  "partEvening": "مساءً",
+  "partNight": "ليلًا",
+  "relToday": "اليوم",
+  "relTomorrow": "بكرة",
+  "relIn": "بعد {n} يوم",
+  "@relIn": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "relAgo": "قبل {n} يوم",
+  "@relAgo": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "sar": "ر.س",
+  "delete": "حذف",
+  "edit": "تعديل",
+  "notEnoughData": "ما فيه بيانات كافية بعد — تظهر بعد كم يوم من التسجيل.",
+  "seasonShape": "أنمّي {g} مجالات وأحافظ على {m}",
+  "@seasonShape": {
+    "placeholders": {
+      "g": {
+        "type": "String"
+      },
+      "m": {
+        "type": "String"
+      }
+    }
+  },
+  "byDomainMomentum": "حسب المجال · الزخم لآخر 7 أيام",
+  "maintainNote": "{n} عادات في المحافظة: {domains} — نسختها الصغيرة تكفي.",
+  "@maintainNote": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      },
+      "domains": {
+        "type": "String"
+      }
+    }
+  },
+  "myRoutines": "روتيناتي · إشارة وحدة تبدأ السلسلة",
+  "newHabit": "عادة جديدة",
+  "coreCapacityNote": "عندك {n} عادات أساسية من {max} — باقي {left}.",
+  "@coreCapacityNote": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      },
+      "max": {
+        "type": "String"
+      },
+      "left": {
+        "type": "String"
+      }
+    }
+  },
+  "myGarden": "حديقتي",
+  "gardenSub": "كل عادة نبتة. تكبر مع التلقائية، وإذا غبتِ عنها ترتاح — ما تذبل.",
+  "gardenEmpty": "حديقتك تنتظر أول نبتة — أضيفي عادة من الاستوديو.",
+  "plantResting": "ترتاح",
+  "plantRestingNote": "هذي النبتة ترتاح. ترجع تكبر من أول نسخة صغيرة — بدون ما يضيع شي.",
+  "gardenNoData": "بدأت للتو — المرحلة تتضح بعد كم مرة.",
+  "consistencyLine": "الثبات {p}٪ في آخر 4 أسابيع.",
+  "@consistencyLine": {
+    "placeholders": {
+      "p": {
+        "type": "String"
+      }
+    }
+  },
+  "srbaiLine": "التلقائية {v} من 5 في آخر فحص.",
+  "@srbaiLine": {
+    "placeholders": {
+      "v": {
+        "type": "String"
+      }
+    }
+  },
+  "noSrbaiYet": "فحص التلقائية يصير في المراجعة الأسبوعية.",
+  "noCoreHabits": "ما فيه عادات أساسية في مجالات النمو الحين.",
+  "noRoutines": "ما فيه روتينات بعد.",
+  "stepsCount": "{n} خطوات",
+  "@stepsCount": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "everyDay": "يوميًا",
+  "momentumOf": "زخم {title}: {v} من 100",
+  "@momentumOf": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      },
+      "v": {
+        "type": "String"
+      }
+    }
+  },
+  "pathSub": "سنتي: أكتوبر 2026 ← سبتمبر 2027 · خطة مقترحة تعدّلينها متى ما بغيتي",
+  "weeklyReview": "مراجعة الأسبوع",
+  "yearInQuarters": "السنة في 4 أرباع",
+  "goalsNextStep": "أهدافي · وكل هدف له خطوة تالية وحدة",
+  "seasonLabel": "الموسم",
+  "weekN": "الأسبوع {n}",
+  "@weekN": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "weekNofM": "الأسبوع {n} من {m}",
+  "@weekNofM": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      },
+      "m": {
+        "type": "String"
+      }
+    }
+  },
+  "restHidden": "مخفي من يومك لين ترجعينه",
+  "editSeason": "تعديل الموسم",
+  "seasonEditorSub": "أنمّي 3 بالكثير · أحافظ 5 · والباقي يرتاح.",
+  "seasonCounts": "في النمو: {g} من {gm} · في الصيانة: {m} من {mm}",
+  "@seasonCounts": {
+    "placeholders": {
+      "g": {
+        "type": "String"
+      },
+      "gm": {
+        "type": "String"
+      },
+      "m": {
+        "type": "String"
+      },
+      "mm": {
+        "type": "String"
+      }
+    }
+  },
+  "swapFirst": "خلي مجال ثاني يرتاح أو يحافظ أول.",
+  "q1Name": "الأساس",
+  "q2Name": "البناء",
+  "q3Name": "التثبيت",
+  "q4Name": "التوسّع",
+  "q1Months": "أكت–ديس",
+  "q2Months": "ينا–مار",
+  "q3Months": "أبر–يون",
+  "q4Months": "يول–سبت",
+  "quarterN": "الربع {n}",
+  "@quarterN": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "youAreHere": "أنتِ هنا · {date}",
+  "@youAreHere": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "noMilestonesQuarter": "ما فيه محطات في هذا الربع بعد.",
+  "roadmapNote": "بدون تواريخ ثابتة ولا وعود بدرجات — المحطات بالربع فقط.",
+  "noGoals": "ما فيه أهداف بعد.",
+  "goalAllDone": "كل المحطات خلصت — وقت هدف جديد؟",
+  "milestoneProgress": "{done} من {total} محطات",
+  "@milestoneProgress": {
+    "placeholders": {
+      "done": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "nextLabel": "التالي: {x}",
+  "@nextLabel": {
+    "placeholders": {
+      "x": {
+        "type": "String"
+      }
+    }
+  },
+  "goalTargetLabel": "هدفك بكلماتك",
+  "goalTargetHint": "مثلًا: الدرجة اللي تحتاجينها — تحددينها أنتِ",
+  "projects": "المشاريع",
+  "activeOfMax": "نشطة {n} من {max}",
+  "@activeOfMax": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      },
+      "max": {
+        "type": "String"
+      }
+    }
+  },
+  "noProjects": "ما فيه مشاريع بعد — ابدئي بفكرة في الصندوق.",
+  "noStepsYet": "بدون خطوات بعد",
+  "projectsRule": "مشروعين نشطين بس — أي مشروع جديد يروح لصندوق الأفكار أو يتبادل مكانه مع واحد.",
+  "newProject": "مشروع جديد",
+  "projectTitleLabel": "اسم المشروع",
+  "projectTitleHint": "مثلًا: دراسة حالة للبورتفوليو",
+  "psIdea": "فكرة",
+  "psActive": "نشطة",
+  "psWaiting": "بالانتظار",
+  "psPaused": "متوقف · راحة",
+  "psDone": "خلص",
+  "psArchived": "مؤرشف",
+  "statusLabel": "الحالة",
+  "parkSuggestion": "خليه بالانتظار أو في صندوق الأفكار لين يفضى مكان.",
+  "addStep": "أضيفي خطوة",
+  "stepTitleLabel": "الخطوة",
+  "deleteProject": "حذف المشروع",
+  "deleteProjectBody": "يُحذف المشروع وخطواته من جهازك.",
+  "ideaInbox": "صندوق الأفكار",
+  "ideaInboxSub": "{n} أفكار تنتظر وقتها — بدون ضغط",
+  "@ideaInboxSub": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "ideaInboxBody": "الأفكار هنا ما تظهر في يومك. لما يفضى مكان، حوّلي وحدة لمشروع نشط.",
+  "ideaInboxEmpty": "الصندوق فاضي — اكتبي أي فكرة تمر في بالك.",
+  "addIdea": "أضيفي فكرة",
+  "ieltsSub": "Academic أو General — تختارينه حسب هدفك. الاستماع والمحادثة نفسها في الاثنين.",
+  "ieltsNoPromise": "لا نعد بدرجة — نقيس بالاختبار التجريبي. الهدف تحددينه أنتِ بعد التشخيص، والتجريبي الشهري يقول وين وصلتي.",
+  "ieltsNoPromiseWithTarget": "هدفك: {t}. لا نعد بدرجة — التجريبي الشهري يقول وين وصلتي.",
+  "@ieltsNoPromiseWithTarget": {
+    "placeholders": {
+      "t": {
+        "type": "String"
+      }
+    }
+  },
+  "vocabToday": "مفردات اليوم",
+  "cardsDue": "بطاقة مستحقة",
+  "reviewsNew": "{r} مراجعة · {n} جديدة",
+  "@reviewsNew": {
+    "placeholders": {
+      "r": {
+        "type": "String"
+      },
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "totalCards": "{n} بطاقة في مجموعتك",
+  "@totalCards": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "minimumPrefix": "النسخة الصغيرة: {t}",
+  "@minimumPrefix": {
+    "placeholders": {
+      "t": {
+        "type": "String"
+      }
+    }
+  },
+  "startReview": "ابدئي المراجعة",
+  "vocabEmpty": "ما فيه بطاقات بعد — أضيفي أول كلمة.",
+  "vocabAllDone": "خلصتي المستحق اليوم — المراجعة الجاية ترتّب نفسها.",
+  "addCard": "أضيفي بطاقة",
+  "cardFront": "الكلمة",
+  "cardBack": "المعنى",
+  "cardBackHint": "بكلماتك",
+  "cardExample": "جملة مثال",
+  "rotationTitle": "دورة المهارات الأسبوعية · المفردات كل يوم",
+  "rotationMinimum": "الأدنى: المفردات بس — ويُحسب يوم كامل.",
+  "rotationNote": "يوم صعب؟ المفردات بس — يوم المهارة ينتقل، ما يختفي.",
+  "taskReading": "قراءة نص واحد بالوقت، ثم مراجعة الأخطاء.",
+  "taskListening": "مقطع استماع واحد بالوقت، ثم إعادة الأجزاء اللي فاتتك.",
+  "taskWriting": "إجابة Task 2 بالوقت، ثم تصحيح بالمعايير تحت.",
+  "taskSpeaking": "سجّلي إجابة محادثة واسمعيها بالمعايير تحت.",
+  "taskMixed": "قراءة واستماع معًا — جزء من كل واحد.",
+  "taskLight": "مراجعة خفيفة أو اختبار تجريبي.",
+  "mockLog": "سجل الاختبارات التجريبية",
+  "mockEmpty": "ما سجلتي اختبار بعد. أول واحد يكون تشخيصي — يعطينا نقطة البداية.",
+  "bandScale": "المقياس من 0 إلى 9.",
+  "bandScaleWeakest": "المقياس من 0 إلى 9. أضعف مهارة ({s}) تاخذ يوم الخميس الإضافي.",
+  "@bandScaleWeakest": {
+    "placeholders": {
+      "s": {
+        "type": "String"
+      }
+    }
+  },
+  "mockMonthly": "تجريبي كل شهر يكفي.",
+  "logResult": "سجّلي نتيجة",
+  "noteLabel": "ملاحظة",
+  "mockNoteHint": "مثلًا: تشخيصي، اختبار كامل بالوقت",
+  "feedbackChecklist": "قائمة التغذية الراجعة",
+  "writingTask2": "الكتابة Task 2",
+  "speakingLabel": "المحادثة",
+  "feedbackHelp": "راجعي إجابتك بمعايير التصحيح الرسمية. ركزي على خطأين أو ثلاثة بس، ثم أعيدي نفس السؤال.",
+  "critTaskResponse": "الاستجابة للمهمة",
+  "critCoherence": "الترابط والتماسك",
+  "critFluency": "الطلاقة والترابط",
+  "critLexical": "الحصيلة اللغوية",
+  "critGrammar": "تنوّع القواعد ودقتها",
+  "critPronunciation": "النطق",
+  "writingDescriptors": "واصفات درجات الكتابة الرسمية (ielts.org)",
+  "speakingDescriptors": "واصفات درجات المحادثة الرسمية (ielts.org)",
+  "resetChecklist": "صفّري القائمة للمحاولة الجاية",
+  "vocabReview": "مراجعة المفردات",
+  "reviewDoneTitle": "خلصت المراجعة",
+  "reviewDoneBody": "{good} من {total} تذكرتيها — والباقي يرجع لك قريب.",
+  "@reviewDoneBody": {
+    "placeholders": {
+      "good": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "finish": "إنهاء",
+  "showAnswer": "أظهري المعنى",
+  "gradeAgain": "ما تذكرتها",
+  "gradeHard": "صعبة",
+  "gradeGood": "تمام",
+  "gradeEasy": "سهلة",
+  "drivingTitle": "رخصة القيادة",
+  "drivingSub": "المرحلة {n} من 5 · خطوة وحدة في كل مرة",
+  "@drivingSub": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "licencePath": "طريق الرخصة",
+  "lp1Title": "تأكيد المسار الرسمي عبر أبشر / منصة الحكومة",
+  "lp1Sub": "الخطوات وعدد الساعات والرسوم تأخذينها من المصدر الرسمي ومدرسة القيادة — ما نكتبها من عندنا.",
+  "saveServiceLink": "حفظت رابط الخدمة",
+  "editServiceLink": "غيّري الرابط",
+  "serviceLinkLabel": "رابط صفحة الخدمة الرسمية",
+  "lp2Title": "التسجيل في مدرسة القيادة",
+  "lp2Sub": "بعد تأكيد المسار · مشروع بالانتظار",
+  "lp3Title": "دروس وتدريب تحت الإشراف",
+  "lp3Sub": "نهار · ليل · طريق سريع · زحمة",
+  "lp4Title": "الاختبار النظري",
+  "lp4Sub": "أسئلة متباعدة + إدراك المخاطر",
+  "lp5Title": "الاختبار العملي",
+  "lp5Sub": "موعده من المدرسة — نذكّرك قبله",
+  "supervisedLog": "سجل التدريب تحت الإشراف",
+  "sessionsLabel": "جلسات",
+  "minutesLabel": "دقائق",
+  "conditionsTried": "ظروف جرّبتيها",
+  "practiceNote": "كل ما تنوّعت الظروف كان أفضل — والمراجعة مع المدرسة، ما نتفق على عدد ساعات محدد.",
+  "beforeTheRoad": "تجهيز قبل الطريق · تقدرين تبدئين الحين",
+  "hazardTitle": "إدراك المخاطر",
+  "hazardSub": "شوفي مقطع طريق، وسمّي الخطر بصوت قبل ما يظهر.",
+  "hazardThisWeek": "هذا الأسبوع: {n} مقاطع",
+  "@hazardThisWeek": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "logClip": "سجّلي مقطع",
+  "theoryTitle": "النظري بالتكرار المتباعد",
+  "theorySub": "جولة أسئلة تدريبية، ترجع لك الأسئلة اللي غلطتي فيها بعد أيام.",
+  "nextRound": "الجولة الجاية: {when}",
+  "@nextRound": {
+    "placeholders": {
+      "when": {
+        "type": "String"
+      }
+    }
+  },
+  "logRound": "سجّلي جولة",
+  "drivingAnxietyNote": "إذا القلق من القيادة قوي ومستمر، الحديث مع مختص يساعد.",
+  "helpShort": "المساعدة",
+  "logPractice": "سجّلي جلسة تدريب",
+  "chooseConditions": "الظروف",
+  "durationLabel": "المدة",
+  "withSchool": "درس مع المدرسة",
+  "withSchoolSub": "غير كذا = تدريب تحت إشراف",
+  "condDay": "نهار",
+  "condNight": "ليل",
+  "condHighway": "طريق سريع",
+  "condTraffic": "زحمة",
+  "condParking": "مواقف",
+  "joySub": "اللي يفرّحك، مربوط بيومك — بدون ما يصير واجب",
+  "freeJoyToday": "متعة اليوم الحرة",
+  "myRewards": "مكافآت حددتيها بنفسك",
+  "addReward": "أضيفي مكافأة",
+  "noRewards": "ما فيه مكافآت بعد — وش يفرّحك لما تستاهلينه؟",
+  "sparksN": "{n} شرارة",
+  "@sparksN": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "sparksLeft": "باقي {n} شرارة",
+  "@sparksLeft": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "redeem": "استبدلي",
+  "rewardProgress": "{title}: {have} من {price} شرارة",
+  "@rewardProgress": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      },
+      "have": {
+        "type": "String"
+      },
+      "price": {
+        "type": "String"
+      }
+    }
+  },
+  "sparksExplain": "الشرارات تجي من البدء بأي نسخة صغيرة، والرجوع بعد غياب (مضاعفة)، والمراجعة الأسبوعية، والتجارب — مو من الكمال.",
+  "bundlesSection": "متعة محجوزة لمهمة · باتفاق مع نفسك",
+  "addBundle": "أضيفي باقة",
+  "editBundle": "تعديل الباقة",
+  "noBundles": "ما فيه باقات — اختاري شي تحبينه وخليه لوقت عادة.",
+  "noHabitLinked": "بدون عادة",
+  "bundleHelp": "شي تحبينه تخلينه لوقت عادة بس — بدون أقفال، باتفاق مع نفسك.",
+  "bundleWant": "المتعة",
+  "bundleWantHint": "مثلًا: بودكاست، حلقة مسلسل، قائمة أغاني",
+  "bundleFor": "محجوزة لـ",
+  "removeBundle": "شيلي الباقة",
+  "joyMap": "خريطة متعتي",
+  "joyMapEmpty": "خريطتك فاضية — أضيفي أشياء تفرّحك.",
+  "freeJoyNote": "الأشياء اللي تحبينها أصلًا ما نحط عليها سعر — تبقى حرة.",
+  "addJoy": "أضيفي متعة",
+  "sizeLabel": "حجمها",
+  "sizeQuick": "سريعة · أقل من 15 د",
+  "sizeMedium": "متوسطة",
+  "sizeBig": "كبيرة",
+  "costsMoney": "تكلف فلوس",
+  "gardenSummary": "{n} نباتات · {auto} صارت تلقائية",
+  "@gardenSummary": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      },
+      "auto": {
+        "type": "String"
+      }
+    }
+  },
+  "celebrationsTitle": "احتفالاتي",
+  "celebrationsSub": "العودات، المراجعات، والمكافآت اللي استبدلتيها",
+  "redeemTitle": "تستبدلين {title}؟",
+  "@redeemTitle": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "redeemBody": "ينخصم {n} شرارة — وهذي لحظة احتفال، استاهلتيها.",
+  "@redeemBody": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "enjoy": "استمتعي",
+  "celebrateTitle": "مبروك!",
+  "celebrateBody": "{title} لك — من خطوات صغيرة تجمّعت.",
+  "@celebrateBody": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "newReward": "مكافأة جديدة",
+  "editReward": "تعديل المكافأة",
+  "saveReward": "احفظي المكافأة",
+  "rewardPrompt": "وش يفرّحك لما تستاهلينه؟",
+  "rewardName": "اسم المكافأة",
+  "rewardNameHint": "مثلًا: كتاب جديد",
+  "priceInSparks": "سعرها بالشرارات",
+  "balanceCanRedeem": "رصيدك الحالي {n} — تقدرين تستبدلينها الحين.",
+  "@balanceCanRedeem": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "balanceNow": "رصيدك الحالي {n} — باقي {left}.",
+  "@balanceNow": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      },
+      "left": {
+        "type": "String"
+      }
+    }
+  },
+  "costsMoneySub": "نضيفها لقائمة الأمنيات وفترة التهدئة في المال",
+  "keepFreeAdvice": "شي تحبينه وتسوينه أصلًا — مثل الرسم أو القراءة للمتعة — خليه متعة حرة بدون سعر، عشان ما يصير واجب.",
+  "archiveReward": "أرشفي المكافأة",
+  "milestoneRewards": "مكافآت المحطات · لما توصلين لخطوة في هدف",
+  "pickMilestoneReward": "مكافأة هذي المحطة",
+  "chooseLater": "تختارينها لاحقًا",
+  "noCelebrations": "احتفالاتك تظهر هنا: عودة بعد غياب، مراجعة أسبوع، مكافأة استبدلتيها.",
+  "freshStartTitle": "بداية جديدة",
+  "freshWeek": "أسبوع جديد بدأ — فرصة لطيفة نختار أول خطوة صغيرة، بدون ما نحاسب اللي فات.",
+  "freshMonth": "شهر جديد — لو فيه شي تبين ترجعين له، هذي لحظة مناسبة.",
+  "freshSeason": "موسم جديد بدأ — نشوف وش ينمو ووش يرتاح هالموسم.",
+  "freshWeekTomorrow": "بكرة أسبوع جديد — بداية جديدة. اختاري ثلاث أولويات وخلّي الباقي يرتاح.",
+  "freshMonthTomorrow": "بكرة شهر جديد — بداية جديدة تناسب أي رجوع.",
+  "freshDismiss": "إخفاء بطاقة البداية الجديدة",
+  "freshAction": "اختاري أولويات الأسبوع",
+  "wrSub": "الفصل {n} · حوالي 10 دقائق",
+  "@wrSub": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "wrWins": "الإنجازات",
+  "wrBlockers": "اللي عطّلني",
+  "wrStrength": "فحص القوة",
+  "wrSeason": "الموسم",
+  "wrTop3": "أولويات الأسبوع الجاي",
+  "wrExperiment": "التجربة",
+  "wrChapter": "عنوان الفصل",
+  "wrSparks": "الشرارات",
+  "wrWinsTitle": "وش مشى صح هالأسبوع؟",
+  "wrWinsSub": "جمعنا لك اللي لاحظناه. أشري على اللي تفتخرين فيه.",
+  "wrNoWins": "ما سجلنا شي هالأسبوع — وهذا عادي. اكتبي أي شي صغير صار.",
+  "wrExtraWin": "إنجاز ثاني تبين تذكرينه",
+  "wrExtraWinHint": "مثلًا: كلمت صديقتي بعد فترة",
+  "wrBlockersTitle": "وش عطّلك؟",
+  "wrBlockersSub": "معلومة للتصميم، مو حكم عليك. اختاري اللي ينطبق.",
+  "wrBlockersNote": "إذا عادة وحدة تكرر تعطّلها، زر «عدّلي التصميم» في يومك يقترح تعديل واحد.",
+  "wrStrengthTitle": "فحص القوة: {title}",
+  "@wrStrengthTitle": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "wrStrengthSub": "4 جمل، 20 ثانية. 1 = ما أوافق أبدًا · 5 = أوافق تمامًا.",
+  "srbai1": "أسويها تلقائيًا",
+  "srbai2": "أسويها بدون ما أتذكر عمدًا",
+  "srbai3": "أسويها بدون ما أفكر",
+  "srbai4": "أبدأ فيها قبل ما أنتبه",
+  "wrStrengthAvg": "متوسطك {v} من 5 — هذي قراءتك أنتِ، مو امتحان.",
+  "@wrStrengthAvg": {
+    "placeholders": {
+      "v": {
+        "type": "String"
+      }
+    }
+  },
+  "wrTop3Title": "أهم 3 للأسبوع الجاي",
+  "wrTop3Sub": "ثلاثة بس. الباقي ينتظر بدون ضغط.",
+  "wrTopN": "الأولوية {n}",
+  "@wrTopN": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "wrSuggestions": "من أهدافك ومشاريعك",
+  "wrExperimentTitle": "تجربة الأسبوع",
+  "wrExperimentSub": "نغيّر شي واحد بس ونقيس الإنجاز والمتعة. القرار بعدها لك.",
+  "wrExperimentActive": "عندك تجربة شغّالة — شوفي النتيجة وقرري.",
+  "wrNoExperiment": "بدون تجربة هالأسبوع",
+  "wrNoExperimentSub": "أسبوع هادئ بدون تغيير — اختيار مناسب بعد.",
+  "wrExperimentNote": "أسبوع واحد يعطي إشارة، مو حكم نهائي.",
+  "expVarBundle": "نشغّل المتعة وقت العادة بس ونقارن بالأسبوع اللي قبله",
+  "expVarEvening": "أسبوع في المساء بدل الصباح",
+  "expVarMorning": "أسبوع في الصباح بدل المساء",
+  "expVarMinimum": "أسبوع بالنسخة الصغيرة كل يوم",
+  "wrChapterTitle": "عنوان الفصل {n}",
+  "@wrChapterTitle": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "wrChapterSub": "كل أسبوع فصل. سمّيه بكلمتين تتذكرينه فيها.",
+  "wrChapterHint": "مثلًا: أسبوع الرجوع",
+  "wrChapterS1": "أسبوع الرجوع",
+  "wrChapterS2": "خطوات صغيرة",
+  "wrChapterS3": "أسبوع هادئ",
+  "wrCloseChapter": "سكّري الفصل",
+  "wrDone": "خلصنا",
+  "wrClosedN": "سكّرتي الفصل {n}",
+  "@wrClosedN": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "wrClosedTitled": "سكّرتي الفصل {n}: {title}",
+  "@wrClosedTitled": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      },
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "wrSaved": "انحفظ الفصل.",
+  "wrEndWin": "{win} — وهذا بالضبط اللي نبنيه. الأسبوع الجاي جاهز بأولوياتك.",
+  "@wrEndWin": {
+    "placeholders": {
+      "win": {
+        "type": "String"
+      }
+    }
+  },
+  "wrEndGeneric": "وصلتي لآخر الأسبوع وقفلتيه بهدوء — وهذا بحد ذاته إنجاز.",
+  "experimentResultLabel": "نتيجة التجربة",
+  "beforeWithout": "قبل",
+  "afterWith": "بعد",
+  "daysDone": "أيام منجزة",
+  "enjoymentOf5": "المتعة من 5",
+  "experimentCaveat": "تجربة شخصية قصيرة — إشارة، مو دليل.",
+  "keepIt": "أثبتها",
+  "revertIt": "أرجّع القديم",
+  "keptLabel": "ثبّتيها",
+  "revertedLabel": "رجّعتي القديم",
+  "insights": "الرؤى",
+  "insightsSub": "آخر 4 أسابيع · أرقام تساعدك تعدّلين التصميم، مو تحكم عليك",
+  "momentumByDomain": "الزخم حسب المجال",
+  "momentumCaption": "الزخم من 0 إلى 100: متوسط موزون لآخر 7 أيام. اليوم الفائت ينزله شوي، ما يرجعه للصفر.",
+  "recoverySpeed": "سرعة الرجوع",
+  "recoveryEmpty": "ما فيه رجوع مسجّل بعد — يظهر هنا لما ترجعين لعادة بعد غياب.",
+  "recoveryCaption": "الأرقام = أيام حتى الرجوع. أقل = أحسن. «—» = ما فيه رجوع ذاك الأسبوع.",
+  "weekShort": "أسبوع {n}",
+  "@weekShort": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "thisWeekShort": "هذا الأسبوع",
+  "noReturn": "بدون رجوع",
+  "bestTimes": "أفضل أوقاتك",
+  "bestTimesEmpty": "نحتاج 3 مرات على الأقل لكل عادة عشان نعرف وقتها المعتاد.",
+  "bestTimesCaption": "نص أوقات إنجازك بالضبط (بين الربع الأول والثالث) لآخر 4 أسابيع.",
+  "fromNTimes": "من {n} مرات",
+  "@fromNTimes": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "experimentsTitle": "التجارب",
+  "experimentsEmpty": "ما فيه تجارب بعد — تختارين وحدة في المراجعة الأسبوعية.",
+  "systemBurden": "عبء النظام",
+  "burdenSub": "قد إيش التطبيق نفسه ياخذ من وقتك. نبيه يبقى قليل — التطبيق خادم، مو شغلة إضافية.",
+  "burdenLogs": "تسجيلات هذا الأسبوع",
+  "burdenReview": "دقائق المراجعة",
+  "burdenCaption": "نعدّ الضغطات ونقيس وقت المراجعة الفعلي — ما نقدّر شي من عندنا.",
+  "chapterN": "الفصل {n}",
+  "@chapterN": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "settings": "الإعدادات",
+  "aboutMinutes": "{n} دقائق",
+  "@aboutMinutes": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "reviewReady": "مراجعة الأسبوع جاهزة",
+  "reviewReadyBody": "نسكّر الفصل {n} بقصته: وش مشى، وش عطّل، وأهم 3 للأسبوع الجاي.",
+  "@reviewReadyBody": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "reviewEndsWithSparks": "تنتهي بشرارات المراجعة",
+  "chapterClosed": "سكّرتي الفصل {n}",
+  "@chapterClosed": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "nextWeekTop3": "أهم 3 للأسبوع",
+  "reviewAgain": "افتحي المراجعة مرة ثانية",
+  "understandMyself": "أفهم نفسي",
+  "insightsTileSub": "الزخم وسرعة الرجوع",
+  "noActiveExperiment": "ما فيه تجربة شغّالة",
+  "evidenceSub": "كل عادة ومصادرها وقوة دليلها",
+  "lifeAdmin": "أمور حياتي",
+  "moneyTitle": "المال",
+  "moneySub": "ظروف الشهر والفواتير",
+  "nextDue": "{title} {when}",
+  "@nextDue": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      },
+      "when": {
+        "type": "String"
+      }
+    }
+  },
+  "autoSaveShort": "الادخار التلقائي",
+  "homeAdminTitle": "البيت والمعاملات",
+  "zoneOfWeekIs": "منطقة الأسبوع: {z}",
+  "@zoneOfWeekIs": {
+    "placeholders": {
+      "z": {
+        "type": "String"
+      }
+    }
+  },
+  "cycleTitle": "الدورة الشهرية",
+  "pcosTitle": "نمط حياة لتكيّس المبايض",
+  "ifDiagnosed": "إذا كان لديك تشخيص",
+  "privateLocal": "خاص بك · على جهازك فقط",
+  "appSection": "التطبيق",
+  "settingsSub": "التنبيهات · الوحدات · الخصوصية",
+  "helpSub": "متى أطلب مساعدة مختص",
+  "dataOnDevice": "كل بياناتك على جهازك فقط.",
+  "unlockReason": "افتحي القسم الخاص",
+  "lockedTitle": "قسم خاص",
+  "lockedBody": "هذا القسم مقفل بقفل التطبيق.",
+  "unlock": "افتحي القفل",
+  "moduleOff": "هذي الوحدة مطفأة. تقدرين تفعّلينها من الإعدادات.",
+  "cyclePrivacy": "تسجيل خاص بك: تواريخ وملاحظات بس. بدون توقعات ولا تحليل، وكل شي يبقى على جهازك.",
+  "cycleLastStart": "آخر بداية: {date} · قبل {n} يوم",
+  "@cycleLastStart": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      },
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "cycleStartedToday": "بدأت اليوم",
+  "cycleEndedToday": "انتهت اليوم",
+  "addNote": "ملاحظة",
+  "cycleLog": "السجل",
+  "cycleEmpty": "ما فيه تسجيلات بعد.",
+  "cycleStart": "بداية",
+  "cycleEnd": "نهاية",
+  "cycleNotMedical": "هذا سجل شخصي، مو أداة طبية. لأي سؤال صحي راجعي طبيبتك.",
+  "pcosBanner": "هذا المحتوى إذا كان لديك تشخيص من طبيبة فقط — مو أداة تشخيص.",
+  "fieldWhat": "وش هو",
+  "fieldWhy": "ليش",
+  "notASubstitute": "التطبيق ليس بديلًا عن المختص.",
+  "moneyScreenSub": "{month} · تسجيل يدوي — ما نربط أي حساب بنكي",
+  "@moneyScreenSub": {
+    "placeholders": {
+      "month": {
+        "type": "String"
+      }
+    }
+  },
+  "envelopesTitle": "ظروف الشهر",
+  "daysLeftMonth": "باقي {n} يوم",
+  "@daysLeftMonth": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "envelopesEmpty": "ما فيه ظروف لهذا الشهر — أضيفي أول ظرف (مثلًا: أكل وقهوة).",
+  "spentOf": "{spent} من {planned}",
+  "@spentOf": {
+    "placeholders": {
+      "spent": {
+        "type": "String"
+      },
+      "planned": {
+        "type": "String"
+      }
+    }
+  },
+  "logSpend": "سجّلي مصروف",
+  "addEnvelope": "أضيفي ظرف",
+  "envelopeName": "اسم الظرف",
+  "envelopeHint": "مثلًا: أكل وقهوة",
+  "plannedAmount": "المبلغ المخطط (ر.س)",
+  "amountSar": "المبلغ (ر.س)",
+  "autoSaveBody": "فعّليه مرة وحدة من تطبيق بنكك، ويمشي لحاله. أي مبلغ صغير ثابت يكفي كبداية.",
+  "autoSaveUnset": "ما حددتي يوم التذكير بعد",
+  "autoSaveReminder": "تذكير: {day} من كل شهر · {time}",
+  "@autoSaveReminder": {
+    "placeholders": {
+      "day": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "setReminderDay": "حددي يوم التذكير",
+  "dayOfMonth": "يوم الشهر",
+  "billsTitle": "الفواتير والاشتراكات · {month}",
+  "@billsTitle": {
+    "placeholders": {
+      "month": {
+        "type": "String"
+      }
+    }
+  },
+  "legendBill": "فاتورة أو اشتراك",
+  "legendBnpl": "قسط",
+  "billsEmpty": "ما فيه فواتير — أضيفي اللي يتكرر كل شهر.",
+  "subscription": "اشتراك",
+  "subscriptionsReview": "مراجعة شهرية: اشتراك ما تستخدمينه؟ ألغيه من إعدادات المتجر في جوالك.",
+  "addBill": "فاتورة أو اشتراك",
+  "billName": "الاسم",
+  "deleteItemBody": "يُحذف من جهازك.",
+  "bnplTitle": "الأقساط",
+  "bnplEmpty": "ما فيه أقساط.",
+  "bnplDone": "خلصت كل الدفعات",
+  "bnplNext": "القسط الجاي {amount} ر.س · {date} ({when}) · الدفعة {n} من {total}",
+  "@bnplNext": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      },
+      "when": {
+        "type": "String"
+      },
+      "n": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "markPaid": "دفعتها",
+  "bnplRule": "قاعدتي قبل أي تقسيط: {rule}",
+  "@bnplRule": {
+    "placeholders": {
+      "rule": {
+        "type": "String"
+      }
+    }
+  },
+  "addBnpl": "خطة تقسيط",
+  "bnplItemName": "وش اشتريتي؟",
+  "bnplProvider": "الجهة",
+  "instalmentAmount": "مبلغ القسط (ر.س)",
+  "instalmentCount": "عدد الدفعات",
+  "wishlistTitle": "قائمة الأمنيات · فترة تهدئة",
+  "wishlistEmpty": "شي تبين تشترينه؟ حطيه هنا بدل السلة، وقرري بعد فترة التهدئة.",
+  "coolingLeft": "باقي {n} أيام — خليها ترتاح",
+  "@coolingLeft": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "coolingDone": "خلصت التهدئة — لسا تبينها؟",
+  "buyIt": "إيه، أشتريها",
+  "dropIt": "أشيلها",
+  "coolingNote": "مدة التهدئة تختارينها أنتِ — طريقة عملية، والدليل عليها مو محسوم.",
+  "addWish": "أمنية جديدة",
+  "wishName": "وش هي؟",
+  "coolingDays": "أيام التهدئة",
+  "homeAdminSub": "قليل وثابت أحسن من كثير ومتقطع",
+  "resetTitle": "ترتيب {n} دقائق",
+  "@resetTitle": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "resetReady": "جاهز",
+  "resetRunning": "شغّال",
+  "resetDone": "خلصتي — المكان صار أخف",
+  "startResetN": "ابدئي {n} دقائق",
+  "@startResetN": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "withBundle": "مع {b}",
+  "@withBundle": {
+    "placeholders": {
+      "b": {
+        "type": "String"
+      }
+    }
+  },
+  "zoneOfWeek": "منطقة الأسبوع",
+  "nextZone": "المنطقة التالية",
+  "zoneDesk": "درج المكتب",
+  "zoneWardrobe": "الدولاب",
+  "zoneKitchen": "رف المطبخ",
+  "zoneBathroom": "رف الحمام",
+  "zoneBag": "الشنطة",
+  "zoneShelf": "رف الكتب",
+  "docsTitle": "الوثائق والتجديدات",
+  "addDoc": "إضافة وثيقة",
+  "docsEmpty": "سجلي وثائقك (الهوية، الجواز، التأمين…) وتاريخ انتهائها — نذكّرك قبلها.",
+  "docNoExpiry": "بدون تاريخ انتهاء بعد",
+  "docExpires": "تنتهي {date} · {when}",
+  "@docExpires": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      },
+      "when": {
+        "type": "String"
+      }
+    }
+  },
+  "docWaiting": "تنتظر",
+  "docRenewNow": "وقت التجديد",
+  "docRemindBefore": "قبل {n} يوم",
+  "@docRemindBefore": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "docsNote": "مدة التذكير قبل الانتهاء تحددينها لكل وثيقة.",
+  "docName": "اسم الوثيقة",
+  "docNameHint": "مثلًا: جواز السفر",
+  "expiryDate": "تاريخ الانتهاء",
+  "remindBeforeDays": "ذكّريني قبل",
+  "daysN": "{n} يوم",
+  "@daysN": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "errandsTitle": "مشاوير مجمّعة",
+  "errandsTitleWhen": "مشاوير مجمّعة · {when}",
+  "@errandsTitleWhen": {
+    "placeholders": {
+      "when": {
+        "type": "String"
+      }
+    }
+  },
+  "errandsEmpty": "أي مشوار يطرأ؟ سجليه هنا وسوّيه مع الباقي في وقت المهام الإدارية.",
+  "addErrand": "مشوار جديد",
+  "errandName": "المشوار",
+  "errandHint": "مثلًا: استلام طرد",
+  "aquarium": "الحوض",
+  "aquariumSub": "وحدة اختيارية · تطلع بس إذا عندك حوض",
+  "evidenceScreenSub": "كل عادة في التطبيق لها مصدر، ونقول لك قوة دليلها بصراحة",
+  "filterAll": "الكل",
+  "strengthStrongest": "قوة الدليل · من الأقوى",
+  "strengthLegend": "الإرشادات من جهات صحية رسمية، والمراجعة المنهجية تجمع دراسات كثيرة، والتجربة دراسة وحدة مضبوطة.",
+  "evGuideline": "إرشادات",
+  "evSrMa": "مراجعة منهجية",
+  "evRct": "تجربة",
+  "evObservational": "رصدية",
+  "evExpert": "رأي خبراء",
+  "actionsCount": "{n} من {total} إجراء",
+  "@actionsCount": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "sourceLabel": "المصدر",
+  "noSourceListed": "ما فيه مصدر مسجّل لهذا الإجراء — نصيحة عملية.",
+  "inYourPlan": "في خطتك",
+  "addToPlan": "أضيفي لخطتي",
+  "addedToInbox": "انضاف لصندوق الأفكار",
+  "addedWeekly": "انضافت لمهام الأسبوع",
+  "weeklyPickDay": "أي يوم يناسبك؟ إذا ما حددتي، تظهر في «هذا الأسبوع».",
+  "fieldMetric": "كيف أقيسها",
+  "atHabit": "عادة",
+  "atRoutineStep": "خطوة روتين",
+  "atWeekly": "أسبوعية",
+  "atSystem": "نظام يُضبط مرة",
+  "atReference": "مرجع",
+  "atProjectStep": "خطوة مشروع",
+  "langAndLook": "اللغة والمظهر",
+  "notificationsSection": "التنبيهات",
+  "capRange": "من 0 إلى 6 · الافتراضي 4",
+  "capNone": "بدون تنبيهات — التطبيق يشتغل وأنتِ تفتحينه.",
+  "capCaption": "موجز الصباح · إغلاق المساء · والباقي عند إشارات عاداتك اللي فيها تذكير.",
+  "scheduledToday": "مجدول اليوم: {n}",
+  "@scheduledToday": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "quietHours": "ساعات الهدوء",
+  "fromLabel": "من",
+  "toLabel": "إلى",
+  "focusSilences": "وجلسات التركيز توقف التنبيهات تلقائيًا.",
+  "anchorsSection": "المراسي · الإشارات اللي تبدأ منها عاداتك",
+  "prayerAnchorsSettingsSub": "اختيارية · تُحسب على جهازك · أم القرى",
+  "cityLabel": "المدينة",
+  "cityMakkah": "مكة",
+  "cityJeddah": "جدة",
+  "modulesSection": "الوحدات الاختيارية",
+  "cycleModuleSub": "تسجيل خاص بك · مطفأة افتراضيًا",
+  "pcosModuleSub": "فقط إذا فيه تشخيص من طبيبة",
+  "aquariumModuleSub": "مهام الماء والإطعام",
+  "modulesPrivacy": "كل البيانات على جهازك فقط — بدون حساب أو خادم. الوحدات الحساسة مطفأة افتراضيًا، وتقدرين تقفلينها بـ Face ID.",
+  "privacyData": "الخصوصية والبيانات",
+  "appLockSettingsSub": "Face ID للأقسام الحساسة",
+  "forgivingStreakTitle": "سلسلة متسامحة",
+  "forgivingStreakSub": "اختيارية · يومين سماح كل أسبوع",
+  "exportAll": "تصدير كل البيانات",
+  "importFile": "استيراد من ملف",
+  "exportDone": "جهّزنا الملف للمشاركة.",
+  "exportFailed": "ما قدرنا نشارك الملف.",
+  "importConfirmTitle": "نستبدل بياناتك؟",
+  "importConfirmBody": "بيانات الملف تحل محل كل بياناتك الحالية على هذا الجهاز.",
+  "importDone": "تم الاستيراد.",
+  "importFailed": "الملف ما ينقرأ — تأكدي إنه تصدير من التطبيق.",
+  "deleteAll": "حذف كل البيانات",
+  "deleteAllNote": "نطلب تأكيد مرتين قبل الحذف، وننصح بالتصدير أول.",
+  "deleteAllTitle": "نحذف كل شي؟",
+  "deleteAllBody1": "عاداتك وسجلاتك وشراراتك ومكافآتك كلها تنحذف من الجهاز. ننصحك تصدّرين نسخة أول.",
+  "deleteContinue": "أكملي",
+  "deleteAllTitle2": "متأكدة؟",
+  "deleteAllBody2": "هذي آخر خطوة — الحذف ما يتراجع عنه.",
+  "deleteAllFinal": "احذفي كل شي",
+  "whenToSeekHelp": "متى أطلب مساعدة مختص؟",
+  "helpBullet1": "إذا الضيق أو القلق أو التوتر مستمر ويأثر على يومك.",
+  "helpBullet2": "إذا صار صعب تهتمين بأساسياتك: النوم، الأكل، الشغل أو الدراسة.",
+  "helpBullet3": "إذا جتك أفكار إنك تأذين نفسك — روحي للطوارئ الحين.",
+  "savedNumbers": "أرقام محفوظة لك",
+  "moh937": "وزارة الصحة",
+  "moh937Sub": "استشارة طبية بالهاتف · 24 ساعة",
+  "mohPsych": "مركز الاستشارات النفسية (وزارة الصحة)",
+  "mohPsychSub": "مختصين في الصحة النفسية\n8 ص – 8 م، السبت 1 م – 8 م",
+  "ambulance": "الهلال الأحمر (إسعاف)",
+  "unifiedEmergency": "الطوارئ الموحد",
+  "erOpen": "وأقسام الطوارئ في المستشفيات مفتوحة 24 ساعة.",
+  "notSubstituteLong": "هذا التطبيق ليس بديلًا عن المختص. ما يشخّص ولا يتابع حالتك النفسية — يساعدك في يومك بس.",
+  "callN": "اتصال {title}: {n}",
+  "@callN": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      },
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "recoverySpeedSub": "كم يوم تاخذين عشان ترجعين بعد ما تفوّتين عادة أساسية.",
+  "beforeRoadmap": "قبل بداية السنة · {date} — تبدأ في أكتوبر",
+  "@beforeRoadmap": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "sizeQuickShort": "سريعة",
+  "bnplNextAmount": "القسط الجاي {amount} ر.س",
+  "@bnplNextAmount": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "bnplPaymentN": "الدفعة {n} من {total}",
+  "@bnplPaymentN": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "overdueDays": "متأخر {n} يوم",
+  "@overdueDays": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "storageUnavailable": "الحفظ غير متاح في هذا المتصفح — بياناتك مؤقتة",
+  "undoExpired": "انتهت مهلة التراجع — تقدرين تلغين الإنجاز من البطاقة.",
+  "setSmallDuration": "حددي مدة صغيرة",
+  "setSmallDurationRequired": "حددي مدة صغيرة للنسخة الأدنى قبل الحفظ.",
+  "estimateTag": "تقدير",
+  "momentumResting": "راحة",
+  "shapeRedOne": "شي واحد صغير + متعة",
+  "shapeRedTwo": "شيئين صغار + متعة",
+  "wrEndWinNoTop": "{win} — وهذا بالضبط اللي نبنيه. الأسبوع الجاي يبدأ بهدوء.",
+  "@wrEndWinNoTop": {
+    "placeholders": {
+      "win": {
+        "type": "String"
+      }
+    }
+  },
+  "helpSources": "مصادر الأرقام",
+  "helpSrc937": "937 — صفحة خدمة 937، وزارة الصحة",
+  "helpSrcPsych": "920033360 — صفحة خدمات الصحة النفسية، وزارة الصحة",
+  "helpSrc911": "911 — موقع هيئة الهلال الأحمر السعودي",
+  "unsourcedBadge": "ممارسة عملية — بلا مصدر محكّم",
+  "nudgeDuesTitle": "مستحقات اليوم",
+  "duesAutoSave": "تحويل الادخار التلقائي",
+  "helpSrc997": "997 — خطة الترقيم الوطنية، هيئة الاتصالات والفضاء والتقنية"
+}

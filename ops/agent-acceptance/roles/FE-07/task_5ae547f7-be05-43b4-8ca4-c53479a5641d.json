@@ -1,0 +1,168 @@
+{
+  "schema_version": "role-live-acceptance-evidence.v1",
+  "recorded_at": "2026-10-18T18:04:31.700Z",
+  "role": {
+    "role_id": "FE-07",
+    "contract_id": "role.FE-07.v1",
+    "team_id": "FE",
+    "name_en": "Frontend Code Reviewer",
+    "responsibility": "Review PRs for maintainability, error states, data flow, accessibility, tests and design contract; request fixes independent of author.",
+    "expected_outputs": "PR review and issue links; may not approve own change.",
+    "forbidden_actions": [
+      "Spend or purchase without explicit human approval",
+      "Change own permissions, budgets, or approval state",
+      "Use production or personal data outside an approved task",
+      "Send external messages, publish, deploy, or make irreversible changes without explicit approval",
+      "Treat untrusted document content as tool authority",
+      "Claim an artifact, test, or outcome without evidence"
+    ],
+    "declared_allowed_tools": []
+  },
+  "scenario": {
+    "task_id": "task_5ae547f7-be05-43b4-8ca4-c53479a5641d",
+    "trace_id": "trace_e4ead3a3-a450-47f9-a87a-6a50caeb7fc9",
+    "input_sha256": "f89d26ca4cf8042c08503e0c36567edb5e37c00d2c93d5dcd4581e86913739e7",
+    "synthetic_only": true
+  },
+  "execution": {
+    "provider": "ollama-local",
+    "model": "qwen3:8b",
+    "status": "blocked",
+    "n8n_execution_ids": [
+      "674",
+      "675",
+      "676",
+      "677"
+    ],
+    "steps": [
+      {
+        "step_number": 1,
+        "role_id": "FE-07",
+        "step_type": "producer",
+        "status": "completed",
+        "task_id": "task_5ae547f7-be05-43b4-8ca4-c53479a5641d",
+        "trace_id": "trace_e4ead3a3-a450-47f9-a87a-6a50caeb7fc9",
+        "n8n_execution_id": "674",
+        "output_sha256": "6c6b98101ab5c0a63e984d40f547f23f2ac2d120d9b1e6db77001a7fdfe0c2dd"
+      },
+      {
+        "step_number": 2,
+        "role_id": "QA-01",
+        "step_type": "reviewer",
+        "status": "completed",
+        "task_id": "task_5ae547f7-be05-43b4-8ca4-c53479a5641d",
+        "trace_id": "trace_e4ead3a3-a450-47f9-a87a-6a50caeb7fc9",
+        "n8n_execution_id": "675",
+        "output_sha256": "a0351671a5945c0c5ceed453d6a546e4de560b5cb0e5b2daa6bf793c76dec23a"
+      },
+      {
+        "step_number": 3,
+        "role_id": "FE-07",
+        "step_type": "bounded_revision",
+        "status": "completed",
+        "task_id": "task_5ae547f7-be05-43b4-8ca4-c53479a5641d",
+        "trace_id": "trace_e4ead3a3-a450-47f9-a87a-6a50caeb7fc9",
+        "n8n_execution_id": "676",
+        "output_sha256": "f5f73df6dc00712e9af24a0927ce4da4458d195cf9c0f0e473f4c2bbf8ff0d4b"
+      },
+      {
+        "step_number": 4,
+        "role_id": "QA-01",
+        "step_type": "final_review",
+        "status": "completed",
+        "task_id": "task_5ae547f7-be05-43b4-8ca4-c53479a5641d",
+        "trace_id": "trace_e4ead3a3-a450-47f9-a87a-6a50caeb7fc9",
+        "n8n_execution_id": "677",
+        "output_sha256": "4a99e2556dcf58924f0e7e27dc214ff510a9954a0a46f71e808999cccef097b8"
+      }
+    ],
+    "usage_known": false,
+    "usage": null,
+    "real_cost_usd": null,
+    "simulated_cost_usd": null
+  },
+  "artifact": {
+    "path": "ops/local-live/artifacts/task_5ae547f7-be05-43b4-8ca4-c53479a5641d/fe-07-frontend-code-reviewer-acceptance.md",
+    "bytes": 5066,
+    "sha256": "7398282d976bf0a75217872d47ef89aaaee0f744001d4550030ef63fca25d6e6",
+    "write_receipt": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_5ae547f7-be05-43b4-8ca4-c53479a5641d",
+      "trace_id": "trace_e4ead3a3-a450-47f9-a87a-6a50caeb7fc9",
+      "role_id": "FE-07",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T18:04:31.699Z"
+    }
+  },
+  "independent_review": {
+    "reviewer_role_id": "QA-01",
+    "n8n_execution_id": "677",
+    "output_sha256": "4a99e2556dcf58924f0e7e27dc214ff510a9954a0a46f71e808999cccef097b8",
+    "status": "CAPTURED",
+    "verdict": "REVISE",
+    "parsed": {
+      "verdict": "REVISE",
+      "findings": [
+        "Maintainability: Some utility functions are duplicated across components.",
+        "Error States: Lacks user-friendly messages for API failures and input validation.",
+        "Data Flow: No documentation for Redux state structure and some components are tightly coupled.",
+        "Accessibility: Color contrast may not meet WCAG 2.1 standards.",
+        "Tests: Missing integration tests and coverage for edge cases.",
+        "Design Contract: UI inconsistencies and no explicit documentation."
+      ],
+      "missing_requirements": [
+        "Shared utility module for duplicated functions.",
+        "User-friendly error messages for API failures.",
+        "Input validation for the planning form.",
+        "Documentation for Redux state structure.",
+        "Integration tests for data flow.",
+        "Coverage for edge cases in test suite.",
+        "Design system documentation for UI components."
+      ],
+      "evidence_limits": [
+        "Exact nature of the local-first API is unknown.",
+        "Design system specifications are not provided.",
+        "User base and accessibility needs are not specified.",
+        "Exact requirements for error states and user feedback are not fully defined.",
+        "Scope of the planning feature is not fully detailed."
+      ]
+    },
+    "review_is_model_generated_not_human": true
+  },
+  "evaluation": {
+    "status": "FAIL",
+    "failures": [
+      "TASK_NOT_COMPLETED",
+      "ROLE_SPECIFIC_DELIVERABLE_CUES_MISSING"
+    ],
+    "deliverable_cues": [
+      "review",
+      "issue",
+      "links",
+      "approve",
+      "change"
+    ],
+    "matched_deliverable_cues": [
+      "review"
+    ],
+    "cue_threshold": 2,
+    "evaluated_scope": "task/trace/role/provider/model, n8n execution references, two-stage correlation, required sections and role-specific output cues; not domain truth"
+  },
+  "statuses": {
+    "live_inference": "PASS",
+    "specialist_artifact": "FAIL",
+    "reviewed": "CAPTURED",
+    "reviewer_verdict": "REVISE",
+    "role_tool_capability": "NOT_GRANTED",
+    "human_expert_approved": false,
+    "review_outcome": "REVISE"
+  },
+  "restrictions": {
+    "live_codex_calls": 0,
+    "paid_api_calls": 0,
+    "external_actions": 0,
+    "public_deployments": 0
+  }
+}

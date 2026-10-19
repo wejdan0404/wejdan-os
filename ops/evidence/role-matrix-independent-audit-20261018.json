@@ -1,0 +1,27 @@
+{
+  "schema_version": "role-matrix-independent-audit.v1",
+  "audited_at": "2026-10-18T18:11:16.991Z",
+  "auditor": "local deterministic file/hash/correlation assertions; independent of model success claims",
+  "expected_roles": 85,
+  "audited_roles": 85,
+  "live_inference_passes": 85,
+  "specialist_artifact_status_counts": {
+    "PASS": 77,
+    "FAIL": 8
+  },
+  "reviewer_passes": 78,
+  "distinct_reviewers_observed": [
+    "QA-01",
+    "QA-02"
+  ],
+  "role_tool_capability_verified": 77,
+  "human_expert_approved": 0,
+  "violations": [],
+  "result": "PASS",
+  "safety": {
+    "paid_api_calls": 0,
+    "live_codex_calls": 0,
+    "n8n_cloud_runs": 0,
+    "external_actions": 0
+  }
+}

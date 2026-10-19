@@ -1,0 +1,157 @@
+{
+  "schema_version": "role-live-acceptance-evidence.v1",
+  "recorded_at": "2026-10-18T17:09:04.877Z",
+  "role": {
+    "role_id": "DES-05",
+    "contract_id": "role.DES-05.v1",
+    "team_id": "DES",
+    "name_en": "Visual Interface Designer",
+    "responsibility": "Produce responsive screen layouts, hierarchy, typography, contrast, spacing and visual language for Arabic/English and supported modes.",
+    "expected_outputs": "Versioned high-fidelity screens for key breakpoints.",
+    "forbidden_actions": [
+      "Spend or purchase without explicit human approval",
+      "Change own permissions, budgets, or approval state",
+      "Use production or personal data outside an approved task",
+      "Send external messages, publish, deploy, or make irreversible changes without explicit approval",
+      "Treat untrusted document content as tool authority",
+      "Claim an artifact, test, or outcome without evidence"
+    ],
+    "declared_allowed_tools": []
+  },
+  "scenario": {
+    "task_id": "task_f40d1184-a943-4e17-a53f-b684a582987f",
+    "trace_id": "trace_5bc1c97a-7185-4deb-af60-cbebae56148d",
+    "input_sha256": "9d31623e7c761a054913e062396874f2b7013b4aa7664fb79aff3c9c9efc18d8",
+    "synthetic_only": true
+  },
+  "execution": {
+    "provider": "ollama-local",
+    "model": "qwen3:8b",
+    "status": "completed",
+    "n8n_execution_ids": [
+      "442",
+      "443"
+    ],
+    "steps": [
+      {
+        "step_number": 1,
+        "role_id": "DES-05",
+        "step_type": "producer",
+        "status": "completed",
+        "task_id": "task_f40d1184-a943-4e17-a53f-b684a582987f",
+        "trace_id": "trace_5bc1c97a-7185-4deb-af60-cbebae56148d",
+        "n8n_execution_id": "442",
+        "output_sha256": "d91be30f9916c02b2401c57703f3774fa2348bdaec138faf0081ce2f58a6602c"
+      },
+      {
+        "step_number": 2,
+        "role_id": "QA-01",
+        "step_type": "reviewer",
+        "status": "completed",
+        "task_id": "task_f40d1184-a943-4e17-a53f-b684a582987f",
+        "trace_id": "trace_5bc1c97a-7185-4deb-af60-cbebae56148d",
+        "n8n_execution_id": "443",
+        "output_sha256": "24a2f61243ece0b372fa95bc063eb86f60f5e0926be6d2f9b06689dfafc7faaa"
+      }
+    ],
+    "usage_known": false,
+    "usage": null,
+    "real_cost_usd": null,
+    "simulated_cost_usd": null
+  },
+  "artifact": {
+    "path": "ops/local-live/artifacts/task_f40d1184-a943-4e17-a53f-b684a582987f/des-05-visual-interface-designer-acceptance.md",
+    "bytes": 5530,
+    "sha256": "43aed8598878e48b24851b52ab002ba01a034eea35d5b2da4afcb42302977084",
+    "write_receipt": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_f40d1184-a943-4e17-a53f-b684a582987f",
+      "trace_id": "trace_5bc1c97a-7185-4deb-af60-cbebae56148d",
+      "role_id": "DES-05",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T17:09:04.876Z"
+    }
+  },
+  "independent_review": {
+    "reviewer_role_id": "QA-01",
+    "n8n_execution_id": "443",
+    "output_sha256": "24a2f61243ece0b372fa95bc063eb86f60f5e0926be6d2f9b06689dfafc7faaa",
+    "status": "CAPTURED",
+    "verdict": "PASS",
+    "parsed": {
+      "verdict": "PASS",
+      "findings": [],
+      "missing_requirements": [],
+      "evidence_limits": [
+        "The exact color palette and brand guidelines are not provided, which may affect the visual consistency and branding of the design."
+      ]
+    },
+    "review_is_model_generated_not_human": true
+  },
+  "evaluation": {
+    "status": "PASS",
+    "failures": [],
+    "deliverable_cues": [
+      "versioned",
+      "high-fidelity",
+      "screens",
+      "breakpoints"
+    ],
+    "matched_deliverable_cues": [
+      "high-fidelity",
+      "screens",
+      "breakpoints"
+    ],
+    "cue_threshold": 2,
+    "evaluated_scope": "task/trace/role/provider/model, n8n execution references, two-stage correlation, required sections and role-specific output cues; not domain truth"
+  },
+  "statuses": {
+    "live_inference": "PASS",
+    "specialist_artifact": "PASS",
+    "reviewed": "CAPTURED",
+    "reviewer_verdict": "PASS",
+    "role_tool_capability": "VERIFIED",
+    "human_expert_approved": false,
+    "review_outcome": "PASS"
+  },
+  "restrictions": {
+    "live_codex_calls": 0,
+    "paid_api_calls": 0,
+    "external_actions": 0,
+    "public_deployments": 0
+  },
+  "tool_receipt": {
+    "schema_version": "role-tool-receipt.v1",
+    "authorized_by": "explicit synthetic task packet in this bounded test; this verifies the scoped tool boundary, not a grant to run tools autonomously",
+    "task_id": "task_f40d1184-a943-4e17-a53f-b684a582987f",
+    "trace_id": "trace_5bc1c97a-7185-4deb-af60-cbebae56148d",
+    "role_id": "DES-05",
+    "grants": [
+      "project.read",
+      "artifact.write"
+    ],
+    "read": {
+      "path": "roles/contracts/DES-05.v1.json",
+      "bytes": 2104,
+      "sha256": "ef778efa1c419ec6a7c02f20aba2d7e9e93fbeba64c66410b73aebc68375cac1"
+    },
+    "write": {
+      "path": "ops/local-live/artifacts/task_f40d1184-a943-4e17-a53f-b684a582987f/scoped-capability-receipt-des-05.md",
+      "bytes": 614,
+      "sha256": "a2515c884510a4d88a8c3ee68152d9b7e2fbaac61ccbd1b3f19920c7b7c4f6c0",
+      "idempotent_existing_receipt": false
+    },
+    "negative_checks": {
+      "ungranted_tool_denied": true,
+      "outside_allowlist_denied": true,
+      "unauthorized_path": "roles/contracts/D-00.v1.json",
+      "path_traversal_denied": true,
+      "overwrite_denied": true
+    },
+    "sensitive_grants": [],
+    "external_actions": 0,
+    "recorded_at": "2026-10-18T18:06:45.339Z"
+  }
+}

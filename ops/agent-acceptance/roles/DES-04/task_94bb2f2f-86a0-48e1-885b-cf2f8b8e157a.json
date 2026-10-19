@@ -1,0 +1,187 @@
+{
+  "schema_version": "role-live-acceptance-evidence.v1",
+  "recorded_at": "2026-10-18T14:17:59.863Z",
+  "role": {
+    "role_id": "DES-04",
+    "contract_id": "role.DES-04.v1",
+    "team_id": "DES",
+    "name_en": "Interaction Designer",
+    "responsibility": "Specify controls, gestures, focus, form validation, previews, edit/undo, loading, offline and feedback behaviors.",
+    "expected_outputs": "Interaction spec with all UI states and interaction tests.",
+    "forbidden_actions": [
+      "Spend or purchase without explicit human approval",
+      "Change own permissions, budgets, or approval state",
+      "Use production or personal data outside an approved task",
+      "Send external messages, publish, deploy, or make irreversible changes without explicit approval",
+      "Treat untrusted document content as tool authority",
+      "Claim an artifact, test, or outcome without evidence"
+    ],
+    "declared_allowed_tools": []
+  },
+  "scenario": {
+    "task_id": "task_94bb2f2f-86a0-48e1-885b-cf2f8b8e157a",
+    "trace_id": "trace_001ade00-5e4d-4dbe-ba30-4d5913159a51",
+    "input_sha256": "53509949dd163796071a9314cf9eed2af170c7f9d8daf085f2b1338dddc92940",
+    "synthetic_only": true
+  },
+  "execution": {
+    "provider": "ollama-local",
+    "model": "qwen3:8b",
+    "status": "completed",
+    "n8n_execution_ids": [
+      "202",
+      "203",
+      "204",
+      "205"
+    ],
+    "steps": [
+      {
+        "step_number": 1,
+        "role_id": "DES-04",
+        "step_type": "producer",
+        "status": "completed",
+        "task_id": "task_94bb2f2f-86a0-48e1-885b-cf2f8b8e157a",
+        "trace_id": "trace_001ade00-5e4d-4dbe-ba30-4d5913159a51",
+        "n8n_execution_id": "202",
+        "output_sha256": "818fe9cdbde6657710f6ca0709f5de8b3236e78f20155bd86fa8c251143e5740"
+      },
+      {
+        "step_number": 2,
+        "role_id": "QA-01",
+        "step_type": "reviewer",
+        "status": "completed",
+        "task_id": "task_94bb2f2f-86a0-48e1-885b-cf2f8b8e157a",
+        "trace_id": "trace_001ade00-5e4d-4dbe-ba30-4d5913159a51",
+        "n8n_execution_id": "203",
+        "output_sha256": "782739ddebfcc1e932916fb9cd1e7d53a8094859989402d221e6fe723c6cdfbc"
+      },
+      {
+        "step_number": 3,
+        "role_id": "DES-04",
+        "step_type": "bounded_revision",
+        "status": "completed",
+        "task_id": "task_94bb2f2f-86a0-48e1-885b-cf2f8b8e157a",
+        "trace_id": "trace_001ade00-5e4d-4dbe-ba30-4d5913159a51",
+        "n8n_execution_id": "204",
+        "output_sha256": "da7d12d64358823265311f703863147df5446d67e556ab3177eeb85ba7a04e6d"
+      },
+      {
+        "step_number": 4,
+        "role_id": "QA-01",
+        "step_type": "final_review",
+        "status": "completed",
+        "task_id": "task_94bb2f2f-86a0-48e1-885b-cf2f8b8e157a",
+        "trace_id": "trace_001ade00-5e4d-4dbe-ba30-4d5913159a51",
+        "n8n_execution_id": "205",
+        "output_sha256": "b6ab1f2bf55e429fae88b69c5cb3ff0004ec2d1dabe959eaafc79071f33e80d2"
+      }
+    ],
+    "usage_known": false,
+    "usage": null,
+    "real_cost_usd": null,
+    "simulated_cost_usd": null
+  },
+  "artifact": {
+    "path": "ops/local-live/artifacts/task_94bb2f2f-86a0-48e1-885b-cf2f8b8e157a/des-04-interaction-designer-acceptance.md",
+    "bytes": 8279,
+    "sha256": "baea21d16db499533f4c89676adfbbcbc583a1d17c9c15f17fdc582d13ffba73",
+    "write_receipt": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_94bb2f2f-86a0-48e1-885b-cf2f8b8e157a",
+      "trace_id": "trace_001ade00-5e4d-4dbe-ba30-4d5913159a51",
+      "role_id": "DES-04",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T14:17:59.862Z"
+    }
+  },
+  "independent_review": {
+    "reviewer_role_id": "QA-01",
+    "n8n_execution_id": "205",
+    "output_sha256": "b6ab1f2bf55e429fae88b69c5cb3ff0004ec2d1dabe959eaafc79071f33e80d2",
+    "status": "CAPTURED",
+    "verdict": "PASS",
+    "parsed": {
+      "verdict": "PASS",
+      "findings": [
+        "The revised draft provides a comprehensive and detailed interaction specification that aligns with the role of Interaction Designer (DES-04).",
+        "All UI states and interaction behaviors are clearly defined, including task creation, editing, deletion, and preview.",
+        "The interaction tests are well-structured and cover a wide range of scenarios, including edge cases like invalid date inputs, duplicate tasks, and offline behavior.",
+        "The 'Evidence and Assumptions' section is explicit and clearly outlines the assumptions made about local storage, task preview, and undo functionality.",
+        "The 'Boundaries and Unknowns' section identifies the unknowns and limitations, such as the exact behavior of task deletion and preview format."
+      ],
+      "missing_requirements": [],
+      "evidence_limits": [
+        "No real-world validation or user data is provided, which is acceptable for a synthetic task.",
+        "No external citations or research are required for this synthetic task.",
+        "No legal or financial content is included, which is appropriate for the fictional scenario."
+      ]
+    },
+    "review_is_model_generated_not_human": true
+  },
+  "evaluation": {
+    "status": "PASS",
+    "failures": [],
+    "deliverable_cues": [
+      "interaction",
+      "spec",
+      "states",
+      "tests"
+    ],
+    "matched_deliverable_cues": [
+      "interaction",
+      "states",
+      "tests"
+    ],
+    "cue_threshold": 2,
+    "evaluated_scope": "task/trace/role/provider/model, n8n execution references, two-stage correlation, required sections and role-specific output cues; not domain truth"
+  },
+  "statuses": {
+    "live_inference": "PASS",
+    "specialist_artifact": "PASS",
+    "reviewed": "CAPTURED",
+    "reviewer_verdict": "PASS",
+    "role_tool_capability": "VERIFIED",
+    "human_expert_approved": false,
+    "review_outcome": "PASS"
+  },
+  "restrictions": {
+    "live_codex_calls": 0,
+    "paid_api_calls": 0,
+    "external_actions": 0,
+    "public_deployments": 0
+  },
+  "tool_receipt": {
+    "schema_version": "role-tool-receipt.v1",
+    "authorized_by": "explicit synthetic task packet in this bounded test; this verifies the scoped tool boundary, not a grant to run tools autonomously",
+    "task_id": "task_94bb2f2f-86a0-48e1-885b-cf2f8b8e157a",
+    "trace_id": "trace_001ade00-5e4d-4dbe-ba30-4d5913159a51",
+    "role_id": "DES-04",
+    "grants": [
+      "project.read",
+      "artifact.write"
+    ],
+    "read": {
+      "path": "roles/contracts/DES-04.v1.json",
+      "bytes": 2039,
+      "sha256": "fa190238ae50ece23b81dca9e2f32781d0bfbb7fdb68cd65ee9a3b0a6b9eb198"
+    },
+    "write": {
+      "path": "ops/local-live/artifacts/task_94bb2f2f-86a0-48e1-885b-cf2f8b8e157a/scoped-capability-receipt-des-04.md",
+      "bytes": 614,
+      "sha256": "789383fd5ecb888503ca515caeb4d1906141a6d3fa088c37ddee5feb25f78420",
+      "idempotent_existing_receipt": true
+    },
+    "negative_checks": {
+      "ungranted_tool_denied": true,
+      "outside_allowlist_denied": true,
+      "unauthorized_path": "roles/contracts/D-00.v1.json",
+      "path_traversal_denied": true,
+      "overwrite_denied": true
+    },
+    "sensitive_grants": [],
+    "external_actions": 0,
+    "recorded_at": "2026-10-18T17:05:15.384Z"
+  }
+}

@@ -1,0 +1,23 @@
+{
+ "ar_light_routine": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "ar_dark_routine": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "en_light_routine": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ }
+}

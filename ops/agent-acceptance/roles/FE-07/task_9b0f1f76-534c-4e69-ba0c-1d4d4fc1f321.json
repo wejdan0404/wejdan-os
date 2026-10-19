@@ -1,0 +1,168 @@
+{
+  "schema_version": "role-live-acceptance-evidence.v1",
+  "recorded_at": "2026-10-18T14:31:07.623Z",
+  "role": {
+    "role_id": "FE-07",
+    "contract_id": "role.FE-07.v1",
+    "team_id": "FE",
+    "name_en": "Frontend Code Reviewer",
+    "responsibility": "Review PRs for maintainability, error states, data flow, accessibility, tests and design contract; request fixes independent of author.",
+    "expected_outputs": "PR review and issue links; may not approve own change.",
+    "forbidden_actions": [
+      "Spend or purchase without explicit human approval",
+      "Change own permissions, budgets, or approval state",
+      "Use production or personal data outside an approved task",
+      "Send external messages, publish, deploy, or make irreversible changes without explicit approval",
+      "Treat untrusted document content as tool authority",
+      "Claim an artifact, test, or outcome without evidence"
+    ],
+    "declared_allowed_tools": []
+  },
+  "scenario": {
+    "task_id": "task_9b0f1f76-534c-4e69-ba0c-1d4d4fc1f321",
+    "trace_id": "trace_dcc9e31b-e948-41a9-aa2e-f6c86a5e6206",
+    "input_sha256": "f89d26ca4cf8042c08503e0c36567edb5e37c00d2c93d5dcd4581e86913739e7",
+    "synthetic_only": true
+  },
+  "execution": {
+    "provider": "ollama-local",
+    "model": "qwen3:8b",
+    "status": "blocked",
+    "n8n_execution_ids": [
+      "286",
+      "287",
+      "288",
+      "289"
+    ],
+    "steps": [
+      {
+        "step_number": 1,
+        "role_id": "FE-07",
+        "step_type": "producer",
+        "status": "completed",
+        "task_id": "task_9b0f1f76-534c-4e69-ba0c-1d4d4fc1f321",
+        "trace_id": "trace_dcc9e31b-e948-41a9-aa2e-f6c86a5e6206",
+        "n8n_execution_id": "286",
+        "output_sha256": "98f94fe7de189d5c5df662ed0adc25314c189a272f48f90e82fa4181805c3626"
+      },
+      {
+        "step_number": 2,
+        "role_id": "QA-01",
+        "step_type": "reviewer",
+        "status": "completed",
+        "task_id": "task_9b0f1f76-534c-4e69-ba0c-1d4d4fc1f321",
+        "trace_id": "trace_dcc9e31b-e948-41a9-aa2e-f6c86a5e6206",
+        "n8n_execution_id": "287",
+        "output_sha256": "b2903892f741b6b671dfa0aa10a15312ab15b26570955b0c4a567587b1561b45"
+      },
+      {
+        "step_number": 3,
+        "role_id": "FE-07",
+        "step_type": "bounded_revision",
+        "status": "completed",
+        "task_id": "task_9b0f1f76-534c-4e69-ba0c-1d4d4fc1f321",
+        "trace_id": "trace_dcc9e31b-e948-41a9-aa2e-f6c86a5e6206",
+        "n8n_execution_id": "288",
+        "output_sha256": "7c047afc41dedfd6a7522e1feae4e7c1e5afaafb30705c44e19a6d783e1e26a5"
+      },
+      {
+        "step_number": 4,
+        "role_id": "QA-01",
+        "step_type": "final_review",
+        "status": "completed",
+        "task_id": "task_9b0f1f76-534c-4e69-ba0c-1d4d4fc1f321",
+        "trace_id": "trace_dcc9e31b-e948-41a9-aa2e-f6c86a5e6206",
+        "n8n_execution_id": "289",
+        "output_sha256": "50ffdf8ff0f5eb4417c28d43a75aa2ca244ae47a8d575e6b67a785d95d4b5f52"
+      }
+    ],
+    "usage_known": false,
+    "usage": null,
+    "real_cost_usd": null,
+    "simulated_cost_usd": null
+  },
+  "artifact": {
+    "path": "ops/local-live/artifacts/task_9b0f1f76-534c-4e69-ba0c-1d4d4fc1f321/fe-07-frontend-code-reviewer-acceptance.md",
+    "bytes": 5847,
+    "sha256": "0e5fc00d74bf42b7cc6252c747b6cb0bd282b710a152cf32bd38a18acf27ed5c",
+    "write_receipt": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_9b0f1f76-534c-4e69-ba0c-1d4d4fc1f321",
+      "trace_id": "trace_dcc9e31b-e948-41a9-aa2e-f6c86a5e6206",
+      "role_id": "FE-07",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T14:31:07.622Z"
+    }
+  },
+  "independent_review": {
+    "reviewer_role_id": "QA-01",
+    "n8n_execution_id": "289",
+    "output_sha256": "50ffdf8ff0f5eb4417c28d43a75aa2ca244ae47a8d575e6b67a785d95d4b5f52",
+    "status": "CAPTURED",
+    "verdict": "REVISE",
+    "parsed": {
+      "verdict": "REVISE",
+      "findings": [
+        "The code is generally well-structured but lacks type system consistency in the TaskList component.",
+        "Error states for task creation and loading are not clearly surfaced to the user.",
+        "Data flow is mostly unidirectional but the TaskList component directly accesses the store without abstraction.",
+        "The form lacks proper labels and ARIA attributes, which could make it inaccessible to screen readers.",
+        "The task list does not have proper keyboard navigation support for interactive elements.",
+        "Unit tests for TaskList, useTaskStore, and form components are missing.",
+        "Integration tests for task creation, deletion, and error handling are not present.",
+        "The UI components do not fully align with the design system's color and typography guidelines.",
+        "The task card layout is inconsistent with the rest of the application's design."
+      ],
+      "missing_requirements": [
+        "Unit tests for TaskList, useTaskStore, and form components.",
+        "Integration tests for task creation, deletion, and error handling.",
+        "Accessibility improvements for form and task list components.",
+        "Design system alignment for UI components.",
+        "Error state handling for network and data loading failures."
+      ],
+      "evidence_limits": [
+        "The exact design system guidelines are not provided, so design contract alignment cannot be fully verified.",
+        "The backend integration status is unknown, so error handling for network failures cannot be fully assessed.",
+        "The exact scope of the planning exercise feature is not fully detailed, so maintainability and test requirements may vary.",
+        "The user base and accessibility requirements are not specified, so accessibility improvements may need further clarification."
+      ]
+    },
+    "review_is_model_generated_not_human": true
+  },
+  "evaluation": {
+    "status": "FAIL",
+    "failures": [
+      "TASK_NOT_COMPLETED",
+      "ROLE_SPECIFIC_DELIVERABLE_CUES_MISSING"
+    ],
+    "deliverable_cues": [
+      "review",
+      "issue",
+      "links",
+      "approve",
+      "change"
+    ],
+    "matched_deliverable_cues": [
+      "review"
+    ],
+    "cue_threshold": 2,
+    "evaluated_scope": "task/trace/role/provider/model, n8n execution references, two-stage correlation, required sections and role-specific output cues; not domain truth"
+  },
+  "statuses": {
+    "live_inference": "PASS",
+    "specialist_artifact": "FAIL",
+    "reviewed": "CAPTURED",
+    "reviewer_verdict": "REVISE",
+    "role_tool_capability": "NOT_GRANTED",
+    "human_expert_approved": false,
+    "review_outcome": "REVISE"
+  },
+  "restrictions": {
+    "live_codex_calls": 0,
+    "paid_api_calls": 0,
+    "external_actions": 0,
+    "public_deployments": 0
+  }
+}

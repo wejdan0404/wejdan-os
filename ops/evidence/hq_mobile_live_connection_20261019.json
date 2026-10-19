@@ -1,0 +1,16 @@
+{
+  "schema_version": "wejdan-hq-mobile-live-check.v1",
+  "tested_at": "2026-10-19T05:10:02.418Z",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "login": "PASS",
+  "lifeConnected": true,
+  "companyConnected": true,
+  "lifeNoHorizontalOverflow": true,
+  "companyNoHorizontalOverflow": true,
+  "consoleOrPageErrors": 0,
+  "readOnlyComposerDisabled": true,
+  "result": "PASS"
+}

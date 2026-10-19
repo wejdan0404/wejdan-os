@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>Today — Quiet Day</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'IBM Plex Sans Arabic','IBM Plex Sans',sans-serif;background:#F4F7FC;color:#0E121C}
+a{color:#4F5FA0}a:hover{color:#2B3358}
+</style>
+</helmet>
+<div style="width:390px;height:960px;position:relative;overflow:hidden;background:#F4F7FC;box-sizing:border-box;font-family:'IBM Plex Sans Arabic','IBM Plex Sans',sans-serif;color:#0E121C;">
+  <main style="display:flex;flex-direction:column;gap:20px;padding:16px 20px 0;box-sizing:border-box;">
+    <header style="display:flex;flex-direction:column;gap:16px;">
+      <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px;">
+        <div style="display:flex;flex-direction:column;gap:2px;">
+          <h1 style="margin:0;font-size:22px;line-height:30px;font-weight:700;">صباح الخير، وجدان</h1>
+          <span style="font-size:13px;line-height:20px;font-weight:500;color:#5A6478;">الإثنين 28 سبتمبر</span>
+        </div>
+        <a href="EveningShutdown.dc.html" aria-label="إغلاق اليوم" style="flex:none;display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:#FFFFFF;border:1px solid #DCE3EF;color:#2B3358;text-decoration:none;box-sizing:border-box;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z"></path></svg>
+        </a>
+      </div>
+      <a href="MorningBrief.dc.html" style="align-self:flex-start;display:inline-flex;align-items:center;height:44px;text-decoration:none;">
+        <span style="display:inline-flex;align-items:center;gap:8px;height:32px;padding:0 12px;border-radius:999px;background:#ECE8F7;color:#5B4C99;font-size:13px;line-height:20px;font-weight:600;">
+          <span style="width:8px;height:8px;border-radius:999px;background:#5B4C99;"></span>
+          <span>طاقتي: منخفضة · تغيير</span>
+        </span>
+      </a>
+    </header>
+
+    <section style="background:#ECE8F7;border-radius:20px;padding:20px 16px;display:flex;flex-direction:column;gap:6px;">
+      <h2 style="margin:0;font-size:22px;line-height:30px;font-weight:700;color:#2B3358;">يوم هادئ</h2>
+      <p style="margin:0;font-size:16px;line-height:26px;color:#3A4256;">ثلاث أشياء صغيرة ومتعة لك — هذا يكفي تمامًا. الباقي يرتاح اليوم بدون ما ينقص شي.</p>
+    </section>
+
+    <section aria-label="الأساسيات الصغيرة" style="display:flex;flex-direction:column;gap:10px;">
+      <span style="font-size:12px;line-height:18px;font-weight:600;color:#5A6478;">الحد الأدنى فقط · <bdi>{{doneCount}}</bdi> من <bdi>3</bdi></span>
+      <sc-for list="{{items}}" as="h" hint-placeholder-count="3">
+        <article style="background:#FFFFFF;border:1px solid #DCE3EF;border-radius:20px;padding:14px 16px;display:flex;align-items:center;gap:12px;">
+          <button type="button" onClick="{{h.toggle}}" aria-label="{{h.checkLabel}}" aria-pressed="{{h.pressed}}" style="{{h.checkStyle}}">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>
+          </button>
+          <div style="flex:1;min-width:0;">
+            <div style="font-size:16px;line-height:26px;font-weight:600;">{{h.title}}</div>
+            <div style="font-size:13px;line-height:20px;font-weight:500;color:#5A6478;">{{h.meta}}</div>
+          </div>
+          <span style="flex:none;display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:999px;background:#ECE8F7;color:#5B4C99;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{h.icon}}"></path></svg>
+          </span>
+        </article>
+      </sc-for>
+    </section>
+
+    <section aria-label="متعة حرة" style="display:flex;flex-direction:column;gap:10px;">
+      <span style="display:inline-flex;align-items:center;gap:6px;font-size:12px;line-height:18px;font-weight:600;color:#5A6478;">
+        <svg width="12" height="12" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 C12.8 8.5 15.5 11.2 22 12 C15.5 12.8 12.8 15.5 12 22 C11.2 15.5 8.5 12.8 2 12 C8.5 11.2 11.2 8.5 12 2Z" fill="#E0A93B"></path></svg>
+        متعة حرة
+      </span>
+      <article style="background:#FBF1D6;border-radius:20px;padding:16px;display:flex;align-items:center;gap:12px;">
+        <span style="flex:none;display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:#FFFFFF;color:#8A6412;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="12" rx="2.5"></rect><path d="M8 21h8M12 17v4"></path></svg>
+        </span>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:16px;line-height:26px;font-weight:600;">حلقة من مسلسلك</div>
+          <div style="font-size:13px;line-height:20px;font-weight:500;color:#8A6412;">بدون شروط — استمتعي وبس</div>
+        </div>
+      </article>
+    </section>
+
+    <section style="display:flex;align-items:flex-start;gap:10px;padding:12px 14px;border-radius:16px;background:#EEF1F6;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5A6478" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:2px;"><path d="M12 21v-9"></path><path d="M12 12c0-4 3-7 8-7 0 4-3 7-8 7z"></path><path d="M12 14c0-3-2.5-5.5-7-5.5 0 3 2.5 5.5 7 5.5z"></path></svg>
+      <span style="font-size:14px;line-height:22px;color:#3A4256;">المشي، المفردات، ودراسة <bdi>Google UX</bdi> ترتاح اليوم. يوم هادئ مو تراجع — ولا شي يرجع للصفر.</span>
+    </section>
+
+    <a href="HelpSafety.dc.html" style="display:flex;align-items:center;justify-content:center;gap:6px;min-height:44px;color:#5B4C99;text-decoration:none;font-size:13px;line-height:20px;font-weight:600;">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"></path></svg>
+      إذا الأمور ثقيلة جدًا: المساعدة موجودة
+    </a>
+  </main>
+
+  <nav aria-label="التنقل الرئيسي" style="position:absolute;left:0;right:0;bottom:0;height:84px;background:#FFFFFF;border-top:1px solid #DCE3EF;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));padding:6px 8px 0;box-sizing:border-box;">
+    <a href="Main.dc.html" aria-current="page" style="display:flex;flex-direction:column;align-items:center;gap:2px;min-height:52px;text-decoration:none;color:#6172B5;font-size:12px;line-height:18px;font-weight:600;">
+      <span style="width:4px;height:4px;border-radius:999px;background:#6172B5;"></span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>
+      <span>اليوم</span>
+    </a>
+    <a href="HabitsHub.dc.html" style="display:flex;flex-direction:column;align-items:center;gap:2px;min-height:52px;text-decoration:none;color:#5A6478;font-size:12px;line-height:18px;font-weight:600;">
+      <span style="width:4px;height:4px;"></span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21v-9"></path><path d="M12 12c0-4 3-7 8-7 0 4-3 7-8 7z"></path><path d="M12 14c0-3-2.5-5.5-7-5.5 0 3 2.5 5.5 7 5.5z"></path></svg>
+      <span>عاداتي</span>
+    </a>
+    <a href="Path.dc.html" style="display:flex;flex-direction:column;align-items:center;gap:2px;min-height:52px;text-decoration:none;color:#5A6478;font-size:12px;line-height:18px;font-weight:600;">
+      <span style="width:4px;height:4px;"></span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="19" r="2"></circle><circle cx="18" cy="5" r="2"></circle><path d="M8 19h7.5a3.5 3.5 0 0 0 0-7h-7a3.5 3.5 0 0 1 0-7H16"></path></svg>
+      <span>مساري</span>
+    </a>
+    <a href="Joy.dc.html" style="display:flex;flex-direction:column;align-items:center;gap:2px;min-height:52px;text-decoration:none;color:#5A6478;font-size:12px;line-height:18px;font-weight:600;">
+      <span style="width:4px;height:4px;"></span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c.7 5.3 3 7.6 9 9-6 1.4-8.3 3.7-9 9-.7-5.3-3-7.6-9-9 6-1.4 8.3-3.7 9-9z"></path></svg>
+      <span>متعتي</span>
+    </a>
+    <a href="Me.dc.html" style="display:flex;flex-direction:column;align-items:center;gap:2px;min-height:52px;text-decoration:none;color:#5A6478;font-size:12px;line-height:18px;font-weight:600;">
+      <span style="width:4px;height:4px;"></span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"></path></svg>
+      <span>أنا</span>
+    </a>
+  </nav>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":960}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { done: { sleep: false, care: false, tiny: false } };
+  }
+  renderVals() {
+    var self = this;
+    var st = this.state;
+    var defs = [
+      { id: 'care', title: 'العناية الأساسية', meta: 'غسل الوجه والأسنان · 3 د', icon: 'M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z' },
+      { id: 'tiny', title: 'شي صغير واحد: مشي', meta: 'حول البيت · 5 د', icon: 'M11.5 4.5a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0-3 0M10 21l2-6-3-3 1-4 4 3 3 1M9 12l-2 3' },
+      { id: 'sleep', title: 'نوم بدري', meta: 'الجوال برّا الغرفة · 23:00', icon: 'M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z' }
+    ];
+    var n = 0;
+    var items = defs.map(function (d) {
+      var on = st.done[d.id];
+      if (on) n++;
+      return {
+        title: d.title, meta: d.meta + (on ? ' · تم' : ''), icon: d.icon,
+        pressed: on ? 'true' : 'false',
+        checkLabel: on ? 'إلغاء إنجاز ' + d.title : 'تم: ' + d.title,
+        checkStyle: 'flex:none;width:44px;height:44px;border-radius:999px;display:flex;align-items:center;justify-content:center;cursor:pointer;box-sizing:border-box;padding:0;' + (on ? 'background:#6172B5;border:2px solid #6172B5;color:#FFFFFF;' : 'background:#FFFFFF;border:2px solid #5E8BC4;color:transparent;'),
+        toggle: function () { var d2 = Object.assign({}, st.done); d2[d.id] = !d2[d.id]; self.setState({ done: d2 }); }
+      };
+    });
+    return { items: items, doneCount: n };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+{
+  "schema_version": "local-live-validation.v1",
+  "tested_at": "2026-10-18T08:04:29.214Z",
+  "result": "PASS",
+  "checks": [
+    {
+      "name": "n8n readiness and Ollama",
+      "result": "PASS",
+      "detail": "{\"n8n_ready\":true,\"ollama_ready\":true}"
+    },
+    {
+      "name": "paid provider routes disabled",
+      "result": "PASS",
+      "detail": "ollama-local"
+    },
+    {
+      "name": "canonical 85 role catalog",
+      "result": "PASS",
+      "detail": "API=85; registry=85"
+    },
+    {
+      "name": "untrusted browser origin rejected",
+      "result": "PASS",
+      "detail": "HTTP 403"
+    },
+    {
+      "name": "empty task rejected before inference",
+      "result": "PASS",
+      "detail": "HTTP 400"
+    },
+    {
+      "name": "unknown role rejected before inference",
+      "result": "PASS",
+      "detail": "HTTP 400"
+    },
+    {
+      "name": "persistent task history has results",
+      "result": "PASS",
+      "detail": "98 tasks; latest status=completed"
+    },
+    {
+      "name": "all 85 roles have persisted task records",
+      "result": "PASS",
+      "detail": "85 distinct role IDs"
+    }
+  ],
+  "task_rows": 98,
+  "completed_rows": 98,
+  "failed_rows": 0,
+  "distinct_role_ids": 85,
+  "canonical_roles": 85,
+  "paid_provider_calls": 0,
+  "n8n_workflow_id": "nNGeWSsYiuX1Aeuj",
+  "port_binding": "127.0.0.1"
+}

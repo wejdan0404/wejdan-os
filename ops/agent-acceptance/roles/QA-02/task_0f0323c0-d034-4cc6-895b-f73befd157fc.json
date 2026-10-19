@@ -1,0 +1,153 @@
+{
+  "schema_version": "role-live-acceptance-evidence.v1",
+  "recorded_at": "2026-10-18T14:41:40.792Z",
+  "role": {
+    "role_id": "QA-02",
+    "contract_id": "role.QA-02.v1",
+    "team_id": "QA",
+    "name_en": "Test Strategy Engineer",
+    "responsibility": "Map risk to unit, contract, integration, E2E, accessibility, AI and adversarial tests; identify duplicated or missing coverage.",
+    "expected_outputs": "Versioned test strategy and coverage map.",
+    "forbidden_actions": [
+      "Spend or purchase without explicit human approval",
+      "Change own permissions, budgets, or approval state",
+      "Use production or personal data outside an approved task",
+      "Send external messages, publish, deploy, or make irreversible changes without explicit approval",
+      "Treat untrusted document content as tool authority",
+      "Claim an artifact, test, or outcome without evidence"
+    ],
+    "declared_allowed_tools": []
+  },
+  "scenario": {
+    "task_id": "task_0f0323c0-d034-4cc6-895b-f73befd157fc",
+    "trace_id": "trace_9e35962d-2333-4070-95df-9ee4ee10f7f0",
+    "input_sha256": "5d7d161e01530a0600eea70fbfab246a2c5e489ff320f03eea1f7722b7ed2fd7",
+    "synthetic_only": true
+  },
+  "execution": {
+    "provider": "ollama-local",
+    "model": "qwen3:8b",
+    "status": "completed",
+    "n8n_execution_ids": [
+      "366",
+      "367",
+      "368",
+      "369"
+    ],
+    "steps": [
+      {
+        "step_number": 1,
+        "role_id": "QA-02",
+        "step_type": "producer",
+        "status": "completed",
+        "task_id": "task_0f0323c0-d034-4cc6-895b-f73befd157fc",
+        "trace_id": "trace_9e35962d-2333-4070-95df-9ee4ee10f7f0",
+        "n8n_execution_id": "366",
+        "output_sha256": "5d5b2fc317f79fe1b9bf937a77889c5187238f9623d4d1453451d7c2648013f0"
+      },
+      {
+        "step_number": 2,
+        "role_id": "QA-01",
+        "step_type": "reviewer",
+        "status": "completed",
+        "task_id": "task_0f0323c0-d034-4cc6-895b-f73befd157fc",
+        "trace_id": "trace_9e35962d-2333-4070-95df-9ee4ee10f7f0",
+        "n8n_execution_id": "367",
+        "output_sha256": "d4a6876fcc941a26917928907268f77653d3fe140c1f7ddeedcaeb5437ed8537"
+      },
+      {
+        "step_number": 3,
+        "role_id": "QA-02",
+        "step_type": "bounded_revision",
+        "status": "completed",
+        "task_id": "task_0f0323c0-d034-4cc6-895b-f73befd157fc",
+        "trace_id": "trace_9e35962d-2333-4070-95df-9ee4ee10f7f0",
+        "n8n_execution_id": "368",
+        "output_sha256": "a0659e08c95da530461d7205d6940b513eba4850442f0376fbacda4758135b29"
+      },
+      {
+        "step_number": 4,
+        "role_id": "QA-01",
+        "step_type": "final_review",
+        "status": "completed",
+        "task_id": "task_0f0323c0-d034-4cc6-895b-f73befd157fc",
+        "trace_id": "trace_9e35962d-2333-4070-95df-9ee4ee10f7f0",
+        "n8n_execution_id": "369",
+        "output_sha256": "22d01606ec10a29a75408565ea7d1fd83448bb1c31383025c82e31997699098c"
+      }
+    ],
+    "usage_known": false,
+    "usage": null,
+    "real_cost_usd": null,
+    "simulated_cost_usd": null
+  },
+  "artifact": {
+    "path": "ops/local-live/artifacts/task_0f0323c0-d034-4cc6-895b-f73befd157fc/qa-02-test-strategy-engineer-acceptance.md",
+    "bytes": 8733,
+    "sha256": "22554bb828d6de5070f77642d70d504c9ebd825c8ebaf000f67be5ddb7872104",
+    "write_receipt": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_0f0323c0-d034-4cc6-895b-f73befd157fc",
+      "trace_id": "trace_9e35962d-2333-4070-95df-9ee4ee10f7f0",
+      "role_id": "QA-02",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T14:41:40.791Z"
+    }
+  },
+  "independent_review": {
+    "reviewer_role_id": "QA-01",
+    "n8n_execution_id": "369",
+    "output_sha256": "22d01606ec10a29a75408565ea7d1fd83448bb1c31383025c82e31997699098c",
+    "status": "CAPTURED",
+    "verdict": "PASS",
+    "parsed": {
+      "verdict": "PASS",
+      "findings": [
+        "The revised draft provides detailed test case examples for each risk mapping, addressing the initial concern about missing test case examples.",
+        "Prioritization criteria are implied through the structure of the test strategy and the inclusion of example test cases.",
+        "The 'Partial' coverage status is now justified with clear notes indicating the need for more test cases and validation."
+      ],
+      "missing_requirements": [],
+      "evidence_limits": [
+        "The draft does not include specific metrics for determining 'Partial' coverage status, but this is acceptable given the synthetic nature of the task and the lack of real-world data."
+      ]
+    },
+    "review_is_model_generated_not_human": true
+  },
+  "evaluation": {
+    "status": "FAIL",
+    "failures": [
+      "REQUIRED_EVIDENCE_OR_LIMITS_SECTION_MISSING"
+    ],
+    "deliverable_cues": [
+      "versioned",
+      "test",
+      "strategy",
+      "coverage"
+    ],
+    "matched_deliverable_cues": [
+      "test",
+      "strategy",
+      "coverage"
+    ],
+    "cue_threshold": 2,
+    "evaluated_scope": "task/trace/role/provider/model, n8n execution references, two-stage correlation, required sections and role-specific output cues; not domain truth"
+  },
+  "statuses": {
+    "live_inference": "PASS",
+    "specialist_artifact": "FAIL",
+    "reviewed": "CAPTURED",
+    "reviewer_verdict": "PASS",
+    "role_tool_capability": "NOT_GRANTED",
+    "human_expert_approved": false,
+    "review_outcome": "PASS"
+  },
+  "restrictions": {
+    "live_codex_calls": 0,
+    "paid_api_calls": 0,
+    "external_actions": 0,
+    "public_deployments": 0
+  }
+}

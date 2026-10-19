@@ -1,0 +1,33 @@
+{
+  "scenario_id": "product-feature-design",
+  "task_id": "task_a1601eee-e5c8-4dbb-b85e-d35eeb4579a3",
+  "trace_id": "trace_90951cc7-24fa-462b-8eb1-090c8807210f",
+  "status": "failed",
+  "error": "SCENARIO_N8N_RESPONSE_INVALID:specialist_2:500",
+  "provider": "ollama-local",
+  "model": "qwen3:8b",
+  "steps": [
+    {
+      "role_id": "PROD-03",
+      "stage": "planner",
+      "task_id": "task_a1601eee-e5c8-4dbb-b85e-d35eeb4579a3",
+      "trace_id": "trace_90951cc7-24fa-462b-8eb1-090c8807210f",
+      "n8n_execution_id": "398",
+      "elapsed_ms": 15386,
+      "output_sha256": "e7ea775fa2e617a337faf13f53804b83f4f4c2bc3b7613cab1f331d53f4f79ba"
+    },
+    {
+      "role_id": "DES-03",
+      "stage": "specialist_1",
+      "task_id": "task_a1601eee-e5c8-4dbb-b85e-d35eeb4579a3",
+      "trace_id": "trace_90951cc7-24fa-462b-8eb1-090c8807210f",
+      "n8n_execution_id": "399",
+      "elapsed_ms": 16674,
+      "output_sha256": "fdadf025cf0fcb2a3b52bc4a955f54927e7cb4266b385863b06e8bd9b6966842"
+    }
+  ],
+  "reviewer_output": "",
+  "reviewer_verdict": "UNKNOWN",
+  "refusal_recovery": null,
+  "recorded_at": "2026-10-18T14:53:25.031Z"
+}

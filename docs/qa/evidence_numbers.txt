@@ -1,0 +1,8 @@
+actions.json: 135 actions_ar.json: 135 missing AR: []
+fields with numbers absent from EN source: 0
+
+STRICT field-to-field mismatches: 4
+FOOD-12 | normal_ar | 3 | 3 خطط مربوطة بالفطور والغدا وسناك العصر. | Three plans tied to breakfast, lunch, and afternoon snack.
+FOOD-21 | bonus_ar | 3 | راجعي منتجاتك كل 3 شهور؛ وشيلي اللي يحرق أو يهيّج. | Review products quarterly; remove ones that sting or irritate.
+FOOD-23 | what_ar | 2 | فرّشي بمعجون فيه فلورايد مرتين باليوم لمدة 2 د؛ ونظّفي بين الأسنان يوميًا (خيط، فرش بين الأسنان، أو خيط مائي — اللي بتستخدمينه فعلًا). | Brush with fluoride toothpaste twice a day for two minutes; clean between teeth daily (floss, interdental brushes, or water flosser — whichever she'll use).
+LIFE-19 | bonus_ar | 3 | كل 3 شهور: استرجعي ملف واحد للتجربة؛ ورتّبي مجلد التنزيلات في هيكل المجلدات. | Quarterly: restore one file to test; tidy Downloads into the folder structure.

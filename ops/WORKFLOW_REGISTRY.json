@@ -1,0 +1,682 @@
+{
+  "registry_version": "n8n-workflow-registry.g00.v1",
+  "instance": "https://wejdan404.app.n8n.cloud",
+  "project_id": "p5MRQODVi7djfuZf",
+  "credential_inventory_count": 0,
+  "credential_inventory_source": "Authenticated n8n Cloud /home/credentials shows Create your first credential; no credentials listed.",
+  "workflows": [
+    {
+      "workflow_id": "KvMjR2lx81qsuCPL",
+      "name": "Wejdan Life OS | Agent Financial & Runtime Monitoring | Pilot",
+      "kind": "original",
+      "url": "https://wejdan404.app.n8n.cloud/workflow/KvMjR2lx81qsuCPL",
+      "active": false,
+      "publish_button_observed": "disabled (clean editor; state not inferred)",
+      "publish_state": "UNPUBLISHED",
+      "export_path": "workflows/n8n/backups/g00-rebaseline-20261016/pilot-original.json",
+      "sha256": "bdb3409e95ec24e8ec21b329177b2dc73d23fca2e2d164cb1dcf9c90c953182c",
+      "node_count": 6,
+      "nodes": [
+        {
+          "name": "Manual Task Trigger",
+          "type": "n8n-nodes-base.manualTrigger",
+          "disabled": false,
+          "has_credentials": false
+        },
+        {
+          "name": "Build Synthetic Test Tasks",
+          "type": "n8n-nodes-base.code",
+          "disabled": false,
+          "has_credentials": false
+        },
+        {
+          "name": "Task Registration and Duplicate Check",
+          "type": "n8n-nodes-base.code",
+          "disabled": false,
+          "has_credentials": false
+        },
+        {
+          "name": "Simulated Budget Guard",
+          "type": "n8n-nodes-base.code",
+          "disabled": false,
+          "has_credentials": false
+        },
+        {
+          "name": "Mock Agent Execution and Runtime Tracking",
+          "type": "n8n-nodes-base.code",
+          "disabled": false,
+          "has_credentials": false
+        },
+        {
+          "name": "Final Structured Report",
+          "type": "n8n-nodes-base.code",
+          "disabled": false,
+          "has_credentials": false
+        }
+      ],
+      "triggers": [
+        {
+          "name": "Manual Task Trigger",
+          "type": "n8n-nodes-base.manualTrigger",
+          "input_source": null
+        }
+      ],
+      "credential_nodes": 0,
+      "latest_execution": {
+        "id": "2",
+        "output_items": 9,
+        "duration_ms": 1764,
+        "status": "succeeded",
+        "at": "2026-10-16 06:52:34 Asia/Riyadh"
+      },
+      "execution_history": "UI history inspected; only latest execution is recorded in this registry",
+      "publish_timeline": "No publish history yet (verified in per-workflow Publish Timeline)."
+    },
+    {
+      "workflow_id": "6leaYQgPdxIgACYC",
+      "name": "مدير البرنامج — Program Director",
+      "kind": "original",
+      "url": "https://wejdan404.app.n8n.cloud/workflow/6leaYQgPdxIgACYC",
+      "active": false,
+      "publish_button_observed": "disabled (clean editor; state not inferred)",
+      "publish_state": "UNPUBLISHED",
+      "export_path": "workflows/n8n/backups/g00-rebaseline-20261016/program-director-original.json",
+      "sha256": "df27260fe935dd2200e389084579112d8e64c700befc0fe96231ad3b51e68091",
+      "node_count": 2,
+      "nodes": [
+        {
+          "name": "When clicking ‘Execute workflow’",
+          "type": "n8n-nodes-base.manualTrigger",
+          "disabled": false,
+          "has_credentials": false
+        },
+        {
+          "name": "Code in JavaScript",
+          "type": "n8n-nodes-base.code",
+          "disabled": false,
+          "has_credentials": false
+        }
+      ],
+      "triggers": [
+        {
+          "name": "When clicking ‘Execute workflow’",
+          "type": "n8n-nodes-base.manualTrigger",
+          "input_source": null
+        }
+      ],
+      "credential_nodes": 0,
+      "latest_execution": {
+        "id": "3",
+        "output_items": 1,
+        "duration_ms": 1875,
+        "status": "succeeded",
+        "at": "2026-10-16 06:57:18 Asia/Riyadh"
+      },
+      "execution_history": "UI history inspected; only latest execution is recorded in this registry",
+      "publish_timeline": "No publish history yet (verified in per-workflow Publish Timeline)."
+    },
+    {
+      "workflow_id": "Vsng8tOmTK1IIAgK",
+      "name": "مسؤول الموارد والتحكم المالي — Resource and Cost Controller",
+      "kind": "original",
+      "url": "https://wejdan404.app.n8n.cloud/workflow/Vsng8tOmTK1IIAgK",
+      "active": false,
+      "publish_button_observed": "disabled (clean editor; state not inferred)",
+      "publish_state": "UNPUBLISHED",
+      "export_path": "workflows/n8n/backups/g00-rebaseline-20261016/finance-original.json",
+      "sha256": "7377ffee72aa4d8aacc9b74234cf03f059ac984122e4535fd7fe01e0e6b2a043",
+      "node_count": 2,
+      "nodes": [
+        {
+          "name": "When clicking ‘Execute workflow’",
+          "type": "n8n-nodes-base.manualTrigger",
+          "disabled": false,
+          "has_credentials": false
+        },
+        {
+          "name": "Code in JavaScript",
+          "type": "n8n-nodes-base.code",
+          "disabled": false,
+          "has_credentials": false
+        }
+      ],
+      "triggers": [
+        {
+          "name": "When clicking ‘Execute workflow’",
+          "type": "n8n-nodes-base.manualTrigger",
+          "input_source": null
+        }
+      ],
+      "credential_nodes": 0,
+      "latest_execution": {
+        "id": "4",
+        "output_items": 1,
+        "duration_ms": 1778,
+        "status": "succeeded",
+        "at": "2026-10-16 06:58:14 Asia/Riyadh"
+      },
+      "execution_history": "UI history inspected; only latest execution is recorded in this registry",
+      "publish_timeline": "No publish history yet (verified in per-workflow Publish Timeline)."
+    },
+    {
+      "workflow_id": "O7hWODxtpfIciHwq",
+      "name": "مهندس مراقبة الذكاء الاصطناعي والتكاليف — AI Observability and Cost Engineer",
+      "kind": "original",
+      "url": "https://wejdan404.app.n8n.cloud/workflow/O7hWODxtpfIciHwq",
+      "active": false,
+      "publish_button_observed": "disabled (clean editor; state not inferred)",
+      "publish_state": "UNPUBLISHED",
+      "export_path": "workflows/n8n/backups/g00-rebaseline-20261016/observability-original.json",
+      "sha256": "33b4f31ed0a336c726002bf0611a258e8f6a03efc2da8e9596e9ac38acc8a60a",
+      "node_count": 2,
+      "nodes": [
+        {
+          "name": "When clicking ‘Execute workflow’",
+          "type": "n8n-nodes-base.manualTrigger",
+          "disabled": false,
+          "has_credentials": false
+        },
+        {
+          "name": "Code in JavaScript",
+          "type": "n8n-nodes-base.code",
+          "disabled": false,
+          "has_credentials": false
+        }
+      ],
+      "triggers": [
+        {
+          "name": "When clicking ‘Execute workflow’",
+          "type": "n8n-nodes-base.manualTrigger",
+          "input_source": null
+        }
+      ],
+      "credential_nodes": 0,
+      "latest_execution": {
+        "id": "5",
+        "output_items": 1,
+        "duration_ms": 1928,
+        "status": "succeeded",
+        "at": "2026-10-16 06:58:49 Asia/Riyadh"
+      },
+      "execution_history": "UI history inspected; only latest execution is recorded in this registry",
+      "publish_timeline": "No publish history yet (verified in per-workflow Publish Timeline)."
+    },
+    {
+      "workflow_id": "94SV8TzA5AGWWtH5",
+      "name": "مدير البرنامج — Program Director V2 Mock",
+      "kind": "v2",
+      "url": "https://wejdan404.app.n8n.cloud/workflow/94SV8TzA5AGWWtH5",
+      "active": false,
+      "publish_button_observed": "enabled (draft changes; state not inferred)",
+      "publish_state": "UNPUBLISHED",
+      "export_path": "workflows/n8n/backups/g00-rebaseline-20261016/program-director-v2.json",
+      "sha256": "5abe2edca351d1fa5c3fce959b79d7d1584ec97d84631099e43c3a64eb976219",
+      "node_count": 3,
+      "nodes": [
+        {
+          "name": "When clicking ‘Execute workflow’",
+          "type": "n8n-nodes-base.manualTrigger",
+          "disabled": false,
+          "has_credentials": false
+        },
+        {
+          "name": "Code in JavaScript",
+          "type": "n8n-nodes-base.code",
+          "disabled": false,
+          "has_credentials": false
+        },
+        {
+          "name": "When Executed by Another Workflow",
+          "type": "n8n-nodes-base.executeWorkflowTrigger",
+          "disabled": false,
+          "has_credentials": false
+        }
+      ],
+      "triggers": [
+        {
+          "name": "When clicking ‘Execute workflow’",
+          "type": "n8n-nodes-base.manualTrigger",
+          "input_source": null
+        },
+        {
+          "name": "When Executed by Another Workflow",
+          "type": "n8n-nodes-base.executeWorkflowTrigger",
+          "input_source": "passthrough"
+        }
+      ],
+      "credential_nodes": 0,
+      "latest_execution": {
+        "id": "7",
+        "output_items": 1,
+        "duration_ms": 1961,
+        "status": "succeeded",
+        "at": "2026-10-16 08:00:28 Asia/Riyadh"
+      },
+      "execution_history": "UI history inspected; only latest execution is recorded in this registry",
+      "publish_timeline": "No publish history yet (verified in per-workflow Publish Timeline).",
+      "status": "BROKEN_SUPERSEDED",
+      "superseded_by": "v85C2ImvJ9IArbJ3",
+      "current_live_export_path": "workflows/n8n/backups/g02-working-20261016/program-director-v2-pre-repair-live.json",
+      "current_live_source_note": "50-character NEW-CODE test snippet; G00 baseline retained at export_path"
+    },
+    {
+      "workflow_id": "lGKO45bElUeCXDpv",
+      "name": "مسؤول الموارد والتحكم المالي — Finance V2 Mock",
+      "kind": "v2",
+      "url": "https://wejdan404.app.n8n.cloud/workflow/lGKO45bElUeCXDpv",
+      "active": false,
+      "publish_button_observed": "enabled (draft changes; state not inferred)",
+      "publish_state": "UNPUBLISHED",
+      "export_path": "workflows/n8n/backups/g00-rebaseline-20261016/finance-v2.json",
+      "sha256": "61282c5e449d3a7059ad88290208bfa899befa596360b4aeb739552eb472e5d5",
+      "node_count": 3,
+      "nodes": [
+        {
+          "name": "When clicking ‘Execute workflow’",
+          "type": "n8n-nodes-base.manualTrigger",
+          "disabled": false,
+          "has_credentials": false
+        },
+        {
+          "name": "Code in JavaScript",
+          "type": "n8n-nodes-base.code",
+          "disabled": false,
+          "has_credentials": false
+        },
+        {
+          "name": "When Executed by Another Workflow",
+          "type": "n8n-nodes-base.executeWorkflowTrigger",
+          "disabled": false,
+          "has_credentials": false
+        }
+      ],
+      "triggers": [
+        {
+          "name": "When clicking ‘Execute workflow’",
+          "type": "n8n-nodes-base.manualTrigger",
+          "input_source": null
+        },
+        {
+          "name": "When Executed by Another Workflow",
+          "type": "n8n-nodes-base.executeWorkflowTrigger",
+          "input_source": "passthrough"
+        }
+      ],
+      "credential_nodes": 0,
+      "latest_execution": {
+        "id": "8",
+        "output_items": 1,
+        "duration_ms": 1847,
+        "status": "succeeded",
+        "at": "2026-10-16 08:02:58 Asia/Riyadh"
+      },
+      "execution_history": "UI history inspected; only latest execution is recorded in this registry",
+      "publish_timeline": "No publish history yet (verified in per-workflow Publish Timeline).",
+      "status": "BROKEN_SUPERSEDED"
+    },
+    {
+      "workflow_id": "tbQTccAcfza2XpnI",
+      "name": "مهندس المراقبة — Observability V2 Mock",
+      "kind": "v2",
+      "url": "https://wejdan404.app.n8n.cloud/workflow/tbQTccAcfza2XpnI",
+      "active": false,
+      "publish_button_observed": "enabled (draft changes; state not inferred)",
+      "publish_state": "UNPUBLISHED",
+      "export_path": "workflows/n8n/backups/g00-rebaseline-20261016/observability-v2.json",
+      "sha256": "1e91acfd59e8ffa39944caca04ace5b71f1c83b008c232f5c3739302d87a7a5b",
+      "node_count": 3,
+      "nodes": [
+        {
+          "name": "When clicking ‘Execute workflow’",
+          "type": "n8n-nodes-base.manualTrigger",
+          "disabled": false,
+          "has_credentials": false
+        },
+        {
+          "name": "Code in JavaScript",
+          "type": "n8n-nodes-base.code",
+          "disabled": false,
+          "has_credentials": false
+        },
+        {
+          "name": "When Executed by Another Workflow",
+          "type": "n8n-nodes-base.executeWorkflowTrigger",
+          "disabled": false,
+          "has_credentials": false
+        }
+      ],
+      "triggers": [
+        {
+          "name": "When clicking ‘Execute workflow’",
+          "type": "n8n-nodes-base.manualTrigger",
+          "input_source": null
+        },
+        {
+          "name": "When Executed by Another Workflow",
+          "type": "n8n-nodes-base.executeWorkflowTrigger",
+          "input_source": "passthrough"
+        }
+      ],
+      "credential_nodes": 0,
+      "latest_execution": null,
+      "execution_history": "UI history inspected; only latest execution is recorded in this registry",
+      "publish_timeline": "No publish history yet (verified in per-workflow Publish Timeline).",
+      "status": "BROKEN_SUPERSEDED"
+    },
+    {
+      "workflow_id": "v85C2ImvJ9IArbJ3",
+      "name": "Wejdan Life OS | Program Director | V3 Mock",
+      "kind": "v3_current_verified_mock",
+      "status": "CURRENT_VERIFIED_MOCK",
+      "url": "https://wejdan404.app.n8n.cloud/workflow/v85C2ImvJ9IArbJ3",
+      "active": false,
+      "publish_state": "UNPUBLISHED",
+      "export_path": "workflows/n8n/backups/g02-working-20261016/program-director-v3-post-reload-export.json",
+      "sha256": "d3b911affda8edd696688f5b23ff0c950db19a847e0af68027e550c55b41566",
+      "node_count": 3,
+      "nodes": [
+        {
+          "has_credentials": false,
+          "type": "n8n-nodes-base.manualTrigger",
+          "name": "Manual Synthetic Fixture"
+        },
+        {
+          "has_credentials": false,
+          "type": "n8n-nodes-base.executeWorkflowTrigger",
+          "name": "When Called by Parent"
+        },
+        {
+          "has_credentials": false,
+          "type": "n8n-nodes-base.code",
+          "name": "Validate and Assign Synthetic Task"
+        }
+      ],
+      "triggers": [
+        {
+          "type": "n8n-nodes-base.manualTrigger",
+          "name": "Manual Synthetic Fixture",
+          "input_source": null
+        },
+        {
+          "type": "n8n-nodes-base.executeWorkflowTrigger",
+          "name": "When Called by Parent",
+          "input_source": "passthrough"
+        }
+      ],
+      "credential_nodes": 0,
+      "latest_execution": {
+        "role": "Director sub-execution from test harness",
+        "at": "2026-10-16",
+        "id": "16",
+        "output_items": 9,
+        "status": "succeeded"
+      },
+      "execution_history": "V3 tested via parent synthetic harness; see ops/G02_DIRECTOR_V3.md",
+      "code_chars": 15902,
+      "code_sha256": "E340C90134008FD1023C264D14060B2045DD5B610AE3CB98D4B56ADB1D7F61DB"
+    },
+    {
+      "workflow_id": "SubhMY6QcfMM2PAc",
+      "name": "Wejdan Life OS | Program Director | V3 Draft (unverified)",
+      "kind": "v3_draft",
+      "status": "SUPERSEDED_DRAFT",
+      "url": "https://wejdan404.app.n8n.cloud/workflow/SubhMY6QcfMM2PAc",
+      "active": false,
+      "publish_state": "UNPUBLISHED",
+      "export_path": "workflows/n8n/backups/g02-working-20261016/program-director-v3-post-import-pre-reload.json",
+      "node_count": 3,
+      "credential_nodes": 0,
+      "latest_execution": null,
+      "note": "First V3 import; earlier source version. Retained and not current."
+    },
+    {
+      "workflow_id": "Quwml3wkbvBrvXbx",
+      "name": "G02 transport proof",
+      "kind": "transport_test",
+      "status": "TEST_ONLY",
+      "url": "https://wejdan404.app.n8n.cloud/workflow/Quwml3wkbvBrvXbx",
+      "active": false,
+      "publish_state": "UNPUBLISHED",
+      "export_path": "workflows/n8n/backups/g02-transport-proof-20261016/transport-proof-cloud-export.json",
+      "node_count": 2,
+      "credential_nodes": 0,
+      "latest_execution": {
+        "status": "succeeded",
+        "output_items": 1
+      },
+      "note": "Disposable source transport test; not a worker."
+    },
+    {
+      "workflow_id": "KuWk9rIiKaE8iQtG",
+      "name": "Wejdan Life OS | G02 | Director V3 Harness Draft (disconnected)",
+      "kind": "test_harness_draft",
+      "status": "SUPERSEDED_TEST_DRAFT",
+      "url": "https://wejdan404.app.n8n.cloud/workflow/KuWk9rIiKaE8iQtG",
+      "active": false,
+      "publish_state": "UNPUBLISHED",
+      "node_count": 3,
+      "credential_nodes": 0,
+      "latest_execution": {
+        "status": "succeeded",
+        "output_items": 1
+      },
+      "note": "Disconnected import; manual trigger only; excluded from acceptance."
+    },
+    {
+      "workflow_id": "rWqIhwMtRJ3SFZnS",
+      "name": "Wejdan Life OS | G02 | Director V3 Harness Draft (sandbox incompatibility)",
+      "kind": "test_harness_draft",
+      "status": "SUPERSEDED_TEST_DRAFT",
+      "url": "https://wejdan404.app.n8n.cloud/workflow/rWqIhwMtRJ3SFZnS",
+      "active": false,
+      "publish_state": "UNPUBLISHED",
+      "node_count": 3,
+      "credential_nodes": 0,
+      "latest_execution": {
+        "reason": "structuredClone is not defined",
+        "status": "failed"
+      },
+      "note": "Harness-only sandbox error; child workflow was not called."
+    },
+    {
+      "workflow_id": "bEAOJrHpp8zDh1uW",
+      "name": "Wejdan Life OS | G02 | Director V3 Synthetic Test Harness",
+      "kind": "test_harness",
+      "status": "VERIFIED_TEST_ONLY",
+      "url": "https://wejdan404.app.n8n.cloud/workflow/bEAOJrHpp8zDh1uW",
+      "active": false,
+      "publish_state": "UNPUBLISHED",
+      "export_path": "workflows/n8n/backups/g02-working-20261016/director-v3-test-harness-post-reload-export.json",
+      "sha256": "6670d389bc562a66e3a65fb19e6b718fe3b734be9e3fbf5f99d82c20af5365f7",
+      "node_count": 3,
+      "credential_nodes": 0,
+      "latest_execution": {
+        "at": "2026-10-16",
+        "id": "8a7af7",
+        "output_items": 9,
+        "status": "succeeded"
+      },
+      "note": "Inactive mock-only parent; calls Director V3 by database ID and passes seven synthetic cases."
+    },
+    {
+      "workflow_id": "rBYOIYaHqSr9mDIm",
+      "name": "Wejdan Life OS | Resource and Cost Controller | V3 Mock",
+      "kind": "worker_v3",
+      "status": "CURRENT_VERIFIED_MOCK",
+      "url": "https://wejdan404.app.n8n.cloud/workflow/rBYOIYaHqSr9mDIm",
+      "active": false,
+      "publish_state": "UNPUBLISHED",
+      "export_path": "workflows/n8n/backups/g02-working-20261016/finance-v3-post-reload-export.json",
+      "sha256": "DBD7ABBF2BD175B0CD98E53606198A32B981C334520421624587DEA00B20F0F3",
+      "node_count": 3,
+      "credential_nodes": 0,
+      "source_path": "workflows/n8n/source/v3/g02/finance-v3.json",
+      "latest_execution": {
+        "status": "succeeded",
+        "child_execution_ids": [
+          18,
+          20
+        ],
+        "synthetic_cases": 10
+      },
+      "note": "Mock-only; exact 14,065-character Code source; zero paid calls; all valid task/trace IDs preserved."
+    },
+    {
+      "workflow_id": "FYUQAGnDOFUJdtlg",
+      "name": "Wejdan Life OS | G02 | Finance V3 Synthetic Test Harness",
+      "kind": "test_harness",
+      "status": "VERIFIED_TEST_ONLY",
+      "url": "https://wejdan404.app.n8n.cloud/workflow/FYUQAGnDOFUJdtlg",
+      "active": false,
+      "publish_state": "UNPUBLISHED",
+      "export_path": "workflows/n8n/backups/g02-working-20261016/finance-v3-test-harness-post-reload-export.json",
+      "sha256": "6CEFAC35A4B123012BD20D5BEC6AB561A925B3865919C587EA8009E7C5869D97",
+      "node_count": 3,
+      "credential_nodes": 0,
+      "latest_execution": {
+        "status": "succeeded",
+        "synthetic_cases": 10
+      }
+    },
+    {
+      "workflow_id": "L0WmUEpHLESFF9rv",
+      "name": "Wejdan Life OS | AI Observability | V3 Mock",
+      "kind": "worker_v3",
+      "status": "CURRENT_VERIFIED_MOCK",
+      "url": "https://wejdan404.app.n8n.cloud/workflow/L0WmUEpHLESFF9rv",
+      "active": false,
+      "publish_state": "UNPUBLISHED",
+      "export_path": "workflows/n8n/backups/g02-working-20261016/observability-v3-post-reload-export.json",
+      "sha256": "2B34D05AE90DBEBBBC307979282E18F4C0E49D45770863077A5FC1753EC3428C",
+      "node_count": 3,
+      "credential_nodes": 0,
+      "source_path": "workflows/n8n/source/v3/g02/observability-v3.json",
+      "latest_execution": {
+        "status": "succeeded",
+        "child_execution_id": 33,
+        "items": 8,
+        "parent_harness_execution_id": 32
+      },
+      "note": "Mock-only event mapper; input-driven monitor_event.v1; no model invocation or inferred success; eight outputs independently audited 8/8."
+    },
+    {
+      "workflow_id": "66Ej2OgZCmv4Nd6M",
+      "name": "Wejdan Life OS | G02 | Observability V3 Synthetic Test Harness",
+      "kind": "test_harness",
+      "url": "https://wejdan404.app.n8n.cloud/workflow/66Ej2OgZCmv4Nd6M",
+      "active": false,
+      "publish_state": "UNPUBLISHED",
+      "credential_nodes": 0,
+      "latest_execution": {
+        "status": "succeeded",
+        "id": 32,
+        "synthetic_cases": 8,
+        "child_execution_id": 33,
+        "independent_audit": "8/8 PASS",
+        "audit_report": "ops/evidence/G02_observability_v3_independent_audit_parent32_child33.json"
+      },
+      "status": "VERIFIED_TEST_ONLY",
+      "export_path": "workflows/n8n/backups/g02-working-20261016/observability-v3-test-harness-post-independent-audit-final-export.json",
+      "sha256": "E937C2E33E1CA731ABB2FB5DCDD6C4BB3CB3256C62F0A41153AB880EDDA0B810",
+      "node_count": 4,
+      "post_audit_export_status": "VERIFIED_EXACT_OFFICIAL_EXPORT",
+      "version_id": "2555c7e9-e046-4109-978f-c4d6ff011974",
+      "auditor_source_path": "workflows/n8n/source/v3/g02/observability-v3-independent-auditor.js",
+      "auditor_source_chars": 8330,
+      "auditor_source_sha256": "DE5720F80A7AF6F67A299A4D23B9934801E19DDB3A550CF2511C05219002F7F9",
+      "note": "Inactive, unpublished synthetic harness. Official post-reload export version 2555c7e9-e046-4109-978f-c4d6ff011974; editor read-back and exported auditor source SHA-256 match exactly; 8-item cloud audit 8/8 PASS."
+    },
+    {
+      "workflow_id": "p0Q5VVxcVLxGwjWA",
+      "name": "Wejdan Life OS | G03 | Real Mock Parent Orchestrator",
+      "kind": "test_orchestrator_draft",
+      "status": "SUPERSEDED_QUARANTINED",
+      "url": "https://wejdan404.app.n8n.cloud/workflow/p0Q5VVxcVLxGwjWA",
+      "active": false,
+      "publish_state": "UNPUBLISHED",
+      "export_path": "workflows/n8n/backups/g03-parent-orchestrator-pre-repair.json",
+      "sha256": "49FBB6826CD42A89288080DF793FA7D4F8FA50F6D70777EF06B34F64F04B0CDD",
+      "node_count": 12,
+      "latest_execution": {
+        "id": 34,
+        "status": "succeeded_but_report_failed",
+        "note": "Importer appended duplicate nodes during attempted repair; preserved and quarantined."
+      },
+      "note": "Inactive/unpublished flawed draft; retained for historical recovery."
+    },
+    {
+      "workflow_id": "5bpIOL3E0XODhCCK",
+      "name": "Wejdan Life OS | G03 | Real Mock Parent Orchestrator",
+      "kind": "test_orchestrator_draft",
+      "status": "SUPERSEDED_DRAFT",
+      "url": "https://wejdan404.app.n8n.cloud/workflow/5bpIOL3E0XODhCCK",
+      "active": false,
+      "publish_state": "UNPUBLISHED",
+      "export_path": "workflows/n8n/backups/g03-parent-orchestrator-post-run38-export.json",
+      "sha256": "8055AF56441166CBBC17620DAD26813592E67E76BE5CF43C8422903C4F40B3A6",
+      "node_count": 12,
+      "latest_execution": {
+        "id": 38,
+        "status": "succeeded",
+        "report": "5/5 assertions before strengthening explicit decision assertions"
+      },
+      "note": "Inactive/unpublished draft retained; superseded by stronger audited version."
+    },
+    {
+      "workflow_id": "Ks4YwV2Sa7A9V4EY",
+      "name": "Wejdan Life OS | G03 | Real Mock Parent Orchestrator",
+      "kind": "test_orchestrator_draft",
+      "status": "SUPERSEDED_FAILED_AUDIT",
+      "url": "https://wejdan404.app.n8n.cloud/workflow/Ks4YwV2Sa7A9V4EY",
+      "active": false,
+      "publish_state": "UNPUBLISHED",
+      "export_path": "workflows/n8n/backups/g03-parent-orchestrator-assertion-draft-pre-fix.json",
+      "sha256": "8055AF56441166CBBC17620DAD26813592E67E76BE5CF43C8422903C4F40B3A6",
+      "node_count": 12,
+      "latest_execution": {
+        "id": 42,
+        "status": "succeeded_report_failed",
+        "failed_assertions": 1,
+        "reason": "Missing task ID is handled as a failed monitor_event.v1 record rather than error.v1 INVALID_TASK_ID."
+      },
+      "note": "Failed audit preserved as a negative/historical result; inactive/unpublished."
+    },
+    {
+      "workflow_id": "RglRDhNIqws1YnWl",
+      "name": "Wejdan Life OS | G03 | Real Mock Parent Orchestrator",
+      "kind": "parent_orchestrator",
+      "status": "VERIFIED_MOCK_CHAIN",
+      "url": "https://wejdan404.app.n8n.cloud/workflow/RglRDhNIqws1YnWl",
+      "active": false,
+      "publish_state": "UNPUBLISHED",
+      "export_path": "workflows/n8n/backups/g03-parent-orchestrator-final-post-run46-export.json",
+      "sha256": "90E46FBFF95F37ADC8D458A162AA629AE11D1795D0A925763E4C43A4259AB7B2",
+      "node_count": 12,
+      "credential_nodes": 0,
+      "source_path": "workflows/n8n/source/v3/g03-parent-orchestrator.json",
+      "latest_execution": {
+        "finance_child": 48,
+        "passed": 5,
+        "program_director_child": 47,
+        "report": "ops/evidence/G03_parent_execution46_audit.json",
+        "status": "succeeded",
+        "observability_child": 49,
+        "parent_execution_id": 46,
+        "case_count": 5,
+        "id": 46,
+        "failed": 0
+      },
+      "note": "Inactive, unpublished synthetic orchestration; exact JS source comparison passed for all six Code nodes; sequential real child invocation, task/trace correlation, finance decisions, branch skip and monitoring checked."
+    }
+  ],
+  "publication_assessment": {
+    "state": "UNPUBLISHED",
+    "source": "Per-workflow n8n Version history > Publish Timeline",
+    "verified_workflow_count": 7,
+    "result": "Each of seven workflow timelines states: This workflow has no publish history yet.",
+    "new_workflows": "The six workflows created during G02 were left unpublished; no Publish action was taken."
+  },
+  "workflow_count": 21,
+  "active_count": 0,
+  "verified_at": "2026-10-16T14:35:00+03:00"
+}

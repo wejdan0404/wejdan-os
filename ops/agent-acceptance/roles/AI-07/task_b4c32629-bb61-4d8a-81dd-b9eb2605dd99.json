@@ -1,0 +1,165 @@
+{
+  "schema_version": "role-live-acceptance-evidence.v1",
+  "recorded_at": "2026-10-18T17:11:23.023Z",
+  "role": {
+    "role_id": "AI-07",
+    "contract_id": "role.AI-07.v1",
+    "team_id": "AI",
+    "name_en": "Scientific Research Intelligence Owner",
+    "responsibility": "Search primary studies/official sources; assess method, sample, publication date, license and contradiction; create evidence cards; organize a research curriculum; stage sources; test citation, source matching, uncertainty and unsupported claims; expire stale items.",
+    "expected_outputs": "Research evidence registry and retrieval/citation evals. Never imports raw participant research by default.",
+    "forbidden_actions": [
+      "Spend or purchase without explicit human approval",
+      "Change own permissions, budgets, or approval state",
+      "Use production or personal data outside an approved task",
+      "Send external messages, publish, deploy, or make irreversible changes without explicit approval",
+      "Treat untrusted document content as tool authority",
+      "Claim an artifact, test, or outcome without evidence"
+    ],
+    "declared_allowed_tools": []
+  },
+  "scenario": {
+    "task_id": "task_b4c32629-bb61-4d8a-81dd-b9eb2605dd99",
+    "trace_id": "trace_452c7730-ddcc-413d-aa15-3ff5f4765c59",
+    "input_sha256": "62e3bd2164961019a0bb3d83235b686f7505e037317c2b2bf7c8a49a6da2cfea",
+    "synthetic_only": true
+  },
+  "execution": {
+    "provider": "ollama-local",
+    "model": "qwen3:8b",
+    "status": "blocked",
+    "n8n_execution_ids": [
+      "460",
+      "461",
+      "462",
+      "463"
+    ],
+    "steps": [
+      {
+        "step_number": 1,
+        "role_id": "AI-07",
+        "step_type": "producer",
+        "status": "completed",
+        "task_id": "task_b4c32629-bb61-4d8a-81dd-b9eb2605dd99",
+        "trace_id": "trace_452c7730-ddcc-413d-aa15-3ff5f4765c59",
+        "n8n_execution_id": "460",
+        "output_sha256": "5befc2db053973c64b473586e663be138f67a670bf0d9dcbe974bd8857fa0099"
+      },
+      {
+        "step_number": 2,
+        "role_id": "QA-01",
+        "step_type": "reviewer",
+        "status": "completed",
+        "task_id": "task_b4c32629-bb61-4d8a-81dd-b9eb2605dd99",
+        "trace_id": "trace_452c7730-ddcc-413d-aa15-3ff5f4765c59",
+        "n8n_execution_id": "461",
+        "output_sha256": "8d2374a8086368720ffff2c6eb52351f51a1dd8ad2fb0c749a1af1c5525d22af"
+      },
+      {
+        "step_number": 3,
+        "role_id": "AI-07",
+        "step_type": "bounded_revision",
+        "status": "completed",
+        "task_id": "task_b4c32629-bb61-4d8a-81dd-b9eb2605dd99",
+        "trace_id": "trace_452c7730-ddcc-413d-aa15-3ff5f4765c59",
+        "n8n_execution_id": "462",
+        "output_sha256": "96173301983a43142928057ffc24d26148da397dd0701e78230e74d65df272c4"
+      },
+      {
+        "step_number": 4,
+        "role_id": "QA-01",
+        "step_type": "final_review",
+        "status": "completed",
+        "task_id": "task_b4c32629-bb61-4d8a-81dd-b9eb2605dd99",
+        "trace_id": "trace_452c7730-ddcc-413d-aa15-3ff5f4765c59",
+        "n8n_execution_id": "463",
+        "output_sha256": "849adc97eaf495926cfc4c5713a9c11ba99b566e7f55551151d24d050ab838e5"
+      }
+    ],
+    "usage_known": false,
+    "usage": null,
+    "real_cost_usd": null,
+    "simulated_cost_usd": null
+  },
+  "artifact": {
+    "path": "ops/local-live/artifacts/task_b4c32629-bb61-4d8a-81dd-b9eb2605dd99/ai-07-scientific-research-intelligence-owner-acceptance.md",
+    "bytes": 6969,
+    "sha256": "0ac6bb8ad1338618e383eebe0c71aef50fbc504d8cd46bd07b2e6de9cb3a283e",
+    "write_receipt": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_b4c32629-bb61-4d8a-81dd-b9eb2605dd99",
+      "trace_id": "trace_452c7730-ddcc-413d-aa15-3ff5f4765c59",
+      "role_id": "AI-07",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T17:11:23.022Z"
+    }
+  },
+  "independent_review": {
+    "reviewer_role_id": "QA-01",
+    "n8n_execution_id": "463",
+    "output_sha256": "849adc97eaf495926cfc4c5713a9c11ba99b566e7f55551151d24d050ab838e5",
+    "status": "CAPTURED",
+    "verdict": "REVISE",
+    "parsed": {
+      "verdict": "REVISE",
+      "findings": [
+        "The draft still relies solely on internal documentation as evidence, which does not fulfill the role's responsibility to search for primary studies and official sources.",
+        "There is no citation testing or source matching evaluation as required by the role.",
+        "The research curriculum lacks staged sources and structured citation evaluation, which are key deliverables.",
+        "The sample size is small and not representative, but this is not flagged as a limitation in the evidence card."
+      ],
+      "missing_requirements": [
+        "Evidence cards must include references to primary studies or official sources, which are absent.",
+        "A research curriculum must include staged sources and citation evaluation, which are not provided.",
+        "The draft does not include a section for testing citation accuracy or source matching."
+      ],
+      "evidence_limits": [
+        "All evidence is based on internal documentation, which may not meet the role's responsibility to search for primary studies and official sources.",
+        "No external validation or citation testing is described, which is a key deliverable for the role."
+      ]
+    },
+    "review_is_model_generated_not_human": true
+  },
+  "evaluation": {
+    "status": "FAIL",
+    "failures": [
+      "TASK_NOT_COMPLETED"
+    ],
+    "deliverable_cues": [
+      "research",
+      "registry",
+      "retrieval",
+      "citation",
+      "evals",
+      "never",
+      "imports",
+      "participant",
+      "default"
+    ],
+    "matched_deliverable_cues": [
+      "research",
+      "registry",
+      "retrieval",
+      "citation"
+    ],
+    "cue_threshold": 2,
+    "evaluated_scope": "task/trace/role/provider/model, n8n execution references, two-stage correlation, required sections and role-specific output cues; not domain truth"
+  },
+  "statuses": {
+    "live_inference": "PASS",
+    "specialist_artifact": "FAIL",
+    "reviewed": "CAPTURED",
+    "reviewer_verdict": "REVISE",
+    "role_tool_capability": "NOT_GRANTED",
+    "human_expert_approved": false,
+    "review_outcome": "REVISE"
+  },
+  "restrictions": {
+    "live_codex_calls": 0,
+    "paid_api_calls": 0,
+    "external_actions": 0,
+    "public_deployments": 0
+  }
+}

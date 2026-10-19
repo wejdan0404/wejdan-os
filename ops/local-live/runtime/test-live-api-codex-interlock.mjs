@@ -1,0 +1,26 @@
+import assert from 'node:assert/strict';
+import { DatabaseSync } from 'node:sqlite';
+
+const dbPath = 'ops/local-live/data/wejdan-local.sqlite';
+const beforeDb = new DatabaseSync(dbPath, { readOnly: true });
+const triggerPresent = beforeDb.prepare("SELECT COUNT(*) AS count FROM sqlite_master WHERE type='trigger' AND name='deny_codex_pending_approval'").get().count === 1;
+const beforeRows = beforeDb.prepare('SELECT COUNT(*) AS count FROM tasks').get().count;
+const beforeCodex = beforeDb.prepare("SELECT COUNT(*) AS count FROM tasks WHERE provider='codex-subscription'").get().count;
+beforeDb.close();
+assert.equal(triggerPresent, true);
+const response = await fetch('http://127.0.0.1:8766/api/tasks', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ input: 'Synthetic Codex interlock verification only.', role_id: 'D-00', provider: 'codex-subscription', asynchronous: true }) });
+const responseBody = await response.json().catch(() => ({}));
+const duplicateResponse = await fetch('http://127.0.0.1:8766/api/tasks', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ input: 'Synthetic Codex interlock verification only.', role_id: 'D-00', provider: 'codex-subscription', asynchronous: true }) });
+const afterDb = new DatabaseSync(dbPath, { readOnly: true });
+const afterRows = afterDb.prepare('SELECT COUNT(*) AS count FROM tasks').get().count;
+const afterCodex = afterDb.prepare("SELECT COUNT(*) AS count FROM tasks WHERE provider='codex-subscription'").get().count;
+const integrity = afterDb.prepare('PRAGMA integrity_check').get().integrity_check;
+afterDb.close();
+assert.equal(response.status, 403);
+assert.equal(duplicateResponse.status, 403);
+assert.equal(responseBody.error, 'CODEX_APP_LIVE_APPROVAL_REQUIRED');
+assert.equal(afterRows, beforeRows);
+assert.equal(afterCodex, beforeCodex);
+assert.equal(afterCodex, 0);
+assert.equal(integrity, 'ok');
+console.log(JSON.stringify({ result: 'PASS', mode: 'real-local-API-negative-request-no-inference', denied_requests: 2, response_status: response.status, blocked_by: responseBody.error, task_rows_before: beforeRows, task_rows_after: afterRows, codex_task_rows: afterCodex, integrity, paid_api_calls: 0, live_codex_calls: 0, n8n_runs: 0 }));

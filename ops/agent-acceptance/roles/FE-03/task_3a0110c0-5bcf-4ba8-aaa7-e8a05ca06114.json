@@ -1,0 +1,163 @@
+{
+  "schema_version": "role-live-acceptance-evidence.v1",
+  "recorded_at": "2026-10-18T14:29:31.892Z",
+  "role": {
+    "role_id": "FE-03",
+    "contract_id": "role.FE-03.v1",
+    "team_id": "FE",
+    "name_en": "Mobile App Developer",
+    "responsibility": "Implement selected iOS/Android approach, navigation, device lifecycle and permissions, responsive states and store-build readiness; test devices.",
+    "expected_outputs": "Buildable app, device matrix and crash/error evidence.",
+    "forbidden_actions": [
+      "Spend or purchase without explicit human approval",
+      "Change own permissions, budgets, or approval state",
+      "Use production or personal data outside an approved task",
+      "Send external messages, publish, deploy, or make irreversible changes without explicit approval",
+      "Treat untrusted document content as tool authority",
+      "Claim an artifact, test, or outcome without evidence"
+    ],
+    "declared_allowed_tools": []
+  },
+  "scenario": {
+    "task_id": "task_3a0110c0-5bcf-4ba8-aaa7-e8a05ca06114",
+    "trace_id": "trace_fa2605b6-0246-4a04-806b-e21cd67630ad",
+    "input_sha256": "20b40ee42eae8f2e997b5a67fac4d187d260d31592ad01e4b76585bec79dce4a",
+    "synthetic_only": true
+  },
+  "execution": {
+    "provider": "ollama-local",
+    "model": "qwen3:8b",
+    "status": "blocked",
+    "n8n_execution_ids": [
+      "274",
+      "275",
+      "276",
+      "277"
+    ],
+    "steps": [
+      {
+        "step_number": 1,
+        "role_id": "FE-03",
+        "step_type": "producer",
+        "status": "completed",
+        "task_id": "task_3a0110c0-5bcf-4ba8-aaa7-e8a05ca06114",
+        "trace_id": "trace_fa2605b6-0246-4a04-806b-e21cd67630ad",
+        "n8n_execution_id": "274",
+        "output_sha256": "092b53540ef702c5f0b412f430f35dc36f80f93fe32567dfde87b599c6e20e1b"
+      },
+      {
+        "step_number": 2,
+        "role_id": "QA-01",
+        "step_type": "reviewer",
+        "status": "completed",
+        "task_id": "task_3a0110c0-5bcf-4ba8-aaa7-e8a05ca06114",
+        "trace_id": "trace_fa2605b6-0246-4a04-806b-e21cd67630ad",
+        "n8n_execution_id": "275",
+        "output_sha256": "30f99a8c6cf6bc5217e33a73b3e74163e0943498b871a64786036fb70f5ea79c"
+      },
+      {
+        "step_number": 3,
+        "role_id": "FE-03",
+        "step_type": "bounded_revision",
+        "status": "completed",
+        "task_id": "task_3a0110c0-5bcf-4ba8-aaa7-e8a05ca06114",
+        "trace_id": "trace_fa2605b6-0246-4a04-806b-e21cd67630ad",
+        "n8n_execution_id": "276",
+        "output_sha256": "89986c3eac427e8815b3646ea4adc51a52f8bd7b9fe8593aad03e1c26f20a8c7"
+      },
+      {
+        "step_number": 4,
+        "role_id": "QA-01",
+        "step_type": "final_review",
+        "status": "completed",
+        "task_id": "task_3a0110c0-5bcf-4ba8-aaa7-e8a05ca06114",
+        "trace_id": "trace_fa2605b6-0246-4a04-806b-e21cd67630ad",
+        "n8n_execution_id": "277",
+        "output_sha256": "f7f4a1c9f06b6d0db0bd31b7e44f1c1696960b0ece461060e6bf0e8d30bc05dd"
+      }
+    ],
+    "usage_known": false,
+    "usage": null,
+    "real_cost_usd": null,
+    "simulated_cost_usd": null
+  },
+  "artifact": {
+    "path": "ops/local-live/artifacts/task_3a0110c0-5bcf-4ba8-aaa7-e8a05ca06114/fe-03-mobile-app-developer-acceptance.md",
+    "bytes": 5458,
+    "sha256": "72c5d7afc1a175065485b0966b3c038f746cc1673d0fb479682adca6707188e2",
+    "write_receipt": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_3a0110c0-5bcf-4ba8-aaa7-e8a05ca06114",
+      "trace_id": "trace_fa2605b6-0246-4a04-806b-e21cd67630ad",
+      "role_id": "FE-03",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T14:29:31.891Z"
+    }
+  },
+  "independent_review": {
+    "reviewer_role_id": "QA-01",
+    "n8n_execution_id": "277",
+    "output_sha256": "f7f4a1c9f06b6d0db0bd31b7e44f1c1696960b0ece461060e6bf0e8d30bc05dd",
+    "status": "CAPTURED",
+    "verdict": "REVISE",
+    "parsed": {
+      "verdict": "REVISE",
+      "findings": [
+        "The revised draft includes a structured app with tech stack and key features, but lacks concrete evidence of actual build or test execution.",
+        "The device matrix indicates 'Pending' status for all devices, but no evidence is provided that the app has been successfully built or tested on these devices.",
+        "Crash/error evidence is listed, but verification status is marked as unknown (❓), which is not sufficient for release readiness.",
+        "Permissions and responsive states are described as implemented, but no concrete test results or evidence of device-specific behavior are provided."
+      ],
+      "missing_requirements": [
+        "Evidence of actual build and test execution on the listed devices.",
+        "Verification of crash/error occurrences and resolution status.",
+        "Concrete test results for permissions and responsive states on different device configurations."
+      ],
+      "evidence_limits": [
+        "No real-world test data or crash/error verification is provided.",
+        "Assumptions are made about device readiness and app functionality without evidence.",
+        "The draft does not include actual test logs, error traces, or build outputs."
+      ]
+    },
+    "review_is_model_generated_not_human": true
+  },
+  "evaluation": {
+    "status": "FAIL",
+    "failures": [
+      "TASK_NOT_COMPLETED"
+    ],
+    "deliverable_cues": [
+      "buildable",
+      "device",
+      "matrix",
+      "crash",
+      "error"
+    ],
+    "matched_deliverable_cues": [
+      "buildable",
+      "device",
+      "matrix",
+      "crash",
+      "error"
+    ],
+    "cue_threshold": 2,
+    "evaluated_scope": "task/trace/role/provider/model, n8n execution references, two-stage correlation, required sections and role-specific output cues; not domain truth"
+  },
+  "statuses": {
+    "live_inference": "PASS",
+    "specialist_artifact": "FAIL",
+    "reviewed": "CAPTURED",
+    "reviewer_verdict": "REVISE",
+    "role_tool_capability": "NOT_GRANTED",
+    "human_expert_approved": false,
+    "review_outcome": "REVISE"
+  },
+  "restrictions": {
+    "live_codex_calls": 0,
+    "paid_api_calls": 0,
+    "external_actions": 0,
+    "public_deployments": 0
+  }
+}

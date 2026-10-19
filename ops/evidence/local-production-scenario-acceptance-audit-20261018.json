@@ -1,0 +1,116 @@
+{
+  "schema_version": "local-production-scenario-independent-audit.v1",
+  "auditor_version": "2.0.0",
+  "audited_at": "2026-10-18T18:11:17.050Z",
+  "evidence_basis": "Independent deterministic checks of the newest persisted scenario artifact, SHA-256, provider/model, all task/trace-correlated n8n steps, explicit required IDs and synthetic-data boundaries. Reviewer verdicts are supporting evidence, never the sole acceptance oracle.",
+  "totals": {
+    "scenarios": 3,
+    "acceptance_passed": 3,
+    "acceptance_failed_or_blocked": 0
+  },
+  "overall_result": "ACCEPTED_WITH_DOCUMENTED_LIMITS",
+  "scenarios": {
+    "product": {
+      "task_id": "task_d7d868ae-e469-4c03-90b1-960abf7deb5f",
+      "trace_id": "trace_a5cebb6b-b270-4a29-81b3-98681e3c64b9",
+      "evidence_path": "ops/agent-acceptance/scenarios/product-feature-design/task_d7d868ae-e469-4c03-90b1-960abf7deb5f.json",
+      "accepted": true,
+      "status": "PLANNING_ARTIFACT_ACCEPTED_WITH_TESTS_NOT_RUN",
+      "reviewer_verdict": "PASS",
+      "reviewer_role_id": "QA-02",
+      "execution_ids": [
+        "596",
+        "597",
+        "598",
+        "599",
+        "600",
+        "601"
+      ],
+      "artifact_path": "ops/local-live/artifacts/task_d7d868ae-e469-4c03-90b1-960abf7deb5f/product-feature-acceptance-bundle.md",
+      "artifact_sha256": "50ab67bcdfb634ce0406f55cae3a48bb1bec3f38467bead77a62b10979a3e831",
+      "checks": {
+        "sha_and_correlation": true,
+        "required_test_case_ids": 14,
+        "tests_executed": 0,
+        "output_limit": "planning artifact only; no notifications or deployment"
+      },
+      "violations": [],
+      "limitations": [
+        "All listed tests remain NOT_RUN; this is an accepted plan/deliverable, not implementation or feature runtime acceptance.",
+        "No human approval is claimed."
+      ]
+    },
+    "research": {
+      "task_id": "task_57f4bed2-1695-4e4b-b8eb-f3b02d00fdc7",
+      "trace_id": "trace_4e233874-ead1-4414-8924-943a8cf33563",
+      "evidence_path": "ops/agent-acceptance/scenarios/research-quality/task_57f4bed2-1695-4e4b-b8eb-f3b02d00fdc7.json",
+      "accepted": true,
+      "status": "SYNTHETIC_METHOD_ARTIFACT_ACCEPTED_NO_HUMAN_FINDINGS",
+      "reviewer_verdict": "PASS",
+      "reviewer_role_id": "UR-QA",
+      "execution_ids": [
+        "607",
+        "608",
+        "609",
+        "610",
+        "611"
+      ],
+      "artifact_path": "ops/local-live/artifacts/task_57f4bed2-1695-4e4b-b8eb-f3b02d00fdc7/research-quality-acceptance-bundle.md",
+      "artifact_sha256": "65729fedb3a830c80272e2fc14e42a0d93562bf908a11927c686177e66ca357b",
+      "checks": {
+        "sha_and_correlation": true,
+        "unique_synthetic_rows": 8,
+        "validation_and_privacy_required": true
+      },
+      "violations": [],
+      "limitations": [
+        "Synthetic rows are method fixtures only; no participant observations or real-world findings are represented."
+      ]
+    },
+    "engineering": {
+      "task_id": "task_67528a3e-f155-4d13-81cc-cca73bef8742",
+      "trace_id": "trace_5de31cba-5fc2-40a5-982f-8f33939b3568",
+      "evidence_path": "ops/agent-acceptance/scenarios/engineering-security/task_67528a3e-f155-4d13-81cc-cca73bef8742.json",
+      "accepted": true,
+      "status": "SYNTHETIC_PROTOTYPE_ACCEPTED_PERSONAL_DATA_BLOCKED",
+      "reviewer_role_id": "QA-02",
+      "reviewer_verdict": "PASS",
+      "execution_ids": [
+        "647",
+        "648",
+        "649",
+        "650",
+        "651"
+      ],
+      "artifact_path": "ops/local-live/artifacts/task_67528a3e-f155-4d13-81cc-cca73bef8742/engineering-security-acceptance-bundle.md",
+      "artifact_sha256": "06331b633957170f932c38452f3ee32fc0f16b6ece601efe88fa01160b82a656",
+      "independent_failures": [],
+      "independent_runtime_test": {
+        "result": "PASS",
+        "evidence": "ops/evidence/LL12_engineering_export_runtime_test_20261018.json",
+        "checks": 7,
+        "task_id": "task_87cc1e0c-f999-4486-9bee-500d22f2c843",
+        "trace_id": "trace_c0822c7d-fc24-4d77-9f6f-c88559b5d35b"
+      },
+      "reasons": [
+        "The latest synthetic-only end-to-end design/security artifact passed its independent local model review and deterministic checks for complete content, exact evidence, task/trace correlation, and truthful access-control statements.",
+        "The actual synthetic export endpoint passes seven independent read-only runtime checks.",
+        "Acceptance is limited to synthetic local prototype behavior. The endpoint has no user authentication or route-level authorization; loopback binding and CORS are not user authorization. Personal-data export remains blocked pending an approved access-control design and implementation.",
+        "No model reviewer result is treated as human approval or security certification."
+      ]
+    }
+  },
+  "violations": [
+    "No approval or factual claims were inferred from automated model-review outputs."
+  ],
+  "external_blockers": [
+    "Do not use the task export route with real/private data until user authentication and route-level authorization are designed, approved, implemented and independently tested."
+  ],
+  "safety": {
+    "paid_api_calls": 0,
+    "live_codex_calls": 0,
+    "cloud_n8n_runs": 0,
+    "external_actions": 0,
+    "human_approvals": 0
+  }
+}

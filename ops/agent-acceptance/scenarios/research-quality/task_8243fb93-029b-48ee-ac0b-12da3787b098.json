@@ -1,0 +1,65 @@
+{
+  "schema_version": "local-production-scenario-result.v1",
+  "task_id": "task_8243fb93-029b-48ee-ac0b-12da3787b098",
+  "trace_id": "trace_accb7ca6-4c88-4620-a07f-afd5d4eddcd6",
+  "scenario_id": "research-quality",
+  "role_id": "UR-02",
+  "status": "completed",
+  "provider": "ollama-local",
+  "model": "qwen3:8b",
+  "reviewer_role_id": "UR-QA",
+  "reviewer_verdict": "PASS",
+  "reviewer_output": "{\n  \"verdict\": \"PASS\",\n  \"findings\": [\n    \"The research plan clearly distinguishes between proposed methods and synthetic evidence, avoiding false claims of real-world data collection.\",\n    \"The consent and privacy checklist correctly notes that no real human participants were involved, aligning with ethical standards.\",\n    \"The analysis plan includes descriptive statistics, thematic coding, and segmentation, which are appropriate for synthetic data.\",\n    \"The report template explicitly states that no fabricated findings are included, maintaining transparency.\",\n    \"The synthetic evidence register and retention/retention audit trail are well-structured and align with data governance practices.\"\n  ],\n  \"missing_requirements\": [\n    \"No actual execution or data collection was performed, which is acceptable for a synthetic research plan, but the absence of real-world validation is acknowledged.\"\n  ],\n  \"evidence_limits\": [\n    \"The plan acknowledges that simulated user behavior may not reflect real-world intent or comprehension.\",\n    \"There is no ground-truth validation of user understanding, which is a limitation of synthetic data analysis.\",\n    \"The effectiveness of Arabic-first onboarding may vary across demographics, but this is not tested in the synthetic environment.\"\n  ]\n}",
+  "steps": [
+    {
+      "role_id": "UR-06",
+      "stage": "planner",
+      "task_id": "task_8243fb93-029b-48ee-ac0b-12da3787b098",
+      "trace_id": "trace_accb7ca6-4c88-4620-a07f-afd5d4eddcd6",
+      "n8n_execution_id": "388",
+      "elapsed_ms": 12343,
+      "output_sha256": "351553050594f955f63dfebf7725361b3ea62f6321fbb9e0a670ba741864f5e9"
+    },
+    {
+      "role_id": "UR-07",
+      "stage": "specialist_1",
+      "task_id": "task_8243fb93-029b-48ee-ac0b-12da3787b098",
+      "trace_id": "trace_accb7ca6-4c88-4620-a07f-afd5d4eddcd6",
+      "n8n_execution_id": "389",
+      "elapsed_ms": 8842,
+      "output_sha256": "17429c7375d2653bac38a28eed82449fb7dd7b5c6a30c47bff04845a89e5b6bc"
+    },
+    {
+      "role_id": "UR-QA",
+      "stage": "independent_review",
+      "task_id": "task_8243fb93-029b-48ee-ac0b-12da3787b098",
+      "trace_id": "trace_accb7ca6-4c88-4620-a07f-afd5d4eddcd6",
+      "n8n_execution_id": "390",
+      "elapsed_ms": 4847,
+      "output_sha256": "1a681c815576d4329a69ff30296ab95af1f8e7256f0e69b1ee392c4cd76169f3"
+    }
+  ],
+  "artifact": {
+    "path": "ops/local-live/artifacts/task_8243fb93-029b-48ee-ac0b-12da3787b098/research-quality-acceptance-bundle.md",
+    "bytes": 11984,
+    "sha256": "86479fcec6658ef4cad233e4cdef638de86120962bbd6432996e268e54906a02",
+    "provenance": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_8243fb93-029b-48ee-ac0b-12da3787b098",
+      "trace_id": "trace_accb7ca6-4c88-4620-a07f-afd5d4eddcd6",
+      "role_id": "UR-02",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T14:49:25.311Z"
+    }
+  },
+  "refusal_recovery": null,
+  "external_actions": 0,
+  "paid_api_calls": 0,
+  "live_codex_calls": 0,
+  "request": "Prepare a synthetic research plan to understand whether Arabic-first onboarding makes offline data persistence understandable. No human participants were recruited, no interviews or observations occurred, and no citations were supplied. Separate proposed methods from evidence; provide a consent and privacy checklist, sample questions, analysis plan, unknowns, and a report template with no fabricated findings.",
+  "artifact_sha256": "86479fcec6658ef4cad233e4cdef638de86120962bbd6432996e268e54906a02",
+  "evidence_path": "C:\\Users\\WinDows\\Desktop\\عام\\os\\ops\\agent-acceptance\\scenarios\\research-quality\\task_8243fb93-029b-48ee-ac0b-12da3787b098.json",
+  "recorded_at": "2026-10-18T14:49:25.312Z"
+}

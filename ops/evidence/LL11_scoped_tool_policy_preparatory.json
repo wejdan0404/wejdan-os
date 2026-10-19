@@ -1,0 +1,28 @@
+{
+  "schema_version": "ll11-scoped-tool-policy-preparatory.v1",
+  "verified_at": "2026-10-18",
+  "status": "PREPARED_PENDING_LL09_RUNTIME_ACTIVATION_AND_LL10",
+  "role_registry_original_modified": false,
+  "canonical_roles": 85,
+  "policies_compiled": 85,
+  "default_tool_grants": 0,
+  "supported_local_task_tools": ["project.read", "artifact.write"],
+  "sensitive_actions_always_owner_approved": ["spend", "purchase", "publish", "deploy", "external_message", "production_data", "permission_change", "irreversible_change"],
+  "read_policy": "explicit project-relative allowlist, deny traversal and symlink paths, deny common secret/config paths, 256000-byte cap",
+  "write_policy": "explicit task tool grant, Markdown/JSON only, task-scoped output directory, 256000-byte cap, create-new no-overwrite, task/trace/role/provider/model provenance and SHA-256",
+  "shell_tool": false,
+  "external_tools": false,
+  "tests": {
+    "result": "PASS",
+    "mode": "deterministic local fixture only",
+    "checks": ["85 canonical policies", "deny by default", "explicit grant", "shell denied", "read allowlist", "path traversal denied", "symlink escape denied", "artifact provenance and digest", "no overwrite", "write-disabled denial"],
+    "artifact": {
+      "path": "ops/local-live/artifacts/task_5f125aae-8505-44f8-af90-6123c88a2afc/tool-boundary-demo.md",
+      "sha256": "08ee1a8b67fd41419cc112dee57aa7551e82379adb8f9a1c29ff70793fd70631"
+    }
+  },
+  "live_codex_calls": 0,
+  "paid_api_calls": 0,
+  "n8n_runs": 0,
+  "limitations": ["No task API/SQLite wiring yet", "LL09 persistent runtime still needs restart", "LL10 awaits owner approval", "Safe path checks cannot remove all filesystem race conditions using portable Node APIs"]
+}

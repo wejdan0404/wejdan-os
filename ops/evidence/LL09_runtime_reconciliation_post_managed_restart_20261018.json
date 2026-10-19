@@ -1,0 +1,52 @@
+{
+  "schema_version": "ll09-runtime-reconciliation.v2",
+  "observed_at_local": "2026-10-18T13:14:23+03:00",
+  "runtime": {
+    "process_manager": "ops/local-live/runtime/manage-local-api.ps1",
+    "restart_result": "PASS",
+    "old_pid": 67928,
+    "new_pid": 70264,
+    "listener": "127.0.0.1:8766",
+    "health_endpoint": { "path": "/api/health", "status": 200, "service": "wejdan-local-runtime", "roles_configured": 85, "model": "qwen3:8b", "provider": "ollama-local", "n8n_ready": true, "ollama_ready": true, "paid_routes_enabled": false, "bind": "127.0.0.1" },
+    "provider_status_endpoint": { "path": "/api/provider-status", "status": 200, "dispatch_enabled": false, "dispatch_block_reason": "CODEX_APP_LIVE_APPROVAL_REQUIRED", "effective_provider": "ollama-local", "app_codex_e2e": "NOT_VERIFIED", "app_usage": "unknown" }
+  },
+  "database": {
+    "path": "ops/local-live/data/wejdan-local.sqlite",
+    "integrity_check": "ok",
+    "tasks": 122,
+    "steps": 42,
+    "memory": 84,
+    "active_tasks": 0,
+    "codex_tasks": 0,
+    "codex_interlock_trigger_present": true,
+    "pre_stop_snapshot": "ops/history/local-api-before-stop-20261018-131421-902.sqlite",
+    "snapshot_sha256": "3776412ACE841D0A06F07EB2487501698908B8E4E6026B008FB765B140D447CF",
+    "snapshot_integrity": "ok",
+    "snapshot_facts_match_live_after_restart": true
+  },
+  "verification": {
+    "process_manager_restart": "PASS",
+    "api_adapter_stub_tests": "PASS",
+    "provider_integration_status_tests": "PASS",
+    "isolated_authenticated_shutdown_and_database_integrity_test": "PASS",
+    "command_center_playwright_mock_smoke": "PASS",
+    "playwright_roles_displayed": 85,
+    "codex_dispatch_denied_before_task_creation": true,
+    "live_codex_calls": 0,
+    "paid_api_calls": 0,
+    "cloud_n8n_runs": 0,
+    "cloud_workflows_changed": 0
+  },
+  "source_control": {
+    "pid_and_command_line_verified_by_manager": true,
+    "graceful_shutdown": true,
+    "restart_log": "ops/local-live/logs/api-20261018-131423.stdout.log",
+    "temporary_control_token_storage": "per-user DPAPI protected file; excluded from evidence"
+  },
+  "decision": "LL09_VERIFIED_COMPLETE",
+  "limitations": [
+    "LL10 remains blocked because the runtime cannot guarantee included-usage-only without a possible paid-credit or overage draw; no Codex app call was made.",
+    "GET /health is not an API route and returned NOT_FOUND during an exploratory check; the verified health route is GET /api/health.",
+    "The Codex provider remains disabled and Ollama remains the effective provider."
+  ]
+}

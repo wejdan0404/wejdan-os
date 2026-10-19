@@ -1,0 +1,64 @@
+{
+  "schema_version": "ll09-adapter-negative-tests.v1",
+  "verified_at": "2026-10-18",
+  "result": "PASS_SOURCE_TESTS_AND_TEMPORARY_RUNTIME_INTERLOCK; SOURCE_RESTART_PENDING",
+  "runtime_mode": "stub-only; isolated local API and mocked browser API",
+  "live_codex_calls": 0,
+  "paid_api_calls": 0,
+  "n8n_runs": 0,
+  "checks": {
+    "adapter_syntax": "PASS",
+    "api_syntax": "PASS",
+    "command_center_syntax": "PASS",
+    "environment_allowlist": "PASS",
+    "api_key_and_alternate_provider_rejection": "PASS",
+    "wrong_auth_mode": "PASS",
+    "production_adapter_live_call_guard": "PASS",
+    "missing_cli": "PASS",
+    "nonzero_exit": "PASS",
+    "invalid_jsonl": "PASS",
+    "missing_terminal_completion": "PASS",
+    "nested_tool_event": "PASS",
+    "stdout_byte_limit": "PASS",
+    "stderr_byte_limit": "PASS",
+    "quota_classification": "PASS",
+    "timeout": "PASS",
+    "abort_cancellation": "PASS",
+    "windows_kill_tree_fallback": "PASS",
+    "concurrency_cap": "PASS",
+    "temporary_directory_cleanup": "PASS",
+    "provider_status_sqlite_and_api": "PASS",
+    "codex_api_denied_before_task_creation": "PASS",
+    "ollama_default_and_unknown_app_usage": "PASS",
+    "command_center_mock_playwright": "PASS",
+    "command_center_roles_displayed": "85/85"
+  },
+  "runtime_activation": {
+    "persistent_api_pid": 45096,
+    "persistent_api_bind": "127.0.0.1:8766",
+    "updated_source_loaded": false,
+    "observed": "Old API process returned 404 for /api/provider-status after source changes. Isolated API test on a temporary database passed against the new server source.",
+    "restart_attempt": "Rejected by command execution safety layer; persistent service left untouched.",
+    "temporary_database_interlock": {
+      "trigger": "deny_codex_pending_approval",
+      "status": "INSTALLED_AND_VERIFIED",
+      "api_negative_request": "PASS; old server received synthetic Codex request, returned an error before task creation; row count remained 118, Codex task rows remained 0, SQLite integrity ok",
+      "evidence_script": "ops/local-live/runtime/test-live-api-codex-interlock.mjs",
+      "remove_only_after": "updated API source is active and LL10 has explicit approval"
+    }
+  },
+  "evidence_files": [
+    "ops/local-live/runtime/test-codex-subscription-adapter.mjs",
+    "ops/local-live/runtime/test-codex-subscription-integration.mjs",
+    "ops/local-live/runtime/install-codex-dispatch-interlock.mjs",
+    "ops/local-live/runtime/test-live-api-codex-interlock.mjs",
+    "command-center/codex-adapter-smoke.mjs",
+    "ops/CODEX_SUBSCRIPTION_SECURITY_AUDIT.md"
+  ],
+  "limitations": [
+    "No live Codex app invocation was authorized or attempted.",
+    "Network/tool exclusion is not inferred from read-only sandbox; tool events are rejected if observed and status stays unverified.",
+    "No live Codex retry behavior was tested; API dispatch is disabled pending owner approval.",
+    "Production runtime restart is still required before the persistent API/Command Center consume the new state endpoint."
+  ]
+}

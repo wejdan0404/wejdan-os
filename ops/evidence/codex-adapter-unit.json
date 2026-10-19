@@ -1,0 +1,13 @@
+{
+  "schema_version": "codex-adapter-unit.v1",
+  "result": "PASS",
+  "checks": [
+    "argument/output parsing",
+    "usage separated from costs",
+    "adapter run ID generated; no false CLI thread ID",
+    "invalid task rejected",
+    "temporary directory cleanup"
+  ],
+  "live_codex_calls": 0,
+  "paid_api_calls": 0
+}

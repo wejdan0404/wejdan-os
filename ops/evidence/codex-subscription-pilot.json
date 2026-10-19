@@ -1,0 +1,72 @@
+{
+  "schema_version": "codex-subscription-pilot.v1",
+  "verified_at": "2026-10-18T08:30:51.650Z",
+  "authentication": {
+    "command": "codex login status",
+    "result": "Logged in using ChatGPT",
+    "api_key_used": false
+  },
+  "cli": {
+    "command": "codex exec --skip-git-repo-check --ephemeral --sandbox read-only --json -C <temporary isolated directory> <synthetic read-only prompt>",
+    "result": "exit 0",
+    "sandbox": "read-only",
+    "ephemeral": true,
+    "temporary_directory": true,
+    "network_tool_access": "prompt prohibited tools/actions; user config remained enabled in pilot, so future adapter explicitly uses --ignore-user-config"
+  },
+  "invocation": {
+    "count": 1,
+    "purpose": "one synthetic local-only structured response",
+    "output": {
+      "adapter": "CODEX_SUBSCRIPTION",
+      "status": "VERIFIED",
+      "summary": "A synthetic local-only task can be answered through the authenticated Codex subscription.",
+      "external_actions": false
+    },
+    "usage": {
+      "input_tokens": 20441,
+      "output_tokens": 40
+    },
+    "usage_limits": "Existing ChatGPT Codex subscription only; no API key, purchased credit, or additional purchase."
+  },
+  "integration": {
+    "status": "IMPLEMENTED",
+    "task_provider": "codex-subscription",
+    "routing": "Local API queued task dispatch; persisted task provider, result, step and memory; task and trace correlation retained.",
+    "ui": "Command Center provider selector added.",
+    "read_only": true,
+    "n8n_invocations": 0,
+    "ollama_path_preserved": true,
+    "adapter_code_status": "implemented-and-safely-exposed",
+    "database_live_codex_task_count": 0,
+    "live_adapter_route_e2e": "Not exercised with a second live Codex call, per exactly-one-real-invocation instruction. The one real pilot preceded integration; optional route and SQLite linkage were verified with a mocked CLI.",
+    "mocked_adapter_api_sqlite_e2e": {
+      "result": "PASS",
+      "task_id": "task_89e1e2bb-ceaa-49db-bd9b-7db9941b2f12",
+      "trace_id": "trace_ea19b6c3-ba28-4792-8f56-7e58b124587d",
+      "provider_execution_id": "mock-thread-id",
+      "live_model_calls": 0,
+      "paid_calls": 0,
+      "n8n_runs": 0
+    }
+  },
+  "validation": {
+    "static_checks": "PASS",
+    "playwright": "PASS without model inference",
+    "checks": [
+      "85 roles displayed",
+      "Codex subscription provider selectable",
+      "synchronous adapter dispatch rejected without task creation",
+      "zero inference during adapter UI test"
+    ],
+    "mock_or_live": "The pilot invocation was real; adapter end-to-end dispatch was not invoked a second time to respect the exactly-one-invocation limit.",
+    "adapter_unit": "PASS using fake CLI"
+  },
+  "blockers": [
+    "Requested execution-plan file ops/WEJDAN_LIFE_OS_CODEX_SUBSCRIPTION_ADAPTER_2026-10-18.md was not present at the supplied path."
+  ],
+  "warnings": [
+    "The pilot CLI emitted startup warnings for configured MCP integrations that lacked authentication; the agent did not request or execute those tools. The integrated adapter now passes --ignore-user-config to exclude configured MCPs and plugins."
+  ],
+  "status": "CODEX_SUBSCRIPTION_LIVE"
+}

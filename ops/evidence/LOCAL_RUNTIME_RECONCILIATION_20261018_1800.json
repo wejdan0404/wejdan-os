@@ -1,0 +1,49 @@
+{
+  "schema_version": "local-runtime-reconciliation.v1",
+  "verified_at": "2026-10-18T15:01:00Z",
+  "local_time_zone": "Asia/Riyadh",
+  "api": {
+    "result": "PASS",
+    "pid": 37896,
+    "listener": "127.0.0.1:8766",
+    "service": "wejdan-local-runtime",
+    "roles_configured": 85,
+    "provider": "ollama-local",
+    "model": "qwen3:8b",
+    "n8n_ready": true,
+    "ollama_ready": true,
+    "paid_routes_enabled": false,
+    "codex_dispatch_enabled": false,
+    "codex_dispatch_block_reason": "CODEX_APP_LIVE_APPROVAL_REQUIRED"
+  },
+  "n8n_listener": "127.0.0.1:5678",
+  "sqlite": {
+    "integrity": "ok",
+    "tasks": 217,
+    "steps": 326,
+    "memory": 649,
+    "active": 0,
+    "codex": 0,
+    "codex_interlock_trigger": true
+  },
+  "role_matrix": {
+    "registered_and_routable": 85,
+    "local_inference_pass": 85,
+    "specialist_artifact_pass": 57,
+    "specialist_artifact_fail": 28,
+    "reviewer_pass": 59,
+    "scoped_tool_capability_proofs": 1,
+    "human_approvals": 0,
+    "independent_audit_violations": 0
+  },
+  "production_scenarios": {
+    "executed": 3,
+    "independently_accepted": 0,
+    "audit_path": "ops/evidence/local-production-scenario-acceptance-audit-20261018.json"
+  },
+  "external_actions": 0,
+  "paid_api_calls": 0,
+  "live_codex_calls": 0,
+  "cloud_n8n_runs": 0,
+  "notes": ["This records infrastructure and persisted local evidence only; it does not certify role competence or scenario acceptance.", "An attempted /health request returned NOT_FOUND; the verified health endpoint is /api/health, surfaced through manage-local-api.ps1 status."]
+}

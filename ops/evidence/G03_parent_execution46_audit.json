@@ -1,0 +1,19 @@
+{
+  "audit_version": "g03-parent-chain-independent-check.v1",
+  "workflow_id": "RglRDhNIqws1YnWl",
+  "workflow_version_id": "d22889fe-3e73-4c08-a6d7-d074f1a858bb",
+  "parent_execution_id": "46",
+  "child_execution_ids": {"program_director": "47", "finance_controller": "48", "observability": "49"},
+  "expected_case_count": 5,
+  "observed_report": {"passed_cases": 5, "failed_assertions": 0, "overall_result": "PASS"},
+  "case_assertions": [
+    {"case_id":"happy","task_id":"TASK-G03-HAPPY","trace_id":"TRACE-G03-HAPPY","expected_finance":"ALLOW_MOCK","expected_dispatch":"COMPLETED_MOCK","expected_monitor_status":"completed","verification":"PASS"},
+    {"case_id":"over_budget","task_id":"TASK-G03-OVER","trace_id":"TRACE-G03-OVER","expected_finance":"DENY_MOCK","expected_dispatch":"SKIPPED_BY_FINANCE","expected_monitor_status":"failed","verification":"PASS"},
+    {"case_id":"approval_pending","task_id":"TASK-G03-PENDING","trace_id":"TRACE-G03-PENDING","expected_finance":"WAITING_APPROVAL","expected_dispatch":"SKIPPED_BY_FINANCE","expected_monitor_status":"waiting_approval","verification":"PASS"},
+    {"case_id":"missing_task_id","task_id":null,"trace_id":"TRACE-G03-MISSING","expected_finance":"INVALID","expected_dispatch":"SKIPPED_BY_FINANCE","expected_monitor_status":"failed","verification":"PASS"},
+    {"case_id":"simulated_failure","task_id":"TASK-G03-FAIL","trace_id":"TRACE-G03-FAIL","expected_finance":"ALLOW_MOCK","expected_dispatch":"SIMULATED_FAILURE","expected_monitor_status":"failed","verification":"PASS"}
+  ],
+  "safety": {"all_workflows_inactive": true, "paid_api_calls": 0, "actual_paid_micro_sar": 0, "provider_invocations": false, "public_endpoints": false, "scheduled_runs": false},
+  "limitations": ["The mock worker is deterministic Code-node logic, not an AI agent.", "Actual runtime and provider usage remain unknown.", "The financial ledger remains an in-memory mock without transaction/concurrency guarantees."],
+  "evidence_sources": ["n8n parent execution #46; final node report showed 5/5 passed, 0 failures.", "n8n child execution #47 Program Director; #48 Finance; #49 Observability (verified in each worker's execution history).", "Exact post-run official workflow export in workflows/n8n/backups/g03-parent-orchestrator-final-post-run46-export.json."]
+}

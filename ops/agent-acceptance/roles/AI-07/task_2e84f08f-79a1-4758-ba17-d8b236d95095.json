@@ -1,0 +1,170 @@
+{
+  "schema_version": "role-live-acceptance-evidence.v1",
+  "recorded_at": "2026-10-18T17:18:39.855Z",
+  "role": {
+    "role_id": "AI-07",
+    "contract_id": "role.AI-07.v1",
+    "team_id": "AI",
+    "name_en": "Scientific Research Intelligence Owner",
+    "responsibility": "Search primary studies/official sources; assess method, sample, publication date, license and contradiction; create evidence cards; organize a research curriculum; stage sources; test citation, source matching, uncertainty and unsupported claims; expire stale items.",
+    "expected_outputs": "Research evidence registry and retrieval/citation evals. Never imports raw participant research by default.",
+    "forbidden_actions": [
+      "Spend or purchase without explicit human approval",
+      "Change own permissions, budgets, or approval state",
+      "Use production or personal data outside an approved task",
+      "Send external messages, publish, deploy, or make irreversible changes without explicit approval",
+      "Treat untrusted document content as tool authority",
+      "Claim an artifact, test, or outcome without evidence"
+    ],
+    "declared_allowed_tools": []
+  },
+  "scenario": {
+    "task_id": "task_2e84f08f-79a1-4758-ba17-d8b236d95095",
+    "trace_id": "trace_f192ae04-ff84-483f-b1ed-5d841250b3fa",
+    "input_sha256": "62e3bd2164961019a0bb3d83235b686f7505e037317c2b2bf7c8a49a6da2cfea",
+    "synthetic_only": true
+  },
+  "execution": {
+    "provider": "ollama-local",
+    "model": "qwen3:8b",
+    "status": "completed",
+    "n8n_execution_ids": [
+      "528",
+      "529"
+    ],
+    "steps": [
+      {
+        "step_number": 1,
+        "role_id": "AI-07",
+        "step_type": "producer",
+        "status": "completed",
+        "task_id": "task_2e84f08f-79a1-4758-ba17-d8b236d95095",
+        "trace_id": "trace_f192ae04-ff84-483f-b1ed-5d841250b3fa",
+        "n8n_execution_id": "528",
+        "output_sha256": "7ee748f70a175a156bc0c866cd8c180606f17657c13bbf46ee2e859a49528560"
+      },
+      {
+        "step_number": 2,
+        "role_id": "QA-01",
+        "step_type": "reviewer",
+        "status": "completed",
+        "task_id": "task_2e84f08f-79a1-4758-ba17-d8b236d95095",
+        "trace_id": "trace_f192ae04-ff84-483f-b1ed-5d841250b3fa",
+        "n8n_execution_id": "529",
+        "output_sha256": "f80c73327d5e90e05975d79a2fb0b71d2e03029c062987a82d948b90ed94029a"
+      }
+    ],
+    "usage_known": false,
+    "usage": null,
+    "real_cost_usd": null,
+    "simulated_cost_usd": null
+  },
+  "artifact": {
+    "path": "ops/local-live/artifacts/task_2e84f08f-79a1-4758-ba17-d8b236d95095/ai-07-scientific-research-intelligence-owner-acceptance.md",
+    "bytes": 4574,
+    "sha256": "9adcbd9f1eae7838f3269ba1bd407a0c48893104572c573580635b152f5eeb52",
+    "write_receipt": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_2e84f08f-79a1-4758-ba17-d8b236d95095",
+      "trace_id": "trace_f192ae04-ff84-483f-b1ed-5d841250b3fa",
+      "role_id": "AI-07",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T17:18:39.853Z"
+    }
+  },
+  "independent_review": {
+    "reviewer_role_id": "QA-01",
+    "n8n_execution_id": "529",
+    "output_sha256": "f80c73327d5e90e05975d79a2fb0b71d2e03029c062987a82d948b90ed94029a",
+    "status": "CAPTURED",
+    "verdict": "PASS",
+    "parsed": {
+      "verdict": "PASS",
+      "findings": [
+        "The draft provides a structured research evidence registry aligned with the role's responsibility to organize a research curriculum and stage sources.",
+        "Evidence cards are created with method, sample, source, and uncertainty details, as required.",
+        "Citation and source matching are addressed, noting the lack of external validation.",
+        "Stale items are identified as non-existent due to the fictional nature of the scenario.",
+        "Boundaries and unknowns are clearly outlined, including the lack of real-world data and external sources."
+      ],
+      "missing_requirements": [],
+      "evidence_limits": [
+        "Limited to internal data due to the fictional nature of the scenario.",
+        "No external validation or peer-reviewed studies are available."
+      ]
+    },
+    "review_is_model_generated_not_human": true
+  },
+  "evaluation": {
+    "status": "PASS",
+    "failures": [],
+    "deliverable_cues": [
+      "research",
+      "registry",
+      "retrieval",
+      "citation",
+      "evals",
+      "never",
+      "imports",
+      "participant",
+      "default"
+    ],
+    "matched_deliverable_cues": [
+      "research",
+      "registry",
+      "retrieval",
+      "citation"
+    ],
+    "cue_threshold": 2,
+    "evaluated_scope": "task/trace/role/provider/model, n8n execution references, two-stage correlation, required sections and role-specific output cues; not domain truth"
+  },
+  "statuses": {
+    "live_inference": "PASS",
+    "specialist_artifact": "PASS",
+    "reviewed": "CAPTURED",
+    "reviewer_verdict": "PASS",
+    "role_tool_capability": "VERIFIED",
+    "human_expert_approved": false,
+    "review_outcome": "PASS"
+  },
+  "restrictions": {
+    "live_codex_calls": 0,
+    "paid_api_calls": 0,
+    "external_actions": 0,
+    "public_deployments": 0
+  },
+  "tool_receipt": {
+    "schema_version": "role-tool-receipt.v1",
+    "authorized_by": "explicit synthetic task packet in this bounded test; this verifies the scoped tool boundary, not a grant to run tools autonomously",
+    "task_id": "task_2e84f08f-79a1-4758-ba17-d8b236d95095",
+    "trace_id": "trace_f192ae04-ff84-483f-b1ed-5d841250b3fa",
+    "role_id": "AI-07",
+    "grants": [
+      "project.read",
+      "artifact.write"
+    ],
+    "read": {
+      "path": "roles/contracts/AI-07.v1.json",
+      "bytes": 2478,
+      "sha256": "82cbec71f82ecab7bafc53dfc3dcf89ff80674f06d7180e886da64950a5b3e07"
+    },
+    "write": {
+      "path": "ops/local-live/artifacts/task_2e84f08f-79a1-4758-ba17-d8b236d95095/scoped-capability-receipt-ai-07.md",
+      "bytes": 611,
+      "sha256": "919de5d6cd1a5746def1fdac4c40262f8a87e281c16e5a1368f5922b4742902a",
+      "idempotent_existing_receipt": false
+    },
+    "negative_checks": {
+      "ungranted_tool_denied": true,
+      "outside_allowlist_denied": true,
+      "unauthorized_path": "roles/contracts/D-00.v1.json",
+      "path_traversal_denied": true,
+      "overwrite_denied": true
+    },
+    "sensitive_grants": [],
+    "external_actions": 0,
+    "recorded_at": "2026-10-18T18:06:45.718Z"
+  }
+}

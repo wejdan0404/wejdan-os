@@ -1,0 +1,99 @@
+# Role cards
+
+Generated from canonical contracts. Do not edit role identity here; update the contract and regenerate. Cards are specifications, not runtime activation.
+
+- [D-00 — Program Director](roles/D-00.md): مدير البرنامج
+- [PMO-01 — Program Operations Lead](roles/PMO-01.md): قائد عمليات البرنامج
+- [PMO-02 — Dependency Manager](roles/PMO-02.md): مدير التبعيات
+- [PMO-03 — Resource and Cost Controller](roles/PMO-03.md): مسؤول الموارد والتحكم المالي
+- [PMO-04 — Decision and Knowledge Custodian](roles/PMO-04.md): أمين القرارات والمعرفة
+- [PMO-05 — Change and Scope Manager](roles/PMO-05.md): مدير التغييرات ونطاق العمل
+- [PMO-QA — Program Quality Auditor](roles/PMO-QA.md): مدقق جودة إدارة البرنامج
+- [PROD-01 — Product Lead](roles/PROD-01.md): قائد المنتج
+- [PROD-02 — Feature Lifecycle Owner](roles/PROD-02.md): مسؤول دورة حياة الميزة
+- [PROD-03 — Requirements Analyst](roles/PROD-03.md): محلل المتطلبات
+- [PROD-04 — Service Journey Designer](roles/PROD-04.md): مصمم رحلة الخدمة
+- [PROD-05 — Feature Discovery and Improvement Analyst](roles/PROD-05.md): محلل اكتشاف الميزات وتحسينها
+- [PROD-06 — Commercial Feasibility Analyst](roles/PROD-06.md): محلل الجدوى التجارية
+- [PROD-QA — Product Quality Auditor](roles/PROD-QA.md): مدقق جودة المنتج
+- [UR-01 — User Research Lead](roles/UR-01.md): قائد أبحاث المستخدمين
+- [UR-02 — Research Planner](roles/UR-02.md): مخطط أبحاث المستخدمين
+- [UR-03 — Participant Recruitment Coordinator](roles/UR-03.md): منسق استقطاب المشاركين
+- [UR-04 — Interview and Field Researcher](roles/UR-04.md): باحث المقابلات والأبحاث الميدانية
+- [UR-05 — Usability Researcher](roles/UR-05.md): باحث قابلية الاستخدام
+- [UR-06 — Qualitative/Quantitative Analyst](roles/UR-06.md): محلل البيانات النوعية والكمية
+- [UR-07 — Research Repository Steward](roles/UR-07.md): أمين مستودع أبحاث المستخدمين
+- [UR-QA — Research Quality Auditor](roles/UR-QA.md): مدقق جودة أبحاث المستخدمين
+- [DES-01 — UX and Product Design Lead](roles/DES-01.md): قائد تجربة المستخدم وتصميم المنتج
+- [DES-02 — Information Architect](roles/DES-02.md): معماري المعلومات
+- [DES-03 — User-Flow Designer](roles/DES-03.md): مصمم تدفقات المستخدم
+- [DES-04 — Interaction Designer](roles/DES-04.md): مصمم التفاعل
+- [DES-05 — Visual Interface Designer](roles/DES-05.md): مصمم الواجهات المرئية
+- [DES-06 — Design System Owner](roles/DES-06.md): مسؤول نظام التصميم
+- [DES-07 — Arabic/English Content Designer](roles/DES-07.md): مصمم المحتوى العربي والإنجليزي
+- [DES-08 — Motion/Animation/Media Designer](roles/DES-08.md): مصمم الحركة والرسوم المتحركة والوسائط
+- [DES-09 — Accessibility and Localization Specialist](roles/DES-09.md): أخصائي إمكانية الوصول والتوطين
+- [DES-QA — Design Quality Auditor](roles/DES-QA.md): مدقق جودة التصميم
+- [AI-01 — AI Engineering Lead](roles/AI-01.md): قائد هندسة الذكاء الاصطناعي
+- [AI-02 — Agent/Orchestrator Engineer](roles/AI-02.md): مهندس الوكلاء وتنسيق العمليات
+- [AI-03 — Model Gateway Engineer](roles/AI-03.md): مهندس بوابة نماذج الذكاء الاصطناعي
+- [AI-04 — Instruction/Behavior Engineer](roles/AI-04.md): مهندس التعليمات والسلوك
+- [AI-05 — Saudi Arabic Quality and Adaptation Owner](roles/AI-05.md): مسؤول جودة اللغة السعودية وتكييفها
+- [AI-06 — Persona Governance Owner](roles/AI-06.md): مسؤول حوكمة الشخصيات
+- [AI-07 — Scientific Research Intelligence Owner](roles/AI-07.md): مسؤول استخبارات الأبحاث العلمية
+- [AI-08 — Retrieval/RAG Engineer](roles/AI-08.md): مهندس الاسترجاع وتوليد الإجابات المعزز بالمصادر
+- [AI-09 — Memory Engineer](roles/AI-09.md): مهندس الذاكرة
+- [AI-10 — Tooling and Integration Engineer](roles/AI-10.md): مهندس الأدوات والتكاملات
+- [AI-11 — Agent Safety Engineer](roles/AI-11.md): مهندس سلامة الوكلاء
+- [AI-12 — AI Evaluation Engineer](roles/AI-12.md): مهندس تقييم الذكاء الاصطناعي
+- [AI-13 — AI Observability and Cost Engineer](roles/AI-13.md): مهندس مراقبة الذكاء الاصطناعي والتكاليف
+- [AI-QA — AI Quality Auditor](roles/AI-QA.md): مدقق جودة الذكاء الاصطناعي
+- [FE-01 — Frontend Engineering Lead](roles/FE-01.md): قائد هندسة الواجهات الأمامية
+- [FE-02 — Web UI Developer](roles/FE-02.md): مطور واجهات الويب
+- [FE-03 — Mobile App Developer](roles/FE-03.md): مطور تطبيقات الأجهزة المحمولة
+- [FE-04 — Client State/Offline Sync Engineer](roles/FE-04.md): مهندس حالة التطبيق والمزامنة دون اتصال
+- [FE-05 — Design System Code Engineer](roles/FE-05.md): مهندس تطبيق نظام التصميم برمجيًا
+- [FE-06 — Frontend Performance/Accessibility Engineer](roles/FE-06.md): مهندس أداء الواجهات وإمكانية الوصول
+- [FE-07 — Frontend Code Reviewer](roles/FE-07.md): مراجع شيفرة الواجهات الأمامية
+- [FE-QA — Frontend Quality Auditor](roles/FE-QA.md): مدقق جودة الواجهات الأمامية
+- [BE-01 — Backend Engineering Lead](roles/BE-01.md): قائد هندسة الأنظمة الخلفية
+- [BE-02 — System/Solution Architect](roles/BE-02.md): معماري النظام والحلول
+- [BE-03 — Domain/Business-Logic Developer](roles/BE-03.md): مطور منطق الأعمال والمجالات
+- [BE-04 — API/Contract Engineer](roles/BE-04.md): مهندس واجهات البرمجة والعقود
+- [BE-05 — Database Engineer](roles/BE-05.md): مهندس قواعد البيانات
+- [BE-06 — Identity/Authorization Engineer](roles/BE-06.md): مهندس الهوية والتفويض
+- [BE-07 — Event/Queue Engineer](roles/BE-07.md): مهندس الأحداث وطوابير المهام
+- [BE-08 — Application Integration/n8n Engineer](roles/BE-08.md): مهندس تكامل التطبيق مع n8n
+- [BE-09 — Backend Code Reviewer/Refactoring Engineer](roles/BE-09.md): مراجع شيفرة الأنظمة الخلفية وإعادة هيكلتها
+- [BE-QA — Backend Quality Auditor](roles/BE-QA.md): مدقق جودة الأنظمة الخلفية
+- [SEC-01 — Security Lead](roles/SEC-01.md): قائد الأمن السيبراني
+- [SEC-02 — Threat Modeler](roles/SEC-02.md): محلل نماذج التهديدات
+- [SEC-03 — Application Security Engineer](roles/SEC-03.md): مهندس أمن التطبيقات
+- [SEC-04 — Penetration Tester](roles/SEC-04.md): مختبر الاختراق
+- [SEC-05 — AI Red Team Specialist](roles/SEC-05.md): أخصائي اختبار اختراق سلامة الذكاء الاصطناعي
+- [SEC-06 — Privacy/Data Protection Owner](roles/SEC-06.md): مسؤول الخصوصية وحماية البيانات
+- [SEC-07 — Secrets/Supply Chain Engineer](roles/SEC-07.md): مهندس الأسرار وأمن سلسلة التوريد
+- [SEC-QA — Security Quality Auditor](roles/SEC-QA.md): مدقق جودة الأمن السيبراني
+- [INF-01 — Platform Lead](roles/INF-01.md): قائد المنصة والبنية التحتية
+- [INF-02 — Cloud/Infrastructure-as-Code Engineer](roles/INF-02.md): مهندس السحابة والبنية التحتية ككود
+- [INF-03 — CI/CD Engineer](roles/INF-03.md): مهندس التكامل والتسليم المستمر
+- [INF-04 — Site Reliability/Observability Engineer](roles/INF-04.md): مهندس موثوقية الموقع والمراقبة
+- [INF-05 — n8n Platform Engineer](roles/INF-05.md): مهندس منصة n8n
+- [INF-06 — Backup/Recovery Engineer](roles/INF-06.md): مهندس النسخ الاحتياطي والتعافي
+- [INF-QA — Infrastructure Quality Auditor](roles/INF-QA.md): مدقق جودة البنية التحتية
+- [QA-01 — Central QA Lead](roles/QA-01.md): قائد ضمان الجودة المركزي
+- [QA-02 — Test Strategy Engineer](roles/QA-02.md): مهندس استراتيجية الاختبارات
+- [QA-03 — End-to-End Journey Tester](roles/QA-03.md): مختبر رحلات المستخدم الشاملة
+- [QA-04 — Performance/Reliability Tester](roles/QA-04.md): مختبر الأداء والموثوقية
+- [QA-05 — Defect/Regression Manager](roles/QA-05.md): مدير العيوب واختبارات الانحدار
+- [QA-06 — Release Readiness Auditor](roles/QA-06.md): مدقق جاهزية الإصدار
+
+## Individual failure-driven specialist notes
+
+Cards for roles with residual acceptance failures or related responsibilities include targeted requirements derived from their canonical contracts and review evidence. The 8 failed cases remain unchanged under `agents/evals/regressions/residual-failures.v1.json`; these are regression references, not proof of a fix. Examples:
+
+- `PMO-QA`: concrete task/owner/criteria/evidence/approval checks, and a revision must change the draft.
+- `AI-QA`: independent trace, policy, memory-isolation and grounding review; distinguish model grading from human expertise.
+- `FE-03`: actual device/environment and executed evidence, separate from a proposed test plan.
+- `FE-07`, `FE-QA`, `BE-QA`, `INF-QA`, and `QA-01`: role-specific artifact and reproducibility evidence.
+- `AI-09`, `AI-12`, `AI-08`, `AI-11`, `AI-13`, `PMO-04`, `SEC-05`, `SEC-06`, `UR-07`, `PROD-05`, and `AI-01/02/04/05`: memory governance, eval quality, retrieval security, orchestration bounds, research provenance, knowledge ownership, privacy and continuous improvement.

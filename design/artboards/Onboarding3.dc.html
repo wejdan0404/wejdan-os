@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>Onboarding — Joy Map</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'IBM Plex Sans Arabic','IBM Plex Sans',sans-serif;background:#F4F7FC;color:#0E121C}
+a{color:#4F5FA0}a:hover{color:#2B3358}
+</style>
+</helmet>
+<div style="width:390px;height:1040px;position:relative;overflow:hidden;background:#F4F7FC;box-sizing:border-box;font-family:'IBM Plex Sans Arabic','IBM Plex Sans',sans-serif;color:#0E121C;display:flex;flex-direction:column;padding:16px 20px 32px;">
+  <div style="display:flex;align-items:center;justify-content:space-between;height:44px;">
+    <a href="Onboarding2.dc.html" aria-label="رجوع" style="display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;color:#3A4256;text-decoration:none;">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg>
+    </a>
+    <div style="display:flex;align-items:center;gap:10px;">
+      <div role="progressbar" aria-label="الخطوة 5 من 6" aria-valuemin="1" aria-valuemax="6" aria-valuenow="5" style="display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:6px;width:150px;">
+        <span style="height:6px;border-radius:999px;background:#6172B5;"></span>
+        <span style="height:6px;border-radius:999px;background:#6172B5;"></span>
+        <span style="height:6px;border-radius:999px;background:#6172B5;"></span>
+        <span style="height:6px;border-radius:999px;background:#6172B5;"></span>
+        <span style="height:6px;border-radius:999px;background:#6172B5;"></span>
+        <span style="height:6px;border-radius:999px;background:#DCE3EF;"></span>
+      </div>
+      <span style="font-size:13px;line-height:20px;font-weight:500;color:#5A6478;"><bdi>5</bdi> من <bdi>6</bdi></span>
+    </div>
+  </div>
+
+  <h1 style="display:flex;align-items:center;gap:8px;margin:16px 0 0;font-size:22px;line-height:30px;font-weight:700;">
+    <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 C12.8 8.5 15.5 11.2 22 12 C15.5 12.8 12.8 15.5 12 22 C11.2 15.5 8.5 12.8 2 12 C8.5 11.2 11.2 8.5 12 2Z" fill="#E0A93B"></path></svg>
+    خريطة متعتك
+  </h1>
+  <p style="margin:6px 0 0;font-size:16px;line-height:26px;color:#3A4256;">وش يفرّحك؟ اختاري كل اللي ينطبق — ما فيه إجابة غلط.</p>
+
+  <div role="group" aria-label="أشياء تفرّحني" style="display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;">
+    <sc-for list="{{joys}}" as="j" hint-placeholder-count="13">
+      <button type="button" onClick="{{j.toggle}}" aria-pressed="{{j.pressed}}" style="{{j.style}}">{{j.label}}</button>
+    </sc-for>
+    <button type="button" style="display:inline-flex;align-items:center;gap:6px;height:44px;padding:0 14px;border-radius:999px;border:1px dashed #9BC4EE;background:transparent;color:#4F5FA0;font-family:inherit;font-size:14px;font-weight:600;cursor:pointer;">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>
+      شي ثاني
+    </button>
+  </div>
+  <p style="margin:10px 2px 0;font-size:13px;line-height:20px;font-weight:500;color:#5A6478;">التسوّق يظهر معه تذكير لطيف بالميزانية.</p>
+
+  <section style="margin-top:24px;display:flex;flex-direction:column;gap:12px;">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:12px;">
+      <div>
+        <h2 style="margin:0;font-size:18px;line-height:26px;font-weight:600;">باقات: متعة محجوزة لعادة</h2>
+        <p style="margin:2px 0 0;font-size:14px;line-height:22px;color:#5A6478;">شي تحبينه تخلينه لوقت عادة — بدون أقفال.</p>
+      </div>
+      <span style="flex:none;font-size:13px;line-height:20px;font-weight:600;color:#4F5FA0;"><bdi>{{bundleCount}}</bdi> من <bdi>3</bdi></span>
+    </div>
+
+    <sc-for list="{{bundles}}" as="b" hint-placeholder-count="4">
+      <button type="button" onClick="{{b.toggle}}" aria-pressed="{{b.pressed}}" style="{{b.style}}">
+        <span style="display:flex;flex-direction:column;gap:8px;flex:1;min-width:0;text-align:right;">
+          <span style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+            <span style="display:inline-flex;align-items:center;gap:6px;height:30px;padding:0 10px;border-radius:999px;background:#FBF1D6;color:#8A6412;font-size:13px;font-weight:600;">
+              <svg width="12" height="12" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 C12.8 8.5 15.5 11.2 22 12 C15.5 12.8 12.8 15.5 12 22 C11.2 15.5 8.5 12.8 2 12 C8.5 11.2 11.2 8.5 12 2Z" fill="#E0A93B"></path></svg>
+              {{b.want}}
+            </span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5A6478" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"></path><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"></path></svg>
+            <span style="display:inline-flex;align-items:center;height:30px;padding:0 10px;border-radius:999px;background:#E1EEFB;color:#2D5F92;font-size:13px;font-weight:600;">{{b.should}}</span>
+          </span>
+          <span style="font-size:14px;line-height:22px;color:#3A4256;">{{b.rule}}</span>
+        </span>
+        <span style="{{b.checkStyle}}">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>
+        </span>
+      </button>
+    </sc-for>
+
+    <div aria-live="polite">
+      <sc-if value="{{showCap}}" hint-placeholder-val="{{false}}">
+        <p style="margin:0;padding:12px 14px;border-radius:16px;background:#FBF1D6;color:#8A6412;font-size:14px;line-height:22px;font-weight:500;">ثلاث باقات كفاية للبداية — عشان تبقى المتعة مميزة. شيلي وحدة وبعدها اختاري الجديدة.</p>
+      </sc-if>
+    </div>
+  </section>
+
+  <div style="flex:1;"></div>
+  <a href="MorningBrief.dc.html" style="flex:none;display:flex;align-items:center;justify-content:center;height:52px;border-radius:16px;background:#6172B5;color:#FFFFFF;text-decoration:none;font-size:16px;line-height:24px;font-weight:600;">التالي</a>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":1040}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = {
+      joys: { coffee: true, series: true, games: false, reading: true, drawing: false, music: true, podcast: true, outing: false, shopping: false, friends: false, fish: false, tech: false, skincare: false },
+      bundles: { walk: true, room: true, gym: false, cook: false },
+      cap: false
+    };
+  }
+  toggleJoy(id) {
+    var j = Object.assign({}, this.state.joys);
+    j[id] = !j[id];
+    this.setState({ joys: j });
+  }
+  toggleBundle(id) {
+    var b = Object.assign({}, this.state.bundles);
+    var n = 0;
+    Object.keys(b).forEach(function (k) { if (b[k]) n++; });
+    if (!b[id] && n >= 3) { this.setState({ cap: true }); return; }
+    b[id] = !b[id];
+    this.setState({ bundles: b, cap: false });
+  }
+  renderVals() {
+    var self = this;
+    var st = this.state;
+    var joyDefs = [
+      ['coffee', 'قهوة'], ['series', 'مسلسلات'], ['podcast', 'بودكاست'], ['music', 'موسيقى'], ['reading', 'قراءة'], ['drawing', 'رسم'],
+      ['games', 'ألعاب'], ['outing', 'طلعات'], ['friends', 'صديقاتي'], ['shopping', 'تسوّق'], ['fish', 'حوض السمك'], ['tech', 'تقنية'], ['skincare', 'روتين العناية']
+    ];
+    var joys = joyDefs.map(function (d) {
+      var on = st.joys[d[0]];
+      return {
+        label: d[1],
+        pressed: on ? 'true' : 'false',
+        style: 'height:44px;padding:0 16px;border-radius:999px;font-family:inherit;font-size:14px;font-weight:600;cursor:pointer;box-sizing:border-box;' + (on ? 'background:#EAF1FB;border:1px solid #9BC4EE;color:#2B3358;' : 'background:#FFFFFF;border:1px solid #DCE3EF;color:#3A4256;'),
+        toggle: function () { self.toggleJoy(d[0]); }
+      };
+    });
+    var bDefs = [
+      { id: 'walk', want: 'بودكاست', should: 'المشي', rule: 'البودكاست فقط وقت المشي' },
+      { id: 'room', want: 'مسلسلك', should: 'ترتيب الغرفة', rule: 'حلقة المسلسل تبدأ مع الترتيب' },
+      { id: 'gym', want: 'قائمة أغاني', should: 'تمارين القوة', rule: 'قائمتك المفضلة للتمرين بس' },
+      { id: 'cook', want: 'قهوة مختصة', should: 'مراجعة الأسبوع', rule: 'قهوتك الحلوة مع المراجعة' }
+    ];
+    var n = 0;
+    var bundles = bDefs.map(function (d) {
+      var on = st.bundles[d.id];
+      if (on) n++;
+      return {
+        want: d.want, should: d.should, rule: d.rule,
+        pressed: on ? 'true' : 'false',
+        style: 'display:flex;align-items:center;gap:12px;width:100%;padding:14px 16px;border-radius:20px;cursor:pointer;font-family:inherit;color:#0E121C;box-sizing:border-box;' + (on ? 'background:#FFFFFF;border:2px solid #9BC4EE;' : 'background:#FFFFFF;border:1px solid #DCE3EF;'),
+        checkStyle: 'flex:none;display:flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:999px;box-sizing:border-box;' + (on ? 'background:#6172B5;color:#FFFFFF;border:2px solid #6172B5;' : 'background:#FFFFFF;color:transparent;border:2px solid #9BC4EE;'),
+        toggle: function () { self.toggleBundle(d.id); }
+      };
+    });
+    return { joys: joys, bundles: bundles, bundleCount: n, showCap: st.cap };
+  }
+}
+</script>
+</body>
+</html>

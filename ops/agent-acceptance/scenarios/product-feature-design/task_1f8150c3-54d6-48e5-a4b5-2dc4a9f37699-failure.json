@@ -1,0 +1,84 @@
+{
+  "scenario_id": "product-feature-design",
+  "task_id": "task_1f8150c3-54d6-48e5-a4b5-2dc4a9f37699",
+  "trace_id": "trace_7c969c22-2783-4800-9f08-d4c55f4d2f2b",
+  "status": "failed",
+  "error": "SCENARIO_FINAL_REVIEW_NOT_PASS:REVISE",
+  "provider": "ollama-local",
+  "model": "qwen3:8b",
+  "steps": [
+    {
+      "role_id": "PROD-03",
+      "stage": "planner",
+      "task_id": "task_1f8150c3-54d6-48e5-a4b5-2dc4a9f37699",
+      "trace_id": "trace_7c969c22-2783-4800-9f08-d4c55f4d2f2b",
+      "n8n_execution_id": "584",
+      "elapsed_ms": 17188,
+      "output_sha256": "d96cbefdab43c4edb7868bc6105f0012974d593356cd33b7790af48a3351e7c6"
+    },
+    {
+      "role_id": "DES-03",
+      "stage": "specialist_1",
+      "task_id": "task_1f8150c3-54d6-48e5-a4b5-2dc4a9f37699",
+      "trace_id": "trace_7c969c22-2783-4800-9f08-d4c55f4d2f2b",
+      "n8n_execution_id": "585",
+      "elapsed_ms": 15000,
+      "output_sha256": "8c8b7aa32ba1b87853bd037d97d7b4901d40ecf4422139501e364b87d9ca23af"
+    },
+    {
+      "role_id": "FE-02",
+      "stage": "specialist_2",
+      "task_id": "task_1f8150c3-54d6-48e5-a4b5-2dc4a9f37699",
+      "trace_id": "trace_7c969c22-2783-4800-9f08-d4c55f4d2f2b",
+      "n8n_execution_id": "586",
+      "elapsed_ms": 15672,
+      "output_sha256": "dbcbe4f2312a02a726ac4d97c56113f6de9c44d4baf5b981b007cef2350b7115"
+    },
+    {
+      "role_id": "QA-02",
+      "stage": "independent_review",
+      "task_id": "task_1f8150c3-54d6-48e5-a4b5-2dc4a9f37699",
+      "trace_id": "trace_7c969c22-2783-4800-9f08-d4c55f4d2f2b",
+      "n8n_execution_id": "587",
+      "elapsed_ms": 5502,
+      "output_sha256": "45697cec36b4ee82e5c400ee51740798b8d6101f60c3a65eb280bb7d4b3cedfb"
+    },
+    {
+      "role_id": "FE-02",
+      "stage": "bounded_revision",
+      "task_id": "task_1f8150c3-54d6-48e5-a4b5-2dc4a9f37699",
+      "trace_id": "trace_7c969c22-2783-4800-9f08-d4c55f4d2f2b",
+      "n8n_execution_id": "588",
+      "elapsed_ms": 16559,
+      "output_sha256": "2d941c0e5f897e657604cd32f55003b840118518a9c450c749db5b21da577216"
+    },
+    {
+      "role_id": "QA-02",
+      "stage": "final_review",
+      "task_id": "task_1f8150c3-54d6-48e5-a4b5-2dc4a9f37699",
+      "trace_id": "trace_7c969c22-2783-4800-9f08-d4c55f4d2f2b",
+      "n8n_execution_id": "589",
+      "elapsed_ms": 5301,
+      "output_sha256": "bff8b2620dd6d674b877975d9022486050ee00303308760b78439d6fa7c67e72"
+    }
+  ],
+  "reviewer_output": "{\n  \"verdict\": \"REVISE\",\n  \"findings\": [\n    \"The 'deferred' status is now defined in the system's data model, but the test strategy still lacks specific test cases for its handling during quiet hours or focus blocks.\",\n    \"The 'non-modal, non-intrusive prompt' includes accessibility criteria, but no test cases are provided to validate the UI against the accessibility baseline.\",\n    \"The '200% text scaling option' and 'contrast AA-compliant background' are described, but no test cases are provided to validate these features against the accessibility standard.\",\n    \"The 'semantic label' is mentioned, but no test cases are provided to validate that the UI elements are properly labeled for screen readers.\",\n    \"The 'User in Quiet Hours' and 'User in Focus Block' flows are described, but the system behavior for deferred reminders is not fully defined, leading to potential gaps in test coverage.\",\n    \"The 'User disables the reminder' scenario is described, but no test case is provided to validate the disable functionality.\"\n  ],\n  \"missing_requirements\": [\n    \"Test cases for the 'deferred' status handling during quiet hours or focus blocks.\",\n    \"Test cases for the 'non-modal, non-intrusive prompt' accessibility compliance.\",\n    \"Test cases for 200% text scaling and contrast AA compliance.\",\n    \"Test cases for semantic labels and screen reader compatibility.\",\n    \"Definition of the behavior for deferred reminders during quiet hours or focus blocks.\",\n    \"Test cases for the 'User disables the reminder' functionality.\"\n  ],\n  \"evidence_limits\": [\n    \"No actual test cases are executed in this planning task, so all proposed tests must be marked as NOT_RUN.\",\n    \"The 'deferred' status and its handling are now defined, but no test cases are provided to validate its behavior.\",\n    \"The UI design for the 'non-modal, non-intrusive prompt' includes accessibility criteria, but no test cases are provided to validate compliance.\",\n    \"The 'semantic label' and other accessibility features are referenced but not validated with test cases.\",\n    \"The 'User disables the reminder' functionality is described but lacks test case evidence.\"\n  ]\n}",
+  "reviewer_verdict": "REVISE",
+  "refusal_recovery": null,
+  "recorded_at": "2026-10-18T17:39:26.892Z",
+  "draft_artifact": {
+    "path": "ops/local-live/artifacts/task_1f8150c3-54d6-48e5-a4b5-2dc4a9f37699/product-feature-acceptance-bundle-unaccepted.md",
+    "bytes": 8621,
+    "sha256": "6be5e80300c5f407c7e2d09ec3916dfd79c080a80c38afdc5dc32d3db1e41883",
+    "provenance": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_1f8150c3-54d6-48e5-a4b5-2dc4a9f37699",
+      "trace_id": "trace_7c969c22-2783-4800-9f08-d4c55f4d2f2b",
+      "role_id": "PROD-01",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T17:39:26.895Z"
+    }
+  }
+}

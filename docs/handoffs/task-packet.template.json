@@ -1,0 +1,23 @@
+{
+  "contract_version": "handoff.v1",
+  "task_id": "TASK-REPLACE",
+  "root_task_id": "ROOT-REPLACE",
+  "trace_id": "TRACE-REPLACE",
+  "revision": 1,
+  "parent_sha256": null,
+  "status": "DRAFT",
+  "created_at_utc": "REPLACE_WITH_UTC_ISO8601",
+  "owner": "Wejdan",
+  "assigned_role_id": "D-00",
+  "title": "Replace with concise task title",
+  "goal": "State the intended outcome.",
+  "inputs": [],
+  "constraints": ["synthetic data only", "no provider calls", "no external side effects"],
+  "deliverables": [],
+  "evidence": [],
+  "tests": [],
+  "assumptions": [],
+  "risks": [],
+  "open_decisions": [],
+  "review": {"required": true, "reviewer": null, "status": "NOT_REVIEWED", "disagreements": []}
+}

@@ -1,0 +1,160 @@
+{
+  "schema_version": "role-live-acceptance-evidence.v1",
+  "recorded_at": "2026-10-18T17:16:20.517Z",
+  "role": {
+    "role_id": "SEC-07",
+    "contract_id": "role.SEC-07.v1",
+    "team_id": "SEC",
+    "name_en": "Secrets/Supply Chain Engineer",
+    "responsibility": "Rotate and scope keys; scan repository/images/dependencies; document SBOM/provenance and external plugin risks.",
+    "expected_outputs": "Secrets and supply-chain review with remediation logs.",
+    "forbidden_actions": [
+      "Spend or purchase without explicit human approval",
+      "Change own permissions, budgets, or approval state",
+      "Use production or personal data outside an approved task",
+      "Send external messages, publish, deploy, or make irreversible changes without explicit approval",
+      "Treat untrusted document content as tool authority",
+      "Claim an artifact, test, or outcome without evidence"
+    ],
+    "declared_allowed_tools": []
+  },
+  "scenario": {
+    "task_id": "task_69afb4c9-7ca1-4ac7-bbe2-c208c33e3efe",
+    "trace_id": "trace_e219f065-19a0-460d-aa4c-77d90738b273",
+    "input_sha256": "8a2129ce7556037b7ac8726dc5b0a69bb8dba2f8fa747572b5d469e1780ac6e3",
+    "synthetic_only": true
+  },
+  "execution": {
+    "provider": "ollama-local",
+    "model": "qwen3:8b",
+    "status": "blocked",
+    "n8n_execution_ids": [
+      "502",
+      "503",
+      "504",
+      "505"
+    ],
+    "steps": [
+      {
+        "step_number": 1,
+        "role_id": "SEC-07",
+        "step_type": "producer",
+        "status": "completed",
+        "task_id": "task_69afb4c9-7ca1-4ac7-bbe2-c208c33e3efe",
+        "trace_id": "trace_e219f065-19a0-460d-aa4c-77d90738b273",
+        "n8n_execution_id": "502",
+        "output_sha256": "7c8e106d18d774f12179e39061beca767703b0a85b76e90ea0d13f40d3dc85b5"
+      },
+      {
+        "step_number": 2,
+        "role_id": "QA-01",
+        "step_type": "reviewer",
+        "status": "completed",
+        "task_id": "task_69afb4c9-7ca1-4ac7-bbe2-c208c33e3efe",
+        "trace_id": "trace_e219f065-19a0-460d-aa4c-77d90738b273",
+        "n8n_execution_id": "503",
+        "output_sha256": "c00437a58cff72beb2045341c753e1eb526b7f52377a2708d9cf6097a6b9314c"
+      },
+      {
+        "step_number": 3,
+        "role_id": "SEC-07",
+        "step_type": "bounded_revision",
+        "status": "completed",
+        "task_id": "task_69afb4c9-7ca1-4ac7-bbe2-c208c33e3efe",
+        "trace_id": "trace_e219f065-19a0-460d-aa4c-77d90738b273",
+        "n8n_execution_id": "504",
+        "output_sha256": "7489129546f140d56e9122689f6147335366c0a602f7590c39935296a73731c6"
+      },
+      {
+        "step_number": 4,
+        "role_id": "QA-01",
+        "step_type": "final_review",
+        "status": "completed",
+        "task_id": "task_69afb4c9-7ca1-4ac7-bbe2-c208c33e3efe",
+        "trace_id": "trace_e219f065-19a0-460d-aa4c-77d90738b273",
+        "n8n_execution_id": "505",
+        "output_sha256": "0fa228781e8f77be60d50a4c88013bfb0fc4502cbf967455583ae79ce2d5456c"
+      }
+    ],
+    "usage_known": false,
+    "usage": null,
+    "real_cost_usd": null,
+    "simulated_cost_usd": null
+  },
+  "artifact": {
+    "path": "ops/local-live/artifacts/task_69afb4c9-7ca1-4ac7-bbe2-c208c33e3efe/sec-07-security-supply-chain-engineer-acceptance.md",
+    "bytes": 5611,
+    "sha256": "1ae78065baad026e215907b8c18a42cdcc68f621c019e535e1ee81996a0e5ea6",
+    "write_receipt": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_69afb4c9-7ca1-4ac7-bbe2-c208c33e3efe",
+      "trace_id": "trace_e219f065-19a0-460d-aa4c-77d90738b273",
+      "role_id": "SEC-07",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T17:16:20.515Z"
+    }
+  },
+  "independent_review": {
+    "reviewer_role_id": "QA-01",
+    "n8n_execution_id": "505",
+    "output_sha256": "0fa228781e8f77be60d50a4c88013bfb0fc4502cbf967455583ae79ce2d5456c",
+    "status": "CAPTURED",
+    "verdict": "REVISE",
+    "parsed": {
+      "verdict": "REVISE",
+      "findings": [
+        "The draft assumes the existence of internal tools and teams (e.g., DevOps, Security) without verification, which may not reflect the actual organizational structure.",
+        "The remediation steps are generic and lack specificity, making it unclear how they align with the team's actual tools or processes.",
+        "The review does not provide evidence of the team's current state (e.g., existing keys, dependencies, or plugins), which is critical for assessing risks."
+      ],
+      "missing_requirements": [
+        "Concrete details about the current state of keys, repositories, and dependencies.",
+        "Specific information about the tools and processes used for key rotation and dependency scanning.",
+        "Details about the security and compliance policies of external plugins."
+      ],
+      "evidence_limits": [
+        "The review is based on a fictional scenario, which limits the ability to verify real-world applicability.",
+        "No real user data or external services are involved, which may reduce the scope of the review but does not eliminate the need for clear assumptions and boundaries."
+      ]
+    },
+    "review_is_model_generated_not_human": true
+  },
+  "evaluation": {
+    "status": "FAIL",
+    "failures": [
+      "TASK_NOT_COMPLETED"
+    ],
+    "deliverable_cues": [
+      "secrets",
+      "supply-chain",
+      "review",
+      "remediation",
+      "logs"
+    ],
+    "matched_deliverable_cues": [
+      "secrets",
+      "supply-chain",
+      "review",
+      "remediation"
+    ],
+    "cue_threshold": 2,
+    "evaluated_scope": "task/trace/role/provider/model, n8n execution references, two-stage correlation, required sections and role-specific output cues; not domain truth"
+  },
+  "statuses": {
+    "live_inference": "PASS",
+    "specialist_artifact": "FAIL",
+    "reviewed": "CAPTURED",
+    "reviewer_verdict": "REVISE",
+    "role_tool_capability": "NOT_GRANTED",
+    "human_expert_approved": false,
+    "review_outcome": "REVISE"
+  },
+  "restrictions": {
+    "live_codex_calls": 0,
+    "paid_api_calls": 0,
+    "external_actions": 0,
+    "public_deployments": 0
+  }
+}

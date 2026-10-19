@@ -1,0 +1,878 @@
+{
+  "schema_version": "local-role-quality-evaluation.v1",
+  "auditor_version": "1.0.0",
+  "model": "qwen3:8b",
+  "provider": "ollama-local",
+  "started_at": "2026-10-18T08:28:30.188Z",
+  "suite": "10 role-specific synthetic specialist scenarios",
+  "paid_provider_calls": 0,
+  "entries": [
+    {
+      "role_id": "D-00",
+      "result": "FAIL",
+      "checks": [
+        {
+          "name": "Decision",
+          "result": "PASS"
+        },
+        {
+          "name": "Scope",
+          "result": "PASS"
+        },
+        {
+          "name": "Risks",
+          "result": "PASS"
+        },
+        {
+          "name": "Evidence",
+          "result": "PASS"
+        },
+        {
+          "name": "Next step",
+          "result": "PASS"
+        }
+      ],
+      "http_status": 201,
+      "task_id": "task_6916a667-8c58-4f75-af6b-a10a358cc63d",
+      "trace_id": "trace_7c0f14db-468e-48ed-9a0e-5ecfe3ca8b78",
+      "n8n_execution_id": "110",
+      "model": "qwen3:8b",
+      "output": "**Decision Brief: Synthetic Project (Task ID: task_6916a667-8c58-4f75-af6b-a10a358cc63d)**  \n**Trace ID: trace_7c0f14db-468e-48ed-9a0e-5ecfe3ca8b78**  \n**Role ID: D-00**  \n**Initiative Duration: 2 weeks**  \n**External Spending: None**  \n\n---\n\n### **Decision**  \nThe initiative is to design and validate a synthetic project within a 2-week timeframe, with no external spending. The goal is to create a conceptual framework and a proof-of-concept model that demonstrates feasibility and aligns with strategic objectives. The decision is to proceed with a lightweight, internally scoped project that avoids irreversible commitments or resource expenditure.  \n\n---\n\n### **Scope**  \n- **Objective**: Develop a synthetic project that simulates a real-world scenario or system.  \n- **Deliverables**:  \n  - A conceptual framework document.  \n  - A prototype model or simulation.  \n  - A risk assessment summary.  \n- **Constraints**:  \n  - No external spending.  \n  - Limited to 2 weeks.  \n  - No deployment or public release.  \n- **Team Leads**:  \n  - Lead Designer: [Name]  \n  - Lead Developer: [Name]  \n  - Lead Analyst: [Name]  \n\n---\n\n### **Risks**  \n- **Scope Creep**: The project may expand beyond the defined 2-week limit.  \n- **Resource Limitation**: Limited time and internal tools may hinder progress.  \n- **Unproven Tools**: Use of untested internal tools may lead to delays or errors.  \n- **Uncertainty in Feasibility**: The synthetic model may not align with real-world expectations.  \n\n---\n\n### **Evidence**  \n- **Current State**: No prior work has been executed.  \n- **Available Data**: Strategic objectives and project goals are defined.  \n- **Known Constraints**: No external spending, 2-week deadline.  \n- **Unknowns**:  \n  - Feasibility of the synthetic model.  \n  - Time required for tool setup and integration.  \n  - Potential for scope expansion.  \n\n---\n\n### **Next Step**  \n- **Action**: Finalize the conceptual framework and assign initial tasks to team leads.  \n- **Deadline**: Within 24 hours of this brief",
+      "error": "TypeError: re.test is not a function"
+    },
+    {
+      "role_id": "PMO-03",
+      "result": "PASS",
+      "checks": [
+        {
+          "name": "Budget",
+          "result": "PASS"
+        },
+        {
+          "name": "Cost controls",
+          "result": "PASS"
+        },
+        {
+          "name": "Approval gate",
+          "result": "PASS"
+        },
+        {
+          "name": "Unknown costs",
+          "result": "PASS"
+        },
+        {
+          "name": "Zero paid calls",
+          "result": "PASS"
+        },
+        {
+          "name": "task_id present",
+          "result": "PASS"
+        },
+        {
+          "name": "trace_id present",
+          "result": "PASS"
+        },
+        {
+          "name": "n8n_execution_id present",
+          "result": "PASS"
+        },
+        {
+          "name": "correct role/provider/model",
+          "result": "PASS"
+        }
+      ],
+      "http_status": 201,
+      "task_id": "task_6256eb34-69e6-4104-9d72-12237cdb2e17",
+      "trace_id": "trace_59c22754-e48f-4ba6-9dce-ae9beaa8a7e0",
+      "n8n_execution_id": "111",
+      "model": "qwen3:8b",
+      "output": "**Cost-Control Plan for Synthetic Project (Hard $0 External Budget)**  \n*Task ID: task_6256eb34-69e6-4104-9d72-12237cdb2e17*  \n*Trace ID: trace_59c22754-e48f-4ba6-9dce-ae9beaa8a7e0*  \n*Role ID: PMO-03*\n\n---\n\n### **Budget**  \n- **Total Approved Budget:** $0 (Hard budget constraint)  \n- **Allowed Spend:** No external spending is authorized. All resources must be sourced internally or through approved free tools.  \n- **No Paid Calls:** No paid API calls, subscriptions, or external services are authorized.  \n\n---\n\n### **Cost Controls**  \n- **Resource Allocation:** All synthetic project tasks must use internal tools, open-source software, or free cloud resources (e.g., Google Colab, AWS Free Tier, Azure Free Tier).  \n- **Cost Forecasting:** Use internal cost models or historical data to estimate potential costs. No external cost forecasting tools are authorized.  \n- **Spend Monitoring:** Track all resource usage and ensure no external charges are incurred.  \n- **Low-Cost Alternatives:** Propose and evaluate free or open-source alternatives to any paid tools or services.  \n- **No Irreversible Changes:** No deployment, publishing, or irreversible actions are allowed without explicit approval.  \n\n---\n\n### **Approval Gate**  \n- **No External Spending Approval:** No external purchases, subscriptions, or paid API calls are authorized.  \n- **Internal Resource Approval:** All internal resource usage must be pre-approved by the Program Manager or designated stakeholder.  \n- **Cost Control Review:** All cost-related decisions must be reviewed and approved by the Program Management Office (PMO) before execution.  \n\n---\n\n### **Unknown Costs**  \n- **Uncertainty in Cost Estimation:** Due to the hard $0 budget, any unknown or unscoped cost is considered a risk and must be flagged for review.  \n- **No Assumption of Free Resources:** While some free tools may be available, their usage must be explicitly approved and scoped.  \n- **No Tool Authority:** No external tools or services are authorized without explicit approval.  \n\n---\n\n**Note:** This plan assumes no external budget and no paid resources. All actions must be aligned with internal policies and approved by the Program Management Office."
+    },
+    {
+      "role_id": "PROD-03",
+      "result": "PASS",
+      "checks": [
+        {
+          "name": "Problem",
+          "result": "PASS"
+        },
+        {
+          "name": "User story",
+          "result": "PASS"
+        },
+        {
+          "name": "Acceptance",
+          "result": "PASS"
+        },
+        {
+          "name": "Given/When/Then",
+          "result": "PASS"
+        },
+        {
+          "name": "Out of scope",
+          "result": "PASS"
+        },
+        {
+          "name": "task_id present",
+          "result": "PASS"
+        },
+        {
+          "name": "trace_id present",
+          "result": "PASS"
+        },
+        {
+          "name": "n8n_execution_id present",
+          "result": "PASS"
+        },
+        {
+          "name": "correct role/provider/model",
+          "result": "PASS"
+        }
+      ],
+      "http_status": 201,
+      "task_id": "task_4c3d3329-c14d-44cc-9484-ffa7562f90aa",
+      "trace_id": "trace_383a6113-4d72-422d-8ba1-f2195f5a2bce",
+      "n8n_execution_id": "112",
+      "model": "qwen3:8b",
+      "output": "**Mini PRD: Local Task Cancellation**\n\n---\n\n### **Problem**\nUsers may need to cancel a task they have initiated locally before it is executed or synchronized with the system. Without a clear mechanism for cancellation, users may face unintended actions or data inconsistencies.\n\n---\n\n### **User Story**\nAs a user, I want to be able to cancel a task I have started locally so that it does not execute or persist in the system, ensuring that my actions are reflected accurately and without unintended consequences.\n\n---\n\n### **Acceptance Criteria**\n- The user must be able to cancel a task before it is executed.\n- The system must acknowledge the cancellation and prevent the task from running.\n- The user must receive a confirmation that the task has been successfully cancelled.\n- The system must not retain or execute the task after cancellation.\n- The cancellation must be visible in the task history or logs (if applicable).\n\n---\n\n### **Given, When, Then (Acceptance Test Matrix)**\n\n| Given | When | Then |\n|-------|------|------|\n| The user has initiated a local task | The user selects the \"Cancel Task\" option | The task is marked as cancelled and does not execute |\n| The user has initiated a local task | The user confirms the cancellation | The system displays a confirmation message: \"Task cancelled successfully\" |\n| The user has initiated a local task | The user cancels the task before it starts | The task is removed from the task queue and no action is taken |\n| The user has initiated a local task | The user cancels the task after it has started | The task is halted and marked as cancelled (if possible) |\n| The user has initiated a local task | The user cancels the task while it is in progress | The task is stopped and marked as cancelled, with a log entry indicating the cancellation |\n\n---\n\n### **Out of Scope**\n- Cancellation of tasks that have already been synchronized with the system.\n- Cancellation of tasks initiated by other users or external systems.\n- Cancellation of tasks that are part of a larger workflow or dependency chain.\n- Cancellation of tasks that are in a state where execution cannot be interrupted (e.g., system-critical tasks)."
+    },
+    {
+      "role_id": "QA-02",
+      "result": "FAIL",
+      "checks": [
+        {
+          "name": "Coverage",
+          "result": "PASS"
+        },
+        {
+          "name": "Positive case",
+          "result": "PASS"
+        },
+        {
+          "name": "Negative case",
+          "result": "FAIL"
+        },
+        {
+          "name": "Expected result",
+          "result": "PASS"
+        },
+        {
+          "name": "Pass/fail",
+          "result": "PASS"
+        },
+        {
+          "name": "task_id present",
+          "result": "PASS"
+        },
+        {
+          "name": "trace_id present",
+          "result": "PASS"
+        },
+        {
+          "name": "n8n_execution_id present",
+          "result": "PASS"
+        },
+        {
+          "name": "correct role/provider/model",
+          "result": "PASS"
+        }
+      ],
+      "http_status": 201,
+      "task_id": "task_a2b3f01f-b6b6-483c-b876-eb28746dd004",
+      "trace_id": "trace_9f9aa6d1-1167-4aed-8e1a-eff208263325",
+      "n8n_execution_id": "113",
+      "model": "qwen3:8b",
+      "output": "**Test Plan: Task Retries with Fresh IDs**\n\n**Task ID:** task_a2b3f01f-b6b6-483c-b876-eb28746dd004  \n**Trace ID:** trace_9f9aa6d1-1167-4aed-8e1a-eff208263325  \n**Role ID:** QA-02  \n**Test Strategy Version:** 1.0  \n**Date:** 2025-04-05  \n\n---\n\n### **1. Test Objective**\nTo validate the system's ability to retry a task with a fresh ID, ensuring that the retry mechanism does not reuse previous task IDs and maintains data integrity and uniqueness.\n\n---\n\n### **2. Test Coverage Mapping**\n\n| Test Type         | Risk Covered                                                                 | Description                                                                 |\n|-------------------|-----------------------------------------------------------------------------|-----------------------------------------------------------------------------|\n| Unit Test         | ID uniqueness, retry logic, task state management                           | Ensures that the retry function generates a new ID and updates task state. |\n| Integration Test  | Task retry flow with external systems (e.g., message queues, databases)    | Validates that the retry mechanism works correctly with external services. |\n| E2E Test          | Full task lifecycle including retries                                       | Ensures that the retry process does not interfere with the overall workflow. |\n| Accessibility Test| UI feedback for retry actions                                               | Ensures that retry actions are accessible and clearly communicated to users. |\n| AI Test           | Predictive retry logic based on historical task data                       | Validates that AI-driven retry decisions do not reuse old task IDs.        |\n| Adversarial Test  | Malicious retry attempts with invalid or duplicate IDs                     | Ensures the system rejects invalid retry attempts and generates fresh IDs. |\n\n---\n\n### **3. Test Cases**\n\n#### **Test Case 1: Positive Case – Successful Retry with Fresh ID**\n- **Description:** A task is failed, and a retry is initiated. The system should generate a new task ID and process the retry.\n- **Expected Result:** The task is retried with a new ID, and the system logs the new ID and retry status.\n- **Pass/Fail Criteria:** \n  - A new task ID is generated.\n  - The retry status is updated to \"in progress\".\n  - No duplicate task ID is used.\n- **Coverage:** Unit, Integration, E2E, AI\n\n#### **Test Case 2:"
+    },
+    {
+      "role_id": "SEC-02",
+      "result": "PASS",
+      "checks": [
+        {
+          "name": "Assets",
+          "result": "PASS"
+        },
+        {
+          "name": "Threat",
+          "result": "PASS"
+        },
+        {
+          "name": "Mitigation",
+          "result": "PASS"
+        },
+        {
+          "name": "Severity",
+          "result": "PASS"
+        },
+        {
+          "name": "Residual risk",
+          "result": "PASS"
+        },
+        {
+          "name": "Loopback",
+          "result": "PASS"
+        },
+        {
+          "name": "task_id present",
+          "result": "PASS"
+        },
+        {
+          "name": "trace_id present",
+          "result": "PASS"
+        },
+        {
+          "name": "n8n_execution_id present",
+          "result": "PASS"
+        },
+        {
+          "name": "correct role/provider/model",
+          "result": "PASS"
+        }
+      ],
+      "http_status": 201,
+      "task_id": "task_56355608-eb75-4773-a425-6e8a60703887",
+      "trace_id": "trace_50bd8722-a7fa-4476-845f-2c6f62bf5fd0",
+      "n8n_execution_id": "114",
+      "model": "qwen3:8b",
+      "output": "**Threat Model for Local Loopback Task API**  \n**Task ID:** task_56355608-eb75-4773-a425-6e8a60703887  \n**Trace ID:** trace_50bd8722-a7fa-4476-845f-2c6f62bf5fd0  \n**Role ID:** SEC-02  \n\n---\n\n### **1. Assets**  \n- **Local Loopback API Endpoint** (e.g., `localhost:8080/api/task`)  \n- **Internal System Resources** (e.g., databases, caches, internal services)  \n- **User Session Data** (e.g., authentication tokens, session IDs)  \n- **Internal Business Logic** (e.g., task execution, validation rules)  \n\n---\n\n### **2. Threats**  \n| **Threat** | **Description** | **Severity** | **Residual Risk** |\n|------------|------------------|--------------|--------------------|\n| **Local Privilege Escalation** | An attacker with local access could exploit the loopback API to escalate privileges or access internal systems. | High | Potential for unauthorized system control or data exfiltration. |\n| **Insecure API Design** | Poorly designed API endpoints may expose internal logic or allow unintended data access. | Medium | Risk of data leakage or misuse of internal resources. |\n| **Session Hijacking** | If session tokens are not properly managed, an attacker could hijack a user session via the loopback API. | Medium | Risk of unauthorized access to user data or actions. |\n| **Data Exposure** | Internal data (e.g., logs, system metrics) may be exposed through the loopback API if not properly secured. | Medium | Risk of sensitive data leakage. |\n| **Denial of Service (DoS)** | The loopback API could be used to overload internal systems or services, leading to service disruption. | Low | Potential for temporary system unavailability. |\n\n---\n\n### **3. Mitigations**  \n| **Mitigation** | **Description** | **Control Owner** |\n|----------------|------------------|---------------------|\n| **Input Validation and Sanitization** | Ensure all inputs to the loopback API are validated and sanitized to prevent injection attacks. | DevOps / Security Team |\n| **Access Control** | Implement role-based access control (RBAC) to restrict"
+    },
+    {
+      "role_id": "BE-04",
+      "result": "PASS",
+      "checks": [
+        {
+          "name": "HTTP method/path",
+          "result": "PASS"
+        },
+        {
+          "name": "Request fields",
+          "result": "PASS"
+        },
+        {
+          "name": "Response fields",
+          "result": "PASS"
+        },
+        {
+          "name": "Invalid status",
+          "result": "PASS"
+        },
+        {
+          "name": "Correlation",
+          "result": "PASS"
+        },
+        {
+          "name": "JSON",
+          "result": "PASS"
+        },
+        {
+          "name": "task_id present",
+          "result": "PASS"
+        },
+        {
+          "name": "trace_id present",
+          "result": "PASS"
+        },
+        {
+          "name": "n8n_execution_id present",
+          "result": "PASS"
+        },
+        {
+          "name": "correct role/provider/model",
+          "result": "PASS"
+        }
+      ],
+      "http_status": 201,
+      "task_id": "task_081981b0-ecff-4e1c-b564-14166688cee4",
+      "trace_id": "trace_52326ff8-c8f9-48eb-93e4-658483f8e070",
+      "n8n_execution_id": "115",
+      "model": "qwen3:8b",
+      "output": "**Task Retry API Contract**\n\n---\n\n### **1. Endpoint**\n- **HTTP Method:** `POST`\n- **Path:** `/api/v1/tasks/retry`\n\n---\n\n### **2. Request Schema**\n\n```json\n{\n  \"task_id\": \"string\",\n  \"correlation_id\": \"string\",\n  \"retry_count\": \"integer\",\n  \"original_error\": \"string\"\n}\n```\n\n**Fields Description:**\n\n| Field           | Type   | Description                                      |\n|-----------------|--------|--------------------------------------------------|\n| `task_id`       | string | Unique identifier of the task to retry.          |\n| `correlation_id`| string | Correlation ID for tracking across services.     |\n| `retry_count`   | integer| Number of times the task has been retried.       |\n| `original_error`| string | Optional field to provide context of the failure. |\n\n---\n\n### **3. Response Schema**\n\n```json\n{\n  \"task_id\": \"string\",\n  \"status\": \"string\",\n  \"message\": \"string\",\n  \"retry_count\": \"integer\",\n  \"correlation_id\": \"string\"\n}\n```\n\n**Fields Description:**\n\n| Field           | Type   | Description                                      |\n|-----------------|--------|--------------------------------------------------|\n| `task_id`       | string | Unique identifier of the task.                   |\n| `status`        | string | Status of the retry operation (e.g., \"success\", \"queued\", \"failed\"). |\n| `message`       | string | Human-readable message describing the result.    |\n| `retry_count`   | integer| Updated retry count after the operation.         |\n| `cor\n| `correlation_id`| string | Correlation ID for tracking across services.     |\n\n---\n\n### **4. Status Codes**\n\n| Status Code | Description                          |\n|-------------|--------------------------------------|\n| `200 OK`    | Retry initiated successfully.        |\n| `400 Bad Request` | Invalid or missing required fields. |\n| `404 Not Found`   | Task ID does not exist.              |\n| `429 Too Many Requests` | Rate limit exceeded.             |\n\n---\n\n### **5. Idempotency & Correlation Behavior**\n\n- **Idempotency:** The endpoint is **not idempotent**. Each retry request is treated as a new operation.\n- **Correlation:** The `correlation_id` is used to track the retry request across services and logs.\n"
+    },
+    {
+      "role_id": "INF-04",
+      "result": "FAIL",
+      "checks": [
+        {
+          "name": "Symptoms",
+          "result": "PASS"
+        },
+        {
+          "name": "Checks",
+          "result": "PASS"
+        },
+        {
+          "name": "Threshold",
+          "result": "PASS"
+        },
+        {
+          "name": "Mitigation",
+          "result": "PASS"
+        },
+        {
+          "name": "Rollback",
+          "result": "FAIL"
+        },
+        {
+          "name": "Evidence",
+          "result": "FAIL"
+        },
+        {
+          "name": "task_id present",
+          "result": "PASS"
+        },
+        {
+          "name": "trace_id present",
+          "result": "PASS"
+        },
+        {
+          "name": "n8n_execution_id present",
+          "result": "PASS"
+        },
+        {
+          "name": "correct role/provider/model",
+          "result": "PASS"
+        }
+      ],
+      "http_status": 201,
+      "task_id": "task_1246985a-3a06-455a-8796-8fcf77f84a0a",
+      "trace_id": "trace_d4028478-c776-4a86-8527-8123d4cc5527",
+      "n8n_execution_id": "116",
+      "model": "qwen3:8b",
+      "output": "**Service Incident Runbook: Stalled Queue**\n\n**Service:** [Insert Service Name]  \n**Component:** [Insert Component Name, e.g., Message Queue, Task Processor, Worker Pool]  \n**Incident Type:** Stalled Queue  \n**Severity:** Critical  \n**Owner:** [Insert Team/Owner Name]  \n**Runbook ID:** task_1246985a-3a06-455a-8796-8fcf77f84a0a  \n**Trace ID:** trace_d4028478-c776-4a86-8527-8123d4cc5527  \n\n---\n\n### **1. Symptoms**\n- Queue length is increasing beyond expected thresholds.\n- No new messages are being processed by workers.\n- Consumer lag is growing.\n- System logs show \"queue stalled\" or \"no messages available\" errors.\n- End-user requests are timing out or failing.\n- Metrics show a drop in throughput or increase in latency.\n\n---\n\n### **2. Checks**\n- **Queue Length:** Check if the queue length is above the defined threshold.\n- **Consumer Lag:** Verify if consumer lag is increasing or exceeding the acceptable range.\n- **Worker Health:** Confirm that workers are running and not crashing.\n- **Message Visibility:** Check if messages are becoming invisible or stuck in the queue.\n- **System Logs:** Review logs for any errors, warnings, or exceptions related to the queue.\n- **Network Connectivity:** Ensure that there are no network issues between the producer and consumer.\n- **Resource Utilization:** Check CPU, memory, and disk usage on the queue host or service.\n\n---\n\n### **3. Alert Threshold**\n- **Queue Length Threshold:** [Insert Threshold, e.g., > 10,000 messages for 5 minutes]\n- **Consumer Lag Threshold:** [Insert Threshold, e.g., > 1 hour]\n- **Error Rate Threshold:** [Insert Threshold, e.g., > 5% error rate for 10 minutes]\n- **Throughput Threshold:** [Insert Threshold, e.g., < 50 messages per second for 5 minutes]\n\n---\n\n### **4. Mitigation**\n- **Restart Consumers:** Restart the consumer processes to clear any stuck state.\n- **Scale Consumers:** Temporarily scale up the number of consumers to process the backlog.\n- **Check for Deadlocks:** Investigate for any deadlocks or blocking operations in the queue system"
+    },
+    {
+      "role_id": "DES-03",
+      "result": "PASS",
+      "checks": [
+        {
+          "name": "Success",
+          "result": "PASS"
+        },
+        {
+          "name": "Error",
+          "result": "PASS"
+        },
+        {
+          "name": "Cancellation",
+          "result": "PASS"
+        },
+        {
+          "name": "Recovery",
+          "result": "PASS"
+        },
+        {
+          "name": "Keyboard",
+          "result": "PASS"
+        },
+        {
+          "name": "Status feedback",
+          "result": "PASS"
+        },
+        {
+          "name": "task_id present",
+          "result": "PASS"
+        },
+        {
+          "name": "trace_id present",
+          "result": "PASS"
+        },
+        {
+          "name": "n8n_execution_id present",
+          "result": "PASS"
+        },
+        {
+          "name": "correct role/provider/model",
+          "result": "PASS"
+        }
+      ],
+      "http_status": 201,
+      "task_id": "task_c811aad4-6b4a-4430-a7cf-5cecab6640a1",
+      "trace_id": "trace_f4fd910e-05bf-4fc8-9616-39f3226fbc1a",
+      "n8n_execution_id": "117",
+      "model": "qwen3:8b",
+      "output": "**Task Lifecycle Interaction: User Approval Workflow**  \n*Task ID: task_c811aad4-6b4a-4430-a7cf-5cecab6640a1*  \n*Trace ID: trace_f4fd910e-05bf-4fc8-9616-39f3226fbc1a*  \n*Role: DES-03 (User-Flow Designer)*  \n\n---\n\n### 🧭 **Overview**  \nThis interaction describes a task lifecycle for a user-initiated action (e.g., submitting a form, requesting access, or initiating a process) that requires **user approval**. The flow includes **happy path**, **error**, **cancellation**, and **recovery** branches, with **keyboard accessibility** and **status feedback** explicitly defined.\n\n---\n\n### 📌 **1. Happy Path (Success)**  \n**User Action:** Initiates a task (e.g., submits a form, requests access, or triggers a process).  \n**System Response:**  \n- Displays a confirmation modal with a **\"Confirm\"** button and a **\"Cancel\"** button.  \n- Provides **keyboard focus** on the \"Confirm\" button by default.  \n- Displays **status feedback** (e.g., \"Your request is being processed...\") in a non-modal area.  \n- **User Approval:** Required before proceeding.  \n- **Outcome:** Task is approved, and the system proceeds with the action (e.g., form submitted, access granted).  \n\n**Handoff:**  \n- **Frontend (FE):** Render confirmation modal with keyboard focus and status feedback.  \n- **Backend (BE):** Process the task if approved.  \n- **AI (if applicable):** No AI involvement in this branch.  \n\n---\n\n### 🚫 **2. Error Branch**  \n**User Action:** Task fails due to invalid input, missing data, or system error.  \n**System Response:**  \n- Displays an **error modal** with a **\"Retry\"** button and a **\"Cancel\"** button.  \n- Provides **keyboard focus** on the \"Retry\" button by default.  \n- Displays **status feedback** (e.g., \"An error occurred. Please try again.\") in a non-modal area.  \n- **User Approval:** Not required in this branch.  \n- **Outcome:** Task is not processed, and the user is prompted to correct the issue.  \n\n**Hand"
+    },
+    {
+      "role_id": "UR-05",
+      "result": "FAIL",
+      "checks": [
+        {
+          "name": "Three findings",
+          "result": "FAIL"
+        },
+        {
+          "name": "Severity",
+          "result": "PASS"
+        },
+        {
+          "name": "Evidence",
+          "result": "PASS"
+        },
+        {
+          "name": "Recommendation",
+          "result": "PASS"
+        },
+        {
+          "name": "Assumptions",
+          "result": "PASS"
+        },
+        {
+          "name": "task_id present",
+          "result": "PASS"
+        },
+        {
+          "name": "trace_id present",
+          "result": "PASS"
+        },
+        {
+          "name": "n8n_execution_id present",
+          "result": "PASS"
+        },
+        {
+          "name": "correct role/provider/model",
+          "result": "PASS"
+        }
+      ],
+      "http_status": 201,
+      "task_id": "task_2a693572-cb68-45b3-89c4-97ce5f78ced8",
+      "trace_id": "trace_812df757-f97a-4633-aaac-9425b841c62d",
+      "n8n_execution_id": "118",
+      "model": "qwen3:8b",
+      "output": "**Usability Report: Synthetic Task Queue Screen Review**  \n**Task ID:** task_2a693572-cb68-45b3-89c4-97ce5f78ced8  \n**Trace ID:** trace_812df757-f97a-4633-aaac-9425b841c62d  \n**Role ID:** UR-05  \n**Date:** 2025-04-05  \n\n---\n\n### **Usability Finding 1**  \n**Severity:** High  \n**Evidence:**  \n- During a simulated task, the user attempted to prioritize a task by dragging it to the top of the queue but found no visual or interactive feedback.  \n- The user hesitated for 4.2 seconds before attempting to click a \"Mark as Priority\" button, which was located below the task queue.  \n- The user assumed the drag-and-drop action would work, but it did not, leading to confusion and a failed task.  \n\n**Assumption:**  \n- The user expected drag-and-drop to be a valid interaction for task prioritization.  \n- The lack of visual feedback (e.g., color change, animation) made the action feel unresponsive.  \n\n**Recommendation:**  \n- Implement visual feedback (e.g., color change, animation) when a task is dragged or prioritized.  \n- Provide clear confirmation (e.g., \"Task prioritized\") after the action is completed.  \n- Consider adding a \"Mark as Priority\" button near the task queue for accessibility.  \n\n---\n\n### **Usability Finding 2**  \n**Severity:** Medium  \n**Evidence:**  \n- The user attempted to filter tasks by status (e.g., \"In Progress,\" \"Pending\") but found the filter dropdown to be non-functional.  \n- The user clicked the dropdown, but no options appeared, and the interface did not respond.  \n- The user spent 6.5 seconds trying to figure out how to filter tasks and eventually gave up.  \n\n**Assumption:**  \n- The filter dropdown was not properly implemented or was hidden behind a UI layer.  \n- The user expected the filter to be functional and accessible.  \n\n**Recommendation:**  \n- Ensure the filter dropdown is fully functional and visible.  \n- Test the filter interaction with a real user to confirm its usability.  \n- Consider adding a tooltip or placeholder text to indicate that filtering is available.  \n\n---\n\n###"
+    },
+    {
+      "role_id": "AI-02",
+      "result": "PASS",
+      "checks": [
+        {
+          "name": "Queued",
+          "result": "PASS"
+        },
+        {
+          "name": "Running",
+          "result": "PASS"
+        },
+        {
+          "name": "Completed",
+          "result": "PASS"
+        },
+        {
+          "name": "Failed",
+          "result": "PASS"
+        },
+        {
+          "name": "Cancelled",
+          "result": "PASS"
+        },
+        {
+          "name": "Retry",
+          "result": "PASS"
+        },
+        {
+          "name": "Task/trace",
+          "result": "PASS"
+        },
+        {
+          "name": "Invalid transitions",
+          "result": "PASS"
+        },
+        {
+          "name": "task_id present",
+          "result": "PASS"
+        },
+        {
+          "name": "trace_id present",
+          "result": "PASS"
+        },
+        {
+          "name": "n8n_execution_id present",
+          "result": "PASS"
+        },
+        {
+          "name": "correct role/provider/model",
+          "result": "PASS"
+        }
+      ],
+      "http_status": 201,
+      "task_id": "task_4706039c-7733-4d39-94a0-80c9d36b5ff9",
+      "trace_id": "trace_059a952d-1367-402b-b73f-785f4eb3b2f4",
+      "n8n_execution_id": "119",
+      "model": "qwen3:8b",
+      "output": "**Orchestration State Machine Design**  \n**Task ID:** task_4706039c-7733-4d39-94a0-80c9d36b5ff9  \n**Trace ID:** trace_059a952d-1367-402b-b73f-785f4eb3b2f4  \n**Role ID:** AI-02  \n\n---\n\n### **State Machine Overview**  \nThis orchestration state machine models the lifecycle of a task and its trace, including valid and invalid transitions, with support for task/trace correlation, retries, and cancellation.\n\n---\n\n### **States**  \n1. **Queued**  \n2. **Running**  \n3. **Completed**  \n4. **Failed**  \n5. **Cancelled**  \n6. **Retry**  \n\n---\n\n### **Transitions**  \n#### **Valid Transitions**  \n- **Queued → Running**  \n  - *Condition:* Task is scheduled and ready to execute.  \n- **Running → Completed**  \n  - *Condition:* Task execution finishes successfully.  \n- **Running → Failed**  \n  - *Condition:* Task execution fails due to an error or timeout.  \n- **Running → Cancelled**  \n  - *Condition:* Task is explicitly cancelled by the user or system.  \n- **Failed → Retry**  \n  - *Condition:* Task is retried after a failure, with retry count < max retries.  \n- **Retry → Running**  \n  - *Condition:* Retry is initiated, and the task is rescheduled for execution.  \n- **Retry → Failed**  \n  - *Condition:* Retry attempt fails again.  \n- **Retry → Cancelled**  \n  - *Condition:* Retry is cancelled before execution.  \n\n#### **Invalid Transitions**  \n- **Queued → Failed**  \n  - *Reason:* A task cannot fail before it is executed.  \n- **Queued → Cancelled**  \n  - *Reason:* A task cannot be cancelled before it is scheduled.  \n- **Completed → Running**  \n  - *Reason:* A completed task cannot be restarted.  \n- **Completed → Failed**  \n  - *Reason:* A completed task cannot fail.  \n- **Completed → Retry**  \n  - *Reason:* A completed task cannot be retried.  \n- **Failed → Queued**  \n  - *Reason:* A failed task cannot be"
+    },
+    {
+      "role_id": "D-00",
+      "revision": true,
+      "prior_task_id": "task_6916a667-8c58-4f75-af6b-a10a358cc63d",
+      "result": "FAIL",
+      "checks": [
+        {
+          "name": "all required headings",
+          "result": "PASS"
+        },
+        {
+          "name": "unassigned owners acknowledged",
+          "result": "FAIL"
+        }
+      ],
+      "http_status": 201,
+      "task_id": "task_cc585448-7a5c-431e-8f4b-4ac27ac80f61",
+      "trace_id": "trace_e481373a-2095-4eae-b088-903b32aeb623",
+      "n8n_execution_id": "120",
+      "model": "qwen3:8b",
+      "output": "**Decision**  \nLaunch synthetic 2-week $0 project to validate feasibility of synthetic data generation for QA testing. No budget allocated; no real-world impact.  \n\n**Scope**  \nCreate synthetic data for QA testing; no production use. No team leads assigned.  \n\n**Risks**  \nUnclear data requirements; no real-world use case. No evidence of need or success.  \n\n**Evidence**  \nNo data, no artifacts, no team leads. No real-world impact.  \n\n**Next step**  \nAssign team leads; define data requirements. Escalate to Wejdan for budget and scope approval.  \n\n**Unknowns**  \nData needs, team leads, real-world impact, and success metrics are undefined.",
+      "error": "TypeError: re.test is not a function"
+    },
+    {
+      "role_id": "QA-02",
+      "revision": true,
+      "prior_task_id": "task_a2b3f01f-b6b6-483c-b876-eb28746dd004",
+      "result": "PASS",
+      "checks": [
+        {
+          "name": "coverage",
+          "result": "PASS"
+        },
+        {
+          "name": "positive case",
+          "result": "PASS"
+        },
+        {
+          "name": "negative case",
+          "result": "PASS"
+        },
+        {
+          "name": "expected result",
+          "result": "PASS"
+        },
+        {
+          "name": "pass/fail",
+          "result": "PASS"
+        },
+        {
+          "name": "negative expectation",
+          "result": "PASS"
+        },
+        {
+          "name": "task_id present",
+          "result": "PASS"
+        },
+        {
+          "name": "trace_id present",
+          "result": "PASS"
+        },
+        {
+          "name": "n8n_execution_id present",
+          "result": "PASS"
+        },
+        {
+          "name": "correct role/provider/model",
+          "result": "PASS"
+        }
+      ],
+      "http_status": 201,
+      "task_id": "task_51240172-94b0-4b79-8e2e-8d8e3dfa3845",
+      "trace_id": "trace_ac86a3c7-a170-4552-be5a-8aa87e306397",
+      "n8n_execution_id": "121",
+      "model": "qwen3:8b",
+      "output": "**Test Plan - Retry Failed Task with Fresh IDs**  \n**Coverage:** Task retry, ID uniqueness, source status validation.  \n**Positive Case:** Retry with valid, unused ID and active source.  \n**Negative Case:** Retry with invalid source status (e.g., deleted) or reused ID.  \n**Expected Result:** Positive case succeeds; negative case rejects request.  \n**Pass/Fail Criteria:** Task completes successfully for valid inputs; rejection for invalid source or reused ID.  \n**Notes:** Ensure fresh IDs and source status are validated during retry logic."
+    },
+    {
+      "role_id": "INF-04",
+      "revision": true,
+      "prior_task_id": "task_1246985a-3a06-455a-8796-8fcf77f84a0a",
+      "result": "PASS",
+      "checks": [
+        {
+          "name": "all six sections",
+          "result": "PASS"
+        },
+        {
+          "name": "reversible rollback",
+          "result": "PASS"
+        },
+        {
+          "name": "task_id present",
+          "result": "PASS"
+        },
+        {
+          "name": "trace_id present",
+          "result": "PASS"
+        },
+        {
+          "name": "n8n_execution_id present",
+          "result": "PASS"
+        },
+        {
+          "name": "correct role/provider/model",
+          "result": "PASS"
+        }
+      ],
+      "http_status": 201,
+      "task_id": "task_c47c2989-8ff2-4c47-a2c2-be15f13f88ee",
+      "trace_id": "trace_a840641d-eb9f-4d1f-9893-caa02ca7244d",
+      "n8n_execution_id": "122",
+      "model": "qwen3:8b",
+      "output": "**Stalled Local Queue Runbook**\n\n**Symptoms:**  \n- Queue backlog grows without processing.  \n- Worker logs show \"no tasks available\" or timeout.  \n- Delayed downstream service responses.  \n\n**Checks:**  \n- Confirm queue is not empty.  \n- Validate worker connectivity and health.  \n- Check for configuration drift or resource limits.  \n\n**Alert Threshold:**  \n- Queue size > 10,000 items for > 5 minutes.  \n\n**Mitigation:**  \n- Restart local worker process.  \n- Clear stale queue entries (if safe).  \n\n**Rollback:**  \n- Restore previous worker binary and config.  \n- Revert queue state to pre-stall snapshot.  \n\n**Evidence to Record:**  \n- Queue size at stall.  \n- Worker logs and timestamps.  \n- Rollback steps and verification."
+    },
+    {
+      "role_id": "UR-05",
+      "revision": true,
+      "prior_task_id": "task_2a693572-cb68-45b3-89c4-97ce5f78ced8",
+      "result": "FAIL",
+      "checks": [
+        {
+          "name": "three labeled findings",
+          "result": "PASS"
+        },
+        {
+          "name": "severity",
+          "result": "PASS"
+        },
+        {
+          "name": "hypothetical evidence",
+          "result": "PASS"
+        },
+        {
+          "name": "recommendation",
+          "result": "PASS"
+        }
+      ],
+      "http_status": 201,
+      "task_id": "task_51759024-7267-459e-8724-12567f7f5c5d",
+      "trace_id": "trace_a5d5bd39-fd87-4783-a541-dc186a74d574",
+      "n8n_execution_id": "123",
+      "model": "qwen3:8b",
+      "output": "**Finding 1 (Severity: High):**  \n**Hypothetical Evidence:** Users may struggle to identify the priority of tasks without clear visual indicators.  \n**Recommendation:** Implement color-coding or icons to differentiate task urgency and status.\n\n**Finding 2 (Severity: Medium):**  \n**Hypothetical Evidence:** The absence of a search/filter function could hinder task management for users with large queues.  \n**Recommendation:** Add a search bar and filter options to enhance task navigation and retrieval.\n\n**Finding 3 (Severity: Low):**  \n**Hypothetical Evidence:** Users might find the task completion confirmation message unclear or non-existent.  \n**Recommendation:** Provide a clear, visible confirmation message upon task completion to improve user feedback.",
+      "error": "TypeError: re.test is not a function"
+    },
+    {
+      "role_id": "D-00",
+      "revision": true,
+      "http_status": 201,
+      "task_id": "task_089489d8-e725-4d55-afd6-31a67de83abb",
+      "trace_id": "trace_3bb7ca9e-b562-4d2d-963e-1a11b5c20f95",
+      "n8n_execution_id": "124",
+      "model": "qwen3:8b",
+      "output": "**Decision Brief – Synthetic Project**  \n**Task ID:** task_089489d8-e725-4d55-afd6-31a67de83abb  \n**Trace ID:** trace_3bb7ca9e-b562-4d2d-963e-1a11b5c20f95  \n\n---\n\n**Decision**  \nThe synthetic project is initiated with a 2-week timeline and $0 external spend. No team leads are assigned at this stage. The initiative is scoped to internal planning and conceptual design only, with no deployment or production impact.\n\n---\n\n**Scope**  \n- Define project objectives and deliverables in alignment with internal strategic goals.  \n- Conduct a feasibility analysis of synthetic data generation and integration.  \n- Identify potential use cases and stakeholder requirements.  \n- Prepare a conceptual architecture and risk assessment.  \n\n---\n\n**Risks**  \n- Unclear stakeholder requirements may lead to misaligned deliverables.  \n- Limited internal expertise in synthetic data generation may delay progress.  \n- No external spend means reliance on internal resources and tools.  \n- No team leads may result in unclear ownership and accountability.  \n\n---\n\n**Evidence**  \n- No actual evidence or data has been provided.  \n- No execution has occurred.  \n- No tools or systems have been engaged.  \n\n---\n\n**Next step**  \nAssign team leads and define ownership for the synthetic project. Conduct a stakeholder alignment session to clarify requirements and expectations. Begin internal feasibility analysis with available resources.",
+      "checks": [
+        {
+          "name": "required sections",
+          "result": "PASS"
+        },
+        {
+          "name": "unassigned leads",
+          "result": "PASS"
+        },
+        {
+          "name": "no false execution claim",
+          "result": "PASS"
+        },
+        {
+          "name": "task_id present",
+          "result": "PASS"
+        },
+        {
+          "name": "trace_id present",
+          "result": "PASS"
+        },
+        {
+          "name": "n8n_execution_id present",
+          "result": "PASS"
+        },
+        {
+          "name": "correct role/provider/model",
+          "result": "PASS"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "role_id": "UR-05",
+      "revision": true,
+      "http_status": 201,
+      "task_id": "task_efa7410a-53f0-425a-a7ea-4a685d7cf6cb",
+      "trace_id": "trace_71cf1551-2bfe-4897-8a08-3e3c949783de",
+      "n8n_execution_id": "125",
+      "model": "qwen3:8b",
+      "output": "Finding 1: Severity - High. Hypothetical evidence: Users may struggle to locate the task queue due to poor visibility in the interface. Recommendation: Improve the task queue's visibility and accessibility through clear labeling and placement.\n\nFinding 2: Severity - Medium. Hypothetical evidence: Task descriptions may be too vague, leading to confusion about task priorities. Recommendation: Enhance task descriptions with clear priority indicators and due dates.\n\nFinding 3: Severity - Low. Hypothetical evidence: Users might take longer to sort tasks by status. Recommendation: Add a sorting option by status to streamline task management.",
+      "checks": [
+        {
+          "name": "three findings",
+          "result": "PASS"
+        },
+        {
+          "name": "severity/evidence/recommendation present",
+          "result": "PASS"
+        },
+        {
+          "name": "no fabricated observations",
+          "result": "PASS"
+        },
+        {
+          "name": "task_id present",
+          "result": "PASS"
+        },
+        {
+          "name": "trace_id present",
+          "result": "PASS"
+        },
+        {
+          "name": "n8n_execution_id present",
+          "result": "PASS"
+        },
+        {
+          "name": "correct role/provider/model",
+          "result": "PASS"
+        }
+      ],
+      "result": "PASS"
+    }
+  ],
+  "completed": 16,
+  "passed": 10,
+  "failed": 6,
+  "completed_at": "2026-10-18T08:30:05.731Z",
+  "overall": "PASS",
+  "revision_count": 4,
+  "latest_role_summary": {
+    "expected": 10,
+    "completed": 10,
+    "passed": 10,
+    "failed": 0,
+    "entries": [
+      {
+        "role_id": "D-00",
+        "result": "PASS",
+        "task_id": "task_089489d8-e725-4d55-afd6-31a67de83abb",
+        "trace_id": "trace_3bb7ca9e-b562-4d2d-963e-1a11b5c20f95",
+        "n8n_execution_id": "124",
+        "check_count": 7
+      },
+      {
+        "role_id": "PMO-03",
+        "result": "PASS",
+        "task_id": "task_6256eb34-69e6-4104-9d72-12237cdb2e17",
+        "trace_id": "trace_59c22754-e48f-4ba6-9dce-ae9beaa8a7e0",
+        "n8n_execution_id": "111",
+        "check_count": 9
+      },
+      {
+        "role_id": "PROD-03",
+        "result": "PASS",
+        "task_id": "task_4c3d3329-c14d-44cc-9484-ffa7562f90aa",
+        "trace_id": "trace_383a6113-4d72-422d-8ba1-f2195f5a2bce",
+        "n8n_execution_id": "112",
+        "check_count": 9
+      },
+      {
+        "role_id": "QA-02",
+        "result": "PASS",
+        "task_id": "task_51240172-94b0-4b79-8e2e-8d8e3dfa3845",
+        "trace_id": "trace_ac86a3c7-a170-4552-be5a-8aa87e306397",
+        "n8n_execution_id": "121",
+        "check_count": 10
+      },
+      {
+        "role_id": "SEC-02",
+        "result": "PASS",
+        "task_id": "task_56355608-eb75-4773-a425-6e8a60703887",
+        "trace_id": "trace_50bd8722-a7fa-4476-845f-2c6f62bf5fd0",
+        "n8n_execution_id": "114",
+        "check_count": 10
+      },
+      {
+        "role_id": "BE-04",
+        "result": "PASS",
+        "task_id": "task_081981b0-ecff-4e1c-b564-14166688cee4",
+        "trace_id": "trace_52326ff8-c8f9-48eb-93e4-658483f8e070",
+        "n8n_execution_id": "115",
+        "check_count": 10
+      },
+      {
+        "role_id": "INF-04",
+        "result": "PASS",
+        "task_id": "task_c47c2989-8ff2-4c47-a2c2-be15f13f88ee",
+        "trace_id": "trace_a840641d-eb9f-4d1f-9893-caa02ca7244d",
+        "n8n_execution_id": "122",
+        "check_count": 6
+      },
+      {
+        "role_id": "DES-03",
+        "result": "PASS",
+        "task_id": "task_c811aad4-6b4a-4430-a7cf-5cecab6640a1",
+        "trace_id": "trace_f4fd910e-05bf-4fc8-9616-39f3226fbc1a",
+        "n8n_execution_id": "117",
+        "check_count": 10
+      },
+      {
+        "role_id": "UR-05",
+        "result": "PASS",
+        "task_id": "task_efa7410a-53f0-425a-a7ea-4a685d7cf6cb",
+        "trace_id": "trace_71cf1551-2bfe-4897-8a08-3e3c949783de",
+        "n8n_execution_id": "125",
+        "check_count": 7
+      },
+      {
+        "role_id": "AI-02",
+        "result": "PASS",
+        "task_id": "task_4706039c-7733-4d39-94a0-80c9d36b5ff9",
+        "trace_id": "trace_059a952d-1367-402b-b73f-785f4eb3b2f4",
+        "n8n_execution_id": "119",
+        "check_count": 12
+      }
+    ]
+  },
+  "initial_attempt_failures_preserved": [
+    {
+      "role_id": "D-00",
+      "task_id": "task_6916a667-8c58-4f75-af6b-a10a358cc63d",
+      "issues": [],
+      "note": "TypeError: re.test is not a function"
+    },
+    {
+      "role_id": "QA-02",
+      "task_id": "task_a2b3f01f-b6b6-483c-b876-eb28746dd004",
+      "issues": [
+        "Negative case"
+      ],
+      "note": null
+    },
+    {
+      "role_id": "INF-04",
+      "task_id": "task_1246985a-3a06-455a-8796-8fcf77f84a0a",
+      "issues": [
+        "Rollback",
+        "Evidence"
+      ],
+      "note": null
+    },
+    {
+      "role_id": "UR-05",
+      "task_id": "task_2a693572-cb68-45b3-89c4-97ce5f78ced8",
+      "issues": [
+        "Three findings"
+      ],
+      "note": null
+    },
+    {
+      "role_id": "D-00",
+      "task_id": "task_cc585448-7a5c-431e-8f4b-4ac27ac80f61",
+      "issues": [
+        "unassigned owners acknowledged"
+      ],
+      "note": "TypeError: re.test is not a function"
+    },
+    {
+      "role_id": "UR-05",
+      "task_id": "task_51759024-7267-459e-8724-12567f7f5c5d",
+      "issues": [],
+      "note": "TypeError: re.test is not a function"
+    }
+  ],
+  "evaluation_limitations": [
+    "Deterministic role-specific structure and safety assertions over synthetic prompts; not a human semantic quality certification.",
+    "Failed initial attempts and validator bugs are preserved; latest corrected probes are the summary outcomes.",
+    "No paid provider calls. The local Ollama quality probes used n8n; no Codex adapter validation invokes n8n."
+  ]
+}

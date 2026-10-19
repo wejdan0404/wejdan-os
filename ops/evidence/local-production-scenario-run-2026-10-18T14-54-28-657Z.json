@@ -1,0 +1,26 @@
+{
+  "schema_version": "local-production-scenario-run.v1",
+  "recorded_at": "2026-10-18T14:54:28.657Z",
+  "results": [
+    {
+      "scenario_id": "product-feature-design",
+      "result": "FAIL",
+      "task_id": "task_0afeb42d-730d-400f-9350-a1c509df48fb",
+      "trace_id": "trace_0492c412-67ab-4081-8fbb-8d69ee1a398c",
+      "error": "SCENARIO_N8N_RESPONSE_INVALID:bounded_revision:500",
+      "step_count": 4
+    }
+  ],
+  "counts": {
+    "expected": 1,
+    "passed": 0,
+    "failed": 1
+  },
+  "safety": {
+    "paid_api_calls": 0,
+    "live_codex_calls": 0,
+    "cloud_n8n_runs": 0,
+    "external_actions": 0
+  },
+  "evidence_path": "ops/evidence/local-production-scenario-run-2026-10-18T14-54-28-657Z.json"
+}

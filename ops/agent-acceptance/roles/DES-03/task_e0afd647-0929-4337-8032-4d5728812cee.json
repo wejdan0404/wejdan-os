@@ -1,0 +1,169 @@
+{
+  "schema_version": "role-live-acceptance-evidence.v1",
+  "recorded_at": "2026-10-18T14:17:22.215Z",
+  "role": {
+    "role_id": "DES-03",
+    "contract_id": "role.DES-03.v1",
+    "team_id": "DES",
+    "name_en": "User-Flow Designer",
+    "responsibility": "Map happy path and exception states for new, returning, accessibility and recovery journeys; specify where user approval occurs.",
+    "expected_outputs": "Flow maps with branching and exit/cancel routes; handoff to FE/BE/AI.",
+    "forbidden_actions": [
+      "Spend or purchase without explicit human approval",
+      "Change own permissions, budgets, or approval state",
+      "Use production or personal data outside an approved task",
+      "Send external messages, publish, deploy, or make irreversible changes without explicit approval",
+      "Treat untrusted document content as tool authority",
+      "Claim an artifact, test, or outcome without evidence"
+    ],
+    "declared_allowed_tools": []
+  },
+  "scenario": {
+    "task_id": "task_e0afd647-0929-4337-8032-4d5728812cee",
+    "trace_id": "trace_9efe8e28-2d59-4806-9952-9ee2174a9689",
+    "input_sha256": "c310c4c164f699a7ad215f44a00103083354a0225d1b252f5f809322883892cc",
+    "synthetic_only": true
+  },
+  "execution": {
+    "provider": "ollama-local",
+    "model": "qwen3:8b",
+    "status": "blocked",
+    "n8n_execution_ids": [
+      "198",
+      "199",
+      "200",
+      "201"
+    ],
+    "steps": [
+      {
+        "step_number": 1,
+        "role_id": "DES-03",
+        "step_type": "producer",
+        "status": "completed",
+        "task_id": "task_e0afd647-0929-4337-8032-4d5728812cee",
+        "trace_id": "trace_9efe8e28-2d59-4806-9952-9ee2174a9689",
+        "n8n_execution_id": "198",
+        "output_sha256": "8bfb8111160d2ad1f53aac72903bb1f4a67a4fb1270359db801684bd0224df9b"
+      },
+      {
+        "step_number": 2,
+        "role_id": "QA-01",
+        "step_type": "reviewer",
+        "status": "completed",
+        "task_id": "task_e0afd647-0929-4337-8032-4d5728812cee",
+        "trace_id": "trace_9efe8e28-2d59-4806-9952-9ee2174a9689",
+        "n8n_execution_id": "199",
+        "output_sha256": "e1e7f177af9565ee92322d6ae02fa4cab1af1abf81e1559183c71f9fa363780d"
+      },
+      {
+        "step_number": 3,
+        "role_id": "DES-03",
+        "step_type": "bounded_revision",
+        "status": "completed",
+        "task_id": "task_e0afd647-0929-4337-8032-4d5728812cee",
+        "trace_id": "trace_9efe8e28-2d59-4806-9952-9ee2174a9689",
+        "n8n_execution_id": "200",
+        "output_sha256": "fb1dea1a827326aefbf829cc30228dac01e63965cdf815bf47082af68fc96375"
+      },
+      {
+        "step_number": 4,
+        "role_id": "QA-01",
+        "step_type": "final_review",
+        "status": "completed",
+        "task_id": "task_e0afd647-0929-4337-8032-4d5728812cee",
+        "trace_id": "trace_9efe8e28-2d59-4806-9952-9ee2174a9689",
+        "n8n_execution_id": "201",
+        "output_sha256": "97161eaf893addd2b8cca05f527f5159624c71491c9eab3baa8628a81dd588d3"
+      }
+    ],
+    "usage_known": false,
+    "usage": null,
+    "real_cost_usd": null,
+    "simulated_cost_usd": null
+  },
+  "artifact": {
+    "path": "ops/local-live/artifacts/task_e0afd647-0929-4337-8032-4d5728812cee/des-03-user-flow-designer-acceptance.md",
+    "bytes": 8604,
+    "sha256": "5d6dcd711bab853cae6bb9072939230d5a25dd97ef97f76e6bd86a1a23b420e5",
+    "write_receipt": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_e0afd647-0929-4337-8032-4d5728812cee",
+      "trace_id": "trace_9efe8e28-2d59-4806-9952-9ee2174a9689",
+      "role_id": "DES-03",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T14:17:22.214Z"
+    }
+  },
+  "independent_review": {
+    "reviewer_role_id": "QA-01",
+    "n8n_execution_id": "201",
+    "output_sha256": "97161eaf893addd2b8cca05f527f5159624c71491c9eab3baa8628a81dd588d3",
+    "status": "CAPTURED",
+    "verdict": "REVISE",
+    "parsed": {
+      "verdict": "REVISE",
+      "findings": [
+        "The draft includes branching logic and exception states, but lacks explicit conditional paths and detailed branching logic for all exception scenarios.",
+        "User approval is mentioned, but the exact process (e.g., modal, button, confirmation steps) is not detailed.",
+        "Handoff to FE/BE/AI is mentioned, but no specific responsibilities or interfaces are defined for each component.",
+        "The draft does not include a visual flow map or diagram for clarity, which is a key deliverable for user-flow design."
+      ],
+      "missing_requirements": [
+        "Explicit conditional paths and detailed branching logic for all exception states",
+        "Detailed user approval process (e.g., modal, button, confirmation steps)",
+        "Specific responsibilities and interfaces for FE/BE/AI handoff",
+        "Visual flow map or diagram for user journeys"
+      ],
+      "evidence_limits": [
+        "The draft assumes the planning exercise is a one-week process, but no evidence is provided to support this assumption.",
+        "The exact features of the planning exercise are not specified, which limits the clarity of the user journey.",
+        "The exact user interface and interaction design are not specified, which affects the feasibility of the flow map.",
+        "The exact data storage and retrieval mechanisms are not specified, which impacts the BE handoff details.",
+        "The exact accessibility features are not specified, which affects the accessibility journey design."
+      ]
+    },
+    "review_is_model_generated_not_human": true
+  },
+  "evaluation": {
+    "status": "FAIL",
+    "failures": [
+      "TASK_NOT_COMPLETED"
+    ],
+    "deliverable_cues": [
+      "flow",
+      "maps",
+      "branching",
+      "exit",
+      "cancel",
+      "routes",
+      "handoff"
+    ],
+    "matched_deliverable_cues": [
+      "flow",
+      "branching",
+      "exit",
+      "cancel",
+      "routes",
+      "handoff"
+    ],
+    "cue_threshold": 2,
+    "evaluated_scope": "task/trace/role/provider/model, n8n execution references, two-stage correlation, required sections and role-specific output cues; not domain truth"
+  },
+  "statuses": {
+    "live_inference": "PASS",
+    "specialist_artifact": "FAIL",
+    "reviewed": "CAPTURED",
+    "reviewer_verdict": "REVISE",
+    "role_tool_capability": "NOT_GRANTED",
+    "human_expert_approved": false,
+    "review_outcome": "REVISE"
+  },
+  "restrictions": {
+    "live_codex_calls": 0,
+    "paid_api_calls": 0,
+    "external_actions": 0,
+    "public_deployments": 0
+  }
+}

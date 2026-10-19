@@ -1,0 +1,26 @@
+{
+  "schema_version": "local-production-scenario-run.v1",
+  "recorded_at": "2026-10-18T17:50:15.200Z",
+  "results": [
+    {
+      "scenario_id": "engineering-security",
+      "result": "FAIL",
+      "task_id": "task_298e6a68-a0fa-4d58-be09-8fa4ff264999",
+      "trace_id": "trace_bbd56e38-bc1d-4f6b-abd9-c3516db44f17",
+      "error": "SCENARIO_FINAL_REVIEW_NOT_PASS:REVISE",
+      "step_count": 5
+    }
+  ],
+  "counts": {
+    "expected": 1,
+    "passed": 0,
+    "failed": 1
+  },
+  "safety": {
+    "paid_api_calls": 0,
+    "live_codex_calls": 0,
+    "cloud_n8n_runs": 0,
+    "external_actions": 0
+  },
+  "evidence_path": "ops/evidence/local-production-scenario-run-2026-10-18T17-50-15-200Z.json"
+}

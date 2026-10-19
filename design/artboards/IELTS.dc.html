@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>IELTS</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'IBM Plex Sans Arabic','IBM Plex Sans',sans-serif;background:#F4F7FC;color:#0E121C}
+a{color:#4F5FA0}a:hover{color:#2B3358}
+</style>
+</helmet>
+<div style="width:390px;height:1770px;position:relative;overflow:hidden;background:#F4F7FC;font-family:'IBM Plex Sans Arabic','IBM Plex Sans',sans-serif;color:#0E121C">
+<main style="padding:16px 20px 108px;display:flex;flex-direction:column;gap:24px">
+
+<header style="display:flex;flex-direction:column;gap:4px">
+<div style="display:flex;align-items:center;gap:12px">
+<a href="Path.dc.html" aria-label="رجوع إلى مساري" style="width:44px;height:44px;border-radius:999px;border:1px solid #DCE3EF;background:#FFFFFF;color:#2B3358;display:flex;align-items:center;justify-content:center;box-sizing:border-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
+<h1 style="margin:0;flex:1;font-size:22px;line-height:30px;font-weight:700">IELTS</h1>
+<span style="font-size:12px;line-height:18px;font-weight:600;color:#5A6478;background:#EEF1F6;border-radius:999px;padding:1px 8px">عيّنة</span>
+</div>
+<p style="margin:0;font-size:13px;line-height:20px;font-weight:500;color:#5A6478">Academic أو General — تختارينه حسب هدفك. الاستماع والمحادثة نفسها في الاثنين.</p>
+</header>
+
+<div style="background:#E1EEFB;border-radius:20px;padding:14px 16px;display:flex;gap:12px;align-items:flex-start">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2D5F92" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:0 0 22px;margin-top:2px"><path d="M4 20h16M6 20V10M10 20V6M14 20v-8M18 20V4"></path></svg>
+<p style="margin:0;font-size:14px;line-height:22px;color:#0E121C"><strong style="font-weight:600">لا نعد بدرجة — نقيس بالاختبار التجريبي.</strong> الهدف تحددينه أنتِ بعد التشخيص، والتجريبي الشهري يقول وين وصلتي.</p>
+</div>
+
+<section aria-labelledby="vocab-h" style="background:#FFFFFF;border:1px solid #DCE3EF;border-radius:20px;padding:16px;display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;align-items:center;justify-content:space-between">
+<h2 id="vocab-h" style="margin:0;font-size:18px;line-height:26px;font-weight:600">مفردات اليوم</h2>
+<span style="font-size:13px;line-height:20px;font-weight:500;color:#5A6478">بعد الفطور · 10 د</span>
+</div>
+<div style="display:flex;align-items:flex-end;gap:16px">
+<div style="display:flex;flex-direction:column">
+<span style="font-family:'IBM Plex Sans',sans-serif;font-size:40px;line-height:48px;font-weight:600;color:#2B3358">18</span>
+<span style="font-size:13px;line-height:20px;font-weight:500;color:#5A6478">بطاقة مستحقة</span>
+</div>
+<div style="display:flex;flex-direction:column;gap:6px;flex:1;padding-bottom:4px">
+<div style="display:flex;gap:4px;height:8px" aria-hidden="true"><span style="flex:12;background:#6172B5;border-radius:999px"></span><span style="flex:6;background:#9BC4EE;border-radius:999px"></span></div>
+<span style="font-size:13px;line-height:20px;font-weight:500;color:#3A4256">12 مراجعة · 6 جديدة</span>
+</div>
+</div>
+<p style="margin:0;font-size:14px;line-height:22px;color:#3A4256">النسخة الصغيرة: 5 بطاقات تكفي. المراجعة المتباعدة ترتب لك المواعيد تلقائيًا.</p>
+<a href="Focus.dc.html" style="height:52px;border-radius:16px;background:#6172B5;color:#FFFFFF;font-size:16px;line-height:26px;font-weight:600;text-decoration:none;display:flex;align-items:center;justify-content:center">ابدئي المراجعة</a>
+</section>
+
+<section aria-labelledby="rot-h" style="display:flex;flex-direction:column;gap:12px">
+<h2 id="rot-h" style="margin:0;font-size:12px;line-height:18px;font-weight:600;color:#5A6478">دورة المهارات الأسبوعية · المفردات كل يوم</h2>
+<div style="background:#FFFFFF;border:1px solid #DCE3EF;border-radius:20px;padding:16px;display:flex;flex-direction:column;gap:12px">
+<div style="display:grid;grid-template-columns:repeat(7, minmax(0, 1fr));gap:2px;margin:0 -4px">
+<sc-for list="{{days}}" as="d" hint-placeholder-count="7">
+<button type="button" onClick="{{d.pick}}" aria-pressed="{{d.pressed}}" aria-label="{{d.aria}}" style="{{d.style}}">
+<span style="font-size:12px;line-height:18px;font-weight:600">{{d.day}}</span>
+<span style="font-family:'IBM Plex Sans',sans-serif;font-size:15px;line-height:20px;font-weight:600">{{d.code}}</span>
+</button>
+</sc-for>
+</div>
+<div style="background:#F4F7FC;border-radius:16px;padding:12px;display:flex;flex-direction:column;gap:4px">
+<div style="display:flex;justify-content:space-between;gap:8px;align-items:baseline">
+<strong style="font-size:16px;line-height:26px;font-weight:600">{{cur.full}} · {{cur.title}}</strong>
+<span style="font-size:13px;line-height:20px;font-weight:500;color:#4F5FA0">{{cur.tag}}</span>
+</div>
+<p style="margin:0;font-size:14px;line-height:22px;color:#3A4256">{{cur.body}}</p>
+<p style="margin:0;font-size:13px;line-height:20px;font-weight:500;color:#5A6478">{{cur.min}}</p>
+</div>
+<p style="margin:0;font-size:13px;line-height:20px;font-weight:500;color:#5A6478">يوم صعب؟ المفردات بس — يوم المهارة ينتقل، ما يختفي.</p>
+</div>
+</section>
+
+<section aria-labelledby="mock-h" style="display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;align-items:center;justify-content:space-between">
+<h2 id="mock-h" style="margin:0;font-size:12px;line-height:18px;font-weight:600;color:#5A6478">سجل الاختبارات التجريبية</h2>
+<span style="font-size:12px;line-height:18px;font-weight:600;color:#5A6478;background:#EEF1F6;border-radius:999px;padding:1px 8px">عيّنة</span>
+</div>
+<div style="background:#FFFFFF;border:1px solid #DCE3EF;border-radius:20px;padding:16px;display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;justify-content:space-between;align-items:baseline">
+<strong style="font-size:16px;line-height:26px;font-weight:600">تشخيصي · 20 سبتمبر</strong>
+<span style="font-size:13px;line-height:20px;font-weight:500;color:#5A6478">اختبار كامل بالوقت</span>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px" role="img" aria-label="الدرجات لكل مهارة من 9: استماع 6.0، قراءة 6.5، كتابة 5.5، محادثة 6.0">
+<div style="display:flex;align-items:center;gap:10px"><span style="flex:0 0 64px;font-size:14px;line-height:22px">استماع</span><div style="flex:1;height:8px;background:#EAF1FB;border-radius:999px;overflow:hidden"><div style="width:66.7%;height:8px;background:#6172B5;border-radius:999px"></div></div><span style="flex:0 0 32px;font-family:'IBM Plex Sans',sans-serif;font-size:14px;font-weight:600;text-align:left">6.0</span></div>
+<div style="display:flex;align-items:center;gap:10px"><span style="flex:0 0 64px;font-size:14px;line-height:22px">قراءة</span><div style="flex:1;height:8px;background:#EAF1FB;border-radius:999px;overflow:hidden"><div style="width:72.2%;height:8px;background:#6172B5;border-radius:999px"></div></div><span style="flex:0 0 32px;font-family:'IBM Plex Sans',sans-serif;font-size:14px;font-weight:600;text-align:left">6.5</span></div>
+<div style="display:flex;align-items:center;gap:10px"><span style="flex:0 0 64px;font-size:14px;line-height:22px">كتابة</span><div style="flex:1;height:8px;background:#EAF1FB;border-radius:999px;overflow:hidden"><div style="width:61.1%;height:8px;background:#9BC4EE;border-radius:999px"></div></div><span style="flex:0 0 32px;font-family:'IBM Plex Sans',sans-serif;font-size:14px;font-weight:600;text-align:left">5.5</span></div>
+<div style="display:flex;align-items:center;gap:10px"><span style="flex:0 0 64px;font-size:14px;line-height:22px">محادثة</span><div style="flex:1;height:8px;background:#EAF1FB;border-radius:999px;overflow:hidden"><div style="width:66.7%;height:8px;background:#6172B5;border-radius:999px"></div></div><span style="flex:0 0 32px;font-family:'IBM Plex Sans',sans-serif;font-size:14px;font-weight:600;text-align:left">6.0</span></div>
+</div>
+<p style="margin:0;font-size:13px;line-height:20px;font-weight:500;color:#5A6478">المقياس من 0 إلى 9. أضعف مهارة (الكتابة) تاخذ يوم الخميس الإضافي.</p>
+<div style="border-top:1px solid #DCE3EF;padding-top:12px;display:flex;align-items:center;justify-content:space-between;gap:8px">
+<span style="font-size:14px;line-height:22px;color:#3A4256">التجريبي الجاي: أول جمعة في أكتوبر</span>
+<button type="button" style="min-height:44px;padding:0 12px;border:1px solid #DCE3EF;border-radius:16px;background:#FFFFFF;color:#4F5FA0;font-family:inherit;font-size:14px;font-weight:600;cursor:pointer">سجّلي نتيجة</button>
+</div>
+</div>
+</section>
+
+<section aria-labelledby="fb-h" style="display:flex;flex-direction:column;gap:12px">
+<h2 id="fb-h" style="margin:0;font-size:12px;line-height:18px;font-weight:600;color:#5A6478">قائمة التغذية الراجعة</h2>
+<div style="background:#FFFFFF;border:1px solid #DCE3EF;border-radius:20px;padding:16px;display:flex;flex-direction:column;gap:12px">
+<div role="tablist" aria-label="نوع المهمة" style="display:grid;grid-template-columns:repeat(2, minmax(0, 1fr));gap:4px;background:#F4F7FC;border-radius:14px;padding:4px">
+<button type="button" role="tab" aria-selected="{{tabs.wSel}}" onClick="{{tabs.pickW}}" style="{{tabs.wStyle}}">الكتابة Task 2</button>
+<button type="button" role="tab" aria-selected="{{tabs.sSel}}" onClick="{{tabs.pickS}}" style="{{tabs.sStyle}}">المحادثة</button>
+</div>
+<p style="margin:0;font-size:14px;line-height:22px;color:#3A4256">راجعي إجابتك بمعايير التصحيح الرسمية. ركزي على خطأين أو ثلاثة بس، ثم أعيدي نفس السؤال.</p>
+<ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column">
+<sc-for list="{{criteria}}" as="c" hint-placeholder-count="4">
+<li style="border-top:1px solid #EAF1FB">
+<button type="button" role="checkbox" aria-checked="{{c.checked}}" onClick="{{c.toggle}}" style="width:100%;min-height:56px;display:flex;align-items:center;gap:12px;background:none;border:0;padding:8px 0;font-family:inherit;text-align:right;cursor:pointer;color:#0E121C">
+<span style="{{c.boxStyle}}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span>
+<span style="flex:1;display:flex;flex-direction:column">
+<span style="font-size:15px;line-height:22px;font-weight:600">{{c.ar}}</span>
+<span style="font-family:'IBM Plex Sans',sans-serif;font-size:13px;line-height:20px;color:#5A6478" dir="ltr">{{c.en}}</span>
+</span>
+</button>
+</li>
+</sc-for>
+</ul>
+<a href="{{tabs.url}}" style="min-height:44px;display:flex;align-items:center;gap:6px;font-size:14px;line-height:22px;font-weight:600;color:#4F5FA0;text-decoration:none">{{tabs.linkText}}<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 5h5v5M19 5l-8 8M17 14v4a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h4"></path></svg></a>
+</div>
+</section>
+
+</main>
+
+<nav aria-label="التنقل الرئيسي" style="position:absolute;left:0;right:0;bottom:0;height:84px;background:#FFFFFF;border-top:1px solid #DCE3EF;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));padding:6px 8px 0;box-sizing:border-box;">
+    <a href="Main.dc.html" style="display:flex;flex-direction:column;align-items:center;gap:2px;min-height:52px;text-decoration:none;color:#5A6478;font-size:12px;line-height:18px;font-weight:600;">
+      <span style="width:4px;height:4px;"></span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>
+      <span>اليوم</span>
+    </a>
+    <a href="HabitsHub.dc.html" style="display:flex;flex-direction:column;align-items:center;gap:2px;min-height:52px;text-decoration:none;color:#5A6478;font-size:12px;line-height:18px;font-weight:600;">
+      <span style="width:4px;height:4px;"></span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21v-9"></path><path d="M12 12c0-4 3-7 8-7 0 4-3 7-8 7z"></path><path d="M12 14c0-3-2.5-5.5-7-5.5 0 3 2.5 5.5 7 5.5z"></path></svg>
+      <span>عاداتي</span>
+    </a>
+    <a href="Path.dc.html" aria-current="page" style="display:flex;flex-direction:column;align-items:center;gap:2px;min-height:52px;text-decoration:none;color:#6172B5;font-size:12px;line-height:18px;font-weight:600;">
+      <span style="width:4px;height:4px;border-radius:999px;background:#6172B5;"></span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="19" r="2"></circle><circle cx="18" cy="5" r="2"></circle><path d="M8 19h7.5a3.5 3.5 0 0 0 0-7h-7a3.5 3.5 0 0 1 0-7H16"></path></svg>
+      <span>مساري</span>
+    </a>
+    <a href="Joy.dc.html" style="display:flex;flex-direction:column;align-items:center;gap:2px;min-height:52px;text-decoration:none;color:#5A6478;font-size:12px;line-height:18px;font-weight:600;">
+      <span style="width:4px;height:4px;"></span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c.7 5.3 3 7.6 9 9-6 1.4-8.3 3.7-9 9-.7-5.3-3-7.6-9-9 6-1.4 8.3-3.7 9-9z"></path></svg>
+      <span>متعتي</span>
+    </a>
+    <a href="Me.dc.html" style="display:flex;flex-direction:column;align-items:center;gap:2px;min-height:52px;text-decoration:none;color:#5A6478;font-size:12px;line-height:18px;font-weight:600;">
+      <span style="width:4px;height:4px;"></span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"></path></svg>
+      <span>أنا</span>
+    </a>
+  </nav>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":1770}}'>
+class Component extends DCLogic {
+constructor(props){ super(props); this.state = { day: 2, tab: 'w', w: [true, false, false, false], s: [false, false, false, false] }; }
+renderVals() {
+  const D = [
+    { day: 'س', full: 'السبت', code: 'R', title: 'القراءة', tag: 'قطعة بالوقت', body: 'قطعة واحدة بالوقت + قراءة ممتعة بالإنجليزي.', min: 'الأدنى: قطعة قصيرة بدون وقت.' },
+    { day: 'ح', full: 'الأحد', code: 'L', title: 'الاستماع', tag: 'جزء واحد', body: 'جزء من اختبار استماع، والصوت يُسمع مرة وحدة مثل الاختبار.', min: 'الأدنى: الجزء 1 فقط.' },
+    { day: 'ن', full: 'الإثنين', code: 'W', title: 'الكتابة', tag: 'اليوم', body: 'إجابة Task 2 بالوقت، ثم تصحيح بالمعايير تحت.', min: 'الأدنى: مقدمة + خطة الفقرات في 10 د.' },
+    { day: 'ث', full: 'الثلاثاء', code: 'S', title: 'المحادثة', tag: 'تسجيل صوتي', body: 'أسئلة الأجزاء 1–3 بصوت عالٍ، سجّلي واسمعي، وأعيدي بعد التصحيح.', min: 'الأدنى: إجابة دقيقة وحدة من الجزء 1.' },
+    { day: 'ر', full: 'الأربعاء', code: 'R/L', title: 'قراءة واستماع مخلوط', tag: 'تنويع', body: 'مجموعة أسئلة مخلوطة من المهارتين.', min: 'الأدنى: 10 أسئلة.' },
+    { day: 'خ', full: 'الخميس', code: 'W', title: 'أضعف مهارة', tag: 'حسب آخر تجريبي', body: 'حاليًا الكتابة — يتغير حسب نتيجة آخر اختبار تجريبي.', min: 'الأدنى: فقرة وحدة مع تصحيح.' },
+    { day: 'ج', full: 'الجمعة', code: 'V', title: 'مراجعة خفيفة', tag: 'أو التجريبي الشهري', body: 'مراجعة الأسبوع، أو الاختبار التجريبي الكامل مرة بالشهر.', min: 'الأدنى: البطاقات المستحقة.' }
+  ];
+  const sel = this.state.day;
+  const days = D.map((d, i) => ({
+    day: d.day, code: d.code,
+    pressed: i === sel ? 'true' : 'false',
+    aria: d.full + ': ' + d.title,
+    style: 'min-height:56px;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:4px 0;font-family:inherit;cursor:pointer;' + (i === sel ? 'background:#6172B5;border:1px solid #6172B5;color:#FFFFFF' : (i === 2 ? 'background:#EAF1FB;border:1px solid #9BC4EE;color:#2B3358' : 'background:#F4F7FC;border:1px solid #DCE3EF;color:#3A4256')),
+    pick: () => this.setState({ day: i })
+  }));
+  const W = [['الاستجابة للمهمة', 'Task Response'], ['الترابط والتماسك', 'Coherence and Cohesion'], ['الحصيلة اللغوية', 'Lexical Resource'], ['تنوّع القواعد ودقتها', 'Grammatical Range and Accuracy']];
+  const S = [['الطلاقة والترابط', 'Fluency and Coherence'], ['الحصيلة اللغوية', 'Lexical Resource'], ['تنوّع القواعد ودقتها', 'Grammatical Range and Accuracy'], ['النطق', 'Pronunciation']];
+  const tab = this.state.tab;
+  const list = tab === 'w' ? W : S;
+  const checks = this.state[tab];
+  const criteria = list.map((c, i) => ({
+    ar: c[0], en: c[1], checked: checks[i] ? 'true' : 'false',
+    boxStyle: 'flex:0 0 28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;box-sizing:border-box;' + (checks[i] ? 'background:#6172B5;border:2px solid #6172B5' : 'background:#FFFFFF;border:2px solid #9BC4EE'),
+    toggle: () => { const n = this.state[tab].slice(); n[i] = !n[i]; this.setState({ [tab]: n }); }
+  }));
+  const on = 'min-height:44px;border:0;border-radius:10px;font-family:inherit;font-size:14px;font-weight:600;cursor:pointer;background:#FFFFFF;color:#2B3358;box-shadow:0 2px 8px rgba(14,18,28,.06)';
+  const off = 'min-height:44px;border:0;border-radius:10px;font-family:inherit;font-size:14px;font-weight:600;cursor:pointer;background:transparent;color:#5A6478';
+  return {
+    days: days,
+    cur: D[sel],
+    criteria: criteria,
+    tabs: {
+      wSel: tab === 'w' ? 'true' : 'false', sSel: tab === 's' ? 'true' : 'false',
+      wStyle: tab === 'w' ? on : off, sStyle: tab === 's' ? on : off,
+      pickW: () => this.setState({ tab: 'w' }), pickS: () => this.setState({ tab: 's' }),
+      url: tab === 'w' ? 'https://ielts.org/cdn/Guides/ielts-writing-band-descriptors.pdf' : 'https://ielts.org/cdn/ielts-guides/ielts-speaking-band-descriptors.pdf',
+      linkText: tab === 'w' ? 'واصفات درجات الكتابة الرسمية (ielts.org)' : 'واصفات درجات المحادثة الرسمية (ielts.org)'
+    }
+  };
+}
+}
+</script>
+</body>
+</html>

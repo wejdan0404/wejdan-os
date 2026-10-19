@@ -1,0 +1,21 @@
+{
+  "schema_version": "role-queue-infrastructure-block.v1",
+  "recorded_at": "2026-10-18",
+  "result": "BLOCKED_BEFORE_INFERENCE",
+  "roles": ["PMO-01", "PMO-02", "PMO-03", "PMO-04", "PMO-05"],
+  "failure": "API_UNAVAILABLE_BEFORE_ENQUEUE",
+  "evidence": {
+    "runner_error": "fetch failed",
+    "task_ids_created": [],
+    "n8n_executions": [],
+    "ollama_calls": 0,
+    "paid_calls": 0,
+    "codex_calls": 0,
+    "cloud_n8n_runs": 0
+  },
+  "recovery": {
+    "api": "Managed API restarted as PID 19888 and later health reported n8n_ready=true and ollama_ready=true.",
+    "n8n": "Local n8n 2.43.7 started on loopback; JavaScript runner registered. Python runner warning observed because Python 3 is absent; selected local workflow uses JavaScript Code nodes and proceeded successfully.",
+    "retry_policy": "The five role records were reclassified as BLOCKED (no inference). Each pending/blocked role was subsequently re-run individually or in a bounded sequential batch; later task IDs and outcomes are in role_matrix.json."
+  }
+}

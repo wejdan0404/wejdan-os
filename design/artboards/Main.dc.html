@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>Today</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'IBM Plex Sans Arabic','IBM Plex Sans',sans-serif;background:#F4F7FC;color:#0E121C}
+a{color:#4F5FA0}a:hover{color:#2B3358}
+</style>
+</helmet>
+<div style="width:390px;height:1640px;position:relative;overflow:hidden;background:#F4F7FC;box-sizing:border-box;font-family:'IBM Plex Sans Arabic','IBM Plex Sans',sans-serif;color:#0E121C;">
+  <main style="display:flex;flex-direction:column;gap:20px;padding:16px 20px 0;box-sizing:border-box;">
+
+    <header style="display:flex;flex-direction:column;gap:16px;">
+      <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px;">
+        <div style="display:flex;flex-direction:column;gap:2px;">
+          <h1 style="margin:0;font-size:22px;line-height:30px;font-weight:700;color:#0E121C;">صباح الخير، وجدان</h1>
+          <div style="display:flex;align-items:center;gap:8px;">
+            <span style="font-size:13px;line-height:20px;font-weight:500;color:#5A6478;">الإثنين 28 سبتمبر</span>
+            <span style="font-size:12px;line-height:18px;font-weight:600;color:#5A6478;background:#EEF1F6;border-radius:999px;padding:0 8px;">عيّنة</span>
+          </div>
+        </div>
+        <div style="display:flex;gap:8px;">
+          <a href="MorningBrief.dc.html" aria-label="موجز الصباح" style="display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:#FFFFFF;border:1px solid #DCE3EF;color:#2B3358;text-decoration:none;box-sizing:border-box;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>
+          </a>
+          <a href="EveningShutdown.dc.html" aria-label="إغلاق اليوم" style="display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:#FFFFFF;border:1px solid #DCE3EF;color:#2B3358;text-decoration:none;box-sizing:border-box;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z"></path></svg>
+          </a>
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;">
+        <a href="MorningBrief.dc.html" style="display:inline-flex;align-items:center;height:44px;text-decoration:none;">
+          <span style="display:inline-flex;align-items:center;gap:8px;height:32px;padding:0 12px;border-radius:999px;background:#E3F0E8;color:#2F6B4A;font-size:13px;line-height:20px;font-weight:600;">
+            <span style="width:8px;height:8px;border-radius:999px;background:#2F6B4A;"></span>
+            <span>طاقتي: جيدة</span>
+          </span>
+        </a>
+        <div style="display:flex;align-items:center;gap:8px;">
+          <div style="display:flex;align-items:center;gap:6px;">
+            <div style="position:relative;width:44px;height:44px;">
+              <svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="18" fill="none" stroke="#EAF1FB" stroke-width="4"></circle><circle cx="22" cy="22" r="18" fill="none" stroke="#6172B5" stroke-width="4" stroke-linecap="round" stroke-dasharray="81.4 113.1" transform="rotate(-90 22 22)"></circle></svg>
+              <span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Sans',sans-serif;font-size:13px;font-weight:600;color:#2B3358;">72</span>
+            </div>
+            <span style="font-size:12px;line-height:18px;font-weight:600;color:#5A6478;">زخم<br>الأسبوع</span>
+          </div>
+          <a href="Joy.dc.html" aria-label="{{sparksLabel}}"style="display:inline-flex;align-items:center;gap:6px;height:44px;padding:0 14px;border-radius:999px;background:#FFFFFF;border:1px solid #DCE3EF;text-decoration:none;color:#0E121C;box-sizing:border-box;">
+            <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 C12.8 8.5 15.5 11.2 22 12 C15.5 12.8 12.8 15.5 12 22 C11.2 15.5 8.5 12.8 2 12 C8.5 11.2 11.2 8.5 12 2Z" fill="#E0A93B"></path></svg>
+            <span style="font-family:'IBM Plex Sans',sans-serif;font-size:15px;font-weight:600;">{{sparks}}</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <section aria-label="شكل اليوم" style="background:#FFFFFF;border:1px solid #DCE3EF;border-radius:20px;padding:16px;display:flex;flex-direction:column;gap:14px;">
+      <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px;">
+        <div>
+          <h2 style="margin:0;font-size:18px;line-height:26px;font-weight:600;">يومك جاهز</h2>
+          <p style="margin:2px 0 0;font-size:13px;line-height:20px;font-weight:500;color:#5A6478;">على قد طاقتك اليوم، ونسخة صغيرة تكفي</p>
+        </div>
+        <span style="font-size:13px;line-height:20px;font-weight:600;color:#4F5FA0;white-space:nowrap;"><bdi style="font-family:'IBM Plex Sans',sans-serif;">{{doneCount}}</bdi> من <bdi style="font-family:'IBM Plex Sans',sans-serif;">6</bdi></span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;">
+        <div style="background:#E1EEFB;border-radius:14px;padding:8px 12px;display:flex;align-items:baseline;gap:6px;">
+          <span style="font-family:'IBM Plex Sans',sans-serif;font-size:22px;line-height:28px;font-weight:600;color:#2D5F92;">3</span>
+          <span style="font-size:13px;line-height:20px;font-weight:500;color:#2D5F92;">أساسية</span>
+        </div>
+        <div style="background:#EEF1F6;border-radius:14px;padding:8px 12px;display:flex;align-items:baseline;gap:6px;">
+          <span style="font-family:'IBM Plex Sans',sans-serif;font-size:22px;line-height:28px;font-weight:600;color:#3A4256;">2</span>
+          <span style="font-size:13px;line-height:20px;font-weight:500;color:#3A4256;">صيانة</span>
+        </div>
+        <div style="background:#FBF1D6;border-radius:14px;padding:8px 12px;display:flex;align-items:baseline;gap:6px;">
+          <span style="font-family:'IBM Plex Sans',sans-serif;font-size:22px;line-height:28px;font-weight:600;color:#8A6412;">1</span>
+          <span style="font-size:13px;line-height:20px;font-weight:500;color:#8A6412;">متعة</span>
+        </div>
+      </div>
+      <div role="progressbar" aria-label="تقدم اليوم" aria-valuemin="0" aria-valuemax="6" aria-valuenow="{{doneCount}}" style="height:8px;border-radius:999px;background:#EAF1FB;overflow:hidden;">
+        <div style="{{progressStyle}}"></div>
+      </div>
+    </section>
+
+    <section aria-label="سلسلة الصباح" style="background:#FFFFFF;border:1px solid #DCE3EF;border-radius:20px;padding:12px 16px;display:flex;flex-direction:column;gap:10px;">
+      <div style="display:flex;align-items:center;gap:12px;">
+        <span style="display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:999px;background:#E3F0E8;color:#2F6B4A;flex:none;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>
+        </span>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:16px;line-height:24px;font-weight:600;">سلسلة الصباح</div>
+          <div style="font-size:13px;line-height:20px;font-weight:500;color:#5A6478;">اكتملت · <bdi>4</bdi> من <bdi>4</bdi> · بدأت <bdi>07:05</bdi></div>
+        </div>
+        <a href="RoutinePlayer.dc.html" aria-label="فتح سلسلة الصباح" style="display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;color:#4F5FA0;text-decoration:none;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg>
+        </a>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;">
+        <sc-for list="{{chain}}" as="s" hint-placeholder-count="4">
+          <span style="display:inline-flex;align-items:center;gap:4px;height:28px;padding:0 10px;border-radius:999px;background:#E3F0E8;color:#2F6B4A;font-size:12px;line-height:18px;font-weight:600;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>
+            {{s.label}}
+          </span>
+        </sc-for>
+      </div>
+    </section>
+
+    <section aria-label="الأساسيات" style="display:flex;flex-direction:column;gap:12px;">
+      <div style="display:flex;align-items:center;justify-content:space-between;">
+        <span style="font-size:12px;line-height:18px;font-weight:600;color:#5A6478;">الأساسيات · <bdi>3</bdi></span>
+        <span style="font-size:12px;line-height:18px;font-weight:600;color:#5A6478;">أي نسخة تُحسب إنجازًا</span>
+      </div>
+      <sc-for list="{{core}}" as="h" hint-placeholder-count="3">
+        <article style="background:#FFFFFF;border:1px solid #DCE3EF;border-radius:20px;padding:16px;display:flex;flex-direction:column;gap:12px;">
+          <div style="display:flex;align-items:flex-start;gap:12px;">
+            <button type="button" onClick="{{h.toggle}}" aria-label="{{h.checkLabel}}" aria-pressed="{{h.pressed}}" style="{{h.checkStyle}}">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>
+            </button>
+            <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:4px;">
+              <div style="{{h.titleStyle}}">{{h.title}}</div>
+              <div style="font-size:13px;line-height:20px;font-weight:500;color:#5A6478;">{{h.meta}}</div>
+              <sc-if value="{{h.hasJoy}}" hint-placeholder-val="{{true}}">
+                <span style="align-self:flex-start;display:inline-flex;align-items:center;gap:6px;min-height:28px;padding:0 10px;border-radius:999px;background:#FBF1D6;color:#8A6412;font-size:12px;line-height:18px;font-weight:600;margin-top:2px;">
+                  <svg width="12" height="12" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 C12.8 8.5 15.5 11.2 22 12 C15.5 12.8 12.8 15.5 12 22 C11.2 15.5 8.5 12.8 2 12 C8.5 11.2 11.2 8.5 12 2Z" fill="#E0A93B"></path></svg>
+                  {{h.joy}}
+                </span>
+              </sc-if>
+            </div>
+            <a href="{{h.href}}" style="flex:none;display:inline-flex;align-items:center;min-height:44px;margin-top:-10px;font-size:13px;line-height:20px;font-weight:600;color:#4F5FA0;text-decoration:none;">{{h.linkText}}</a>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;">
+            <span style="flex:1;min-width:0;font-size:13px;line-height:18px;font-weight:400;color:#3A4256;">{{h.why}}</span>
+            <div role="group" aria-label="مستوى الإنجاز" style="display:flex;border:1px solid #DCE3EF;border-radius:999px;padding:0;background:#FFFFFF;">
+              <sc-for list="{{h.levels}}" as="lv" hint-placeholder-count="3">
+                <button type="button" onClick="{{lv.pick}}" aria-pressed="{{lv.pressed}}" style="{{lv.style}}">{{lv.label}}</button>
+              </sc-for>
+            </div>
+          </div>
+        </article>
+      </sc-for>
+    </section>
+
+    <section aria-label="الصيانة" style="display:flex;flex-direction:column;gap:12px;">
+      <span style="font-size:12px;line-height:18px;font-weight:600;color:#5A6478;">الصيانة · <bdi>2</bdi> · خفيفة</span>
+      <sc-for list="{{maintain}}" as="m" hint-placeholder-count="2">
+        <article style="background:#FFFFFF;border:1px solid #DCE3EF;border-radius:20px;padding:14px 16px;display:flex;align-items:center;gap:12px;">
+          <button type="button" onClick="{{m.toggle}}" aria-label="{{m.checkLabel}}" aria-pressed="{{m.pressed}}" style="{{m.checkStyle}}">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>
+          </button>
+          <div style="flex:1;min-width:0;">
+            <div style="{{m.titleStyle}}">{{m.title}}</div>
+            <div style="font-size:13px;line-height:20px;font-weight:500;color:#5A6478;">{{m.meta}}</div>
+          </div>
+          <span style="{{m.iconStyle}}">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{m.icon}}"></path></svg>
+          </span>
+        </article>
+      </sc-for>
+    </section>
+
+    <section aria-label="متعة حرة" style="display:flex;flex-direction:column;gap:12px;">
+      <span style="display:inline-flex;align-items:center;gap:6px;font-size:12px;line-height:18px;font-weight:600;color:#5A6478;">
+        <svg width="12" height="12" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 C12.8 8.5 15.5 11.2 22 12 C15.5 12.8 12.8 15.5 12 22 C11.2 15.5 8.5 12.8 2 12 C8.5 11.2 11.2 8.5 12 2Z" fill="#E0A93B"></path></svg>
+        متعة حرة
+      </span>
+      <article style="background:#FBF1D6;border:1px solid #FBF1D6;border-radius:20px;padding:16px;display:flex;align-items:center;gap:12px;">
+        <button type="button" onClick="{{joy.toggle}}" aria-label="{{joy.checkLabel}}" aria-pressed="{{joy.pressed}}" style="{{joy.checkStyle}}">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>
+        </button>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:16px;line-height:26px;font-weight:600;color:#0E121C;">قهوة وكتاب · <bdi>20</bdi> د</div>
+          <div style="font-size:13px;line-height:20px;font-weight:500;color:#8A6412;">لك بدون شروط — ما تحتاجين تستحقينها</div>
+        </div>
+        <span style="display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:999px;background:#FFFFFF;color:#8A6412;flex:none;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h13v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5z"></path><path d="M17 11h1.5a2.5 2.5 0 0 1 0 5H17"></path><path d="M8 3v3M12 3v3"></path></svg>
+        </span>
+      </article>
+    </section>
+
+    <section aria-label="هذا الأسبوع" style="display:flex;flex-direction:column;gap:12px;">
+      <div style="display:flex;align-items:center;justify-content:space-between;">
+        <span style="font-size:12px;line-height:18px;font-weight:600;color:#5A6478;">هذا الأسبوع</span>
+        <a href="WeeklyReview.dc.html" style="display:inline-flex;align-items:center;min-height:44px;font-size:13px;line-height:20px;font-weight:600;color:#4F5FA0;text-decoration:none;">مراجعة الأسبوع</a>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;">
+        <a href="IELTS.dc.html" style="background:#FFFFFF;border:1px solid #DCE3EF;border-radius:20px;padding:12px;display:flex;align-items:center;gap:10px;text-decoration:none;color:#0E121C;">
+          <span style="flex:none;display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:999px;background:#E1EEFB;color:#2D5F92;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l4-1 11-11-3-3L5 16z"></path><path d="M14 7l3 3"></path></svg>
+          </span>
+          <span style="display:flex;flex-direction:column;min-width:0;">
+            <span style="font-size:14px;line-height:22px;font-weight:600;">كتابة <bdi>IELTS</bdi></span>
+            <span style="font-size:12px;line-height:18px;font-weight:600;color:#5A6478;">قبل الخميس · <bdi>40</bdi> د</span>
+          </span>
+        </a>
+        <a href="HabitsHub.dc.html" style="background:#FFFFFF;border:1px solid #DCE3EF;border-radius:20px;padding:12px;display:flex;align-items:center;gap:10px;text-decoration:none;color:#0E121C;">
+          <span style="flex:none;display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:999px;background:#FBEADF;color:#9A4E1F;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="17" rx="3"></rect><path d="M8 2.5v3M16 2.5v3M8 11h8M8 15h5"></path></svg>
+          </span>
+          <span style="display:flex;flex-direction:column;min-width:0;">
+            <span style="font-size:14px;line-height:22px;font-weight:600;">خطة الوجبات</span>
+            <span style="font-size:12px;line-height:18px;font-weight:600;color:#5A6478;">الجمعة · <bdi>15</bdi> د</span>
+          </span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <sc-if value="{{undo.show}}" hint-placeholder-val="{{true}}">
+    <div role="status" aria-live="polite" style="position:absolute;left:16px;right:16px;bottom:96px;min-height:56px;box-sizing:border-box;padding:6px 8px 6px 16px;border-radius:16px;background:#0E121C;color:#F4F7FC;display:flex;align-items:center;gap:8px;box-shadow:0 2px 8px rgba(14,18,28,.06);">
+      <span style="flex:1;min-width:0;font-size:14px;line-height:22px;font-weight:500;">{{undo.message}}</span>
+      <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 C12.8 8.5 15.5 11.2 22 12 C15.5 12.8 12.8 15.5 12 22 C11.2 15.5 8.5 12.8 2 12 C8.5 11.2 11.2 8.5 12 2Z" fill="#E0A93B"></path></svg>
+      <bdi style="font-family:'IBM Plex Sans',sans-serif;font-size:14px;line-height:22px;font-weight:600;">+1</bdi>
+      <button type="button" onClick="{{undo.act}}" aria-label="{{undo.label}}" style="flex:none;min-width:44px;min-height:44px;padding:0 12px;border:0;border-radius:12px;background:transparent;color:#9BC4EE;font-family:inherit;font-size:14px;font-weight:600;cursor:pointer;">تراجع</button>
+    </div>
+  </sc-if>
+
+  <button type="button" aria-label="إضافة سريعة" style="{{fabStyle}}">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>
+  </button>
+
+  <nav aria-label="التنقل الرئيسي" style="position:absolute;left:0;right:0;bottom:0;height:84px;background:#FFFFFF;border-top:1px solid #DCE3EF;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));padding:6px 8px 0;box-sizing:border-box;">
+    <a href="Main.dc.html" aria-current="page" style="display:flex;flex-direction:column;align-items:center;gap:2px;min-height:52px;text-decoration:none;color:#6172B5;font-size:12px;line-height:18px;font-weight:600;">
+      <span style="width:4px;height:4px;border-radius:999px;background:#6172B5;"></span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>
+      <span>اليوم</span>
+    </a>
+    <a href="HabitsHub.dc.html" style="display:flex;flex-direction:column;align-items:center;gap:2px;min-height:52px;text-decoration:none;color:#5A6478;font-size:12px;line-height:18px;font-weight:600;">
+      <span style="width:4px;height:4px;"></span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21v-9"></path><path d="M12 12c0-4 3-7 8-7 0 4-3 7-8 7z"></path><path d="M12 14c0-3-2.5-5.5-7-5.5 0 3 2.5 5.5 7 5.5z"></path></svg>
+      <span>عاداتي</span>
+    </a>
+    <a href="Path.dc.html" style="display:flex;flex-direction:column;align-items:center;gap:2px;min-height:52px;text-decoration:none;color:#5A6478;font-size:12px;line-height:18px;font-weight:600;">
+      <span style="width:4px;height:4px;"></span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="19" r="2"></circle><circle cx="18" cy="5" r="2"></circle><path d="M8 19h7.5a3.5 3.5 0 0 0 0-7h-7a3.5 3.5 0 0 1 0-7H16"></path></svg>
+      <span>مساري</span>
+    </a>
+    <a href="Joy.dc.html" style="display:flex;flex-direction:column;align-items:center;gap:2px;min-height:52px;text-decoration:none;color:#5A6478;font-size:12px;line-height:18px;font-weight:600;">
+      <span style="width:4px;height:4px;"></span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c.7 5.3 3 7.6 9 9-6 1.4-8.3 3.7-9 9-.7-5.3-3-7.6-9-9 6-1.4 8.3-3.7 9-9z"></path></svg>
+      <span>متعتي</span>
+    </a>
+    <a href="Me.dc.html" style="display:flex;flex-direction:column;align-items:center;gap:2px;min-height:52px;text-decoration:none;color:#5A6478;font-size:12px;line-height:18px;font-weight:600;">
+      <span style="width:4px;height:4px;"></span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"></path></svg>
+      <span>أنا</span>
+    </a>
+  </nav>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":1640}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = {
+      done: { walk: false, vocab: true, focus: false, spend: false, room: false, joy: false },
+      level: { walk: 1, vocab: 0, focus: 1 },
+      sparks: 146,
+      undo: 'vocab'
+    };
+  }
+  toggle(id, earns) {
+    var d = Object.assign({}, this.state.done);
+    d[id] = !d[id];
+    var delta = earns ? (d[id] ? 1 : -1) : 0;
+    this.setState({ done: d, sparks: this.state.sparks + delta, undo: (earns && d[id]) ? id : null });
+  }
+  pick(id, i) {
+    var l = Object.assign({}, this.state.level);
+    l[id] = i;
+    this.setState({ level: l });
+  }
+  checkStyle(on, joy) {
+    var base = 'flex:none;width:44px;height:44px;border-radius:999px;display:flex;align-items:center;justify-content:center;cursor:pointer;box-sizing:border-box;padding:0;';
+    if (on) return base + 'background:#6172B5;border:2px solid #6172B5;color:#FFFFFF;';
+    return base + 'background:#FFFFFF;border:2px solid ' + (joy ? '#8A6412' : '#5E8BC4') + ';color:transparent;';
+  }
+  titleStyle(on) {
+    return 'font-size:16px;line-height:26px;font-weight:600;color:' + (on ? '#3A4256' : '#0E121C') + ';';
+  }
+  iconStyle(bg, ink) {
+    return 'flex:none;display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:999px;background:' + bg + ';color:' + ink + ';';
+  }
+  renderVals() {
+    var self = this;
+    var st = this.state;
+    var LV = ['أدنى', 'عادي', 'إضافي'];
+    var coreSrc = [
+      { id: 'walk', domain: 'الحركة', title: 'مشي سريع', cue: 'بعد العصر', durs: ['5 د', '20 د', '30 د'], why: 'يوم مشي — تمارين القوة بكرة', joy: 'بودكاستك المحجوز للمشي', href: 'WhySheet.dc.html', linkText: 'لماذا؟', bg: '#E3F0E8', ink: '#2F6B4A', icon: 'M11.5 4.5a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0-3 0M10 21l2-6-3-3 1-4 4 3 3 1M9 12l-2 3' },
+      { id: 'vocab', domain: 'IELTS', title: 'مراجعة مفردات IELTS', cue: 'بعد الفطور', durs: ['3 د', '10 د', '15 د'], why: 'بطاقات مستحقة اليوم', joy: '', href: 'IELTS.dc.html', linkText: 'بطاقاتي', bg: '#E1EEFB', ink: '#2D5F92', icon: 'M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2zM4 21V5M9 8h6' },
+      { id: 'focus', domain: 'المسار المهني', title: 'دراسة شهادة Google UX', cue: 'بعد المغرب', durs: ['15 د', '45 د', '60 د'], why: 'التالي: الوحدة 3', joy: '', href: 'Focus.dc.html', linkText: 'ابدئي الجلسة', bg: '#F3EEDF', ink: '#6E5A1E', icon: 'M3 12a9 9 0 1 0 18 0a9 9 0 1 0-18 0M12 7v5l3 2' }
+    ];
+    var core = coreSrc.map(function (h) {
+      var on = st.done[h.id];
+      var lvl = st.level[h.id];
+      return {
+        title: h.title,
+        meta: h.domain + ' · ' + h.cue + ' · ' + h.durs[lvl] + (on ? ' · تم' : ''),
+        why: h.why,
+        hasJoy: h.joy !== '',
+        joy: '+ ' + h.joy,
+        href: h.href,
+        linkText: h.linkText,
+        icon: h.icon,
+        iconStyle: self.iconStyle(h.bg, h.ink),
+        pressed: on ? 'true' : 'false',
+        checkLabel: on ? 'إلغاء إنجاز ' + h.title : 'تم: ' + h.title,
+        checkStyle: self.checkStyle(on, false),
+        titleStyle: self.titleStyle(on),
+        toggle: function () { self.toggle(h.id, true); },
+        levels: LV.map(function (label, i) {
+          var sel = lvl === i;
+          return {
+            label: label,
+            pressed: sel ? 'true' : 'false',
+            style: 'height:44px;min-width:52px;padding:0 12px;border:0;border-radius:999px;font-family:inherit;font-size:13px;font-weight:600;cursor:pointer;background:' + (sel ? '#EAF1FB' : 'transparent') + ';color:' + (sel ? '#4F5FA0' : '#5A6478') + ';',
+            pick: function () { self.pick(h.id, i); }
+          };
+        })
+      };
+    });
+    var mSrc = [
+      { id: 'spend', title: 'تسجيل مصروف اليوم', meta: 'مساءً · 15 د · تقدير', bg: '#E2F3F0', ink: '#23675C', icon: 'M3 7h18v11H3zM3 10h18M7 15h3' },
+      { id: 'room', title: 'ترتيب الغرفة', meta: 'قبل النوم · 10 د · تقدير', bg: '#F6E6EA', ink: '#8A3950', icon: 'M4 11l8-7 8 7v9h-5v-6H9v6H4z' }
+    ];
+    var maintain = mSrc.map(function (m) {
+      var on = st.done[m.id];
+      return {
+        title: m.title, meta: m.meta + (on ? ' · تم' : ''), icon: m.icon,
+        iconStyle: self.iconStyle(m.bg, m.ink),
+        pressed: on ? 'true' : 'false',
+        checkLabel: on ? 'إلغاء إنجاز ' + m.title : 'تم: ' + m.title,
+        checkStyle: self.checkStyle(on, false),
+        titleStyle: self.titleStyle(on),
+        toggle: function () { self.toggle(m.id, true); }
+      };
+    });
+    var joyOn = st.done.joy;
+    var count = 0;
+    Object.keys(st.done).forEach(function (k) { if (st.done[k]) count++; });
+    var LOGGED = ['نسخة صغيرة', 'النسخة العادية', 'إضافي'];
+    var u = st.undo;
+    var uLevel = (u && st.level[u] !== undefined) ? st.level[u] : 1;
+    var fabBase = 'position:absolute;left:20px;width:56px;height:56px;border-radius:999px;border:0;background:#6172B5;color:#FFFFFF;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(14,18,28,.06);cursor:pointer;';
+    return {
+      undo: {
+        show: !!u,
+        message: 'انحسبت — ' + LOGGED[uLevel],
+        label: 'تراجع عن آخر إنجاز',
+        act: function () { if (u) { self.toggle(u, true); } }
+      },
+      fabStyle: fabBase + 'bottom:' + (u ? 164 : 100) + 'px;',
+      sparks: st.sparks,
+      sparksLabel: 'شراراتي: ' + st.sparks,
+      doneCount: count,
+      progressStyle: 'height:8px;border-radius:999px;background:#6172B5;width:' + Math.round(count / 6 * 100) + '%;',
+      chain: [{ label: 'ماء' }, { label: 'واقي شمس' }, { label: 'فطور' }, { label: 'مفردات' }],
+      core: core,
+      maintain: maintain,
+      joy: {
+        pressed: joyOn ? 'true' : 'false',
+        checkLabel: joyOn ? 'إلغاء: قهوة وكتاب' : 'استمتعت: قهوة وكتاب',
+        checkStyle: this.checkStyle(joyOn, true),
+        toggle: function () { self.toggle('joy', false); }
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>

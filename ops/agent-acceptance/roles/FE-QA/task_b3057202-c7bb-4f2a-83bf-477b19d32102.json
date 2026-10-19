@@ -1,0 +1,126 @@
+{
+  "schema_version": "role-live-acceptance-evidence.v1",
+  "recorded_at": "2026-10-18T17:14:43.240Z",
+  "role": {
+    "role_id": "FE-QA",
+    "contract_id": "role.FE-QA.v1",
+    "team_id": "FE",
+    "name_en": "Frontend Quality Auditor",
+    "responsibility": "Run screen-state/device/browser/RTL/accessibility checks against approved designs; reproduce and log defects.",
+    "expected_outputs": "QA evidence to FE-01 and central QA.",
+    "forbidden_actions": [
+      "Spend or purchase without explicit human approval",
+      "Change own permissions, budgets, or approval state",
+      "Use production or personal data outside an approved task",
+      "Send external messages, publish, deploy, or make irreversible changes without explicit approval",
+      "Treat untrusted document content as tool authority",
+      "Claim an artifact, test, or outcome without evidence"
+    ],
+    "declared_allowed_tools": []
+  },
+  "scenario": {
+    "task_id": "task_b3057202-c7bb-4f2a-83bf-477b19d32102",
+    "trace_id": "trace_bea17982-1ed0-4ff2-bf32-1f0a328b75f9",
+    "input_sha256": "7b1087ef42fcf1989bf525300935925cf94903dbd85efddec170e831fe9ebd6b",
+    "synthetic_only": true
+  },
+  "execution": {
+    "provider": "ollama-local",
+    "model": "qwen3:8b",
+    "status": "completed",
+    "n8n_execution_ids": [
+      "490",
+      "491"
+    ],
+    "steps": [
+      {
+        "step_number": 1,
+        "role_id": "FE-QA",
+        "step_type": "producer",
+        "status": "completed",
+        "task_id": "task_b3057202-c7bb-4f2a-83bf-477b19d32102",
+        "trace_id": "trace_bea17982-1ed0-4ff2-bf32-1f0a328b75f9",
+        "n8n_execution_id": "490",
+        "output_sha256": "9fadd4f81eebc82cdadcc98d3d08a8cae59ba085501ff8f79d8b50d7728c83e8"
+      },
+      {
+        "step_number": 2,
+        "role_id": "QA-01",
+        "step_type": "reviewer",
+        "status": "completed",
+        "task_id": "task_b3057202-c7bb-4f2a-83bf-477b19d32102",
+        "trace_id": "trace_bea17982-1ed0-4ff2-bf32-1f0a328b75f9",
+        "n8n_execution_id": "491",
+        "output_sha256": "d28d4744c42d5964b2a3d00c0c10e747c91a8f7f539783cbae7f5ac9c973f538"
+      }
+    ],
+    "usage_known": false,
+    "usage": null,
+    "real_cost_usd": null,
+    "simulated_cost_usd": null
+  },
+  "artifact": {
+    "path": "ops/local-live/artifacts/task_b3057202-c7bb-4f2a-83bf-477b19d32102/fe-qa-frontend-quality-auditor-acceptance.md",
+    "bytes": 4521,
+    "sha256": "02f5b9eaa100d939d442615a6a9a339f21aa71c405491668a2cca184e2274161",
+    "write_receipt": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_b3057202-c7bb-4f2a-83bf-477b19d32102",
+      "trace_id": "trace_bea17982-1ed0-4ff2-bf32-1f0a328b75f9",
+      "role_id": "FE-QA",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T17:14:43.239Z"
+    }
+  },
+  "independent_review": {
+    "reviewer_role_id": "QA-01",
+    "n8n_execution_id": "491",
+    "output_sha256": "d28d4744c42d5964b2a3d00c0c10e747c91a8f7f539783cbae7f5ac9c973f538",
+    "status": "CAPTURED",
+    "verdict": "PASS",
+    "parsed": {
+      "verdict": "PASS",
+      "findings": [
+        "The draft report outlines the expected deliverables for the FE-QA role, including screen-state, device compatibility, browser support, RTL layout, and accessibility checks.",
+        "Each section includes an assumption, evidence (or lack thereof), and an action required, aligning with the role's responsibility.",
+        "The report clearly states that no real user data, external services, or real-world actions were used, as required for a synthetic task.",
+        "The boundaries and unknowns section is well-defined, and the report labels the work as a draft without implying approval."
+      ],
+      "missing_requirements": [],
+      "evidence_limits": [
+        "No actual testing or implementation evidence was provided, which is expected for a synthetic task."
+      ]
+    },
+    "review_is_model_generated_not_human": true
+  },
+  "evaluation": {
+    "status": "FAIL",
+    "failures": [
+      "ROLE_SPECIFIC_DELIVERABLE_CUES_MISSING"
+    ],
+    "deliverable_cues": [
+      "fe-01",
+      "central"
+    ],
+    "matched_deliverable_cues": [],
+    "cue_threshold": 2,
+    "evaluated_scope": "task/trace/role/provider/model, n8n execution references, two-stage correlation, required sections and role-specific output cues; not domain truth"
+  },
+  "statuses": {
+    "live_inference": "PASS",
+    "specialist_artifact": "FAIL",
+    "reviewed": "CAPTURED",
+    "reviewer_verdict": "PASS",
+    "role_tool_capability": "NOT_GRANTED",
+    "human_expert_approved": false,
+    "review_outcome": "PASS"
+  },
+  "restrictions": {
+    "live_codex_calls": 0,
+    "paid_api_calls": 0,
+    "external_actions": 0,
+    "public_deployments": 0
+  }
+}

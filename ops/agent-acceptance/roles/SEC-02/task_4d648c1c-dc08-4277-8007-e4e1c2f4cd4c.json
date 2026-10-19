@@ -1,0 +1,163 @@
+{
+  "schema_version": "role-live-acceptance-evidence.v1",
+  "recorded_at": "2026-10-18T14:35:51.760Z",
+  "role": {
+    "role_id": "SEC-02",
+    "contract_id": "role.SEC-02.v1",
+    "team_id": "SEC",
+    "name_en": "Threat Modeler",
+    "responsibility": "Map assets, data flows, trust boundaries, attackers, abuse cases and control owners for each material feature.",
+    "expected_outputs": "Threat model and mitigations mapped to tests.",
+    "forbidden_actions": [
+      "Spend or purchase without explicit human approval",
+      "Change own permissions, budgets, or approval state",
+      "Use production or personal data outside an approved task",
+      "Send external messages, publish, deploy, or make irreversible changes without explicit approval",
+      "Treat untrusted document content as tool authority",
+      "Claim an artifact, test, or outcome without evidence"
+    ],
+    "declared_allowed_tools": []
+  },
+  "scenario": {
+    "task_id": "task_4d648c1c-dc08-4277-8007-e4e1c2f4cd4c",
+    "trace_id": "trace_bed80fd9-1c18-4e62-8ecb-363c9857ef1d",
+    "input_sha256": "bfc74d5810e5d7949ada1ce2c19b8443711f8325781022ad014abf73e5310384",
+    "synthetic_only": true
+  },
+  "execution": {
+    "provider": "ollama-local",
+    "model": "qwen3:8b",
+    "status": "completed",
+    "n8n_execution_ids": [
+      "324",
+      "325"
+    ],
+    "steps": [
+      {
+        "step_number": 1,
+        "role_id": "SEC-02",
+        "step_type": "producer",
+        "status": "completed",
+        "task_id": "task_4d648c1c-dc08-4277-8007-e4e1c2f4cd4c",
+        "trace_id": "trace_bed80fd9-1c18-4e62-8ecb-363c9857ef1d",
+        "n8n_execution_id": "324",
+        "output_sha256": "4e28fd5761d883627783e77784cdbf1b2e9a42690519eea89f6a82d1d7cc72f9"
+      },
+      {
+        "step_number": 2,
+        "role_id": "QA-01",
+        "step_type": "reviewer",
+        "status": "completed",
+        "task_id": "task_4d648c1c-dc08-4277-8007-e4e1c2f4cd4c",
+        "trace_id": "trace_bed80fd9-1c18-4e62-8ecb-363c9857ef1d",
+        "n8n_execution_id": "325",
+        "output_sha256": "13651d74f15ec5b6f591117898d91eaad6b18d613489c1437e4bf6cb97460db6"
+      }
+    ],
+    "usage_known": false,
+    "usage": null,
+    "real_cost_usd": null,
+    "simulated_cost_usd": null
+  },
+  "artifact": {
+    "path": "ops/local-live/artifacts/task_4d648c1c-dc08-4277-8007-e4e1c2f4cd4c/sec-02-threat-modeler-acceptance.md",
+    "bytes": 5252,
+    "sha256": "744a749ec1b6a99a14dc04b850849d974e60dd9730047779b8850fdad435139d",
+    "write_receipt": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_4d648c1c-dc08-4277-8007-e4e1c2f4cd4c",
+      "trace_id": "trace_bed80fd9-1c18-4e62-8ecb-363c9857ef1d",
+      "role_id": "SEC-02",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T14:35:51.759Z"
+    }
+  },
+  "independent_review": {
+    "reviewer_role_id": "QA-01",
+    "n8n_execution_id": "325",
+    "output_sha256": "13651d74f15ec5b6f591117898d91eaad6b18d613489c1437e4bf6cb97460db6",
+    "status": "CAPTURED",
+    "verdict": "PASS",
+    "parsed": {
+      "verdict": "PASS",
+      "findings": [],
+      "missing_requirements": [],
+      "evidence_limits": [
+        "The threat model assumes the product is local-first and does not interact with external networks, but this is not explicitly validated or confirmed.",
+        "The exact nature of the planning data and its sensitivity is not specified, which may affect the threat modeling depth.",
+        "The exact security measures in place for local storage are not provided, which limits the ability to assess mitigation effectiveness.",
+        "The exact threat landscape for local-first applications is not fully defined, which may affect the completeness of the model.",
+        "The exact control owners for the application code and UI are not specified, which may affect the accountability mapping."
+      ]
+    },
+    "review_is_model_generated_not_human": true
+  },
+  "evaluation": {
+    "status": "PASS",
+    "failures": [],
+    "deliverable_cues": [
+      "threat",
+      "model",
+      "mitigations",
+      "mapped",
+      "tests"
+    ],
+    "matched_deliverable_cues": [
+      "threat",
+      "model",
+      "mitigations",
+      "tests"
+    ],
+    "cue_threshold": 2,
+    "evaluated_scope": "task/trace/role/provider/model, n8n execution references, two-stage correlation, required sections and role-specific output cues; not domain truth"
+  },
+  "statuses": {
+    "live_inference": "PASS",
+    "specialist_artifact": "PASS",
+    "reviewed": "CAPTURED",
+    "reviewer_verdict": "PASS",
+    "role_tool_capability": "VERIFIED",
+    "human_expert_approved": false,
+    "review_outcome": "PASS"
+  },
+  "restrictions": {
+    "live_codex_calls": 0,
+    "paid_api_calls": 0,
+    "external_actions": 0,
+    "public_deployments": 0
+  },
+  "tool_receipt": {
+    "schema_version": "role-tool-receipt.v1",
+    "authorized_by": "explicit synthetic task packet in this bounded test; this verifies the scoped tool boundary, not a grant to run tools autonomously",
+    "task_id": "task_4d648c1c-dc08-4277-8007-e4e1c2f4cd4c",
+    "trace_id": "trace_bed80fd9-1c18-4e62-8ecb-363c9857ef1d",
+    "role_id": "SEC-02",
+    "grants": [
+      "project.read",
+      "artifact.write"
+    ],
+    "read": {
+      "path": "roles/contracts/SEC-02.v1.json",
+      "bytes": 2006,
+      "sha256": "1af3f3dcd5f9d63e4b4ec08cf9069554fcc06d2b0acb9df89197c8f7535909c5"
+    },
+    "write": {
+      "path": "ops/local-live/artifacts/task_4d648c1c-dc08-4277-8007-e4e1c2f4cd4c/scoped-capability-receipt-sec-02.md",
+      "bytes": 614,
+      "sha256": "641cdaf6c100c90ddbb1b6b2708d33ce4b494bd4bcfce4dd0e453a13ee2ee74a",
+      "idempotent_existing_receipt": true
+    },
+    "negative_checks": {
+      "ungranted_tool_denied": true,
+      "outside_allowlist_denied": true,
+      "unauthorized_path": "roles/contracts/D-00.v1.json",
+      "path_traversal_denied": true,
+      "overwrite_denied": true
+    },
+    "sensitive_grants": [],
+    "external_actions": 0,
+    "recorded_at": "2026-10-18T17:05:17.095Z"
+  }
+}

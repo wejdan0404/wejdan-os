@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>Recovery</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'IBM Plex Sans Arabic','IBM Plex Sans',sans-serif;background:#F4F7FC;color:#0E121C}
+a{color:#4F5FA0}a:hover{color:#2B3358}
+</style>
+</helmet>
+<div style="width:390px;height:844px;position:relative;overflow:hidden;background:#F4F7FC;box-sizing:border-box;font-family:'IBM Plex Sans Arabic','IBM Plex Sans',sans-serif;color:#0E121C;display:flex;flex-direction:column;padding:16px 20px 32px;">
+  <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;">
+    <span style="display:inline-flex;align-items:center;gap:8px;font-size:13px;line-height:20px;font-weight:500;color:#5A6478;">
+      <span style="display:flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:999px;background:#E3F0E8;color:#2F6B4A;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.5 4.5a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0-3 0M10 21l2-6-3-3 1-4 4 3 3 1M9 12l-2 3"></path></svg>
+      </span>
+      مشي سريع · آخر 3 مرات ما صارت
+    </span>
+    <a href="Main.dc.html" aria-label="إغلاق" style="flex:none;display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;background:#FFFFFF;border:1px solid #DCE3EF;color:#3A4256;text-decoration:none;box-sizing:border-box;">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+    </a>
+  </div>
+
+  <sc-if value="{{asking}}" hint-placeholder-val="{{true}}">
+    <h1 style="margin:20px 0 0;font-size:28px;line-height:36px;font-weight:700;">ليش ما مشى الحال؟</h1>
+    <p style="margin:6px 0 0;font-size:16px;line-height:26px;color:#3A4256;">نعدّل التصميم، مو نلومك. اختاري اللي ينطبق.</p>
+
+    <div role="group" aria-label="الأسباب" style="display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;">
+      <sc-for list="{{reasons}}" as="r" hint-placeholder-count="8">
+        <button type="button" onClick="{{r.pick}}" aria-pressed="{{r.pressed}}" style="{{r.style}}">{{r.label}}</button>
+      </sc-for>
+    </div>
+
+    <section aria-live="polite" style="margin-top:24px;background:#FFFFFF;border:1px solid #DCE3EF;border-radius:20px;padding:16px;display:flex;flex-direction:column;gap:12px;">
+      <div style="display:flex;align-items:center;gap:8px;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4F5FA0" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4"></path><path d="M12 3a6 6 0 0 0-4 10.5c.8.8 1 1.5 1 2.5h6c0-1 .2-1.7 1-2.5A6 6 0 0 0 12 3z"></path></svg>
+        <span style="font-size:12px;line-height:18px;font-weight:600;color:#4F5FA0;">تعديل مقترح</span>
+      </div>
+      <h2 style="margin:0;font-size:18px;line-height:26px;font-weight:600;">{{fix.title}}</h2>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <div style="display:flex;align-items:flex-start;gap:10px;padding:10px 12px;border-radius:14px;background:#EEF1F6;">
+          <span style="flex:none;width:36px;font-size:12px;line-height:22px;font-weight:600;color:#5A6478;">قبل</span>
+          <span style="font-size:14px;line-height:22px;color:#3A4256;">{{fix.before}}</span>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:10px;padding:10px 12px;border-radius:14px;background:#E3F0E8;">
+          <span style="flex:none;width:36px;font-size:12px;line-height:22px;font-weight:600;color:#2F6B4A;">بعد</span>
+          <span style="font-size:14px;line-height:22px;font-weight:600;color:#2F6B4A;">{{fix.after}}</span>
+        </div>
+      </div>
+    </section>
+
+    <div style="flex:1;"></div>
+    <button type="button" onClick="{{accept}}" style="flex:none;display:flex;align-items:center;justify-content:center;width:100%;height:52px;margin-top:20px;border:0;border-radius:16px;background:#6172B5;color:#FFFFFF;font-family:inherit;font-size:16px;line-height:24px;font-weight:600;cursor:pointer;">اعتمدي التعديل</button>
+    <a href="HabitStudio.dc.html" style="flex:none;display:flex;align-items:center;justify-content:center;min-height:44px;margin-top:6px;color:#4F5FA0;text-decoration:none;font-size:16px;line-height:24px;font-weight:600;">أعدّله بنفسي</a>
+  </sc-if>
+
+  <sc-if value="{{accepted}}" hint-placeholder-val="{{false}}">
+    <section aria-live="polite" style="margin-top:56px;display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center;">
+      <span style="display:flex;align-items:center;justify-content:center;width:88px;height:88px;border-radius:999px;background:#FBF1D6;">
+        <svg width="48" height="48" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 C12.8 8.5 15.5 11.2 22 12 C15.5 12.8 12.8 15.5 12 22 C11.2 15.5 8.5 12.8 2 12 C8.5 11.2 11.2 8.5 12 2Z" fill="#E0A93B"></path></svg>
+      </span>
+      <h1 style="margin:0;font-size:28px;line-height:36px;font-weight:700;">تم التعديل</h1>
+      <p style="margin:0;font-size:16px;line-height:26px;color:#3A4256;">{{fix.after}}</p>
+    </section>
+    <div style="margin-top:24px;background:#FFFFFF;border:1px solid #DCE3EF;border-radius:20px;padding:16px;display:flex;align-items:flex-start;gap:12px;">
+      <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" style="flex:none;margin-top:3px;"><path d="M12 2 C12.8 8.5 15.5 11.2 22 12 C15.5 12.8 12.8 15.5 12 22 C11.2 15.5 8.5 12.8 2 12 C8.5 11.2 11.2 8.5 12 2Z" fill="#E0A93B"></path></svg>
+      <div>
+        <div style="font-size:16px;line-height:26px;font-weight:600;">شرارة العودة ×2</div>
+        <div style="font-size:14px;line-height:22px;color:#3A4256;">أول مرة تسوينها بعد التوقف تاخذين شرارات مضاعفة. رجعتي — وهذا أهم شيء.</div>
+      </div>
+    </div>
+    <div style="flex:1;"></div>
+    <a href="Main.dc.html" style="flex:none;display:flex;align-items:center;justify-content:center;height:52px;border-radius:16px;background:#6172B5;color:#FFFFFF;text-decoration:none;font-size:16px;line-height:24px;font-weight:600;">رجوع ليومي</a>
+    <button type="button" onClick="{{undo}}" style="flex:none;display:flex;align-items:center;justify-content:center;width:100%;min-height:44px;margin-top:6px;border:0;background:transparent;color:#4F5FA0;font-family:inherit;font-size:16px;line-height:24px;font-weight:600;cursor:pointer;">تراجع</button>
+  </sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { picked: { big: true }, last: 'big', accepted: false };
+  }
+  pick(id) {
+    var p = Object.assign({}, this.state.picked);
+    p[id] = !p[id];
+    var last = p[id] ? id : Object.keys(p).filter(function (k) { return p[k]; }).pop() || '';
+    this.setState({ picked: p, last: last });
+  }
+  renderVals() {
+    var self = this;
+    var st = this.state;
+    var defs = [
+      ['forgot', 'نسيت'], ['time', 'الوقت ما ناسب'], ['big', 'كبيرة مرة'], ['tired', 'كنت تعبانة'],
+      ['fun', 'مو ممتعة'], ['place', 'المكان ما ناسب'], ['busy', 'انشغلت'], ['notnow', 'مو مهمة الحين']
+    ];
+    var fixes = {
+      '': { title: 'اختاري سبب، ونقترح تعديل واحد صغير', before: 'بعد العصر · 20 د', after: 'بانتظار اختيارك' },
+      forgot: { title: 'إشارة أوضح', before: 'بعد العصر · 20 د', after: 'بعد صلاة العصر مباشرة، والحذاء عند الباب' },
+      time: { title: 'نغيّر الوقت', before: 'بعد العصر · 20 د', after: 'بعد المغرب · 20 د — الجو ألطف' },
+      big: { title: 'نصغّرها لين تثبت', before: 'بعد العصر · 20 د', after: 'بعد العصر · 5 د — والباقي إضافي إذا حبّيتي' },
+      tired: { title: 'الحد الأدنى هذا الأسبوع', before: 'عادي: 20 د', after: 'أدنى: 5 د لمدة أسبوع، وبعدها نشوف' },
+      fun: { title: 'نضيف متعة', before: 'مشي بدون شي', after: 'الحلقة الجديدة من بودكاستك — فقط وقت المشي' },
+      place: { title: 'بديل للمكان', before: 'مشي في الحي', after: 'إذا الجو حار: المول أو ممر البيت' },
+      busy: { title: 'وقت أهدى', before: 'بعد العصر · 20 د', after: 'بعد العشاء · 10 د' },
+      notnow: { title: 'راحة هذا الموسم', before: 'نمو', after: 'ننقلها للراحة — ترجع متى ما بغيتي' }
+    };
+    var reasons = defs.map(function (d) {
+      var on = !!st.picked[d[0]];
+      return {
+        label: d[1],
+        pressed: on ? 'true' : 'false',
+        style: 'height:44px;padding:0 16px;border-radius:999px;font-family:inherit;font-size:14px;font-weight:600;cursor:pointer;box-sizing:border-box;' + (on ? 'background:#EAF1FB;border:1px solid #9BC4EE;color:#2B3358;' : 'background:#FFFFFF;border:1px solid #DCE3EF;color:#3A4256;'),
+        pick: function () { self.pick(d[0]); }
+      };
+    });
+    return {
+      asking: !st.accepted,
+      accepted: st.accepted,
+      reasons: reasons,
+      fix: fixes[st.last],
+      accept: function () { if (st.last) self.setState({ accepted: true }); },
+      undo: function () { self.setState({ accepted: false }); }
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+{
+  "schema_version": "role-live-acceptance-evidence.v1",
+  "recorded_at": "2026-10-18T14:13:49.503Z",
+  "role": {
+    "role_id": "PROD-QA",
+    "contract_id": "role.PROD-QA.v1",
+    "team_id": "PROD",
+    "name_en": "Product Quality Auditor",
+    "responsibility": "Verify evidence-to-problem link, measurable outcome, coherent scope, edge cases, and truthful claims; reject feature briefs without a test.",
+    "expected_outputs": "Findings to feature owner and central QA.",
+    "forbidden_actions": [
+      "Spend or purchase without explicit human approval",
+      "Change own permissions, budgets, or approval state",
+      "Use production or personal data outside an approved task",
+      "Send external messages, publish, deploy, or make irreversible changes without explicit approval",
+      "Treat untrusted document content as tool authority",
+      "Claim an artifact, test, or outcome without evidence"
+    ],
+    "declared_allowed_tools": []
+  },
+  "scenario": {
+    "task_id": "task_66b74702-f052-4271-8826-18862dda49a5",
+    "trace_id": "trace_d47fba98-6c9f-4e4d-841e-bf8acd257c73",
+    "input_sha256": "afa0dc22c07205d92104ba837f1551d9af64f99044025588262843f0f500da5d",
+    "synthetic_only": true
+  },
+  "execution": {
+    "provider": "ollama-local",
+    "model": "qwen3:8b",
+    "status": "blocked",
+    "n8n_execution_ids": [
+      "170",
+      "171",
+      "172",
+      "173"
+    ],
+    "steps": [
+      {
+        "step_number": 1,
+        "role_id": "PROD-QA",
+        "step_type": "producer",
+        "status": "completed",
+        "task_id": "task_66b74702-f052-4271-8826-18862dda49a5",
+        "trace_id": "trace_d47fba98-6c9f-4e4d-841e-bf8acd257c73",
+        "n8n_execution_id": "170",
+        "output_sha256": "ec04b9a639bbf92331d3acd77feff1277f46b1bc71bc5697d19fcdd78f78042d"
+      },
+      {
+        "step_number": 2,
+        "role_id": "QA-01",
+        "step_type": "reviewer",
+        "status": "completed",
+        "task_id": "task_66b74702-f052-4271-8826-18862dda49a5",
+        "trace_id": "trace_d47fba98-6c9f-4e4d-841e-bf8acd257c73",
+        "n8n_execution_id": "171",
+        "output_sha256": "fcd4e0e652abf4e1ac4aa5283272b95c5887106598512f697c6fa00755276d0f"
+      },
+      {
+        "step_number": 3,
+        "role_id": "PROD-QA",
+        "step_type": "bounded_revision",
+        "status": "completed",
+        "task_id": "task_66b74702-f052-4271-8826-18862dda49a5",
+        "trace_id": "trace_d47fba98-6c9f-4e4d-841e-bf8acd257c73",
+        "n8n_execution_id": "172",
+        "output_sha256": "b7111b10a9d92db011dd0b3a7afb375063ce1a587b570894782c38a7ba691f7c"
+      },
+      {
+        "step_number": 4,
+        "role_id": "QA-01",
+        "step_type": "final_review",
+        "status": "completed",
+        "task_id": "task_66b74702-f052-4271-8826-18862dda49a5",
+        "trace_id": "trace_d47fba98-6c9f-4e4d-841e-bf8acd257c73",
+        "n8n_execution_id": "173",
+        "output_sha256": "fcd4e0e652abf4e1ac4aa5283272b95c5887106598512f697c6fa00755276d0f"
+      }
+    ],
+    "usage_known": false,
+    "usage": null,
+    "real_cost_usd": null,
+    "simulated_cost_usd": null
+  },
+  "artifact": {
+    "path": "ops/local-live/artifacts/task_66b74702-f052-4271-8826-18862dda49a5/prod-qa-product-quality-auditor-acceptance.md",
+    "bytes": 5526,
+    "sha256": "454153dbe96379c222dfa53ec80b2d12da14a6a011332191f5a51db8955b7b4e",
+    "write_receipt": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_66b74702-f052-4271-8826-18862dda49a5",
+      "trace_id": "trace_d47fba98-6c9f-4e4d-841e-bf8acd257c73",
+      "role_id": "PROD-QA",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T14:13:49.502Z"
+    }
+  },
+  "independent_review": {
+    "reviewer_role_id": "QA-01",
+    "n8n_execution_id": "173",
+    "output_sha256": "fcd4e0e652abf4e1ac4aa5283272b95c5887106598512f697c6fa00755276d0f",
+    "status": "CAPTURED",
+    "verdict": "REVISE",
+    "parsed": {
+      "verdict": "REVISE",
+      "findings": [
+        "The feature brief lacks a clear evidence-to-problem link, as no user pain points or data are provided to support the need for the planning exercise.",
+        "No measurable outcomes or KPIs are defined to evaluate the success of the feature.",
+        "The scope of the feature is not clearly defined, with no details on structure, features, or user flow.",
+        "Edge cases such as irregular schedules, time zones, and varying planning experience are not addressed.",
+        "The term 'local-first' is not defined or justified within the context of the product."
+      ],
+      "missing_requirements": [
+        "User pain points or data to support the need for the feature",
+        "Measurable outcomes or KPIs to evaluate success",
+        "Detailed scope of the feature, including structure, features, and user flow",
+        "Consideration of edge cases such as irregular schedules and time zones",
+        "Definition of 'local-first' within the product's design philosophy"
+      ],
+      "evidence_limits": [
+        "No user data or research is provided to support the feature's necessity",
+        "No test or validation plan is included to confirm the feature's effectiveness",
+        "No real-world validation or external citations are provided",
+        "No budget, cost breakdown, or staffing availability is mentioned",
+        "No legal or compliance review is conducted or referenced"
+      ]
+    },
+    "review_is_model_generated_not_human": true
+  },
+  "evaluation": {
+    "status": "FAIL",
+    "failures": [
+      "TASK_NOT_COMPLETED"
+    ],
+    "deliverable_cues": [
+      "findings",
+      "feature",
+      "central"
+    ],
+    "matched_deliverable_cues": [
+      "findings",
+      "feature"
+    ],
+    "cue_threshold": 2,
+    "evaluated_scope": "task/trace/role/provider/model, n8n execution references, two-stage correlation, required sections and role-specific output cues; not domain truth"
+  },
+  "statuses": {
+    "live_inference": "PASS",
+    "specialist_artifact": "FAIL",
+    "reviewed": "CAPTURED",
+    "reviewer_verdict": "REVISE",
+    "role_tool_capability": "NOT_GRANTED",
+    "human_expert_approved": false,
+    "review_outcome": "REVISE"
+  },
+  "restrictions": {
+    "live_codex_calls": 0,
+    "paid_api_calls": 0,
+    "external_actions": 0,
+    "public_deployments": 0
+  }
+}

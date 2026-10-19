@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>الرؤى</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'IBM Plex Sans Arabic','IBM Plex Sans',sans-serif;background:#F4F7FC;color:#0E121C}
+a{color:#4F5FA0}a:hover{color:#2B3358}
+</style>
+</helmet>
+<div style="width:390px;height:1790px;position:relative;overflow:hidden;background:#F4F7FC;font-family:'IBM Plex Sans Arabic','IBM Plex Sans',sans-serif;color:#0E121C">
+<main style="padding:16px 20px 108px;display:flex;flex-direction:column;gap:24px">
+
+<header style="display:flex;flex-direction:column;gap:4px">
+<div style="display:flex;align-items:center;gap:12px">
+<a href="Me.dc.html" aria-label="رجوع إلى أنا" style="width:44px;height:44px;border-radius:999px;border:1px solid #DCE3EF;background:#FFFFFF;color:#2B3358;display:flex;align-items:center;justify-content:center;box-sizing:border-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
+<h1 style="margin:0;flex:1;font-size:22px;line-height:30px;font-weight:700">الرؤى</h1>
+<span style="font-size:12px;line-height:18px;font-weight:600;color:#5A6478;background:#EEF1F6;border-radius:999px;padding:1px 8px">عيّنة</span>
+</div>
+<p style="margin:0;font-size:13px;line-height:20px;font-weight:500;color:#5A6478">آخر 4 أسابيع · أرقام تساعدك تعدّلين التصميم، مو تحكم عليك</p>
+</header>
+
+<section aria-labelledby="mom-h" style="background:#FFFFFF;border:1px solid #DCE3EF;border-radius:20px;padding:16px;display:flex;flex-direction:column;gap:12px">
+<h2 id="mom-h" style="margin:0;font-size:18px;line-height:26px;font-weight:600">الزخم حسب المجال</h2>
+<div style="display:flex;flex-direction:column;gap:10px">
+<sc-for list="{{momentum}}" as="m" hint-placeholder-count="7">
+<div style="display:flex;align-items:center;gap:10px">
+<span style="flex:0 0 96px;font-size:14px;line-height:22px">{{m.name}}</span>
+<div style="flex:1;height:12px;background:#EAF1FB;border-radius:999px;position:relative;overflow:hidden"><div style="{{m.bar}}"></div></div>
+<span style="flex:0 0 28px;font-family:'IBM Plex Sans',sans-serif;font-size:14px;font-weight:600;text-align:left">{{m.v}}</span>
+</div>
+</sc-for>
+</div>
+<div style="display:flex;justify-content:space-between;padding-right:106px;padding-left:38px;font-family:'IBM Plex Sans',sans-serif;font-size:12px;color:#5A6478" aria-hidden="true"><span>0</span><span>50</span><span>100</span></div>
+<p style="margin:0;font-size:13px;line-height:20px;font-weight:500;color:#5A6478">الزخم من 0 إلى 100: متوسط موزون لآخر 7 أيام. اليوم الفائت ينزله شوي، ما يرجعه للصفر.</p>
+</section>
+
+<section aria-labelledby="rec-h" style="background:#FFFFFF;border:1px solid #DCE3EF;border-radius:20px;padding:16px;display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;align-items:baseline;justify-content:space-between;gap:8px">
+<h2 id="rec-h" style="margin:0;font-size:18px;line-height:26px;font-weight:600">سرعة الرجوع</h2>
+<span style="font-size:13px;line-height:20px;font-weight:600;color:#2F6B4A">أسرع كل أسبوع</span>
+</div>
+<p style="margin:0;font-size:14px;line-height:22px;color:#3A4256">كم يوم تاخذين عشان ترجعين بعد ما تفوّتين عادة أساسية.</p>
+<div role="img" aria-label="أيام الرجوع: الأسبوع 1 أربعة أيام، الأسبوع 2 ثلاثة أيام، الأسبوع 3 يومين، الأسبوع 4 يوم واحد" style="display:flex;flex-direction:column;gap:6px">
+<div style="height:150px;display:grid;grid-template-columns:repeat(4, minmax(0, 1fr));gap:16px;align-items:end;border-bottom:1px solid #5A6478;padding:0 8px">
+<div style="display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:4px;height:100%"><span style="font-family:'IBM Plex Sans',sans-serif;font-size:14px;font-weight:600">4</span><div style="width:100%;max-width:40px;height:112px;background:#BEDAF7;border-radius:8px 8px 0 0"></div></div>
+<div style="display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:4px;height:100%"><span style="font-family:'IBM Plex Sans',sans-serif;font-size:14px;font-weight:600">3</span><div style="width:100%;max-width:40px;height:84px;background:#BEDAF7;border-radius:8px 8px 0 0"></div></div>
+<div style="display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:4px;height:100%"><span style="font-family:'IBM Plex Sans',sans-serif;font-size:14px;font-weight:600">2</span><div style="width:100%;max-width:40px;height:56px;background:#9BC4EE;border-radius:8px 8px 0 0"></div></div>
+<div style="display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:4px;height:100%"><span style="font-family:'IBM Plex Sans',sans-serif;font-size:14px;font-weight:600">1</span><div style="width:100%;max-width:40px;height:28px;background:#6172B5;border-radius:8px 8px 0 0"></div></div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(4, minmax(0, 1fr));gap:16px;padding:0 8px;font-size:12px;line-height:18px;font-weight:600;color:#5A6478;text-align:center"><span>أسبوع 1</span><span>أسبوع 2</span><span>أسبوع 3</span><span>أسبوع 4</span></div>
+</div>
+<p style="margin:0;font-size:13px;line-height:20px;font-weight:500;color:#5A6478">الأرقام = أيام حتى الرجوع. أقل = أحسن. الخط تحت هو الصفر.</p>
+</section>
+
+<section aria-labelledby="best-h" style="background:#FFFFFF;border:1px solid #DCE3EF;border-radius:20px;padding:16px;display:flex;flex-direction:column;gap:4px">
+<h2 id="best-h" style="margin:0 0 8px;font-size:18px;line-height:26px;font-weight:600">أفضل أوقاتك</h2>
+<sc-for list="{{best}}" as="b" hint-placeholder-count="3">
+<div style="{{b.row}}">
+<span style="flex:1;display:flex;flex-direction:column">
+<span style="font-size:15px;line-height:22px;font-weight:600">{{b.habit}}</span>
+<span style="font-size:13px;line-height:20px;font-weight:500;color:#5A6478">{{b.note}}</span>
+</span>
+<span style="font-family:'IBM Plex Sans',sans-serif;font-size:14px;font-weight:600;color:#2B3358;background:#EAF1FB;border-radius:999px;padding:4px 12px" dir="ltr">{{b.time}}</span>
+</div>
+</sc-for>
+</section>
+
+<section aria-labelledby="exp-h" style="background:#FFFFFF;border:1px solid #DCE3EF;border-radius:20px;padding:16px;display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;flex-direction:column">
+<span style="font-size:12px;line-height:18px;font-weight:600;color:#5A6478">نتيجة التجربة · أسبوعين</span>
+<h2 id="exp-h" style="margin:0;font-size:18px;line-height:26px;font-weight:600">البودكاست مع المشي</h2>
+</div>
+<div style="display:grid;grid-template-columns:repeat(2, minmax(0, 1fr));gap:8px">
+<div style="background:#F4F7FC;border-radius:16px;padding:12px;display:flex;flex-direction:column;gap:8px">
+<span style="font-size:13px;line-height:20px;font-weight:600;color:#5A6478">قبل · بدون</span>
+<div style="display:flex;flex-direction:column"><span style="font-family:'IBM Plex Sans',sans-serif;font-size:22px;line-height:30px;font-weight:600">3 من 7</span><span style="font-size:12px;line-height:18px;font-weight:600;color:#5A6478">أيام مشيتي</span></div>
+<div style="display:flex;flex-direction:column"><span style="font-family:'IBM Plex Sans',sans-serif;font-size:22px;line-height:30px;font-weight:600">2.8</span><span style="font-size:12px;line-height:18px;font-weight:600;color:#5A6478">المتعة من 5</span></div>
+</div>
+<div style="background:#EAF1FB;border:1px solid #9BC4EE;border-radius:16px;padding:12px;display:flex;flex-direction:column;gap:8px">
+<span style="font-size:13px;line-height:20px;font-weight:600;color:#4F5FA0">بعد · مع البودكاست</span>
+<div style="display:flex;flex-direction:column"><span style="font-family:'IBM Plex Sans',sans-serif;font-size:22px;line-height:30px;font-weight:600;color:#2B3358">5 من 7</span><span style="font-size:12px;line-height:18px;font-weight:600;color:#4F5FA0">أيام مشيتي</span></div>
+<div style="display:flex;flex-direction:column"><span style="font-family:'IBM Plex Sans',sans-serif;font-size:22px;line-height:30px;font-weight:600;color:#2B3358">4.1</span><span style="font-size:12px;line-height:18px;font-weight:600;color:#4F5FA0">المتعة من 5</span></div>
+</div>
+</div>
+<p style="margin:0;font-size:13px;line-height:20px;font-weight:500;color:#5A6478">تجربة شخصية قصيرة — إشارة، مو دليل. أغلب المحفزات يخف أثرها مع الوقت، فنعيد القياس بعد شهر.</p>
+<div style="display:flex;gap:8px">
+<button type="button" style="flex:1;min-height:48px;border-radius:16px;background:#FFFFFF;border:1px solid #9BC4EE;color:#2B3358;font-family:inherit;font-size:15px;font-weight:600;cursor:pointer">أثبّتها</button>
+<button type="button" style="flex:1;min-height:48px;border-radius:16px;background:#FFFFFF;border:1px solid #DCE3EF;color:#3A4256;font-family:inherit;font-size:15px;font-weight:600;cursor:pointer">أرجّع القديم</button>
+</div>
+</section>
+
+<section aria-labelledby="load-h" style="background:#FFFFFF;border:1px solid #DCE3EF;border-radius:20px;padding:16px;display:flex;flex-direction:column;gap:10px">
+<div style="display:flex;align-items:baseline;justify-content:space-between;gap:8px">
+<h2 id="load-h" style="margin:0;font-size:18px;line-height:26px;font-weight:600">عبء النظام</h2>
+<span style="display:flex;align-items:baseline;gap:4px"><span style="font-family:'IBM Plex Sans',sans-serif;font-size:22px;line-height:30px;font-weight:600">18</span><span style="font-size:13px;line-height:20px;font-weight:500;color:#5A6478">دقيقة بالأسبوع</span></span>
+</div>
+<p style="margin:0;font-size:14px;line-height:22px;color:#3A4256">الوقت اللي تصرفينه على التطبيق نفسه. نبيه يبقى قليل — التطبيق خادم، مو شغلة إضافية.</p>
+<div role="img" aria-label="تسجيل يومي 8 دقائق، المراجعة الأسبوعية 10 دقائق" style="display:flex;flex-direction:column;gap:6px">
+<div style="display:flex;height:12px;border-radius:999px;overflow:hidden;gap:2px"><div style="flex:8;background:#6172B5"></div><div style="flex:10;background:#9BC4EE"></div></div>
+<div style="display:flex;justify-content:space-between;font-size:13px;line-height:20px;font-weight:500;color:#3A4256"><span style="display:flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border-radius:3px;background:#6172B5"></span>تسجيل يومي 8 د</span><span style="display:flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border-radius:3px;background:#9BC4EE"></span>المراجعة الأسبوعية 10 د</span></div>
+</div>
+</section>
+
+</main>
+
+<nav aria-label="التنقل الرئيسي" style="position:absolute;left:0;right:0;bottom:0;height:84px;background:#FFFFFF;border-top:1px solid #DCE3EF;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));padding:6px 8px 0;box-sizing:border-box;">
+    <a href="Main.dc.html" style="display:flex;flex-direction:column;align-items:center;gap:2px;min-height:52px;text-decoration:none;color:#5A6478;font-size:12px;line-height:18px;font-weight:600;">
+      <span style="width:4px;height:4px;"></span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>
+      <span>اليوم</span>
+    </a>
+    <a href="HabitsHub.dc.html" style="display:flex;flex-direction:column;align-items:center;gap:2px;min-height:52px;text-decoration:none;color:#5A6478;font-size:12px;line-height:18px;font-weight:600;">
+      <span style="width:4px;height:4px;"></span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21v-9"></path><path d="M12 12c0-4 3-7 8-7 0 4-3 7-8 7z"></path><path d="M12 14c0-3-2.5-5.5-7-5.5 0 3 2.5 5.5 7 5.5z"></path></svg>
+      <span>عاداتي</span>
+    </a>
+    <a href="Path.dc.html" style="display:flex;flex-direction:column;align-items:center;gap:2px;min-height:52px;text-decoration:none;color:#5A6478;font-size:12px;line-height:18px;font-weight:600;">
+      <span style="width:4px;height:4px;"></span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="19" r="2"></circle><circle cx="18" cy="5" r="2"></circle><path d="M8 19h7.5a3.5 3.5 0 0 0 0-7h-7a3.5 3.5 0 0 1 0-7H16"></path></svg>
+      <span>مساري</span>
+    </a>
+    <a href="Joy.dc.html" style="display:flex;flex-direction:column;align-items:center;gap:2px;min-height:52px;text-decoration:none;color:#5A6478;font-size:12px;line-height:18px;font-weight:600;">
+      <span style="width:4px;height:4px;"></span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c.7 5.3 3 7.6 9 9-6 1.4-8.3 3.7-9 9-.7-5.3-3-7.6-9-9 6-1.4 8.3-3.7 9-9z"></path></svg>
+      <span>متعتي</span>
+    </a>
+    <a href="Me.dc.html" aria-current="page" style="display:flex;flex-direction:column;align-items:center;gap:2px;min-height:52px;text-decoration:none;color:#6172B5;font-size:12px;line-height:18px;font-weight:600;">
+      <span style="width:4px;height:4px;border-radius:999px;background:#6172B5;"></span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"></path></svg>
+      <span>أنا</span>
+    </a>
+  </nav>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":1790}}'>
+class Component extends DCLogic {
+renderVals() {
+  const M = [['العناية', 85], ['النوم', 80], ['الحركة', 72], ['IELTS', 64], ['المال', 60], ['البيت', 55], ['المسار المهني', 41]];
+  const momentum = M.map(m => ({ name: m[0], v: m[1], bar: 'position:absolute;top:0;right:0;height:12px;border-radius:999px;background:#6172B5;width:' + m[1] + '%' }));
+  const B = [['المشي السريع', 'تكمّلينه أكثر بعد العصر', '16:30–17:30'], ['مراجعة المفردات', 'بعد الفطور على طول', '08:00–09:00'], ['جلسة التركيز', 'أوضح بعد الظهر', '13:30–15:00']];
+  const best = B.map((b, i) => ({ habit: b[0], note: b[1], time: b[2], row: 'display:flex;align-items:center;gap:12px;padding:10px 0;' + (i > 0 ? 'border-top:1px solid #EAF1FB' : '') }));
+  return { momentum: momentum, best: best };
+}
+}
+</script>
+</body>
+</html>

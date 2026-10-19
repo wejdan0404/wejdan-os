@@ -1,0 +1,34 @@
+{
+  "schema_version": "ll09-runtime-reconciliation.v1",
+  "observed_at": "2026-10-18T09:28:01Z",
+  "runtime": {
+    "pid": 45096,
+    "executable": "C:\\Program Files\\nodejs\\node.exe",
+    "command_line": "node ops/local-live/runtime/server.mjs",
+    "parent_process_id": 60256,
+    "parent_command": "Codex-launched PowerShell executing node ops/local-live/runtime/server.mjs",
+    "listen_address": "127.0.0.1:8766",
+    "owner_verified": true,
+    "health_endpoint": { "status": 200, "service": "wejdan-local-runtime", "roles_configured": 85, "provider": "ollama-local", "paid_routes_enabled": false, "bind": "127.0.0.1" },
+    "provider_status_endpoint": { "status": 404, "new_source_loaded": false }
+  },
+  "database": {
+    "live_path": "ops/local-live/data/wejdan-local.sqlite",
+    "integrity_check": "ok",
+    "task_count": 118,
+    "active_task_count": 0,
+    "codex_task_count": 0,
+    "codex_interlock_trigger_present": true,
+    "snapshot_path": "ops/history/20261018-ll09-pre-restart-wejdan-local.sqlite",
+    "snapshot_sha256": "e7537c800f961fd8db6d4ce7c55b5d5b9a56b776da66df48b77506d255ccfab6"
+  },
+  "restart": {
+    "status": "BLOCKED_SAFE_GRACEFUL_CONTROL_UNAVAILABLE",
+    "registered_service_launcher": false,
+    "graceful_shutdown_endpoint": false,
+    "force_termination_used": false,
+    "reason": "The API is a direct Node child of a Codex-launched PowerShell process. Windows force-stop could bypass the server SIGINT/SIGTERM close handler; no safe console control channel is exposed to this task.",
+    "owner_action": "Press Ctrl+C in the API's owning console, then relaunch node ops/local-live/runtime/server.mjs from the project root. Keep the SQLite interlock until LL10 owner approval and verified new runtime."
+  },
+  "safety_counts": { "live_codex_calls": 0, "paid_api_calls": 0, "n8n_runs": 0, "cloud_workflows_changed": 0, "company_os_accessed": false }
+}

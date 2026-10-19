@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>الإعدادات</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'IBM Plex Sans Arabic','IBM Plex Sans',sans-serif;background:#F4F7FC;color:#0E121C}
+a{color:#4F5FA0}a:hover{color:#2B3358}
+</style>
+</helmet>
+<div style="width:390px;height:1780px;position:relative;overflow:hidden;background:#F4F7FC;font-family:'IBM Plex Sans Arabic','IBM Plex Sans',sans-serif;color:#0E121C">
+<main style="padding:16px 20px 108px;display:flex;flex-direction:column;gap:24px">
+
+<header style="display:flex;align-items:center;gap:12px">
+<a href="Me.dc.html" aria-label="رجوع إلى أنا" style="width:44px;height:44px;border-radius:999px;border:1px solid #DCE3EF;background:#FFFFFF;color:#2B3358;display:flex;align-items:center;justify-content:center;box-sizing:border-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
+<h1 style="margin:0;flex:1;font-size:22px;line-height:30px;font-weight:700">الإعدادات</h1>
+</header>
+
+<section aria-labelledby="look-h" style="display:flex;flex-direction:column;gap:12px">
+<h2 id="look-h" style="margin:0;font-size:12px;line-height:18px;font-weight:600;color:#5A6478">اللغة والمظهر</h2>
+<div style="background:#FFFFFF;border:1px solid #DCE3EF;border-radius:20px;padding:16px;display:flex;flex-direction:column;gap:14px">
+<div style="display:flex;flex-direction:column;gap:8px">
+<span style="font-size:15px;line-height:22px;font-weight:600" id="lang-l">اللغة</span>
+<div role="radiogroup" aria-labelledby="lang-l" style="display:grid;grid-template-columns:repeat(2, minmax(0, 1fr));gap:4px;background:#F4F7FC;border-radius:14px;padding:4px">
+<sc-for list="{{langs}}" as="o" hint-placeholder-count="2"><button type="button" role="radio" aria-checked="{{o.checked}}" onClick="{{o.pick}}" style="{{o.style}}">{{o.label}}</button></sc-for>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px">
+<span style="font-size:15px;line-height:22px;font-weight:600" id="theme-l">المظهر</span>
+<div role="radiogroup" aria-labelledby="theme-l" style="display:grid;grid-template-columns:repeat(3, minmax(0, 1fr));gap:4px;background:#F4F7FC;border-radius:14px;padding:4px">
+<sc-for list="{{themes}}" as="o" hint-placeholder-count="3"><button type="button" role="radio" aria-checked="{{o.checked}}" onClick="{{o.pick}}" style="{{o.style}}">{{o.label}}</button></sc-for>
+</div>
+</div>
+</div>
+</section>
+
+<section aria-labelledby="notif-h" style="display:flex;flex-direction:column;gap:12px">
+<h2 id="notif-h" style="margin:0;font-size:12px;line-height:18px;font-weight:600;color:#5A6478">التنبيهات</h2>
+<div style="background:#FFFFFF;border:1px solid #DCE3EF;border-radius:20px;padding:16px;display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;align-items:center;gap:12px">
+<span style="flex:1;display:flex;flex-direction:column">
+<span style="font-size:15px;line-height:22px;font-weight:600">الحد الأقصى باليوم</span>
+<span style="font-size:13px;line-height:20px;font-weight:500;color:#5A6478">من 0 إلى 6 · الافتراضي 4</span>
+</span>
+<div style="display:flex;align-items:center;gap:6px;background:#F4F7FC;border-radius:14px;padding:4px">
+<button type="button" onClick="{{cap.dec}}" aria-label="أقل" style="width:44px;height:44px;border-radius:12px;border:1px solid #DCE3EF;background:#FFFFFF;color:#2B3358;display:flex;align-items:center;justify-content:center;padding:0;cursor:pointer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"></path></svg></button>
+<span style="width:32px;text-align:center;font-family:'IBM Plex Sans',sans-serif;font-size:22px;font-weight:600" aria-live="polite">{{cap.n}}</span>
+<button type="button" onClick="{{cap.inc}}" aria-label="أكثر" style="width:44px;height:44px;border-radius:12px;border:1px solid #DCE3EF;background:#FFFFFF;color:#2B3358;display:flex;align-items:center;justify-content:center;padding:0;cursor:pointer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></button>
+</div>
+</div>
+<div style="display:flex;gap:4px" aria-hidden="true">
+<sc-for list="{{cap.slots}}" as="s" hint-placeholder-count="6"><span style="{{s.style}}"></span></sc-for>
+</div>
+<span style="font-size:13px;line-height:20px;font-weight:500;color:#3A4256">{{cap.plan}}</span>
+<div style="border-top:1px solid #DCE3EF;padding-top:12px;display:flex;flex-direction:column;gap:2px">
+<span style="font-size:15px;line-height:22px;font-weight:600">ساعات الهدوء</span>
+<div style="display:grid;grid-template-columns:repeat(2, minmax(0, 1fr));gap:8px;margin-top:6px">
+<button type="button" style="min-height:52px;border-radius:14px;border:1px solid #DCE3EF;background:#F4F7FC;font-family:inherit;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;color:#0E121C"><span style="font-size:12px;line-height:18px;font-weight:600;color:#5A6478">من</span><span style="font-family:'IBM Plex Sans',sans-serif;font-size:16px;font-weight:600">23:00</span></button>
+<button type="button" style="min-height:52px;border-radius:14px;border:1px solid #DCE3EF;background:#F4F7FC;font-family:inherit;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;color:#0E121C"><span style="font-size:12px;line-height:18px;font-weight:600;color:#5A6478">إلى</span><span style="font-family:'IBM Plex Sans',sans-serif;font-size:16px;font-weight:600">07:00</span></button>
+</div>
+<span style="font-size:13px;line-height:20px;font-weight:500;color:#5A6478;margin-top:6px">وجلسات التركيز توقف التنبيهات تلقائيًا.</span>
+</div>
+</div>
+</section>
+
+<section aria-labelledby="anch-h" style="display:flex;flex-direction:column;gap:12px">
+<h2 id="anch-h" style="margin:0;font-size:12px;line-height:18px;font-weight:600;color:#5A6478">المراسي · الإشارات اللي تبدأ منها عاداتك</h2>
+<div style="background:#FFFFFF;border:1px solid #DCE3EF;border-radius:20px;padding:4px 16px">
+<div style="min-height:56px;display:flex;align-items:center;gap:12px"><span style="flex:1;font-size:15px;line-height:22px;font-weight:600">وقت الصحيان</span><span style="font-family:'IBM Plex Sans',sans-serif;font-size:15px;font-weight:600;color:#2B3358;background:#EAF1FB;border-radius:10px;padding:6px 12px">07:00</span></div>
+<div style="min-height:56px;display:flex;align-items:center;gap:12px;border-top:1px solid #EAF1FB"><span style="flex:1;font-size:15px;line-height:22px;font-weight:600">وقت النوم</span><span style="font-family:'IBM Plex Sans',sans-serif;font-size:15px;font-weight:600;color:#2B3358;background:#EAF1FB;border-radius:10px;padding:6px 12px">23:30</span></div>
+<div style="min-height:56px;display:flex;align-items:center;gap:12px;border-top:1px solid #EAF1FB"><span style="flex:1;display:flex;flex-direction:column"><span style="font-size:15px;line-height:22px;font-weight:600">مراسي الصلاة</span><span style="font-size:13px;line-height:20px;font-weight:500;color:#5A6478">{{prayer.note}}</span></span><span style="{{prayer.chip}}">{{prayer.state}}</span></div>
+</div>
+</section>
+
+<section aria-labelledby="mod-h" style="display:flex;flex-direction:column;gap:12px">
+<h2 id="mod-h" style="margin:0;font-size:12px;line-height:18px;font-weight:600;color:#5A6478">الوحدات الاختيارية</h2>
+<div style="background:#FFFFFF;border:1px solid #DCE3EF;border-radius:20px;padding:4px 16px">
+<sc-for list="{{modules}}" as="m" hint-placeholder-count="4">
+<button type="button" role="switch" aria-checked="{{m.checked}}" onClick="{{m.toggle}}" style="{{m.row}}">
+<span style="flex:1;display:flex;flex-direction:column">
+<span style="display:flex;align-items:center;gap:6px;font-size:15px;line-height:22px;font-weight:600">{{m.name}}<sc-if value="{{m.sensitive}}" hint-placeholder-val="{{false}}"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5A6478" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="وحدة حساسة"><rect x="5" y="10.5" width="14" height="10" rx="2"></rect><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"></path></svg></sc-if></span>
+<span style="font-size:13px;line-height:20px;font-weight:500;color:#5A6478">{{m.desc}}</span>
+</span>
+<span style="{{m.track}}"><span style="{{m.knob}}"></span></span>
+</button>
+</sc-for>
+</div>
+<div style="background:#ECE8F7;border-radius:16px;padding:12px 14px;display:flex;gap:10px;align-items:flex-start">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5B4C99" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:0 0 18px;margin-top:3px"><path d="M12 3.5l7 3v5c0 4.4-3 7.8-7 9-4-1.2-7-4.6-7-9v-5z"></path></svg>
+<p style="margin:0;font-size:14px;line-height:22px;color:#2B3358">كل البيانات على جهازك فقط — بدون حساب أو خادم. الوحدات الحساسة مطفأة افتراضيًا، وتقدرين تقفلينها بـ Face ID.</p>
+</div>
+</section>
+
+<section aria-labelledby="priv-h" style="display:flex;flex-direction:column;gap:12px">
+<h2 id="priv-h" style="margin:0;font-size:12px;line-height:18px;font-weight:600;color:#5A6478">الخصوصية والبيانات</h2>
+<div style="background:#FFFFFF;border:1px solid #DCE3EF;border-radius:20px;padding:4px 16px">
+<button type="button" role="switch" aria-checked="{{lock.checked}}" onClick="{{lock.toggle}}" style="width:100%;min-height:64px;display:flex;align-items:center;gap:12px;background:none;border:0;padding:0;font-family:inherit;text-align:right;cursor:pointer;color:#0E121C">
+<span style="flex:1;display:flex;flex-direction:column"><span style="font-size:15px;line-height:22px;font-weight:600">قفل التطبيق</span><span style="font-size:13px;line-height:20px;font-weight:500;color:#5A6478">Face ID عند الفتح</span></span>
+<span style="{{lock.track}}"><span style="{{lock.knob}}"></span></span>
+</button>
+<button type="button" style="width:100%;min-height:56px;display:flex;align-items:center;gap:12px;background:none;border:0;border-top:1px solid #EAF1FB;padding:0;font-family:inherit;text-align:right;cursor:pointer;color:#0E121C"><span style="flex:1;font-size:15px;line-height:22px;font-weight:600">تصدير كل البيانات</span><span style="font-size:13px;font-weight:600;color:#5A6478">JSON</span></button>
+<button type="button" style="width:100%;min-height:56px;display:flex;align-items:center;gap:12px;background:none;border:0;border-top:1px solid #EAF1FB;padding:0;font-family:inherit;text-align:right;cursor:pointer;color:#0E121C"><span style="flex:1;font-size:15px;line-height:22px;font-weight:600">استيراد من ملف</span><span style="font-size:13px;font-weight:600;color:#5A6478">JSON</span></button>
+</div>
+<button type="button" style="min-height:52px;border-radius:16px;background:#FFFFFF;border:1px solid #E9C9D2;color:#8A3950;font-family:inherit;font-size:16px;font-weight:600;cursor:pointer">حذف كل البيانات</button>
+<p style="margin:0;font-size:13px;line-height:20px;font-weight:500;color:#5A6478;text-align:center">نطلب تأكيد قبل الحذف، وننصح بالتصدير أول.</p>
+</section>
+
+</main>
+
+<nav aria-label="التنقل الرئيسي" style="position:absolute;left:0;right:0;bottom:0;height:84px;background:#FFFFFF;border-top:1px solid #DCE3EF;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));padding:6px 8px 0;box-sizing:border-box;">
+    <a href="Main.dc.html" style="display:flex;flex-direction:column;align-items:center;gap:2px;min-height:52px;text-decoration:none;color:#5A6478;font-size:12px;line-height:18px;font-weight:600;">
+      <span style="width:4px;height:4px;"></span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>
+      <span>اليوم</span>
+    </a>
+    <a href="HabitsHub.dc.html" style="display:flex;flex-direction:column;align-items:center;gap:2px;min-height:52px;text-decoration:none;color:#5A6478;font-size:12px;line-height:18px;font-weight:600;">
+      <span style="width:4px;height:4px;"></span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21v-9"></path><path d="M12 12c0-4 3-7 8-7 0 4-3 7-8 7z"></path><path d="M12 14c0-3-2.5-5.5-7-5.5 0 3 2.5 5.5 7 5.5z"></path></svg>
+      <span>عاداتي</span>
+    </a>
+    <a href="Path.dc.html" style="display:flex;flex-direction:column;align-items:center;gap:2px;min-height:52px;text-decoration:none;color:#5A6478;font-size:12px;line-height:18px;font-weight:600;">
+      <span style="width:4px;height:4px;"></span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="19" r="2"></circle><circle cx="18" cy="5" r="2"></circle><path d="M8 19h7.5a3.5 3.5 0 0 0 0-7h-7a3.5 3.5 0 0 1 0-7H16"></path></svg>
+      <span>مساري</span>
+    </a>
+    <a href="Joy.dc.html" style="display:flex;flex-direction:column;align-items:center;gap:2px;min-height:52px;text-decoration:none;color:#5A6478;font-size:12px;line-height:18px;font-weight:600;">
+      <span style="width:4px;height:4px;"></span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c.7 5.3 3 7.6 9 9-6 1.4-8.3 3.7-9 9-.7-5.3-3-7.6-9-9 6-1.4 8.3-3.7 9-9z"></path></svg>
+      <span>متعتي</span>
+    </a>
+    <a href="Me.dc.html" aria-current="page" style="display:flex;flex-direction:column;align-items:center;gap:2px;min-height:52px;text-decoration:none;color:#6172B5;font-size:12px;line-height:18px;font-weight:600;">
+      <span style="width:4px;height:4px;border-radius:999px;background:#6172B5;"></span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"></path></svg>
+      <span>أنا</span>
+    </a>
+  </nav>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":1780}}'>
+class Component extends DCLogic {
+constructor(props){ super(props); this.state = { lang: 0, theme: 2, cap: 4, mods: [false, false, true, false], lock: false }; }
+renderVals() {
+  const seg = (on) => 'min-height:44px;border:0;border-radius:10px;font-family:inherit;font-size:14px;font-weight:600;cursor:pointer;' + (on ? 'background:#FFFFFF;color:#2B3358;box-shadow:0 2px 8px rgba(14,18,28,.06)' : 'background:transparent;color:#5A6478');
+  const langs = ['العربية', 'English'].map((l, i) => ({ label: l, checked: this.state.lang === i ? 'true' : 'false', style: seg(this.state.lang === i), pick: () => this.setState({ lang: i }) }));
+  const themes = ['فاتح', 'داكن', 'حسب الجهاز'].map((l, i) => ({ label: l, checked: this.state.theme === i ? 'true' : 'false', style: seg(this.state.theme === i), pick: () => this.setState({ theme: i }) }));
+  const cap = this.state.cap;
+  const plans = [
+    'بدون تنبيهات — التطبيق ينتظرك لين تفتحينه.',
+    'موجز الصباح بس.',
+    'موجز الصباح · وإغلاق المساء.',
+    'موجز الصباح · تذكير عند إشارة · إغلاق المساء.',
+    'موجز الصباح · تذكيرين عند الإشارات · إغلاق المساء.',
+    'موجز الصباح · 3 تذكيرات · إغلاق المساء.',
+    'موجز الصباح · 4 تذكيرات · إغلاق المساء. كثرة التنبيهات تتعب — نراقبها معك.'
+  ];
+  const slots = [0, 1, 2, 3, 4, 5].map(k => ({ style: 'flex:1;height:8px;border-radius:999px;background:' + (k < cap ? '#6172B5' : '#EAF1FB') }));
+  const M = [['الدورة الشهرية', 'تتبع خاص بك · مطفأة افتراضيًا', true], ['PCOS', 'فقط إذا فيه تشخيص من طبيبة', true], ['الحوض', 'مهام الماء والإطعام', false], ['مرسى الصلاة', 'أوقات تُحسب على جهازك · أم القرى · مكة', false]];
+  const sw = (on) => ({
+    track: 'flex:0 0 52px;height:32px;border-radius:999px;position:relative;display:block;' + (on ? 'background:#6172B5' : 'background:#DCE3EF'),
+    knob: 'position:absolute;top:3px;width:26px;height:26px;border-radius:999px;background:#FFFFFF;box-shadow:0 2px 8px rgba(14,18,28,.06);' + (on ? 'left:3px' : 'right:3px')
+  });
+  const modules = M.map((m, i) => {
+    const on = this.state.mods[i];
+    return Object.assign({ name: m[0], desc: m[1], sensitive: m[2], checked: on ? 'true' : 'false',
+      row: 'width:100%;min-height:64px;display:flex;align-items:center;gap:12px;background:none;border:0;padding:8px 0;font-family:inherit;text-align:right;cursor:pointer;color:#0E121C;' + (i > 0 ? 'border-top:1px solid #EAF1FB' : ''),
+      toggle: () => { const n = this.state.mods.slice(); n[i] = !n[i]; this.setState({ mods: n }); } }, sw(on));
+  });
+  const pOn = this.state.mods[3];
+  const lock = this.state.lock;
+  return {
+    langs: langs, themes: themes, modules: modules,
+    cap: { n: cap, slots: slots, plan: plans[cap],
+      inc: () => this.setState({ cap: Math.min(6, cap + 1) }), dec: () => this.setState({ cap: Math.max(0, cap - 1) }) },
+    prayer: { state: pOn ? 'مفعّلة' : 'مطفأة', note: pOn ? 'مثال: بعد العصر ← المشي' : 'اختيارية · تفعيلها من الوحدات تحت',
+      chip: 'font-size:12px;line-height:18px;font-weight:600;border-radius:999px;padding:3px 10px;' + (pOn ? 'color:#2B3358;background:#EAF1FB' : 'color:#5A6478;background:#EEF1F6') },
+    lock: Object.assign({ checked: lock ? 'true' : 'false', toggle: () => this.setState({ lock: !lock }) }, sw(lock))
+  };
+}
+}
+</script>
+</body>
+</html>

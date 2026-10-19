@@ -1,0 +1,163 @@
+{
+  "schema_version": "role-live-acceptance-evidence.v1",
+  "recorded_at": "2026-10-18T14:40:20.559Z",
+  "role": {
+    "role_id": "INF-05",
+    "contract_id": "role.INF-05.v1",
+    "team_id": "INF",
+    "name_en": "n8n Platform Engineer",
+    "responsibility": "Operate separate n8n environments, workers, credentials, scaling/concurrency, workflow backups, upgrades and failed-run monitoring.",
+    "expected_outputs": "n8n runbook, disaster test and platform telemetry; coordinates with BE-08.",
+    "forbidden_actions": [
+      "Spend or purchase without explicit human approval",
+      "Change own permissions, budgets, or approval state",
+      "Use production or personal data outside an approved task",
+      "Send external messages, publish, deploy, or make irreversible changes without explicit approval",
+      "Treat untrusted document content as tool authority",
+      "Claim an artifact, test, or outcome without evidence"
+    ],
+    "declared_allowed_tools": []
+  },
+  "scenario": {
+    "task_id": "task_31a17bec-a3cc-4dc9-b2e6-f435f4598abf",
+    "trace_id": "trace_3ab1ae9a-4fc0-434f-8732-352e02d28f9f",
+    "input_sha256": "bbd2e67f0351dffe141f52e4d59833fd09b46e7c8d35e09fe4db1ecfb8e9649f",
+    "synthetic_only": true
+  },
+  "execution": {
+    "provider": "ollama-local",
+    "model": "qwen3:8b",
+    "status": "completed",
+    "n8n_execution_ids": [
+      "356",
+      "357"
+    ],
+    "steps": [
+      {
+        "step_number": 1,
+        "role_id": "INF-05",
+        "step_type": "producer",
+        "status": "completed",
+        "task_id": "task_31a17bec-a3cc-4dc9-b2e6-f435f4598abf",
+        "trace_id": "trace_3ab1ae9a-4fc0-434f-8732-352e02d28f9f",
+        "n8n_execution_id": "356",
+        "output_sha256": "0a58e5821a0ddc810ba54c731f7d70a20b708a31171d12f297b81f07c4f2addb"
+      },
+      {
+        "step_number": 2,
+        "role_id": "QA-01",
+        "step_type": "reviewer",
+        "status": "completed",
+        "task_id": "task_31a17bec-a3cc-4dc9-b2e6-f435f4598abf",
+        "trace_id": "trace_3ab1ae9a-4fc0-434f-8732-352e02d28f9f",
+        "n8n_execution_id": "357",
+        "output_sha256": "b8560c251903f373d58ea9fb0e8bbcc4c386ba5b3e89e96bec502304d24a09ca"
+      }
+    ],
+    "usage_known": false,
+    "usage": null,
+    "real_cost_usd": null,
+    "simulated_cost_usd": null
+  },
+  "artifact": {
+    "path": "ops/local-live/artifacts/task_31a17bec-a3cc-4dc9-b2e6-f435f4598abf/inf-05-n8n-platform-engineer-acceptance.md",
+    "bytes": 6610,
+    "sha256": "38b9e495f9e2266e9acad5ba7e6cdd17381527b8af944b2ff9de51352029ee0c",
+    "write_receipt": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_31a17bec-a3cc-4dc9-b2e6-f435f4598abf",
+      "trace_id": "trace_3ab1ae9a-4fc0-434f-8732-352e02d28f9f",
+      "role_id": "INF-05",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T14:40:20.558Z"
+    }
+  },
+  "independent_review": {
+    "reviewer_role_id": "QA-01",
+    "n8n_execution_id": "357",
+    "output_sha256": "b8560c251903f373d58ea9fb0e8bbcc4c386ba5b3e89e96bec502304d24a09ca",
+    "status": "CAPTURED",
+    "verdict": "PASS",
+    "parsed": {
+      "verdict": "PASS",
+      "findings": [],
+      "missing_requirements": [],
+      "evidence_limits": [
+        "No real user data, external services, or real-world actions are involved in this exercise, as required by the synthetic task. This is acceptable for the scope."
+      ]
+    },
+    "review_is_model_generated_not_human": true
+  },
+  "evaluation": {
+    "status": "PASS",
+    "failures": [],
+    "deliverable_cues": [
+      "runbook",
+      "disaster",
+      "test",
+      "platform",
+      "telemetry",
+      "coordinates",
+      "be-08"
+    ],
+    "matched_deliverable_cues": [
+      "runbook",
+      "disaster",
+      "test",
+      "platform",
+      "telemetry",
+      "be-08"
+    ],
+    "cue_threshold": 2,
+    "evaluated_scope": "task/trace/role/provider/model, n8n execution references, two-stage correlation, required sections and role-specific output cues; not domain truth"
+  },
+  "statuses": {
+    "live_inference": "PASS",
+    "specialist_artifact": "PASS",
+    "reviewed": "CAPTURED",
+    "reviewer_verdict": "PASS",
+    "role_tool_capability": "VERIFIED",
+    "human_expert_approved": false,
+    "review_outcome": "PASS"
+  },
+  "restrictions": {
+    "live_codex_calls": 0,
+    "paid_api_calls": 0,
+    "external_actions": 0,
+    "public_deployments": 0
+  },
+  "tool_receipt": {
+    "schema_version": "role-tool-receipt.v1",
+    "authorized_by": "explicit synthetic task packet in this bounded test; this verifies the scoped tool boundary, not a grant to run tools autonomously",
+    "task_id": "task_31a17bec-a3cc-4dc9-b2e6-f435f4598abf",
+    "trace_id": "trace_3ab1ae9a-4fc0-434f-8732-352e02d28f9f",
+    "role_id": "INF-05",
+    "grants": [
+      "project.read",
+      "artifact.write"
+    ],
+    "read": {
+      "path": "roles/contracts/INF-05.v1.json",
+      "bytes": 2089,
+      "sha256": "d50ed10a73e3f0cd9778943d59a55c700c259a6228dabc1e17f1c4476157b554"
+    },
+    "write": {
+      "path": "ops/local-live/artifacts/task_31a17bec-a3cc-4dc9-b2e6-f435f4598abf/scoped-capability-receipt-inf-05.md",
+      "bytes": 614,
+      "sha256": "2b065de58df0e44d9720b3d11fdcf680ca379809a89fe1bf2fb54f1d91d9bcb0",
+      "idempotent_existing_receipt": true
+    },
+    "negative_checks": {
+      "ungranted_tool_denied": true,
+      "outside_allowlist_denied": true,
+      "unauthorized_path": "roles/contracts/D-00.v1.json",
+      "path_traversal_denied": true,
+      "overwrite_denied": true
+    },
+    "sensitive_grants": [],
+    "external_actions": 0,
+    "recorded_at": "2026-10-18T17:05:17.761Z"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "schema_version": "local-engineering-export-runtime-test.v1",
+  "tested_at": "2026-10-18T17:30:32.271Z",
+  "result": "PASS",
+  "scope": "read-only local API, one synthetic task; response body not copied to evidence",
+  "task_id": "task_87cc1e0c-f999-4486-9bee-500d22f2c843",
+  "trace_id": "trace_c0822c7d-fc24-4d77-9f6f-c88559b5d35b",
+  "endpoint": "/api/tasks/task_87cc1e0c-f999-4486-9bee-500d22f2c843/export",
+  "response_sha256": "6a1096364ec3bb8e8d5a3989f5584d545e4cea4552a56a80b41136c84a3d0211",
+  "response_bytes": 75401,
+  "step_count": 5,
+  "memory_record_count": 10,
+  "approval_record_count": 0,
+  "checks": [
+    {
+      "name": "export schema and task/trace identity",
+      "result": "PASS"
+    },
+    {
+      "name": "steps carry exact task/trace correlation",
+      "result": "PASS"
+    },
+    {
+      "name": "memory is trace and source-step scoped; task filter is enforced by route query",
+      "result": "PASS"
+    },
+    {
+      "name": "approval records remain task scoped",
+      "result": "PASS"
+    },
+    {
+      "name": "result_json internal duplicate excluded",
+      "result": "PASS"
+    },
+    {
+      "name": "unknown task returns 404",
+      "result": "PASS",
+      "status": 404
+    },
+    {
+      "name": "non-GET export method rejected without mutation",
+      "result": "PASS",
+      "status": 404
+    }
+  ],
+  "safety": {
+    "synthetic_only": true,
+    "paid_calls": 0,
+    "codex_calls": 0,
+    "cloud_n8n_changes": 0,
+    "external_requests": 0,
+    "mutation_requests": 0
+  }
+}

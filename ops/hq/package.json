@@ -1,0 +1,12 @@
+{
+  "name": "wejdan-hq-local",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22.13" },
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test test/*.test.mjs",
+    "build": "node --check server.mjs && node --check public/app.js && node --check test/hq.test.mjs"
+  }
+}

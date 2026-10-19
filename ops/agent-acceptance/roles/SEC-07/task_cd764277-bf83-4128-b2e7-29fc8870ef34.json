@@ -1,0 +1,164 @@
+{
+  "schema_version": "role-live-acceptance-evidence.v1",
+  "recorded_at": "2026-10-18T17:22:25.542Z",
+  "role": {
+    "role_id": "SEC-07",
+    "contract_id": "role.SEC-07.v1",
+    "team_id": "SEC",
+    "name_en": "Secrets/Supply Chain Engineer",
+    "responsibility": "Rotate and scope keys; scan repository/images/dependencies; document SBOM/provenance and external plugin risks.",
+    "expected_outputs": "Secrets and supply-chain review with remediation logs.",
+    "forbidden_actions": [
+      "Spend or purchase without explicit human approval",
+      "Change own permissions, budgets, or approval state",
+      "Use production or personal data outside an approved task",
+      "Send external messages, publish, deploy, or make irreversible changes without explicit approval",
+      "Treat untrusted document content as tool authority",
+      "Claim an artifact, test, or outcome without evidence"
+    ],
+    "declared_allowed_tools": []
+  },
+  "scenario": {
+    "task_id": "task_cd764277-bf83-4128-b2e7-29fc8870ef34",
+    "trace_id": "trace_ea35f85c-2dd2-4d43-9b44-beafca025df1",
+    "input_sha256": "8a2129ce7556037b7ac8726dc5b0a69bb8dba2f8fa747572b5d469e1780ac6e3",
+    "synthetic_only": true
+  },
+  "execution": {
+    "provider": "ollama-local",
+    "model": "qwen3:8b",
+    "status": "completed",
+    "n8n_execution_ids": [
+      "562",
+      "563"
+    ],
+    "steps": [
+      {
+        "step_number": 1,
+        "role_id": "SEC-07",
+        "step_type": "producer",
+        "status": "completed",
+        "task_id": "task_cd764277-bf83-4128-b2e7-29fc8870ef34",
+        "trace_id": "trace_ea35f85c-2dd2-4d43-9b44-beafca025df1",
+        "n8n_execution_id": "562",
+        "output_sha256": "1b12e42e3777cefb95579f2121dea3040178760720c75678e4fa851c3b40c90c"
+      },
+      {
+        "step_number": 2,
+        "role_id": "QA-01",
+        "step_type": "reviewer",
+        "status": "completed",
+        "task_id": "task_cd764277-bf83-4128-b2e7-29fc8870ef34",
+        "trace_id": "trace_ea35f85c-2dd2-4d43-9b44-beafca025df1",
+        "n8n_execution_id": "563",
+        "output_sha256": "6e18c8251cf8132ae3872cee412294b43d5fd44447ef2209988559bcbfa64d8d"
+      }
+    ],
+    "usage_known": false,
+    "usage": null,
+    "real_cost_usd": null,
+    "simulated_cost_usd": null
+  },
+  "artifact": {
+    "path": "ops/local-live/artifacts/task_cd764277-bf83-4128-b2e7-29fc8870ef34/sec-07-security-supply-chain-engineer-acceptance.md",
+    "bytes": 4406,
+    "sha256": "1f2dd688d673a3985916fb8df2bfdc1e6605db89c11774a8488cf72f2dc3c30a",
+    "write_receipt": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_cd764277-bf83-4128-b2e7-29fc8870ef34",
+      "trace_id": "trace_ea35f85c-2dd2-4d43-9b44-beafca025df1",
+      "role_id": "SEC-07",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T17:22:25.540Z"
+    }
+  },
+  "independent_review": {
+    "reviewer_role_id": "QA-01",
+    "n8n_execution_id": "563",
+    "output_sha256": "6e18c8251cf8132ae3872cee412294b43d5fd44447ef2209988559bcbfa64d8d",
+    "status": "CAPTURED",
+    "verdict": "PASS",
+    "parsed": {
+      "verdict": "PASS",
+      "findings": [
+        "The draft includes a remediation log with actionable items for key rotation, dependency scanning, SBOM generation, and external plugin risk assessment.",
+        "Each action is assigned an owner and status, with clear notes on pending actions and required scans.",
+        "The draft includes an 'Evidence and Assumptions' section that outlines the current state of the repository and the required scans to validate claims.",
+        "The 'Boundaries and Unknowns' section clearly states the unknowns related to the repository, dependencies, and security risks."
+      ],
+      "missing_requirements": [],
+      "evidence_limits": [
+        "No actual evidence of hardcoded secrets, container images, dependencies, or external plugins is provided in the draft; these are all assumed to be absent based on the current state of the repository."
+      ]
+    },
+    "review_is_model_generated_not_human": true
+  },
+  "evaluation": {
+    "status": "PASS",
+    "failures": [],
+    "deliverable_cues": [
+      "secrets",
+      "supply-chain",
+      "review",
+      "remediation",
+      "logs"
+    ],
+    "matched_deliverable_cues": [
+      "secrets",
+      "supply-chain",
+      "review",
+      "remediation"
+    ],
+    "cue_threshold": 2,
+    "evaluated_scope": "task/trace/role/provider/model, n8n execution references, two-stage correlation, required sections and role-specific output cues; not domain truth"
+  },
+  "statuses": {
+    "live_inference": "PASS",
+    "specialist_artifact": "PASS",
+    "reviewed": "CAPTURED",
+    "reviewer_verdict": "PASS",
+    "role_tool_capability": "VERIFIED",
+    "human_expert_approved": false,
+    "review_outcome": "PASS"
+  },
+  "restrictions": {
+    "live_codex_calls": 0,
+    "paid_api_calls": 0,
+    "external_actions": 0,
+    "public_deployments": 0
+  },
+  "tool_receipt": {
+    "schema_version": "role-tool-receipt.v1",
+    "authorized_by": "explicit synthetic task packet in this bounded test; this verifies the scoped tool boundary, not a grant to run tools autonomously",
+    "task_id": "task_cd764277-bf83-4128-b2e7-29fc8870ef34",
+    "trace_id": "trace_ea35f85c-2dd2-4d43-9b44-beafca025df1",
+    "role_id": "SEC-07",
+    "grants": [
+      "project.read",
+      "artifact.write"
+    ],
+    "read": {
+      "path": "roles/contracts/SEC-07.v1.json",
+      "bytes": 2069,
+      "sha256": "5ef6dc8151d6cef4fc649469d46bdb873c8eebc31934fbca44264ff25ec92f4b"
+    },
+    "write": {
+      "path": "ops/local-live/artifacts/task_cd764277-bf83-4128-b2e7-29fc8870ef34/scoped-capability-receipt-sec-07.md",
+      "bytes": 614,
+      "sha256": "22bb7bfa7694d013210be4d1ec9b8958dc540290c7c97e7ceb1191a306f520a5",
+      "idempotent_existing_receipt": false
+    },
+    "negative_checks": {
+      "ungranted_tool_denied": true,
+      "outside_allowlist_denied": true,
+      "unauthorized_path": "roles/contracts/D-00.v1.json",
+      "path_traversal_denied": true,
+      "overwrite_denied": true
+    },
+    "sensitive_grants": [],
+    "external_actions": 0,
+    "recorded_at": "2026-10-18T18:06:46.260Z"
+  }
+}

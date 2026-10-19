@@ -1,0 +1,92 @@
+{
+  "schema_version": "local-production-scenario-result.v1",
+  "task_id": "task_d7d868ae-e469-4c03-90b1-960abf7deb5f",
+  "trace_id": "trace_a5cebb6b-b270-4a29-81b3-98681e3c64b9",
+  "scenario_id": "product-feature-design",
+  "role_id": "PROD-01",
+  "status": "completed",
+  "provider": "ollama-local",
+  "model": "qwen3:8b",
+  "reviewer_role_id": "QA-02",
+  "reviewer_verdict": "PASS",
+  "reviewer_output": "{\n  \"verdict\": \"PASS\",\n  \"findings\": [\n    \"The revised deliverable resolves the duplication in UT-001 to UT-006 by clearly defining each test case with unique setup and expected assertions.\",\n    \"IT-001 and IT-002 are now fully included in the test matrix with consistent setup and expected assertions for Hive restart persistence and offline toggle.\",\n    \"E2E-001 and E2E-002 are now fully defined with specific setup and observable assertions for enable/edit/disable functionality and neutral missed-task copy.\",\n    \"AT-001 to AT-004 are now fully detailed with specific setup and observable assertions for accessibility requirements.\",\n    \"Test IDs are consistently defined across the deliverable, eliminating confusion and duplication.\"\n  ],\n  \"missing_requirements\": [],\n  \"evidence_limits\": []\n}",
+  "steps": [
+    {
+      "role_id": "PROD-03",
+      "stage": "planner",
+      "task_id": "task_d7d868ae-e469-4c03-90b1-960abf7deb5f",
+      "trace_id": "trace_a5cebb6b-b270-4a29-81b3-98681e3c64b9",
+      "n8n_execution_id": "596",
+      "elapsed_ms": 13652,
+      "output_sha256": "8c29dfa33835e09ee87af84a55eb08195ecf1c99139b73e6989f25024ce8a829"
+    },
+    {
+      "role_id": "DES-03",
+      "stage": "specialist_1",
+      "task_id": "task_d7d868ae-e469-4c03-90b1-960abf7deb5f",
+      "trace_id": "trace_a5cebb6b-b270-4a29-81b3-98681e3c64b9",
+      "n8n_execution_id": "597",
+      "elapsed_ms": 14222,
+      "output_sha256": "f895d0e078c0d35240a4e2bf8893835426c6e65c83d3a094046fa8679f7fdc5a"
+    },
+    {
+      "role_id": "FE-02",
+      "stage": "specialist_2",
+      "task_id": "task_d7d868ae-e469-4c03-90b1-960abf7deb5f",
+      "trace_id": "trace_a5cebb6b-b270-4a29-81b3-98681e3c64b9",
+      "n8n_execution_id": "598",
+      "elapsed_ms": 14578,
+      "output_sha256": "9e6da561e6ac5b4f37632e2435da096f340606a61a87f37626a86e19bce63fda"
+    },
+    {
+      "role_id": "QA-02",
+      "stage": "independent_review",
+      "task_id": "task_d7d868ae-e469-4c03-90b1-960abf7deb5f",
+      "trace_id": "trace_a5cebb6b-b270-4a29-81b3-98681e3c64b9",
+      "n8n_execution_id": "599",
+      "elapsed_ms": 4794,
+      "output_sha256": "88fd67513bb74b0f6bc743badeb8bfbf5c301ff3e988f700f56e31d91e5626ca"
+    },
+    {
+      "role_id": "FE-02",
+      "stage": "bounded_revision",
+      "task_id": "task_d7d868ae-e469-4c03-90b1-960abf7deb5f",
+      "trace_id": "trace_a5cebb6b-b270-4a29-81b3-98681e3c64b9",
+      "n8n_execution_id": "600",
+      "elapsed_ms": 13741,
+      "output_sha256": "a13be860eda9e3a41a7ba1cb984e2889b8facae3dc0a14a30a992894b692b81d"
+    },
+    {
+      "role_id": "QA-02",
+      "stage": "final_review",
+      "task_id": "task_d7d868ae-e469-4c03-90b1-960abf7deb5f",
+      "trace_id": "trace_a5cebb6b-b270-4a29-81b3-98681e3c64b9",
+      "n8n_execution_id": "601",
+      "elapsed_ms": 2472,
+      "output_sha256": "a14264f19c24c635b77096de48e1659c2be3a83ac4cb6bc22421737e48959339"
+    }
+  ],
+  "artifact": {
+    "path": "ops/local-live/artifacts/task_d7d868ae-e469-4c03-90b1-960abf7deb5f/product-feature-acceptance-bundle.md",
+    "bytes": 6432,
+    "sha256": "50ab67bcdfb634ce0406f55cae3a48bb1bec3f38467bead77a62b10979a3e831",
+    "provenance": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_d7d868ae-e469-4c03-90b1-960abf7deb5f",
+      "trace_id": "trace_a5cebb6b-b270-4a29-81b3-98681e3c64b9",
+      "role_id": "PROD-01",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T17:42:46.578Z"
+    }
+  },
+  "refusal_recovery": null,
+  "external_actions": 0,
+  "paid_api_calls": 0,
+  "live_codex_calls": 0,
+  "request": "Design a local-only optional reminder using source-backed requirements: docs/PRODUCT_SPEC.md §1 says single-user/local-first/offline and §1 accessibility requires ≥44pt targets, up to 200% text scaling, semantic labels and contrast AA; §5.6 sets default quiet hours 23:00–07:00 and focus blocks suppress nudges; §8 uses local Hive data. Cite each source. These are SPECIFIED requirements, not human sign-off: the word CONFIRMED and claims of owner approval are forbidden. Define exact scheduling: reminders due during quiet hours defer to quiet-end; reminders during focus defer to focus end, then quiet-end if still quiet; disabling cancels pending delivery and remains disabled offline. Output at most 900 words, concise, with a requirements/design table and one non-duplicated test matrix with all 14 IDs: UT-001..006 (quiet start/end, cross-midnight, focus overlap, quiet-end after focus, disable/cancel offline), IT-001..002 (Hive restart persistence, offline toggle), E2E-001..002 (enable/edit/disable, neutral missed-task copy), AT-001..004 (44pt, 200% scale, semantic label, contrast AA). Each row must include setup and an observable expected assertion. Every test is NOT_RUN; do not claim test execution. Include privacy, controls, and only genuinely new policy decisions as pending. No real data, notification scheduling or deployment; never shame users.",
+  "artifact_sha256": "50ab67bcdfb634ce0406f55cae3a48bb1bec3f38467bead77a62b10979a3e831",
+  "evidence_path": "C:\\Users\\WinDows\\Desktop\\عام\\os\\ops\\agent-acceptance\\scenarios\\product-feature-design\\task_d7d868ae-e469-4c03-90b1-960abf7deb5f.json",
+  "recorded_at": "2026-10-18T17:42:46.579Z"
+}

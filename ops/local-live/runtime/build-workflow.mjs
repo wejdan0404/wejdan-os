@@ -1,0 +1,39 @@
+import { writeFile } from 'node:fs/promises';
+import { dirname, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const out=resolve(dirname(fileURLToPath(import.meta.url)),'workflow.local-agent.json');
+const validate=`const body = $json.body;
+const fail = (message) => { throw new Error('LOCAL_TASK_REJECTED: ' + message); };
+if (!body || typeof body !== 'object' || Array.isArray(body)) fail('body must be an object');
+if (typeof body.task_id !== 'string' || !/^task_[0-9a-f-]{36}$/i.test(body.task_id)) fail('invalid task_id');
+if (typeof body.trace_id !== 'string' || !/^trace_[0-9a-f-]{36}$/i.test(body.trace_id)) fail('invalid trace_id');
+if (typeof body.role_id !== 'string' || !/^[A-Z0-9-]{1,20}$/.test(body.role_id)) fail('invalid role_id');
+if (typeof body.input !== 'string' || !body.input.trim() || body.input.length > 12000) fail('invalid task input');
+if (typeof body.system_prompt !== 'string' || !body.system_prompt.trim() || body.system_prompt.length > 8000) fail('invalid role prompt');
+if (body.model !== 'qwen3:8b') fail('only the approved local model is allowed');
+const user = 'Task ID: ' + body.task_id + '\\nTrace ID: ' + body.trace_id + '\\nRole ID: ' + body.role_id + '\\n\\n' + body.input.trim();
+return { json: { task_id: body.task_id, trace_id: body.trace_id, role_id: body.role_id, model: body.model, ollama_request: { model: 'qwen3:8b', stream: false, think: false, messages: [{ role: 'system', content: body.system_prompt }, { role: 'user', content: user }], options: { temperature: 0.2, num_predict: 512 } } } };`;
+const result=`const task = $('Validate Local Task').first().json;
+const modelResponse = $json;
+if (!task.task_id || !task.trace_id || !task.role_id) throw new Error('Missing correlation fields');
+if (modelResponse.model !== 'qwen3:8b' || !modelResponse.message || typeof modelResponse.message.content !== 'string' || !modelResponse.message.content.trim()) throw new Error('Invalid local model response');
+return { json: { task_id: task.task_id, trace_id: task.trace_id, role_id: task.role_id, status: 'completed', output: modelResponse.message.content, provider: 'ollama-local', model: modelResponse.model, measured_runtime_ns: modelResponse.total_duration ?? null, prompt_tokens: modelResponse.prompt_eval_count ?? null, output_tokens: modelResponse.eval_count ?? null, execution_id: $execution.id } };`;
+const workflow={
+ id:'nNGeWSsYiuX1Aeuj',
+ name:'Wejdan Local Agent | Ollama',
+ nodes:[
+  {parameters:{httpMethod:'POST',path:'wejdan-local-agent',responseMode:'lastNode',options:{}},id:'local-webhook',name:'Local Task Webhook',type:'n8n-nodes-base.webhook',typeVersion:2,position:[200,300],webhookId:'wejdan-local-agent'},
+  {parameters:{mode:'runOnceForEachItem',jsCode:validate},id:'validate-task',name:'Validate Local Task',type:'n8n-nodes-base.code',typeVersion:2,position:[440,300]},
+  {parameters:{method:'POST',url:'http://127.0.0.1:11434/api/chat',sendHeaders:true,headerParameters:{parameters:[{name:'content-type',value:'application/json'}]},sendBody:true,specifyBody:'json',jsonBody:"={{ JSON.stringify($json.ollama_request) }}",options:{timeout:240000}},id:'ollama-chat',name:'Local Ollama Inference',type:'n8n-nodes-base.httpRequest',typeVersion:4.2,position:[680,300]},
+  {parameters:{mode:'runOnceForEachItem',jsCode:result},id:'shape-result',name:'Validate and Correlate Result',type:'n8n-nodes-base.code',typeVersion:2,position:[920,300]}
+ ],
+ connections:{
+  'Local Task Webhook':{main:[[{node:'Validate Local Task',type:'main',index:0}]]},
+  'Validate Local Task':{main:[[{node:'Local Ollama Inference',type:'main',index:0}]]},
+  'Local Ollama Inference':{main:[[{node:'Validate and Correlate Result',type:'main',index:0}]]}
+ },
+ active:false,settings:{executionOrder:'v1',saveManualExecutions:true},versionId:'wejdan-local-agent-v2',meta:{templateCredsSetupCompleted:true},tags:[]
+};
+await writeFile(out,JSON.stringify(workflow,null,2)+'\n');
+console.log(`Wrote ${out} with ${workflow.nodes.length} nodes and ${Object.keys(workflow.connections).length} connections.`);

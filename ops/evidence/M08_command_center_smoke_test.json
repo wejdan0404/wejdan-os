@@ -1,0 +1,19 @@
+{
+  "milestone": "M08",
+  "status": "VERIFIED_LOCAL_PREVIEW",
+  "command": "node command-center/smoke-test.mjs",
+  "result": "PASS",
+  "checks": [
+    "85 role cards rendered",
+    "3 synthetic task rows",
+    "Arabic RTL and English LTR switching",
+    "role search and task status filter",
+    "trace dialog and Escape close",
+    "redacted JSON export reviewed for no spend authorization",
+    "375px viewport without horizontal overflow",
+    "zero browser page errors"
+  ],
+  "server_bind": "127.0.0.1:8765",
+  "server_stopped": true,
+  "cloud": false
+}

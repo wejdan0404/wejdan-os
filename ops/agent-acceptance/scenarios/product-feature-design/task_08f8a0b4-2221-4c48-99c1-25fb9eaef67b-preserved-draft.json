@@ -1,0 +1,80 @@
+{
+  "schema_version": "scenario-unaccepted-draft-evidence.v1",
+  "task_id": "task_08f8a0b4-2221-4c48-99c1-25fb9eaef67b",
+  "trace_id": "trace_80ac0cb2-4926-49dc-be52-5e8ed3fbc804",
+  "status": "failed",
+  "error": "SCENARIO_FINAL_REVIEW_NOT_PASS:REVISE",
+  "steps": [
+    {
+      "step_number": 1,
+      "trace_id": "trace_80ac0cb2-4926-49dc-be52-5e8ed3fbc804",
+      "role_id": "PROD-03",
+      "step_type": "planner",
+      "status": "completed",
+      "error": null,
+      "n8n_execution_id": "406"
+    },
+    {
+      "step_number": 2,
+      "trace_id": "trace_80ac0cb2-4926-49dc-be52-5e8ed3fbc804",
+      "role_id": "DES-03",
+      "step_type": "specialist_1",
+      "status": "completed",
+      "error": null,
+      "n8n_execution_id": "407"
+    },
+    {
+      "step_number": 3,
+      "trace_id": "trace_80ac0cb2-4926-49dc-be52-5e8ed3fbc804",
+      "role_id": "FE-02",
+      "step_type": "specialist_2",
+      "status": "completed",
+      "error": null,
+      "n8n_execution_id": "408"
+    },
+    {
+      "step_number": 4,
+      "trace_id": "trace_80ac0cb2-4926-49dc-be52-5e8ed3fbc804",
+      "role_id": "QA-02",
+      "step_type": "independent_review",
+      "status": "completed",
+      "error": null,
+      "n8n_execution_id": "409"
+    },
+    {
+      "step_number": 5,
+      "trace_id": "trace_80ac0cb2-4926-49dc-be52-5e8ed3fbc804",
+      "role_id": "FE-02",
+      "step_type": "bounded_revision",
+      "status": "completed",
+      "error": null,
+      "n8n_execution_id": "410"
+    },
+    {
+      "step_number": 6,
+      "trace_id": "trace_80ac0cb2-4926-49dc-be52-5e8ed3fbc804",
+      "role_id": "QA-02",
+      "step_type": "final_review",
+      "status": "completed",
+      "error": null,
+      "n8n_execution_id": "411"
+    }
+  ],
+  "artifact": {
+    "path": "ops/local-live/artifacts/task_08f8a0b4-2221-4c48-99c1-25fb9eaef67b/product-feature-unaccepted-draft.md",
+    "bytes": 26047,
+    "sha256": "a13fa7dbf2c3098ca13f99328518459fc3c4f8be518d51fd5181d74e7bc987e9",
+    "provenance": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_08f8a0b4-2221-4c48-99c1-25fb9eaef67b",
+      "trace_id": "trace_80ac0cb2-4926-49dc-be52-5e8ed3fbc804",
+      "role_id": "PROD-01",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T14:59:09.250Z"
+    }
+  },
+  "reviewer_verdict": "REVISE",
+  "accepted": false
+}

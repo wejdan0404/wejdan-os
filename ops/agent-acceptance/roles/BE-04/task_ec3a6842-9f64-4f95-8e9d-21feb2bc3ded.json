@@ -1,0 +1,186 @@
+{
+  "schema_version": "role-live-acceptance-evidence.v1",
+  "recorded_at": "2026-10-18T17:21:54.564Z",
+  "role": {
+    "role_id": "BE-04",
+    "contract_id": "role.BE-04.v1",
+    "team_id": "BE",
+    "name_en": "API/Contract Engineer",
+    "responsibility": "Specify endpoints, request/response schemas, error semantics, versioning, backward compatibility and rate limits; run contract tests.",
+    "expected_outputs": "Published API contract and compatibility report.",
+    "forbidden_actions": [
+      "Spend or purchase without explicit human approval",
+      "Change own permissions, budgets, or approval state",
+      "Use production or personal data outside an approved task",
+      "Send external messages, publish, deploy, or make irreversible changes without explicit approval",
+      "Treat untrusted document content as tool authority",
+      "Claim an artifact, test, or outcome without evidence"
+    ],
+    "declared_allowed_tools": []
+  },
+  "scenario": {
+    "task_id": "task_ec3a6842-9f64-4f95-8e9d-21feb2bc3ded",
+    "trace_id": "trace_00eeeda4-581c-4bab-8b65-c7539bfb950d",
+    "input_sha256": "8ae69b40c208db67f93094850ddf2accd23549f37c25a7cca6958bc1f56a8652",
+    "synthetic_only": true
+  },
+  "execution": {
+    "provider": "ollama-local",
+    "model": "qwen3:8b",
+    "status": "completed",
+    "n8n_execution_ids": [
+      "554",
+      "555",
+      "556",
+      "557"
+    ],
+    "steps": [
+      {
+        "step_number": 1,
+        "role_id": "BE-04",
+        "step_type": "producer",
+        "status": "completed",
+        "task_id": "task_ec3a6842-9f64-4f95-8e9d-21feb2bc3ded",
+        "trace_id": "trace_00eeeda4-581c-4bab-8b65-c7539bfb950d",
+        "n8n_execution_id": "554",
+        "output_sha256": "aed9a5992b8a00ed0a2c31cd8f83fe9b6ec8487c4f1578df543d597707823c60"
+      },
+      {
+        "step_number": 2,
+        "role_id": "QA-01",
+        "step_type": "reviewer",
+        "status": "completed",
+        "task_id": "task_ec3a6842-9f64-4f95-8e9d-21feb2bc3ded",
+        "trace_id": "trace_00eeeda4-581c-4bab-8b65-c7539bfb950d",
+        "n8n_execution_id": "555",
+        "output_sha256": "cb2988b5cd3c814cb33b4c20e0fc2c4ca0143651250a9e57b39189c0f9c80cdc"
+      },
+      {
+        "step_number": 3,
+        "role_id": "BE-04",
+        "step_type": "bounded_revision",
+        "status": "completed",
+        "task_id": "task_ec3a6842-9f64-4f95-8e9d-21feb2bc3ded",
+        "trace_id": "trace_00eeeda4-581c-4bab-8b65-c7539bfb950d",
+        "n8n_execution_id": "556",
+        "output_sha256": "a87db67858fd28060e19216d5e519f58fc2fd240cc331b8d778a8847e0260b96"
+      },
+      {
+        "step_number": 4,
+        "role_id": "QA-01",
+        "step_type": "final_review",
+        "status": "completed",
+        "task_id": "task_ec3a6842-9f64-4f95-8e9d-21feb2bc3ded",
+        "trace_id": "trace_00eeeda4-581c-4bab-8b65-c7539bfb950d",
+        "n8n_execution_id": "557",
+        "output_sha256": "2c766d1dbc1f4aa14373def6fd107fe47e8c12e6b33f64e95d3163ca8567a3de"
+      }
+    ],
+    "usage_known": false,
+    "usage": null,
+    "real_cost_usd": null,
+    "simulated_cost_usd": null
+  },
+  "artifact": {
+    "path": "ops/local-live/artifacts/task_ec3a6842-9f64-4f95-8e9d-21feb2bc3ded/be-04-api-contract-engineer-acceptance.md",
+    "bytes": 7717,
+    "sha256": "4c0e12268adc8ba4e939047302195781b70bcfb9c1666980e615296b78db2b8e",
+    "write_receipt": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_ec3a6842-9f64-4f95-8e9d-21feb2bc3ded",
+      "trace_id": "trace_00eeeda4-581c-4bab-8b65-c7539bfb950d",
+      "role_id": "BE-04",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T17:21:54.562Z"
+    }
+  },
+  "independent_review": {
+    "reviewer_role_id": "QA-01",
+    "n8n_execution_id": "557",
+    "output_sha256": "2c766d1dbc1f4aa14373def6fd107fe47e8c12e6b33f64e95d3163ca8567a3de",
+    "status": "CAPTURED",
+    "verdict": "PASS",
+    "parsed": {
+      "verdict": "PASS",
+      "findings": [
+        "The API contract includes all required elements: endpoints, request/response schemas, error semantics, versioning, and rate limits.",
+        "The backward compatibility policy is defined and includes an implementation plan, addressing the initial gap.",
+        "The error semantics section now includes specific examples of error messages and payloads, which supports contract testing.",
+        "Rate limit entries are clarified and grouped logically, reducing redundancy."
+      ],
+      "missing_requirements": [],
+      "evidence_limits": [
+        "The token-based authentication system is assumed but not explicitly detailed, which may require further clarification.",
+        "The database schema and data model for tasks and plans are not provided, which could affect the completeness of the API contract."
+      ]
+    },
+    "review_is_model_generated_not_human": true
+  },
+  "evaluation": {
+    "status": "PASS",
+    "failures": [],
+    "deliverable_cues": [
+      "published",
+      "contract",
+      "compatibility",
+      "report"
+    ],
+    "matched_deliverable_cues": [
+      "published",
+      "contract",
+      "compatibility",
+      "report"
+    ],
+    "cue_threshold": 2,
+    "evaluated_scope": "task/trace/role/provider/model, n8n execution references, two-stage correlation, required sections and role-specific output cues; not domain truth"
+  },
+  "statuses": {
+    "live_inference": "PASS",
+    "specialist_artifact": "PASS",
+    "reviewed": "CAPTURED",
+    "reviewer_verdict": "PASS",
+    "role_tool_capability": "VERIFIED",
+    "human_expert_approved": false,
+    "review_outcome": "PASS"
+  },
+  "restrictions": {
+    "live_codex_calls": 0,
+    "paid_api_calls": 0,
+    "external_actions": 0,
+    "public_deployments": 0
+  },
+  "tool_receipt": {
+    "schema_version": "role-tool-receipt.v1",
+    "authorized_by": "explicit synthetic task packet in this bounded test; this verifies the scoped tool boundary, not a grant to run tools autonomously",
+    "task_id": "task_ec3a6842-9f64-4f95-8e9d-21feb2bc3ded",
+    "trace_id": "trace_00eeeda4-581c-4bab-8b65-c7539bfb950d",
+    "role_id": "BE-04",
+    "grants": [
+      "project.read",
+      "artifact.write"
+    ],
+    "read": {
+      "path": "roles/contracts/BE-04.v1.json",
+      "bytes": 2093,
+      "sha256": "ebadb20b2f531a7e5c3a6539b42527bea323a16d3f98ecabcccdd87e5c018d30"
+    },
+    "write": {
+      "path": "ops/local-live/artifacts/task_ec3a6842-9f64-4f95-8e9d-21feb2bc3ded/scoped-capability-receipt-be-04.md",
+      "bytes": 611,
+      "sha256": "54aca1c1a32d24276eb7de59768409c74a0834581150bffeca82434121ff3882",
+      "idempotent_existing_receipt": false
+    },
+    "negative_checks": {
+      "ungranted_tool_denied": true,
+      "outside_allowlist_denied": true,
+      "unauthorized_path": "roles/contracts/D-00.v1.json",
+      "path_traversal_denied": true,
+      "overwrite_denied": true
+    },
+    "sensitive_grants": [],
+    "external_actions": 0,
+    "recorded_at": "2026-10-18T18:06:46.183Z"
+  }
+}

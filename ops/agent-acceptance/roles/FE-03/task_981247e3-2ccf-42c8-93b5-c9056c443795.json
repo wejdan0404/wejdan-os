@@ -1,0 +1,163 @@
+{
+  "schema_version": "role-live-acceptance-evidence.v1",
+  "recorded_at": "2026-10-18T18:03:49.499Z",
+  "role": {
+    "role_id": "FE-03",
+    "contract_id": "role.FE-03.v1",
+    "team_id": "FE",
+    "name_en": "Mobile App Developer",
+    "responsibility": "Implement selected iOS/Android approach, navigation, device lifecycle and permissions, responsive states and store-build readiness; test devices.",
+    "expected_outputs": "Buildable app, device matrix and crash/error evidence.",
+    "forbidden_actions": [
+      "Spend or purchase without explicit human approval",
+      "Change own permissions, budgets, or approval state",
+      "Use production or personal data outside an approved task",
+      "Send external messages, publish, deploy, or make irreversible changes without explicit approval",
+      "Treat untrusted document content as tool authority",
+      "Claim an artifact, test, or outcome without evidence"
+    ],
+    "declared_allowed_tools": []
+  },
+  "scenario": {
+    "task_id": "task_981247e3-2ccf-42c8-93b5-c9056c443795",
+    "trace_id": "trace_1841ea49-57f8-48a7-b735-6bdaa112218a",
+    "input_sha256": "20b40ee42eae8f2e997b5a67fac4d187d260d31592ad01e4b76585bec79dce4a",
+    "synthetic_only": true
+  },
+  "execution": {
+    "provider": "ollama-local",
+    "model": "qwen3:8b",
+    "status": "blocked",
+    "n8n_execution_ids": [
+      "670",
+      "671",
+      "672",
+      "673"
+    ],
+    "steps": [
+      {
+        "step_number": 1,
+        "role_id": "FE-03",
+        "step_type": "producer",
+        "status": "completed",
+        "task_id": "task_981247e3-2ccf-42c8-93b5-c9056c443795",
+        "trace_id": "trace_1841ea49-57f8-48a7-b735-6bdaa112218a",
+        "n8n_execution_id": "670",
+        "output_sha256": "1f9340de93242ca1512c71ce0c20173bc86e28e5605b20c80c10320e7420788e"
+      },
+      {
+        "step_number": 2,
+        "role_id": "QA-01",
+        "step_type": "reviewer",
+        "status": "completed",
+        "task_id": "task_981247e3-2ccf-42c8-93b5-c9056c443795",
+        "trace_id": "trace_1841ea49-57f8-48a7-b735-6bdaa112218a",
+        "n8n_execution_id": "671",
+        "output_sha256": "81376e50755e5ed3debd301395b7ea22c41ce47cd5f7949ecf95ab4f5e95b58d"
+      },
+      {
+        "step_number": 3,
+        "role_id": "FE-03",
+        "step_type": "bounded_revision",
+        "status": "completed",
+        "task_id": "task_981247e3-2ccf-42c8-93b5-c9056c443795",
+        "trace_id": "trace_1841ea49-57f8-48a7-b735-6bdaa112218a",
+        "n8n_execution_id": "672",
+        "output_sha256": "2b5fd0f898d0c7b922f2860be1aaad078011dbb88e503739a788ba4737a2c998"
+      },
+      {
+        "step_number": 4,
+        "role_id": "QA-01",
+        "step_type": "final_review",
+        "status": "completed",
+        "task_id": "task_981247e3-2ccf-42c8-93b5-c9056c443795",
+        "trace_id": "trace_1841ea49-57f8-48a7-b735-6bdaa112218a",
+        "n8n_execution_id": "673",
+        "output_sha256": "bcd567e37492d914e494df274aa8d30b3c6f118852d58f6968d61518b3163c71"
+      }
+    ],
+    "usage_known": false,
+    "usage": null,
+    "real_cost_usd": null,
+    "simulated_cost_usd": null
+  },
+  "artifact": {
+    "path": "ops/local-live/artifacts/task_981247e3-2ccf-42c8-93b5-c9056c443795/fe-03-mobile-app-developer-acceptance.md",
+    "bytes": 6322,
+    "sha256": "86fddb1b420357e38e07caa3192aebb13f3fa63ec64dd591f415be5e28a0a78d",
+    "write_receipt": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_981247e3-2ccf-42c8-93b5-c9056c443795",
+      "trace_id": "trace_1841ea49-57f8-48a7-b735-6bdaa112218a",
+      "role_id": "FE-03",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T18:03:49.497Z"
+    }
+  },
+  "independent_review": {
+    "reviewer_role_id": "QA-01",
+    "n8n_execution_id": "673",
+    "output_sha256": "bcd567e37492d914e494df274aa8d30b3c6f118852d58f6968d61518b3163c71",
+    "status": "CAPTURED",
+    "verdict": "REVISE",
+    "parsed": {
+      "verdict": "REVISE",
+      "findings": [
+        "The draft provides a comprehensive plan for the app's features, navigation, and device lifecycle, but lacks concrete evidence of testing or test execution.",
+        "The crash/error evidence section lists potential issues but does not include any actual test results or logs.",
+        "The draft assumes testing will be done on real devices but does not specify which devices or environments will be used.",
+        "The draft does not include any real-world testing or validation beyond assumptions."
+      ],
+      "missing_requirements": [
+        "Test execution results or evidence of testing on real devices.",
+        "Specific details on the testing devices and environments.",
+        "Concrete evidence of crash/error resolution or mitigation strategies."
+      ],
+      "evidence_limits": [
+        "The draft does not provide any actual test results or logs.",
+        "The crash/error evidence is listed but not validated or resolved.",
+        "The draft does not include any real-world testing or validation beyond assumptions."
+      ]
+    },
+    "review_is_model_generated_not_human": true
+  },
+  "evaluation": {
+    "status": "FAIL",
+    "failures": [
+      "TASK_NOT_COMPLETED"
+    ],
+    "deliverable_cues": [
+      "buildable",
+      "device",
+      "matrix",
+      "crash",
+      "error"
+    ],
+    "matched_deliverable_cues": [
+      "buildable",
+      "device",
+      "matrix",
+      "crash",
+      "error"
+    ],
+    "cue_threshold": 2,
+    "evaluated_scope": "task/trace/role/provider/model, n8n execution references, two-stage correlation, required sections and role-specific output cues; not domain truth"
+  },
+  "statuses": {
+    "live_inference": "PASS",
+    "specialist_artifact": "FAIL",
+    "reviewed": "CAPTURED",
+    "reviewer_verdict": "REVISE",
+    "role_tool_capability": "NOT_GRANTED",
+    "human_expert_approved": false,
+    "review_outcome": "REVISE"
+  },
+  "restrictions": {
+    "live_codex_calls": 0,
+    "paid_api_calls": 0,
+    "external_actions": 0,
+    "public_deployments": 0
+  }
+}

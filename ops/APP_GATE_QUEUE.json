@@ -1,0 +1,174 @@
+{
+  "schema_version": "wejdan-app-gate-queue.v1",
+  "track": "PUBLIC_MULTI_PLATFORM_CONSUMER_PRODUCT",
+  "status": "IN_PROGRESS_NOT_RELEASE_ACCEPTED",
+  "latest_checkpoint": "2026-10-19: Latest user plan DEC-018 restores iOS/Android/web as required public platforms and supersedes DEC-016 platform deferral. Flutter app: 235 tests pass; Dart analysis clean. Sync contract and 6 regressions pass without backend/outbox. Android debug APK and one synthetic emulator smoke pass only. No production account/sync, complete platform acceptance, release, or public readiness.",
+  "latest_evidence": "ops/evidence/android-scaffold-smoke-20261019.json",
+  "current_gate": "APP03",
+  "owner_direction": {
+    "recorded_at": "2026-10-19",
+    "authority": "ops/DECISIONS.md DEC-011 through DEC-015 and latest user plan DEC-018",
+    "status": "APPROVED_PRODUCT_DIRECTION_IMPLEMENTATION_NOT_ACCEPTED",
+    "platforms": [
+      "iOS",
+      "Android",
+      "web"
+    ],
+    "accounts_and_cloud_sync": "required; provider, region, credentials, and operating budget require separate gates",
+    "launch": "free_no_ads_closed_beta_then_public",
+    "consumer_ai": "local_first_explicit_purpose_specific_cloud_consent",
+    "domains": "all_approved; sensitive_health_opt_in_locked_and_expert_reviewed; money_manual_only"
+  },
+  "source_of_truth_conflict": null,
+  "gates": [
+    {
+      "gate_id": "APP00",
+      "title": "Feature inventory and approved-source gap audit",
+      "status": "VERIFIED_COMPLETE",
+      "evidence": [
+        "ops/APP_FEATURE_GAP_MATRIX.md: requirement families mapped to source/routes, tests/evidence, data class and blockers; owner directive resolved navigation authority; no unsupported completion claims"
+      ]
+    },
+    {
+      "gate_id": "APP01",
+      "title": "Navigation, boot and local persistence",
+      "status": "PARTIALLY_VERIFIED",
+      "evidence": [
+        "235 Flutter tests pass; actual WTabBar taps verify all four branch indices, destination routes, and selected semantics; browser smoke directly opens 16 primary and nested routes; onboarding sample-profile persists through reload in IndexedDB; Android synthetic emulator smoke passes; iOS/device and full product acceptance remain pending."
+      ]
+    },
+    {
+      "gate_id": "APP02",
+      "title": "Today experience and nonpunitive scheduling",
+      "status": "PARTIALLY_VERIFIED",
+      "evidence": [
+        "Full 235 Flutter test suite passes; existing engine/Today tests cover scheduling and recovery; Android synthetic emulator boot path passes; OS notification delivery and target-device acceptance pending."
+      ]
+    },
+    {
+      "gate_id": "APP03",
+      "title": "Professional, Care and Me modules",
+      "status": "PARTIALLY_VERIFIED",
+      "evidence": [
+        "APP00 source/route/data classification audit is complete in ops/APP_FEATURE_GAP_MATRIX.md.",
+        "Four owner-authorized tabs map Today→/today, Professional→/path, Care→/habits, Me→/me; actual tab taps assert branch index, destination and selected accessibility state.",
+        "System Chrome browser test passed 16 routes: four primary routes, Joy/reward, IELTS/driving and Me insights/money/home/evidence/settings/help/cycle/pcos.",
+        "Widget coverage exercises Professional, Care, Joy/rewards and Me areas; platform/device persistence and privacy acceptance remain open."
+      ],
+      "limitations": [
+        "Browser navigation confirms route resolution, not full screen workflow acceptance or device plugin behavior.",
+        "Complete target-device data persistence, accessibility and feature-flow review remains pending."
+      ]
+    },
+    {
+      "gate_id": "APP04",
+      "title": "Domain fidelity, privacy and evidence boundaries",
+      "status": "IN_PROGRESS_AUDIT",
+      "evidence": [
+        "Existing test coverage identified; full source-to-requirement audit pending"
+      ]
+    },
+    {
+      "gate_id": "APP05",
+      "title": "Permissioned local AI",
+      "status": "NOT_STARTED",
+      "evidence": []
+    },
+    {
+      "gate_id": "APP06",
+      "title": "Offline-first account and sync architecture",
+      "status": "IN_PROGRESS_CONTRACT_ONLY",
+      "evidence": [
+        "Provider-neutral sync contracts and regression suite added at lib/sync/sync_contracts.dart and test/sync/sync_contracts_test.dart; no account identity, encrypted outbox, or backend implemented."
+      ]
+    },
+    {
+      "gate_id": "APP07",
+      "title": "Accessibility, localization, responsive layout and privacy",
+      "status": "PARTIALLY_VERIFIED",
+      "evidence": [
+        "Localization parity, English LTR, 2.0 text scaling, and 44pt target tests pass; target-device accessibility evaluation pending"
+      ]
+    },
+    {
+      "gate_id": "APP08",
+      "title": "Local release candidate",
+      "status": "BLOCKED_PENDING_PRIOR_GATES",
+      "evidence": [
+        "Flutter reference tests and web/local smoke are recorded; no iOS/Android/web release acceptance yet."
+      ],
+      "limitations": [
+        "All required platforms need full workflows, account/sync, security, accessibility and release approval; iOS requires supported macOS/Xcode."
+      ]
+    },
+    {
+      "gate_id": "APP09",
+      "title": "Provider-neutral account and tenant authorization contract",
+      "status": "IN_PROGRESS_DESIGN_ONLY",
+      "evidence": [
+        "docs/architecture/public-account-sync.md defines server-derived tenant scope and trust boundaries; lib/sync/sync_contracts.dart omits client-selected accountId and has six regression tests. No authenticated server identity or tenant enforcement implementation exists."
+      ],
+      "limitations": [
+        "No identity provider, authenticated service, or production backend selected; no cloud service authorized."
+      ]
+    },
+    {
+      "gate_id": "APP10",
+      "title": "Account sync, conflict, migration, export and deletion acceptance",
+      "status": "NOT_STARTED",
+      "evidence": [],
+      "limitations": [
+        "Requires APP09 design and independent privacy/security review."
+      ]
+    },
+    {
+      "gate_id": "APP11",
+      "title": "Android public-platform implementation and device acceptance",
+      "status": "IN_PROGRESS_SCAFFOLD_ONLY",
+      "evidence": [
+        "ops/evidence/android-scaffold-smoke-20261019.json: debug APK and one synthetic emulator app-smoke passed; not Android platform acceptance."
+      ],
+      "limitations": [
+        "Android notification delivery, biometric hardware, account/sync, security/privacy, release signing, store, and end-to-end workflows remain NOT_RUN."
+      ]
+    },
+    {
+      "gate_id": "APP12",
+      "title": "Web consumer release security and accessibility acceptance",
+      "status": "IN_PROGRESS_LOCAL_REFERENCE_ONLY",
+      "evidence": [],
+      "limitations": [
+        "Prior local route and IndexedDB smoke are not full workflows, account/authentication, public security, accessibility, deployment, sync, or release acceptance."
+      ]
+    },
+    {
+      "gate_id": "APP13",
+      "title": "Public launch compliance, operations, budget and beta readiness",
+      "status": "NOT_STARTED",
+      "evidence": [],
+      "limitations": [
+        "Requires legal, privacy, security, domain, owner-budget and store approvals."
+      ]
+    }
+  ],
+  "verification": {
+    "flutter_version": "3.47.5",
+    "dart_version": "3.13.4",
+    "pub_get": "PASS",
+    "flutter_test": {
+      "status": "PASS",
+      "passed": 235
+    },
+    "flutter_build_web_release": "PASS_AFTER_FOUR_TAB_MIGRATION_AND_FINAL_ROUTE_AUDIT",
+    "flutter_analyze": "PASS_DART_ANALYZE_NO_ISSUES",
+    "playwright_web_smoke": "PASS_SYSTEM_CHROME_16_PRIMARY_AND_NESTED_ROUTES_375X812_ZERO_ERRORS_OR_EXTERNAL_REQUESTS",
+    "ios_device_build": "BLOCKED_WINDOWS_HOST_REQUIRES_MACOS_XCODE_AND_OWNER_SIGNING",
+    "android_emulator_integration": "PASS_ONE_SYNTHETIC_APP_SMOKE; NOT_PLATFORM_ACCEPTANCE"
+  },
+  "safety": {
+    "paid_api_calls": 0,
+    "external_data_imported": 0,
+    "public_deployment": 0,
+    "cloud_n8n_changes": 0
+  }
+}

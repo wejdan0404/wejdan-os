@@ -1,0 +1,1185 @@
+[
+ {
+  "action_id": "GROW-01",
+  "area": "study skills",
+  "name_en": "Close the book and recall (retrieval practice)",
+  "name_ar": "استرجاع بدون النظر (اختبار ذاتي)",
+  "what": "End every study block by closing the material and writing/saying everything you remember, or answering practice questions/flashcards; then check against the source and fix gaps. Use this INSTEAD of rereading or highlighting.",
+  "dose": "not specified by source (practice testing rated 'high utility'; exact number of retrieval attempts not specified) - start with a few minutes at the end of each study block and adjust",
+  "why": "Practice testing produces better learning and retention than restudying across many materials and learners; rereading and highlighting were rated low utility.",
+  "evidence_strength": "SR/MA",
+  "sources": [
+   {
+    "type": "DOI",
+    "id": "10.1177/1529100612453266",
+    "title": "Improving Students' Learning With Effective Learning Techniques: Promising Directions From Cognitive and Educational Psychology (PMID 26173288)",
+    "year": 2013,
+    "verified_by": "eutils"
+   },
+   {
+    "type": "DOI",
+    "id": "10.3102/0034654316689306",
+    "title": "Rethinking the Use of Tests: A Meta-Analysis of Practice Testing",
+    "year": 2017,
+    "verified_by": "crossref"
+   },
+   {
+    "type": "PMID",
+    "id": "25150680",
+    "title": "The effect of testing versus restudy on retention: a meta-analytic review of the testing effect",
+    "year": 2014,
+    "verified_by": "eutils"
+   },
+   {
+    "type": "DOI",
+    "id": "10.1037/bul0000309",
+    "title": "Testing (quizzing) boosts classroom learning: A systematic and meta-analytic review",
+    "year": 2021,
+    "verified_by": "crossref"
+   }
+  ],
+  "cue_suggestion": "The moment a study timer ends (before standing up)",
+  "minimum_version": "Write 3 things you remember from today's material on one sticky note, then check.",
+  "normal_version": "5-10 min blank-page recall or 10 flashcards/questions, then check and mark misses.",
+  "bonus_version": "Make 5 new questions from today's material for your future self to answer in the next review.",
+  "joy_pairing": "Turn it into a game: beat yesterday's recall count; reward with favourite drink only after the check step.",
+  "friction_down": "Keep a 'recall' page at the back of the notebook or a one-tap flashcard deck open next to study materials.",
+  "friction_up_for_competing": "Hide highlighters; no 'reread the chapter' as a planned task in the app.",
+  "if_then_plan": "If my study timer rings, then I close the book and write everything I remember before checking.",
+  "tracking_metric": "Recall done today (yes/no) + % correct",
+  "progression": "self-paced",
+  "safety_or_stop_rule": "Expect low scores at first - errors followed by checking are part of the method, not failure.",
+  "schedule_slot": "as-needed",
+  "time_minutes_normal": 10,
+  "app_type": "Routine step",
+  "priority_for_her": "Core",
+  "notes": "Applies to IELTS vocabulary, UX course content, and any certification study. Always follow retrieval with feedback (checking the correct answer)."
+ },
+ {
+  "action_id": "GROW-02",
+  "area": "study skills",
+  "name_en": "Spaced review calendar",
+  "name_ar": "جدول مراجعة متباعدة",
+  "what": "Instead of cramming, schedule each topic to come back for review on later days; the further away the exam/need, the longer the gap between reviews. Reviews are done as retrieval (GROW-01).",
+  "dose": "Source-stated: for a test 1 week away the best review gap was about 20-40% of that interval; for a test 1 year away about 5-10% (Cepeda 2008). Number of reviews not specified - start small and adjust.",
+  "why": "Distributing study over time improves long-term retention compared with massed study; distributed practice was rated high utility.",
+  "evidence_strength": "SR/MA",
+  "sources": [
+   {
+    "type": "DOI",
+    "id": "10.1177/1529100612453266",
+    "title": "Improving Students' Learning With Effective Learning Techniques: Promising Directions From Cognitive and Educational Psychology (PMID 26173288)",
+    "year": 2013,
+    "verified_by": "eutils"
+   },
+   {
+    "type": "PMID",
+    "id": "16719566",
+    "title": "Distributed practice in verbal recall tasks: A review and quantitative synthesis",
+    "year": 2006,
+    "verified_by": "eutils"
+   },
+   {
+    "type": "PMID",
+    "id": "19076480",
+    "title": "Spacing effects in learning: a temporal ridgeline of optimal retention",
+    "year": 2008,
+    "verified_by": "eutils"
+   }
+  ],
+  "cue_suggestion": "Sunday evening weekly planning (app schedules reviews automatically)",
+  "minimum_version": "Review only today's due items for 5 minutes.",
+  "normal_version": "Clear today's review queue (flashcards/app) before new material.",
+  "bonus_version": "Add a cumulative review of last month's material once a week.",
+  "joy_pairing": "Do due reviews in a favourite cafe corner or with a specific playlist that only plays during review.",
+  "friction_down": "Use a spaced-repetition app/deck so the schedule is automatic; app shows 'due today' count.",
+  "friction_up_for_competing": "Don't allow 'new lesson' to start until due reviews are cleared.",
+  "if_then_plan": "If I open my study app, then I clear due reviews before starting anything new.",
+  "tracking_metric": "Due reviews cleared (yes/no)",
+  "progression": "Gaps lengthen as the target date moves further away (Cepeda 2008 ratio); otherwise self-paced",
+  "safety_or_stop_rule": "If the due queue grows beyond what fits in the day, pause new items for a few days rather than skipping reviews.",
+  "schedule_slot": "morning",
+  "time_minutes_normal": 15,
+  "app_type": "Habit",
+  "priority_for_her": "Core",
+  "notes": "The IELTS vocabulary action (GROW-07) is the main daily application."
+ },
+ {
+  "action_id": "GROW-03",
+  "area": "study skills",
+  "name_en": "Mix similar problem types (interleaving)",
+  "name_ar": "خلط الأنواع المتشابهة",
+  "what": "When practising categories that are easy to confuse (e.g., IELTS Writing Task 1 chart types, Reading question types, UI patterns/heuristic violations), mix them in one session instead of doing all of one type, then all of the next.",
+  "dose": "not specified by source - start by mixing 2-3 types per session",
+  "why": "Interleaving had a moderate overall benefit for inductive learning, strongest for visual material and categories that look similar to each other.",
+  "evidence_strength": "SR/MA",
+  "sources": [
+   {
+    "type": "PMID",
+    "id": "31556629",
+    "title": "Similarity matters: A meta-analysis of interleaved learning and its moderators",
+    "year": 2019,
+    "verified_by": "eutils"
+   },
+   {
+    "type": "DOI",
+    "id": "10.1177/1529100612453266",
+    "title": "Improving Students' Learning With Effective Learning Techniques: Promising Directions From Cognitive and Educational Psychology (PMID 26173288)",
+    "year": 2013,
+    "verified_by": "eutils"
+   }
+  ],
+  "cue_suggestion": "When building a practice set for the week",
+  "minimum_version": "Do 3 mixed questions of different types.",
+  "normal_version": "A practice set that shuffles 3-4 question types.",
+  "bonus_version": "Before answering each item, name the type first ('this is a matching-headings item').",
+  "joy_pairing": "'Mystery box' practice - the app shuffles the type so each item is a small surprise.",
+  "friction_down": "Use shuffled/mixed practice sets rather than chapter-by-chapter exercises.",
+  "friction_up_for_competing": "none",
+  "if_then_plan": "If I have 20 minutes of practice, then I pick a mixed set rather than a single-type set.",
+  "tracking_metric": "Mixed set completed (yes/no)",
+  "progression": "self-paced",
+  "safety_or_stop_rule": "Do NOT interleave simple word lists or long expository text - the meta-analysis found blocking better for words and ambiguous results for expository texts.",
+  "schedule_slot": "as-needed",
+  "time_minutes_normal": 20,
+  "app_type": "Routine step",
+  "priority_for_her": "Recommended",
+  "notes": "Learn a new type first in a block, then interleave once it is familiar. Rated moderate utility by Dunlosky 2013."
+ },
+ {
+  "action_id": "GROW-04",
+  "area": "study skills",
+  "name_en": "Explain it to yourself (self-explanation)",
+  "name_ar": "اشرح لنفسك لماذا",
+  "what": "While studying an example (a model IELTS essay, a worked UX case study, a solved problem), stop after each step and answer: 'Why is this done? How does it connect to what I know?' - out loud or in a margin note.",
+  "dose": "not specified by source",
+  "why": "Prompts to self-explain improved learning with a moderate average effect across many studies (g = .55); self-explanation and elaborative interrogation were rated moderate utility.",
+  "evidence_strength": "SR/MA",
+  "sources": [
+   {
+    "type": "DOI",
+    "id": "10.1007/s10648-018-9434-x",
+    "title": "Inducing Self-Explanation: a Meta-Analysis",
+    "year": 2018,
+    "verified_by": "crossref"
+   },
+   {
+    "type": "DOI",
+    "id": "10.1177/1529100612453266",
+    "title": "Improving Students' Learning With Effective Learning Techniques: Promising Directions From Cognitive and Educational Psychology (PMID 26173288)",
+    "year": 2013,
+    "verified_by": "eutils"
+   }
+  ],
+  "cue_suggestion": "Whenever reading a model answer or a case study",
+  "minimum_version": "One 'why?' note on one example.",
+  "normal_version": "A 'why?' note for each paragraph/step of one model answer.",
+  "bonus_version": "Record a 2-minute voice note explaining the example to an imaginary junior designer.",
+  "joy_pairing": "Voice notes while walking, or explain to a friend/sister over tea.",
+  "friction_down": "Keep a template: 'Step - Why - Link to what I know'.",
+  "friction_up_for_competing": "none",
+  "if_then_plan": "If I read a model answer, then I write one 'why this works' note per paragraph.",
+  "tracking_metric": "Examples self-explained (count)",
+  "progression": "self-paced",
+  "safety_or_stop_rule": "none",
+  "schedule_slot": "as-needed",
+  "time_minutes_normal": 10,
+  "app_type": "Routine step",
+  "priority_for_her": "Recommended",
+  "notes": "Pairs well with studying worked examples. The Barbieri 2023 worked-examples meta-analysis could not be read (see GROW.md) so worked examples are not given as a separate action."
+ },
+ {
+  "action_id": "GROW-05",
+  "area": "AI-assisted learning",
+  "name_en": "Attempt first, then ask AI",
+  "name_ar": "حاول أولاً ثم اسأل الذكاء الاصطناعي",
+  "what": "For any practice task (essay, exercise, design critique), make your own full attempt first, then use AI as a tutor: ask for hints, questions, or feedback on YOUR attempt - not for the answer. Finish with a no-AI recall of what you learned.",
+  "dose": "not specified by source",
+  "why": "In a university RCT, ChatGPT support improved essay scores but not knowledge gain or transfer, while a custom AI tutor built on pedagogical best practice helped students learn more in less time; attempting questions before seeing answers (pretesting) can enhance learning.",
+  "evidence_strength": "RCT",
+  "sources": [
+   {
+    "type": "PMID",
+    "id": "40537565",
+    "title": "AI tutoring outperforms in-class active learning: an RCT introducing a novel research-based design in an authentic educational setting",
+    "year": 2025,
+    "verified_by": "eutils"
+   },
+   {
+    "type": "DOI",
+    "id": "10.1111/bjet.13544",
+    "title": "Beware of metacognitive laziness: Effects of generative artificial intelligence on learning motivation, processes, and performance",
+    "year": 2024,
+    "verified_by": "crossref"
+   },
+   {
+    "type": "DOI",
+    "id": "10.1007/s10648-023-09814-5",
+    "title": "Prequestioning and Pretesting Effects: a Review of Empirical Research, Theoretical Perspectives, and Implications for Educational Practice",
+    "year": 2023,
+    "verified_by": "crossref"
+   }
+  ],
+  "cue_suggestion": "Before opening any AI chat during study time",
+  "minimum_version": "Write a 2-line attempt before asking AI anything.",
+  "normal_version": "Full attempt -> AI feedback with a 'tutor' prompt (no final answers, ask me questions) -> revise -> close AI and recall the key lesson.",
+  "bonus_version": "Save a reusable 'tutor mode' prompt (e.g., 'Give hints only, check my reasoning, quiz me at the end').",
+  "joy_pairing": "Treat the AI step as the reward after the effortful attempt.",
+  "friction_down": "Pin a saved tutor-mode prompt in the AI app.",
+  "friction_up_for_competing": "Keep AI tab closed during the attempt phase (open only after the timer).",
+  "if_then_plan": "If I feel the urge to ask AI for the answer, then I first write my own attempt, even if it's rough.",
+  "tracking_metric": "Attempt-before-AI (yes/no per session)",
+  "progression": "self-paced",
+  "safety_or_stop_rule": "Don't submit AI-written work as your own in exams, applications or portfolios; verify AI factual claims.",
+  "schedule_slot": "as-needed",
+  "time_minutes_normal": 5,
+  "app_type": "Routine step",
+  "priority_for_her": "Core",
+  "notes": "Kestin 2025: a custom AI tutor designed around pedagogical best practices helped college students learn more in less time than an active-learning class - design of the AI use matters. Fan 2024: N=117 university students, randomized. The best-known causal test of AI as a 'crutch' (Bastani et al. 2025, PNAS) was excluded from sources because its population is high-school students (see GROW.md)."
+ },
+ {
+  "action_id": "GROW-06",
+  "area": "IELTS",
+  "name_en": "IELTS diagnostic + monthly timed mock",
+  "name_ar": "اختبار آيلتس تجريبي شهري",
+  "what": "Take one official free practice/trial test now to set a baseline, then a timed full or section mock regularly under test conditions. Log section scores and the 3 most common error types; these drive the next weeks' rotation.",
+  "dose": "not specified by source - planning suggestion: one full mock per month, section mocks in between",
+  "why": "Practice tests benefit learning more than restudying; official materials show the real format (Listening ~30 min, 4 parts x 10 questions; Reading 60 min; Writing 60 min; Speaking 11-14 min face-to-face; total 2h45).",
+  "evidence_strength": "SR/MA",
+  "sources": [
+   {
+    "type": "DOI",
+    "id": "10.3102/0034654316689306",
+    "title": "Rethinking the Use of Tests: A Meta-Analysis of Practice Testing",
+    "year": 2017,
+    "verified_by": "crossref"
+   },
+   {
+    "type": "URL",
+    "id": "https://ielts.org/take-a-test/test-types/ielts-academic-test",
+    "title": "IELTS Academic test format and sections (Listening ~30 min, Reading 60 min, Writing 60 min, Speaking 11-14 min; total 2h45)",
+    "year": 2026,
+    "verified_by": "webfetch"
+   },
+   {
+    "type": "URL",
+    "id": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-listening",
+    "title": "IELTS Academic: Listening test format (4 parts x 10 questions, heard once)",
+    "year": 2026,
+    "verified_by": "webfetch"
+   },
+   {
+    "type": "URL",
+    "id": "https://ielts.org/take-a-test/preparation-resources",
+    "title": "IELTS official preparation resources (sample questions, IELTS Trial Test, writing resources)",
+    "year": 2026,
+    "verified_by": "webfetch"
+   },
+   {
+    "type": "URL",
+    "id": "https://takeielts.britishcouncil.org/take-ielts/prepare",
+    "title": "British Council: free IELTS preparation (IELTS Ready, practice tests, videos, live sessions)",
+    "year": 2026,
+    "verified_by": "webfetch"
+   }
+  ],
+  "cue_suggestion": "First Friday morning of each month",
+  "minimum_version": "One timed section (e.g., Listening Part 1-2).",
+  "normal_version": "One full section under exact timing, marked with the official answer key.",
+  "bonus_version": "Full 2h45 mock in one sitting.",
+  "joy_pairing": "Make 'mock morning' a ritual: favourite breakfast after, and a visible score chart that fills up.",
+  "friction_down": "Bookmark ielts.org sample questions, IELTS Trial Test and British Council 'IELTS Ready' in the app.",
+  "friction_up_for_competing": "Phone in another room during the mock (simulates test rules).",
+  "if_then_plan": "If it's the first Friday of the month, then I sit a timed mock before checking messages.",
+  "tracking_metric": "Section band score (number)",
+  "progression": "Section mocks -> full mock as test date nears; self-paced",
+  "safety_or_stop_rule": "Only use official/partner materials for scoring accuracy; treat unofficial 'band predictor' tools with caution.",
+  "schedule_slot": "monthly",
+  "time_minutes_normal": 165,
+  "app_type": "Weekly task",
+  "priority_for_her": "Core",
+  "notes": "Choose Academic vs General Training based on her goal (Listening and Speaking are the same in both; Reading and Writing differ - per ielts.org). British Council 'IELTS Ready' offers free mocks (Express 25 min, Mini 50 min) and more when a test is booked."
+ },
+ {
+  "action_id": "GROW-07",
+  "area": "IELTS",
+  "name_en": "Daily spaced vocabulary",
+  "name_ar": "مفردات يومية بالتكرار المتباعد",
+  "what": "Learn useful academic/topic vocabulary (from your own reading, listening and mock errors) as flashcards with an example sentence; review daily by recalling the meaning AND producing the word in a sentence.",
+  "dose": "not specified by source (number of words/day not stated) - start small (e.g., a handful of new words) and adjust to what you can review",
+  "why": "Spaced practice had a medium-to-large effect on second-language learning, and longer spacing beat shorter spacing on delayed tests; equal and expanding schedules were equivalent.",
+  "evidence_strength": "SR/MA",
+  "sources": [
+   {
+    "type": "DOI",
+    "id": "10.1111/lang.12479",
+    "title": "The Effects of Spaced Practice on Second Language Learning: A Meta-Analysis",
+    "year": 2022,
+    "verified_by": "crossref"
+   },
+   {
+    "type": "PMID",
+    "id": "19076480",
+    "title": "Spacing effects in learning: a temporal ridgeline of optimal retention",
+    "year": 2008,
+    "verified_by": "eutils"
+   },
+   {
+    "type": "DOI",
+    "id": "10.1177/1529100612453266",
+    "title": "Improving Students' Learning With Effective Learning Techniques: Promising Directions From Cognitive and Educational Psychology (PMID 26173288)",
+    "year": 2013,
+    "verified_by": "eutils"
+   }
+  ],
+  "cue_suggestion": "With morning coffee/tea, or while waiting (queue, car as passenger)",
+  "minimum_version": "Clear 5 due cards.",
+  "normal_version": "Clear all due cards + add a few new words from today's reading.",
+  "bonus_version": "Use 3 of today's words in a spoken 1-minute answer (links to Speaking).",
+  "joy_pairing": "Pick words from topics she loves (design, tech, psychology) - use them in an IELTS Speaking Part 2 story.",
+  "friction_down": "Phone widget for the deck; add words with one tap while reading.",
+  "friction_up_for_competing": "Place the deck icon where social apps used to be on the home screen.",
+  "if_then_plan": "If I pour my morning coffee, then I open my vocab deck and clear due cards.",
+  "tracking_metric": "Due cards cleared (yes/no)",
+  "progression": "self-paced; lengthen review gaps as test date approaches (spacing ratio in GROW-02)",
+  "safety_or_stop_rule": "If reviews exceed ~20 min, stop adding new words until the queue shrinks.",
+  "schedule_slot": "morning",
+  "time_minutes_normal": 15,
+  "app_type": "Habit",
+  "priority_for_her": "Core",
+  "notes": "Kim & Webb 2022: 48 experiments, N=3,411. Spacing is scheduled by the app; do not 'interleave' plain word lists (see GROW-03 caution)."
+ },
+ {
+  "action_id": "GROW-08",
+  "area": "IELTS",
+  "name_en": "Extensive reading for pleasure",
+  "name_ar": "قراءة ممتعة بالإنجليزية",
+  "what": "Read easy-to-comfortable English material you enjoy (articles, UX blogs, graded readers, novels) for meaning, not for testing - aim for flow, not dictionary lookups.",
+  "dose": "not specified by source (meta-analysis examined length of programmes but no daily dose is stated here) - start small and adjust",
+  "why": "Extensive reading improved reading proficiency with a medium effect in group-contrast studies (d = 0.46).",
+  "evidence_strength": "SR/MA",
+  "sources": [
+   {
+    "type": "DOI",
+    "id": "10.1002/tesq.157",
+    "title": "A Meta-Analysis of Extensive Reading Research",
+    "year": 2014,
+    "verified_by": "crossref"
+   }
+  ],
+  "cue_suggestion": "After Isha / before bed wind-down (paper or e-ink rather than phone)",
+  "minimum_version": "Read 1 page.",
+  "normal_version": "Read one article or chapter.",
+  "bonus_version": "Save 2-3 useful phrases to the vocab deck.",
+  "joy_pairing": "Read topics she already loves (design stories, product case studies, fiction) in a cosy reading spot with a warm drink.",
+  "friction_down": "Keep a reading queue in the app; e-reader or printed articles by the bed.",
+  "friction_up_for_competing": "Social apps off the bedroom charging spot.",
+  "if_then_plan": "If I get into bed, then I read one English chapter/article before any scrolling.",
+  "tracking_metric": "Minutes read (number)",
+  "progression": "self-paced; move to more academic texts as comfort grows",
+  "safety_or_stop_rule": "If she's constantly looking up words, the text is too hard - choose easier material.",
+  "schedule_slot": "night",
+  "time_minutes_normal": 20,
+  "app_type": "Habit",
+  "priority_for_her": "Recommended",
+  "notes": "Nakanishi 2015 (TESOL Quarterly): 34 studies, N=3,942. Complements timed IELTS Reading practice in the rotation."
+ },
+ {
+  "action_id": "GROW-09",
+  "area": "IELTS",
+  "name_en": "Listening practice (test-style + for enjoyment)",
+  "name_ar": "تدريب الاستماع",
+  "what": "Two layers: (1) test-style - one timed IELTS Listening part, heard once, answers checked with transcript; (2) enjoyment - English podcasts/talks on design and tech during walks or chores.",
+  "dose": "not specified by source",
+  "why": "Test-style practice uses the testing effect and matches the real format (4 parts, 10 questions each, recordings heard once).",
+  "evidence_strength": "Expert consensus",
+  "sources": [
+   {
+    "type": "URL",
+    "id": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-listening",
+    "title": "IELTS Academic: Listening test format (4 parts x 10 questions, heard once)",
+    "year": 2026,
+    "verified_by": "webfetch"
+   },
+   {
+    "type": "DOI",
+    "id": "10.3102/0034654316689306",
+    "title": "Rethinking the Use of Tests: A Meta-Analysis of Practice Testing",
+    "year": 2017,
+    "verified_by": "crossref"
+   }
+  ],
+  "cue_suggestion": "Test-style: rotation day after lunch; enjoyment: during walks",
+  "minimum_version": "One Listening part (10 questions).",
+  "normal_version": "Two parts, check errors with the transcript, re-listen to missed sections.",
+  "bonus_version": "Shadow (repeat aloud) 1 minute of the transcript to also train pronunciation.",
+  "joy_pairing": "Temptation bundle: favourite design/tech podcast only while walking (links to movement goals).",
+  "friction_down": "Download episodes in advance; practice test audio saved offline.",
+  "friction_up_for_competing": "none",
+  "if_then_plan": "If I start my walk, then I play an English podcast episode.",
+  "tracking_metric": "Listening parts completed + correct/10",
+  "progression": "self-paced; move from Parts 1-2 to 3-4 (academic contexts)",
+  "safety_or_stop_rule": "Keep volume moderate with earphones; stay aware of traffic when walking.",
+  "schedule_slot": "afternoon",
+  "time_minutes_normal": 30,
+  "app_type": "Routine step",
+  "priority_for_her": "Core",
+  "notes": "EVIDENCE GAP: no verified meta-analysis for extensive listening was found in this pass; the enjoyment layer is supported only by general reasoning. Kept because Listening is a scored IELTS paper."
+ },
+ {
+  "action_id": "GROW-10",
+  "area": "IELTS",
+  "name_en": "Writing with corrective feedback",
+  "name_ar": "كتابة مع تصحيح",
+  "what": "Write one IELTS Task 1 or Task 2 response under time, then get feedback against the four official criteria (Task Achievement/Response, Coherence & Cohesion, Lexical Resource, Grammatical Range & Accuracy) from a teacher, study partner or AI-in-tutor-mode; rewrite the weakest paragraph and log recurring errors.",
+  "dose": "not specified by source - planning suggestion: 1-2 timed responses per week in the rotation",
+  "why": "Written corrective feedback improves grammatical accuracy in second-language writing, though effects vary with proficiency, setting and genre.",
+  "evidence_strength": "SR/MA",
+  "sources": [
+   {
+    "type": "DOI",
+    "id": "10.1111/modl.12189",
+    "title": "The Efficacy of Written Corrective Feedback in Improving L2 Written Accuracy: A Meta-Analysis",
+    "year": 2015,
+    "verified_by": "crossref"
+   },
+   {
+    "type": "URL",
+    "id": "https://ielts.org/cdn/Guides/ielts-writing-band-descriptors.pdf",
+    "title": "IELTS Writing Band Descriptors (updated May 2023)",
+    "year": 2023,
+    "verified_by": "webfetch"
+   }
+  ],
+  "cue_suggestion": "Rotation writing day, right after Dhuhr",
+  "minimum_version": "Write one Task 2 introduction + body plan (10 min).",
+  "normal_version": "One timed Task (Task 1: ~20 min / Task 2: ~40 min within the 60-min paper), feedback, rewrite one paragraph.",
+  "bonus_version": "Keep an 'error log' and do a 5-item self-check before each new essay.",
+  "joy_pairing": "Choose prompts on topics she cares about (technology, education, design) and share a best paragraph with a study buddy.",
+  "friction_down": "Band-descriptor checklist pinned in the app; saved AI tutor prompt: 'Mark against the 4 IELTS criteria, don't rewrite for me, show 3 errors to fix'.",
+  "friction_up_for_competing": "Grammar-autocorrect off while drafting practice essays.",
+  "if_then_plan": "If it's writing day and Dhuhr is done, then I set a 40-minute timer and write one Task 2.",
+  "tracking_metric": "Essays written + top recurring error",
+  "progression": "self-paced",
+  "safety_or_stop_rule": "AI band estimates are not official scores; use them for feedback, not for predicting results.",
+  "schedule_slot": "midday",
+  "time_minutes_normal": 60,
+  "app_type": "Weekly task",
+  "priority_for_her": "Core",
+  "notes": "The Task 1 20-min / Task 2 40-min split is common guidance but was NOT verified on the ielts.org page fetched (only 60 min total was confirmed) - label it as a planning default. Kang & Han 2015: 21 studies."
+ },
+ {
+  "action_id": "GROW-11",
+  "area": "IELTS",
+  "name_en": "Speaking practice with feedback",
+  "name_ar": "محادثة مع تغذية راجعة",
+  "what": "Answer IELTS-style Speaking Part 1-3 prompts out loud (record yourself or with a partner/tutor), get feedback on the 4 criteria (Fluency & Coherence, Lexical Resource, Grammatical Range & Accuracy, Pronunciation), and re-answer the same prompt using the corrections.",
+  "dose": "not specified by source",
+  "why": "Corrective feedback in second-language learning had a medium, durable effect; in classrooms, prompts that push the learner to self-correct worked better than simple recasts.",
+  "evidence_strength": "SR/MA",
+  "sources": [
+   {
+    "type": "DOI",
+    "id": "10.1111/j.1467-9922.2010.00561.x",
+    "title": "The Effectiveness of Corrective Feedback in SLA: A Meta-Analysis",
+    "year": 2010,
+    "verified_by": "crossref"
+   },
+   {
+    "type": "DOI",
+    "id": "10.1017/S0272263109990520",
+    "title": "Oral Feedback in Classroom SLA: A Meta-Analysis",
+    "year": 2010,
+    "verified_by": "crossref"
+   },
+   {
+    "type": "URL",
+    "id": "https://ielts.org/cdn/ielts-guides/ielts-speaking-band-descriptors.pdf",
+    "title": "IELTS Speaking Band Descriptors (public version)",
+    "year": 2026,
+    "verified_by": "webfetch"
+   }
+  ],
+  "cue_suggestion": "Rotation speaking day, after Asr",
+  "minimum_version": "Record one 1-minute Part 1 answer and listen back once.",
+  "normal_version": "One Part 2 long-turn (with 1-minute prep) + 3 Part 3 questions, feedback, re-answer.",
+  "bonus_version": "A weekly speaking session with a partner or tutor.",
+  "joy_pairing": "Practise with a friend in a cafe or on a call; talk about topics she enjoys (her projects, design, travel).",
+  "friction_down": "Keep a bank of prompts in the app; one-tap voice recorder.",
+  "friction_up_for_competing": "none",
+  "if_then_plan": "If I finish Asr on speaking day, then I record one Part 2 answer before anything else.",
+  "tracking_metric": "Recordings made (count)",
+  "progression": "self-paced",
+  "safety_or_stop_rule": "Feedback should target a few errors at a time; too many corrections at once can discourage.",
+  "schedule_slot": "afternoon",
+  "time_minutes_normal": 20,
+  "app_type": "Weekly task",
+  "priority_for_her": "Core",
+  "notes": "Speaking test is 11-14 min, face-to-face (ielts.org). Feedback meta-analyses are mostly classroom/lab based; self-recording + AI feedback is extrapolation. Lyster & Saito found younger learners benefited more - effect for adults may be smaller."
+ },
+ {
+  "action_id": "GROW-12",
+  "area": "IELTS",
+  "name_en": "Weekly IELTS skill rotation",
+  "name_ar": "تدوير مهارات الآيلتس أسبوعياً",
+  "what": "A fixed weekly template so each skill gets touched and nothing is crammed: Vocabulary daily (GROW-07); Sat Reading (timed passage + extensive reading), Sun Listening, Mon Writing, Tue Speaking, Wed Reading/Listening mixed set (interleaving), Thu Writing or Speaking (weakest skill), Fri light review / monthly mock. Adjust the extra day to the weakest section from the last mock.",
+  "dose": "not specified by source - the day plan is a planning template, not a studied dose",
+  "why": "Rotating skills spreads practice over time (spacing) and keeps regular testing with feedback, both high-utility principles.",
+  "evidence_strength": "Expert consensus",
+  "sources": [
+   {
+    "type": "DOI",
+    "id": "10.1177/1529100612453266",
+    "title": "Improving Students' Learning With Effective Learning Techniques: Promising Directions From Cognitive and Educational Psychology (PMID 26173288)",
+    "year": 2013,
+    "verified_by": "eutils"
+   },
+   {
+    "type": "PMID",
+    "id": "16719566",
+    "title": "Distributed practice in verbal recall tasks: A review and quantitative synthesis",
+    "year": 2006,
+    "verified_by": "eutils"
+   },
+   {
+    "type": "DOI",
+    "id": "10.3102/0034654316689306",
+    "title": "Rethinking the Use of Tests: A Meta-Analysis of Practice Testing",
+    "year": 2017,
+    "verified_by": "crossref"
+   },
+   {
+    "type": "URL",
+    "id": "https://ielts.org/take-a-test/test-types/ielts-academic-test",
+    "title": "IELTS Academic test format and sections (Listening ~30 min, Reading 60 min, Writing 60 min, Speaking 11-14 min; total 2h45)",
+    "year": 2026,
+    "verified_by": "webfetch"
+   }
+  ],
+  "cue_suggestion": "Sunday evening weekly review in the app",
+  "minimum_version": "On a bad day: vocab due cards only - the rotation day moves, it doesn't disappear.",
+  "normal_version": "Vocab + the day's skill block (~30-60 min).",
+  "bonus_version": "Add the weakest-skill block a second time in the week.",
+  "joy_pairing": "Theme the week (e.g., 'tech week', 'health week') so reading, listening and speaking share one interesting topic.",
+  "friction_down": "App auto-fills each day with the skill's saved materials link.",
+  "friction_up_for_competing": "none",
+  "if_then_plan": "If a rotation day is missed, then I do it the next day instead of doubling up.",
+  "tracking_metric": "Rotation blocks done / planned per week",
+  "progression": "Re-weight toward the weakest section after each monthly mock",
+  "safety_or_stop_rule": "If total study time crowds out sleep or exercise, cut the bonus blocks first.",
+  "schedule_slot": "weekly",
+  "time_minutes_normal": 45,
+  "app_type": "System/automation",
+  "priority_for_her": "Core",
+  "notes": "Days follow the Saudi weekend (Fri-Sat); adjust to her real schedule and driving lessons."
+ },
+ {
+  "action_id": "GROW-13",
+  "area": "professional growth",
+  "name_en": "Deliberate practice on one UX skill",
+  "name_ar": "تدريب متعمد على مهارة واحدة",
+  "what": "Pick ONE sub-skill per 2-4 weeks (e.g., usability-test script writing, auto layout, research synthesis, UX writing). Practise it in short focused reps with a clear standard and feedback (mentor, community critique, or comparing to a strong reference).",
+  "dose": "not specified by source",
+  "why": "Deliberate practice predicts performance, but it explained far less variance in education (4%) and professions (<1%) than in games, music or sports - so pair it with real projects and feedback rather than relying on practice hours alone.",
+  "evidence_strength": "SR/MA",
+  "sources": [
+   {
+    "type": "PMID",
+    "id": "24986855",
+    "title": "Deliberate practice and performance in music, games, sports, education, and professions: a meta-analysis",
+    "year": 2014,
+    "verified_by": "eutils"
+   }
+  ],
+  "cue_suggestion": "First work block of the day on weekdays",
+  "minimum_version": "One 15-min rep (e.g., redesign one screen's hierarchy).",
+  "normal_version": "30-45 min: rep -> compare with a strong reference/feedback -> one improvement.",
+  "bonus_version": "Post the rep for public critique (design community, mentor).",
+  "joy_pairing": "Choose reps from products she loves; before/after pairs make visible progress.",
+  "friction_down": "Keep a backlog of small practice prompts in the app.",
+  "friction_up_for_competing": "none",
+  "if_then_plan": "If I sit down for my first work block, then I do one rep of this month's skill before email.",
+  "tracking_metric": "Reps completed (count)",
+  "progression": "self-paced",
+  "safety_or_stop_rule": "none",
+  "schedule_slot": "morning",
+  "time_minutes_normal": 30,
+  "app_type": "Habit",
+  "priority_for_her": "Recommended",
+  "notes": "Honest framing: practice matters but is not the whole story; the meta-analysis (with a 2018 erratum) argues against the '10,000 hours' claim."
+ },
+ {
+  "action_id": "GROW-14",
+  "area": "professional growth",
+  "name_en": "One active course at a time -> finish -> portfolio project",
+  "name_ar": "دورة واحدة فعّالة حتى النهاية",
+  "what": "Limit to one active course (e.g., Google UX Design Certificate). Park all other courses in a 'later' list. Turn each finished module/project into a portfolio case-study draft.",
+  "dose": "Google states 3-6 months at 5-10 hours of study per week for the Google UX Design Certificate, with a portfolio of three projects. Limit of one active course: not specified by source (planning rule).",
+  "why": "Open online course completion rates are low and did not improve over six years of edX data, so an explicit finishing rule counters 'learning hoarding'; the Google certificate is built to end in three portfolio projects.",
+  "evidence_strength": "Observational",
+  "sources": [
+   {
+    "type": "DOI",
+    "id": "10.1126/science.aav7958",
+    "title": "The MOOC pivot",
+    "year": 2019,
+    "verified_by": "crossref"
+   },
+   {
+    "type": "URL",
+    "id": "https://grow.google/certificates/ux-design/",
+    "title": "Google UX Design Certificate (3-6 months at 5-10 h/week; portfolio with three projects)",
+    "year": 2026,
+    "verified_by": "webfetch"
+   }
+  ],
+  "cue_suggestion": "Fixed course sessions, e.g., Sun/Tue/Thu mornings",
+  "minimum_version": "Watch/complete one lesson item.",
+  "normal_version": "One 60-90 min session covering a module section + notes as retrieval (GROW-01).",
+  "bonus_version": "Draft the case-study section for the project you just finished.",
+  "joy_pairing": "Visual progress bar in the app; celebrate module completion with something she enjoys.",
+  "friction_down": "Course link opens straight from the app block; next lesson pre-selected.",
+  "friction_up_for_competing": "New course sign-ups go to a 'later' list and require finishing the current one first.",
+  "if_then_plan": "If I find a new course I want, then I add it to the 'later' list instead of enrolling.",
+  "tracking_metric": "Course % complete (number)",
+  "progression": "self-paced within the provider's stated 3-6 months",
+  "safety_or_stop_rule": "If a course no longer fits her goals after a fair try, formally drop it (don't leave it 'active').",
+  "schedule_slot": "morning",
+  "time_minutes_normal": 75,
+  "app_type": "Project step",
+  "priority_for_her": "Core",
+  "notes": "The 'one course' rule is an inference from low completion data, not a tested intervention. The Google page also mentions AI Pro access and employer network - benefits may be US-focused."
+ },
+ {
+  "action_id": "GROW-15",
+  "area": "professional growth",
+  "name_en": "Weekly after-action review",
+  "name_ar": "مراجعة ما بعد العمل أسبوعياً",
+  "what": "Once a week (and after any big project, interview or test), answer in writing: What was planned? What happened? Why? What will I keep / change next week? Use objective evidence (scores, screenshots, feedback) where possible.",
+  "dose": "not specified by source (frequency not stated)",
+  "why": "After-action reviews/debriefs improved training outcomes with a large average effect (d = 0.79), and reviews using objective performance media worked better.",
+  "evidence_strength": "SR/MA",
+  "sources": [
+   {
+    "type": "DOI",
+    "id": "10.1037/apl0000821",
+    "title": "A meta-analysis of the effectiveness of the after-action review (or debrief) and factors that influence its effectiveness",
+    "year": 2021,
+    "verified_by": "crossref"
+   },
+   {
+    "type": "PMID",
+    "id": "26479070",
+    "title": "Does monitoring goal progress promote goal attainment? A meta-analysis of the experimental evidence",
+    "year": 2016,
+    "verified_by": "eutils"
+   }
+  ],
+  "cue_suggestion": "Thursday evening (end of work week)",
+  "minimum_version": "3 lines: one win, one lesson, one change.",
+  "normal_version": "The 4 questions + review this week's tracked metrics.",
+  "bonus_version": "Share the lesson with a mentor/peer or as a short LinkedIn reflection.",
+  "joy_pairing": "Do it with a favourite drink in a calm spot; start with wins.",
+  "friction_down": "App pre-fills the week's metrics into the review form.",
+  "friction_up_for_competing": "none",
+  "if_then_plan": "If it's Thursday after Isha, then I open the weekly review before any entertainment.",
+  "tracking_metric": "Weekly review done (yes/no)",
+  "progression": "self-paced",
+  "safety_or_stop_rule": "Keep it about actions, not self-criticism.",
+  "schedule_slot": "weekly",
+  "time_minutes_normal": 20,
+  "app_type": "Weekly task",
+  "priority_for_her": "Core",
+  "notes": "Harkin 2016: progress monitoring promoted goal attainment (d = 0.40), more when information was physically recorded. The AAR meta-analysis is mostly military/healthcare training; applying it to personal weekly review is an extrapolation. This review can host all clusters' metrics."
+ },
+ {
+  "action_id": "GROW-16",
+  "area": "job search",
+  "name_en": "Structured weekly job-search sprint",
+  "name_ar": "خطة أسبوعية منظمة للبحث عن عمل",
+  "what": "Run job search as a weekly plan with (1) skill work - tailoring CV/portfolio, applications, self-presentation - and (2) motivation work - specific weekly goals, tracking, social support. Prioritise QUALITY (targeted, tailored) applications, not only volume.",
+  "dose": "not specified by source - set a weekly number of targeted applications/outreach and adjust",
+  "why": "Job-search interventions raised the odds of employment 2.67 times, and only when they combined skill development with motivation enhancement; job-search intensity predicted interviews and offers, while self-regulation and quality also predicted job quality.",
+  "evidence_strength": "SR/MA",
+  "sources": [
+   {
+    "type": "DOI",
+    "id": "10.1037/a0035923",
+    "title": "Effectiveness of job search interventions: A meta-analytic review",
+    "year": 2014,
+    "verified_by": "crossref"
+   },
+   {
+    "type": "DOI",
+    "id": "10.1037/apl0000675",
+    "title": "Job search and employment success: A quantitative review and future research agenda",
+    "year": 2021,
+    "verified_by": "crossref"
+   },
+   {
+    "type": "DOI",
+    "id": "10.1037/0021-9010.86.5.837",
+    "title": "Job search and employment: A personality-motivational analysis and meta-analytic review",
+    "year": 2001,
+    "verified_by": "crossref"
+   },
+   {
+    "type": "PMID",
+    "id": "26479070",
+    "title": "Does monitoring goal progress promote goal attainment? A meta-analysis of the experimental evidence",
+    "year": 2016,
+    "verified_by": "eutils"
+   }
+  ],
+  "cue_suggestion": "Sunday planning session + 2-3 fixed application blocks per week",
+  "minimum_version": "Send one tailored application or one outreach message.",
+  "normal_version": "Set weekly goals; complete planned tailored applications; update tracker with status and follow-up dates.",
+  "bonus_version": "Ask one person to review your CV/portfolio for a specific role.",
+  "joy_pairing": "Pair application blocks with a favourite cafe or a 'job-search buddy' call; celebrate sends, not only offers.",
+  "friction_down": "Templates for CV variants and cover notes; tracker (sheet) linked in the app.",
+  "friction_up_for_competing": "none",
+  "if_then_plan": "If I open the tracker on application day, then I send the top-priority application before browsing new listings.",
+  "tracking_metric": "Tailored applications/outreach sent this week (count)",
+  "progression": "self-paced",
+  "safety_or_stop_rule": "Verify every company and job ad is real and active; never pay for a job offer; protect personal ID data.",
+  "schedule_slot": "weekly",
+  "time_minutes_normal": 90,
+  "app_type": "Weekly task",
+  "priority_for_her": "Core",
+  "notes": "Liu 2014: 47 interventions; effective components included job-search skills, self-presentation, self-efficacy, proactivity, goal setting and social support. Van Hooft 2021: 378 samples; overall intensity did NOT predict employment quality. Links to her existing company/opportunity tracker."
+ },
+ {
+  "action_id": "GROW-17",
+  "area": "job search",
+  "name_en": "Use Tamheer and Jadarat",
+  "name_ar": "الاستفادة من تمهير وجدارات",
+  "what": "Check eligibility and register on HRDF's Tamheer (on-the-job training for Saudi graduates) and create a full profile on Jadarat (national employment platform, jadarat.sa) with job alerts for UX/UI/Product/Research roles in Makkah/Jeddah and remote.",
+  "dose": "Tamheer (per HRDF): Saudi nationals up to age 30, degree/diploma, no more than one year work experience, currently unemployed; training 3-6 months with a stated monthly allowance of SAR 3,000. Checking frequency: not specified by source.",
+  "why": "Official national channels list public- and private-sector opportunities and graduate on-the-job training.",
+  "evidence_strength": "Guideline",
+  "sources": [
+   {
+    "type": "URL",
+    "id": "https://www.hrdf.org.sa/en/products-and-services/programs/individuals/training/graduate-development/",
+    "title": "HRDF (Hadaf): Graduate Development - Tamheer",
+    "year": 2026,
+    "verified_by": "webfetch"
+   },
+   {
+    "type": "URL",
+    "id": "https://www.hrdf.org.sa/en/products-and-services/programs/individuals/other/jadarat/",
+    "title": "HRDF (Hadaf): Jadarat - Unified National Employment Platform (jadarat.sa)",
+    "year": 2026,
+    "verified_by": "webfetch"
+   }
+  ],
+  "cue_suggestion": "Weekly job-search sprint (GROW-16)",
+  "minimum_version": "Check Jadarat alerts once.",
+  "normal_version": "Review alerts, apply to matching posts, log them in the tracker.",
+  "bonus_version": "Search Tamheer opportunities from companies on her target list.",
+  "joy_pairing": "Treat new matching posts as a 'weekly treasure hunt' with the job-search buddy.",
+  "friction_down": "Save logins (Nafath/unified access) and filters; turn on Jadarat alerts.",
+  "friction_up_for_competing": "none",
+  "if_then_plan": "If a Jadarat alert arrives, then I save it to the tracker for the next application block rather than acting in the middle of focus time.",
+  "tracking_metric": "Official-platform applications (count)",
+  "progression": "self-paced",
+  "safety_or_stop_rule": "Eligibility rules and allowance can change - re-check the HRDF page before applying. Use only official URLs (hrdf.org.sa, jadarat.sa).",
+  "schedule_slot": "weekly",
+  "time_minutes_normal": 20,
+  "app_type": "Weekly task",
+  "priority_for_her": "Core",
+  "notes": "Facts verified on HRDF pages on 2026-09-28. jadarat.sa itself returned 403 to the fetcher; its URL was confirmed via the HRDF page."
+ },
+ {
+  "action_id": "GROW-18",
+  "area": "job search",
+  "name_en": "Weak-tie networking",
+  "name_ar": "التواصل مع المعارف غير المقربين",
+  "what": "Each week, send a few personalised messages to people you know only slightly (alumni, event contacts, LinkedIn connections with some mutual connections) in UX/product roles: ask a specific question or for a short chat - not directly for a job.",
+  "dose": "not specified by source - start with a small weekly number and adjust",
+  "why": "Large randomized experiments on LinkedIn found moderately weak ties created the most job mobility, especially in digital industries; interventions that enlisted social support were more effective.",
+  "evidence_strength": "RCT",
+  "sources": [
+   {
+    "type": "DOI",
+    "id": "10.1126/science.abl4476",
+    "title": "A causal test of the strength of weak ties",
+    "year": 2022,
+    "verified_by": "crossref"
+   },
+   {
+    "type": "DOI",
+    "id": "10.1037/a0035923",
+    "title": "Effectiveness of job search interventions: A meta-analytic review",
+    "year": 2014,
+    "verified_by": "crossref"
+   }
+  ],
+  "cue_suggestion": "After the weekly application block",
+  "minimum_version": "React/comment meaningfully on one professional's post.",
+  "normal_version": "Send 1-3 personalised messages; log replies and follow-up date.",
+  "bonus_version": "Attend one local/online UX event per month and follow up with one person.",
+  "joy_pairing": "Talk to people whose work she genuinely admires; share her own portfolio progress.",
+  "friction_down": "Message templates with a personalisation slot; contacts list in tracker.",
+  "friction_up_for_competing": "none",
+  "if_then_plan": "If I finish my application block, then I send one networking message.",
+  "tracking_metric": "Networking messages sent (count)",
+  "progression": "self-paced",
+  "safety_or_stop_rule": "Keep to professional platforms/settings she is comfortable with; never share sensitive personal data.",
+  "schedule_slot": "weekly",
+  "time_minutes_normal": 20,
+  "app_type": "Weekly task",
+  "priority_for_her": "Recommended",
+  "notes": "Rajkumar 2022: >20 million people, 600,000 new jobs; inverted-U effect of tie strength."
+ },
+ {
+  "action_id": "GROW-19",
+  "area": "job search",
+  "name_en": "Interview & self-presentation practice",
+  "name_ar": "تدريب على المقابلات",
+  "what": "Prepare 5-6 STAR-style stories from her projects, a 2-minute portfolio walkthrough, and answers to common UX interview questions; rehearse out loud (recorded or mock interview with a friend/mentor/AI interviewer), get feedback, rehearse again.",
+  "dose": "not specified by source",
+  "why": "Job-search interventions that improved self-presentation and boosted job-search self-efficacy were more effective at getting people employed.",
+  "evidence_strength": "SR/MA",
+  "sources": [
+   {
+    "type": "DOI",
+    "id": "10.1037/a0035923",
+    "title": "Effectiveness of job search interventions: A meta-analytic review",
+    "year": 2014,
+    "verified_by": "crossref"
+   }
+  ],
+  "cue_suggestion": "As soon as an interview is booked, plus a monthly practice",
+  "minimum_version": "Say one story out loud once.",
+  "normal_version": "30 min mock: 3 questions + portfolio walkthrough, feedback, one redo.",
+  "bonus_version": "Full mock interview with a UX professional.",
+  "joy_pairing": "Practise in English to double as IELTS Speaking practice.",
+  "friction_down": "Story bank and question bank in the app.",
+  "friction_up_for_competing": "none",
+  "if_then_plan": "If an interview is booked, then I schedule two practice sessions before it.",
+  "tracking_metric": "Mock sessions done (count)",
+  "progression": "self-paced",
+  "safety_or_stop_rule": "none",
+  "schedule_slot": "as-needed",
+  "time_minutes_normal": 30,
+  "app_type": "Project step",
+  "priority_for_her": "Recommended",
+  "notes": "Liu 2014 evaluates whole interventions; interview practice alone was not tested separately."
+ },
+ {
+  "action_id": "GROW-20",
+  "area": "job search",
+  "name_en": "Setback plan for rejections",
+  "name_ar": "خطة التعامل مع الرفض",
+  "what": "Before starting applications, write a short plan: 'Rejections are expected; when one arrives I will (1) note one lesson, (2) do one small next step within 24h, (3) contact my support person'. Review wins weekly to rebuild confidence.",
+  "dose": "not specified by source",
+  "why": "The JOBS program, which included preparing people for setbacks, led to higher re-employment and better mental health two years later; boosting self-efficacy was an effective intervention component.",
+  "evidence_strength": "RCT",
+  "sources": [
+   {
+    "type": "DOI",
+    "id": "10.1037/1076-8998.5.1.32",
+    "title": "Two years after a job loss: Long-term impact of the JOBS program on reemployment and mental health",
+    "year": 2000,
+    "verified_by": "crossref"
+   },
+   {
+    "type": "DOI",
+    "id": "10.1037/a0035923",
+    "title": "Effectiveness of job search interventions: A meta-analytic review",
+    "year": 2014,
+    "verified_by": "crossref"
+   }
+  ],
+  "cue_suggestion": "When a rejection email arrives",
+  "minimum_version": "Log the rejection and one next step.",
+  "normal_version": "Log + one lesson + one action within 24h + tell a support person.",
+  "bonus_version": "Ask the company for brief feedback where appropriate.",
+  "joy_pairing": "After logging, do something restorative she enjoys (walk, call a friend).",
+  "friction_down": "One-tap 'rejection received' button in the tracker that opens the 3-step plan.",
+  "friction_up_for_competing": "none",
+  "if_then_plan": "If I receive a rejection, then I log it and do one small next step within 24 hours.",
+  "tracking_metric": "Rejections followed by a next step (yes/no)",
+  "progression": "self-paced",
+  "safety_or_stop_rule": "If low mood persists for weeks or affects sleep, appetite or daily functioning, talk to a trusted person and a qualified professional.",
+  "schedule_slot": "as-needed",
+  "time_minutes_normal": 10,
+  "app_type": "Routine step",
+  "priority_for_her": "Recommended",
+  "notes": "JOBS population: recently unemployed adults (US); JOBS abstract text was not retrievable - claim relies on Crossref-verified record and Semantic Scholar summary. Not a clinical intervention."
+ },
+ {
+  "action_id": "GROW-21",
+  "area": "attention & deep work",
+  "name_en": "Batch notifications (3x/day)",
+  "name_ar": "تجميع الإشعارات ٣ مرات يومياً",
+  "what": "Use Focus modes / scheduled summary so non-urgent app notifications arrive in batches a few times a day; allow calls/messages from key people. Check email at set times rather than continuously.",
+  "dose": "Source-stated: batching notifications three times a day (Fitz 2019). Email-checking frequency: not specified in the verified record.",
+  "why": "People whose notifications were batched three times a day felt more attentive, productive, in better mood and in control, with lower stress; turning notifications off entirely brought more anxiety and FOMO.",
+  "evidence_strength": "RCT",
+  "sources": [
+   {
+    "type": "DOI",
+    "id": "10.1016/j.chb.2019.07.016",
+    "title": "Batching smartphone notifications can improve well-being",
+    "year": 2019,
+    "verified_by": "crossref"
+   },
+   {
+    "type": "DOI",
+    "id": "10.1016/j.chb.2014.11.005",
+    "title": "Checking email less frequently reduces stress",
+    "year": 2015,
+    "verified_by": "crossref"
+   }
+  ],
+  "cue_suggestion": "One-time setup; batches after Dhuhr, after Asr/Maghrib, and after Isha (or chosen times)",
+  "minimum_version": "Silence one noisy app.",
+  "normal_version": "Scheduled notification summary 3x/day; VIP contacts allowed.",
+  "bonus_version": "Remove badges from social apps.",
+  "joy_pairing": "Make batch time a pleasant pause (tea + check messages).",
+  "friction_down": "Phone 'Scheduled Summary' / Focus modes set once.",
+  "friction_up_for_competing": "Social/media apps removed from the home screen.",
+  "if_then_plan": "If I feel the urge to check the phone outside batch time, then I wait until the next batch slot.",
+  "tracking_metric": "Batching on today (yes/no)",
+  "progression": "self-paced",
+  "safety_or_stop_rule": "Keep family/emergency contacts able to reach her at all times; don't switch to zero notifications (associated with more anxiety/FOMO).",
+  "schedule_slot": "as-needed",
+  "time_minutes_normal": 0,
+  "app_type": "System/automation",
+  "priority_for_her": "Core",
+  "notes": "Fitz 2019: N=237 field experiment. Kushlev & Dunn 2015: limiting email checking frequency reduced daily stress (abstract not retrievable; claim from verified record summary)."
+ },
+ {
+  "action_id": "GROW-22",
+  "area": "attention & deep work",
+  "name_en": "Single-task focus block (phone out of reach)",
+  "name_ar": "جلسة تركيز لمهمة واحدة",
+  "what": "Time-block 1-3 focus blocks per day for ONE task (course, IELTS writing, portfolio). Close other tabs, put the phone in another room or bag, and take a short movement/rest break between blocks.",
+  "dose": "not specified by source for block length or number - planning default: start with 25-50 min and adjust",
+  "why": "Switching between tasks has a measurable time and error cost; time management is moderately related to academic performance and wellbeing; micro-breaks modestly raise vigor and reduce fatigue.",
+  "evidence_strength": "SR/MA",
+  "sources": [
+   {
+    "type": "DOI",
+    "id": "10.1016/S1364-6613(03)00028-7",
+    "title": "Task switching",
+    "year": 2003,
+    "verified_by": "crossref"
+   },
+   {
+    "type": "DOI",
+    "id": "10.1371/journal.pone.0245066",
+    "title": "Does time management work? A meta-analysis",
+    "year": 2021,
+    "verified_by": "crossref"
+   },
+   {
+    "type": "DOI",
+    "id": "10.1371/journal.pone.0272460",
+    "title": "'Give me a break!' A systematic review and meta-analysis on the efficacy of micro-breaks for increasing well-being and performance",
+    "year": 2022,
+    "verified_by": "crossref"
+   },
+   {
+    "type": "DOI",
+    "id": "10.1086/691462",
+    "title": "Brain Drain: The Mere Presence of One's Own Smartphone Reduces Available Cognitive Capacity",
+    "year": 2017,
+    "verified_by": "crossref"
+   },
+   {
+    "type": "DOI",
+    "id": "10.1080/15213269.2023.2286647",
+    "title": "Does the Mere Presence of a Smartphone Impact Cognitive Performance? A Meta-Analysis of the Brain Drain Effect",
+    "year": 2023,
+    "verified_by": "crossref"
+   },
+   {
+    "type": "PMID",
+    "id": "36007374",
+    "title": "Reexamining the 'brain drain' effect: A replication of Ward et al. (2017)",
+    "year": 2022,
+    "verified_by": "eutils"
+   },
+   {
+    "type": "DOI",
+    "id": "10.3390/bs13090751",
+    "title": "Does the Brain Drain Effect Really Exist? A Meta-Analysis",
+    "year": 2023,
+    "verified_by": "crossref"
+   }
+  ],
+  "cue_suggestion": "After Fajr/morning routine for block 1; after Dhuhr for block 2",
+  "minimum_version": "One 15-minute single-task block.",
+  "normal_version": "2 blocks of ~45 min with a 5-10 min movement break between.",
+  "bonus_version": "A third block on low-demand work (admin, tracker updates).",
+  "joy_pairing": "Signature focus soundtrack + favourite drink + a 'done' ritual (tick in app).",
+  "friction_down": "Block and its single task pre-written the night before; materials open.",
+  "friction_up_for_competing": "Phone in another room; website blocker on during blocks.",
+  "if_then_plan": "If I start a focus block, then I put my phone in the other room first.",
+  "tracking_metric": "Focus blocks completed (count)",
+  "progression": "self-paced",
+  "safety_or_stop_rule": "Take breaks to move and rest eyes; don't stretch blocks at the expense of sleep.",
+  "schedule_slot": "morning",
+  "time_minutes_normal": 90,
+  "app_type": "Routine step",
+  "priority_for_her": "Core",
+  "notes": "PHONE-PRESENCE EVIDENCE IS MIXED: Ward 2017 found reduced cognitive capacity; a preregistered direct replication (Ruiz Pardo & Minda 2022) did not replicate it; Parry 2023 meta-analysis (k=56) found only a small working-memory effect and nulls elsewhere; Böttger 2023 meta found an overall negative effect with high heterogeneity. Keeping the phone away is low-cost, so it stays - but the main justification is removing interruptions, not a proven 'brain drain'. Micro-breaks did NOT significantly improve overall performance (d=.16, ns) except for less cognitively demanding tasks. Time-management evidence is largely correlational."
+ },
+ {
+  "action_id": "GROW-23",
+  "area": "attention & deep work",
+  "name_en": "If-then plan for the day's top task (anti-procrastination)",
+  "name_ar": "خطة إذا-فإن لأهم مهمة",
+  "what": "Each evening, choose tomorrow's single most important task and write an if-then plan: 'If [time/place], then I will [first 2-minute step]'. When avoiding a task, shrink it to the first physical step.",
+  "dose": "not specified by source",
+  "why": "Implementation intentions had a medium-to-large effect on goal attainment (d = .65) across 94 tests, helping to start tasks and shield them from distraction; procrastination interventions produced large reductions overall.",
+  "evidence_strength": "SR/MA",
+  "sources": [
+   {
+    "type": "DOI",
+    "id": "10.1016/S0065-2601(06)38002-1",
+    "title": "Implementation Intentions and Goal Achievement: A Meta-analysis of Effects and Processes",
+    "year": 2006,
+    "verified_by": "crossref"
+   },
+   {
+    "type": "DOI",
+    "id": "10.1016/j.edurev.2018.09.002",
+    "title": "Overcoming procrastination? A meta-analysis of intervention studies",
+    "year": 2018,
+    "verified_by": "crossref"
+   }
+  ],
+  "cue_suggestion": "Evening wind-down, after Isha",
+  "minimum_version": "Write only tomorrow's top task.",
+  "normal_version": "Top task + if-then plan + first 2-minute step.",
+  "bonus_version": "Add one if-then for the most likely obstacle ('If I feel like scrolling, then I open the doc and write one line').",
+  "joy_pairing": "Let tomorrow-self start with a small win; pair the first step with a favourite morning drink.",
+  "friction_down": "App prompt at the evening slot with the template pre-filled.",
+  "friction_up_for_competing": "none",
+  "if_then_plan": "If it's after Isha, then I write tomorrow's top task and its if-then plan in the app.",
+  "tracking_metric": "Top task started (yes/no)",
+  "progression": "self-paced",
+  "safety_or_stop_rule": "Chronic procrastination with distress: CBT-based approaches reduced procrastination most in the meta-analysis - that is a professional's domain; seek support if it seriously affects studies/work.",
+  "schedule_slot": "evening",
+  "time_minutes_normal": 5,
+  "app_type": "Habit",
+  "priority_for_her": "Core",
+  "notes": "Van Eerde & Klingsieck 2018: 24 studies, N=1,173; CBT strongest, self-regulation interventions also effective. The app's whole design can reuse this if-then field for all actions."
+ },
+ {
+  "action_id": "GROW-24",
+  "area": "digital wellbeing",
+  "name_en": "Limit (not quit) social media",
+  "name_ar": "تقليل وسائل التواصل لا حذفها",
+  "what": "Set app time limits for the social apps she uses most, rather than quitting completely; run it as a 3-week experiment and compare mood/focus before and after.",
+  "dose": "Source-stated trial doses: Hunt 2018 limited Facebook/Instagram/Snapchat to 10 min per platform per day (~30 min/day total) for 3 weeks; Thrul 2025 reanalysis: reductions/abstinence of 1 week or longer showed small benefits, shorter than 1 week showed small harms, with ~3 weeks suggested as possibly ideal (unconfirmed).",
+  "why": "Limiting social media reduced loneliness and depression in undergraduates, and deactivating Facebook for 4 weeks increased subjective wellbeing - but overall experimental evidence is mixed and effects are small.",
+  "evidence_strength": "RCT",
+  "sources": [
+   {
+    "type": "DOI",
+    "id": "10.1521/jscp.2018.37.10.751",
+    "title": "No More FOMO: Limiting Social Media Decreases Loneliness and Depression",
+    "year": 2018,
+    "verified_by": "crossref"
+   },
+   {
+    "type": "DOI",
+    "id": "10.1257/aer.20190658",
+    "title": "The Welfare Effects of Social Media",
+    "year": 2020,
+    "verified_by": "crossref"
+   },
+   {
+    "type": "DOI",
+    "id": "10.1037/ppm0000541",
+    "title": "Do social media experiments prove a link with mental health: A methodological and meta-analytic review",
+    "year": 2024,
+    "verified_by": "crossref"
+   },
+   {
+    "type": "PMID",
+    "id": "40453192",
+    "title": "Social Media Reduction or Abstinence Interventions Are Providing Mental Health Benefits - Reanalysis of a Published Meta-Analysis",
+    "year": 2025,
+    "verified_by": "eutils"
+   },
+   {
+    "type": "DOI",
+    "id": "10.1177/20501579211028647",
+    "title": "Digital detox: An effective solution in the smartphone era? A systematic literature review",
+    "year": 2021,
+    "verified_by": "crossref"
+   }
+  ],
+  "cue_suggestion": "Set once; weekly check in the Thursday review",
+  "minimum_version": "One app with a daily time limit.",
+  "normal_version": "App limits on main social apps (e.g., ~10 min each) for 3 weeks.",
+  "bonus_version": "Move social apps off the home screen / log out on phone, use only on laptop.",
+  "joy_pairing": "Replace scrolling slots with a pleasant alternative she picks (reading, walk podcast, calling a friend).",
+  "friction_down": "Use built-in Screen Time / Digital Wellbeing limits.",
+  "friction_up_for_competing": "Log out after each use; delete apps from phone (keep web version).",
+  "if_then_plan": "If my social media limit is reached, then I close the app and open my reading/podcast instead.",
+  "tracking_metric": "Minutes on social apps today (auto from phone)",
+  "progression": "Hold for at least 1 week (ideally ~3) before judging; self-paced after",
+  "safety_or_stop_rule": "Keep channels needed for work/portfolio/job search (e.g., LinkedIn in scheduled blocks). Short full-abstinence stints (<1 week) may feel worse.",
+  "schedule_slot": "as-needed",
+  "time_minutes_normal": 0,
+  "app_type": "System/automation",
+  "priority_for_her": "Recommended",
+  "notes": "HONEST: Ferguson 2024 meta-analysis (27 experiments) concluded effects were not statistically different from zero; Thrul 2025 reanalysis found small benefits only for interventions >=1 week (d=0.156). Radtke 2021 systematic review: mixed results, some negative. Hunt 2018 = US undergraduates, N=143. For LinkedIn/X she uses for career, schedule use rather than cut it."
+ },
+ {
+  "action_id": "GROW-25",
+  "area": "digital wellbeing",
+  "name_en": "3-week screen-time reduction experiment",
+  "name_ar": "تجربة تقليل وقت الشاشة ٣ أسابيع",
+  "what": "Run a 3-week experiment capping recreational smartphone screen time, or blocking mobile internet for set periods while keeping calls/texts; use the freed time for in-person time, exercise and outdoors. Measure wellbeing, sleep and focus before/after.",
+  "dose": "Source-stated trial doses: Pieh 2025 - screen time reduced to <=2 h/day for 3 weeks in healthy students; Castelo 2025 - mobile internet blocked for 2 weeks (calls/texts and desktop internet kept).",
+  "why": "Cutting smartphone screen time to <=2 h/day for 3 weeks improved wellbeing, depressive symptoms, sleep quality and stress in students; blocking mobile internet for 2 weeks improved sustained attention, mental health and wellbeing, partly via more socialising, exercise and time in nature.",
+  "evidence_strength": "RCT",
+  "sources": [
+   {
+    "type": "PMID",
+    "id": "39985031",
+    "title": "Smartphone screen time reduction improves mental health: a randomized controlled trial",
+    "year": 2025,
+    "verified_by": "eutils"
+   },
+   {
+    "type": "DOI",
+    "id": "10.1093/pnasnexus/pgaf017",
+    "title": "Blocking mobile internet on smartphones improves sustained attention, mental health, and subjective well-being",
+    "year": 2025,
+    "verified_by": "crossref"
+   },
+   {
+    "type": "DOI",
+    "id": "10.1177/20501579211028647",
+    "title": "Digital detox: An effective solution in the smartphone era? A systematic literature review",
+    "year": 2021,
+    "verified_by": "crossref"
+   }
+  ],
+  "cue_suggestion": "Start on a Sunday; weekly check in the Thursday review",
+  "minimum_version": "Phone-free first 30 min after waking or last 30 min before sleep.",
+  "normal_version": "Daily recreational screen-time cap (e.g., <=2 h as in Pieh) for 3 weeks, tracked automatically.",
+  "bonus_version": "Mobile data off during chosen hours (keep calls/texts) for 2 weeks.",
+  "joy_pairing": "Pre-plan what replaces screen time: walks, driving practice, reading, family/friends - make the 'offline list' fun.",
+  "friction_down": "Built-in screen-time limits; laptop for necessary internet work.",
+  "friction_up_for_competing": "Grey out/limit video apps; charger outside the bedroom.",
+  "if_then_plan": "If I reach my daily screen-time limit, then I pick an activity from my offline list.",
+  "tracking_metric": "Daily screen time (auto) + weekly WHO-5-style mood check (self-rated)",
+  "progression": "3-week block (as tested), then keep what worked; self-paced",
+  "safety_or_stop_rule": "Keep phone access for safety, family and navigation (especially while learning to drive). If mood problems persist, see a professional.",
+  "schedule_slot": "as-needed",
+  "time_minutes_normal": 0,
+  "app_type": "System/automation",
+  "priority_for_her": "Optional",
+  "notes": "Pieh 2025: N=111 healthy students, mean baseline 276 min/day, effects small-to-medium, non-blinded. Castelo 2025: 91% improved on at least one outcome. Single RCTs, not yet meta-analysed; Radtke 2021 review shows mixed detox results. Use as a personal experiment, not a mandate."
+ }
+]

@@ -1,0 +1,159 @@
+{
+  "schema_version": "role-live-acceptance-evidence.v1",
+  "recorded_at": "2026-10-18T14:27:56.455Z",
+  "role": {
+    "role_id": "AI-13",
+    "contract_id": "role.AI-13.v1",
+    "team_id": "AI",
+    "name_en": "AI Observability and Cost Engineer",
+    "responsibility": "Trace model/tool/handoff events, versions, latency, retries, cost, rejection, correction and drift; redact sensitive payloads; alert on loops or abnormal spend.",
+    "expected_outputs": "Trace schema, dashboard and cost-per-successful-task report.",
+    "forbidden_actions": [
+      "Spend or purchase without explicit human approval",
+      "Change own permissions, budgets, or approval state",
+      "Use production or personal data outside an approved task",
+      "Send external messages, publish, deploy, or make irreversible changes without explicit approval",
+      "Treat untrusted document content as tool authority",
+      "Claim an artifact, test, or outcome without evidence"
+    ],
+    "declared_allowed_tools": []
+  },
+  "scenario": {
+    "task_id": "task_f9932471-1618-4a0f-a597-4281fac55c3c",
+    "trace_id": "trace_b71d9f41-0c7b-4093-93e9-356273350d0e",
+    "input_sha256": "462e0bc5c62372a345d279b3565ddc69a880bb3f9af0af28b39fc67bea25e5ab",
+    "synthetic_only": true
+  },
+  "execution": {
+    "provider": "ollama-local",
+    "model": "qwen3:8b",
+    "status": "completed",
+    "n8n_execution_ids": [
+      "264",
+      "265"
+    ],
+    "steps": [
+      {
+        "step_number": 1,
+        "role_id": "AI-13",
+        "step_type": "producer",
+        "status": "completed",
+        "task_id": "task_f9932471-1618-4a0f-a597-4281fac55c3c",
+        "trace_id": "trace_b71d9f41-0c7b-4093-93e9-356273350d0e",
+        "n8n_execution_id": "264",
+        "output_sha256": "85d7866ba980cbbf7336109abca07808a6bd02341c56914363a7c1d8602aeb65"
+      },
+      {
+        "step_number": 2,
+        "role_id": "QA-01",
+        "step_type": "reviewer",
+        "status": "completed",
+        "task_id": "task_f9932471-1618-4a0f-a597-4281fac55c3c",
+        "trace_id": "trace_b71d9f41-0c7b-4093-93e9-356273350d0e",
+        "n8n_execution_id": "265",
+        "output_sha256": "6b32a85f849e57ac3aebc91841cc913af652da05f99c593efcf6a0e8ef40bf63"
+      }
+    ],
+    "usage_known": false,
+    "usage": null,
+    "real_cost_usd": null,
+    "simulated_cost_usd": null
+  },
+  "artifact": {
+    "path": "ops/local-live/artifacts/task_f9932471-1618-4a0f-a597-4281fac55c3c/ai-13-ai-observability-and-cost-engineer-acceptance.md",
+    "bytes": 5798,
+    "sha256": "24e249197b522e321e6085ded7d0eb5a62c3c5be39db5013662a4c262d2e940a",
+    "write_receipt": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_f9932471-1618-4a0f-a597-4281fac55c3c",
+      "trace_id": "trace_b71d9f41-0c7b-4093-93e9-356273350d0e",
+      "role_id": "AI-13",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T14:27:56.453Z"
+    }
+  },
+  "independent_review": {
+    "reviewer_role_id": "QA-01",
+    "n8n_execution_id": "265",
+    "output_sha256": "6b32a85f849e57ac3aebc91841cc913af652da05f99c593efcf6a0e8ef40bf63",
+    "status": "CAPTURED",
+    "verdict": "PASS",
+    "parsed": {
+      "verdict": "PASS",
+      "findings": [],
+      "missing_requirements": [],
+      "evidence_limits": [
+        "The draft does not explicitly state who is responsible for verifying the synthetic task's assumptions and boundaries, though this is implied in the 'Boundaries and Unknowns' section."
+      ]
+    },
+    "review_is_model_generated_not_human": true
+  },
+  "evaluation": {
+    "status": "PASS",
+    "failures": [],
+    "deliverable_cues": [
+      "trace",
+      "schema",
+      "dashboard",
+      "cost-per-successful-task",
+      "report"
+    ],
+    "matched_deliverable_cues": [
+      "trace",
+      "schema",
+      "dashboard",
+      "report"
+    ],
+    "cue_threshold": 2,
+    "evaluated_scope": "task/trace/role/provider/model, n8n execution references, two-stage correlation, required sections and role-specific output cues; not domain truth"
+  },
+  "statuses": {
+    "live_inference": "PASS",
+    "specialist_artifact": "PASS",
+    "reviewed": "CAPTURED",
+    "reviewer_verdict": "PASS",
+    "role_tool_capability": "VERIFIED",
+    "human_expert_approved": false,
+    "review_outcome": "PASS"
+  },
+  "restrictions": {
+    "live_codex_calls": 0,
+    "paid_api_calls": 0,
+    "external_actions": 0,
+    "public_deployments": 0
+  },
+  "tool_receipt": {
+    "schema_version": "role-tool-receipt.v1",
+    "authorized_by": "explicit synthetic task packet in this bounded test; this verifies the scoped tool boundary, not a grant to run tools autonomously",
+    "task_id": "task_f9932471-1618-4a0f-a597-4281fac55c3c",
+    "trace_id": "trace_b71d9f41-0c7b-4093-93e9-356273350d0e",
+    "role_id": "AI-13",
+    "grants": [
+      "project.read",
+      "artifact.write"
+    ],
+    "read": {
+      "path": "roles/contracts/AI-13.v1.json",
+      "bytes": 2427,
+      "sha256": "ff4ec571d8708207c597cdf73eb91a4912d6d4e159d9396d3b80206bc58478c4"
+    },
+    "write": {
+      "path": "ops/local-live/artifacts/task_f9932471-1618-4a0f-a597-4281fac55c3c/scoped-capability-receipt-ai-13.md",
+      "bytes": 611,
+      "sha256": "8fd2ec041a349c0df73dd6d52e462a75b83f56d14764372f9c704d0fb64336b2",
+      "idempotent_existing_receipt": true
+    },
+    "negative_checks": {
+      "ungranted_tool_denied": true,
+      "outside_allowlist_denied": true,
+      "unauthorized_path": "roles/contracts/D-00.v1.json",
+      "path_traversal_denied": true,
+      "overwrite_denied": true
+    },
+    "sensitive_grants": [],
+    "external_actions": 0,
+    "recorded_at": "2026-10-18T17:05:16.129Z"
+  }
+}

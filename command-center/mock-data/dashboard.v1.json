@@ -1,0 +1,15 @@
+{
+  "schema_version": "command_center_mock.v1",
+  "data_as_of": "2026-10-16T04:55:00Z",
+  "source": "fully synthetic local fixtures",
+  "notice": "No live APIs, n8n credentials, model providers, or personal data are connected.",
+  "tasks": [
+    {"task_id":"TASK-SYN-1042","root_task_id":"TASK-SYN-1042","trace_id":"TRACE-SYN-1042","name_ar":"مراجعة طلب تجريبي","name_en":"Review synthetic request","role_id":"D-00","status":"waiting","runtime_display":"بانتظار قرار","cost_micro_sar":420000,"cost_state":"simulated","team":"Program Direction","data_class":"synthetic_only","approval_state":"PENDING","result":"Simulated budget review is awaiting a fixture decision; no work was dispatched."},
+    {"task_id":"TASK-SYN-1048","root_task_id":"TASK-SYN-1048","trace_id":"TRACE-SYN-1048","name_ar":"قياس غير معروف","name_en":"Unknown usage check","role_id":"PMO-03","status":"failed","runtime_display":"غير مقاس","cost_micro_sar":null,"cost_state":"unknown","team":"Program Operations","data_class":"synthetic_only","approval_state":"NOT_REQUIRED","result":"Unknown vendor usage remains UNKNOWN/PENDING. No zero-cost assumption is made."},
+    {"task_id":"TASK-SYN-1051","root_task_id":"TASK-SYN-1051","trace_id":"TRACE-SYN-1051","name_ar":"فحص عقد المهمة","name_en":"Task contract check","role_id":"AI-13","status":"completed","runtime_display":"420 ms (عيّنة)","cost_micro_sar":600000,"cost_state":"simulated","team":"AI Engineering, Language, Persona and Research Intelligence","data_class":"synthetic_only","approval_state":"NOT_REQUIRED","result":"Synthetic contract checks passed. This duration is a fixture, not measured cloud runtime."}
+  ],
+  "approval_queue": [{"approval_id":"APR-SYN-21","task_id":"TASK-SYN-1042","status":"PENDING","action_hash":"sha256:synthetic-redacted-action","expires_at":"2026-10-16T05:30:00Z","simulated_amount_micro_sar":420000,"notice":"Fixture only; not a real approval request."}],
+  "infrastructure": {"n8n_connection":"UNVERIFIED_READ_ONLY","model_providers":"DISABLED","ledger":"IN_MEMORY_MOCK","schedules_enabled":false,"public_endpoints_enabled":false},
+  "finance": {"monthly_planning_ceiling_sar":100,"actual_spend_sar":0,"simulated_sar":1.02,"unknown_usage_count":1,"spend_authorized":false},
+  "quality": {"offline_acceptance":"PASS","human_review":"PENDING_HUMAN_REVIEW","schema_validator":"PowerShell JSON parse plus contract assertions; full JSON Schema validator unavailable"}
+}

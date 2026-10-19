@@ -1,0 +1,69 @@
+{
+  "scenario_id": "product-feature-design",
+  "task_id": "task_08f8a0b4-2221-4c48-99c1-25fb9eaef67b",
+  "trace_id": "trace_80ac0cb2-4926-49dc-be52-5e8ed3fbc804",
+  "status": "failed",
+  "error": "SCENARIO_FINAL_REVIEW_NOT_PASS:REVISE",
+  "provider": "ollama-local",
+  "model": "qwen3:8b",
+  "steps": [
+    {
+      "role_id": "PROD-03",
+      "stage": "planner",
+      "task_id": "task_08f8a0b4-2221-4c48-99c1-25fb9eaef67b",
+      "trace_id": "trace_80ac0cb2-4926-49dc-be52-5e8ed3fbc804",
+      "n8n_execution_id": "406",
+      "elapsed_ms": 10269,
+      "output_sha256": "5943ae47c04b8229a14db2db37bcc525d0a47931eaa2b731d5df0f14541124c5"
+    },
+    {
+      "role_id": "DES-03",
+      "stage": "specialist_1",
+      "task_id": "task_08f8a0b4-2221-4c48-99c1-25fb9eaef67b",
+      "trace_id": "trace_80ac0cb2-4926-49dc-be52-5e8ed3fbc804",
+      "n8n_execution_id": "407",
+      "elapsed_ms": 11249,
+      "output_sha256": "9e97048ab2b20b7882c7e480beaa36a298ee7894dc5172ea37f50e4b5d11e111"
+    },
+    {
+      "role_id": "FE-02",
+      "stage": "specialist_2",
+      "task_id": "task_08f8a0b4-2221-4c48-99c1-25fb9eaef67b",
+      "trace_id": "trace_80ac0cb2-4926-49dc-be52-5e8ed3fbc804",
+      "n8n_execution_id": "408",
+      "elapsed_ms": 15675,
+      "output_sha256": "13740d3ee897f34de78d0f81f07ab9b05c0f0615de5b6e8824205921b2ae53fa"
+    },
+    {
+      "role_id": "QA-02",
+      "stage": "independent_review",
+      "task_id": "task_08f8a0b4-2221-4c48-99c1-25fb9eaef67b",
+      "trace_id": "trace_80ac0cb2-4926-49dc-be52-5e8ed3fbc804",
+      "n8n_execution_id": "409",
+      "elapsed_ms": 3854,
+      "output_sha256": "42ea674876370c3d8f29855673459bd618dd1cea2d96ccdf8226acacc4753435"
+    },
+    {
+      "role_id": "FE-02",
+      "stage": "bounded_revision",
+      "task_id": "task_08f8a0b4-2221-4c48-99c1-25fb9eaef67b",
+      "trace_id": "trace_80ac0cb2-4926-49dc-be52-5e8ed3fbc804",
+      "n8n_execution_id": "410",
+      "elapsed_ms": 16506,
+      "output_sha256": "8e1e285ef7e48d11b7dddbec206e5a6ba60ac7e8a0ffcccd08578890e5c28556"
+    },
+    {
+      "role_id": "QA-02",
+      "stage": "final_review",
+      "task_id": "task_08f8a0b4-2221-4c48-99c1-25fb9eaef67b",
+      "trace_id": "trace_80ac0cb2-4926-49dc-be52-5e8ed3fbc804",
+      "n8n_execution_id": "411",
+      "elapsed_ms": 3574,
+      "output_sha256": "d23ffb259c09af8b2a26a00cf78ef6d372aa9cc2491caadf652596a151de651e"
+    }
+  ],
+  "reviewer_output": "{\n  \"verdict\": \"REVISE\",\n  \"findings\": [\n    \"The 'Definition of 'quiet hours' is still PENDING and needs to be resolved by the owner.\",\n    \"The 'How to detect offline state' is still PENDING and needs to be resolved by the owner.\",\n    \"The 'How to store user preferences' is still PENDING and needs to be resolved by the owner.\",\n    \"The 'How to handle accessibility for visually impaired users' is still PENDING and needs to be resolved by the owner.\"\n  ],\n  \"missing_requirements\": [\n    \"Definition of 'quiet hours' must be resolved by the owner.\",\n    \"How to detect offline state must be resolved by the owner.\",\n    \"How to store user preferences must be resolved by the owner.\",\n    \"How to handle accessibility for visually impaired users must be resolved by the owner.\"\n  ],\n  \"evidence_limits\": [\n    \"The 'Definition of 'quiet hours' is still PENDING and needs to be resolved by the owner.\",\n    \"The 'How to detect offline state' is still PENDING and needs to be resolved by the owner.\",\n    \"The 'How to store user preferences' is still PENDING and needs to be resolved by the owner.\",\n    \"The 'How to handle accessibility for visually impaired users' is still PENDING and needs to be resolved by the owner.\"\n  ]\n}",
+  "reviewer_verdict": "REVISE",
+  "refusal_recovery": null,
+  "recorded_at": "2026-10-18T14:55:40.403Z"
+}

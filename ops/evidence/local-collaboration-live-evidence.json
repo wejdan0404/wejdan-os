@@ -1,0 +1,156 @@
+{
+  "schema_version": "local-collaboration-live-evidence.v1",
+  "verified_at": "2026-10-18T08:04:07.633Z",
+  "scope": "private local n8n and Ollama; synthetic requests only",
+  "live_chains": [
+    {
+      "task_id": "task_da33d161-b033-4e2a-b160-7397e65d8ce5",
+      "trace_id": "trace_abb8a973-0f27-4c58-a014-6c70857c60ee",
+      "producer": {
+        "role_id": "D-00",
+        "status": "completed",
+        "n8n_execution_id": "100",
+        "output_chars": 369
+      },
+      "reviewer": {
+        "role_id": "QA-01",
+        "status": "completed",
+        "n8n_execution_id": "101",
+        "output_chars": 499
+      },
+      "shared_memory_entries": 4,
+      "memory_kinds": [
+        {
+          "source_step": 1,
+          "kind": "input",
+          "chars": 75
+        },
+        {
+          "source_step": 1,
+          "kind": "output",
+          "chars": 369
+        },
+        {
+          "source_step": 2,
+          "kind": "input",
+          "chars": 686
+        },
+        {
+          "source_step": 2,
+          "kind": "output",
+          "chars": 499
+        }
+      ],
+      "reviewer_role_id": "QA-01"
+    },
+    {
+      "task_id": "task_4acf456f-0c91-436c-9d18-6398bc03aa18",
+      "trace_id": "trace_abcec3aa-069e-4911-b3ab-ab90b9978118",
+      "producer": {
+        "role_id": "D-00",
+        "status": "completed",
+        "n8n_execution_id": "98",
+        "output_chars": 338
+      },
+      "reviewer": {
+        "role_id": "QA-01",
+        "status": "completed",
+        "n8n_execution_id": "99",
+        "output_chars": 390
+      },
+      "shared_memory_entries": 4,
+      "memory_kinds": [
+        {
+          "source_step": 1,
+          "kind": "input",
+          "chars": 75
+        },
+        {
+          "source_step": 1,
+          "kind": "output",
+          "chars": 338
+        },
+        {
+          "source_step": 2,
+          "kind": "input",
+          "chars": 655
+        },
+        {
+          "source_step": 2,
+          "kind": "output",
+          "chars": 390
+        }
+      ],
+      "reviewer_role_id": "QA-01"
+    },
+    {
+      "task_id": "task_e84c0a8e-3df0-4081-8b80-932d6ac4f8dc",
+      "trace_id": "trace_2142c1e4-6159-4933-a6d5-d19d0eec16cd",
+      "producer": {
+        "role_id": "D-00",
+        "status": "completed",
+        "n8n_execution_id": "96",
+        "output_chars": 331
+      },
+      "reviewer": {
+        "role_id": "QA-01",
+        "status": "completed",
+        "n8n_execution_id": "97",
+        "output_chars": 359
+      },
+      "shared_memory_entries": 4,
+      "memory_kinds": [
+        {
+          "source_step": 1,
+          "kind": "input",
+          "chars": 120
+        },
+        {
+          "source_step": 1,
+          "kind": "output",
+          "chars": 331
+        },
+        {
+          "source_step": 2,
+          "kind": "input",
+          "chars": 693
+        },
+        {
+          "source_step": 2,
+          "kind": "output",
+          "chars": 359
+        }
+      ],
+      "reviewer_role_id": "QA-01"
+    }
+  ],
+  "latest_api_restart_check": {
+    "task_id": "task_da33d161-b033-4e2a-b160-7397e65d8ce5",
+    "trace_id": "trace_abb8a973-0f27-4c58-a014-6c70857c60ee",
+    "producer_execution_id": "100",
+    "review_execution_id": "101",
+    "steps_after_restart": 2,
+    "memory_entries_after_restart": 4,
+    "result": "PASS"
+  },
+  "mock_negative_suite": {
+    "path": "ops/evidence/local-collaboration-negative-tests.json",
+    "result": "PASS",
+    "cases": 5,
+    "passed": 5,
+    "paid_provider_calls": 0
+  },
+  "command_center_ui": {
+    "test": "command-center/smoke-test.mjs",
+    "result": "PASS",
+    "collaboration_checkbox_enabled": true,
+    "trace_detail_includes_producer_reviewer_and_n8n_refs": true,
+    "task_api_after_submit": "persisted"
+  },
+  "limits": [
+    "Role outputs remain unqualified; reviewer pass is model generated and is not a human approval or formal quality certification.",
+    "Task memory is scoped by task ID and exposed with that task; cross-task semantic retrieval, retention controls, and deletion UI are not implemented.",
+    "Stub-based negative cases validate API behavior, not n8n/LLM failure probabilities."
+  ],
+  "paid_provider_calls": 0
+}

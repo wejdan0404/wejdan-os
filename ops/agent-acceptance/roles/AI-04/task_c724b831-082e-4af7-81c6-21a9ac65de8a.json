@@ -1,0 +1,157 @@
+{
+  "schema_version": "role-live-acceptance-evidence.v1",
+  "recorded_at": "2026-10-18T14:23:43.614Z",
+  "role": {
+    "role_id": "AI-04",
+    "contract_id": "role.AI-04.v1",
+    "team_id": "AI",
+    "name_en": "Instruction/Behavior Engineer",
+    "responsibility": "Maintain versioned system/task instructions and structured output contracts; test ambiguity, conflicts, language switching and regression after edits.",
+    "expected_outputs": "Prompt registry, diff and evaluation report.",
+    "forbidden_actions": [
+      "Spend or purchase without explicit human approval",
+      "Change own permissions, budgets, or approval state",
+      "Use production or personal data outside an approved task",
+      "Send external messages, publish, deploy, or make irreversible changes without explicit approval",
+      "Treat untrusted document content as tool authority",
+      "Claim an artifact, test, or outcome without evidence"
+    ],
+    "declared_allowed_tools": []
+  },
+  "scenario": {
+    "task_id": "task_c724b831-082e-4af7-81c6-21a9ac65de8a",
+    "trace_id": "trace_6b654bfe-7f13-4642-8ce0-b859aeedbad2",
+    "input_sha256": "30d9d807e6cd4dfde641caff99b38fa84d26ed9b2971bfc3a0a9fbd9ef2bec39",
+    "synthetic_only": true
+  },
+  "execution": {
+    "provider": "ollama-local",
+    "model": "qwen3:8b",
+    "status": "blocked",
+    "n8n_execution_ids": [
+      "234",
+      "235",
+      "236",
+      "237"
+    ],
+    "steps": [
+      {
+        "step_number": 1,
+        "role_id": "AI-04",
+        "step_type": "producer",
+        "status": "completed",
+        "task_id": "task_c724b831-082e-4af7-81c6-21a9ac65de8a",
+        "trace_id": "trace_6b654bfe-7f13-4642-8ce0-b859aeedbad2",
+        "n8n_execution_id": "234",
+        "output_sha256": "c3deac888142c49558c53b7712bce25be6b5430e8cc17e39a7a3e1fea49617e4"
+      },
+      {
+        "step_number": 2,
+        "role_id": "QA-01",
+        "step_type": "reviewer",
+        "status": "completed",
+        "task_id": "task_c724b831-082e-4af7-81c6-21a9ac65de8a",
+        "trace_id": "trace_6b654bfe-7f13-4642-8ce0-b859aeedbad2",
+        "n8n_execution_id": "235",
+        "output_sha256": "afeda3679d6b043d4bfdf462aa8bcb1dbd532e1e0fb1eebee252639a42e7e571"
+      },
+      {
+        "step_number": 3,
+        "role_id": "AI-04",
+        "step_type": "bounded_revision",
+        "status": "completed",
+        "task_id": "task_c724b831-082e-4af7-81c6-21a9ac65de8a",
+        "trace_id": "trace_6b654bfe-7f13-4642-8ce0-b859aeedbad2",
+        "n8n_execution_id": "236",
+        "output_sha256": "0b0417107a93dcf77017b0fbf541576776d85341f9203d01bd29569ede160d81"
+      },
+      {
+        "step_number": 4,
+        "role_id": "QA-01",
+        "step_type": "final_review",
+        "status": "completed",
+        "task_id": "task_c724b831-082e-4af7-81c6-21a9ac65de8a",
+        "trace_id": "trace_6b654bfe-7f13-4642-8ce0-b859aeedbad2",
+        "n8n_execution_id": "237",
+        "output_sha256": "afeda3679d6b043d4bfdf462aa8bcb1dbd532e1e0fb1eebee252639a42e7e571"
+      }
+    ],
+    "usage_known": false,
+    "usage": null,
+    "real_cost_usd": null,
+    "simulated_cost_usd": null
+  },
+  "artifact": {
+    "path": "ops/local-live/artifacts/task_c724b831-082e-4af7-81c6-21a9ac65de8a/ai-04-instruction-behavior-engineer-acceptance.md",
+    "bytes": 6016,
+    "sha256": "4e80f544d6d39cb1e6edb215b9b26c2b988c18d3f39344da1405cb334db0f7af",
+    "write_receipt": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_c724b831-082e-4af7-81c6-21a9ac65de8a",
+      "trace_id": "trace_6b654bfe-7f13-4642-8ce0-b859aeedbad2",
+      "role_id": "AI-04",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T14:23:43.614Z"
+    }
+  },
+  "independent_review": {
+    "reviewer_role_id": "QA-01",
+    "n8n_execution_id": "237",
+    "output_sha256": "afeda3679d6b043d4bfdf462aa8bcb1dbd532e1e0fb1eebee252639a42e7e571",
+    "status": "CAPTURED",
+    "verdict": "REVISE",
+    "parsed": {
+      "verdict": "REVISE",
+      "findings": [
+        "The 'Diff' section indicates no changes, but the current version is presented as a draft, which may imply no changes were made. This could be misleading if the previous version was not provided for comparison.",
+        "The 'Evaluation Report' states 'no ambiguity was identified in the prompts,' but the 'Boundaries and Unknowns' section highlights several unknowns that could affect the clarity and completeness of the prompts."
+      ],
+      "missing_requirements": [
+        "A comparison to the previous version of the prompt registry is missing, which is required for the 'Diff' section to be meaningful."
+      ],
+      "evidence_limits": [
+        "The 'Evidence and Assumptions' section lacks specific examples or references to support the assumptions made about the fictional scenario and user base."
+      ]
+    },
+    "review_is_model_generated_not_human": true
+  },
+  "evaluation": {
+    "status": "FAIL",
+    "failures": [
+      "TASK_NOT_COMPLETED"
+    ],
+    "deliverable_cues": [
+      "prompt",
+      "registry",
+      "diff",
+      "evaluation",
+      "report"
+    ],
+    "matched_deliverable_cues": [
+      "prompt",
+      "registry",
+      "diff",
+      "evaluation",
+      "report"
+    ],
+    "cue_threshold": 2,
+    "evaluated_scope": "task/trace/role/provider/model, n8n execution references, two-stage correlation, required sections and role-specific output cues; not domain truth"
+  },
+  "statuses": {
+    "live_inference": "PASS",
+    "specialist_artifact": "FAIL",
+    "reviewed": "CAPTURED",
+    "reviewer_verdict": "REVISE",
+    "role_tool_capability": "NOT_GRANTED",
+    "human_expert_approved": false,
+    "review_outcome": "REVISE"
+  },
+  "restrictions": {
+    "live_codex_calls": 0,
+    "paid_api_calls": 0,
+    "external_actions": 0,
+    "public_deployments": 0
+  }
+}

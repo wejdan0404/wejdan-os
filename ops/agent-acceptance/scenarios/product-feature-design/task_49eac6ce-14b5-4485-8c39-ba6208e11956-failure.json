@@ -1,0 +1,42 @@
+{
+  "scenario_id": "product-feature-design",
+  "task_id": "task_49eac6ce-14b5-4485-8c39-ba6208e11956",
+  "trace_id": "trace_af3c8373-dc69-4e8d-9c81-9a7c2e07691f",
+  "status": "failed",
+  "error": "SCENARIO_N8N_RESPONSE_INVALID:independent_review:500",
+  "provider": "ollama-local",
+  "model": "qwen3:8b",
+  "steps": [
+    {
+      "role_id": "PROD-03",
+      "stage": "planner",
+      "task_id": "task_49eac6ce-14b5-4485-8c39-ba6208e11956",
+      "trace_id": "trace_af3c8373-dc69-4e8d-9c81-9a7c2e07691f",
+      "n8n_execution_id": "384",
+      "elapsed_ms": 13713,
+      "output_sha256": "3c37cee27c81068a5366b3f4bc710fafe09798405db3df49687323f87f6a6f75"
+    },
+    {
+      "role_id": "DES-03",
+      "stage": "specialist_1",
+      "task_id": "task_49eac6ce-14b5-4485-8c39-ba6208e11956",
+      "trace_id": "trace_af3c8373-dc69-4e8d-9c81-9a7c2e07691f",
+      "n8n_execution_id": "385",
+      "elapsed_ms": 12743,
+      "output_sha256": "ec5955668ae6fe9639a7366101087c92919306cd746f628a9b424fa62b881ed3"
+    },
+    {
+      "role_id": "FE-02",
+      "stage": "specialist_2",
+      "task_id": "task_49eac6ce-14b5-4485-8c39-ba6208e11956",
+      "trace_id": "trace_af3c8373-dc69-4e8d-9c81-9a7c2e07691f",
+      "n8n_execution_id": "386",
+      "elapsed_ms": 13392,
+      "output_sha256": "94c5842427f510cf55de7944058199053f7e6a497f00e2bd9a5c7fd411bdab91"
+    }
+  ],
+  "reviewer_output": "",
+  "reviewer_verdict": "UNKNOWN",
+  "refusal_recovery": null,
+  "recorded_at": "2026-10-18T14:48:59.270Z"
+}

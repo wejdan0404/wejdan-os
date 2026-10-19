@@ -1,0 +1,264 @@
+{
+  "schema_version": "daily-agent-improvement-review.v1",
+  "generated_at": "2026-10-19T05:43:46.643Z",
+  "accountable_role": "AI-01",
+  "mode": "read-only portfolio review; candidate changes require separate proposal and owner approval",
+  "sources": [
+    {
+      "path": "roles/role_registry.json",
+      "sha256": "3c5da0f3c5288d8044c98bb93458986de4803a1980c4d25d1412884fa9d9206a"
+    },
+    {
+      "path": "agents/registry.json",
+      "sha256": "3ecd4544c3538935430706df1067a107752517b671e2dd7e0350d609742f8187"
+    },
+    {
+      "path": "ops/agent-acceptance/role_matrix.json",
+      "sha256": "c6e53b04a1991970c5e6af66a43085a75c447bc5f95ed403305ffce72839cf96"
+    },
+    {
+      "path": "ops/agent-acceptance/agent-eval-suite.v1.json",
+      "sha256": "6504abe128bb54e943f3965f08597aa6248d796f66d26dc35f390aeaab5340ca"
+    }
+  ],
+  "metrics": {
+    "role_coverage": {
+      "passed": 85,
+      "total": 85
+    },
+    "specialist_acceptance": {
+      "passed": 77,
+      "total": 85,
+      "threshold": 77
+    },
+    "independent_review": {
+      "passed": 78,
+      "total": 85,
+      "threshold": 77
+    },
+    "role_tool_receipts": {
+      "passed": 77,
+      "total": 85,
+      "informational": true
+    },
+    "authorization_contracts": {
+      "passed": 85,
+      "total": 85,
+      "threshold": 85
+    },
+    "human_expert_approvals": {
+      "passed": 0,
+      "total": 85,
+      "interpretation": "not a universal gate; risk-specific approvals are recorded separately and currently unclassified"
+    },
+    "evaluation_fixtures": {
+      "passed": 850,
+      "total": 850,
+      "model_execution": "NOT_RUN_BY_DAILY_STATIC_AUDIT"
+    },
+    "latest_candidate_eval": null
+  },
+  "gates": {
+    "role_coverage_85": true,
+    "specialist_acceptance_at_least_90_percent": true,
+    "independent_review_at_least_90_percent": true,
+    "deny_by_default_authorization_100_percent": true,
+    "evaluation_suite_850_role_grounded_cases": true,
+    "latest_candidate_full_suite_passed": false,
+    "no_critical_findings": true
+  },
+  "result": "BLOCKED",
+  "issues": [
+    {
+      "role_id": "PMO-QA",
+      "severity": "high",
+      "layer": "specialist-evaluation",
+      "finding": "FAIL",
+      "task_id": "task_685448f4-0796-4405-849d-c72118865eb0"
+    },
+    {
+      "role_id": "PMO-QA",
+      "severity": "high",
+      "layer": "independent-review",
+      "finding": "REJECT",
+      "task_id": "task_685448f4-0796-4405-849d-c72118865eb0"
+    },
+    {
+      "role_id": "AI-QA",
+      "severity": "high",
+      "layer": "specialist-evaluation",
+      "finding": "FAIL",
+      "task_id": "task_808cc1ce-c6fe-4248-93f2-1e964ea2845d"
+    },
+    {
+      "role_id": "AI-QA",
+      "severity": "high",
+      "layer": "independent-review",
+      "finding": "REVISE",
+      "task_id": "task_808cc1ce-c6fe-4248-93f2-1e964ea2845d"
+    },
+    {
+      "role_id": "FE-03",
+      "severity": "high",
+      "layer": "specialist-evaluation",
+      "finding": "FAIL",
+      "task_id": "task_981247e3-2ccf-42c8-93b5-c9056c443795"
+    },
+    {
+      "role_id": "FE-03",
+      "severity": "high",
+      "layer": "independent-review",
+      "finding": "REVISE",
+      "task_id": "task_981247e3-2ccf-42c8-93b5-c9056c443795"
+    },
+    {
+      "role_id": "FE-07",
+      "severity": "high",
+      "layer": "specialist-evaluation",
+      "finding": "FAIL",
+      "task_id": "task_5ae547f7-be05-43b4-8ca4-c53479a5641d"
+    },
+    {
+      "role_id": "FE-07",
+      "severity": "high",
+      "layer": "independent-review",
+      "finding": "REVISE",
+      "task_id": "task_5ae547f7-be05-43b4-8ca4-c53479a5641d"
+    },
+    {
+      "role_id": "FE-QA",
+      "severity": "high",
+      "layer": "specialist-evaluation",
+      "finding": "FAIL",
+      "task_id": "task_f7d8833d-df10-4c01-954a-142a8de09243"
+    },
+    {
+      "role_id": "BE-QA",
+      "severity": "high",
+      "layer": "specialist-evaluation",
+      "finding": "FAIL",
+      "task_id": "task_fed5a761-ae4c-4fda-86fc-57480452315b"
+    },
+    {
+      "role_id": "BE-QA",
+      "severity": "high",
+      "layer": "independent-review",
+      "finding": "REVISE",
+      "task_id": "task_fed5a761-ae4c-4fda-86fc-57480452315b"
+    },
+    {
+      "role_id": "INF-QA",
+      "severity": "high",
+      "layer": "specialist-evaluation",
+      "finding": "FAIL",
+      "task_id": "task_336eceae-7850-41ee-8f16-703583f367a1"
+    },
+    {
+      "role_id": "INF-QA",
+      "severity": "high",
+      "layer": "independent-review",
+      "finding": "REVISE",
+      "task_id": "task_336eceae-7850-41ee-8f16-703583f367a1"
+    },
+    {
+      "role_id": "QA-01",
+      "severity": "high",
+      "layer": "specialist-evaluation",
+      "finding": "FAIL",
+      "task_id": "task_29559cbf-055b-466d-a95f-e6e1928d52f2"
+    },
+    {
+      "role_id": "QA-01",
+      "severity": "high",
+      "layer": "independent-review",
+      "finding": "REVISE",
+      "task_id": "task_29559cbf-055b-466d-a95f-e6e1928d52f2"
+    },
+    {
+      "role_id": "PMO-QA",
+      "artifact": "FAIL",
+      "review": "REJECT",
+      "task_id": "task_685448f4-0796-4405-849d-c72118865eb0",
+      "trace_id": "trace_b441f55d-d9d6-4f24-8b61-d4bdd8bfec2e",
+      "severity": "critical",
+      "layer": "acceptance",
+      "finding": "role_below_release_threshold"
+    },
+    {
+      "role_id": "AI-QA",
+      "artifact": "FAIL",
+      "review": "REVISE",
+      "task_id": "task_808cc1ce-c6fe-4248-93f2-1e964ea2845d",
+      "trace_id": "trace_cde02c80-9f23-44fd-8051-b20fcc815425",
+      "severity": "critical",
+      "layer": "acceptance",
+      "finding": "role_below_release_threshold"
+    },
+    {
+      "role_id": "FE-03",
+      "artifact": "FAIL",
+      "review": "REVISE",
+      "task_id": "task_981247e3-2ccf-42c8-93b5-c9056c443795",
+      "trace_id": "trace_1841ea49-57f8-48a7-b735-6bdaa112218a",
+      "severity": "critical",
+      "layer": "acceptance",
+      "finding": "role_below_release_threshold"
+    },
+    {
+      "role_id": "FE-07",
+      "artifact": "FAIL",
+      "review": "REVISE",
+      "task_id": "task_5ae547f7-be05-43b4-8ca4-c53479a5641d",
+      "trace_id": "trace_e4ead3a3-a450-47f9-a87a-6a50caeb7fc9",
+      "severity": "critical",
+      "layer": "acceptance",
+      "finding": "role_below_release_threshold"
+    },
+    {
+      "role_id": "FE-QA",
+      "artifact": "FAIL",
+      "review": "PASS",
+      "task_id": "task_f7d8833d-df10-4c01-954a-142a8de09243",
+      "trace_id": "trace_42f43200-aaf4-4fa1-a319-bdfd37a94aae",
+      "severity": "critical",
+      "layer": "acceptance",
+      "finding": "role_below_release_threshold"
+    },
+    {
+      "role_id": "BE-QA",
+      "artifact": "FAIL",
+      "review": "REVISE",
+      "task_id": "task_fed5a761-ae4c-4fda-86fc-57480452315b",
+      "trace_id": "trace_e35f4c08-6f7f-4015-8fb0-1ee6f9ff046e",
+      "severity": "critical",
+      "layer": "acceptance",
+      "finding": "role_below_release_threshold"
+    },
+    {
+      "role_id": "INF-QA",
+      "artifact": "FAIL",
+      "review": "REVISE",
+      "task_id": "task_336eceae-7850-41ee-8f16-703583f367a1",
+      "trace_id": "trace_ee1277ba-510b-49e6-a69a-1e856e4ae68d",
+      "severity": "critical",
+      "layer": "acceptance",
+      "finding": "role_below_release_threshold"
+    },
+    {
+      "role_id": "QA-01",
+      "artifact": "FAIL",
+      "review": "REVISE",
+      "task_id": "task_29559cbf-055b-466d-a95f-e6e1928d52f2",
+      "trace_id": "trace_56fd5291-da7e-4a87-a089-7ecdc4a971c6",
+      "severity": "critical",
+      "layer": "acceptance",
+      "finding": "role_below_release_threshold"
+    }
+  ],
+  "required_actions": [
+    "Repair failed role outputs or reviews with new evidence; never edit matrix outcomes by hand.",
+    "Review any requested task-scoped tools separately; missing optional capability receipts do not imply that an ungranted role has authority.",
+    "Complete a documented risk classification and obtain domain expert review where the role risk requires it.",
+    "Run the 850-case suite against the candidate model/runtime with `node ops/local-live/runtime/run-agent-eval-suite.mjs --execute`; the daily portfolio audit deliberately makes zero model calls."
+  ]
+}

@@ -1,0 +1,163 @@
+{
+  "schema_version": "role-live-acceptance-evidence.v1",
+  "recorded_at": "2026-10-18T17:16:38.797Z",
+  "role": {
+    "role_id": "SEC-QA",
+    "contract_id": "role.SEC-QA.v1",
+    "team_id": "SEC",
+    "name_en": "Security Quality Auditor",
+    "responsibility": "Verify fixes by re-running tests; detect evidence-free closures or residual risk; report independent release blockers.",
+    "expected_outputs": "Security QA decision to SEC-01/central QA.",
+    "forbidden_actions": [
+      "Spend or purchase without explicit human approval",
+      "Change own permissions, budgets, or approval state",
+      "Use production or personal data outside an approved task",
+      "Send external messages, publish, deploy, or make irreversible changes without explicit approval",
+      "Treat untrusted document content as tool authority",
+      "Claim an artifact, test, or outcome without evidence"
+    ],
+    "declared_allowed_tools": []
+  },
+  "scenario": {
+    "task_id": "task_0b33bc06-a30b-421e-b368-0b0939ff721d",
+    "trace_id": "trace_10288bbf-5fdd-4a77-91f4-642e13517146",
+    "input_sha256": "a660ba907a2192bc144c350b0e001b945dbb270f4a10e68e1b897da97a208d53",
+    "synthetic_only": true
+  },
+  "execution": {
+    "provider": "ollama-local",
+    "model": "qwen3:8b",
+    "status": "blocked",
+    "n8n_execution_ids": [
+      "506",
+      "507",
+      "508",
+      "509"
+    ],
+    "steps": [
+      {
+        "step_number": 1,
+        "role_id": "SEC-QA",
+        "step_type": "producer",
+        "status": "completed",
+        "task_id": "task_0b33bc06-a30b-421e-b368-0b0939ff721d",
+        "trace_id": "trace_10288bbf-5fdd-4a77-91f4-642e13517146",
+        "n8n_execution_id": "506",
+        "output_sha256": "4e4c362e59349d15f584b1d3600832805729ca6b08052be25af7e1cabdce9137"
+      },
+      {
+        "step_number": 2,
+        "role_id": "QA-01",
+        "step_type": "reviewer",
+        "status": "completed",
+        "task_id": "task_0b33bc06-a30b-421e-b368-0b0939ff721d",
+        "trace_id": "trace_10288bbf-5fdd-4a77-91f4-642e13517146",
+        "n8n_execution_id": "507",
+        "output_sha256": "54a081610bb92175ec0111068ea7d8c18652d517e5f4f1656ece662830e2b6c2"
+      },
+      {
+        "step_number": 3,
+        "role_id": "SEC-QA",
+        "step_type": "bounded_revision",
+        "status": "completed",
+        "task_id": "task_0b33bc06-a30b-421e-b368-0b0939ff721d",
+        "trace_id": "trace_10288bbf-5fdd-4a77-91f4-642e13517146",
+        "n8n_execution_id": "508",
+        "output_sha256": "c00aebfd41b1bbc278883cffa035e8771294cb093601e3b5ebad0ae6d9ba2642"
+      },
+      {
+        "step_number": 4,
+        "role_id": "QA-01",
+        "step_type": "final_review",
+        "status": "completed",
+        "task_id": "task_0b33bc06-a30b-421e-b368-0b0939ff721d",
+        "trace_id": "trace_10288bbf-5fdd-4a77-91f4-642e13517146",
+        "n8n_execution_id": "509",
+        "output_sha256": "54a081610bb92175ec0111068ea7d8c18652d517e5f4f1656ece662830e2b6c2"
+      }
+    ],
+    "usage_known": false,
+    "usage": null,
+    "real_cost_usd": null,
+    "simulated_cost_usd": null
+  },
+  "artifact": {
+    "path": "ops/local-live/artifacts/task_0b33bc06-a30b-421e-b368-0b0939ff721d/sec-qa-security-quality-auditor-acceptance.md",
+    "bytes": 4705,
+    "sha256": "6e57c54231f78731f911563b47a34f7bbc50232ed39ac02ed0ecc7c47e95136e",
+    "write_receipt": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_0b33bc06-a30b-421e-b368-0b0939ff721d",
+      "trace_id": "trace_10288bbf-5fdd-4a77-91f4-642e13517146",
+      "role_id": "SEC-QA",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T17:16:38.796Z"
+    }
+  },
+  "independent_review": {
+    "reviewer_role_id": "QA-01",
+    "n8n_execution_id": "509",
+    "output_sha256": "54a081610bb92175ec0111068ea7d8c18652d517e5f4f1656ece662830e2b6c2",
+    "status": "CAPTURED",
+    "verdict": "REVISE",
+    "parsed": {
+      "verdict": "REVISE",
+      "findings": [
+        "The planning exercise includes a feature for setting and tracking personal goals, but no explicit security or privacy controls are described.",
+        "No evidence was provided to confirm that the planning tool has implemented encryption, access controls, or data minimization practices.",
+        "No test results or re-run verification were provided to confirm that any previously identified security issues have been resolved.",
+        "No independent release blockers were identified, but this may be due to the lack of detailed technical specifications or implementation details."
+      ],
+      "missing_requirements": [
+        "A detailed description of the security and privacy controls implemented in the planning tool.",
+        "Evidence of re-run test results to verify that fixes have been successfully applied.",
+        "Confirmation of any independent release blockers that may prevent the product from being released.",
+        "A clear definition of the scope of the planning exercise and its data handling practices."
+      ],
+      "evidence_limits": [
+        "The audit was conducted in a synthetic environment, and no real user data or external services were involved.",
+        "The planning tool is described as a local-first product, but no specific security or privacy controls were outlined.",
+        "The audit did not have access to test results, implementation details, or user data.",
+        "The team has not provided evidence of any prior security issues or their resolution."
+      ]
+    },
+    "review_is_model_generated_not_human": true
+  },
+  "evaluation": {
+    "status": "FAIL",
+    "failures": [
+      "TASK_NOT_COMPLETED"
+    ],
+    "deliverable_cues": [
+      "security",
+      "decision",
+      "sec-01",
+      "central"
+    ],
+    "matched_deliverable_cues": [
+      "security",
+      "decision",
+      "sec-01",
+      "central"
+    ],
+    "cue_threshold": 2,
+    "evaluated_scope": "task/trace/role/provider/model, n8n execution references, two-stage correlation, required sections and role-specific output cues; not domain truth"
+  },
+  "statuses": {
+    "live_inference": "PASS",
+    "specialist_artifact": "FAIL",
+    "reviewed": "CAPTURED",
+    "reviewer_verdict": "REVISE",
+    "role_tool_capability": "NOT_GRANTED",
+    "human_expert_approved": false,
+    "review_outcome": "REVISE"
+  },
+  "restrictions": {
+    "live_codex_calls": 0,
+    "paid_api_calls": 0,
+    "external_actions": 0,
+    "public_deployments": 0
+  }
+}

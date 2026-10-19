@@ -1,0 +1,185 @@
+{
+  "schema_version": "role-output-residual-review.v1",
+  "recorded_at": "2026-10-18T18:11:06.503Z",
+  "result": "8_REMAIN_FAIL_NO_CRITERIA_WEAKENED",
+  "counts": {
+    "registered": 85,
+    "local_inference_pass": 85,
+    "accepted": 77,
+    "rejected": 8,
+    "reviewer_pass": 78,
+    "tool_capability_harness_receipts": 77,
+    "human_expert_approvals": 0
+  },
+  "failed_roles": [
+    {
+      "role_id": "PMO-QA",
+      "name_en": "Program Quality Auditor",
+      "attempts": 6,
+      "task_id": "task_685448f4-0796-4405-849d-c72118865eb0",
+      "trace_id": "trace_b441f55d-d9d6-4f24-8b61-d4bdd8bfec2e",
+      "reviewer_verdict": "REJECT",
+      "evaluator_failures": [
+        "TASK_NOT_COMPLETED",
+        "REVISION_DID_NOT_CHANGE_DRAFT",
+        "ROLE_SPECIFIC_DELIVERABLE_CUES_MISSING"
+      ],
+      "reviewer_missing_requirements": [
+        "Acceptance criteria for the task must be defined and documented.",
+        "Evidence of task completion must be provided (e.g., files, logs, or test results).",
+        "Task owner must be assigned and verified.",
+        "Approval must be explicitly recorded and confirmed."
+      ],
+      "evidence_path": "ops/agent-acceptance/roles/PMO-QA/task_685448f4-0796-4405-849d-c72118865eb0.json",
+      "artifact_path": "ops/local-live/artifacts/task_685448f4-0796-4405-849d-c72118865eb0/pmo-qa-program-quality-auditor-acceptance.md"
+    },
+    {
+      "role_id": "AI-QA",
+      "name_en": "AI Quality Auditor",
+      "attempts": 5,
+      "task_id": "task_808cc1ce-c6fe-4248-93f2-1e964ea2845d",
+      "trace_id": "trace_cde02c80-9f23-44fd-8051-b20fcc815425",
+      "reviewer_verdict": "REVISE",
+      "evaluator_failures": [
+        "TASK_NOT_COMPLETED",
+        "REVISION_DID_NOT_CHANGE_DRAFT",
+        "ROLE_SPECIFIC_DELIVERABLE_CUES_MISSING"
+      ],
+      "reviewer_missing_requirements": [
+        "The candidate output must not invent user facts, research, or evidence.",
+        "All claims must be based on the provided synthetic data or marked as unknown/pending.",
+        "The output must not simulate real-world behavior or user confirmation without explicit approval."
+      ],
+      "evidence_path": "ops/agent-acceptance/roles/AI-QA/task_808cc1ce-c6fe-4248-93f2-1e964ea2845d.json",
+      "artifact_path": "ops/local-live/artifacts/task_808cc1ce-c6fe-4248-93f2-1e964ea2845d/ai-qa-ai-quality-auditor-acceptance.md"
+    },
+    {
+      "role_id": "FE-03",
+      "name_en": "Mobile App Developer",
+      "attempts": 4,
+      "task_id": "task_981247e3-2ccf-42c8-93b5-c9056c443795",
+      "trace_id": "trace_1841ea49-57f8-48a7-b735-6bdaa112218a",
+      "reviewer_verdict": "REVISE",
+      "evaluator_failures": [
+        "TASK_NOT_COMPLETED"
+      ],
+      "reviewer_missing_requirements": [
+        "Test execution results or evidence of testing on real devices.",
+        "Specific details on the testing devices and environments.",
+        "Concrete evidence of crash/error resolution or mitigation strategies."
+      ],
+      "evidence_path": "ops/agent-acceptance/roles/FE-03/task_981247e3-2ccf-42c8-93b5-c9056c443795.json",
+      "artifact_path": "ops/local-live/artifacts/task_981247e3-2ccf-42c8-93b5-c9056c443795/fe-03-mobile-app-developer-acceptance.md"
+    },
+    {
+      "role_id": "FE-07",
+      "name_en": "Frontend Code Reviewer",
+      "attempts": 4,
+      "task_id": "task_5ae547f7-be05-43b4-8ca4-c53479a5641d",
+      "trace_id": "trace_e4ead3a3-a450-47f9-a87a-6a50caeb7fc9",
+      "reviewer_verdict": "REVISE",
+      "evaluator_failures": [
+        "TASK_NOT_COMPLETED",
+        "ROLE_SPECIFIC_DELIVERABLE_CUES_MISSING"
+      ],
+      "reviewer_missing_requirements": [
+        "Shared utility module for duplicated functions.",
+        "User-friendly error messages for API failures.",
+        "Input validation for the planning form.",
+        "Documentation for Redux state structure.",
+        "Integration tests for data flow.",
+        "Coverage for edge cases in test suite.",
+        "Design system documentation for UI components."
+      ],
+      "evidence_path": "ops/agent-acceptance/roles/FE-07/task_5ae547f7-be05-43b4-8ca4-c53479a5641d.json",
+      "artifact_path": "ops/local-live/artifacts/task_5ae547f7-be05-43b4-8ca4-c53479a5641d/fe-07-frontend-code-reviewer-acceptance.md"
+    },
+    {
+      "role_id": "FE-QA",
+      "name_en": "Frontend Quality Auditor",
+      "attempts": 4,
+      "task_id": "task_f7d8833d-df10-4c01-954a-142a8de09243",
+      "trace_id": "trace_42f43200-aaf4-4fa1-a319-bdfd37a94aae",
+      "reviewer_verdict": "PASS",
+      "evaluator_failures": [
+        "ROLE_SPECIFIC_DELIVERABLE_CUES_MISSING"
+      ],
+      "reviewer_missing_requirements": [
+        "Actual screen-state data for verification",
+        "Browser compatibility test results",
+        "RTL testing outcomes",
+        "Accessibility test logs or tools used",
+        "Defect reproduction and logging details"
+      ],
+      "evidence_path": "ops/agent-acceptance/roles/FE-QA/task_f7d8833d-df10-4c01-954a-142a8de09243.json",
+      "artifact_path": "ops/local-live/artifacts/task_f7d8833d-df10-4c01-954a-142a8de09243/fe-qa-frontend-quality-auditor-acceptance.md"
+    },
+    {
+      "role_id": "BE-QA",
+      "name_en": "Backend Quality Auditor",
+      "attempts": 5,
+      "task_id": "task_fed5a761-ae4c-4fda-86fc-57480452315b",
+      "trace_id": "trace_e35f4c08-6f7f-4015-8fb0-1ee6f9ff046e",
+      "reviewer_verdict": "REVISE",
+      "evaluator_failures": [
+        "TASK_NOT_COMPLETED"
+      ],
+      "reviewer_missing_requirements": [
+        "User authentication and route-level authorization.",
+        "Migration and rollback controls.",
+        "Idempotency and partial failure controls."
+      ],
+      "evidence_path": "ops/agent-acceptance/roles/BE-QA/task_fed5a761-ae4c-4fda-86fc-57480452315b.json",
+      "artifact_path": "ops/local-live/artifacts/task_fed5a761-ae4c-4fda-86fc-57480452315b/be-qa-backend-quality-auditor-acceptance.md"
+    },
+    {
+      "role_id": "INF-QA",
+      "name_en": "Infrastructure Quality Auditor",
+      "attempts": 4,
+      "task_id": "task_336eceae-7850-41ee-8f16-703583f367a1",
+      "trace_id": "trace_ee1277ba-510b-49e6-a69a-1e856e4ae68d",
+      "reviewer_verdict": "REVISE",
+      "evaluator_failures": [
+        "TASK_NOT_COMPLETED"
+      ],
+      "reviewer_missing_requirements": [
+        "Evidence of staging deploy execution or environment readiness.",
+        "Documentation and verification of rollback procedures.",
+        "Execution and verification of backup restore processes.",
+        "Testing and confirmation of alerting mechanisms.",
+        "Verification of infrastructure policy enforcement.",
+        "Testing of failure isolation mechanisms."
+      ],
+      "evidence_path": "ops/agent-acceptance/roles/INF-QA/task_336eceae-7850-41ee-8f16-703583f367a1.json",
+      "artifact_path": "ops/local-live/artifacts/task_336eceae-7850-41ee-8f16-703583f367a1/inf-qa-infrastructure-quality-auditor-acceptance.md"
+    },
+    {
+      "role_id": "QA-01",
+      "name_en": "Central QA Lead",
+      "attempts": 5,
+      "task_id": "task_29559cbf-055b-466d-a95f-e6e1928d52f2",
+      "trace_id": "trace_56fd5291-da7e-4a87-a089-7ecdc4a971c6",
+      "reviewer_verdict": "REVISE",
+      "evaluator_failures": [
+        "TASK_NOT_COMPLETED",
+        "REVIEWER_STEP_EVIDENCE_INVALID"
+      ],
+      "reviewer_missing_requirements": [
+        "Android platform manifest",
+        "macOS/Xcode environment",
+        "Owner signing for iOS",
+        "Manual workflow execution",
+        "Assistive technology and native plugin testing"
+      ],
+      "evidence_path": "ops/agent-acceptance/roles/QA-01/task_29559cbf-055b-466d-a95f-e6e1928d52f2.json",
+      "artifact_path": "ops/local-live/artifacts/task_29559cbf-055b-466d-a95f-e6e1928d52f2/qa-01-central-qa-lead-acceptance.md"
+    }
+  ],
+  "interpretation": "Each row preserves the current independent model review and deterministic evaluator findings. Missing real-device, PR, deployment, rollback, runtime, or source evidence is not fabricated. Model reviewer PASS alone does not override deterministic failures.",
+  "safety": {
+    "paid_api_calls": 0,
+    "new_live_codex_calls": 0,
+    "cloud_n8n_runs": 0,
+    "private_data_used": 0
+  }
+}

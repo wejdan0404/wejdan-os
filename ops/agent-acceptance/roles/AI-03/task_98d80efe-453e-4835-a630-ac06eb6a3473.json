@@ -1,0 +1,164 @@
+{
+  "schema_version": "role-live-acceptance-evidence.v1",
+  "recorded_at": "2026-10-18T17:09:52.518Z",
+  "role": {
+    "role_id": "AI-03",
+    "contract_id": "role.AI-03.v1",
+    "team_id": "AI",
+    "name_en": "Model Gateway Engineer",
+    "responsibility": "Route by task/risk/cost, pin model versions, enforce provider/data policy, timeout/fallback, and measure quality under model changes.",
+    "expected_outputs": "Routing matrix, provider adapter tests and fallback evidence.",
+    "forbidden_actions": [
+      "Spend or purchase without explicit human approval",
+      "Change own permissions, budgets, or approval state",
+      "Use production or personal data outside an approved task",
+      "Send external messages, publish, deploy, or make irreversible changes without explicit approval",
+      "Treat untrusted document content as tool authority",
+      "Claim an artifact, test, or outcome without evidence"
+    ],
+    "declared_allowed_tools": []
+  },
+  "scenario": {
+    "task_id": "task_98d80efe-453e-4835-a630-ac06eb6a3473",
+    "trace_id": "trace_15a59f00-7efb-4be0-a6ce-107092a47fe8",
+    "input_sha256": "3c652c098273847add38bb5e37f4ddbcb5002cc11d4d1a4318f04f39b781ad6e",
+    "synthetic_only": true
+  },
+  "execution": {
+    "provider": "ollama-local",
+    "model": "qwen3:8b",
+    "status": "blocked",
+    "n8n_execution_ids": [
+      "448",
+      "449",
+      "450",
+      "451"
+    ],
+    "steps": [
+      {
+        "step_number": 1,
+        "role_id": "AI-03",
+        "step_type": "producer",
+        "status": "completed",
+        "task_id": "task_98d80efe-453e-4835-a630-ac06eb6a3473",
+        "trace_id": "trace_15a59f00-7efb-4be0-a6ce-107092a47fe8",
+        "n8n_execution_id": "448",
+        "output_sha256": "9bd031b5651e5b7dc8c3bfac751c9babe24ab67d837c6bb80fc3ce96ef5f6121"
+      },
+      {
+        "step_number": 2,
+        "role_id": "QA-01",
+        "step_type": "reviewer",
+        "status": "completed",
+        "task_id": "task_98d80efe-453e-4835-a630-ac06eb6a3473",
+        "trace_id": "trace_15a59f00-7efb-4be0-a6ce-107092a47fe8",
+        "n8n_execution_id": "449",
+        "output_sha256": "840320d9be5e5fd2180ae83900037125bf59ef765853e436fc068a32a010fd08"
+      },
+      {
+        "step_number": 3,
+        "role_id": "AI-03",
+        "step_type": "bounded_revision",
+        "status": "completed",
+        "task_id": "task_98d80efe-453e-4835-a630-ac06eb6a3473",
+        "trace_id": "trace_15a59f00-7efb-4be0-a6ce-107092a47fe8",
+        "n8n_execution_id": "450",
+        "output_sha256": "8b4f0a06a630df6316ea453b7c904e49dee936f31cdc2fbff878492026c32dfd"
+      },
+      {
+        "step_number": 4,
+        "role_id": "QA-01",
+        "step_type": "final_review",
+        "status": "completed",
+        "task_id": "task_98d80efe-453e-4835-a630-ac06eb6a3473",
+        "trace_id": "trace_15a59f00-7efb-4be0-a6ce-107092a47fe8",
+        "n8n_execution_id": "451",
+        "output_sha256": "497951eebc9f1a16eab372767f69bba842abce51c0d78a9d88a07eb967da6876"
+      }
+    ],
+    "usage_known": false,
+    "usage": null,
+    "real_cost_usd": null,
+    "simulated_cost_usd": null
+  },
+  "artifact": {
+    "path": "ops/local-live/artifacts/task_98d80efe-453e-4835-a630-ac06eb6a3473/ai-03-model-gateway-engineer-acceptance.md",
+    "bytes": 6286,
+    "sha256": "f1425f1b40f48829054c927a126e65026da7b107b9fadeca1c54055ec11dc4e5",
+    "write_receipt": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_98d80efe-453e-4835-a630-ac06eb6a3473",
+      "trace_id": "trace_15a59f00-7efb-4be0-a6ce-107092a47fe8",
+      "role_id": "AI-03",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T17:09:52.517Z"
+    }
+  },
+  "independent_review": {
+    "reviewer_role_id": "QA-01",
+    "n8n_execution_id": "451",
+    "output_sha256": "497951eebc9f1a16eab372767f69bba842abce51c0d78a9d88a07eb967da6876",
+    "status": "CAPTURED",
+    "verdict": "REVISE",
+    "parsed": {
+      "verdict": "REVISE",
+      "findings": [
+        "The routing matrix still lacks concrete definitions for risk levels and cost estimates, which remain unknown and assumed.",
+        "Provider adapter tests are pending and lack defined thresholds or policies, making their status unclear.",
+        "Fallback evidence is based on versioning logic rather than actual testing, which does not meet the expected deliverable of verified fallback strategies."
+      ],
+      "missing_requirements": [
+        "Explicit definition of risk levels and cost estimates for each task type.",
+        "Defined timeout thresholds and model versioning policies for provider adapter tests.",
+        "Verified fallback strategies through actual testing rather than versioning logic."
+      ],
+      "evidence_limits": [
+        "No real-world testing or external data validation has been performed.",
+        "Assumptions about model availability and local-first environment are not substantiated.",
+        "No human sign-off or external validation is provided for the fallback strategies."
+      ]
+    },
+    "review_is_model_generated_not_human": true
+  },
+  "evaluation": {
+    "status": "FAIL",
+    "failures": [
+      "TASK_NOT_COMPLETED"
+    ],
+    "deliverable_cues": [
+      "routing",
+      "matrix",
+      "provider",
+      "adapter",
+      "tests",
+      "fallback"
+    ],
+    "matched_deliverable_cues": [
+      "routing",
+      "matrix",
+      "provider",
+      "adapter",
+      "tests",
+      "fallback"
+    ],
+    "cue_threshold": 2,
+    "evaluated_scope": "task/trace/role/provider/model, n8n execution references, two-stage correlation, required sections and role-specific output cues; not domain truth"
+  },
+  "statuses": {
+    "live_inference": "PASS",
+    "specialist_artifact": "FAIL",
+    "reviewed": "CAPTURED",
+    "reviewer_verdict": "REVISE",
+    "role_tool_capability": "NOT_GRANTED",
+    "human_expert_approved": false,
+    "review_outcome": "REVISE"
+  },
+  "restrictions": {
+    "live_codex_calls": 0,
+    "paid_api_calls": 0,
+    "external_actions": 0,
+    "public_deployments": 0
+  }
+}

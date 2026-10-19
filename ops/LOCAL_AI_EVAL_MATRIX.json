@@ -1,0 +1,67 @@
+{
+  "schema_version": "local-ai-eval-matrix.v1",
+  "model": "qwen3:8b",
+  "provider": "ollama-local",
+  "paid_provider_calls": 0,
+  "evaluations": [
+    {
+      "id": "EVAL-001",
+      "case": "Arabic weekly planning without constrained output",
+      "result": "FAIL",
+      "reason": "Repeated the same step three times; retained as a quality failure.",
+      "tokens_requested": 220
+    },
+    {
+      "id": "EVAL-002",
+      "case": "JavaScript filter generation",
+      "result": "PASS_WITH_LIMITS",
+      "reason": "Generated coherent function and test; single example, not general capability evidence.",
+      "elapsed_ms": 1778
+    },
+    {
+      "id": "EVAL-003",
+      "case": "D-00 planning with JSON schema constrained output",
+      "result": "PASS",
+      "reason": "Three distinct steps, Arabic response, schema-valid JSON.",
+      "elapsed_ms": 1570,
+      "role_id": "D-00",
+      "live_inference": true
+    },
+    {
+      "id": "EVAL-004",
+      "case": "85-role live invocation smoke",
+      "result": "PASS",
+      "reason": "All canonical roles returned nonempty local model output with exact role/task/trace correlation and n8n execution reference; validates invocation only, not quality",
+      "role_count": 85,
+      "passed": 85,
+      "failed": 0,
+      "evidence": "ops/evidence/local-live-85-role-smoke.json"
+    },
+    {
+      "id": "EVAL-005",
+      "case": "Local producer-reviewer orchestration and task-scoped memory persistence",
+      "result": "PASS_WITH_LIMITS",
+      "live_inference": true,
+      "paid_provider_calls": 0,
+      "live_n8n_execution_pairs": [
+        [
+          "96",
+          "97"
+        ],
+        [
+          "98",
+          "99"
+        ],
+        [
+          "100",
+          "101"
+        ]
+      ],
+      "actual_latest_task_id": "task_da33d161-b033-4e2a-b160-7397e65d8ce5",
+      "actual_latest_trace_id": "trace_abb8a973-0f27-4c58-a014-6c70857c60ee",
+      "negative_api_cases": "5/5 isolated stub assertions",
+      "evidence": "ops/evidence/local-collaboration-live-evidence.json",
+      "limits": "Proves local invocation/correlation/persistence only; not semantic reviewer correctness or specialist quality."
+    }
+  ]
+}

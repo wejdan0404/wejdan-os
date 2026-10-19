@@ -1,0 +1,172 @@
+{
+  "schema_version": "role-live-acceptance-evidence.v1",
+  "recorded_at": "2026-10-18T14:01:48.266Z",
+  "role": {
+    "role_id": "PMO-01",
+    "contract_id": "role.PMO-01.v1",
+    "team_id": "PMO",
+    "name_en": "Program Operations Lead",
+    "responsibility": "Maintain task registry, statuses and WIP limits; schedule review points; flag idle, orphaned, or duplicated work; require a single accountable owner.",
+    "expected_outputs": "Current board and blocker report; audit task links against actual artifacts.",
+    "forbidden_actions": [
+      "Spend or purchase without explicit human approval",
+      "Change own permissions, budgets, or approval state",
+      "Use production or personal data outside an approved task",
+      "Send external messages, publish, deploy, or make irreversible changes without explicit approval",
+      "Treat untrusted document content as tool authority",
+      "Claim an artifact, test, or outcome without evidence"
+    ],
+    "declared_allowed_tools": []
+  },
+  "scenario": {
+    "task_id": "task_dd9583ce-2c9e-4316-ae4a-fa359724c429",
+    "trace_id": "trace_494ccbaa-1911-46bc-83e4-2ac968808373",
+    "input_sha256": "8182c024f5f72731e0927b9500f9595f857ee1c0e57f7510840bed78888a689f",
+    "synthetic_only": true
+  },
+  "execution": {
+    "provider": "ollama-local",
+    "model": "qwen3:8b",
+    "status": "blocked",
+    "n8n_execution_ids": [
+      "138",
+      "139",
+      "140",
+      "141"
+    ],
+    "steps": [
+      {
+        "step_number": 1,
+        "role_id": "PMO-01",
+        "step_type": "producer",
+        "status": "completed",
+        "task_id": "task_dd9583ce-2c9e-4316-ae4a-fa359724c429",
+        "trace_id": "trace_494ccbaa-1911-46bc-83e4-2ac968808373",
+        "n8n_execution_id": "138",
+        "output_sha256": "ceb4baf72a7aa2ecd4806fcaa9afe1531cd114448c0cff36889de4cfcc0883ab"
+      },
+      {
+        "step_number": 2,
+        "role_id": "QA-01",
+        "step_type": "reviewer",
+        "status": "completed",
+        "task_id": "task_dd9583ce-2c9e-4316-ae4a-fa359724c429",
+        "trace_id": "trace_494ccbaa-1911-46bc-83e4-2ac968808373",
+        "n8n_execution_id": "139",
+        "output_sha256": "f54b570a4c776f76382766ef751cf8677835e4c5579227db693a24fa533b8dc7"
+      },
+      {
+        "step_number": 3,
+        "role_id": "PMO-01",
+        "step_type": "bounded_revision",
+        "status": "completed",
+        "task_id": "task_dd9583ce-2c9e-4316-ae4a-fa359724c429",
+        "trace_id": "trace_494ccbaa-1911-46bc-83e4-2ac968808373",
+        "n8n_execution_id": "140",
+        "output_sha256": "cda40dcf9cac13f29f2b5c3ab5d96dfa42eb4a990ae64e9ecb9aeb9e72500c70"
+      },
+      {
+        "step_number": 4,
+        "role_id": "QA-01",
+        "step_type": "final_review",
+        "status": "completed",
+        "task_id": "task_dd9583ce-2c9e-4316-ae4a-fa359724c429",
+        "trace_id": "trace_494ccbaa-1911-46bc-83e4-2ac968808373",
+        "n8n_execution_id": "141",
+        "output_sha256": "a654629df8871f27566f4f06e592f2e61d61950c2d8d6495b59828a1bd97b8d6"
+      }
+    ],
+    "usage_known": false,
+    "usage": null,
+    "real_cost_usd": null,
+    "simulated_cost_usd": null
+  },
+  "artifact": {
+    "path": "ops/local-live/artifacts/task_dd9583ce-2c9e-4316-ae4a-fa359724c429/pmo-01-program-operations-lead-acceptance.md",
+    "bytes": 4918,
+    "sha256": "683f451f93a539ccdb55910e590ee9937f3946eabe64e8da4433c758c462c128",
+    "write_receipt": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_dd9583ce-2c9e-4316-ae4a-fa359724c429",
+      "trace_id": "trace_494ccbaa-1911-46bc-83e4-2ac968808373",
+      "role_id": "PMO-01",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T14:01:48.264Z"
+    }
+  },
+  "independent_review": {
+    "reviewer_role_id": "QA-01",
+    "n8n_execution_id": "141",
+    "output_sha256": "a654629df8871f27566f4f06e592f2e61d61950c2d8d6495b59828a1bd97b8d6",
+    "status": "CAPTURED",
+    "verdict": "REVISE",
+    "parsed": {
+      "verdict": "REVISE",
+      "findings": [
+        "Task 010 remains unassigned with no owner or artifact link, which violates accountability and audit requirements.",
+        "Task 006 is still blocked by Task 007, but no resolution timeline or owner responsibility is defined for the blocker.",
+        "Artifact existence is marked as unknown for all tasks, which is a material omission for audit purposes."
+      ],
+      "missing_requirements": [
+        "Owner assignment for Task 010",
+        "Resolution plan for Task 006 blocker",
+        "Verification of artifact existence for all tasks"
+      ],
+      "evidence_limits": [
+        "No evidence provided for task completion status",
+        "No evidence provided for artifact existence",
+        "No evidence provided for user facts or stakeholder input"
+      ]
+    },
+    "review_is_model_generated_not_human": true
+  },
+  "evaluation": {
+    "status": "FAIL",
+    "failures": [
+      "TASK_NOT_COMPLETED"
+    ],
+    "deliverable_cues": [
+      "current",
+      "board",
+      "blocker",
+      "report",
+      "audit",
+      "task",
+      "links",
+      "against",
+      "actual",
+      "artifacts"
+    ],
+    "matched_deliverable_cues": [
+      "current",
+      "board",
+      "blocker",
+      "report",
+      "audit",
+      "task",
+      "links",
+      "against",
+      "actual",
+      "artifacts"
+    ],
+    "cue_threshold": 2,
+    "evaluated_scope": "task/trace/role/provider/model, n8n execution references, two-stage correlation, required sections and role-specific output cues; not domain truth"
+  },
+  "statuses": {
+    "live_inference": "PASS",
+    "specialist_artifact": "FAIL",
+    "reviewed": "CAPTURED",
+    "reviewer_verdict": "REVISE",
+    "role_tool_capability": "NOT_GRANTED",
+    "human_expert_approved": false,
+    "review_outcome": "REVISE"
+  },
+  "restrictions": {
+    "live_codex_calls": 0,
+    "paid_api_calls": 0,
+    "external_actions": 0,
+    "public_deployments": 0
+  }
+}

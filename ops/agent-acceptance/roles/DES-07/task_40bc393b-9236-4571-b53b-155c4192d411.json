@@ -1,0 +1,171 @@
+{
+  "schema_version": "role-live-acceptance-evidence.v1",
+  "recorded_at": "2026-10-18T14:21:17.883Z",
+  "role": {
+    "role_id": "DES-07",
+    "contract_id": "role.DES-07.v1",
+    "team_id": "DES",
+    "name_en": "Arabic/English Content Designer",
+    "responsibility": "Own UI copy, labels, errors, consent, notifications and glossary; ensure semantic parity, natural Arabic/English, length fit, tone by context, RTL/LTR and clear consequences.",
+    "expected_outputs": "Bilingual string catalog, terminology decisions and localization QA; AI-05 owns generated Saudi dialect, not this UI copy.",
+    "forbidden_actions": [
+      "Spend or purchase without explicit human approval",
+      "Change own permissions, budgets, or approval state",
+      "Use production or personal data outside an approved task",
+      "Send external messages, publish, deploy, or make irreversible changes without explicit approval",
+      "Treat untrusted document content as tool authority",
+      "Claim an artifact, test, or outcome without evidence"
+    ],
+    "declared_allowed_tools": []
+  },
+  "scenario": {
+    "task_id": "task_40bc393b-9236-4571-b53b-155c4192d411",
+    "trace_id": "trace_47a69562-c2a4-4646-a60d-599ac3c32ccc",
+    "input_sha256": "dd9af0ffe1ce5de6511814e1c1665a9ef45f8a503bb2eb3600dcf511ddb9e835",
+    "synthetic_only": true
+  },
+  "execution": {
+    "provider": "ollama-local",
+    "model": "qwen3:8b",
+    "status": "completed",
+    "n8n_execution_ids": [
+      "214",
+      "215"
+    ],
+    "steps": [
+      {
+        "step_number": 1,
+        "role_id": "DES-07",
+        "step_type": "producer",
+        "status": "completed",
+        "task_id": "task_40bc393b-9236-4571-b53b-155c4192d411",
+        "trace_id": "trace_47a69562-c2a4-4646-a60d-599ac3c32ccc",
+        "n8n_execution_id": "214",
+        "output_sha256": "56a5b5104aeccdf3478aa474cf0f47509fc8d061747a092477305c0bd6570ee0"
+      },
+      {
+        "step_number": 2,
+        "role_id": "QA-01",
+        "step_type": "reviewer",
+        "status": "completed",
+        "task_id": "task_40bc393b-9236-4571-b53b-155c4192d411",
+        "trace_id": "trace_47a69562-c2a4-4646-a60d-599ac3c32ccc",
+        "n8n_execution_id": "215",
+        "output_sha256": "aa469fbed0bd61c1fdeca2455fbaca277bbd61856c990e42b854952de9a210d2"
+      }
+    ],
+    "usage_known": false,
+    "usage": null,
+    "real_cost_usd": null,
+    "simulated_cost_usd": null
+  },
+  "artifact": {
+    "path": "ops/local-live/artifacts/task_40bc393b-9236-4571-b53b-155c4192d411/des-07-arabic-english-content-designer-acceptance.md",
+    "bytes": 6101,
+    "sha256": "38fe4366dc9246afefb48db5462f605d3dd03da4f638502eab17ae6f0bb81c39",
+    "write_receipt": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_40bc393b-9236-4571-b53b-155c4192d411",
+      "trace_id": "trace_47a69562-c2a4-4646-a60d-599ac3c32ccc",
+      "role_id": "DES-07",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T14:21:17.881Z"
+    }
+  },
+  "independent_review": {
+    "reviewer_role_id": "QA-01",
+    "n8n_execution_id": "215",
+    "output_sha256": "aa469fbed0bd61c1fdeca2455fbaca277bbd61856c990e42b854952de9a210d2",
+    "status": "CAPTURED",
+    "verdict": "PASS",
+    "parsed": {
+      "verdict": "PASS",
+      "findings": [],
+      "missing_requirements": [],
+      "evidence_limits": [
+        "No real-world validation or user testing data provided, as per the synthetic task constraints."
+      ]
+    },
+    "review_is_model_generated_not_human": true
+  },
+  "evaluation": {
+    "status": "PASS",
+    "failures": [],
+    "deliverable_cues": [
+      "bilingual",
+      "string",
+      "catalog",
+      "terminology",
+      "decisions",
+      "localization",
+      "ai-05",
+      "owns",
+      "generated",
+      "saudi",
+      "dialect",
+      "copy"
+    ],
+    "matched_deliverable_cues": [
+      "bilingual",
+      "string",
+      "catalog",
+      "terminology",
+      "decisions",
+      "localization",
+      "saudi",
+      "dialect",
+      "copy"
+    ],
+    "cue_threshold": 2,
+    "evaluated_scope": "task/trace/role/provider/model, n8n execution references, two-stage correlation, required sections and role-specific output cues; not domain truth"
+  },
+  "statuses": {
+    "live_inference": "PASS",
+    "specialist_artifact": "PASS",
+    "reviewed": "CAPTURED",
+    "reviewer_verdict": "PASS",
+    "role_tool_capability": "VERIFIED",
+    "human_expert_approved": false,
+    "review_outcome": "PASS"
+  },
+  "restrictions": {
+    "live_codex_calls": 0,
+    "paid_api_calls": 0,
+    "external_actions": 0,
+    "public_deployments": 0
+  },
+  "tool_receipt": {
+    "schema_version": "role-tool-receipt.v1",
+    "authorized_by": "explicit synthetic task packet in this bounded test; this verifies the scoped tool boundary, not a grant to run tools autonomously",
+    "task_id": "task_40bc393b-9236-4571-b53b-155c4192d411",
+    "trace_id": "trace_47a69562-c2a4-4646-a60d-599ac3c32ccc",
+    "role_id": "DES-07",
+    "grants": [
+      "project.read",
+      "artifact.write"
+    ],
+    "read": {
+      "path": "roles/contracts/DES-07.v1.json",
+      "bytes": 2281,
+      "sha256": "7747f3f925ec0f5a69571c4c04714dcaae43650d2816083a9ab4508271dbeff2"
+    },
+    "write": {
+      "path": "ops/local-live/artifacts/task_40bc393b-9236-4571-b53b-155c4192d411/scoped-capability-receipt-des-07.md",
+      "bytes": 614,
+      "sha256": "da63317b5bba52a2fd5e1487ec1aae1e33c64db4dd8e86173f699d29673e6ebb",
+      "idempotent_existing_receipt": true
+    },
+    "negative_checks": {
+      "ungranted_tool_denied": true,
+      "outside_allowlist_denied": true,
+      "unauthorized_path": "roles/contracts/D-00.v1.json",
+      "path_traversal_denied": true,
+      "overwrite_denied": true
+    },
+    "sensitive_grants": [],
+    "external_actions": 0,
+    "recorded_at": "2026-10-18T17:05:15.535Z"
+  }
+}

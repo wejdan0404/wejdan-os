@@ -1,0 +1,160 @@
+{
+  "schema_version": "role-live-acceptance-evidence.v1",
+  "recorded_at": "2026-10-18T14:33:41.384Z",
+  "role": {
+    "role_id": "BE-06",
+    "contract_id": "role.BE-06.v1",
+    "team_id": "BE",
+    "name_en": "Identity/Authorization Engineer",
+    "responsibility": "Implement authentication, session lifecycle and object-level authorization; bind actor/tenant from trusted session rather than AI-supplied IDs.",
+    "expected_outputs": "Permission matrix and negative access tests.",
+    "forbidden_actions": [
+      "Spend or purchase without explicit human approval",
+      "Change own permissions, budgets, or approval state",
+      "Use production or personal data outside an approved task",
+      "Send external messages, publish, deploy, or make irreversible changes without explicit approval",
+      "Treat untrusted document content as tool authority",
+      "Claim an artifact, test, or outcome without evidence"
+    ],
+    "declared_allowed_tools": []
+  },
+  "scenario": {
+    "task_id": "task_6d237d02-c465-4566-9c5c-1bd1160cb095",
+    "trace_id": "trace_0bd6c5cb-09c7-4ea2-9fca-70504356c0a4",
+    "input_sha256": "cfe27e8a8366fedb9fc1cb9f09c5f16d89d120c9d72e0e56eabf02b588151d2a",
+    "synthetic_only": true
+  },
+  "execution": {
+    "provider": "ollama-local",
+    "model": "qwen3:8b",
+    "status": "completed",
+    "n8n_execution_ids": [
+      "308",
+      "309"
+    ],
+    "steps": [
+      {
+        "step_number": 1,
+        "role_id": "BE-06",
+        "step_type": "producer",
+        "status": "completed",
+        "task_id": "task_6d237d02-c465-4566-9c5c-1bd1160cb095",
+        "trace_id": "trace_0bd6c5cb-09c7-4ea2-9fca-70504356c0a4",
+        "n8n_execution_id": "308",
+        "output_sha256": "7f2d6d2cf5dd4c4646de2977b388926f188064872a4c327ed9f7494c3b6ce55b"
+      },
+      {
+        "step_number": 2,
+        "role_id": "QA-01",
+        "step_type": "reviewer",
+        "status": "completed",
+        "task_id": "task_6d237d02-c465-4566-9c5c-1bd1160cb095",
+        "trace_id": "trace_0bd6c5cb-09c7-4ea2-9fca-70504356c0a4",
+        "n8n_execution_id": "309",
+        "output_sha256": "fab4ee63649a2e29c2a9abd501ef52c95b7e7af1a847dd146a3ab03fe2add9ba"
+      }
+    ],
+    "usage_known": false,
+    "usage": null,
+    "real_cost_usd": null,
+    "simulated_cost_usd": null
+  },
+  "artifact": {
+    "path": "ops/local-live/artifacts/task_6d237d02-c465-4566-9c5c-1bd1160cb095/be-06-identity-authorization-engineer-acceptance.md",
+    "bytes": 4576,
+    "sha256": "e9c28b760aeeb67d07b55b1ef33eeeb426f54f31b62b487a55e2f5f1d31ca6f3",
+    "write_receipt": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_6d237d02-c465-4566-9c5c-1bd1160cb095",
+      "trace_id": "trace_0bd6c5cb-09c7-4ea2-9fca-70504356c0a4",
+      "role_id": "BE-06",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T14:33:41.383Z"
+    }
+  },
+  "independent_review": {
+    "reviewer_role_id": "QA-01",
+    "n8n_execution_id": "309",
+    "output_sha256": "fab4ee63649a2e29c2a9abd501ef52c95b7e7af1a847dd146a3ab03fe2add9ba",
+    "status": "CAPTURED",
+    "verdict": "PASS",
+    "parsed": {
+      "verdict": "PASS",
+      "findings": [],
+      "missing_requirements": [],
+      "evidence_limits": [
+        "The draft assumes secure and trusted IdP integration without providing specific details or verification of its security posture."
+      ]
+    },
+    "review_is_model_generated_not_human": true
+  },
+  "evaluation": {
+    "status": "PASS",
+    "failures": [],
+    "deliverable_cues": [
+      "permission",
+      "matrix",
+      "negative",
+      "access",
+      "tests"
+    ],
+    "matched_deliverable_cues": [
+      "permission",
+      "matrix",
+      "negative",
+      "access",
+      "tests"
+    ],
+    "cue_threshold": 2,
+    "evaluated_scope": "task/trace/role/provider/model, n8n execution references, two-stage correlation, required sections and role-specific output cues; not domain truth"
+  },
+  "statuses": {
+    "live_inference": "PASS",
+    "specialist_artifact": "PASS",
+    "reviewed": "CAPTURED",
+    "reviewer_verdict": "PASS",
+    "role_tool_capability": "VERIFIED",
+    "human_expert_approved": false,
+    "review_outcome": "PASS"
+  },
+  "restrictions": {
+    "live_codex_calls": 0,
+    "paid_api_calls": 0,
+    "external_actions": 0,
+    "public_deployments": 0
+  },
+  "tool_receipt": {
+    "schema_version": "role-tool-receipt.v1",
+    "authorized_by": "explicit synthetic task packet in this bounded test; this verifies the scoped tool boundary, not a grant to run tools autonomously",
+    "task_id": "task_6d237d02-c465-4566-9c5c-1bd1160cb095",
+    "trace_id": "trace_0bd6c5cb-09c7-4ea2-9fca-70504356c0a4",
+    "role_id": "BE-06",
+    "grants": [
+      "project.read",
+      "artifact.write"
+    ],
+    "read": {
+      "path": "roles/contracts/BE-06.v1.json",
+      "bytes": 2116,
+      "sha256": "626d019de8dbb307cd276b7fefefebb90b77f53bf62853a17697c53f694537f4"
+    },
+    "write": {
+      "path": "ops/local-live/artifacts/task_6d237d02-c465-4566-9c5c-1bd1160cb095/scoped-capability-receipt-be-06.md",
+      "bytes": 611,
+      "sha256": "f884b295f97c273f76a7a42023d26f7714b6d2a6f7b4f1d7cc0f77766533af6a",
+      "idempotent_existing_receipt": true
+    },
+    "negative_checks": {
+      "ungranted_tool_denied": true,
+      "outside_allowlist_denied": true,
+      "unauthorized_path": "roles/contracts/D-00.v1.json",
+      "path_traversal_denied": true,
+      "overwrite_denied": true
+    },
+    "sensitive_grants": [],
+    "external_actions": 0,
+    "recorded_at": "2026-10-18T17:05:16.715Z"
+  }
+}

@@ -1,0 +1,765 @@
+{
+ "ar_light_today": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "ar_dark_today": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "en_light_today": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "ar_light_brief": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "ar_dark_brief": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "en_light_brief": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "ar_light_why": {
+  "small": [],
+  "leaks": [
+   "BODY",
+   "Daily",
+   "Ding",
+   "PMID",
+   "Paluch",
+   "adults",
+   "all",
+   "analysis",
+   "and",
+   "cause",
+   "cohorts",
+   "dose",
+   "health",
+   "international",
+   "meta",
+   "mortality",
+   "outcomes",
+   "response",
+   "review",
+   "steps",
+   "systematic"
+  ],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "ar_dark_why": {
+  "small": [],
+  "leaks": [
+   "BODY",
+   "Daily",
+   "Ding",
+   "PMID",
+   "Paluch",
+   "adults",
+   "all",
+   "analysis",
+   "and",
+   "cause",
+   "cohorts",
+   "dose",
+   "health",
+   "international",
+   "meta",
+   "mortality",
+   "outcomes",
+   "response",
+   "review",
+   "steps",
+   "systematic"
+  ],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "en_light_why": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "ar_light_studio": {
+  "small": [
+   "'صعّبي المُغري. حطي أيقونة المج' 350x34"
+  ],
+  "leaks": [
+   "Part"
+  ],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "ar_dark_studio": {
+  "small": [
+   "'صعّبي المُغري. حطي أيقونة المج' 350x34"
+  ],
+  "leaks": [
+   "Part"
+  ],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "en_light_studio": {
+  "small": [
+   "'Add friction to temptations. P' 350x28"
+  ],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "ar_light_routine": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "ar_dark_routine": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "en_light_routine": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "ar_light_focus": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "ar_dark_focus": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "en_light_focus": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "ar_light_recovery": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "ar_dark_recovery": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "en_light_recovery": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "ar_light_evening": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "ar_dark_evening": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "en_light_evening": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "ar_light_habits": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "ar_dark_habits": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "en_light_habits": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "ar_light_path": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "ar_dark_path": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "en_light_path": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "ar_light_ielts": {
+  "small": [
+   "'الأحد: الاستماع' 42x56",
+   "'الاثنين: الكتابة' 42x56",
+   "'الثلاثاء: المحادثة' 42x56",
+   "'الأربعاء: قراءة واستماع معًا' 42x56",
+   "'الخميس: الكتابة' 42x56",
+   "'الجمعة: مراجعة خفيفة أو اختبار' 42x56",
+   "'السبت: القراءة' 42x56"
+  ],
+  "leaks": [
+   "ielts",
+   "org"
+  ],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "ar_dark_ielts": {
+  "small": [
+   "'الأحد: الاستماع' 42x56",
+   "'الاثنين: الكتابة' 42x56",
+   "'الثلاثاء: المحادثة' 42x56",
+   "'الأربعاء: قراءة واستماع معًا' 42x56",
+   "'الخميس: الكتابة' 42x56",
+   "'الجمعة: مراجعة خفيفة أو اختبار' 42x56",
+   "'السبت: القراءة' 42x56"
+  ],
+  "leaks": [
+   "ielts",
+   "org"
+  ],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "en_light_ielts": {
+  "small": [
+   "'Sunday: Listening' 42x56",
+   "'Monday: Writing' 42x56",
+   "'Tuesday: Speaking' 42x56",
+   "'Wednesday: Mixed reading & lis' 42x56",
+   "'Thursday: Writing' 42x56",
+   "'Friday: Light review or mock t' 42x56",
+   "'Saturday: Reading' 42x56"
+  ],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "ar_light_driving": {
+  "small": [],
+  "leaks": [
+   "gov"
+  ],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "ar_dark_driving": {
+  "small": [],
+  "leaks": [
+   "gov"
+  ],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "en_light_driving": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "ar_light_joy": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "ar_dark_joy": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "en_light_joy": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "ar_light_reward": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "ar_dark_reward": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "en_light_reward": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "ar_light_me": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "ar_dark_me": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "en_light_me": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "ar_light_insights": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "ar_dark_insights": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "en_light_insights": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "ar_light_money": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "ar_dark_money": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "en_light_money": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "ar_light_home": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "ar_dark_home": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "en_light_home": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "ar_light_evidence": {
+  "small": [],
+  "leaks": [
+   "ACSM",
+   "Analysis",
+   "Arabia",
+   "Association",
+   "Based",
+   "Being",
+   "Daily",
+   "Effects",
+   "Exercise",
+   "Four",
+   "Guidelines",
+   "Health",
+   "Hour",
+   "Life",
+   "Mental",
+   "Meta",
+   "Movement",
+   "Organization",
+   "PDF",
+   "Pilates",
+   "Practice",
+   "Psychological",
+   "Quality",
+   "Quantity",
+   "Review",
+   "Saudi",
+   "Systematic",
+   "Twenty",
+   "Well",
+   "World",
+   "activity",
+   "adults",
+   "analysis",
+   "and",
+   "apparently",
+   "behaviour",
+   "cardiorespiratory",
+   "developing",
+   "device",
+   "dose",
+   "exercise",
+   "fitness",
+   "for",
+   "guidelines",
+   "health",
+   "healthy",
+   "intermittent",
+   "lifestyle",
+   "maintaining",
+   "measured",
+   "meta",
+   "mortality",
+   "musculoskeletal",
+   "neuromotor",
+   "outcomes",
+   "physical",
+   "position",
+   "quality",
+   "response",
+   "review",
+   "sedentary",
+   "stand",
+   "steps",
+   "systematic",
+   "vigorous",
+   "wearable",
+   "with"
+  ],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "ar_dark_evidence": {
+  "small": [],
+  "leaks": [
+   "ACSM",
+   "Analysis",
+   "Arabia",
+   "Association",
+   "Based",
+   "Being",
+   "Daily",
+   "Effects",
+   "Exercise",
+   "Four",
+   "Guidelines",
+   "Health",
+   "Hour",
+   "Life",
+   "Mental",
+   "Meta",
+   "Movement",
+   "Organization",
+   "PDF",
+   "Pilates",
+   "Practice",
+   "Psychological",
+   "Quality",
+   "Quantity",
+   "Review",
+   "Saudi",
+   "Systematic",
+   "Twenty",
+   "Well",
+   "World",
+   "activity",
+   "adults",
+   "analysis",
+   "and",
+   "apparently",
+   "behaviour",
+   "cardiorespiratory",
+   "developing",
+   "device",
+   "dose",
+   "exercise",
+   "fitness",
+   "for",
+   "guidelines",
+   "health",
+   "healthy",
+   "intermittent",
+   "lifestyle",
+   "maintaining",
+   "measured",
+   "meta",
+   "mortality",
+   "musculoskeletal",
+   "neuromotor",
+   "outcomes",
+   "physical",
+   "position",
+   "quality",
+   "response",
+   "review",
+   "sedentary",
+   "stand",
+   "steps",
+   "systematic",
+   "vigorous",
+   "wearable",
+   "with"
+  ],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "en_light_evidence": {
+  "small": [
+   "'Care' 24x44"
+  ],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "ar_light_settings": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "ar_dark_settings": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "en_light_settings": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "ar_light_help": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "ar_dark_help": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "en_light_help": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "ar_light_review0": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "ar_dark_review0": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "en_light_review0": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "ar_light_review2": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "ar_dark_review2": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "en_light_review2": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "ar_light_onboarding2": {
+  "small": [
+   "'نمو' 48x38",
+   "'صيانة' 54x38",
+   "'راحة' 48x38"
+  ],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "ar_dark_onboarding2": {
+  "small": [
+   "'نمو' 48x38",
+   "'صيانة' 54x38",
+   "'راحة' 48x38"
+  ],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "en_light_onboarding2": {
+  "small": [
+   "'Grow' 57x30",
+   "'Maintain' 78x30",
+   "'Rest' 52x30"
+  ],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "ar_light_today_red": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "ar_dark_today_red": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ },
+ "en_light_today_red": {
+  "small": [],
+  "leaks": [],
+  "eastern": [],
+  "ext": [],
+  "errs": []
+ }
+}

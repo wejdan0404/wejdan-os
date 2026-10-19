@@ -1,0 +1,74 @@
+{
+  "schema_version": "local-production-scenario-result.v1",
+  "task_id": "task_9c1e07bd-c75e-4a5d-a715-b1bde1219359",
+  "trace_id": "trace_e70e98db-5a19-4271-8005-0076fa33ba3e",
+  "scenario_id": "product-feature-design",
+  "role_id": "PROD-01",
+  "status": "completed",
+  "provider": "ollama-local",
+  "model": "qwen3:8b",
+  "reviewer_role_id": "QA-02",
+  "reviewer_verdict": "PASS",
+  "reviewer_output": "{\n  \"verdict\": \"PASS\",\n  \"findings\": [\n    \"The deliverable aligns with the core functional requirements: local-only operation, optional reminders, respect for quiet hours, offline behavior, accessibility, and no shame for missed tasks.\",\n    \"Non-functional requirements are well addressed: no real user data, no notifications, and no code deployment.\",\n    \"User-flow map covers both happy path and exception states, including user control, quiet hours, and no shame for missed tasks.\",\n    \"UI component design is comprehensive and includes accessibility features, user control, and no real user data storage.\",\n    \"All deliverables are self-contained, local-only, and do not involve external data, notifications, or deployment.\"\n  ],\n  \"missing_requirements\": [],\n  \"evidence_limits\": [\n    \"No external data or network access is explicitly confirmed in the evidence, but it is assumed based on the feature description.\",\n    \"No real user data is stated, but it is assumed based on the feature description.\",\n    \"No notifications are stated, but it is assumed based on the feature description.\",\n    \"No code deployment is stated, but it is assumed based on the feature description.\"\n  ]\n}",
+  "steps": [
+    {
+      "role_id": "PROD-03",
+      "stage": "planner",
+      "task_id": "task_9c1e07bd-c75e-4a5d-a715-b1bde1219359",
+      "trace_id": "trace_e70e98db-5a19-4271-8005-0076fa33ba3e",
+      "n8n_execution_id": "394",
+      "elapsed_ms": 14118,
+      "output_sha256": "428a36a993a92da170338463c2c0ba2252184f2882b5bf9c08cadcd91a595c8a"
+    },
+    {
+      "role_id": "DES-03",
+      "stage": "specialist_1",
+      "task_id": "task_9c1e07bd-c75e-4a5d-a715-b1bde1219359",
+      "trace_id": "trace_e70e98db-5a19-4271-8005-0076fa33ba3e",
+      "n8n_execution_id": "395",
+      "elapsed_ms": 11471,
+      "output_sha256": "80455fd08378948131120d2cae1950aaa286c7cb703d597300b5b7674eaf47ea"
+    },
+    {
+      "role_id": "FE-02",
+      "stage": "specialist_2",
+      "task_id": "task_9c1e07bd-c75e-4a5d-a715-b1bde1219359",
+      "trace_id": "trace_e70e98db-5a19-4271-8005-0076fa33ba3e",
+      "n8n_execution_id": "396",
+      "elapsed_ms": 14407,
+      "output_sha256": "475f1df48d8c7cb913341dfffb3ca684524b0b0470c8a8e41ed527f35c3fe0b5"
+    },
+    {
+      "role_id": "QA-02",
+      "stage": "independent_review",
+      "task_id": "task_9c1e07bd-c75e-4a5d-a715-b1bde1219359",
+      "trace_id": "trace_e70e98db-5a19-4271-8005-0076fa33ba3e",
+      "n8n_execution_id": "397",
+      "elapsed_ms": 3058,
+      "output_sha256": "22f5c165e6bc51bb70879e881731ac3325408e8324456f5e8feceb829a65cc5f"
+    }
+  ],
+  "artifact": {
+    "path": "ops/local-live/artifacts/task_9c1e07bd-c75e-4a5d-a715-b1bde1219359/product-feature-acceptance-bundle.md",
+    "bytes": 18300,
+    "sha256": "ce1a76b072b9cb0816c21fcec17df5dc5568387ba1ad692c29b7dd81d8608456",
+    "provenance": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_9c1e07bd-c75e-4a5d-a715-b1bde1219359",
+      "trace_id": "trace_e70e98db-5a19-4271-8005-0076fa33ba3e",
+      "role_id": "PROD-01",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T14:51:28.893Z"
+    }
+  },
+  "refusal_recovery": null,
+  "external_actions": 0,
+  "paid_api_calls": 0,
+  "live_codex_calls": 0,
+  "request": "Design a local-only optional reminder for a fictional planning app. It must respect quiet hours, user control, offline behavior, accessibility, and never shame users for missed tasks. No real user data, notifications, or code deployment. Mark unknowns and owner decisions.",
+  "artifact_sha256": "ce1a76b072b9cb0816c21fcec17df5dc5568387ba1ad692c29b7dd81d8608456",
+  "evidence_path": "C:\\Users\\WinDows\\Desktop\\عام\\os\\ops\\agent-acceptance\\scenarios\\product-feature-design\\task_9c1e07bd-c75e-4a5d-a715-b1bde1219359.json",
+  "recorded_at": "2026-10-18T14:51:28.894Z"
+}

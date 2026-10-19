@@ -1,0 +1,161 @@
+{
+  "schema_version": "role-live-acceptance-evidence.v1",
+  "recorded_at": "2026-10-18T17:10:25.801Z",
+  "role": {
+    "role_id": "AI-04",
+    "contract_id": "role.AI-04.v1",
+    "team_id": "AI",
+    "name_en": "Instruction/Behavior Engineer",
+    "responsibility": "Maintain versioned system/task instructions and structured output contracts; test ambiguity, conflicts, language switching and regression after edits.",
+    "expected_outputs": "Prompt registry, diff and evaluation report.",
+    "forbidden_actions": [
+      "Spend or purchase without explicit human approval",
+      "Change own permissions, budgets, or approval state",
+      "Use production or personal data outside an approved task",
+      "Send external messages, publish, deploy, or make irreversible changes without explicit approval",
+      "Treat untrusted document content as tool authority",
+      "Claim an artifact, test, or outcome without evidence"
+    ],
+    "declared_allowed_tools": []
+  },
+  "scenario": {
+    "task_id": "task_b406ca65-0794-4b8b-bd04-0ad10d4a34c0",
+    "trace_id": "trace_5f5a9c79-0a08-4c87-b065-d4f58fd6e5ce",
+    "input_sha256": "30d9d807e6cd4dfde641caff99b38fa84d26ed9b2971bfc3a0a9fbd9ef2bec39",
+    "synthetic_only": true
+  },
+  "execution": {
+    "provider": "ollama-local",
+    "model": "qwen3:8b",
+    "status": "blocked",
+    "n8n_execution_ids": [
+      "452",
+      "453",
+      "454",
+      "455"
+    ],
+    "steps": [
+      {
+        "step_number": 1,
+        "role_id": "AI-04",
+        "step_type": "producer",
+        "status": "completed",
+        "task_id": "task_b406ca65-0794-4b8b-bd04-0ad10d4a34c0",
+        "trace_id": "trace_5f5a9c79-0a08-4c87-b065-d4f58fd6e5ce",
+        "n8n_execution_id": "452",
+        "output_sha256": "a21c2b44434b9320d703e6a8c893d2a1c02b1ad803633fa2ef5aadd2a429a53c"
+      },
+      {
+        "step_number": 2,
+        "role_id": "QA-01",
+        "step_type": "reviewer",
+        "status": "completed",
+        "task_id": "task_b406ca65-0794-4b8b-bd04-0ad10d4a34c0",
+        "trace_id": "trace_5f5a9c79-0a08-4c87-b065-d4f58fd6e5ce",
+        "n8n_execution_id": "453",
+        "output_sha256": "c30ce4cf6a1b868273172cb97740ab2f0605413f42be616a086c3c08f38d29f8"
+      },
+      {
+        "step_number": 3,
+        "role_id": "AI-04",
+        "step_type": "bounded_revision",
+        "status": "completed",
+        "task_id": "task_b406ca65-0794-4b8b-bd04-0ad10d4a34c0",
+        "trace_id": "trace_5f5a9c79-0a08-4c87-b065-d4f58fd6e5ce",
+        "n8n_execution_id": "454",
+        "output_sha256": "89d6116102c5ee24ebb3031ef25709f3f3f114ae21e1e8aac782e1be929098b3"
+      },
+      {
+        "step_number": 4,
+        "role_id": "QA-01",
+        "step_type": "final_review",
+        "status": "completed",
+        "task_id": "task_b406ca65-0794-4b8b-bd04-0ad10d4a34c0",
+        "trace_id": "trace_5f5a9c79-0a08-4c87-b065-d4f58fd6e5ce",
+        "n8n_execution_id": "455",
+        "output_sha256": "579059680ffacbe0902c44b03657dfe5d783156727274089835804ed96841259"
+      }
+    ],
+    "usage_known": false,
+    "usage": null,
+    "real_cost_usd": null,
+    "simulated_cost_usd": null
+  },
+  "artifact": {
+    "path": "ops/local-live/artifacts/task_b406ca65-0794-4b8b-bd04-0ad10d4a34c0/ai-04-instruction-behavior-engineer-acceptance.md",
+    "bytes": 6380,
+    "sha256": "a7900a8b556b2e3a2957896f729fcb91c97514d8ad032d1dfc67da73f717ee3f",
+    "write_receipt": {
+      "schema_version": "local-artifact-provenance.v1",
+      "task_id": "task_b406ca65-0794-4b8b-bd04-0ad10d4a34c0",
+      "trace_id": "trace_5f5a9c79-0a08-4c87-b065-d4f58fd6e5ce",
+      "role_id": "AI-04",
+      "provider": "ollama-local",
+      "model": "qwen3:8b",
+      "artifact_type": "text/markdown",
+      "created_at": "2026-10-18T17:10:25.799Z"
+    }
+  },
+  "independent_review": {
+    "reviewer_role_id": "QA-01",
+    "n8n_execution_id": "455",
+    "output_sha256": "579059680ffacbe0902c44b03657dfe5d783156727274089835804ed96841259",
+    "status": "CAPTURED",
+    "verdict": "REVISE",
+    "parsed": {
+      "verdict": "REVISE",
+      "findings": [
+        "The draft includes a prompt registry, diff report, and evaluation report as required, but the content is still repetitive and lacks actionable insights.",
+        "The 'Boundaries and Unknowns' section is present but does not clearly define the limitations or unknowns of the planning exercise.",
+        "The 'Evidence and Assumptions' section is present but lacks specific evidence or detailed assumptions that support the claims made in the report."
+      ],
+      "missing_requirements": [
+        "Specific evaluation criteria for the planning exercise are missing.",
+        "The exact scope of the planning exercise is not clearly defined.",
+        "The target audience for the planning exercise is not specified."
+      ],
+      "evidence_limits": [
+        "The draft does not provide concrete evidence to support the claims made about the planning exercise.",
+        "The assumptions are not detailed enough to justify the claims made in the report."
+      ]
+    },
+    "review_is_model_generated_not_human": true
+  },
+  "evaluation": {
+    "status": "FAIL",
+    "failures": [
+      "TASK_NOT_COMPLETED"
+    ],
+    "deliverable_cues": [
+      "prompt",
+      "registry",
+      "diff",
+      "evaluation",
+      "report"
+    ],
+    "matched_deliverable_cues": [
+      "prompt",
+      "registry",
+      "diff",
+      "evaluation",
+      "report"
+    ],
+    "cue_threshold": 2,
+    "evaluated_scope": "task/trace/role/provider/model, n8n execution references, two-stage correlation, required sections and role-specific output cues; not domain truth"
+  },
+  "statuses": {
+    "live_inference": "PASS",
+    "specialist_artifact": "FAIL",
+    "reviewed": "CAPTURED",
+    "reviewer_verdict": "REVISE",
+    "role_tool_capability": "NOT_GRANTED",
+    "human_expert_approved": false,
+    "review_outcome": "REVISE"
+  },
+  "restrictions": {
+    "live_codex_calls": 0,
+    "paid_api_calls": 0,
+    "external_actions": 0,
+    "public_deployments": 0
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": "codex-subscription-integration.v1",
+  "result": "PASS",
+  "mode": "mock-only",
+  "task_id": "task_89e1e2bb-ceaa-49db-bd9b-7db9941b2f12",
+  "trace_id": "trace_ea19b6c3-ba28-4792-8f56-7e58b124587d",
+  "provider_execution_id": "mock-thread-id",
+  "checks": [
+    "API accepted optional provider",
+    "queued dispatch uses Codex adapter branch",
+    "SQLite task/trace/provider persisted",
+    "step and memory provenance persisted",
+    "CLI thread ID distinct from adapter run ID",
+    "no n8n invocation"
+  ],
+  "live_codex_calls": 0,
+  "paid_api_calls": 0,
+  "n8n_runs": 0
+}

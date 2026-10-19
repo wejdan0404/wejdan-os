@@ -1,0 +1,75 @@
+{
+  "schema_version": "local-production-scenario-run.v1",
+  "recorded_at": "2026-10-18T17:56:14.675Z",
+  "results": [
+    {
+      "scenario_id": "engineering-security",
+      "result": "PASS",
+      "task_id": "task_67528a3e-f155-4d13-81cc-cca73bef8742",
+      "trace_id": "trace_5de31cba-5fc2-40a5-982f-8f33939b3568",
+      "reviewer_role_id": "QA-02",
+      "reviewer_verdict": "PASS",
+      "steps": [
+        {
+          "role_id": "BE-04",
+          "stage": "planner",
+          "n8n_execution_id": "647"
+        },
+        {
+          "role_id": "SEC-02",
+          "stage": "specialist_1",
+          "n8n_execution_id": "648"
+        },
+        {
+          "role_id": "QA-02",
+          "stage": "independent_review",
+          "n8n_execution_id": "649"
+        },
+        {
+          "role_id": "SEC-02",
+          "stage": "bounded_revision",
+          "n8n_execution_id": "650"
+        },
+        {
+          "role_id": "QA-02",
+          "stage": "final_review",
+          "n8n_execution_id": "651"
+        }
+      ],
+      "artifact": {
+        "path": "ops/local-live/artifacts/task_67528a3e-f155-4d13-81cc-cca73bef8742/engineering-security-acceptance-bundle.md",
+        "bytes": 5788,
+        "sha256": "06331b633957170f932c38452f3ee32fc0f16b6ece601efe88fa01160b82a656",
+        "provenance": {
+          "schema_version": "local-artifact-provenance.v1",
+          "task_id": "task_67528a3e-f155-4d13-81cc-cca73bef8742",
+          "trace_id": "trace_5de31cba-5fc2-40a5-982f-8f33939b3568",
+          "role_id": "BE-02",
+          "provider": "ollama-local",
+          "model": "qwen3:8b",
+          "artifact_type": "text/markdown",
+          "created_at": "2026-10-18T17:56:14.670Z"
+        }
+      },
+      "evidence_path": "ops/agent-acceptance/scenarios/engineering-security/task_67528a3e-f155-4d13-81cc-cca73bef8742.json",
+      "failure_probe": {
+        "attempted_tool": "shell.execute",
+        "outcome": "DENIED",
+        "error": "TASK_TOOL_GRANT_DENIED:shell.execute",
+        "recovery": "continued with local read-only synthetic plan and no shell tool"
+      }
+    }
+  ],
+  "counts": {
+    "expected": 1,
+    "passed": 1,
+    "failed": 0
+  },
+  "safety": {
+    "paid_api_calls": 0,
+    "live_codex_calls": 0,
+    "cloud_n8n_runs": 0,
+    "external_actions": 0
+  },
+  "evidence_path": "ops/evidence/local-production-scenario-run-2026-10-18T17-56-14-675Z.json"
+}
