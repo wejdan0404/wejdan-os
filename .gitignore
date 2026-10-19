@@ -1,0 +1,9 @@
+.dart_tool/
+build/
+coverage/
+**/node_modules/
+ops/local-live/runtime/n8n/node_modules/
+**/.npm/
+**/.n8n/
+.DS_Store
+*.log
