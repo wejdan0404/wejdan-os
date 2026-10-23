@@ -3,7 +3,7 @@
     "short_name": "وجدان",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#FFFFFF",
+    "background_color": "#F4F7FC",
     "theme_color": "#6172B5",
     "description": "Wejdan Life OS — local-first life planner (web preview).",
     "orientation": "portrait-primary",
