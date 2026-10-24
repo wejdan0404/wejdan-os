@@ -1,0 +1,1 @@
+import{w as t,N as e}from"./index-DkIU8qaL.js";function n(r){return r===1?"يوم واحد متتالي":r===2?"يومين متتاليين":r<=10?`${r} أيام متتالية`:`${r} يوم متتالي`}const a=r=>t(r,e.day);function s(r){return r<=0?"ما باقي لك أيام تعويض هالأسبوع، وبكرة يوم جديد.":r===1?"باقي لك يوم تعويض هالأسبوع":"باقي لك يومين تعويض هالأسبوع"}export{n as a,s as c,a as s};
