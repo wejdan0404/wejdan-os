@@ -1,0 +1,57 @@
+/* Weekly review depth — steps added by feat/a. Tokens only; logical properties. */
+.q { display: flex; flex-direction: column; gap: var(--space-4); }
+
+/* blockers */
+.fixList { list-style: none; margin: 0 var(--page-margin); padding: 0; display: flex; flex-direction: column; gap: var(--space-3); }
+.fixCard { display: flex; flex-direction: column; gap: var(--space-1); padding: var(--space-4); border-radius: var(--r-card); background: var(--cell-bg); box-shadow: var(--card-shadow); }
+.fixEyebrow { font: var(--type-footnote); font-weight: 600; color: var(--text-accent); }
+.fixText { margin: 0; font: var(--type-body); color: var(--text-primary); text-wrap: pretty; }
+.fixFeeds { font: var(--type-footnote); color: var(--text-muted); }
+
+/* strength */
+.strengthHabit { margin: 0 var(--page-margin); font: var(--type-hero); color: var(--text-primary); }
+.itemList { list-style: none; margin: 0 var(--page-margin); padding: 0; display: flex; flex-direction: column; gap: var(--space-3); }
+.itemCard { display: flex; flex-direction: column; gap: var(--space-2); padding: var(--space-4); border-radius: var(--r-card); background: var(--cell-bg); box-shadow: var(--card-shadow); container-type: inline-size; }
+.itemText { font: var(--type-row); color: var(--text-primary); }
+.scale { display: grid; grid-template-columns: repeat(5, minmax(44px, 1fr)); gap: var(--space-2); }
+.scaleBtn { min-block-size: 44px; border-radius: var(--r-control); background: var(--surface-subtle); color: var(--text-secondary); font: var(--type-label); font-weight: 600; box-shadow: inset 0 0 0 1px var(--border-subtle); transition: background var(--dur-quick), color var(--dur-quick); }
+.scaleBtn[data-on] { background: var(--action-default); color: var(--on-action); box-shadow: none; }
+.scaleBtn:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
+.scaleEnds { display: flex; justify-content: space-between; gap: var(--space-2); font: var(--type-footnote); color: var(--text-muted); }
+@container (max-width: 230px) { .scale { grid-template-columns: repeat(3, minmax(44px, 1fr)); } }
+
+/* season */
+.counters { display: flex; gap: var(--space-4); font: var(--type-label); color: var(--text-secondary); flex-wrap: wrap; }
+.domainList { list-style: none; margin: 0 var(--page-margin); padding: 0; display: flex; flex-direction: column; gap: var(--space-3); }
+.domainRow { display: flex; flex-direction: column; gap: var(--space-2); padding: var(--space-3) var(--space-4); border-radius: var(--r-card); background: var(--cell-bg); box-shadow: var(--card-shadow); }
+.domainName { font: var(--type-row); color: var(--text-primary); }
+.refuse { margin: 0; font: var(--type-footnote); color: var(--text-secondary); }
+
+/* experiment */
+.expPick { display: flex; flex-direction: column; gap: var(--space-2); }
+.expOption { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-1); min-block-size: 52px; padding: var(--space-3) var(--space-4); border-radius: var(--r-card); background: var(--cell-bg); box-shadow: var(--card-shadow); text-align: start; color: var(--text-primary); }
+.expOption[data-on] { box-shadow: inset 0 0 0 2px var(--action-default), var(--card-shadow); background: var(--action-tint); }
+.expOption:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
+.expOptionHead { display: flex; align-items: center; flex-wrap: wrap; gap: var(--space-2); font: var(--type-row); }
+.expOptionBody { font: var(--type-footnote); color: var(--text-muted); }
+.expTag { font: var(--type-footnote); font-weight: 600; color: var(--text-accent); padding: 0 var(--space-2); border-radius: var(--r-chip); background: var(--action-tint); }
+
+.expCard { display: flex; flex-direction: column; gap: var(--space-3); padding: var(--space-5); border-radius: var(--r-card); background: var(--cell-bg); box-shadow: var(--card-shadow); }
+.expTitle { margin: 0; font: var(--type-card); color: var(--text-primary); }
+.expGrid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); }
+.expCol { display: flex; flex-direction: column; gap: 2px; padding: var(--space-3); border-radius: var(--r-control); background: var(--surface-subtle); }
+.expLabel { font: var(--type-footnote); font-weight: 600; color: var(--text-accent); }
+.expBig { font: var(--type-metric); font-size: 1.5rem; color: var(--text-primary); }
+.expOf { font: var(--type-caption); color: var(--text-muted); }
+.expSub { font: var(--type-footnote); color: var(--text-muted); margin-block-end: var(--space-2); }
+.expNote { margin: 0; font: var(--type-footnote); color: var(--text-muted); text-wrap: pretty; }
+.expActions { display: flex; gap: var(--space-2); flex-wrap: wrap; }
+.expActions > * { flex: 1; min-inline-size: 120px; }
+
+/* chapter card */
+.chapter { display: flex; flex-direction: column; gap: var(--space-1); padding: var(--space-5); border-radius: var(--r-card); background: var(--hero-bg-on-tinted, var(--cell-bg)); box-shadow: var(--card-shadow); text-align: start; inline-size: 100%; }
+.chapterEyebrow { font: var(--type-footnote); font-weight: 600; color: var(--text-accent); }
+.chapterTitle { margin: 0; font: var(--type-hero); color: var(--text-primary); }
+.chapterBits { margin: 0; font: var(--type-footnote); color: var(--text-secondary); }
+.chapterSparks { display: inline-flex; align-items: center; gap: 6px; margin-block-start: var(--space-2); font: var(--type-footnote); font-weight: 600; color: var(--text-accent); }
+.expCard[data-flat] { padding: 0; background: none; box-shadow: none; border-radius: 0; }

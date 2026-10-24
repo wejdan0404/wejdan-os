@@ -9,7 +9,7 @@ import { wakeDomainsRespectingCap } from '../../lib/domains'
 import { useStore } from '../../state/LifeStore'
 import styles from './habits.module.css'
 
-/** What she chose for a habit whose domain is resting while «حفاظ» is already full. */
+/** What she chose for a habit whose domain is resting while «صيانة» is already full. */
 export type WakeOutcome = 'woke' | 'swapped' | 'kept' | 'paused'
 
 interface Pending {
@@ -19,7 +19,7 @@ interface Pending {
 }
 
 /**
- * Asks her before a new habit pushes «حفاظ» past its cap (QA area 2 #4): swap a domain to
+ * Asks her before a new habit pushes «صيانة» past its cap (QA area 2 #4): swap a domain to
  * «راحة», keep the habit's domain resting, or save the habit paused. Nothing changes silently.
  *
  *   const { wake, sheet } = useDomainWake()
@@ -64,7 +64,7 @@ export function useDomainWake() {
   }
 
   const sheet = (
-    <Sheet open={pending != null} onClose={keep} title="مجالاتك للحفاظ مليانة" detents={['medium', 'large']}>
+    <Sheet open={pending != null} onClose={keep} title="مجالاتك للصيانة مليانة" detents={['medium', 'large']}>
       {first && (
         <div className={styles.form}>
           <p className={styles.proposal}>

@@ -12,6 +12,7 @@ import { Icon } from '../../icons/Icon'
 import { useLife, useStore, useToday } from '../../state/LifeStore'
 import { NOUNS, countLabel } from '../../lib/plural'
 import { RowIcon, fmtDayMonth, newId } from './meKit'
+import { HomeTidyBlock } from './HomeTidy'
 import styles from './me.module.css'
 
 const left = (n: number) =>
@@ -65,6 +66,8 @@ export default function HomeAdminScreen() {
         </Button>
       }
     >
+      <HomeTidyBlock />
+
       <p className={`${styles.lede} ${styles.pad}`}>الهوية، الرخصة، الجواز، التأمين… وتطلع لك هنا قبل ما تنتهي بوقت كافي.</p>
 
       {docs.length === 0 ? (

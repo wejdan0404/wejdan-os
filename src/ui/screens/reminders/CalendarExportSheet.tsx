@@ -29,10 +29,10 @@ const STEPS = ['افتحي الملف من زر المشاركة واختاري 
  * «حطيها في تقويم الآيفون»: picks what goes in the calendar file, builds a valid .ics on the device and hands it
  * over with the share sheet (or a download). Nothing is uploaded; only the titles she chose are written.
  */
-export function CalendarExportSheet({ open, onClose }: { open: boolean; onClose: () => void }) {
+export function CalendarExportSheet({ open, onClose, only }: { open: boolean; onClose: () => void; /** Limit the file to these reminder keys (e.g. just the saving reminder). */ only?: string[] }) {
   const s = useLife()
   const toast = useToast()
-  const items = useMemo(() => reminderItems(s), [s])
+  const items = useMemo(() => reminderItems(s).filter((i) => !only || only.includes(i.key)), [s, only])
   const [picked, setPicked] = useState<Set<string>>(new Set())
   const [lead, setLead] = useState<Lead>('5')
   const [ready, setReady] = useState<{ file: File; count: number } | null>(null)

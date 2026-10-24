@@ -1,12 +1,12 @@
 > **ملخص**
 > هذا الملف يحصر كل وحدة في «وجدان» (Wejdan Life OS) ويحكم على حالتها بصرامة: جاهزة للإنتاج / جزئية / وهمية (mock).
-> الحكم مبني على الكود والاختبارات التي شُغّلت فعلاً (726 اختبار نجح في 63 ملفًا، وسكربتات e2e الخمسة)، وليس على الادّعاءات.
+> الحكم مبني على الكود والاختبارات التي شُغّلت فعلاً (849 اختبار نجح في 63 ملفًا، وسكربتات e2e الخمسة)، وليس على الادّعاءات.
 > محدَّث بعد إصلاحات الفحص الثالث: ترحيل القفل صار دائمًا (ترويسة + استرداد + قاعدة رجوع)، وتذكير داخل التدفق، وBidi بدعم Unicode.
 > لا توجد أي وحدة وهمية في النسخة المنشورة؛ الأجزاء الجزئية هي منطق موجود في النطاق/المخزن بلا واجهة، أو واجهة بلا اختبار مباشر.
 
 # 04 — Current implementation (module by module)
 
-Baseline: branch `docs/handoff` on top of `main` @ `ed0df23` (gate-3 fixes merged). App: React 18 + TypeScript + Vite PWA, Arabic-only RTL UI, local-only data.
+Baseline: branch `docs/handoff` on top of `main` @ `ed0df23` plus the missing-features wave merged from `integ/features` @ `d982b01` (gate-3, gate-4 and gate-6 fixes merged). App: React 18 + TypeScript + Vite PWA, Arabic-only RTL UI, local-only data.
 
 ## 0. How to read the status column
 
@@ -24,8 +24,8 @@ Verification run for this document (2026-10-24, Node v22.22.2, npm 10.9.7):
 | Command | Result |
 |---|---|
 | `npx tsc --noEmit` | exit 0, **but it checks 0 files** (root `tsconfig.json` is `files: []` + references). Real type check = `npx tsc --noEmit -p tsconfig.app.json` (exit 0) or `tsc -b` inside `npm run build`. |
-| `npm test` (`vitest run`) | **63 files, 726 tests passed**, 0 failed (≈103 s; includes expected stderr noise: React Router v7 future-flag warnings and `act(...)` warnings). Exact per-run record: `13_TESTING_AND_QA.md` §2. |
-| `npm run build` | exit 0; Vite 5.4.11; PWA v0.21.1 `precache 139 entries (2217.50 KiB)`. |
+| `npm test` (`vitest run`) | **77 files, 849 tests passed**, 0 failed (≈103 s; includes expected stderr noise: React Router v7 future-flag warnings and `act(...)` warnings). Exact per-run record: `13_TESTING_AND_QA.md` §2. |
+| `npm run build` | exit 0; Vite 5.4.11; PWA v0.21.1 `precache 155 entries (2403.99 KiB)`. |
 | `npm run privacy:scan` | recorded in `13_TESTING_AND_QA.md` §2 (final tree). |
 | e2e scripts (`tests/e2e/*.e2e.mjs`) | run by hand; results in `13_TESTING_AND_QA.md` §2. |
 | `npm run lint` | does not exist (no script; `@eslint/js` etc. not installed — LOS-037). |
@@ -79,7 +79,7 @@ Verification run for this document (2026-10-24, Node v22.22.2, npm 10.9.7):
 
 ## 3. Lock, profiles and backups (opt-in)
 
-Gate-3 (release-gate-3) fixed the data-loss and robustness defects of the first lock build; Gate 4 (HOLD) then fixed the turn-off / delete / enable kill-safety (`eed6603`: durable `retired` / `deleted` / `migrating` markers; a missing profile DB is never opened empty), and gate 5 (independent) returned SHIP with two minors (LOS-040, LOS-041). The table describes the state at `ed0df23`. Design details and limits: `17_SECURITY_AND_LIMITATIONS.md` §2.
+Gate-3 (release-gate-3) fixed the data-loss and robustness defects of the first lock build; Gate 4 (HOLD) then fixed the turn-off / delete / enable kill-safety (`eed6603`: durable `retired` / `deleted` / `migrating` markers; a missing profile DB is never opened empty), and gate 5 (independent) returned SHIP with two minors (LOS-040, LOS-041). The table describes the state at `ed0df23`; the wave (§4b) did not change the vault except that the weekly-review draft now lives in the encrypted DB while the lock is on. Design details and limits: `17_SECURITY_AND_LIMITATIONS.md` §2.
 
 | Area | Where | Status | Notes |
 |---|---|---|---|
@@ -124,11 +124,38 @@ Routes are registered only in `src/ui/routes.tsx` (+ `/onboarding` in `App.tsx`)
 | Dev gallery `KitScreen` | `/me/kit` (and `/kit`) | `me/KitScreen.tsx` | **dev-only** | Registered only under `import.meta.env.DEV`. |
 | Visual `preview/` pages | `src/ui/screens/{today,habits,notes,sources}/preview/index.html` | 4 dirs | **dev-only** | Seeded in-memory visual harnesses; not in the Vite build input (only root `index.html`). Served by `vite` dev at `/wejdan-os/src/ui/screens/<area>/preview/index.html` (HTTP 200 verified). |
 
+## 4b. Missing-features wave (areas A to G), built on `integ/features` and merged into this branch
+
+Source of truth for intent: the specs in `docs/design/*.md` (16 files, in the repo). Source of truth for what the independent reviewers saw: release gates 6 and 7 (local-only reports, PER-REPORT, read by the author of this package) and `design-vs-build.md` (local-only inventory written BEFORE the wave, against `ed0df23`; its "no" rows are the wave's input, not its current state). All of it is local, Arabic-only, no network, no schema version change (Dexie stays at v2; the new box `moneyEnvelopes` and the `ieltsDriving` blob in `meta` ride in the existing `records` table).
+
+| Area | What is built | Code | Spec | Tests |
+|---|---|---|---|---|
+| A | Weekly review as 10 steps (wins, important, deferred, blockers + one fix, pause, strength check, season adjust, top 3, week experiment, close with chapter card); progress thread is dots (gate-6 D1); draft survives reload and is kept inside the encrypted DB while the lock is on | `src/ui/screens/me/WeeklyReviewScreen.tsx`, `me/review/*`, `me/reviewDraft.ts`, `domain/engine/reviewInsights.ts`, store `getReviewDraftRaw/setReviewDraftRaw/clearReviewDraftRaw` | `weekly-review-depth.md` | `tests/domain/reviewInsightsCelebrations.test.ts` (14), `tests/ui/me/reviewInsightsCelebrations.test.tsx` (11) |
+| A | Insights: momentum by domain bars, return-speed line, experiment result card (keep / revert), each chart with a table alternative | `me/InsightsScreen.tsx`, `ui/components/charts/*`, `me/review/ExperimentResultCard.tsx` | `insights-depth.md` | same files |
+| A | Celebrations history «احتفالاتي» (milestones, comebacks, closed chapters, finished experiments; derived, no new storage), route `/joy/celebrations` | `joy/CelebrationsScreen.tsx`, `domain/engine/celebrations.ts` | `celebrations.md` | same files |
+| B | Today grouped by tier (الأساسيات / الصيانة), «يومك جاهز» card (counts, progress, momentum ring), inline level chip (أدنى / عادي / زيادة), free-joy card, week strip, all-done «يومك كمل» | `today/TodayScreen.tsx`, `DayReady.tsx`, `LevelStrip.tsx`, `FreeJoyCard.tsx`, `WeekStrip.tsx`, `domain/todaySummary.ts` | `today-calm.md` | `tests/domain/todaySummary.test.ts` (8), `tests/ui/today/todayCalm.test.tsx` (3), `gate6Fixes.test.tsx` (4) |
+| B | Calm day (low energy) at `/today/calm`: three minimum items, what rests, Help link; writes nothing on render | `today/CalmDayScreen.tsx` | `today-calm.md` | same |
+| C | Joy map (small / medium / big), reserved-joy bundles (max 3, one per habit), spark chip on Joy | `joy/JoyMap.tsx`, `JoyBundles.tsx`, `JoyEditSheet.tsx`, `domain/joyMap.ts` | `joy-map.md` | `tests/domain/moneyJoy.test.ts` (13), `tests/ui/money/envelopesJoy.test.tsx` (8) |
+| C | Money: per-category monthly envelopes inside the payday cycle; payday saving reminder (day and time chosen by her; the app never moves or suggests money) | `me/MoneyEnvelopes.tsx`, `SavingReminderCard.tsx`, `MoneyScreen.tsx`, `domain/money.ts`, `engine/reminders.ts`, `inAppReminders.ts`, `ics.ts` | `money-envelopes.md`, `payday-saving-reminder.md` | same |
+| D | Focus finish: try-first tip, phone-away card with «الإشعارات صامتة» pill (only after she confirms; the app cannot silence the phone), retrieval question saved as a note | `today/FocusScreen.tsx`, `FocusExtras.tsx`, `domain/features/focusRecall.ts` | `focus-finish.md` | `tests/domain/featureD.test.ts` (14), `tests/ui/featD/featD.test.tsx` (9) |
+| D | Home: 10-minute tidy timer, weekly zone, batched errands | `me/HomeTidy.tsx`, `HomeAdminScreen.tsx`, `domain/features/homeTidy.ts` | `home-tidy.md` | same |
+| D | Evidence: strength filter (counts, composes with search) and «أضيفيها لعاداتي» (Habit and Routine-step entries only; idempotent id `h_ev_<actionId>`) | `me/EvidenceScreen.tsx`, `domain/features/evidenceLib.ts` | `evidence-strength.md` | same |
+| D | Settings: daily reminder cap (0-6, default 4), optional-modules list (cycle tracking off by default; IELTS, driving, career, faith, people switchable), app-wide storage-unavailable banner | `me/SettingsExtras.tsx`, `domain/features/modules.ts`, `ui/state/StorageBanner.tsx` | `settings-extras.md` | same |
+| E | Habit Studio 9-step wizard with progress, evidence-library prefill (fields marked «مقترح», undo), quick form kept at `/studio?mode=quick` | `habits/HabitStudioWizard.tsx`, `StudioEntry.tsx`, `domain/studio/habitWizard.ts` | `habit-studio-wizard.md` | `tests/domain/studioWizard.test.ts` (10), `tests/ui/studio/studioWizard.test.tsx` (7) |
+| E | Onboarding life map: grow / maintain / rest per domain, caps 3 / 5, live counters; draft resumes | `me/LifeMapStep.tsx`, `OnboardingScreen.tsx`, `domain/studio/lifeMap.ts`, `habits/DomainWakeSheet.tsx` | `onboarding-life-map.md` | same |
+| F | IELTS: practice stats (sessions this month, 30-day commitment arc against her own goal, week dots), target band and current level she fills | `path/IeltsScreen.tsx`, `path/f/IeltsStats.tsx`, `domain/features/ieltsDriving.ts` | `ielts-stats.md` | `tests/domain/ieltsDriving.test.ts` (9), `tests/ui/path/ieltsDriving.test.tsx` (6) |
+| F | Driving as owner-fillable mechanisms: staged road (one seeded guide stage; every other step is hers and wears «ما تأكدت من المصدر» until she marks it «مؤكدة»), supervised-practice log with conditions variety, weekly hazard practice goal, spaced quiz with her own questions. No official procedure, hours, fees, clips or question bank is shipped | `path/DrivingScreen.tsx`, `path/f/RoadSection.tsx`, `HazardCard.tsx`, `QuizCard.tsx`, `PracticeLog.tsx`, `domain/features/ieltsDrivingActions.ts` | `driving-road-quiz-hazard.md` | same |
+| G | Onboarding step «وش يفرّحك؟»: starts the joy map (five neutral suggestion chips; idempotent ids `joy_onb_<key>`), bundles only when habits exist; skip writes nothing | `joy/JoyOnboardingStep.tsx`, `me/onboardingExtraSteps.tsx` | `joy-onboarding.md` | `tests/ui/joy/joyOnboarding.test.tsx` (4) |
+
+Honesty properties worth keeping (checked by gate 6 section 4): no medical, driving-regulation or exam numbers are asserted by the app; every number shown is derived from her own data or from the evidence library's own `evidence_strength` field; user-entered links are http/https only and open with `rel="noopener noreferrer"`.
+
+Hand-run e2e scripts added by the wave (in `tests/e2e/`): `reviewInsightsCelebrations`, `todayCalm`, `moneyJoy`, `featureD`, `studioOnboarding`, `ieltsDriving`, `joyOnboarding`. Status of each: `13_TESTING_AND_QA.md` §2.
+
 ## 5. PWA and takeover
 
 | Item | Status | Evidence |
 |---|---|---|
-| Workbox precache, offline after first load | production-ready | `vite.config.ts`: `globPatterns` js/css/html/png/svg/woff2/json/webmanifest; build log `precache 139 entries (2217.50 KiB)`; offline reload asserted in `lockProfiles.e2e.mjs` (not re-run). |
+| Workbox precache, offline after first load | production-ready | `vite.config.ts`: `globPatterns` js/css/html/png/svg/woff2/json/webmanifest; build log `precache 155 entries (2403.99 KiB)`; offline reload asserted in `lockProfiles.e2e.mjs` (not re-run). |
 | Prompt-update | production-ready | `registerType: 'prompt'`, `clientsClaim: false`, `skipWaiting: false`; user taps «حدّثي» → `updateSW(true)`. Hourly + on-visible `reg.update()`. |
 | Action-library chunks excluded from precache, cached on first use | production-ready | `globIgnores` `**/actions-*.js`, `**/actions_ar-*.js` + `runtimeCaching` `CacheFirst` cache `wejdan-action-library` (max 6 entries). Risk: a first-ever offline launch cannot load the library → `createLifeStore` seeding would fail (catch path only covers *library refresh* on an already seeded DB). |
 | Flutter→React takeover shims | production-ready | `public/flutter_service_worker.js` (kill-switch: clears `flutter*` caches, unregisters itself, reloads windows with `?r=`), `flutter_bootstrap.js`/`flutter.js`/`main.dart.js` (redirect shims, max 3 hops via `sessionStorage`), `src/pwa/legacyCleanup.ts` (unregisters any worker that is not `/sw.js`, deletes `flutter*` caches, strips `?r=`; never touches IndexedDB). Excluded from precache. Manual scenarios `plain|cachingsw|expiredSubres` recorded in `tests/e2e/sw-takeover/README.md` (2026-10-24) — **not re-run** here. |
@@ -143,7 +170,9 @@ Routes are registered only in `src/ui/routes.tsx` (+ `/onboarding` in `App.tsx`)
 
 ## 7. Known gaps summary (strict)
 
-1. Domain logic with no UI: strength check input, experiments, errands, cycle entries, fresh-start, automatic recovery triggers, legacy nudge planner, spark ledger, `domainMomentum`.
+0. Design-vs-build rows from the pre-wave inventory that are still NOT built are listed in `18_REMAINING_BACKLOG.md` (LOS-045); driving and IELTS data have no change-log entries (LOS-046).
+
+1. Domain logic with no UI (re-checked after the wave): cycle entries, fresh-start, automatic recovery triggers, legacy nudge planner, spark ledger. The wave gave UI to the strength check, experiments, errands and `domainMomentum` (§4b). **NOT VERIFIED:** the other items were not re-grepped.
 2. No language switch; Arabic strings are hard-coded in components (no i18n library).
 3. No real-device verification (iOS/Android) of PWA install, `.ics` import, Web Share (DEFERRED-BY-OWNER).
 4. Lint cannot run (LOS-037).

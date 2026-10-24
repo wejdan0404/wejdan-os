@@ -7,7 +7,7 @@
 
 > **Precedence:** the owner's approved decisions override the generic master prompt that asked for a "predominantly dark" UI and Thmanyah/IBM Plex: this system is **light + dark**, identity colours only, **IBM Plex Sans Arabic + El Messiri**; Thmanyah is not used (licence forbids public font hosting). See `15_DECISION_LOG.md` D-59.
 
-Verified on 2026-10-24 against branch `docs/handoff` (on top of `main` @ `ed0df23`; the design tokens and components were unchanged by the gate-3 fixes except `Bidi`, the reminder banner and the lock screens). Sources of truth in code:
+Verified on 2026-10-24 against branch `docs/handoff` (on top of `main` @ `ed0df23`, with the wave's additions noted at the end of §8 from `d982b01`; the design tokens and components were unchanged by the gate-3 fixes except `Bidi`, the reminder banner and the lock screens). Sources of truth in code:
 
 | What | File |
 |---|---|
@@ -264,6 +264,8 @@ Props are from the TypeScript interfaces. States such as pressed/disabled/focus 
 | Reminders set (`src/ui/screens/reminders`) | `TimeWheel` (wheel on top of `TimeField`), `TodayReminderBanner` (`role="alert"`), `CalendarExportSheet` (file card, share/download) | not in `components/` |
 
 A dev-only gallery `src/ui/screens/me/KitScreen.tsx` (`#/me/kit`) exists in dev builds only (`import.meta.env.DEV` in `routes.tsx` and `App.tsx`).
+
+**Added by the wave (`d982b01`; read from the code and gate 6, not re-measured).** Chart components `MomentumBars` and `ReturnSpeedChart` in `src/ui/components/charts/` (SVG, bars start at the right, each paired with a table alternative). The review progress thread is dots (filled / ring / pending, plus the text «N من 10»), no stars (gate-6 D1). Status tones: success green only for «مؤكدة» verified chips and quiz-correct answers; amber `--warning` for cap notes; **no red** in the new flows (a wrong quiz answer is violet «اخترتها»). The Habit Studio completed-step badge uses brand violet (gate-6 D8). Computed contrast (gate 6): success `#207f4d` on `#edf9f2` 4.62, `#78e8af` on `#10291d` 10.3; warning `#966400` on white 5.10, `#ffcd53` on ink 12.6. Known polish: pending thread dots are pale (about 1.7:1) but the state is also written in text.
 
 ## 9. RTL and bidi rules
 

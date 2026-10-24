@@ -1,7 +1,7 @@
 import { motion, useReducedMotion } from 'framer-motion'
 import { useState } from 'react'
 import { useStableNavigate } from '../../shell/navigate'
-import { dayKey, isDoneLevel, logsOn, type JoyItem } from '../../../domain'
+import { dayKey, isDoneLevel, logsOn, type JoyItem, type JoySize } from '../../../domain'
 import { Bidi } from '../../components/Bidi'
 import { EmptyState } from '../../components/EmptyState'
 import { InsetGroupedList } from '../../components/InsetGroupedList'
@@ -13,7 +13,9 @@ import { useToast } from '../../components/Toast'
 import { Icon } from '../../icons/Icon'
 import { springs } from '../../motion'
 import { useLife, useStore, useToday } from '../../state/LifeStore'
+import { JoyBundles } from './JoyBundles'
 import { JoyEditSheet } from './JoyEditSheet'
+import { JoyMap } from './JoyMap'
 import { earnedRewards, freeJoys, isLockedByMilestone, readTodayPick, rewardStatus, SIZE_LABEL, sortRewards, todaysFreeJoy, writeTodayPick } from './joyModel'
 import { usePendingRedeems, useRedeem, useSparkBalance } from './useRedeem'
 import { countLabel, countWords, NOUNS } from '../../lib/plural'
@@ -34,7 +36,7 @@ export default function JoyScreen() {
 
   const [pick, setPick] = useState<string | null>(() => readTodayPick(key))
   const [choosing, setChoosing] = useState(false)
-  const [editing, setEditing] = useState<{ item: JoyItem | null; mode: 'free' | 'earned' } | null>(null)
+  const [editing, setEditing] = useState<{ item: JoyItem | null; mode: 'free' | 'earned'; size?: JoySize } | null>(null)
 
   const joy = todaysFreeJoy(s, today, pick)
   const todayLogs = logsOn(s, today)
@@ -57,15 +59,6 @@ export default function JoyScreen() {
     writeTodayPick(key, id)
     setPick(id)
     setChoosing(false)
-  }
-
-  const deleteJoy = async (j: JoyItem) => {
-    const token = await store.deleteJoyItem(j.id)
-    toast({
-      message: `انحذفت «${j.titleAr}»`,
-      actionLabel: token ? 'تراجع' : undefined,
-      onAction: token ? () => void store.undoDelete(token.token) : undefined,
-    })
   }
 
   const sparksPill = (
@@ -199,36 +192,9 @@ export default function JoyScreen() {
         )}
       </InsetGroupedList>
 
-      <InsetGroupedList header="أشياء تحبينها">
-        {joys.length === 0 ? (
-          <ListRow leading={<Icon name="joy" size={22} />} title="القائمة فاضية" subtitle="قهوة، مشي، حلقة مسلسل — أي شي يفرّحك" muted onClick={() => setEditing({ item: null, mode: 'free' })} />
-        ) : (
-          joys.map((j) => (
-            <ListRow
-              key={j.id}
-              leading={<Icon name="joy" size={22} />}
-              title={<Bidi>{j.titleAr}</Bidi>}
-              subtitle={j.kind === 'bundled' ? 'مربوطة بعادة' : SIZE_LABEL[j.size]}
-              trailing={j.id === joy?.id ? <span className={shared.todayTag}>اليوم</span> : undefined}
-              chevron
-              onClick={() => setEditing({ item: j, mode: 'free' })}
-              menu={[
-                { key: 'today', label: 'خليها متعة اليوم', onSelect: () => choose(j.id) },
-                { key: 'edit', label: 'تعديل', onSelect: () => setEditing({ item: j, mode: 'free' }) },
-                { key: 'del', label: 'احذفي', destructive: true, icon: <Icon name="trash" size={18} />, onSelect: () => void deleteJoy(j) },
-              ]}
-              trailingActions={[{ key: 'del', label: 'حذف', tone: 'destructive', icon: <Icon name="trash" size={18} />, onAction: () => void deleteJoy(j) }]}
-            />
-          ))
-        )}
-        {joys.length > 0 && (
-          <ListRow
-            leading={<Icon name="plus" size={20} />}
-            title={<span className={shared.accentText}>أضيفي متعة</span>}
-            onClick={() => setEditing({ item: null, mode: 'free' })}
-          />
-        )}
-      </InsetGroupedList>
+      <JoyBundles />
+
+      <JoyMap s={s} todayId={joy?.id ?? null} onEdit={(j) => setEditing({ item: j, mode: 'free' })} onAdd={(size) => setEditing({ item: null, mode: 'free', size })} />
         </>
       )}
 
@@ -247,7 +213,7 @@ export default function JoyScreen() {
         </InsetGroupedList>
       </Sheet>
 
-      <JoyEditSheet open={editing != null} onClose={() => setEditing(null)} item={editing?.item ?? null} defaultMode={editing?.mode} />
+      <JoyEditSheet open={editing != null} onClose={() => setEditing(null)} item={editing?.item ?? null} defaultMode={editing?.mode} defaultSize={editing?.size} />
       {redeem.sheet}
     </Screen>
   )

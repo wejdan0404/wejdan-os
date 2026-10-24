@@ -1,0 +1,34 @@
+/* Chart marks — identity tokens only (single hue, recessive grid). Works in light and dark through the tokens. */
+.chart { display: flex; flex-direction: column; gap: var(--space-2); }
+.srOnly { position: absolute; inline-size: 1px; block-size: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+.bars { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--space-4); }
+.barRow { display: grid; grid-template-columns: 1fr auto; grid-template-areas: 'name val' 'bar bar'; align-items: baseline; column-gap: var(--space-3); row-gap: 6px; }
+.barName { grid-area: name; font: var(--type-label); color: var(--text-primary); }
+.barBox { grid-area: bar; min-inline-size: 0; }
+.barSvg { display: block; overflow: visible; }
+.track { fill: var(--heat-1); }
+.tick { stroke: var(--surface-default); stroke-width: 1; opacity: 0.9; }
+.fill { fill: var(--brand-primary); }
+.fill[data-resting] { fill: var(--border-default); }
+.barVal { grid-area: val; font: var(--type-label); font-weight: 600; color: var(--text-primary); text-align: end; font-variant-numeric: tabular-nums; }
+.scaleInner { display: flex; justify-content: space-between; font: var(--type-footnote); color: var(--text-muted); }
+
+.lineWrap { inline-size: 100%; }
+.lineSvg { display: block; overflow: visible; }
+.grid { stroke: var(--separator); stroke-width: 1; }
+.baseline { stroke: var(--border-default); stroke-width: 1.5; }
+/* in-plot labels keep a capped size so four labels never collide at large text; the «جدول» view and the aria-label carry the same numbers at full scale */
+.axisText { font: 400 min(0.765rem, 13px) / 1.2 var(--font-body); fill: var(--text-muted); }
+.valText { font: 600 min(0.882rem, 14px) / 1.2 var(--font-body); fill: var(--text-primary); }
+.line { stroke: var(--brand-primary); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.dot { fill: var(--brand-primary); stroke: var(--cell-bg); stroke-width: 2; }
+.xLabels { display: flex; flex-direction: row; justify-content: space-between; padding-inline: 0; margin-block-start: var(--space-1); font: var(--type-footnote); color: var(--text-muted); }
+
+.table { inline-size: 100%; border-collapse: collapse; font: var(--type-caption); }
+.table th { text-align: start; font-weight: 500; color: var(--text-primary); padding-block: var(--space-2); }
+.table td { text-align: end; color: var(--text-primary); font-variant-numeric: tabular-nums; }
+.table tr + tr { border-block-start: 0.5px solid var(--separator); }
+
+.toggle { align-self: flex-start; min-block-size: 44px; padding-inline: var(--space-3); border-radius: var(--r-control); color: var(--text-accent); font: var(--type-footnote); font-weight: 600; }
+.toggle:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; }

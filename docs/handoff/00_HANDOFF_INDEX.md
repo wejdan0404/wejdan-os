@@ -5,13 +5,13 @@
 > كل جملة فيها مبنية على الكود أو git أو تقارير الفحص؛ وأي شي ما اتحقق منه مكتوب صراحةً `UNKNOWN` أو `NOT VERIFIED`.
 > الحزمة ما فيها بيانات شخصية (المستودع عام)؛ القرارات المعتمدة من المالكة تغلب أي برومبت عام.
 
-Snapshot basis: `main` @ `ed0df23` (includes the gate-3 and gate-4 fixes) plus the handoff branch `docs/handoff` (2026-10-24). Everything below describes that tree unless stated otherwise. The commit hashes quoted in these docs are **local, unpublished** history; the public push will be one clean snapshot commit (see `16_DEVELOPMENT_HISTORY.md` §0 and `15_DECISION_LOG.md` D-64).
+Snapshot basis: the missing-features wave `integ/features` @ `d982b01` (on top of `main` @ `ed0df23`; includes the gate-3, gate-4 and gate-6 fixes) merged into the handoff branch `docs/handoff` (2026-10-24). Everything below describes that tree unless stated otherwise. The commit hashes quoted in these docs are **local, unpublished** history; the public push will be one clean snapshot commit (see `16_DEVELOPMENT_HISTORY.md` §0 and `15_DECISION_LOG.md` D-64).
 
 ## 1. What this package is
 
 An evidence-based engineering handoff for **Wejdan Life OS** (Arabic product name «وجدان»): a personal day-planner / habits / projects / joy / money PWA for one owner (Wejdan), built with React 18 + TypeScript + Vite, storing everything on the device (IndexedDB via Dexie). It replaced an earlier Flutter web build at the same GitHub Pages URL.
 
-- Live URL: https://wejdan0404.github.io/wejdan-os/ (release 2: `gh-pages` @ `f7e1f75`, a build of `main` @ `ed0df23`, per the integrator; see `01_EXECUTIVE_SUMMARY.md` §3)
+- Live URL: https://wejdan0404.github.io/wejdan-os/ (release 3: `gh-pages` SHA `d2db69a`, the missing-features wave, source `d982b01`; release 2 was `f7e1f75`; per the integrator, not re-checked by the author; see `01_EXECUTIVE_SUMMARY.md` §3)
 - Repo (PUBLIC): https://github.com/wejdan0404/wejdan-os (old Flutter code and data still exist on its `main` branch; left as-is by the owner's choice). The React source is planned to go to branch `react-app` as one snapshot commit: **PLANNED, UNVERIFIED** until the integrator records branch + SHA in `HANDOFF_MANIFEST.json` and `21_FINAL_HANDOFF_REPORT.md`.
 - Audience: an engineering agent (OpenAI Codex) with no prior context. The owner reads the Arabic summary at the top of each file.
 
@@ -95,7 +95,7 @@ Scratchpad QA reports (`release-gate*.md`, `area1…7*.md`, `a11y-report.md`, `p
 | Domain code under `src/domain` does not import React (`grep "from 'react'" src/domain` has no hit); the UI is meant to use the facade documented at the top of `src/domain/index.ts` | `src/domain/index.ts` |
 | No `.github/` directory (no CI) | `ls .github` fails |
 | Test layout: `tests/domain`, `tests/ui`, `tests/migration` (Vitest) and `tests/e2e/*.mjs` (Playwright scripts, run by hand, not wired into `npm test`) | `ls tests`, `package.json` |
-| Local run on this tree: tsc exit 0; `npm test` 63 files / 726 tests passed; build 650 modules; `privacy:scan` clean | `13_TESTING_AND_QA.md` §2, `22_COLD_START_AUDIT.md` |
+| Local run on this tree: tsc exit 0; `npm test` 77 files / 849 tests passed; build 712 modules; `privacy:scan` clean | `13_TESTING_AND_QA.md` §2, `22_COLD_START_AUDIT.md` |
 | `public/` still contains `flutter.js`, `flutter_bootstrap.js`, `flutter_service_worker.js`, `main.dart.js` | `ls public` — these are the **takeover shims** that let the React build replace Flutter on returning devices (`src/pwa/legacyCleanup.ts`). Do not delete them without reading `15_DECISION_LOG.md` D-36. |
 
 ## 6. Where things are in the repo

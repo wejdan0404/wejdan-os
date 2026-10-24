@@ -503,13 +503,13 @@ function NewSeasonSheet({ open, onClose }: { open: boolean; onClose: () => void 
 
 const STATE_SEGMENTS = [
   { value: 'grow', label: 'نمو' },
-  { value: 'maintain', label: 'حفاظ' },
+  { value: 'maintain', label: 'صيانة' },
   { value: 'rest', label: 'راحة' },
 ] as const
 
 /**
  * Her domains and their state this season — changeable any time (QA #1). «راحة» domains don't
- * appear in today's suggestions; «نمو» and «حفاظ» do. Over-capacity asks before forcing.
+ * appear in today's suggestions; «نمو» and «صيانة» do. Over-capacity asks before forcing.
  */
 function DomainsSheet({ open, onClose }: { open: boolean; onClose: () => void }) {
   const s = useLife()
@@ -529,7 +529,7 @@ function DomainsSheet({ open, onClose }: { open: boolean; onClose: () => void })
       message:
         st === 'rest'
           ? `«${domainName(id)}» ترتاح — عاداتها ما تطلع باقتراحات اليوم، واللي أضفتيه ليومك يبقى`
-          : `«${domainName(id)}» ${st === 'grow' ? 'للنمو' : 'للحفاظ'} — عاداتها تطلع لك باقتراحات اليوم`,
+          : `«${domainName(id)}» ${st === 'grow' ? 'للنمو' : 'للصيانة'} — عاداتها تطلع لك باقتراحات اليوم`,
     })
   }
 
@@ -537,7 +537,7 @@ function DomainsSheet({ open, onClose }: { open: boolean; onClose: () => void })
     <Sheet open={open} onClose={onClose} title="مجالاتك" detents={['large']}>
       <div className={styles.form}>
         <p className={styles.hint}>
-          «نمو» = تركيزك هالموسم · «حفاظ» = نسخة صغيرة تكفي · «راحة» = ما يطلع لك شي منه. تقدرين تغيّرينها متى ما بغيتي.
+          «نمو» = تركيزك هالموسم · «صيانة» = نسخة صغيرة تكفي · «راحة» = ما يطلع لك شي منه. تقدرين تغيّرينها متى ما بغيتي.
         </p>
         <ul className={styles.domainList} role="list">
           {domains.map((d) => {
@@ -551,7 +551,7 @@ function DomainsSheet({ open, onClose }: { open: boolean; onClose: () => void })
                 {/* The capacity question sits right under the row she tapped — never off-screen (QA area 3 #7). */}
                 {pending?.id === d.id && (
                   <div className={styles.warn} role="alert" ref={(el) => el?.scrollIntoView?.({ block: 'nearest' })}>
-                    <p>عندك مجالات نمو كفاية — الأريح تخلين واحد منها للحفاظ. تبين تكملين على أي حال؟</p>
+                    <p>عندك مجالات نمو كفاية — الأريح تخلين واحد منها للصيانة. تبين تكملين على أي حال؟</p>
                     <div className={styles.actions}>
                       <Button onClick={() => void change(pending.id, pending.st, true)}>كمّلي</Button>
                       <Button variant="plain" onClick={() => setPending(null)}>

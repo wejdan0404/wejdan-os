@@ -27,6 +27,7 @@ import { dur, ease } from '../../motion'
 import { useLife, useStore, useToday } from '../../state/LifeStore'
 import { ensureDomainsVisible } from '../../lib/domains'
 import { dayLabel, parseLocaleNumber, SectionHead, StarDivider } from './pathKit'
+import { IeltsStats } from './f/IeltsStats'
 import styles from './Path.module.css'
 
 const SHORT_DAY = new Intl.DateTimeFormat('ar-SA-u-nu-latn-ca-gregory', { weekday: 'short' })
@@ -87,7 +88,7 @@ export default function IeltsScreen() {
     const woke = await ensureDomainsVisible(store, s, [h.domain])
     // Say what changed, and undo both (QA area 3 #19).
     toast({
-      message: woke.length ? 'تفعّلت خطة IELTS — ومجالها صار «حفاظ» عشان تطلع لك باقتراحات اليوم' : 'تفعّلت خطة IELTS — تطلع لك باقتراحات اليوم',
+      message: woke.length ? 'تفعّلت خطة IELTS — ومجالها صار «صيانة» عشان تطلع لك باقتراحات اليوم' : 'تفعّلت خطة IELTS — تطلع لك باقتراحات اليوم',
       actionLabel: 'تراجع',
       onAction: () => {
         void store.deleteHabit(h.id)
@@ -166,6 +167,9 @@ export default function IeltsScreen() {
             </>
           )}
         </section>
+
+        {/* Area F: calm practice stats + owner-entered goals */}
+        <IeltsStats />
 
         {/* Weekly rotation */}
         <SectionHead title="توزيع الأسبوع" />

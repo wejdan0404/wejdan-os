@@ -1,0 +1,208 @@
+/* ظروف الشهر — calm envelopes: identity tokens only, no red, state is text + icon (never colour alone). */
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-inline: var(--page-margin);
+  padding: var(--space-5);
+  border-radius: var(--r-card);
+  background: var(--cell-bg);
+}
+.head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+.title {
+  margin: 0;
+  font: var(--type-h2);
+  color: var(--text-primary);
+}
+.sub {
+  font: var(--type-footnote);
+  color: var(--text-muted);
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.list > li + li {
+  border-block-start: 0.5px solid var(--border-subtle);
+}
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  inline-size: 100%;
+  min-block-size: var(--tap);
+  padding-block: var(--space-3);
+  text-align: start;
+  color: inherit;
+  border-radius: var(--r-control);
+}
+.row:active {
+  opacity: 0.7;
+}
+.rowTop {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+.name {
+  font: var(--type-row);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.amounts {
+  font: var(--type-caption);
+  color: var(--text-secondary);
+  font-variant-numeric: tabular-nums;
+}
+.bar {
+  position: relative;
+  block-size: 8px;
+  border-radius: var(--r-pill);
+  background: color-mix(in srgb, var(--brand-secondary) 35%, transparent);
+  overflow: hidden;
+}
+.fill {
+  position: absolute;
+  inset-block: 0;
+  inset-inline-start: 0;
+  border-radius: inherit;
+  background: var(--action-default);
+}
+.fill[data-tone='over'],
+.fill[data-tone='full'] {
+  background: var(--action-pressed, var(--brand-primary));
+}
+.state {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  margin: 0;
+  font: var(--type-footnote);
+  color: var(--text-muted);
+}
+.state > svg {
+  flex: none;
+  margin-block-start: 2px;
+  color: var(--brand-primary);
+}
+.foot {
+  margin: 0;
+  font: var(--type-footnote);
+  color: var(--text-muted);
+}
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+/* manage sheet */
+.editRow {
+  display: grid;
+  grid-template-columns: 1fr 112px 44px;
+  gap: var(--space-2);
+  align-items: center;
+}
+@media (max-width: 420px) {
+  .editRow {
+    grid-template-columns: 1fr 96px 44px;
+  }
+}
+.iconBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: 44px;
+  block-size: 44px;
+  border-radius: var(--r-control);
+  color: var(--text-muted);
+}
+.iconBtn:active {
+  background: var(--surface-subtle);
+}
+.editHead {
+  display: grid;
+  grid-template-columns: 1fr 112px 44px;
+  gap: var(--space-2);
+  font: var(--type-footnote);
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+/* saving reminder card */
+.save {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-inline: var(--page-margin);
+  padding: var(--space-5);
+  border-radius: var(--r-card);
+  background: var(--action-tint);
+}
+.saveHead {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+.saveTile {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: 40px;
+  block-size: 40px;
+  border-radius: var(--r-control);
+  background: var(--cell-bg);
+  color: var(--brand-primary);
+}
+.saveText {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  min-inline-size: 0;
+}
+.saveTitle {
+  margin: 0;
+  font: var(--type-h3, var(--type-row));
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.saveBody {
+  margin: 0;
+  font: var(--type-caption);
+  color: var(--text-secondary);
+}
+.saveWhen {
+  margin: 0;
+  font: var(--type-label);
+  font-weight: 600;
+  color: var(--text-accent);
+}
+.timeRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.linkBtn {
+  min-block-size: 44px;
+  padding-inline: var(--space-1);
+  color: var(--text-accent);
+  font: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

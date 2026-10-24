@@ -2,10 +2,10 @@
 
 > **ملخص**
 > الخطة تمشي بالترتيب: تحقق من الخط الأساسي (بدون تغيير كود)، ثم فحص نهائي للبناء بعد إصلاحات الفحص الثالث، ثم اعتماديات npm والترخيص، ثم نشر بموافقة وجدان، ثم تحسينات اختيارية.
-> ما فيه ميزة جديدة كبيرة مطلوبة؛ المنتج مكتمل وظيفيًا، والباقي جودة وتحقق ونشر.
+> ما فيه ميزة جديدة كبيرة مطلوبة؛ موجة الميزات الناقصة انبنت ونزلت (الإصدار 3)، والباقي جودة وتحقق ونشر، وأول شي نصلّح سكربتات e2e اليدوية اللي تعطّلت بعد خطوات التهيئة الجديدة (LOS-044).
 > أي بند يحتاج قرارًا أو موافقة منها موضّح، وكل شي iOS مؤجّل منها.
 
-Source of items: `18_REMAINING_BACKLOG.md` (IDs LOS-xxx). Nothing here re-opens finished work listed as DONE in `03_REQUIREMENTS_TRACEABILITY.md` or in the DONE table of `18`. Baseline for this plan: `main` @ `ed0df23` (gate-4 fixes) + the handoff branch (726 tests / 63 files green, `tsc`, build and `privacy:scan` clean — `13_TESTING_AND_QA.md` §2).
+Source of items: `18_REMAINING_BACKLOG.md` (IDs LOS-xxx). Nothing here re-opens finished work listed as DONE in `03_REQUIREMENTS_TRACEABILITY.md` or in the DONE table of `18`. Baseline for this plan: `integ/features` @ `d982b01` (the missing-features wave plus the gate-3, gate-4 and gate-6 fixes) merged into the handoff branch `docs/handoff` (849 tests / 77 files green, `tsc`, build and `privacy:scan` clean; `13_TESTING_AND_QA.md` §2).
 
 ## Principles for this phase
 
@@ -26,8 +26,9 @@ Source of items: `18_REMAINING_BACKLOG.md` (IDs LOS-xxx). Nothing here re-opens 
 
 | Order | Item | Output |
 |---|---|---|
-| 0 | LOS-040 orphan plain DB / `_bak_` cleanup and LOS-041 missing-data screen (gate-5 minors) | Crash-injection tests first, then code; whole vault suite + `lockKill` e2e |
-| 1 | LOS-002 remaining checks (gate 5 already SHIP; text scale, contrast, board comparison, axe not covered) on the merged tree (light, dark, reduced motion; flows: lock/profiles incl. a kill-and-reopen, streak, reminders banner + `.ics`, backup nudge, quarantine notice) | A defect list; fixes for Major/Minor ones. Start from the five e2e scripts |
+| 00 | LOS-044 shared `completeOnboarding` helper so the nine failing e2e scripts run again (needed before any kill-matrix re-run) | All hand-run scripts pass (13 §2 table) |
+| 0 | LOS-040 orphan plain DB / `_bak_` cleanup and LOS-041 missing-data screen (gate-5 minors) | Crash-injection tests first, then code; whole vault suite + `lockKill` e2e (re-run it on the merged tree: it has not been run there). Optional with it: LOS-042 and LOS-043, the review-draft crash windows from gate 7 (same store, same tests) |
+| 1 | LOS-002 remaining checks (gate 5 already SHIP; text scale, contrast, board comparison, axe not covered) on the merged tree (light, dark, reduced motion; flows: lock/profiles incl. a kill-and-reopen, streak, reminders banner + `.ics`, backup nudge, quarantine notice) | A defect list; fixes for Major/Minor ones. Start from the e2e scripts once LOS-044 is done; include the wave screens (`08_SCREENS_AND_USER_FLOWS.md` §2.4) and the not-exercised list in gate 6 (iOS, real Reduce Motion, VoiceOver, Dynamic Type) |
 | 2 | LOS-003 flaky test (only if it reappears) | 5 consecutive green full runs |
 | 3 | LOS-005 D1 visual check | Pass/fail with geometry numbers |
 | 4 | LOS-006, LOS-007 text scale and contrast | Clean screenshots, token-usage fixes if needed (no identity colour changes) |
@@ -65,14 +66,14 @@ Exit criteria: no Major defects, report stored outside the public repo if it con
 
 ## Phase 5 — Optional engineering (pick by value)
 
-Order suggested by value for the owner: LOS-004 (quick-add Save visibility in a short viewport), LOS-019, LOS-018, LOS-016, LOS-023, LOS-009, LOS-013, LOS-017, LOS-024, LOS-035, LOS-034.
+Order suggested by value for the owner: LOS-045 (rows that need her wording or a verified official source first, never invented), LOS-046, LOS-004 (quick-add Save visibility in a short viewport), LOS-019, LOS-018, LOS-016, LOS-023, LOS-009, LOS-013, LOS-017, LOS-024, LOS-035, LOS-034.
 
 ## What not to do in this phase
 
 - No new feature areas, no new colours, no English UI, no network calls, no server.
 - No removal of the Flutter takeover shims (LOS-021) until she confirms.
 - No history rewrite, no repository visibility changes, no push of the local history.
-- No bulk refactors of `src/domain` or the store: it has 726 tests built around its current shape.
+- No bulk refactors of `src/domain` or the store: it has 849 tests built around its current shape.
 - No "restoring" dark-only, charcoal/green or Thmanyah from the generic master prompt (D-59).
 
 ## Roadmap ideas that are NOT approved (do not start without a decision)

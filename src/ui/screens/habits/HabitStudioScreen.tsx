@@ -1,5 +1,5 @@
 import { useMemo, useRef, useState, type ReactNode } from 'react'
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import {
   anchor,
   EVERY_DAY,
@@ -58,7 +58,7 @@ const CAPACITY_AR: Record<CapacityViolation['rule'], (v: CapacityViolation) => s
 }
 
 /** «كل يوم» · «يوم واحد» · «يومين» · «3 أيام». */
-const daysCountAr = (n: number): string => (n === 7 ? 'كل يوم' : n === 1 ? 'يوم واحد' : n === 2 ? 'يومين' : `${n} أيام`)
+export const daysCountAr = (n: number): string => (n === 7 ? 'كل يوم' : n === 1 ? 'يوم واحد' : n === 2 ? 'يومين' : `${n} أيام`)
 
 function FormSection({ header, footer, children }: { header: string; footer?: string; children: ReactNode }) {
   return (
@@ -70,7 +70,7 @@ function FormSection({ header, footer, children }: { header: string; footer?: st
   )
 }
 
-function Stepper({ value, onChange, min = 1, max = 180, step = 5, unit = 'د', label }: { value: number; onChange: (v: number) => void; min?: number; max?: number; step?: number; unit?: string; label: string }) {
+export function Stepper({ value, onChange, min = 1, max = 180, step = 5, unit = 'د', label }: { value: number; onChange: (v: number) => void; min?: number; max?: number; step?: number; unit?: string; label: string }) {
   return (
     <div className={styles.stepper} role="group" aria-label={label}>
       <button type="button" className={styles.stepperBtn} aria-label="أقل" disabled={value <= min} onClick={() => onChange(Math.max(min, value - (value <= step ? 1 : step)))}>
@@ -93,6 +93,7 @@ export default function HabitStudioScreen() {
   const s = useLife()
   const toast = useToast()
   const stack = useStack()
+  const navigate = useNavigate()
   const base = editId ? (s.habits.find((h) => h.id === editId) ?? null) : null
 
   const domains = useMemo(() => s.domains.filter((d) => d.enabled && !d.sensitive).sort((a, b) => a.sortOrder - b.sortOrder), [s.domains])
@@ -213,6 +214,11 @@ export default function HabitStudioScreen() {
           void save()
         }}
       >
+        <div className={styles.cta} style={{ display: 'flex', justifyContent: 'flex-end', marginBlockEnd: 'var(--space-2)' }}>
+          <Button type="button" variant="plain" onClick={() => navigate(`/studio?mode=wizard${editId ? `&habit=${editId}` : ''}`, { replace: true })}>
+            خطوة خطوة
+          </Button>
+        </div>
         <FormSection header="العادة">
           <div className={styles.form}>
             <label className={styles.field}>

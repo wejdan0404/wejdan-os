@@ -8,10 +8,11 @@ import { indexLogsByDay } from './engine/history';
 import type { ExplicitReminder } from './engine/reminders';
 import type { Habit, ProductSlot } from './models';
 import { EVERY_DAY, isDoneLevel } from './models';
+import { SAVING_REMINDER_KEY, SAVING_REMINDER_TITLE_AR, savingDayOf } from './money';
 import { productStepId, productsIn } from './products';
 import type { LifeSnapshot } from './snapshot';
 
-export type ReminderKind = 'routine' | 'habit';
+export type ReminderKind = 'routine' | 'habit' | 'saving';
 export type RoutineSlot = Extract<ProductSlot, 'am' | 'pm'>;
 export const REMINDER_ROUTINE_SLOTS: readonly RoutineSlot[] = ['am', 'pm'];
 
@@ -39,6 +40,8 @@ export interface ReminderItem {
   weekdays: number[];
   /** Minutes the item takes (calendar event length). */
   durationMin: number;
+  /** Monthly item (the payday saving reminder): the day of month it falls on; weekdays then cover every day. */
+  monthDay?: number | null;
 }
 
 const legacyHabitMinute = (h: Habit): number | null =>
@@ -80,9 +83,17 @@ export function habitsWithoutReminder(s: LifeSnapshot): Habit[] {
   return s.habits.filter((h) => h.status === 'active' && !have.has(h.id)).sort((a, b) => a.sortOrder - b.sortOrder);
 }
 
+/** The payday saving reminder (Money → ادخار تلقائي): one monthly item while she has set a day. */
+export function savingReminderRows(s: LifeSnapshot): ReminderItem[] {
+  const day = savingDayOf(s.moduleState.autoSaveDay);
+  return day == null
+    ? []
+    : [{ key: SAVING_REMINDER_KEY, kind: 'saving', id: 'autosave', title: SAVING_REMINDER_TITLE_AR, minute: s.moduleState.autoSaveMinute, weekdays: [...EVERY_DAY], durationMin: 15, monthDay: day }];
+}
+
 /** Every reminder that has a time, ready for the planner. */
 export const reminderItems = (s: LifeSnapshot): ReminderItem[] =>
-  [...routineReminderRows(s), ...habitReminderRows(s)].filter((r) => r.minute != null);
+  [...routineReminderRows(s), ...habitReminderRows(s), ...savingReminderRows(s)].filter((r) => r.minute != null);
 
 export function explicitReminders(s: LifeSnapshot): ExplicitReminder[] {
   return reminderItems(s).map((r) => ({
@@ -90,6 +101,7 @@ export function explicitReminders(s: LifeSnapshot): ExplicitReminder[] {
     minute: r.minute as number,
     title: { ar: r.title, en: r.title },
     weekdays: r.weekdays,
+    monthDay: r.monthDay ?? null,
   }));
 }
 
@@ -102,6 +114,7 @@ export function routineStepsLeft(s: LifeSnapshot, slot: RoutineSlot, date: Date)
 
 /** True when [item] has nothing left to do on [date] (all done or skipped). */
 export function reminderSatisfied(s: LifeSnapshot, item: Pick<ReminderItem, 'kind' | 'id'>, date: Date): boolean {
+  if (item.kind === 'saving') return false;
   if (item.kind === 'routine') return routineStepsLeft(s, item.id as RoutineSlot, date) === 0;
   const key = dayKey(date);
   const l = indexLogsByDay(s.logs.filter((x) => x.date === key), item.id).get(key);

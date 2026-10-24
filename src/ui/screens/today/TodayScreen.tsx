@@ -1,7 +1,7 @@
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import { memo, useCallback, useMemo, useRef, useState } from 'react'
 import { useStableNavigate } from '../../shell/navigate'
-import { addDays, dayKey, hasOwnRoutineProducts, needsMonthPlan, parseDayKey, postponedTasks, routineSkippedToday, skippedRoutineLogs, type PlanItem, type TaskItem } from '../../../domain'
+import { addDays, dayGroupOf, dayKey, daySummary, hasOwnRoutineProducts, needsMonthPlan, parseDayKey, postponedTasks, routineSkippedToday, skippedRoutineLogs, weekAhead, weeklyMomentum, type CompletionLevel, type PlanItem, type TaskItem, type WeekAheadEntry } from '../../../domain'
 import { Bidi, MetaLine } from '../../components/Bidi'
 import { Button } from '../../components/Button'
 import { CheckCircle } from '../../components/CheckCircle'
@@ -16,7 +16,11 @@ import { WMark } from '../../components/WMark'
 import { Icon } from '../../icons/Icon'
 import { dur, ease } from '../../motion'
 import { restartSkippedRoutine } from '../habits/shared'
+import { DayReady } from './DayReady'
+import { FreeJoyCard } from './FreeJoyCard'
 import { Glyph } from './Glyph'
+import { LevelChip, LevelPicker, levelOf } from './LevelStrip'
+import { WeekStrip } from './WeekStrip'
 import { LaterSheet } from './LaterSheet'
 import { DOMAIN_LABEL, clock, dateLine, domainGlyph, greetingFor, isolate, metaParts, minutesText, previewSuggestions, stepsLeft, thingsCount } from './lib'
 import { RoutineThread, type ThreadStep } from './RoutineThread'
@@ -63,11 +67,18 @@ export default function TodayScreen() {
     s.products.some((p) => p.placeholder && p.slot !== 'weekly') &&
     s.settings.pausedRoutineSlots.length < 2
   const day = view.plan.items.filter((i) => i.tier !== 'chain')
+  // free joy: her accepted joy, else today's suggested one — a card of its own, not a list row
+  const joyItem = day.find((i) => i.tier === 'joy') ?? view.suggestions.find((x) => x.group === 'joy')?.item ?? null
   const open = day.filter((i) => !isDone(i) && !isSkipped(i))
   const hero = pickHero(open, nowMin)
-  const list = day.filter((i) => i !== hero)
+  const list = day.filter((i) => i !== hero && i.tier !== 'joy')
+  const coreRows = list.filter((i) => dayGroupOf(i.tier) === 'core')
+  const maintainRows = list.filter((i) => dayGroupOf(i.tier) !== 'core')
+  const summary = daySummary(view.plan, isDone)
+  const momentum = useMemo(() => weeklyMomentum(s, today), [s, today])
+  const week = useMemo(() => weekAhead(s, today, view.thisWeek), [s, today, view.thisWeek])
   const tasks = view.tasks
-  const suggestions = view.suggestions.filter((x) => x.item.tier !== 'chain')
+  const suggestions = view.suggestions.filter((x) => x.item.tier !== 'chain' && x.item.tier !== 'joy')
   const preview = previewSuggestions(suggestions)
   const laterCount = view.later.length + parkedTasks.length
   // a routine she added counts as her day (the empty card must not show next to it)
@@ -76,12 +87,14 @@ export default function TodayScreen() {
   const allDone = !isEmpty && open.length === 0 && chainOpen.length === 0 && tasks.every((t) => t.status === 'done')
   const evening = nowMin >= 17 * 60
 
-  const listRows = list.length + tasks.length
+  const joyDone = joyItem != null && isDone(joyItem)
+  const showJoyCard = joyItem != null && joyItem.id !== hero?.id
+  const openWeek = useCallback((e: WeekAheadEntry) => navigate(e.kind === 'project' ? `/path/project/${encodeURIComponent(e.id)}` : `/today/item/${encodeURIComponent(e.id)}`), [navigate])
 
   // Rows are memoised (55+ on a full day); they report events by id and we act on the
   // latest item here, so a bailed-out row never runs an action with a stale item.
-  const latest = useRef({ day, tasks, actions, navigate })
-  latest.current = { day, tasks, actions, navigate }
+  const latest = useRef({ day, tasks, actions, navigate, store })
+  latest.current = { day, tasks, actions, navigate, store }
   const onRowEvent = useCallback((e: RowEvent, id: string) => {
     const { day: items, actions: a, navigate: nav } = latest.current
     const it = items.find((x) => x.id === id)
@@ -94,6 +107,9 @@ export default function TodayScreen() {
     else if (e === 'skip') void a.skip(it)
     else if (e === 'remove') void a.remove(it)
   }, [])
+  const onLevel = useCallback((id: string, level: CompletionLevel) => {
+    void latest.current.store.setPlannedLevel(id, level)
+  }, [])
   const onTaskEvent = useCallback((e: TaskEvent, id: string) => {
     const { tasks: ts, actions: a } = latest.current
     const t = ts.find((x) => x.id === id)
@@ -103,6 +119,10 @@ export default function TodayScreen() {
     else if (e === 'later') void a.postponeTask(t)
     else void a.taskToInbox(t)
   }, [])
+
+  const planRow = (it: PlanItem, i: number) => (
+    <PlanRow key={it.id} it={it} index={i} done={isDone(it)} skipped={isSkipped(it)} reduce={!!reduce} metaKey={metaKey(it)} level={levelOf(it)} onEvent={onRowEvent} onLevel={onLevel} />
+  )
 
   return (
     <Screen
@@ -137,6 +157,14 @@ export default function TodayScreen() {
       <TodayReminderBanner />
 
       <TodayEnergy value={answered ? view.energy : null} onChange={(e) => void store.setEnergy(e)} />
+
+      {answered && view.energy === 'red' && (
+        <button type="button" className={styles.briefLink} onClick={() => navigate('/today/calm')}>
+          <Glyph name="moon" size={20} />
+          <span>النسخة الهادئة من يومك</span>
+          <Icon name="chevron" size={18} />
+        </button>
+      )}
 
       {!answered && nowMin >= 4 * 60 + 30 && nowMin < 13 * 60 && (
         <button type="button" className={styles.briefLink} onClick={() => navigate('/brief')}>
@@ -188,6 +216,8 @@ export default function TodayScreen() {
           </motion.section>
         ) : null}
       </AnimatePresence>
+
+      {summary.total > 0 && <DayReady summary={summary} momentum={momentum} energy={answered ? view.energy : null} busyShown={view.load.busy && !isEmpty && !allDone} routineLeft={routine && !routine.skipped && routine.left > 0 ? `${routine.title}: ${stepsLeft(routine.left)}` : null} />}
 
       {needsPlan && (
         <div className={styles.payday}>
@@ -284,12 +314,25 @@ export default function TodayScreen() {
         </InsetGroupedList>
       )}
 
-      {listRows > 0 && (
-        <InsetGroupedList header="لليوم">
+      {coreRows.length > 0 && (
+        <InsetGroupedList header={`الأساسيات · ${coreRows.length + (hero && dayGroupOf(hero.tier) === 'core' ? 1 : 0)}`}>
+          <AnimatePresence initial={false}>{coreRows.map((it, i) => planRow(it, i))}</AnimatePresence>
+        </InsetGroupedList>
+      )}
+
+      {maintainRows.length > 0 && (
+        <InsetGroupedList header={`الصيانة · ${maintainRows.length + (hero && dayGroupOf(hero.tier) === 'maintain' ? 1 : 0)}`}>
+          <AnimatePresence initial={false}>{maintainRows.map((it, i) => planRow(it, i))}</AnimatePresence>
+        </InsetGroupedList>
+      )}
+
+      {showJoyCard && joyItem && (
+        <FreeJoyCard item={joyItem} done={joyDone} onChange={(v) => (v ? void actions.complete(joyItem, 'normal') : actions.uncomplete(joyItem))} />
+      )}
+
+      {tasks.length > 0 && (
+        <InsetGroupedList header="مهامك">
           <AnimatePresence initial={false}>
-            {list.map((it, i) => (
-              <PlanRow key={it.id} it={it} index={i} done={isDone(it)} skipped={isSkipped(it)} reduce={!!reduce} metaKey={metaKey(it)} onEvent={onRowEvent} />
-            ))}
             {tasks.map((t) => (
               <TaskRow key={t.id} t={t} today={dayKey(today)} onEvent={onTaskEvent} />
             ))}
@@ -352,6 +395,8 @@ export default function TodayScreen() {
         )}
       </InsetGroupedList>
 
+      <WeekStrip entries={week} onOpen={openWeek} />
+
       {view.showHelpLink && (
         <button type="button" className={styles.helpLink} onClick={() => navigate('/help')}>
           يومك ثقيل؟ المساعدة قريبة منك
@@ -402,11 +447,14 @@ interface PlanRowProps {
   skipped: boolean
   reduce: boolean
   metaKey: string
+  level: Exclude<CompletionLevel, 'skipped'>
   onEvent: (e: RowEvent, id: string) => void
+  onLevel: (id: string, level: CompletionLevel) => void
 }
 
 const PlanRow = memo(
-  function PlanRow({ it, index: i, done, skipped, reduce, onEvent }: PlanRowProps) {
+  function PlanRow({ it, index: i, done, skipped, reduce, level, onEvent, onLevel }: PlanRowProps) {
+    const [pick, setPick] = useState(false)
     const ev = (e: RowEvent) => () => onEvent(e, it.id)
     return (
       <motion.div
@@ -425,9 +473,12 @@ const PlanRow = memo(
           muted={done || skipped}
           subtitle={skipped ? 'تخطّيتيها اليوم' : done ? 'خلصت' : <MetaLine parts={metaParts(it)} />}
           trailing={
-            done ? null : (
-              <span className={styles.glyph}>
-                <Glyph name={domainGlyph(it.domain)} size={18} label={DOMAIN_LABEL[it.domain]} />
+            done || skipped ? null : (
+              <span className={styles.trail}>
+                <LevelChip level={level} open={pick} onToggle={() => setPick((v) => !v)} />
+                <span className={styles.glyph}>
+                  <Glyph name={domainGlyph(it.domain)} size={18} label={DOMAIN_LABEL[it.domain]} />
+                </span>
               </span>
             )
           }
@@ -451,6 +502,7 @@ const PlanRow = memo(
             { key: 'remove', label: 'شيليها من اليوم', destructive: true, icon: <Icon name="trash" size={20} />, onSelect: ev('remove') },
           ]}
         />
+        {pick && !done && !skipped && <LevelPicker item={it} onChange={(l) => onLevel(it.id, l)} />}
       </motion.div>
     )
   },
@@ -463,7 +515,12 @@ const PlanRow = memo(
     a.done === b.done &&
     a.skipped === b.skipped &&
     a.reduce === b.reduce &&
-    a.onEvent === b.onEvent,
+    a.level === b.level &&
+    a.it.minimumText === b.it.minimumText &&
+    a.it.normalText === b.it.normalText &&
+    a.it.bonusText === b.it.bonusText &&
+    a.onEvent === b.onEvent &&
+    a.onLevel === b.onLevel,
 )
 
 const TaskRow = memo(function TaskRow({ t, today, onEvent }: { t: TaskItem; today: string; onEvent: (e: TaskEvent, id: string) => void }) {

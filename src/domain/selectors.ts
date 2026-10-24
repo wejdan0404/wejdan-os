@@ -98,7 +98,7 @@ export const autoPlanFor = (s: LifeSnapshot, date: Date): DayPlan => planDay(pla
 
 /**
  * Engine suggestions for [date]. A «راحة» (rest) area stays quiet: its habits are not suggested
- * (QA area 3 #1 — the Path sheet promises exactly that). Adding a habit wakes its area to «حفاظ»
+ * (QA area 3 #1 — the Path sheet promises exactly that). Adding a habit wakes its area to «صيانة»
  * (ui/lib/domains.ensureDomainsVisible), and anything she already accepted stays on her day.
  */
 export const suggestionsFor = (s: LifeSnapshot, date: Date): SuggestionSet =>
@@ -351,7 +351,8 @@ export function reminderPlanFor(s: LifeSnapshot, date: Date): ReminderPlan {
     nudgeHistory: s.nudgeRecords,
     logs: s.logs,
     fixedEvents: s.fixedEvents,
-    dues: upcomingDuesFor(s, date, 0),
+    // the payday saving reminder is an explicit timed reminder (explicitReminders), so skip the generic dues line
+    dues: upcomingDuesFor(s, date, 0).filter((d) => d.kind !== 'autoSave'),
     explicit: explicitReminders(s),
   });
 }

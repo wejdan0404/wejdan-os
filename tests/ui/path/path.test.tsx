@@ -67,8 +67,8 @@ describe('PathScreen', () => {
     const before = store.getSnapshot().domains.filter((d) => d.state === 'maintain').length
     const group = within(dialog)
       .getAllByRole('radiogroup')
-      .find((g) => within(g).getByRole('radio', { name: 'حفاظ' }).getAttribute('aria-checked') === 'false')!
-    await act(async () => fireEvent.click(within(group).getByRole('radio', { name: 'حفاظ' })))
+      .find((g) => within(g).getByRole('radio', { name: 'صيانة' }).getAttribute('aria-checked') === 'false')!
+    await act(async () => fireEvent.click(within(group).getByRole('radio', { name: 'صيانة' })))
     await waitFor(() => expect(store.getSnapshot().domains.filter((d) => d.state === 'maintain').length).toBe(before + 1))
   })
 
@@ -174,7 +174,7 @@ describe('IeltsScreen', () => {
 })
 
 describe('DrivingScreen', () => {
-  it('enables the weekly plan, logs a video, and adds the licence steps as a project', async () => {
+  it('enables the weekly plan, logs a video, and shows the owner-confirmed road', async () => {
     const store = await makeStore()
     mount(store, <DrivingScreen />, '/path/driving')
     await act(async () => {
@@ -188,12 +188,8 @@ describe('DrivingScreen', () => {
     await waitFor(() => expect(store.getSnapshot().drivingSessions).toHaveLength(1))
     expect(screen.getByRole('img', { name: 'الفيديوهات: 1 من 3 هالأسبوع' })).toBeInTheDocument()
 
-    await act(async () => {
-      fireEvent.click(screen.getByRole('button', { name: 'حطيها مشروع في مساري' }))
-    })
-    await waitFor(() => {
-      const p = store.getSnapshot().projects.find((x) => x.domain === 'driving')
-      expect(p?.steps).toHaveLength(7)
-    })
+    // Area F: the road starts with «confirm the official path» — no invented 7-step licence list.
+    expect(screen.getByText('تأكيد المسار الرسمي')).toBeInTheDocument()
+    expect(screen.queryByRole('button', { name: 'حطيها مشروع في مساري' })).not.toBeInTheDocument()
   })
 })

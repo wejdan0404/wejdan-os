@@ -1,0 +1,33 @@
+.frame {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+}
+.banner {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: calc(env(safe-area-inset-top, 0px) + 8px) var(--page-margin) 8px;
+  text-align: start;
+  background: var(--surface-subtle);
+  color: var(--text-secondary);
+  border-block-end: 0.5px solid var(--border-default);
+  z-index: 50;
+}
+.head {
+  font: var(--type-label);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.hint {
+  font: var(--type-footnote);
+}
+.body {
+  position: relative;
+  flex: 1;
+  min-block-size: 0;
+  /* the banner already took the top safe area */
+  --safe-top: 0px;
+}

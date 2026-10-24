@@ -82,6 +82,8 @@ export interface ExplicitReminder {
   title: LocalizedText;
   /** Dart weekdays the item runs on (1 = Monday … 7 = Sunday). */
   weekdays: number[];
+  /** Monthly item: only on this day of the month (clamped to the month's length). */
+  monthDay?: number | null;
 }
 
 /** Consecutive most-recent `ignored` responses for [itemId]. */
@@ -162,7 +164,8 @@ export function buildReminderPlan(o: {
   }
 
   const wd = weekday(day);
-  const explicitToday = (o.explicit ?? []).filter((e) => e.weekdays.includes(wd));
+  const monthLen = new Date(day.getFullYear(), day.getMonth() + 1, 0).getDate();
+  const explicitToday = (o.explicit ?? []).filter((e) => e.weekdays.includes(wd) && (e.monthDay == null || day.getDate() === Math.min(e.monthDay, monthLen)));
   const explicitIds = new Set((o.explicit ?? []).map((e) => e.itemId));
   const habitsById = new Map(o.habits.map((h) => [h.id, h]));
   const muted: MutedNudge[] = [];

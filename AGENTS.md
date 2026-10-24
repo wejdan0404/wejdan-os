@@ -11,7 +11,7 @@ Evidence labels used in the docs: `VERIFIED-NOW`, `PER-REPORT`, `UNKNOWN` / `NOT
 | Install | `npm ci` |
 | Dev server | `npm run dev` then open `http://localhost:5173/wejdan-os/` (base path matters) |
 | Type-check | `npx tsc --noEmit -p tsconfig.app.json` (bare `tsc --noEmit` checks nothing: the root tsconfig only has references) |
-| Tests | `npm test` (63 files / 726 tests, about 2 minutes); one area: `npx vitest run tests/ui/habits` |
+| Tests | `npm test` (77 files / 849 tests, about 2 minutes); one area: `npx vitest run tests/ui/habits` |
 | Build | `npm run build` (runs `tsc -b` then `vite build`) |
 | Privacy scan | `npm run privacy:scan` (MUST pass before every commit that goes beyond your machine) |
 | Lint | **Not available** (`eslint` packages are not declared; LOS-037). Do not claim lint passed |
@@ -32,7 +32,7 @@ Evidence labels used in the docs: `VERIFIED-NOW`, `PER-REPORT`, `UNKNOWN` / `NOT
 - Screens live in `src/ui/screens/<area>/` (today, habits, path, joy, me, notes, sources, reminders); shared pieces in `src/ui/components/`; lock UI in `src/ui/lock/`.
 - Code identifiers and comments are English. Every visible string is Arabic.
 - Records use string ids; do not assume their format (LOS-034).
-- Keep changes small and single-purpose; do not refactor `src/domain` or the store in bulk (726 tests are built around its current shape).
+- Keep changes small and single-purpose; do not refactor `src/domain` or the store in bulk (849 tests are built around its current shape).
 
 ## 4. Arabic, RTL and copy
 
@@ -76,7 +76,7 @@ Evidence labels used in the docs: `VERIFIED-NOW`, `PER-REPORT`, `UNKNOWN` / `NOT
 1. Every behaviour change gets a test in the matching folder (`tests/domain`, `tests/ui`, `tests/migration`). A bug fix starts with a failing test.
 2. UI tests use Testing Library and wait through lazy screens (`asyncUtilTimeout: 5000`). If one fails only under load, re-run that file alone and record it (LOS-003); do not raise timeouts silently.
 3. Run before you report: `npx tsc --noEmit -p tsconfig.app.json`, `npm test`, `npm run build`, `npm run privacy:scan`. Quote the real numbers; do not write "all green" without having run them.
-4. Changes that touch the lock, toasts, reminders, streak or bidi also need the matching e2e script in light and dark (see playbook §2). State clearly when you could not run one.
+4. Changes that touch the lock, toasts, reminders, streak or bidi also need the matching e2e script in light and dark (see playbook §2). State clearly when you could not run one. Today nine of the twelve scripts fail at the onboarding step (LOS-044); fix that helper before relying on them.
 5. Test data is named `test`. No real names, cities or products in fixtures.
 6. iPhone, Xcode and real-device checks are permanently deferred by the owner (`DEFERRED-BY-OWNER`). Do not ask for them and never write "verified on device".
 

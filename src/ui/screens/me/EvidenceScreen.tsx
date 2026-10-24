@@ -1,13 +1,21 @@
 import { useMemo, useState } from 'react'
-import { evidenceUrl, normalizeArabic, stripAl, tokensOf, type Action } from '../../../domain'
+import {
+  EVIDENCE_STRENGTHS, canBecomeHabit, evidenceUrl, filterByStrength, habitFromAction, hasEvidenceHabit, normalizeArabic, strengthCounts, strengthLabel, stripAl, tokensOf,
+  type Action, type EvidenceStrengthKey,
+} from '../../../domain'
 import { Bidi } from '../../components/Bidi'
+import { Button } from '../../components/Button'
+import { Chip } from '../../components/Chip'
+import { useToast } from '../../components/Toast'
+import { useDomainWake } from '../habits/DomainWakeSheet'
 import { EmptyState } from '../../components/EmptyState'
 import { InsetGroupedList } from '../../components/InsetGroupedList'
 import { ListRow } from '../../components/ListRow'
 import { Screen } from '../../components/Screen'
 import { Sheet } from '../../components/Sheet'
 import { StarMark } from '../../components/StarMark'
-import { useLife } from '../../state/LifeStore'
+import { useLife, useStore, useToday } from '../../state/LifeStore'
+import { countLabel } from '../../lib/plural'
 import styles from './me.module.css'
 
 const GROUPS: { prefix: string; title: string }[] = [
@@ -38,11 +46,37 @@ export default function EvidenceScreen() {
   const s = useLife()
   const [q, setQ] = useState('')
   const [open, setOpen] = useState<Action | null>(null)
+  const [strength, setStrength] = useState<EvidenceStrengthKey | null>(null)
   const showSensitive = s.settings.cycleModule
+  const store = useStore()
+  const toast = useToast()
+  const today = useToday()
+  const { wake, sheet: wakeSheet } = useDomainWake()
 
-  const visible = useMemo(() => {
+  const matching = useMemo(() => {
     return s.actions.filter((a) => (showSensitive || !isSensitive(a)) && evidenceMatches(a, q))
   }, [s.actions, q, showSensitive])
+  const counts = useMemo(() => strengthCounts(matching), [matching])
+  const visible = useMemo(() => filterByStrength(matching, strength), [matching, strength])
+
+  /** «أضيفيها لعاداتي»: one habit from the entry's own texts, through the normal habit action (undoable). */
+  const addToHabits = async (a: Action, force = false) => {
+    const h = habitFromAction(a, today)
+    if (!h || hasEvidenceHabit(store.getSnapshot().habits, a)) return
+    const v = await store.upsertHabit(h, force)
+    if (v.length > 0 && !force) {
+      toast({ message: 'عندك عادات أساسية كفاية الحين — ريّحي وحدة أول، أو أضيفيها على أي حال.', actionLabel: 'أضيفيها', onAction: () => void addToHabits(a, true) })
+      return
+    }
+    setOpen(null)
+    const o = await wake([h])
+    toast({
+      message:
+        o === 'kept' ? 'انضافت لعاداتك — مجالها مرتاح، غيّريه من «مجالاتك» وقت ما تبين' : o === 'paused' ? 'انضافت لعاداتك موقّفة — شغّليها وقت ما يخف يومك' : 'انضافت لعاداتك — تطلع لك باقتراحات اليوم',
+      actionLabel: 'تراجع',
+      onAction: () => void store.deleteHabit(h.id),
+    })
+  }
 
   return (
     <Screen title="الأدلة والمصادر" compactTitle="الأدلة" backLabel="أنا">
@@ -56,10 +90,25 @@ export default function EvidenceScreen() {
           placeholder="دوّري: مشي، نوم، IELTS…"
           aria-label="بحث في الأدلة"
         />
+        <div className={styles.chips} role="group" aria-label="قوة الدليل">
+          <Chip selected={strength == null} onClick={() => setStrength(null)}>
+            الكل <bdi>{matching.length}</bdi>
+          </Chip>
+          {EVIDENCE_STRENGTHS.map((st) => (
+            <Chip key={st.key} selected={strength === st.key} onClick={() => setStrength(strength === st.key ? null : st.key)}>
+              {st.ar} <bdi>{counts[st.key]}</bdi>
+            </Chip>
+          ))}
+        </div>
+        <p className={styles.lede}>الترتيب من الأقوى. الإرشادات تصدر من جهات رسمية أو مهنية، والمراجعة المنهجية تجمع دراسات كثيرة، والتجربة دراسة وحدة مضبوطة.</p>
       </div>
 
       {visible.length === 0 ? (
-        <EmptyState title="ما لقينا شي بهالاسم" body="جربي كلمة ثانية أو أقصر." />
+        <EmptyState
+          title={matching.length === 0 ? 'ما لقينا شي بهالاسم' : 'ما فيه شي بهالقوة'}
+          body={matching.length === 0 ? 'جربي كلمة ثانية أو أقصر.' : 'جربي قوة ثانية أو اختاري «الكل».'}
+          action={strength != null ? <Button variant="secondary" onClick={() => setStrength(null)}>الكل</Button> : undefined}
+        />
       ) : (
         GROUPS.map((g) => {
           const xs = visible.filter((a) => a.actionId.startsWith(g.prefix + '-'))
@@ -71,7 +120,7 @@ export default function EvidenceScreen() {
                   key={a.actionId}
                   leading={a.sources.some((x) => x.verifiedBy) ? <StarMark size={12} color="var(--brand-primary)" label="مصدر متحقق منه" /> : <span style={{ inlineSize: 12 }} />}
                   title={<Bidi>{nameOf(a)}</Bidi>}
-                  subtitle={a.sources.length === 1 ? 'مصدر واحد' : a.sources.length === 2 ? 'مصدرين' : `${a.sources.length} مصادر`}
+                  subtitle={[strengthLabel(a), a.sources.length === 1 ? 'مصدر واحد' : a.sources.length === 2 ? 'مصدرين' : countLabel(a.sources.length, { one: 'مصدر', two: 'مصدرين', few: 'مصادر', many: 'مصدر' })].filter(Boolean).join(' · ')}
                   chevron
                   onClick={() => setOpen(a)}
                 />
@@ -84,6 +133,16 @@ export default function EvidenceScreen() {
       <Sheet open={open != null} onClose={() => setOpen(null)} title={open ? nameOf(open) : ''} detents={['large']}>
         {open && (
           <div className={styles.detailBlock}>
+            {strengthLabel(open) && (
+              <p className={styles.detailText}>
+                قوة الدليل: <strong>{strengthLabel(open)}</strong>
+              </p>
+            )}
+            {canBecomeHabit(open) && (
+              <Button block size="large" disabled={hasEvidenceHabit(s.habits, open)} onClick={() => void addToHabits(open)}>
+                {hasEvidenceHabit(s.habits, open) ? 'موجودة بعاداتك' : 'أضيفيها لعاداتي'}
+              </Button>
+            )}
             {open.ar?.what && (
               <>
                 <p className={styles.detailHead}>وش هي؟</p>
@@ -146,6 +205,7 @@ export default function EvidenceScreen() {
           </div>
         )}
       </Sheet>
+      {wakeSheet}
     </Screen>
   )
 }

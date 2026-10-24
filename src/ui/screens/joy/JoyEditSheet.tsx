@@ -27,10 +27,12 @@ export interface JoyEditSheetProps {
   item: JoyItem | null
   /** For a new item. */
   defaultMode?: Mode
+  /** For a new item (the map's group it was added from). */
+  defaultSize?: JoySize
 }
 
 /** Add / edit a joy or a reward. Rewards can be tied to a goal milestone. */
-export function JoyEditSheet({ open, onClose, item, defaultMode = 'free' }: JoyEditSheetProps) {
+export function JoyEditSheet({ open, onClose, item, defaultMode = 'free', defaultSize = 'quick' }: JoyEditSheetProps) {
   const s = useLife()
   const store = useStore()
   const toast = useToast()
@@ -46,7 +48,7 @@ export function JoyEditSheet({ open, onClose, item, defaultMode = 'free' }: JoyE
     if (!open) return
     setTitle(item?.titleAr ?? '')
     setMode(item ? (item.kind === 'earned' ? 'earned' : 'free') : defaultMode)
-    setSize(item?.size ?? 'quick')
+    setSize(item?.size ?? defaultSize)
     setPrice(item?.price != null ? String(item.price) : '60')
     setCostsMoney(item?.costsMoney ?? false)
     setMilestone(item ? (linkedMilestoneKey(s, item.id) ?? '') : '')

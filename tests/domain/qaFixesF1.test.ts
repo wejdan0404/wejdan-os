@@ -16,7 +16,7 @@ async function neutral(at: Date = mkDate(2026, 10, 5, 9)) {
 }
 
 describe('QA F1 / area 3 #1 — a resting area stays quiet; waking it brings her habits back', () => {
-  it('an active habit in a «راحة» domain is NOT suggested; set to «حفاظ» it is (maintain tier)', async () => {
+  it('an active habit in a «راحة» domain is NOT suggested; set to «صيانة» it is (maintain tier)', async () => {
     const store = await neutral();
     const s0 = store.getSnapshot();
     const health = s0.domains.find((d) => d.id === 'health')!;

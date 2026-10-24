@@ -1,0 +1,73 @@
+.card {
+  margin-inline: var(--page-margin);
+  margin-block-end: var(--space-4);
+  padding: var(--space-5);
+  border-radius: var(--r-card);
+  background: var(--surface-subtle);
+  border: 0.5px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  text-align: center;
+}
+.eyebrow {
+  margin: 0;
+  font: var(--type-overline);
+  color: var(--text-accent);
+}
+.title {
+  margin: 0;
+  font: var(--type-hero);
+  color: var(--text-primary);
+}
+.body {
+  margin: 0;
+  font: var(--type-caption);
+  color: var(--text-secondary);
+  text-wrap: balance;
+}
+.time {
+  font-family: var(--font-numeric);
+  font-size: 2.25rem;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-primary);
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-2);
+  inline-size: 100%;
+}
+.zoneCard {
+  text-align: start;
+  align-items: flex-start;
+}
+.add {
+  display: flex;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  align-items: center;
+}
+.addInput {
+  flex: 1;
+  min-inline-size: 0;
+  min-block-size: 44px;
+  padding-inline: var(--space-3);
+  border-radius: var(--r-control);
+  background: var(--cell-bg);
+  color: var(--text-primary);
+  font: var(--type-body);
+  border: 1px solid var(--border-subtle);
+  outline: none;
+}
+.addInput:focus-visible {
+  border-color: var(--focus-ring);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--focus-ring) 22%, transparent);
+}
+.done {
+  text-decoration: line-through;
+  color: var(--text-muted);
+}

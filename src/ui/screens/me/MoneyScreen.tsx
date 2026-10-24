@@ -1,6 +1,7 @@
 import { useMemo, useState, type FormEvent } from 'react'
 import {
   addDays,
+  applySpend,
   billPaidKeysFor,
   bnplNextDue,
   coolingDaysLeft,
@@ -10,6 +11,7 @@ import {
   dueDaysFrom,
   envelopesThisCycle,
   isBillPaidOn,
+  isCategoryEnvelope,
   needsMonthPlan,
   parseDayKey,
   upcomingDuesFor,
@@ -36,13 +38,15 @@ import { MeIcon, Riyal, fmtDayMonth, inDays, newId, riyal } from './meKit'
 import { countWords, NOUNS } from '../../lib/plural'
 import { parseAmount } from '../../lib/number'
 import { monthlyDueDates } from './moneyModel'
+import { MoneyEnvelopes } from './MoneyEnvelopes'
+import { SavingReminderCard } from './SavingReminderCard'
 import styles from './me.module.css'
 
 type Part = 'save' | 'bills' | 'spend'
 const PART_AR: Record<Part, string> = { save: 'ادخار', bills: 'فواتير وأقساط', spend: 'مصروف الشهر' }
 const envId = (key: string, p: Part) => `env_${key}_${p}`
 const partOf = (e: MoneyEnvelope): Part | null =>
-  e.id.endsWith('_save') ? 'save' : e.id.endsWith('_bills') ? 'bills' : e.id.endsWith('_spend') ? 'spend' : null
+  isCategoryEnvelope(e) ? null : e.id.endsWith('_save') ? 'save' : e.id.endsWith('_bills') ? 'bills' : e.id.endsWith('_spend') ? 'spend' : null
 
 /** Amount typed on any keyboard: «١٢٫٥» → 12.5, «1,200» → 1200 (QA area4 #6). */
 const toNum = parseAmount
@@ -75,10 +79,12 @@ export default function MoneyScreen() {
 
   const [planOpen, setPlanOpen] = useState(false)
   const [spendOpen, setSpendOpen] = useState(false)
+  const [spendEnvId, setSpendEnvId] = useState<string | null>(null)
   const [addOpen, setAddOpen] = useState<AddKind | null>(null)
 
   const byPart = (p: Part) => envelopes.find((e) => partOf(e) === p) ?? null
-  const spendEnvs = envelopes.filter((e) => partOf(e) !== 'save' && partOf(e) !== 'bills')
+  // categories sub-divide the spend envelope (their spend is already in it) — never count them twice
+  const spendEnvs = envelopes.filter((e) => partOf(e) !== 'save' && partOf(e) !== 'bills' && !isCategoryEnvelope(e))
   const planned = spendEnvs.reduce((a, e) => a + e.planned, 0)
   const spent = spendEnvs.reduce((a, e) => a + e.spent, 0)
   const over = spent > planned && planned > 0
@@ -225,7 +231,7 @@ export default function MoneyScreen() {
             </p>
           )}
           <div className={styles.actions}>
-            <Button variant="secondary" icon={<Icon name="plus" size={18} />} onClick={() => setSpendOpen(true)}>
+            <Button variant="secondary" icon={<Icon name="plus" size={18} />} onClick={() => { setSpendEnvId(null); setSpendOpen(true) }}>
               سجّلي مصروف
             </Button>
             <Button variant="plain" onClick={() => setPlanOpen(true)}>
@@ -234,6 +240,22 @@ export default function MoneyScreen() {
           </div>
         </section>
       )}
+
+      {hasPlan && (
+        <MoneyEnvelopes
+          s={s}
+          today={calToday}
+          cycleKey={cycle.key}
+          daysLeft={daysLeftInCycle}
+          envelopes={envelopes}
+          onLog={(id) => {
+            setSpendEnvId(id)
+            setSpendOpen(true)
+          }}
+        />
+      )}
+
+      <SavingReminderCard s={s} today={calToday} />
 
       <InsetGroupedList
         header="فواتير وأقساط"
@@ -396,12 +418,14 @@ export default function MoneyScreen() {
       <SpendSheet
         open={spendOpen}
         envelopes={envelopes.filter((e) => partOf(e) !== 'save')}
+        initialEnvId={spendEnvId}
         onClose={() => setSpendOpen(false)}
         onSave={async (env, amount) => {
-          const before = env
-          await store.upsertEnvelope({ ...env, spent: env.spent + amount })
+          // a category also raises the month's spend envelope (domain applySpend); undo restores both
+          const { next, before } = applySpend(envelopes, env, amount)
+          for (const e of next) await store.upsertEnvelope(e)
           setSpendOpen(false)
-          toast({ message: `انسجّل ${riyal(amount)}`, actionLabel: 'تراجع', onAction: () => void store.upsertEnvelope(before) })
+          toast({ message: `انسجّل ${riyal(amount)}`, actionLabel: 'تراجع', onAction: () => void Promise.all(before.map((e) => store.upsertEnvelope(e))) })
         }}
       />
       <AddMoneySheet
@@ -481,9 +505,16 @@ function PlanSheet({ open, onClose, initial, onSave }: { open: boolean; onClose:
   )
 }
 
-function SpendSheet({ open, envelopes, onClose, onSave }: { open: boolean; envelopes: MoneyEnvelope[]; onClose: () => void; onSave: (e: MoneyEnvelope, amount: number) => void }) {
+function SpendSheet({ open, envelopes, initialEnvId, onClose, onSave }: { open: boolean; envelopes: MoneyEnvelope[]; initialEnvId?: string | null; onClose: () => void; onSave: (e: MoneyEnvelope, amount: number) => void }) {
   const [amount, setAmount] = useState('')
   const [envId, setEnvId] = useState<string | null>(null)
+  const [wasOpen, setWasOpen] = useState(false)
+  // each opening starts on the envelope she tapped (or the month's spend)
+  if (open && !wasOpen) {
+    setWasOpen(true)
+    setEnvId(initialEnvId ?? null)
+  }
+  if (!open && wasOpen) setWasOpen(false)
   const chosen = envelopes.find((e) => e.id === envId) ?? envelopes.find((e) => partOf(e) === 'spend') ?? envelopes[0]
   return (
     <Sheet open={open} onClose={onClose} title="سجّلي مصروف" detents={['medium', 'large']}>

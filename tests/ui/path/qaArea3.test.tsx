@@ -113,7 +113,7 @@ describe('Driving (area 3)', () => {
     expect(store.getSnapshot().domains.find((d) => d.id === 'driving')!.state).toBe('rest')
     mount(store, <DrivingScreen />, '/path/driving')
     await act(async () => fireEvent.click(screen.getByRole('button', { name: 'فعّلي الخطة الأسبوعية' })))
-    expect(await screen.findByText(/مجال القيادة صار «حفاظ»/)).toBeInTheDocument()
+    expect(await screen.findByText(/مجال القيادة صار «صيانة»/)).toBeInTheDocument()
     expect(store.getSnapshot().domains.find((d) => d.id === 'driving')!.state).toBe('maintain')
     await act(async () => fireEvent.click(screen.getByRole('button', { name: 'تراجع' })))
     await waitFor(() => expect(store.getSnapshot().domains.find((d) => d.id === 'driving')!.state).toBe('rest'))

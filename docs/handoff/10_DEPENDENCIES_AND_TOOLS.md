@@ -80,7 +80,7 @@ Relevance of each advisory to this app's actual usage was **not assessed**. Reme
 | `dev` | `vite` | VERIFIED (ran `npx vite --port 5199 --strictPort`: served `/wejdan-os/` HTTP 200) |
 | `build` | `tsc -b && vite build` | VERIFIED (exit 0) |
 | `preview` | `vite preview` | VERIFIED (ran `npx vite preview --port 4199 --strictPort`: `/wejdan-os/` 200, `/wejdan-os/sw.js` 200) |
-| `test` | `vitest run` | VERIFIED (63 files / 726 tests passed) |
+| `test` | `vitest run` | VERIFIED (77 files / 849 tests passed) |
 | `privacy:scan` | `node scripts/privacy-scan.mjs` | VERIFIED (see 13 §2) |
 | `brand:assets` | `node scripts/brand/generate-brand-assets.mjs` | NOT VERIFIED (would overwrite `public/` images) |
 | *(none)* `lint`, `typecheck`, `e2e` | — | do not exist |
@@ -88,6 +88,6 @@ Relevance of each advisory to this app's actual usage was **not assessed**. Reme
 ## 6. Build output facts (from the run)
 
 - Vite 5.4.11; build ~6 s on an idle machine (first draft: ~13 s loaded).
-- Largest chunks (raw / gzip, final tree): `index` 410.89 / 139.66 kB, `drawings` (flowers) 308.31 / 17.80 kB, `actions` 231.12 / 69.46 kB, `react` 153.37 / 50.35 kB, `actions_ar` 139.78 / 59.12 kB, `motion` 134.85 / 45.04 kB.
-- PWA: `precache 139 entries (2217.50 KiB)`; the two action-library chunks are intentionally outside precache.
+- Largest chunks (raw / gzip, final tree): `index` 422.68 / 143.74 kB, `drawings` (flowers) 308.31 / 17.80 kB, `actions` 231.12 / 69.46 kB, `react` 153.37 / 50.35 kB, `actions_ar` 139.78 / 59.12 kB, `motion` 134.85 / 45.04 kB.
+- PWA: `precache 155 entries (2403.99 KiB)`; the two action-library chunks are intentionally outside precache.
 - `dist/` 9.7 MB (includes `splash/` 22 PNGs and the four `flutter*`/`main.dart.js` shims).

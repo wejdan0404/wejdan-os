@@ -155,6 +155,9 @@ const NOTE_TAG_FOR: Partial<Record<CandidateType, NoteTag>> = {
 };
 
 const K_PERSONAL_LIBRARY = 'personalLibrary';
+/** Weekly-review draft: plaintext localStorage only while the lock is off; a meta row inside the ENCRYPTED database while it is on. */
+export const kReviewDraftLsPrefix = 'wejdan.reviewDraft.v2.';
+const K_REVIEW_DRAFT = 'reviewDraft.';
 
 /** Note edits closer together than this collapse into one change-log entry (autosave). */
 const kNoteCoalesceMs = 2 * 60 * 1000;
@@ -187,6 +190,7 @@ export class LifeStore {
     store = new LifeStore(repo, o.now ?? (() => new Date()), loader);
     await repo.open();
     await store.settlePersonalLibrary();
+    await store.settleReviewDrafts();
     const today = logicalDay(store.clock());
     if (!(await repo.isSeeded())) {
       if (repo.quarantined().length > 0) {
@@ -290,6 +294,79 @@ export class LifeStore {
   /** The shipped library merged with her personal one (for this profile). */
   loadLibrary(): Promise<SeedLibrary> {
     return loadShippedLibrary(this.personalFile);
+  }
+
+  // ---- weekly-review draft (private: wins, miss reasons, ratings) ------------------------------
+  private reviewDrafts = new Map<string, string>();
+  private reviewDraftWrites: Promise<unknown> = Promise.resolve();
+
+  /** The draft text for a week (JSON string), or null. Synchronous: encrypted profiles are cached at open. */
+  getReviewDraftRaw(weekKey: string): string | null {
+    if (this.repo.encrypted) return this.reviewDrafts.get(weekKey) ?? null;
+    try {
+      return window.localStorage.getItem(kReviewDraftLsPrefix + weekKey);
+    } catch {
+      return this.reviewDrafts.get(weekKey) ?? null;
+    }
+  }
+  /** Lock on: the draft goes into the encrypted database only (never localStorage). Lock off: localStorage as before. */
+  setReviewDraftRaw(weekKey: string, raw: string): void {
+    if (this.repo.encrypted) {
+      this.reviewDrafts.set(weekKey, raw);
+      this.reviewDraftWrites = this.reviewDraftWrites.then(() => this.repo.write('meta', K_REVIEW_DRAFT + weekKey, { v: raw })).catch(() => undefined);
+      return;
+    }
+    try {
+      window.localStorage.setItem(kReviewDraftLsPrefix + weekKey, raw);
+    } catch {
+      this.reviewDrafts.set(weekKey, raw);
+    }
+  }
+  clearReviewDraftRaw(weekKey: string): void {
+    this.reviewDrafts.delete(weekKey);
+    try {
+      window.localStorage.removeItem(kReviewDraftLsPrefix + weekKey);
+    } catch {
+      /* storage blocked */
+    }
+    if (this.repo.encrypted) this.reviewDraftWrites = this.reviewDraftWrites.then(() => this.repo.remove('meta', K_REVIEW_DRAFT + weekKey)).catch(() => undefined);
+  }
+
+  /** Same placement rule as the personal library: lock on -> rows in the encrypted database (a leftover localStorage copy moves in, verified, then goes); lock off -> back to localStorage. */
+  private async settleReviewDrafts(): Promise<void> {
+    const rows = new Map<string, string>();
+    for (const [id, v] of await this.repo.readEntries('meta')) {
+      if (id.startsWith(K_REVIEW_DRAFT) && typeof v['v'] === 'string') rows.set(id.slice(K_REVIEW_DRAFT.length), v['v'] as string);
+    }
+    const ls = new Map<string, string>();
+    try {
+      const l = window.localStorage;
+      for (let i = 0; i < l.length; i++) {
+        const k = l.key(i);
+        if (k && k.startsWith(kReviewDraftLsPrefix)) ls.set(k.slice(kReviewDraftLsPrefix.length), l.getItem(k) ?? '');
+      }
+    } catch {
+      /* storage blocked */
+    }
+    if (this.repo.encrypted) {
+      for (const [wk, raw] of ls) {
+        if (!rows.has(wk)) {
+          await this.repo.write('meta', K_REVIEW_DRAFT + wk, { v: raw });
+          const back = await this.repo.read('meta', K_REVIEW_DRAFT + wk);
+          if (back?.['v'] !== raw) throw new Error('review-draft-move-failed');
+          rows.set(wk, raw);
+        }
+        try { window.localStorage.removeItem(kReviewDraftLsPrefix + wk); } catch { /* ignore */ }
+      }
+      this.reviewDrafts = rows;
+      return;
+    }
+    for (const [wk, raw] of rows) {
+      if (!ls.has(wk)) {
+        try { window.localStorage.setItem(kReviewDraftLsPrefix + wk, raw); } catch { continue; }
+      }
+      await this.repo.remove('meta', K_REVIEW_DRAFT + wk);
+    }
   }
 
   /** Records of this profile that could not be opened (damaged / tampered). They are skipped, kept on disk and reported in Settings. */

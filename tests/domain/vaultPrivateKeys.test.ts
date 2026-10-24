@@ -109,3 +109,51 @@ describe('device conveniences: reminders are per profile; the library key is pur
     expect(localStorage.getItem(remindersKey('p_a'))).toBeNull()
   })
 })
+
+describe('weekly-review draft: plaintext localStorage only while the lock is off', () => {
+  const draftKey = 'wejdan.reviewDraft.v2.2026-10-18'
+  const draft = JSON.stringify({ step: 'blockers', wins: ['test-private-win'], blockers: ['tooBig'] })
+
+  it('lock on: a leftover localStorage draft moves into the encrypted database (ciphertext at rest); saving never touches localStorage; clearing removes the row', async () => {
+    localStorage.setItem(draftKey, draft)
+    const repo = await encryptedRepo()
+    const store = await createLifeStore({ repo, now: () => mkDate(2026, 10, 18, 9) })
+    expect(localStorage.getItem(draftKey)).toBeNull()
+    expect(store.getReviewDraftRaw('2026-10-18')).toBe(draft)
+    store.setReviewDraftRaw('2026-10-25', draft)
+    await new Promise((r) => setTimeout(r, 20))
+    expect(Object.keys(localStorage).filter((k) => k.startsWith('wejdan.reviewDraft'))).toEqual([])
+    const raw = new Dexie((repo as unknown as { db: { name: string } }).db.name)
+    await raw.open()
+    const row = (await raw.table('records').get(['meta', 'reviewDraft.2026-10-25'])) as { value: Json }
+    expect(JSON.stringify(row.value)).not.toContain('test-private-win')
+    raw.close()
+    // next unlock still has it
+    const again = await createLifeStore({ repo, now: () => mkDate(2026, 10, 18, 9) })
+    expect(again.getReviewDraftRaw('2026-10-25')).toBe(draft)
+    // not part of exports
+    expect(JSON.stringify(await repo.exportAll())).not.toContain('test-private-win')
+    // finish clears it
+    again.clearReviewDraftRaw('2026-10-25')
+    await new Promise((r) => setTimeout(r, 20))
+    expect(await repo.read('meta', 'reviewDraft.2026-10-25')).toBeNull()
+    expect(again.getReviewDraftRaw('2026-10-25')).toBeNull()
+  })
+
+  it('lock off: localStorage as before; a row that came back from turning the lock off is moved out', async () => {
+    const plain = new DexieLifeRepository(`pk_${n++}`)
+    await plain.open()
+    await plain.write('meta', 'reviewDraft.2026-10-18', { v: draft })
+    const store = await createLifeStore({ repo: plain, now: () => mkDate(2026, 10, 18, 9) })
+    expect(localStorage.getItem(draftKey)).toBe(draft)
+    expect(await plain.read('meta', 'reviewDraft.2026-10-18')).toBeNull()
+    store.setReviewDraftRaw('2026-10-25', draft)
+    expect(localStorage.getItem('wejdan.reviewDraft.v2.2026-10-25')).toBe(draft)
+  })
+
+  it('manual lock / profile switch / delete purge any plaintext draft key', () => {
+    localStorage.setItem(draftKey, draft)
+    purgeDeviceConveniences()
+    expect(localStorage.getItem(draftKey)).toBeNull()
+  })
+})

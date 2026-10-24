@@ -5,7 +5,7 @@
 
 # 14 — Bugs and technical debt
 
-Verified 2026-10-24 (branch `docs/handoff` on top of `main` @ `ed0df23`, after the release-gate-3 fixes).
+Verified 2026-10-24 (branch `docs/handoff` on top of `main` @ `ed0df23`, then the missing-features wave merged from `integ/features` @ `d982b01`; gate-3, gate-4, gate-6 fixes included).
 
 Everything in older QA reports (32 + 18 + area reports) was reported against earlier builds and later fixed in code with regression tests (see 13_TESTING_AND_QA.md §7); those are **not** listed as open unless re-confirmed below.
 
@@ -50,6 +50,25 @@ Everything in older QA reports (32 + 18 + area reports) was reported against ear
 
 Gate-3's own report is local-only (not in the repo); this table is the in-repo record.
 
+## 1.3 Gate 6 (SHIP) and gate 7 (SHIP) — missing-features wave
+
+Reports `release-gate-6.md` and `release-gate-7.md` are local-only (PER-REPORT, read by the author for this revision). Fixed in `fc6bb39` (merged `d982b01`); gate 7 re-tested the fixes.
+
+| ID | Was | State after gate 7 |
+|---|---|---|
+| G6-D1 | Review progress thread drew one star per completed step (up to 9) | Closed: dots + text «N من 10»; one hero star on the done card |
+| G6-D2 | Review draft (wins, miss reasons, ratings, season picks) in plaintext localStorage under the lock | Closed for the graceful path (draft lives in the encrypted DB while the lock is on); crash windows remain: LOS-042, LOS-043 |
+| G6-D3 | Driving road seeded step named «أبشر» without an unverified tag | Wording changed (D3 listed as fixed in the merge; gate 7 section 3 does not re-list it, so **NOT re-verified by gate 7**) |
+| G6-D4 to D6 | Overload message twice; tier chips vs header counts; progress vs open routine | Closed (gate 7 checks D4, D5, D6) |
+| G6-D7 | «حفاظ» vs «صيانة» | Closed (one season word) |
+| G6-D8 | Green Studio badge | Closed (brand violet) |
+| G6-D9 | «بدون عنوان» chapter title | Closed in the review done card; other empty-label strings remain in change-log / import-review contexts |
+| G6-U1 | Free-joy tap once not registering after a level change | UNCONFIRMED, not reproduced (LOS-045 row 14) |
+| G7-M1 | Unfinished review draft lost after turn-off + kill | OPEN, LOS-042 |
+| G7-M2 | Plaintext review draft until first unlock after a crash during enable | OPEN, LOS-043 |
+
+New open defect found by this package: **B21** (below).
+
 ## 1.2 Gate 4 (HOLD) and gate 5 (SHIP) — fixed in `eed6603`, merged as `ed0df23`
 
 Reports `release-gate-4.md` and `release-gate-5.md` are local-only; the rows below are PER-REPORT as relayed by the integrator, with the fix evidence from the commit and the tests that exist now.
@@ -65,6 +84,7 @@ Gate 5 (independent, on the fixed tree): **SHIP** with two open minors: **M1** p
 
 | ID | Sev | Finding | Evidence | Suggested fix |
 |---|---|---|---|---|
+| B21 | Major for test tooling, none for users | Nine hand-run e2e scripts fail at the onboarding step (the «ابدئي يومك» click times out) on the merged tree; the lock kill matrix cannot be re-run until fixed | verified now: 5 scripts + `lockKill` + `featureD`, `ieltsDriving`, `moneyJoy` (13 §2) | LOS-044 |
 | B19 | Minor | Orphan plain database / `_bak_` copy is never cleaned after a kill during turn-off (privacy leftover, no data loss) | gate-5 M1 (PER-REPORT); LOS-040 | delete once per-box counts equal the profile DB; age out `_bak_` |
 | B20 | Minor | Missing-data unlock screen offers no import / start-fresh | gate-5 M2 (PER-REPORT); `UnlockScreen.tsx`, `copy.ts` | LOS-041 |
 

@@ -115,7 +115,8 @@ describe('Onboarding', () => {
     wrap(store, <OnboardingScreen />, '/onboarding')
     fireEvent.click(screen.getByRole('button', { name: 'يلا نبدأ' }))
     fireEvent.change(await screen.findByPlaceholderText('اسمك أو اسم تحبينه'), { target: { value: 'test' } })
-    for (let i = 0; i < 4; i++) {
+    // name→wake→map→joy→products (the joy step is skipped untouched)
+    for (let i = 0; i < 5; i++) {
       const btn = await screen.findByRole('button', { name: /^(التالي|تخطّي)$/ })
       fireEvent.click(btn)
     }

@@ -1,6 +1,6 @@
 /**
  * QA area 2 fixes (UI): routine player honesty, Studio errors/clamp/plurals/semantics,
- * the «حفاظ» cap on new habits, long-press menu persistence, bidi-safe toast names,
+ * the «صيانة» cap on new habits, long-press menu persistence, bidi-safe toast names,
  * Garden view switch, recovery trace.
  */
 import { act, fireEvent, render, screen, waitFor, within } from '@testing-library/react'
@@ -24,7 +24,7 @@ async function makeStore(): Promise<LifeStore> {
   await repo.open()
   return createLifeStore({ repo, now: () => NOW, library })
 }
-/** Exactly five «حفاظ» domains and at least one resting one (the cap scenario from QA). */
+/** Exactly five «صيانة» domains and at least one resting one (the cap scenario from QA). */
 async function fillMaintain(store: LifeStore) {
   const ok = (d: { enabled: boolean; sensitive: boolean }) => d.enabled && !d.sensitive
   for (;;) {
@@ -106,7 +106,7 @@ describe('Studio (#5, #11, #12, #13)', () => {
   })
 })
 
-describe('the «حفاظ» cap on a new habit (#4)', () => {
+describe('the «صيانة» cap on a new habit (#4)', () => {
   it('a habit in a resting domain never silently makes a 6th maintain domain', async () => {
     const store = await makeStore()
     await fillMaintain(store)
@@ -118,7 +118,7 @@ describe('the «حفاظ» cap on a new habit (#4)', () => {
     fireEvent.change(await screen.findByPlaceholderText('مثلًا: مشي هادي'), { target: { value: 'test' } })
     fireEvent.click(screen.getByRole('radio', { name: new RegExp(resting.nameAr) }))
     fireEvent.click(screen.getByRole('button', { name: 'احفظي العادة' }))
-    expect(await screen.findByText('مجالاتك للحفاظ مليانة')).toBeInTheDocument()
+    expect(await screen.findByText('مجالاتك للصيانة مليانة')).toBeInTheDocument()
     expect(store.getSnapshot().domains.filter((d) => d.enabled && d.state === 'maintain').length).toBe(5)
     fireEvent.click(screen.getByRole('button', { name: 'خلّي مجالها مرتاح' }))
     await waitFor(() => expect(store.getSnapshot().habits.some((h) => h.titleAr === 'test')).toBe(true))

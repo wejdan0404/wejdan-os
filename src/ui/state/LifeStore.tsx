@@ -24,6 +24,7 @@ import { TabGateContext } from './tabGate'
 import { useInjectedLifeStore } from '../lock/injection'
 import { WMark } from '../components/WMark'
 import { LegacyMigrationSheet } from './LegacyMigrationSheet'
+import { StorageFrame } from './StorageBanner'
 import styles from './LifeStore.module.css'
 
 const StoreContext = createContext<LifeStore | null>(null)
@@ -64,12 +65,7 @@ export function LifeStoreProvider({ children, store: injectedProp }: { children:
     )
   return (
     <StoreContext.Provider value={store}>
-      {!store.persistent && (
-        <div className={styles.banner} role="status">
-          هالمتصفح ما يحفظ — بياناتك تروح لو سكّرتي الصفحة
-        </div>
-      )}
-      {children}
+      <StorageFrame unavailable={!store.persistent}>{children}</StorageFrame>
       {/* One-time offer to move data from the old (Flutter) version on this origin. */}
       {!injected && store.persistent && <LegacyMigrationSheet store={store} />}
     </StoreContext.Provider>

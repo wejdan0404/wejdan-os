@@ -12,6 +12,8 @@ export interface OnboardingDraft {
   wake: number
   sleep: number
   grow: string[]
+  /** life map (domain → grow | maintain | rest); older drafts only have `grow`. */
+  map?: Record<string, string>
   added: { name: string; slot: string }[]
   picked: string[]
 }
@@ -35,6 +37,7 @@ export function loadOnboardingDraft(): OnboardingDraft | null {
       name: d.name,
       wake: typeof d.wake === 'number' ? d.wake : 6 * 60,
       sleep: typeof d.sleep === 'number' ? d.sleep : 23 * 60,
+      map: d.map && typeof d.map === 'object' && !Array.isArray(d.map) ? Object.fromEntries(Object.entries(d.map).filter(([, v]) => typeof v === 'string')) : undefined,
       grow: Array.isArray(d.grow) ? d.grow.filter((x): x is string => typeof x === 'string') : [],
       added: Array.isArray(d.added) ? d.added.filter((x) => x && typeof x.name === 'string' && typeof x.slot === 'string') : [],
       picked: Array.isArray(d.picked) ? d.picked.filter((x): x is string => typeof x === 'string') : [],

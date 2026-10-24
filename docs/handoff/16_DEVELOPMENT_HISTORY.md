@@ -1,14 +1,14 @@
 # 16 — Development History
 
 > **ملخص**
-> تاريخ هذا المستودع المحلي 56 commit كلها بين 23 و24 أكتوبر 2026 (بناء React كامل ثم دمج فروع الميزات وإصلاحات الفحص الثالث). هذا التاريخ محلي وغير منشور: النشر العام سيكون commit واحد نظيف (snapshot) لأن الـ commits القديمة فيها fixture مشتق من بيانات حقيقية، فأرقام الـ commits هنا تخص المستودع المحلي فقط.
+> تاريخ هذا المستودع المحلي 75 commit كلها بين 23 و24 أكتوبر 2026 (بناء React كامل، دمج فروع الميزات، إصلاحات الفحوصات الثالث والرابع، ثم موجة الميزات الناقصة وإصلاحات الفحص السادس). هذا التاريخ محلي وغير منشور: النشر العام سيكون commit واحد نظيف (snapshot) لأن الـ commits القديمة فيها fixture مشتق من بيانات حقيقية، فأرقام الـ commits هنا تخص المستودع المحلي فقط.
 > تاريخ نسخة Flutter الأقدم موجود في المستودع الآخر (فرع main العام) وسياق المحادثات الأقدم ناقص جزئيًا، فما أكتبه عنه إلا ما له دليل.
 > الأرقام والهاشات هنا من `git log` الآن؛ نتائج الفحص منسوبة لتقاريرها.
 
 ## 0. Scope and limits — read this first
 
 - **This history is LOCAL and UNPUBLISHED.** Every commit hash in this document (`2b7a096`, `c257441`, `5629f51`, …) refers to the local development repository of the integrator's machine. **The public push will be a single clean snapshot commit** (planned branch `react-app` of `https://github.com/wejdan0404/wejdan-os`; status PLANNED/UNVERIFIED until the integrator records the real branch + SHA in `HANDOFF_MANIFEST.json`). The reason: older local commits (before `da4c839`) contained a test fixture derived from a real export of the old app. The snapshot starts from the final tree, whose fixtures are synthetic and which passes `npm run privacy:scan`. After the push the hashes below will **not** exist in the public repository; use them only to understand order and intent, and `git log` of your clone for what is actually there.
-- This repo's local history (`git log` on `ed0df23`, the last app commit; it was 56 commits at `2b7a096`): **58 commits**, all authored as `Claude`, from 2026-10-23 to 2026-10-24 (VERIFIED-NOW: `git rev-list --count`, `git log --format=%an`; 15 merge commits; 27 first-parent entries). The branch `docs/handoff` adds the handoff package on top.
+- This repo's local history (`git log` on `d982b01`, the last app commit; it was 56 commits at `2b7a096` and 58 at `ed0df23`): **75 commits**, all authored as `Claude`, from 2026-10-23 to 2026-10-24 (VERIFIED-NOW: `git rev-list --count d982b01`, `git log --format=%an`; 24 merge commits). The branch `docs/handoff` adds the handoff package on top.
 - No git tags exist (`git tag` empty). No remote is configured in the local repository.
 - **Not in this repo:** the Flutter-era history (built before 2026-10-23, 222 tests per the spec review). It lives in the other line of the public repository (`main`, kept as-is by the owner's choice) and in an earlier handoff package. This document does not describe it beyond what the ledger states.
 - Conversation context before 2026-09-28 is unavailable; the session transcript used here starts 2026-09-28T14:20Z and its earlier part is only a summary. Anything about "why" before that is `UNKNOWN`.
@@ -95,6 +95,25 @@ Release-gate 3 (an independent QA/a11y/design pass of the merged tree; its repor
 
 Gate 4 (independent) returned HOLD (N1 major, N2, N3, N4/N5 polish). Gate 5 (independent, on the fixed tree) returned SHIP with two open minors (LOS-040, LOS-041). Both reports are local-only (PER-REPORT). Per the integrator, the live site was then published as release 2: `gh-pages` @ `f7e1f75` = build of `ed0df23` (139 precache entries).
 
+### Stage 8 — Missing-features wave (2026-10-24, after release 2)
+
+Seven feature branches were merged into `integ/features`, then gate-6 fixes, all authored `Claude`. Specs are the 16 files in `docs/design/`.
+
+| Commit | What |
+|---|---|
+| `3f4a028` | Focus: retrieval step, try-first tip, honest silent-reminder and phone-away prompt (area D) |
+| `44c8bc1` / `2a24dc5` | Today tiers, «يومك جاهز», inline levels, free joy, week strip, momentum ring, calm day (area B) |
+| `40a2d22` / `8547755` | 9-step Habit Studio wizard with evidence prefill; onboarding life map (area E) |
+| `ceba78f` / `ca75efe` | Per-category month envelopes, payday saving reminder, joy map and bundles (area C) |
+| `308d0f1` / `b14c927` | Home tidy/zone/errands, evidence strength filter + add-to-habits, settings cap and modules, storage banner (area D) |
+| `3d4987b` / `9f75e66` | IELTS stats/goals; driving road, conditions, hazard practice, spaced quiz (area F) |
+| `5fadc46` / `e9df17f` | Weekly review depth (10 steps), insights charts, celebrations history (area A) |
+| `1d5086b` / `1c9f0d7` | Optional joy step in onboarding (area G) |
+| `fc6bb39` / `d982b01` | Gate-6 fixes D1 to D9 (review dots, encrypted review draft, Today count/overload, one season term, Studio badge colour, empty chapter title) |
+| `a8ded5c` | Merge `integ/features` @ `d982b01` into `docs/handoff` (this package) |
+
+Gate 6 (independent) returned SHIP; gate 7 (re-test of the fixes) returned SHIP with two minors (LOS-042, LOS-043). Both reports are local-only (PER-REPORT). Per the integrator, the live site is now release 3 (the wave); its `gh-pages` SHA is `d2db69a`.
+
 ### Stage 7 — Audit and this handoff (2026-10-24)
 
 - The audit "promised vs done" (90 rows) was produced at `0fa7aa6`; it is the seed of `03_REQUIREMENTS_TRACEABILITY.md`.
@@ -111,7 +130,9 @@ Gate 4 (independent) returned HOLD (N1 major, N2, N3, N4/N5 polish). Gate 5 (ind
 | Streak/reminders branch | 562 in 52 files | agent report |
 | Merged `4fa6dcc`, first draft of this handoff | 601 in 58 files (600 passed, 1 load-flaky failure, passes alone) | run then |
 | Merged `2b7a096` (gate-3 fixes) | 695 in 63 files, all passed (two full runs) | run earlier in this handoff |
-| Merged `ed0df23` (gate-4 fixes) | **726 in 63 files, all passed** (+31, all in `vaultDurability`) | run now |
+| Merged `ed0df23` (gate-4 fixes) | 726 in 63 files, all passed (+31, all in `vaultDurability`) | run earlier in this handoff |
+| Wave `fc6bb39` (gate-6 run) | 842 in 76 files | gate-6 report (PER-REPORT) |
+| Merged `d982b01` + handoff docs | **849 in 77 files, all passed** | run now (13 §2) |
 
 ## 3. Known history hazards
 

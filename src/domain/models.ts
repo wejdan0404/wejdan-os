@@ -1676,10 +1676,12 @@ export interface ModuleState {
   autoSaveMinute: number;
   freshStartDismissed: string | null;
   resetMinutes: number;
+  /** Area F (IELTS goals, driving road/quiz/hazards) — opaque JSON, parsed by features/ieltsDriving. */
+  ieltsDriving: Json;
 }
 export const defaultModuleState = (): ModuleState => ({
   drivingStepsDone: [], drivingServiceLink: '', ieltsFeedbackChecks: [], homeZoneOffset: 0,
-  autoSaveDay: null, autoSaveMinute: 9 * 60, freshStartDismissed: null, resetMinutes: 10,
+  autoSaveDay: null, autoSaveMinute: 9 * 60, freshStartDismissed: null, resetMinutes: 10, ieltsDriving: {},
 });
 export const ModuleStateJ = {
   fromJson: (j: Json): ModuleState => ({
@@ -1691,12 +1693,14 @@ export const ModuleStateJ = {
     autoSaveMinute: jInt(j, 'autoSaveMinute', 9 * 60),
     freshStartDismissed: jStrN(j, 'freshStartDismissed'),
     resetMinutes: jInt(j, 'resetMinutes', 10),
+    ieltsDriving: j['ieltsDriving'] !== null && typeof j['ieltsDriving'] === 'object' && !Array.isArray(j['ieltsDriving']) ? JSON.parse(JSON.stringify(j['ieltsDriving'])) as Json : {},
   }),
   toJson: (m: ModuleState): Json => ({
     drivingStepsDone: [...m.drivingStepsDone], drivingServiceLink: m.drivingServiceLink,
     ieltsFeedbackChecks: [...m.ieltsFeedbackChecks], homeZoneOffset: m.homeZoneOffset,
     autoSaveDay: m.autoSaveDay, autoSaveMinute: m.autoSaveMinute,
     freshStartDismissed: m.freshStartDismissed, resetMinutes: m.resetMinutes,
+    ieltsDriving: JSON.parse(JSON.stringify(m.ieltsDriving ?? {})) as Json,
   }),
 };
 

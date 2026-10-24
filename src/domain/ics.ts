@@ -101,6 +101,16 @@ export function firstOccurrence(from: Date, weekdays: readonly number[]): Date {
   return dateOnly(from);
 }
 
+/** First date on/after [from] whose day of month is [day]. */
+export function firstMonthDay(from: Date, day: number): Date {
+  let d = dateOnly(from);
+  for (let i = 0; i < 40; i++) {
+    if (d.getDate() === day) return d;
+    d = addDays(d, 1);
+  }
+  return dateOnly(from);
+}
+
 /** `FREQ=DAILY` for every day, else `FREQ=WEEKLY;BYDAY=…` in week order. */
 export function rruleFor(weekdays: readonly number[]): string {
   const days = [...new Set(weekdays)].filter((d) => d >= 1 && d <= 7).sort((a, b) => a - b);
@@ -134,7 +144,7 @@ export function buildIcs(o: IcsOptions): string {
   const sequence = Math.max(0, Math.floor((o.now.getTime() - Date.UTC(2026, 0, 1)) / 60000));
   for (const r of o.items) {
     if (r.minute == null) continue;
-    const start = firstOccurrence(o.now, r.weekdays);
+    const start = r.monthDay != null ? firstMonthDay(o.now, Math.min(28, Math.max(1, r.monthDay))) : firstOccurrence(o.now, r.weekdays);
     const dur = Math.max(5, Math.min(180, Math.round(r.durationMin || 15)));
     const endMinute = r.minute + dur;
     const endDay = endMinute >= 1440 ? addDays(start, 1) : start;
@@ -147,7 +157,7 @@ export function buildIcs(o: IcsOptions): string {
       `SEQUENCE:${sequence}`,
       `DTSTART${tzParam}:${localStamp(start, r.minute)}`,
       `DTEND${tzParam}:${localStamp(endDay, mod(endMinute, 1440))}`,
-      `RRULE:${rruleFor(r.weekdays)}`,
+      `RRULE:${r.monthDay != null ? `FREQ=MONTHLY;BYMONTHDAY=${Math.min(28, Math.max(1, r.monthDay))}` : rruleFor(r.weekdays)}`,
       `SUMMARY:${title}`,
       'TRANSP:TRANSPARENT',
       'BEGIN:VALARM',

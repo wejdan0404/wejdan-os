@@ -14,16 +14,19 @@
     "targetBranch": "react-app",
     "targetBranchStatus": "PLANNED",
     "push": "one clean snapshot commit; local history unpublished",
-    "commit_sha": "fdfef9b1165318780fc57b068b68d361bfd73e77",
-    "pushedAt": "2026-10-24T14:07Z",
+    "commit_sha": "PENDING_PUSH",
+    "pushedAt": "PENDING_PUSH",
     "liveSite": "https://wejdan0404.github.io/wejdan-os/",
     "liveSiteMatchesSource": true,
-    "liveSiteRelease": "release 2: gh-pages f7e1f75 = build of main ed0df23 (139 precache entries); per the integrator, not re-checked by the author"
+    "liveSiteRelease": "release 3 (missing-features wave, source d982b01): gh-pages SHA d2db69a, filled by the integrator; release 2 was f7e1f75 (build of main ed0df23, 139 precache entries); per the integrator, not re-checked by the author"
   },
   "basis": {
     "mainCommit": "ed0df23",
+    "featuresWaveCommit": "d982b01",
     "gate4FixCommit": "eed6603",
+    "gate6FixCommit": "fc6bb39",
     "handoffBranch": "docs/handoff",
+    "handoffMergeCommit": "a8ded5c",
     "note": "hashes refer to local, unpublished history"
   },
   "modules": {
@@ -50,8 +53,13 @@
       },
       {
         "id": "path-projects-goals-ielts-driving",
-        "status": "complete",
-        "evidence": "tests/ui/path"
+        "status": "complete; driving road, quiz, hazard clips and conditions are owner-fillable mechanisms with no official content shipped (unverified labels)",
+        "evidence": "tests/ui/path, tests/domain (ielts and driving)"
+      },
+      {
+        "id": "missing-features-wave-areas-a-to-g",
+        "status": "built and merged (integ/features d982b01); gate 6 SHIP (fixes fc6bb39), gate 7 SHIP with two minors (LOS-042, LOS-043)",
+        "evidence": "docs/design/*.md (16 specs), docs/handoff/04_CURRENT_IMPLEMENTATION.md section 4b, 13_TESTING_AND_QA.md; gate reports are local-only (PER-REPORT)"
       },
       {
         "id": "joy-sparks-rewards",
@@ -71,12 +79,12 @@
       {
         "id": "app-lock-and-profiles-vault",
         "status": "complete; gate 4 HOLD fixed in eed6603; gate 5 independent SHIP with two minors (LOS-040, LOS-041)",
-        "evidence": "tests/domain/vault*.test.ts, tests/ui/lock, e2e lockProfiles (71) and lockKill (375)"
+        "evidence": "tests/domain/vault*.test.ts, tests/ui/lock, e2e lockProfiles (71) and lockKill (375), both on ed0df23; not re-run on d982b01 (LOS-044)"
       },
       {
         "id": "in-app-reminders-and-ics",
         "status": "complete",
-        "evidence": "tests/domain/ics.test.ts, inAppReminders.test.ts, e2e streakRemindersLogo (34)"
+        "evidence": "tests/domain/ics.test.ts, inAppReminders.test.ts, e2e streakRemindersLogo (33, on ed0df23; fails at onboarding on d982b01, LOS-044)"
       },
       {
         "id": "flexible-streak",
@@ -96,7 +104,7 @@
       {
         "id": "bidi-and-arabic-copy",
         "status": "complete",
-        "evidence": "tests/ui/today/bidiF1.test.ts, bidiG3.test.ts, e2e bidiGlyphOrder (21)"
+        "evidence": "tests/ui/today/bidiF1.test.ts, bidiG3.test.ts, e2e bidiGlyphOrder (20)"
       },
       {
         "id": "privacy-tooling",
@@ -114,6 +122,31 @@
         "id": "gate-5-minor-missing-data-screen",
         "backlog": "LOS-041",
         "state": "open; dead end, no import / start-fresh"
+      },
+      {
+        "id": "gate-7-minor-review-draft-lost-after-turn-off-kill",
+        "backlog": "LOS-042",
+        "state": "open, P3; only the unfinished review draft can be lost"
+      },
+      {
+        "id": "gate-7-minor-plaintext-review-draft-after-enable-kill",
+        "backlog": "LOS-043",
+        "state": "open, P3; plaintext review draft in localStorage until first unlock after a kill 300-5000 ms after enable"
+      },
+      {
+        "id": "hand-run-e2e-onboarding",
+        "backlog": "LOS-044",
+        "state": "open, P2; 9 of 12 scripts fail at the onboarding step (claim to verify: the extra onboarding steps); lockKill not re-run on the merged tree"
+      },
+      {
+        "id": "design-vs-build-rows-not-built",
+        "backlog": "LOS-045",
+        "state": "open, P3; each row marked not built (found by search, not exercised)"
+      },
+      {
+        "id": "change-log-entries-driving-ielts",
+        "backlog": "LOS-046",
+        "state": "open, P3; ModuleState.ieltsDriving edits are not logged"
       },
       {
         "id": "remaining-final-checks",
@@ -143,7 +176,7 @@
       {
         "id": "live-site-publish",
         "backlog": "LOS-001 Part B",
-        "state": "done per integrator (release 2, f7e1f75); future publishes still need owner approval"
+        "state": "done per integrator (release 3, gh-pages SHA d2db69a; release 2 was f7e1f75); future publishes still need owner approval"
       },
       {
         "id": "real-device-checks",
@@ -214,37 +247,43 @@
     },
     {
       "command": "npm test",
-      "result": "63 files / 726 tests passed"
+      "result": "77 files / 849 tests passed"
     },
     {
       "command": "npm run build",
-      "result": "exit 0; 650 modules; precache 139 entries (2217.50 KiB)"
+      "result": "exit 0; 712 modules; precache 155 entries (2403.99 KiB)"
     },
     {
       "command": "npm run privacy:scan",
-      "result": "OK; 456 tracked files, 8 patterns, 5 deny-list entries"
+      "result": "OK; 557 tracked files, 8 patterns, 5 deny-list entries"
     },
     {
       "command": "node docs/handoff/tools/check-docs.mjs",
-      "result": "OK; 26 documents, 31 links, 660 paths (docs/handoff/22_COLD_START_AUDIT.md)"
+      "result": "OK; 26 documents, 31 links, 685 paths (docs/handoff/22_COLD_START_AUDIT.md)"
     },
     {
       "command": "tests/e2e/*.e2e.mjs (hand-run)",
-      "result": "toast 28, lock 71 (re-run on ed0df23), streak 34, lockKill 375 (re-run on ed0df23), bidi 21: all passed"
+      "result": "on d982b01: bidi 20, joyOnboarding 17, studioOnboarding 23 passed; lockProfiles, lockKill, streakRemindersLogo, toastClearance, reviewInsightsCelebrations, todayCalm, featureD, ieltsDriving, moneyJoy fail at the onboarding step (LOS-044). On ed0df23: toast 27, lock 71, streak 33, lockKill 375 passed"
     }
   ],
   "criticalBlockers": [],
   "releaseBlockers": [
     "LOS-001 push and publish need owner approval",
     "LOS-040 and LOS-041 gate-5 minors",
+    "LOS-044 hand-run e2e scripts broken by the new onboarding",
     "LOS-033 npm audit",
     "LOS-036 licence",
     "LOS-030 owner rotates tokens"
   ],
   "nextTaskIds": [
     "Phase 0 baseline (docs/handoff/19_NEXT_DEVELOPMENT_PLAN.md)",
+    "LOS-044",
     "LOS-040",
     "LOS-041",
+    "LOS-042",
+    "LOS-043",
+    "LOS-045",
+    "LOS-046",
     "LOS-002",
     "LOS-033",
     "LOS-037",

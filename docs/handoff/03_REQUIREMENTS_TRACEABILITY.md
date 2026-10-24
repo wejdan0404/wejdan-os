@@ -11,7 +11,7 @@
 - **Chk** = how this handoff verified it: `V` = read the code / ran grep or a command now; `R` = relies on a QA/agent report (file named; not re-run); `U` = nothing found.
 - **Status:** `DONE`, `DONE*` (done but not published on the live URL), `PARTIAL`, `NOT DONE`, `DEFERRED-BY-OWNER`, `DECIDED-NOT-DOING`, `OWNER-ACTION`, `NOT VERIFIED`.
 - Evidence names refer to files in this repo unless prefixed `scratchpad:` (local-only reports, **not in the repo**). Test counts: see `13_TESTING_AND_QA.md` §2.
-- `*` = published? See §3 of `01_EXECUTIVE_SUMMARY.md`: only work up to `0fa7aa6` is believed live.
+- `*` = published? See §3 of `01_EXECUTIVE_SUMMARY.md`: release 3 (the wave) is live per the integrator; the `DONE*` marks on older rows are historical.
 
 ## A. Today
 
@@ -63,7 +63,7 @@
 |---|---|---|---|---|---|---|
 | R-050 | Joy items, rewards redeemed with sparks, undo | Joy + rewards screens | `src/ui/screens/joy/*`, `src/domain/engine/sparks.ts` | `tests/ui/joy/joy.test.tsx`; local-only report (not in repo): `release-gate-2.md` §4 (balance 9→4→9) | DONE | R |
 | R-051 | Sparks, momentum, rewards remain; daily spark cap | `kDailySparkCap = 20` | `src/domain/engine/sparks.ts:15` | `tests/domain/sparksRecovery.test.ts`, `strengthMomentum.test.ts` | DONE | V |
-| R-052 | Concave 4-point star only for achievement/evidence, max 3 per screen | Component exists (`StarMark.tsx`); the cap and exclusivity were never re-checked after the design fix | `src/ui/components/StarMark.tsx` | local-only report (not in repo): `area7-design.md` X5 (was drifting), fixed in `e98f52b`, no re-comparison | PARTIAL / NOT VERIFIED → LOS-013 | U |
+| R-052 | Concave 4-point star only for achievement/evidence, max 3 per screen | Component exists (`StarMark.tsx`); the cap and exclusivity were never re-checked after the design fix | `src/ui/components/StarMark.tsx` | local-only report (not in repo): `area7-design.md` X5 (was drifting), fixed in `e98f52b`, no re-comparison | PARTIAL / NOT VERIFIED → LOS-013. Gate 6 counted StarMark svgs on cold route loads: Today 3, Evening 3, IELTS / Driving / Joy / Celebrations 2, Path 1, rest 0 to 1, Evidence 102 (verified-source marks, pre-existing); the review progress thread no longer uses stars after gate-6 D1 (PER-REPORT) | U |
 | R-053 | Payday on the 1st; budget cycle starts at payday | `paydayDay: 1` | `src/domain/models.ts:1142` | `tests/domain/paydayCycle.test.ts` | DONE | V |
 | R-054 | Changing payday day preserves history and shows an honest notice | `paydayHistory` | `src/domain/store.ts` (~942) | `tests/domain/paydayCycle.test.ts`; local-only report (not in repo): `release-gate-2.md` §3 N5 | DONE | R |
 | R-055 | Bills (pay/pause/undo), month plan, spending | Money screen | `src/ui/screens/me/MoneyScreen.tsx` | `tests/ui/money/area4.test.tsx` | DONE | R |
@@ -108,10 +108,10 @@
 
 | ID | Requirement | Implementation | Source files | Verification evidence | Status | Chk |
 |---|---|---|---|---|---|---|
-| R-090 | Works offline after first open | Workbox precache (139 entries, 2217 KiB in the final build) | `vite.config.ts` | `lockProfiles.e2e.mjs` offline checks; local-only report (not in repo): `release-gate-2.md` §4 (18 routes offline at `cb8a2f8`) | DONE | R |
+| R-090 | Works offline after first open | Workbox precache (155 entries, 2404 KiB in the final build) | `vite.config.ts` | `lockProfiles.e2e.mjs` offline checks; local-only report (not in repo): `release-gate-2.md` §4 (18 routes offline at `cb8a2f8`) | DONE | R |
 | R-091 | Update prompt instead of silent reload | `registerType: 'prompt'`; prompt text «فيه تحديث جديد للتطبيق» | `vite.config.ts`, `src/pwa/UpdatePrompt.tsx:11` | text read now; the audit quoted a different wording («— حدّثي»), UI may carry it on the button | DONE | V |
 | R-092 | React replaces Flutter at the same URL without a blank page | Takeover shims + one-time cleanup | `public/flutter*.js`, `public/main.dart.js`, `src/pwa/legacyCleanup.ts` | `tests/e2e/sw-takeover/README.md` (3 scenarios, 2026-10-24), `tests/ui/pwa/legacyCleanup.test.ts` | DONE | V (files) |
-| R-093 | Published and current on the URL | Latest publish ≈ `0fa7aa6` | gh-pages (outside repo) | live bundle `index-DhYFUn4i.js` = local gh-pages clone at `169ca40` (now) | PARTIAL: lock/streak/reminders/W not live → LOS-001 | V |
+| R-093 | Published and current on the URL | Latest publish ≈ `0fa7aa6` | gh-pages (outside repo) | live bundle `index-DhYFUn4i.js` = local gh-pages clone at `169ca40` (now) | PARTIAL at audit time. Now: release 2 (`f7e1f75`, `ed0df23`) and release 3 (missing-features wave; SHA `PENDING_PUSH`) are live per the integrator, not re-checked → LOS-001 Part B | V |
 | R-094 | iOS icons + 11-size splash set built from the real W | CHANGED SINCE AUDIT: generator `npm run brand:assets` (resvg); python generator removed | `scripts/brand/generate-brand-assets.mjs`, `public/splash/*`, `public/icons/*` | files changed in `50643eb`; quality on a device: DEFERRED-BY-OWNER | DONE* (device DEFERRED) | V (stat of commit) |
 | R-095 | Status-bar colour on iPhone | `apple-mobile-web-app-status-bar-style: black-translucent`, theme-color sync | `index.html:11`, `src/ui/shell/theme.tsx` | needs device | DEFERRED-BY-OWNER | V (meta tag) |
 | R-096 | First load ≤ 3 s on slow 4G | ≈ 4 s measured by the earlier ledger; later fonts/perf work, no re-measure | `vite.config.ts` (font preload) | ledger §6 (outside repo) | PARTIAL → LOS-016 | U |
@@ -145,6 +145,31 @@
 | R-122 | Thmanyah font in a native iOS app | Needs a written licence answer from the font owner; not started → LOS-020 |
 | R-123 | Rewrite history / make repo private | Owner declined for now ("leave it as it is") → LOS-031 |
 
+## J. Missing-features wave (areas A to G) — added after the merge of `integ/features` @ `d982b01`
+
+Evidence: specs `docs/design/*.md`; code map in `04_CURRENT_IMPLEMENTATION.md` §4b; tests named there; independent gates 6 and 7 (local-only, PER-REPORT, read by the author). Status `DONE` = built, tested and seen by an independent gate in Chromium; no iPhone evidence for any row (DEFERRED-BY-OWNER).
+
+| ID | Requirement | Status | Chk |
+|---|---|---|---|
+| R-130 | Weekly review as a 10-step ritual (blockers + fix, strength check, season adjust, week experiment, chapter card), skippable, applies nothing until finish, draft survives reload | DONE (gate 6; draft placement under the lock: gate 7, minors LOS-042 / LOS-043) | V + R |
+| R-131 | Insights: momentum by domain, return speed, experiment result; each chart with a table alternative | DONE | V + R |
+| R-132 | «احتفالاتي» celebrations history (derived, no new storage) | DONE | V + R |
+| R-133 | Today grouped by tier with «يومك جاهز» summary, per-item level chip, free-joy card, week strip, all-done card | DONE (gate-6 polish D4 to D6 fixed) | V + R |
+| R-134 | Calm day for low energy, writes nothing on render, Help link | DONE | V + R |
+| R-135 | Joy map (small / medium / big) and reserved-joy bundles (max 3) | DONE | V + R |
+| R-136 | Per-category monthly money envelopes inside the payday cycle | DONE (payday-change regression checked by gate 6) | V + R |
+| R-137 | Payday saving reminder; the app never moves or suggests money | DONE | V + R |
+| R-138 | Focus finish: retrieval question, try-first tip, phone-away reminder with honest wording | DONE | V + R |
+| R-139 | Home: 10-minute tidy, weekly zone, batched errands | DONE | V + R |
+| R-140 | Evidence strength filter and «أضيفيها لعاداتي» | DONE | V + R |
+| R-141 | Settings: daily reminder cap, optional-modules list, storage-unavailable banner | DONE (cap enforcement with real due reminders covered by vitest only; banner trigger not exercised by gate 6) | V + R |
+| R-142 | Habit Studio 9-step wizard with evidence prefill; quick form kept | DONE | V + R |
+| R-143 | Onboarding life map (grow / maintain / rest, caps 3 / 5) | DONE | V + R |
+| R-144 | Onboarding joy step | DONE (the branch "bundles after habits exist" looked at only briefly by gate 6) | V + R |
+| R-145 | IELTS stats, target band and current level (owner-filled) | DONE | V + R |
+| R-146 | Driving road / quiz / hazard / conditions as owner-fillable mechanisms; no official content shipped; unverified steps visibly labelled | DONE as mechanisms; official content is not provided and not claimed → LOS-045 row 2 | V + R |
+| R-147 | Remaining design-board rows not built | NOT DONE → LOS-045, LOS-046 | V (text search only) |
+
 ## Spot-verification log (this handoff)
 
 At least 25 rows were checked against code or by running a command (Chk = V): R-001, 007, 013, 014, 020, 021, 023, 025, 028, 029, 030, 042, 051, 053, 056, 057, 070, 071, 072, 073, 074, 075, 076, 078, 079, 080, 082–088, 091, 092, 093, 095, 100, 101, 102, 103, 104, 105, 107, 113. Rows labelled `R` rely on the named reports and tests; the tests themselves ran in this handoff (695 of 695 passed; see `13_TESTING_AND_QA.md` §2), but a green unit test is not proof of the visual QA claim next to it.
@@ -159,4 +184,4 @@ At least 25 rows were checked against code or by running a command (Chk = V): R-
 | Backup reminder: none | Implemented (R-075) |
 | W logo: PNG crop | SVG (R-104) |
 | P1 lands on Settings | Fixed per lock-branch report and e2e assertion (R-013) |
-| 498 tests | 726 tests in 63 files (run now) |
+| 498 tests | 849 tests in 77 files (run now) |

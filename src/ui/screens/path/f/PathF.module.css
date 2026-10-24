@@ -1,0 +1,120 @@
+/* Area F — IELTS stats + driving extras. Identity tokens only. */
+
+.pad { margin-inline: var(--page-margin); }
+
+/* ---- IELTS stat cards ---------------------------------------------------- */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-3);
+  margin-inline: 0;
+}
+.statsWrap { container: stats / inline-size; margin-inline: var(--page-margin); }
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--space-2);
+  min-width: 0;
+  padding: var(--space-4) var(--space-2);
+  border-radius: var(--r-card);
+  background: var(--surface-elevated);
+  box-shadow: var(--shadow-subtle);
+  text-align: center;
+}
+.statValue { font: var(--type-metric); color: var(--text-primary); }
+.statLabel { font: var(--type-footnote); color: var(--text-muted); overflow-wrap: anywhere; }
+.statArcNum { font: var(--type-headline); font-family: var(--font-numeric); color: var(--text-primary); }
+.dots { display: flex; gap: 4px; flex-wrap: wrap; justify-content: center; }
+.dot {
+  width: 16px; height: 16px; border-radius: var(--r-pill);
+  border: 1.5px solid var(--border-default);
+  display: grid; place-items: center; color: var(--on-action);
+}
+.dot[data-on] { background: var(--action-default); border-color: var(--action-default); }
+.note { margin: 0 calc(var(--page-margin) + 4px); font: var(--type-footnote); color: var(--text-muted); }
+
+@container stats (max-width: 18rem) { .stats { grid-template-columns: minmax(0, 1fr); } .stat { flex-direction: row; justify-content: space-between; text-align: start; padding-inline: var(--space-4); } }
+
+/* ---- goals ---------------------------------------------------------------- */
+.valueRow { display: flex; align-items: baseline; justify-content: space-between; gap: var(--space-3); padding: var(--space-3) var(--space-4); min-height: var(--tap); }
+.valueRow + .valueRow { border-block-start: 1px solid var(--separator); }
+.valueKey { font: var(--type-body); color: var(--text-primary); }
+.valueVal { font: var(--type-headline); font-family: var(--font-numeric); color: var(--text-accent); }
+.valueVal[data-empty] { font: var(--type-caption); color: var(--text-muted); }
+.card {
+  margin-inline: var(--page-margin);
+  display: flex; flex-direction: column; gap: var(--space-3);
+  padding: var(--space-4);
+  border-radius: var(--r-card);
+  background: var(--surface-elevated);
+  box-shadow: var(--shadow-subtle);
+}
+.cardFlush { padding: 0; gap: 0; overflow: hidden; }
+.cardTitle { margin: 0; font: var(--type-headline); color: var(--text-primary); }
+.cardSub { margin: 0; font: var(--type-caption); color: var(--text-muted); }
+.actions { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+
+/* ---- road -------------------------------------------------------------------- */
+.stage { display: flex; flex-direction: column; gap: var(--space-2); }
+.stageHead { display: flex; align-items: center; gap: var(--space-3); }
+.stageNum {
+  flex: none; width: 32px; height: 32px; border-radius: var(--r-pill);
+  display: grid; place-items: center;
+  background: var(--action-default); color: var(--on-action);
+  font: var(--type-label); font-family: var(--font-numeric);
+}
+.stageNum[data-idle] { background: var(--surface-subtle); color: var(--text-muted); border: 1px solid var(--border-subtle); }
+.stageTitle { flex: 1; min-width: 0; margin: 0; font: var(--type-headline); color: var(--text-primary); overflow-wrap: anywhere; }
+.steps { display: flex; flex-direction: column; margin: 0; padding: 0; list-style: none; }
+.step { display: flex; align-items: flex-start; gap: var(--space-3); padding-block: var(--space-2); border-block-start: 1px solid var(--separator); }
+.stepBody { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; text-align: start; border: 0; background: none; font: inherit; color: inherit; padding: 0; cursor: pointer; min-height: var(--tap); justify-content: center; }
+.stepBody:focus-visible { outline: 2px solid var(--focus-ring); border-radius: var(--r-control); }
+.stepTitle { font: var(--type-body); color: var(--text-primary); overflow-wrap: anywhere; }
+.stepTitle[data-done] { color: var(--text-muted); }
+.stepNote { font: var(--type-footnote); color: var(--text-muted); overflow-wrap: anywhere; }
+.chips { display: flex; flex-wrap: wrap; gap: var(--space-1); }
+.callout {
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--r-control);
+  background: var(--action-tint);
+  color: var(--text-secondary);
+  font: var(--type-caption);
+}
+.link { color: var(--text-accent); font: var(--type-caption); text-decoration: underline; text-underline-offset: 3px; overflow-wrap: anywhere; min-height: var(--tap); display: inline-flex; align-items: center; }
+.link:focus-visible { outline: 2px solid var(--focus-ring); border-radius: var(--r-chip); }
+
+/* ---- metrics (practice log) ---------------------------------------------------- */
+.metricsWrap { container: metrics / inline-size; }
+.metrics { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-2); }
+.metric { display: flex; flex-direction: column; align-items: center; gap: 2px; padding: var(--space-3) var(--space-2); border-radius: var(--r-control); background: var(--surface-subtle); text-align: center; min-width: 0; }
+.metricVal { font: var(--type-metric); color: var(--text-primary); }
+.metricLabel { font: var(--type-footnote); color: var(--text-muted); overflow-wrap: anywhere; }
+@container metrics (max-width: 16rem) { .metrics { grid-template-columns: minmax(0, 1fr); } .metric { flex-direction: row; justify-content: space-between; padding-inline: var(--space-4); } }
+.condRow { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+
+/* ---- quiz --------------------------------------------------------------------- */
+.qWrap { display: flex; flex-direction: column; gap: var(--space-4); }
+.qText { margin: 0; font: var(--type-title2); color: var(--text-primary); overflow-wrap: anywhere; }
+.choices { display: flex; flex-direction: column; gap: var(--space-2); margin: 0; padding: 0; list-style: none; }
+.choice {
+  display: flex; align-items: center; gap: var(--space-3); width: 100%;
+  min-height: 56px; padding: var(--space-3) var(--space-4);
+  border: 1.5px solid var(--border-subtle); border-radius: var(--r-control);
+  background: var(--surface-elevated); color: var(--text-primary);
+  font: var(--type-body); text-align: start; cursor: pointer;
+}
+.choice:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
+.choice:disabled { cursor: default; }
+.choice[data-state='right'] { border-color: var(--success); background: var(--success-surface); }
+.choice[data-state='picked'] { border-color: var(--action-default); background: var(--action-tint); }
+.choiceMark { flex: none; width: 24px; height: 24px; display: grid; place-items: center; color: var(--success); }
+.feedback { margin: 0; padding: var(--space-3) var(--space-4); border-radius: var(--r-control); background: var(--surface-subtle); font: var(--type-caption); color: var(--text-secondary); overflow-wrap: anywhere; }
+.progressRow { font: var(--type-footnote); color: var(--text-muted); }
+.summary { display: flex; flex-direction: column; align-items: center; gap: var(--space-3); padding-block: var(--space-6); text-align: center; }
+
+.iconBtn { width: 44px; height: 44px; display: grid; place-items: center; border: 0; border-radius: var(--r-pill); background: transparent; color: var(--text-muted); cursor: pointer; flex: none; }
+.iconBtn:focus-visible { outline: 2px solid var(--focus-ring); }
+.helpRow { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); margin-inline: calc(var(--page-margin) + 4px); font: var(--type-footnote); color: var(--text-muted); }
+.sheetList { display: flex; flex-direction: column; gap: var(--space-3); padding-block-end: var(--space-6); }

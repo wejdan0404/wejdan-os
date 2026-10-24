@@ -64,10 +64,10 @@ export function TodayReminderBanner() {
               className={styles.bannerPrimary}
               onClick={() => {
                 dismiss(visible)
-                navigate(visible.kind === 'routine' ? `/routine/${visible.itemId}/play` : `/habits/${visible.itemId}`)
+                navigate(visible.kind === 'routine' ? `/routine/${visible.itemId}/play` : visible.kind === 'saving' ? '/me/money' : `/habits/${visible.itemId}`)
               }}
             >
-              ابدئي
+              {visible.kind === 'saving' ? 'افتحي المال' : 'ابدئي'}
             </button>
             <button type="button" className={styles.bannerSecondary} onClick={() => snooze(visible)}>
               بعد 10 دقايق

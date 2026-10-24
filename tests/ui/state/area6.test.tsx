@@ -97,12 +97,13 @@ describe('D6 — a running focus session survives a reload', () => {
 })
 
 describe('D7/D8 — weekly review and onboarding resume after a reload', () => {
-  it('review draft per week, cleared when finished', () => {
-    saveReviewDraft('2026-10-11', { step: 3, wins: ['test'], important: ['p:1'], fates: { 't:1': 'inbox' }, pause: [], top3: ['test'], fit: 'heavy', title: 'test' })
-    expect(loadReviewDraft('2026-10-11')?.step).toBe(3)
-    expect(loadReviewDraft('2026-10-18')).toBeNull()
-    clearReviewDraft('2026-10-11')
-    expect(loadReviewDraft('2026-10-11')).toBeNull()
+  it('review draft per week, cleared when finished', async () => {
+    const store = await createLifeStore({ repo: new InMemoryLifeRepository(), now: () => mkDate(2026, 10, 11, 9) })
+    saveReviewDraft(store, '2026-10-11', { step: 'deferred', wins: ['test'], important: ['p:1'], fates: { 't:1': 'inbox' }, pause: [], top3: ['test'], fit: 'heavy', title: 'test', blockers: ['tooBig'], strengthHabit: '', ratings: { h: [1, 2, 3, 4] }, seasonStates: { health: 'grow' }, expPick: null })
+    expect(loadReviewDraft(store, '2026-10-11')).toMatchObject({ step: 'deferred', blockers: ['tooBig'], ratings: { h: [1, 2, 3, 4] }, seasonStates: { health: 'grow' } })
+    expect(loadReviewDraft(store, '2026-10-18')).toBeNull()
+    clearReviewDraft(store, '2026-10-11')
+    expect(loadReviewDraft(store, '2026-10-11')).toBeNull()
   })
 
   it('onboarding draft and the deep link she opened before first run', () => {

@@ -7,7 +7,7 @@ A personal day-planner / habits / projects / joy / money **PWA** for one owner, 
 - Optional on-device **app lock** with several profiles (AES-GCM-256 at rest, PBKDF2 key derivation, recovery code), encrypted backups, old-app (Flutter) data migration.
 - Light **and** dark themes, identity colours only (White `#FFFFFF`, Ink `#0E121C`, Sky `#BEDAF7`, Violet `#6172B5`), IBM Plex Sans Arabic + El Messiri (self-hosted, OFL).
 
-Live app: <https://wejdan0404.github.io/wejdan-os/> (release 2, a build of `main` @ `ed0df23` per the integrator; see `docs/handoff/01_EXECUTIVE_SUMMARY.md` §3).
+Live app: <https://wejdan0404.github.io/wejdan-os/> (release 3, the missing-features wave built from `d982b01`, per the integrator; `gh-pages` SHA `d2db69a`; see `docs/handoff/01_EXECUTIVE_SUMMARY.md` §3).
 
 ## Quick start
 
@@ -16,7 +16,7 @@ Requires Node 22 and npm 10 (verified with Node v22.22.2 / npm 10.9.7; no `engin
 ```bash
 npm ci                                   # install exactly from package-lock.json
 npm run dev                              # dev server — open http://localhost:5173/wejdan-os/  (note the base path)
-npm test                                 # vitest: 63 files / 726 tests
+npm test                                 # vitest: 77 files / 849 tests
 npx tsc --noEmit -p tsconfig.app.json    # type-check src + tests (bare `tsc --noEmit` checks nothing)
 npm run build                            # tsc -b && vite build  → dist/ (service worker + manifest included)
 npm run preview                          # serve dist at http://localhost:4173/wejdan-os/
@@ -58,7 +58,7 @@ No licence file has been chosen yet (all rights reserved by default); third-part
 **وجدان** تطبيق ويب (PWA) شخصي يرتّب اليوم والعادات والمشاريع والمتعة والمال بدون ضغط ولا لوم. الواجهة عربية بالكامل (من اليمين لليسار وباللهجة السعودية)، وكل البيانات تُحفظ على الجهاز نفسه فقط: ما فيه خادم ولا حسابات ولا تتبّع.
 
 - المطوّر يحتاج Node 22: شغّلي `npm ci` ثم `npm run dev` وافتحي `/wejdan-os/` (المسار الأساسي مهم).
-- الاختبارات: `npm test` (726 اختبارًا)، والبناء: `npm run build`، وفحص الخصوصية قبل أي رفع: `npm run privacy:scan`.
+- الاختبارات: `npm test` (849 اختبارًا)، والبناء: `npm run build`، وفحص الخصوصية قبل أي رفع: `npm run privacy:scan`.
 - ابدئي من `CODEX_START_HERE.md` ثم `AGENTS.md` ثم `docs/handoff/00_HANDOFF_INDEX.md`.
 - القرارات المعتمدة من المالكة (وضعان فاتح وداكن، ألوان الهوية فقط، خط IBM Plex Sans Arabic مع El Messiri) تغلب أي برومبت عام؛ خط «ثمانية» غير مستخدم لأن رخصته تمنع استضافة ملفات الخط علنًا.
 - المستودع عام: ممنوع رفع أي بيانات شخصية أو نسخ احتياطية أو رموز استرداد.

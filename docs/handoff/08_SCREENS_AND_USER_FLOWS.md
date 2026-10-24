@@ -5,7 +5,7 @@
 
 # 08 — Screens and user flows
 
-Verified 2026-10-24 on branch `docs/handoff` (on top of `main` @ `ed0df23`). Routing is **hash routing** (`HashRouter` in `src/App.tsx`, app base path `/wejdan-os/`); the manifest `start_url` is `/wejdan-os/` and the root hash `/` redirects to `/today`.
+Verified 2026-10-24 on branch `docs/handoff` (on top of `main` @ `ed0df23`; routes re-read on `d982b01`: the wave added `/today/calm` and `/joy/celebrations` and swapped `/studio` to `StudioEntry`). Routing is **hash routing** (`HashRouter` in `src/App.tsx`, app base path `/wejdan-os/`); the manifest `start_url` is `/wejdan-os/` and the root hash `/` redirects to `/today`.
 
 ## 1. How routing works (verified)
 
@@ -74,6 +74,29 @@ Coverage check (script run during this handoff): routes in `pushed` = 29; rows a
 
 Screens not reachable by a route but part of flows: `LockGate`, `UnlockScreen`, `ProfilePicker`, `RecoveryCodeStep`, `LockSetup`, `ForgotFlow`, `ProfileSheets` (`src/ui/lock/*`), `LegacyMigrationSheet`, `QuickAddSheet`, `SearchSheet`, `PostponeSheet`, `DomainWakeSheet`, `JoyEditSheet`, `ReminderTimeSheet`, `CalendarExportSheet`, `UpdatePrompt`.
 
+### 2.4 Added or changed by the missing-features wave (areas A to G)
+
+The line counts and descriptions in §2.1 to §2.3 were taken at `ed0df23`; the wave rewrote or extended many of those files. Authoritative map of the wave: `04_CURRENT_IMPLEMENTATION.md` §4b. Routes and entry points:
+
+| Route / entry | What | Notes |
+|---|---|---|
+| `#/today` (changed) | Tiered day, «يومك جاهز» card with momentum ring, level chip, free-joy card, week strip, all-done card, saving-reminder banner | `today-calm.md` |
+| `#/today/calm` (new, pushed route) | Calm day for low energy: three minimum items, what rests, Help link; reached from Today and the brief when energy is low | writes nothing on render |
+| `#/focus/:id` (changed) | Phone-away card, try-first tip, retrieval question at the end of a study session | `focus-finish.md` |
+| `#/studio` (changed) | Wizard (`StudioEntry` chooses wizard or quick form); `?mode=quick` or `?habit=<id>` = the old form; `?action=<ACTION-ID>` = wizard prefilled from the evidence library | `habit-studio-wizard.md` |
+| `#/review` (changed) | 10 steps, dots thread, chapter card on the done screen | `weekly-review-depth.md` |
+| `#/me/insights` (changed) | Momentum by domain, return speed, experiment result, each with a table alternative | `insights-depth.md` |
+| `#/joy/celebrations` (new) | «احتفالاتي» history, entered from مكافآتي | `celebrations.md` |
+| `#/joy` (changed) | Joy map (three size groups), reserved-joy bundles | `joy-map.md` |
+| `#/me/money` (changed) | Month envelopes by category, saving reminder card | `money-envelopes.md`, `payday-saving-reminder.md` |
+| `#/me/home` (changed) | Tidy timer, weekly zone, batched errands above the documents list | `home-tidy.md` |
+| `#/me/evidence` (changed) | Strength chips, «أضيفيها لعاداتي» | `evidence-strength.md` |
+| `#/me/settings` (changed) | Reminder cap, optional-modules list; app-wide storage banner when saving is unavailable | `settings-extras.md` |
+| Onboarding (changed) | Life map step (grow / maintain / rest) and the optional joy step «وش يفرّحك؟» | `onboarding-life-map.md`, `joy-onboarding.md` |
+| `#/path/ielts`, `#/path/driving` (changed) | IELTS practice stats and goals; driving road, practice log, hazard goal, quiz | `ielts-stats.md`, `driving-road-quiz-hazard.md` |
+
+(Only `/today/calm` and `/joy/celebrations` are new routes; the others keep the paths of §2.1 to §2.3.)
+
 ## 3. Captured screenshots (real, from the production build)
 
 Method: `npm run build` → copy of `dist` under `<tmp>/wejdan-os/` → `python3 -m http.server 6403` (PID recorded, stopped by PID) → Playwright 1.47.2 + Chromium 141 (`/opt/pw-browsers/chromium`, `--headless=new`), viewport 390×844, `deviceScaleFactor` 2 (stored downscaled to 390×844, 48-colour PNG to keep the folder at ≈680 KB), `ar-SA`, `Asia/Riyadh`, service worker blocked, time pinned to Wed 2026-10-07 16:50 by a `Date` subclass (not `page.clock`). Data: onboarding name `test`, four neutral starter habits, synthetic logs; nothing personal. Scripts: `docs/handoff/tools/capture-screens.mjs` (+ e2e scripts for lock/reminder shots).
@@ -99,7 +122,7 @@ Method: `npm run build` → copy of `dist` under `<tmp>/wejdan-os/` → `python3
 | `82-reminder-banner-light.png` | In-app reminder banner on Today (e2e `streakRemindersLogo`) | light |
 | `83-ics-ready-light.png` | Calendar file ready sheet (e2e) | light |
 
-Screens `01`–`72` were captured on the first-draft build (`4fa6dcc`); `80`–`83` were re-captured on the final tree (`2b7a096`, in-flow reminder banner). The gate-3 changes do not alter the other screens. Captured but not stored (size budget): the remaining routes in both themes (`11…63`, 36 light + 36 dark images, all rendered without console errors: `_log-light.json`, `_log-dark.json` = `errors: [], skipped: []`). Re-run `capture-screens.mjs` to regenerate them.
+Screens `01`–`72` were captured on the first-draft build (`4fa6dcc`); `80`–`83` were re-captured on the final tree (`2b7a096`, in-flow reminder banner). The gate-3 changes do not alter the other screens, but **the missing-features wave does** (Today, Habits studio, review, insights, joy, money, home, evidence, settings, onboarding, IELTS, driving): the stored screenshots of those screens are from the older build and no longer match them. They were not re-captured for this revision (`capture-screens.mjs` was not re-run); the independent gate-6 screenshots are local-only. Captured but not stored (size budget): the remaining routes in both themes (`11…63`, 36 light + 36 dark images, all rendered without console errors: `_log-light.json`, `_log-dark.json` = `errors: [], skipped: []`). Re-run `capture-screens.mjs` to regenerate them.
 
 **Could not capture:** item detail with a real plan item; project detail; import review; existing note; routine player with real steps; flower stages above seed; streak states other than those seeded; payday-day variants; toast/undo states beyond e2e; Help screen kept out of the repo set by choice; all iOS-specific behaviour (standalone display, safe areas, Dynamic Type, status bar, splash) — **no iOS device or simulator available**; keyboard-driven flows with the iOS software keyboard.
 

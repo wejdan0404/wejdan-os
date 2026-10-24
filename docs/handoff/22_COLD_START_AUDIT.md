@@ -24,13 +24,15 @@ Environment: Linux x86_64 container, Node v22.22.2, npm 10.9.7, no network restr
 | 2 | `npx tsc --noEmit -p tsconfig.app.json` | exit 0, about 14 s |
 | 3 | `npm test` | **63 files passed, 695 tests passed** (tree at `2b7a096` + handoff docs), duration 97.8 s (141.5 s on the first plain-copy run); stderr: 40 `not wrapped in act(...)` and 40 React Router future-flag warning lines |
 | 4 | `npm run build` | exit 0; **650 modules transformed**; `precache 139 entries (2217.50 KiB)` |
-| 5 | `npm run privacy:scan` | exit 0 (`privacy-scan OK`; 453 files at that commit, 456 on the final tree) |
+| 5 | `npm run privacy:scan` | exit 0 (`privacy-scan OK`; 453 files at that commit, 557 on the merged tree) |
 | 6 | `node docs/handoff/tools/scan-asset-refs.mjs` | 341 files, 1651 references, 0 broken, no unreferenced assets |
 | 7 | `npx vite --port 5199 --strictPort` then `curl /wejdan-os/` | HTTP 200, page has `lang="ar" dir="rtl"`; `curl /` returns 302 (redirect to the base path), which is why the docs say to open the base path |
 | 8 | `npx vite preview --port 4199` then `curl /wejdan-os/` and `/wejdan-os/sw.js` | both HTTP 200 |
 | 9 | `node docs/handoff/tools/check-docs.mjs` | 2 problems on this run, both caused by the not-yet-written `22_COLD_START_AUDIT.md`; see §4 for the final run |
 
 Matches the expectations in `CODEX_START_HERE.md` §5 as they were at that time (63 / 695 / 650 / 139 entries). **Addendum after the gate-4 merge (`ed0df23`, 2026-10-24):** the expectations were updated to 63 files / 726 tests and precache 2217.50 KiB. Re-run on the merged working tree (not a fresh clone): `npx tsc --noEmit -p tsconfig.app.json` exit 0; `npm test` 63 files / 726 tests passed in 101 s (40 `act` + 40 router warning lines, unchanged); `npm run build` exit 0, 650 modules, precache 139 entries (2217.50 KiB). A full fresh-clone repeat was not done for this addendum; the commands and the steps in `CODEX_START_HERE.md` §5 did not change. New open items found since: LOS-040, LOS-041 (gate-5 minors, `18_REMAINING_BACKLOG.md`).
+
+**Addendum after the wave merge (`d982b01` merged into `docs/handoff` as `a8ded5c`, 2026-10-24):** the expectations are now 77 test files / 849 tests and precache 155 entries (2403.99 KiB; the coordinator quoted 2403.97, the author measured 2403.99). Re-run on the merged working tree (not a fresh clone): `npx tsc --noEmit -p tsconfig.app.json` exit 0; `npm test` 77 files / 849 tests passed; `npm run build` exit 0, 712 modules; asset scan 426 files / 2059 references / 0 broken. The e2e scripts were run from the working tree: three pass, nine fail at the onboarding step (LOS-044; `13_TESTING_AND_QA.md` §2). A fresh-clone repeat was not done for this addendum.
 
 ## 3. Findings and fixes
 
@@ -52,9 +54,9 @@ Not a finding but worth knowing: `npm ci` output includes the 9 audit findings; 
 
 `node docs/handoff/tools/check-docs.mjs` checks (a) every relative markdown link in README, AGENTS, CODEX_START_HERE and `docs/handoff/*.md`, (b) every backticked repository path (src, tests, docs, scripts, public, root config files) mentioned in them, (c) test-file and dependency counts against the tree. Wildcard or placeholder tokens, build output and paths that are explicitly outside the repository are skipped by design (listed at the top of the script).
 
-Final run on the working tree after all fixes (26 documents, 31 relative links, 660 backticked paths checked): **`docs check: OK`, exit 0**. Count lines printed: 63 test files (32 / 30 / 1), 10 dependencies, 17 devDependencies.
+Final run on the working tree after all fixes (26 documents, 31 relative links, 685 backticked paths checked, merged tree): **`docs check: OK`, exit 0**. Count lines printed: 77 test files (38 / 38 / 1), 10 dependencies, 17 devDependencies.
 
-Counts verified against the tree: 63 test files (32 domain, 30 ui, 1 migration); 10 dependencies and 17 devDependencies; 270 tracked files under `src/` of which 203 are `.ts`/`.tsx` (33,376 lines; 11,723 in `src/domain`); 456 tracked files at the final commit.
+Counts verified against the earlier tree (`2b7a096`, before the wave): 63 test files (32 domain, 30 ui, 1 migration); 10 dependencies and 17 devDependencies; 270 tracked files under `src/` of which 203 are `.ts`/`.tsx` (33,376 lines; 11,723 in `src/domain`); 456 tracked files at the final commit.
 
 ## 5. What this audit did not cover
 
@@ -67,7 +69,7 @@ Counts verified against the tree: 63 test files (32 domain, 30 ui, 1 migration);
 
 | Check | How | Result |
 |---|---|---|
-| Repository privacy scanner | `npm run privacy:scan` on the final tree | OK, 456 tracked files, 8 patterns, 5 deny-list entries |
+| Repository privacy scanner | `npm run privacy:scan` on the final tree | OK, 557 tracked files, 8 patterns, 5 deny-list entries |
 | E-mail addresses in docs, README, AGENTS, CODEX_START_HERE | `grep -rnE` for address shapes | none |
 | Token or key shapes (GitHub, AWS, Google, JWT, PEM) | `grep -rnEi` | none |
 | Phone-number shapes | `grep -rnE` for +966 / 05 prefixes | none |

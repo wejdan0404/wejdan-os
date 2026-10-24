@@ -5,7 +5,7 @@
 
 # 06 — Codebase guide
 
-Repository root = a single Vite app named `wejdan-os-web` (`package.json` v0.1.0, `"type": "module"`, private). **270 files under `src/`** (`git ls-files src`), **33 376 lines of `.ts`/`.tsx` in `src/`**, **11 723 lines of `.ts` in `src/domain`** (`wc -l`), 63 vitest files (counts re-taken on `2b7a096`; the "imported by" numbers below are from the first-draft script and were not recomputed except where noted).
+Repository root = a single Vite app named `wejdan-os-web` (`package.json` v0.1.0, `"type": "module"`, private). **334 files under `src/`** (`git ls-files src`; 249 of them `.ts`/`.tsx`), **39 175 lines of `.ts`/`.tsx` in `src/`**, **13 458 lines in `src/domain`** (`wc -l`), 77 vitest files (counts re-taken on `d982b01` + the handoff docs; the "imported by" numbers below are from the first-draft script and were not recomputed except where noted).
 
 How "imported by" was derived: a Node script (kept outside the repo) parsed every `from '…'`, `import('…')` and side-effect import in `src/**` and `tests/**` with relative specifiers, resolved them to files, and inverted the graph. "src N / t M" = N importing files under `src/` (excluding the dev `preview/` harnesses unless noted) and M test files. Non-relative imports (npm packages, `virtual:pwa-register`) are covered in 10_DEPENDENCIES_AND_TOOLS.md. A test file that imports only `src/domain/index.ts` counts toward that facade, not toward the individual engine file.
 
@@ -143,7 +143,7 @@ Every `*Screen.tsx` default export is imported by exactly one place: a lazy impo
 | `tests/migration/flutterExport.test.ts` + `tests/fixtures/migration/*` | Flutter export → React store parity. Fixtures are **synthetic** (`flutter_export_synthetic.json`, `flutter_ui_expected.json`). | `npm test` |
 | `tests/e2e/*.mjs`, `tests/e2e/sw-takeover/` | Playwright scripts (not vitest; see 12 §6). | manual |
 
-Totals from the run in this pass: 63 files / 726 tests (32 files / 401 tests in `tests/domain`, 30 files / 288 under `tests/ui`, 1 file / 6 in `tests/migration`).
+Totals from the run in this pass: 77 files / 849 tests (38 files / 503 tests in `tests/domain`, 38 files / 340 under `tests/ui`, 1 file / 6 in `tests/migration`).
 
 ## 8. Where to start for common changes
 

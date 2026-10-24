@@ -240,7 +240,11 @@ describe('weekly review decisions can be undone (#18)', () => {
     fireEvent.click(screen.getByRole('button', { name: 'التالي' })) // 2 → 3
     // steps cross-fade (AnimatePresence) — wait for question 3 to mount
     fireEvent.click(within(await screen.findByRole('radiogroup', { name: 'قرار: test' }, { timeout: 3000 })).getByRole('radio', { name: 'شيليه' }))
-    for (let i = 0; i < 3; i++) fireEvent.click(screen.getByRole('button', { name: 'التالي' })) // 3 → 6
+    // on through the remaining steps to the last one («خلّصي المراجعة»)
+    for (let i = 0; i < 12 && !screen.queryByRole('button', { name: 'خلّصي المراجعة' }); i++) {
+      fireEvent.click(screen.getByRole('button', { name: 'التالي' }))
+      await act(async () => { await new Promise((r) => setTimeout(r, 450)) })
+    }
     await act(async () => {
       fireEvent.click(screen.getByRole('button', { name: 'خلّصي المراجعة' }))
     })

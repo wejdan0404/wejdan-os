@@ -1,7 +1,7 @@
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import { useEffect, useMemo, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { makeProduct, type DomainId, type Habit, type ProductSlot } from '../../../domain'
+import { applyLifeMap, lifeMapFromDomains, makeProduct, type DomainState, type Habit, type LifeMap, type ProductSlot } from '../../../domain'
 import { Button } from '../../components/Button'
 import { Chip } from '../../components/Chip'
 import { SegmentedControl } from '../../components/SegmentedControl'
@@ -15,9 +15,14 @@ import { TimeField } from '../../components/TimeField'
 import { Icon } from '../../icons/Icon'
 import styles from './Onboarding.module.css'
 import { OnboardingRestore } from './OnboardingRestore'
+import { LifeMapStep } from './LifeMapStep'
+import { onboardingExtraSteps } from './onboardingExtraSteps'
 import { clearOnboardingDraft, loadOnboardingDraft, saveOnboardingDraft, takeIntendedRoute } from '../../state/onboardingResume'
 
-const STEPS = 6
+/** welcome → name → wake → life map → (extra steps, e.g. joy map) → products → starter habits → privacy. */
+const STEP_IDS = ['welcome', 'name', 'wake', 'map', ...onboardingExtraSteps.map((e) => `x:${e.id}`), 'products', 'starters', 'privacy'] as const
+const STEPS = STEP_IDS.length - 1
+const TIER_OK = (v: unknown): v is DomainState => v === 'grow' || v === 'maintain' || v === 'rest'
 /** First run — warm, short, everything optional; ends with onboardingDone. */
 export default function OnboardingScreen() {
   const s = useLife()
@@ -34,13 +39,31 @@ export default function OnboardingScreen() {
   // a reload mid-way resumes the same step with what she already typed
   const [draft] = useState(() => loadOnboardingDraft())
   const [step, setStep] = useState(() => Math.min(STEPS, Math.max(0, draft?.step ?? 0)))
+  const id = STEP_IDS[step]!
+  const extra = id.startsWith('x:') ? onboardingExtraSteps.find((e) => `x:${e.id}` === id) : undefined
   const [name, setName] = useState(draft?.name ?? s.settings.displayName)
   const [wake, setWake] = useState(draft?.wake ?? s.settings.wakeMinute)
   const [sleep, setSleep] = useState(draft?.sleep ?? s.settings.sleepMinute)
   const candidates = useMemo(() => s.domains.filter((d) => d.enabled && !d.sensitive && d.id !== 'joy'), [s.domains])
-  const [grow, setGrow] = useState<DomainId[]>(() =>
-    draft ? (draft.grow as DomainId[]) : s.domains.filter((d) => d.state === 'grow' && d.enabled && !d.sensitive).map((d) => d.id).slice(0, 3),
-  )
+  const [map, setMap] = useState<LifeMap>(() => {
+    const now = lifeMapFromDomains(candidates)
+    if (draft?.map) {
+      const m: LifeMap = { ...now }
+      for (const d of candidates) {
+        const v = draft.map[d.id]
+        if (TIER_OK(v)) m[d.id] = v
+      }
+      return m
+    }
+    if (draft) {
+      // an older draft only knew the grow picks
+      const m: LifeMap = { ...now }
+      for (const d of candidates) m[d.id] = (draft.grow as string[]).includes(d.id) ? 'grow' : now[d.id] === 'grow' ? 'maintain' : now[d.id]
+      return m
+    }
+    return now
+  })
+  const grow = useMemo(() => candidates.filter((d) => map[d.id] === 'grow').map((d) => d.id), [candidates, map])
   const [prodName, setProdName] = useState('')
   const [prodSlot, setProdSlot] = useState<ProductSlot>('am')
   const [added, setAdded] = useState<{ name: string; slot: ProductSlot }[]>(() => (draft?.added ?? []) as { name: string; slot: ProductSlot }[])
@@ -51,8 +74,8 @@ export default function OnboardingScreen() {
   const [picked, setPicked] = useState<string[]>(() => draft?.picked ?? [])
   useEffect(() => {
     if (done) return
-    saveOnboardingDraft({ step, name, wake, sleep, grow, added, picked })
-  }, [done, step, name, wake, sleep, grow, added, picked])
+    saveOnboardingDraft({ step, name, wake, sleep, grow, map: map as Record<string, string>, added, picked })
+  }, [done, step, name, wake, sleep, grow, map, added, picked])
   useEffect(() => {
     let alive = true
     store
@@ -70,10 +93,8 @@ export default function OnboardingScreen() {
   const finish = async () => {
     setBusy(true)
     try {
-      for (const d of s.domains) {
-        if (grow.includes(d.id) && d.state !== 'grow') await store.setDomainState(d.id, 'grow', true)
-        else if (!grow.includes(d.id) && d.state === 'grow') await store.setDomainState(d.id, 'maintain', true)
-      }
+      await applyLifeMap(store, candidates, map)
+      for (const e of onboardingExtraSteps) await e.finish?.()
       const chosenStarters = starters.filter((h) => picked.includes(h.id))
       await store.addStarterHabits(chosenStarters)
       // a picked habit must actually show up — wake its domain if it was resting (grow ones are set above)
@@ -129,7 +150,7 @@ export default function OnboardingScreen() {
 
       <AnimatePresence mode="wait" initial={false}>
         <motion.main key={step} className={styles.body} variants={v} initial="in" animate="on" exit="out">
-          {step === 0 && (
+          {id === 'welcome' && (
             <div className={styles.welcome}>
               <div className={styles.mark}>
                 <WMark size={96} glow />
@@ -153,7 +174,7 @@ export default function OnboardingScreen() {
             </div>
           )}
 
-          {step === 1 && (
+          {id === 'name' && (
             <div className={styles.step}>
               <h1 className={styles.h1}>وش نسمّيك؟</h1>
               <p className={styles.lede}>نستخدمه بالتحية بس. تقدرين تخلينه فاضي.</p>
@@ -164,7 +185,7 @@ export default function OnboardingScreen() {
             </div>
           )}
 
-          {step === 2 && (
+          {id === 'wake' && (
             <div className={styles.step}>
               <h1 className={styles.h1}>متى يبدأ يومك؟</h1>
               <p className={styles.lede}>نرتّب الاقتراحات حول وقت صحيانك ونومك. تقريبي يكفي.</p>
@@ -179,27 +200,11 @@ export default function OnboardingScreen() {
             </div>
           )}
 
-          {step === 3 && (
-            <div className={styles.step}>
-              <h1 className={styles.h1}>وش يهمك هالفترة؟</h1>
-              <p className={styles.lede}>
-                اختاري <span className="num">3</span> بالكثير تنمّينها. الباقي يمشي بهدوء، ومو لازم كل شي مرة وحدة.
-              </p>
-              <div className={me.chips} role="group" aria-label="مجالات تنمّينها">
-                {candidates.map((d) => {
-                  const on = grow.includes(d.id)
-                  return (
-                    <Chip key={d.id} selected={on} onClick={() => setGrow((x) => (on ? x.filter((y) => y !== d.id) : x.length < 3 ? [...x, d.id] : x))}>
-                      {d.nameAr}
-                    </Chip>
-                  )
-                })}
-              </div>
-              {grow.length === 3 && <p className={styles.hint}>اخترتي 3 — حلو. شيلي وحدة لو تبين تبدلين.</p>}
-            </div>
-          )}
+          {id === 'map' && <LifeMapStep domains={candidates} map={map} onChange={setMap} />}
 
-          {step === 4 && (
+          {extra && <extra.Component />}
+
+          {id === 'products' && (
             <div className={styles.step}>
               <h1 className={styles.h1}>منتجاتك (اختياري)</h1>
               <p className={styles.lede}>اكتبي منتجات العناية اللي تستخدمينها، وتطلع لك بروتين الصبح والمسا بالترتيب. تقدرين تسوينها بعدين من «منتجاتي».</p>
@@ -240,7 +245,7 @@ export default function OnboardingScreen() {
             </div>
           )}
 
-          {step === 5 && (
+          {id === 'starters' && (
             <div className={styles.step}>
               <h1 className={styles.h1}>عادات تبدين فيها (اختياري)</h1>
               <p className={styles.lede}>كل وحدة لها نسخة صغيرة تكفي. اختاري اللي يناسبك، أو خليها وتضيفينها بعدين من «عاداتي».</p>
@@ -262,7 +267,7 @@ export default function OnboardingScreen() {
             </div>
           )}
 
-          {step === 6 && (
+          {id === 'privacy' && (
             <div className={styles.step}>
               <div className={styles.mark}>
                 <MeIcon name="lock" size={40} style={{ color: 'var(--brand-primary)' }} />
@@ -302,7 +307,7 @@ export default function OnboardingScreen() {
         {step > 0 && step < STEPS && (
           <>
             <Button size="large" block onClick={next}>
-              {(step === 4 && added.length === 0) || (step === 5 && picked.length === 0) ? 'تخطّي' : 'التالي'}
+              {(id === 'products' && added.length === 0) || (id === 'starters' && picked.length === 0) || (extra?.isEmpty?.(s) ?? false) ? 'تخطّي' : 'التالي'}
             </Button>
           </>
         )}

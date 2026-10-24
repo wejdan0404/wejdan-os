@@ -116,6 +116,11 @@ export default function MorningBriefScreen() {
               {shape}
             </motion.p>
           </AnimatePresence>
+          {answered && view.energy === 'red' && (
+            <button type="button" className={styles.link} onClick={() => navigate('/today/calm')}>
+              شوفي النسخة الهادئة من يومك
+            </button>
+          )}
         </section>
 
         {chain.length > 0 && (

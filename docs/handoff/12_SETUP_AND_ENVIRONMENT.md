@@ -37,13 +37,13 @@ Do **not** run `npm install eslint …` here to "fix lint" without deciding on t
 |---|---|---|
 | Dev server | `npm run dev` (= `vite`) | VERIFIED with an explicit port: `npx vite --port 5199 --strictPort` → "ready in 788 ms", `http://localhost:5199/wejdan-os/` HTTP 200. Default port 5173 NOT VERIFIED (Vite default). **Open `/wejdan-os/`, not `/`.** Service worker is disabled in dev (`devOptions.enabled: false`). Vite printed "Re-optimizing dependencies because lockfile has changed" (cache dir inside the shared `node_modules/.vite`). |
 | Dev-only pages | `http://localhost:<port>/wejdan-os/src/ui/screens/{today,habits,notes,sources}/preview/index.html?theme=dark#/today` | VERIFIED HTTP 200 for `today/preview/index.html`; `/#/me/kit` component gallery exists only in dev (`import.meta.env.DEV`). |
-| Run all tests | `npm test` (= `vitest run`) | VERIFIED: **63 files, 726 tests passed** (≈100 s idle; expect ~1–3 min). |
+| Run all tests | `npm test` (= `vitest run`) | VERIFIED: **77 files, 849 tests passed** (≈100 s idle; expect ~1–3 min). |
 | One test file | `npx vitest run tests/domain/ics.test.ts` | VERIFIED: 9 passed, 2.2 s wall. |
 | Domain tests under another timezone | `TZ=Pacific/Kiritimati npx vitest run tests/domain` | VERIFIED in the first draft (30 files / 352 tests then); NOT re-run on the 32-file / 401-test domain suite. UI tests under other TZ: NOT VERIFIED. |
 | Watch mode | `npx vitest` | NOT VERIFIED |
 | Type check (correct) | `npx tsc --noEmit -p tsconfig.app.json` | VERIFIED exit 0 (~16 s) — checks `src` **and** `tests`. |
 | Type check (the trap) | `npx tsc --noEmit` | VERIFIED exit 0 but **checks zero files** (`--listFilesOnly` prints nothing) because root `tsconfig.json` is `files: []` + references. Do not use it as a gate. |
-| Production build | `npm run build` (= `tsc -b && vite build`) | VERIFIED exit 0: ~6 s, `precache 139 entries (2217.50 KiB)`. `tsc -b` writes `node_modules/.tmp/*.tsbuildinfo`. |
+| Production build | `npm run build` (= `tsc -b && vite build`) | VERIFIED exit 0: ~6 s, `precache 155 entries (2403.99 KiB)`. `tsc -b` writes `node_modules/.tmp/*.tsbuildinfo`. |
 | Privacy scan | `npm run privacy:scan` | VERIFIED — see 13 §2. Run before any push/publish |
 | Preview the build | `npm run preview` (= `vite preview`) | VERIFIED with `npx vite preview --port 4199 --strictPort`: `/wejdan-os/` 200, `/wejdan-os/sw.js` 200, `/` → 302 to `/wejdan-os/`. Use this (not dev) to test the PWA/service worker. |
 | Regenerate icons/splash | `npm run brand:assets` | NOT VERIFIED — overwrites `public/icons/*`, `public/splash/*`, `apple-touch-icon.png`, `favicon-48.png` from `public/brand/w-*.svg`. |
@@ -76,11 +76,12 @@ chromium.launch({ executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chro
 
 | Script | Needs | Env (defaults) | Port | Run status |
 |---|---|---|---|---|
-| `toastClearance.e2e.mjs` | built `dist/` | `REACT_DIR` (`./dist`), `SHOTS` (`./e2e-shots`), `PORT`, `LABEL`, `CHROMIUM`, `REPORT_ONLY`, `DARK`, `REDUCED`, `PLAYWRIGHT_MODULE` | 5712 | **VERIFIED**: `SHOTS=<dir> node tests/e2e/toastClearance.e2e.mjs` → 28 PASS, 0 FAIL, "ALL PASSED", exit 0 (light; also `DARK=1 REDUCED=1`) |
-| `lockProfiles.e2e.mjs` | built `dist/` | same family, `PORT` default 5713 | 5713 | **VERIFIED**: 71 PASS, 0 FAIL, exit 0 (light and `DARK=1`); long scenario (~3 min): lock, profiles, recovery, auto-lock, soft delay, offline reload |
-| `lockKill.e2e.mjs` | built `dist/` | `REACT_DIR`, `PORT` (5714), `CHROMIUM`, `DELAYS_ENABLE` (150,600,2000,6000), `DELAYS` (100,300,600,1500,3000,8000 for turn-off / delete), `SCENARIOS`, `KINDS` | 5714 | **VERIFIED** on `ed0df23`: 375 PASS, 0 FAIL, exit 0 (about 15 min) — SIGKILL of the browser during enable, turn-off and delete; data intact every time |
-| `bidiGlyphOrder.e2e.mjs` | none (bundles `Bidi.tsx` with esbuild) | `CHROMIUM`, `SHOTS` | — | **VERIFIED**: 21 PASS, 0 FAIL, exit 0 |
-| `streakRemindersLogo.e2e.mjs` | built `dist/` | same family, `DARK`, `DEBUG_E2E`; pins time to 2026-10-07 16:50 | 5731 | **VERIFIED**: 34 PASS, 0 FAIL, exit 0 (light and `DARK=1`) |
+| `toastClearance.e2e.mjs` | built `dist/` | `REACT_DIR` (`./dist`), `SHOTS` (`./e2e-shots`), `PORT`, `LABEL`, `CHROMIUM`, `REPORT_ONLY`, `DARK`, `REDUCED`, `PLAYWRIGHT_MODULE` | 5712 | **VERIFIED**: `SHOTS=<dir> node tests/e2e/toastClearance.e2e.mjs` → 27 PASS lines, 0 FAIL, "ALL PASSED", exit 0 on `ed0df23` (light; also `DARK=1 REDUCED=1`). **On `d982b01` it fails at onboarding (LOS-044).** |
+| `lockProfiles.e2e.mjs` | built `dist/` | same family, `PORT` default 5713 | 5713 | **VERIFIED on `ed0df23`**: 71 PASS lines, 0 FAIL (light; the dark run had 70 on the earlier tree). **On `d982b01` it fails at onboarding (LOS-044).** long scenario (~3 min): lock, profiles, recovery, auto-lock, soft delay, offline reload |
+| `lockKill.e2e.mjs` | built `dist/` | `REACT_DIR`, `PORT` (5714), `CHROMIUM`, `DELAYS_ENABLE` (150,600,2000,6000), `DELAYS` (100,300,600,1500,3000,8000 for turn-off / delete), `SCENARIOS`, `KINDS` | 5714 | **VERIFIED** on `ed0df23`: 375 PASS, 0 FAIL, exit 0 (about 15 min); **not re-run on `d982b01`**, it fails at onboarding (LOS-044) — SIGKILL of the browser during enable, turn-off and delete; data intact every time |
+| `bidiGlyphOrder.e2e.mjs` | none (bundles `Bidi.tsx` with esbuild) | `CHROMIUM`, `SHOTS` | — | **VERIFIED** on `d982b01`: 20 PASS lines, 0 FAIL, exit 0 |
+| `streakRemindersLogo.e2e.mjs` | built `dist/` | same family, `DARK`, `DEBUG_E2E`; pins time to 2026-10-07 16:50 | 5731 | **VERIFIED on `ed0df23`**: 33 PASS lines, 0 FAIL (light and `DARK=1`). **On `d982b01` it fails at onboarding (LOS-044).** |
+| `reviewInsightsCelebrations`, `todayCalm`, `moneyJoy`, `featureD`, `studioOnboarding`, `ieltsDriving`, `joyOnboarding` (`*.e2e.mjs`, added by the wave) | built `dist/` | same family (`REACT_DIR`, `SHOTS`, `PORT`, `CHROMIUM`; default ports 5731 for most, 5733 `featureD`, 5741 `ieltsDriving`) | see file | **VERIFIED on `d982b01`**: `studioOnboarding` 23 PASS lines and `joyOnboarding` 17 PASS lines, 0 FAIL; `reviewInsightsCelebrations`, `todayCalm`, `moneyJoy`, `featureD`, `ieltsDriving` fail at onboarding (LOS-044) |
 | `legacyMigration.e2e.mjs` | a **Flutter web build** dir (`FLUTTER_DIR`, not in this repo) + `REACT_DIR` | `PORT` default 5711 | 5711 | NOT VERIFIED (cannot run without the old build) |
 | `sw-takeover/swap.mjs` + `server.py` | folder `$T` with `flutter/`, `flutter_cachingsw/`, `react/` (= `dist/`, files touched newer) and a `current` file; `python3 server.py 8931` then `T=$T node swap.mjs plain|cachingsw|expiredSubres` | `T` | 8931 | NOT VERIFIED; the README records a 2026-10-24 manual result |
 

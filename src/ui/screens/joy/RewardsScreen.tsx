@@ -8,6 +8,7 @@ import { Screen } from '../../components/Screen'
 import { StarMark } from '../../components/StarMark'
 import { useToast } from '../../components/Toast'
 import { Icon } from '../../icons/Icon'
+import { useStableNavigate } from '../../shell/navigate'
 import { useLife, useStore } from '../../state/LifeStore'
 import { JoyEditSheet } from './JoyEditSheet'
 import { earnedRewards, milestoneRewards, rewardStatus, SIZE_LABEL, sortRewards } from './joyModel'
@@ -24,6 +25,7 @@ export default function RewardsScreen() {
   const balance = useSparkBalance()
   const pending = usePendingRedeems()
   const redeem = useRedeem()
+  const navigate = useStableNavigate()
   const [editing, setEditing] = useState<{ item: JoyItem | null } | null>(null)
 
   const tied = milestoneRewards(s)
@@ -171,6 +173,10 @@ export default function RewardsScreen() {
           )}
         </>
       )}
+
+      <InsetGroupedList>
+        <ListRow leading={<span className={shared.starBadge} aria-hidden="true"><Icon name="book" size={16} /></span>} title="احتفالاتي" subtitle="معالمك ورجعاتك وفصولك" chevron onClick={() => navigate('/joy/celebrations')} />
+      </InsetGroupedList>
 
       <JoyEditSheet open={editing != null} onClose={() => setEditing(null)} item={editing?.item ?? null} defaultMode="earned" />
       {redeem.sheet}

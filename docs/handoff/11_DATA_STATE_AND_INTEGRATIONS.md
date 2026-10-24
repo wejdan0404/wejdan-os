@@ -5,7 +5,7 @@
 
 # 11 — Data, state and integrations
 
-All facts verified in code at `main` @ `ed0df23` (after the gate-3 vault fixes) unless marked NOT VERIFIED / UNKNOWN. **No personal data appears in this file**: only schema, key names and structures.
+All facts verified in code at `main` @ `ed0df23` plus the missing-features wave (`integ/features` @ `d982b01`) unless marked NOT VERIFIED / UNKNOWN. **No personal data appears in this file**: only schema, key names and structures.
 
 ## 1. Storage map
 
@@ -77,7 +77,7 @@ class LifeDb extends Dexie {
 | `sources` | `Source` (imported file) | `id` | yes | web |
 | `importBatches` | `ImportBatch` (embedded `candidates`) | `id` | yes | web |
 | `provenance` | `Provenance` | `entity:entityId` | yes | web |
-| `meta` | key/value rows `{ v: … }`: `settings`, `moduleState`, `seeded`, `libraryVersion`, `firstRunDate`, `openedDays` (last 60 day keys) | key | settings/moduleState/openedDays/firstRunDate go into export `meta` | — |
+| `meta` | key/value rows `{ v: … }`: `settings`, `moduleState`, `seeded`, `libraryVersion`, `firstRunDate`, `openedDays` (last 60 day keys), and, only while the lock is on, `reviewDraft.<weekKey>` (unsent weekly-review answers, encrypted with the rest; not part of export / import) | key | settings/moduleState/openedDays/firstRunDate go into export `meta` | — |
 | `backups` | automatic snapshots `{ info, snapshot }` | `bk_<15-digit ms>[_nnn]` | **never** exported/imported | — |
 
 Field overview of the exported entity records (the JSON keys equal the TypeScript field names; extracted from `src/domain/models.ts` and `src/domain/features/*.ts`):
@@ -92,7 +92,7 @@ Field overview of the exported entity records (the JSON keys equal the TypeScrip
 - `DayPlan`: date, energy, items[PlanItem], thisWeek, deferred, budgetMin, usableMin, plannedMin, showHelpLink. `PlanItem`: id, itemId, kind, tier, section, title, domain, why, extraWhy, minimumText, normalText, bonusText, defaultLevel, suggestedLevel, startMinute, estimatedMin, actionId, routineId, bundleJoyId, bundleTitle, ieltsSkill, isComeback.
 - Others (full list per interface is in `models.ts`): `Domain`{id, nameAr, nameEn, state, sensitive, enabled, parent, sortOrder}, `Routine`{id, titleAr, titleEn, section, anchor, steps, weekdays, active}, `WeeklyTask`, `Project`{…, status, steps, dueDate, notes}, `Goal`{…, milestones, linkedHabitIds, linkedProjectIds}, `SparkTxn`{id, date, amount, reason, refId, at}, `JoyItem`, `VocabCard`{front, back, example, ease, intervalDays, repetitions, due, lapses, lastReviewed}, `MockTest`, `DrivingSession`, `MoneyEnvelope`, `Bill`, `BnplItem`, `WishItem`, `AdminDoc`, `FixedEvent`, `Product`{id, name, category, slot, order, active, notes, placeholder}, `WeeklyReviewRecord`.
 - `Settings` (in `meta.settings`): language, theme, notificationCap, quietStartMinute, quietEndMinute, quietEndSetByUser, wakeMinute, sleepMinute, prayerAnchorsEnabled, latitude, longitude, utcOffsetMinutes, timeZoneName, cycleModule, aquariumModule, appLock (legacy flag — no reader outside the codec), forgivingStreak, dailyBudgetMin, budgetByWeekday, ieltsWeakestSkill, weekStartsOn, eveningShutdownBeforeSleepMin, onboardingDone, lastSeasonReview, firstActionPin, paydayDay, paydayHistory, planMode (`suggest|auto`), notificationsEnabled (default false), reminderTimes, quietHoursEnabled, lastBackupAt, displayName, pausedRoutineSlots, plus `extra` (unknown keys, round-tripped). A Flutter-era key (`pcosModule`) appears in the Flutter sample export and ends up in `extra`.
-- `ModuleState`: drivingStepsDone, drivingServiceLink, ieltsFeedbackChecks, homeZoneOffset, autoSaveDay, autoSaveMinute, freshStartDismissed, resetMinutes.
+- `ModuleState`: drivingStepsDone (old 7-step list, kept in the schema), drivingServiceLink, ieltsFeedbackChecks, homeZoneOffset (home weekly zone), autoSaveDay / autoSaveMinute (payday saving reminder), freshStartDismissed, resetMinutes (tidy timer length), and **`ieltsDriving`** (added by the wave): one opaque JSON blob for IELTS goals (target band, current level, 30-day goal) and driving (staged road with owner-entered steps and verified flags, supervised-practice conditions, weekly hazard goal and links, quiz questions with spaced-repetition state). Parsed and sanitised by `domain/features/ieltsDriving.ts`; malformed content renders safely (gate 6 adversarial test). It is not a typed entity, so it has no change-log entries (LOS-046). Money categories are ordinary `moneyEnvelopes` rows with ids `env_<cycleKey>_cat_<suffix>`.
 
 Retired: domain `aquarium` stays in `DOMAIN_IDS` and in data; `loadSnapshot` switches it off once and filters it from every view.
 
@@ -169,7 +169,7 @@ Rules (from code):
 | `wos.reminders.v1` (lock off) / `wos.reminders.v1.<profileId>` (lock on) | `reminders/useDueReminders.ts`, `lock/deviceKeys.ts` (`remindersKey`) | `{day, dismissed:number[], snoozed:{id→epoch ms}}` for the Today banner. Per profile; the plain key is adopted by the first profile when the lock is turned on, all variants are removed when it is turned off | no | **purged** (prefix `wos.reminders.v1`) |
 | `wejdan.recentSearches` | `notes/SearchSheet.tsx` | last 6 search strings (user text) | no | purged |
 | `wejdan.reviewRest` | `me/MeScreen.tsx` | day key | no | purged |
-| `wejdan.reviewDraft.v1.<weekKey>` | `me/reviewDraft.ts` | unsent weekly-review answers (user text) | no | purged |
+| `wejdan.reviewDraft.v2.<weekKey>` (**lock off only**) | `me/reviewDraft.ts` via `LifeStore.get/set/clearReviewDraftRaw` (`kReviewDraftLsPrefix`) | unsent weekly-review answers incl. miss reasons, strength ratings, season picks (user text). With the lock **on** the draft is a `meta` row inside the encrypted profile DB and no localStorage key exists | no | purged. Residual: after a crash during lock enable the plaintext key can survive until first unlock (LOS-043); after a crash right after turn-off the draft can be lost (LOS-042) |
 | `wejdan.joy.pick.<dayKey>` | `joy/joyModel.ts` | chosen joy item id | no | purged |
 | `wejdan.focus.v1` | `today/focusSession.ts` | running focus timer; stale after 12 h | no | purged |
 | `wejdan.onboarding.draft.v1`, `wejdan.onboarding.intended.v1` | `state/onboardingResume.ts` | onboarding answers in progress (name, wake/sleep, picks) and intended deep link | no | purged |
@@ -180,7 +180,7 @@ All reads/writes are wrapped in `try/catch` (blocked storage degrades silently).
 ## 7. Service worker and caches
 
 - Generated by `vite-plugin-pwa` (`generateSW`): `dist/sw.js` + `dist/workbox-<hash>.js`; `registerType: 'prompt'`; `injectRegister: false` (registered in `src/pwa/index.tsx`); `clientsClaim: false`, `skipWaiting: false`; `cleanupOutdatedCaches: true`; `navigateFallback: '/wejdan-os/index.html'`; `maximumFileSizeToCacheInBytes` 4 MB.
-- Precache: `**/*.{js,css,html,png,svg,woff2,json,webmanifest}` minus `splash/**`, Cyrillic/Greek/Vietnamese font subsets, `actions-*.js`, `actions_ar-*.js`, and the four `flutter*`/`main.dart.js` shims → **139 entries, 2217.50 KiB** in this build.
+- Precache: `**/*.{js,css,html,png,svg,woff2,json,webmanifest}` minus `splash/**`, Cyrillic/Greek/Vietnamese font subsets, `actions-*.js`, `actions_ar-*.js`, and the four `flutter*`/`main.dart.js` shims → **139 entries, 2403.99 KiB** in this build.
 - Runtime: `/assets/actions(_ar)?-*.js` → `CacheFirst`, cache `wejdan-action-library`, max 6 entries.
 - Update check: hourly and on `visibilitychange → visible`; new worker waits; `updateSW(true)` after the user taps.
 - Legacy: `public/flutter_service_worker.js` (kill switch) must stay deployed at the same URL for old installs; `legacyCleanup.ts` removes foreign registrations and `flutter*` caches (not IndexedDB).

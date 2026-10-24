@@ -2,8 +2,9 @@ import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import {
-  addDays, currentChapter, dayKey, isDoneLevel, postponedTasks, projectNextStep, seasonIsCurrent, startOfWeek,
-  type SparkAward,
+  activeExperiment, addDays, coreHabits, currentChapter, dayKey, experimentReadout, isCompleteCheck, isDoneLevel, postponedTasks,
+  experimentTemplateOf, preferredTemplate, projectNextStep, seasonIsCurrent, startOfWeek, strengthCandidates, suggestExperiments,
+  type DomainId, type DomainState, type MissReason, type SparkAward,
 } from '../../../domain'
 import { Bidi } from '../../components/Bidi'
 import { Switch } from '../../components/Switch'
@@ -14,7 +15,7 @@ import { InsetGroupedList } from '../../components/InsetGroupedList'
 import { ListRow } from '../../components/ListRow'
 import { Screen } from '../../components/Screen'
 import { SegmentedControl } from '../../components/SegmentedControl'
-import { StarDottedLine } from '../../components/StarDottedLine'
+import { ReviewDots } from './review/ReviewDots'
 import { StarMark } from '../../components/StarMark'
 import { useToast } from '../../components/Toast'
 import { dur, ease } from '../../motion'
@@ -24,8 +25,11 @@ import { nounFor, NOUNS } from '../../lib/plural'
 import styles from './WeeklyReview.module.css'
 import me from './me.module.css'
 import { clearReviewDraft, loadReviewDraft, saveReviewDraft } from './reviewDraft'
+import { BlockersStep, ChapterCard, ExperimentStep, SeasonStep, StrengthStep } from './review/ReviewSteps'
+import { STEP_IDS, STEP_QUESTION, type StepId } from './review/reviewCopy'
+import { MISS_REASON_AR } from '../habits/shared'
+import { domainName } from '../path/pathKit'
 
-const QUESTIONS = ['وش خلّصتي؟', 'وش لسا مهم؟', 'وش تأجلينه دايم؟', 'وش نوقفه؟', 'أولوياتك الجاية؟', 'الخطة ناسبت طاقتك؟'] as const
 type Fate = 'keep' | 'inbox' | 'drop'
 type Fit = 'light' | 'right' | 'heavy'
 const FIT_TEXT: Record<Fit, string | null> = { light: 'الخطة كانت أخف من طاقتي', right: null, heavy: 'الخطة كانت أثقل من طاقتي' }
@@ -72,8 +76,48 @@ export default function WeeklyReviewScreen() {
 
   // ---- draft ---------------------------------------------------------------------------------
   // a review in progress resumes at the same step after a reload (kept per week on this device)
-  const [draft] = useState(() => loadReviewDraft(weekKey))
-  const [step, setStep] = useState(draft?.step ?? 0) // 0 = cover, 1..6 = questions, 7 = done
+  const [draft] = useState(() => loadReviewDraft(store, weekKey))
+  // the steps that exist for her this week (strength / experiment drop out when there is nothing to show)
+  const strengthCands = useMemo(() => strengthCandidates({ habits: s.habits, checks: s.strengthChecks, today }), [s.habits, s.strengthChecks, today])
+  const runningExp = activeExperiment(s)
+  const readout = useMemo(() => (runningExp ? experimentReadout({ experiment: runningExp, habits: s.habits, logs: s.logs, today }) : null), [runningExp, s.habits, s.logs, today])
+  const expSuggestions = useMemo(() => {
+    if (runningExp) return []
+    const core = coreHabits(s)
+    return suggestExperiments({ coreHabits: core.length > 0 ? core : s.habits.filter((h) => h.status === 'active'), joyItems: s.joyItems })
+  }, [s, runningExp])
+  const reviewDomains = useMemo(() => [...s.domains].filter((d) => d.enabled && !d.sensitive).sort((a, b) => a.sortOrder - b.sortOrder), [s.domains])
+  const steps = useMemo<StepId[]>(
+    () =>
+      STEP_IDS.filter((id) => {
+        if (id === 'strength') return strengthCands.length > 0
+        if (id === 'season') return reviewDomains.length > 0
+        if (id === 'experiment') return !!readout || expSuggestions.length > 0
+        return true
+      }),
+    [strengthCands.length, reviewDomains.length, readout, expSuggestions.length],
+  )
+  const [cur, setCur] = useState<'cover' | 'done' | StepId>(draft?.step ?? 'cover')
+  const step = cur === 'cover' ? 0 : cur === 'done' ? steps.length + 1 : Math.max(1, steps.indexOf(cur) + 1)
+  const stepId: StepId | null = cur === 'cover' || cur === 'done' ? null : steps.includes(cur) ? cur : steps[0]!
+  const go = (delta: number) => setCur(steps[Math.min(steps.length - 1, Math.max(0, step - 1 + delta))]!)
+  const [blockers, setBlockers] = useState<MissReason[]>(draft?.blockers ?? [])
+  const [strengthHabit, setStrengthHabit] = useState(draft?.strengthHabit ?? '')
+  const [ratings, setRatings] = useState<Record<string, number[]>>(draft?.ratings ?? {})
+  const [seasonStates, setSeasonStates] = useState<Partial<Record<DomainId, DomainState>>>(draft?.seasonStates ?? {})
+  // undefined = not touched yet → the suggestion that answers her blocker is pre-picked; null = «بدون تجربة»
+  const [expPickRaw, setExpPick] = useState<string | null | undefined>(draft?.expPick)
+  const expPick = useMemo(() => {
+    if (expPickRaw !== undefined) return expPickRaw
+    const t = preferredTemplate(blockers)
+    return t ? (expSuggestions.find((e) => experimentTemplateOf(e) === t)?.id ?? null) : null
+  }, [expPickRaw, blockers, expSuggestions])
+  const [deciding, setDeciding] = useState(false)
+  const chapterNo = currentChapter(s, today)
+  const comebacksThisWeek = useMemo(() => {
+    const end = dayKey(addDays(weekStart, 6))
+    return s.sparkTxns.filter((t) => t.reason === 'comeback' && t.amount > 0 && t.date >= weekKey && t.date <= end).length
+  }, [s.sparkTxns, weekKey, weekStart])
   const [wins, setWins] = useState<string[]>(draft?.wins ?? existing?.wins ?? [])
   const [winDraft, setWinDraft] = useState('')
   const [important, setImportant] = useState<Set<string>>(() => new Set(draft?.important ?? []))
@@ -84,9 +128,9 @@ export default function WeeklyReviewScreen() {
   const [fit, setFit] = useState<Fit>(draft?.fit ?? 'right')
   const [title, setTitle] = useState(draft?.title ?? existing?.chapterTitle ?? '')
   useEffect(() => {
-    if (step >= 1 && step <= 6) saveReviewDraft(weekKey, { step, wins, important: [...important], fates, pause: [...pause], top3, fit, title })
-    else if (step === 7) clearReviewDraft(weekKey)
-  }, [weekKey, step, wins, important, fates, pause, top3, fit, title])
+    if (stepId) saveReviewDraft(store, weekKey, { step: stepId, wins, important: [...important], fates, pause: [...pause], top3, fit, title, blockers, strengthHabit, ratings, seasonStates, expPick: expPickRaw })
+    else if (cur === 'done') clearReviewDraft(store, weekKey)
+  }, [weekKey, stepId, cur, wins, important, fates, pause, top3, fit, title, blockers, strengthHabit, ratings, seasonStates, expPickRaw, store])
   const [award, setAward] = useState<SparkAward | null>(null)
   const [saving, setSaving] = useState(false)
 
@@ -102,7 +146,7 @@ export default function WeeklyReviewScreen() {
   ].filter((v, i, a) => a.indexOf(v) === i)
 
   /** What the review changed, in her words, plus one way back (QA area 5 #18). */
-  const [applied, setApplied] = useState<{ lines: string[]; revert: () => Promise<boolean> } | null>(null)
+  const [applied, setApplied] = useState<{ lines: string[]; revert: (() => Promise<boolean>) | null } | null>(null)
 
   const finish = async () => {
     setSaving(true)
@@ -137,18 +181,42 @@ export default function WeeklyReviewScreen() {
           reverts.push(async () => (await store.setHabitStatus(hid, prev.status), true))
         }
       }
+      // season adjust (capacity was checked in the step; never forced here)
+      for (const [id, st] of Object.entries(seasonStates) as [DomainId, DomainState][]) {
+        const prev = s.domains.find((d) => d.id === id)
+        if (!prev || prev.state === st) continue
+        const v = await store.setDomainState(id, st)
+        if (v.length > 0) continue
+        lines.push(`«${domainName(id) || prev.nameAr}» صار ${st === 'grow' ? 'للنمو' : st === 'maintain' ? 'للصيانة' : 'يرتاح'}`)
+        reverts.push(async () => ((await store.setDomainState(id, prev.state, true)), true))
+      }
+      // strength checks (only complete ones; additive records)
+      for (const [hid, items] of Object.entries(ratings)) {
+        if (!isCompleteCheck(items)) continue
+        const h = s.habits.find((x) => x.id === hid)
+        if (!h) continue
+        await store.recordStrengthCheck(hid, items)
+        lines.push(`فحصنا قوة «${h.titleAr}»`)
+      }
+      // week experiment
+      let experimentId = existing?.experimentId ?? null
+      const chosen = expSuggestions.find((e) => e.id === expPick)
+      if (chosen && (await store.startExperiment(chosen))) {
+        experimentId = chosen.id
+        lines.push(`بدأت تجربة «${chosen.titleAr}»`)
+      }
       const fitText = FIT_TEXT[fit]
       const a = await store.saveWeeklyReview({
         chapterTitle: title.trim(),
         wins,
-        blockers: fitText ? [fitText] : [],
+        blockers: [...blockers.map((r) => MISS_REASON_AR[r]), ...(fitText ? [fitText] : [])],
         top3: top3.slice(0, 3),
-        experimentId: existing?.experimentId ?? null,
+        experimentId,
         durationSec: Math.round((Date.now() - started.current) / 1000),
       })
       setAward(a)
-      if (reverts.length > 0) {
-        const revert = async () => {
+      if (lines.length > 0) {
+        const revert = reverts.length === 0 ? null : async () => {
           const ok = (await Promise.all(reverts.map((r) => r().catch(() => false)))).every(Boolean)
           setApplied(null)
           toast({ message: ok ? 'رجّعنا كل شي مثل ما كان' : 'رجّعنا اللي نقدر — الباقي تلقينه بسجل التغييرات' })
@@ -156,12 +224,12 @@ export default function WeeklyReviewScreen() {
         }
         setApplied({ lines, revert })
         toast({
-          message: lines.length === 1 ? 'طبّقنا قرارك' : `طبّقنا ${lines.length} قرارات`,
-          actionLabel: 'تراجع',
-          onAction: () => void revert(),
+          message: lines.length === 1 ? 'طبّقنا قرارك' : lines.length === 2 ? 'طبّقنا قرارين' : `طبّقنا ${lines.length} ${lines.length <= 10 ? 'قرارات' : 'قرار'}`,
+          actionLabel: revert ? 'تراجع' : undefined,
+          onAction: revert ? () => void revert() : undefined,
         })
       }
-      setStep(7)
+      setCur('done')
     } catch {
       toast({ message: 'ما انحفظت المراجعة — جربي مرة ثانية' })
     } finally {
@@ -209,15 +277,15 @@ export default function WeeklyReviewScreen() {
             <p className={styles.coverLede}>مو تقييم — نرتّب الجاي على قد طاقتك.</p>
           </header>
           <ol className={styles.qList}>
-            {QUESTIONS.map((q, i) => (
-              <li key={q}>
+            {steps.map((id, i) => (
+              <li key={id}>
                 <span className={styles.qNum}>{i + 1}</span>
-                {q}
+                {STEP_QUESTION[id]}
               </li>
             ))}
           </ol>
           <div className={styles.coverFoot}>
-            <Button size="large" block className={styles.coverCta} onClick={() => setStep(1)}>
+            <Button size="large" block className={styles.coverCta} onClick={() => setCur(steps[0]!)}>
               {existing ? 'عدّلي مراجعة هالأسبوع' : 'يلا نبدأ'}
             </Button>
             <span className={styles.coverNote}>
@@ -231,20 +299,20 @@ export default function WeeklyReviewScreen() {
   }
 
   return (
-    <Screen title="المراجعة الأسبوعية" compactTitle="المراجعة" backLabel="أنا" inlineTitle={step > 0 && step < 7}>
-      {step > 0 && step < 7 && (
+    <Screen title="المراجعة الأسبوعية" compactTitle="المراجعة" backLabel="أنا" inlineTitle={stepId != null}>
+      {stepId != null && (
         <div className={styles.progress}>
-          <StarDottedLine total={6} done={step - 1} label={`السؤال ${step} من 6`} />
+          <ReviewDots total={steps.length} done={step - 1} label={`السؤال ${step} من ${steps.length}`} />
           <span className={styles.stepCount}>
-            <span className="num">{step}</span> من <span className="num">6</span>
+            <span className="num">{step}</span> من <span className="num">{steps.length}</span>
           </span>
         </div>
       )}
 
       <AnimatePresence mode="wait" initial={false}>
-        <motion.div key={step} variants={variants} initial="in" animate="on" exit="out" className={styles.stage}>
-          {step > 0 && step < 7 && <h2 className={styles.question}>{QUESTIONS[step - 1]}</h2>}
-          {step === 1 && (
+        <motion.div key={cur} variants={variants} initial="in" animate="on" exit="out" className={styles.stage}>
+          {stepId != null && <h2 className={styles.question}>{STEP_QUESTION[stepId]}</h2>}
+          {stepId === 'wins' && (
             <div className={styles.q}>
               <p className={me.lede + ' ' + me.pad}>اختاري اللي تبين تتذكرينه — حتى الصغير ينحسب.</p>
               {winsSuggested.length > 0 && (
@@ -269,7 +337,7 @@ export default function WeeklyReviewScreen() {
             </div>
           )}
 
-          {step === 2 && (
+          {stepId === 'important' && (
             <div className={styles.q}>
               <p className={me.lede + ' ' + me.pad}>علّمي اللي لسا يهمك — نرشّح منها أولويات الأسبوع الجاي.</p>
               {stillImportant.length === 0 ? (
@@ -284,7 +352,7 @@ export default function WeeklyReviewScreen() {
             </div>
           )}
 
-          {step === 3 && (
+          {stepId === 'deferred' && (
             <div className={styles.q}>
               <p className={me.lede + ' ' + me.pad}>اللي ينأجّل كل مرة غالبًا يحتاج قرار — خليه، رجّعيه للوارد، أو شيليه بهدوء.</p>
               {deferred.length === 0 ? (
@@ -313,7 +381,11 @@ export default function WeeklyReviewScreen() {
             </div>
           )}
 
-          {step === 4 && (
+          {stepId === 'blockers' && (
+            <BlockersStep selected={blockers} onToggle={(r) => setBlockers((x) => (x.includes(r) ? x.filter((y) => y !== r) : [...x, r]))} />
+          )}
+
+          {stepId === 'pause' && (
             <div className={styles.q}>
               <p className={me.lede + ' ' + me.pad}>إيقاف مؤقت، مو حذف — ترجّعينها من «عاداتي» متى ما بغيتي.</p>
               {activeHabits.length === 0 ? (
@@ -328,7 +400,47 @@ export default function WeeklyReviewScreen() {
             </div>
           )}
 
-          {step === 5 && (
+          {stepId === 'strength' && (
+            <StrengthStep
+              candidates={strengthCands}
+              habitId={strengthHabit || strengthCands[0]?.habit.id || ''}
+              onHabit={setStrengthHabit}
+              ratings={ratings}
+              onRate={(hid, i, v) => setRatings((r) => { const items = [...(r[hid] ?? [0, 0, 0, 0])]; items[i] = v; return { ...r, [hid]: items } })}
+            />
+          )}
+
+          {stepId === 'season' && (
+            <SeasonStep
+              domains={reviewDomains}
+              states={seasonStates}
+              onChange={(id, st) => setSeasonStates((x) => ({ ...x, [id]: st }))}
+              seasonTitle={season ? season.titleAr : null}
+            />
+          )}
+
+          {stepId === 'experiment' && (
+            <ExperimentStep
+              readout={readout}
+              suggestions={expSuggestions}
+              pick={expPick ?? null}
+              onPick={setExpPick}
+              preferred={preferredTemplate(blockers)}
+              busy={deciding}
+              onDecide={async (keep) => {
+                if (!runningExp) return
+                setDeciding(true)
+                try {
+                  await store.finishExperiment(runningExp.id, keep)
+                  toast({ message: keep ? 'ثبّتناها' : 'رجّعنا القديم' })
+                } finally {
+                  setDeciding(false)
+                }
+              }}
+            />
+          )}
+
+          {stepId === 'top3' && (
             <div className={styles.q}>
               <p className={me.lede + ' ' + me.pad}>
                 <span className="num">3</span> بالكثير — أقل وأوضح أحسن.
@@ -355,7 +467,7 @@ export default function WeeklyReviewScreen() {
             </div>
           )}
 
-          {step === 6 && (
+          {stepId === 'close' && (
             <div className={styles.q}>
               <div className={me.pad}>
                 <SegmentedControl<Fit>
@@ -374,15 +486,21 @@ export default function WeeklyReviewScreen() {
                 <span className={me.fieldLabel}>عطي هالأسبوع اسم (اختياري)</span>
                 <input className={me.input} value={title} onChange={(e) => setTitle(e.target.value)} placeholder="مثلًا: أسبوع الهدوء" />
               </label>
+              <div className={me.pad}>
+                <ChapterCard chapter={chapterNo} title={title} wins={wins.length} comebacks={comebacksThisWeek} lessons={blockers.map((r) => MISS_REASON_AR[r])} />
+              </div>
             </div>
           )}
 
-          {step === 7 && (
+          {cur === 'done' && (
             <section className={styles.done} aria-live="polite">
               <motion.span initial={reduce ? false : { scale: 0.6, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ duration: dur.slow, ease: ease.enter }}>
                 <StarMark size={40} color="var(--brand-primary)" glow label="خلصت المراجعة" />
               </motion.span>
-              <h2 className={styles.doneTitle}>{title.trim() ? <Bidi>{title.trim()}</Bidi> : 'خلّصتي مراجعة الأسبوع'}</h2>
+              <h2 className={styles.doneTitle}>
+                سكّرتي الفصل <span className="num">{chapterNo}</span>
+              </h2>
+              <ChapterCard chapter={chapterNo} title={title} wins={wins.length} comebacks={comebacksThisWeek} lessons={blockers.map((r) => MISS_REASON_AR[r])} sparks={award && award.amount > 0 ? award.amount : undefined} />
               <p className={me.lede}>رتّبتي أسبوعك الجاي. أي شي تأجل ما راح — تلقينه تحت «بعدين».</p>
               {applied && (
                 <div className={styles.appliedBox}>
@@ -394,16 +512,12 @@ export default function WeeklyReviewScreen() {
                       </li>
                     ))}
                   </ul>
-                  <Button variant="plain" onClick={() => void applied.revert()}>
-                    تراجعي عنها
-                  </Button>
+                  {applied.revert && (
+                    <Button variant="plain" onClick={() => void applied.revert?.()}>
+                      تراجعي عنها
+                    </Button>
+                  )}
                 </div>
-              )}
-              {award && award.amount > 0 && (
-                <span className={styles.award}>
-                  <StarMark size={10} color="var(--brand-primary)" />
-                  <bdi dir="ltr" className="num">+{award.amount}</bdi> {nounFor(award.amount, NOUNS.spark)}
-                </span>
               )}
               <Button size="large" block onClick={back}>
                 تم
@@ -413,13 +527,13 @@ export default function WeeklyReviewScreen() {
         </motion.div>
       </AnimatePresence>
 
-      {step > 0 && step < 7 && (
+      {stepId != null && (
         <div className={styles.nav}>
-          <Button variant="secondary" onClick={() => setStep((x) => x - 1)}>
+          <Button variant="secondary" onClick={() => (step === 1 ? setCur('cover') : go(-1))}>
             رجوع
           </Button>
-          {step < 6 ? (
-            <Button onClick={() => setStep((x) => x + 1)}>التالي</Button>
+          {step < steps.length ? (
+            <Button onClick={() => go(1)}>التالي</Button>
           ) : (
             <Button onClick={() => void finish()} disabled={saving}>
               {saving ? 'نحفظ…' : 'خلّصي المراجعة'}

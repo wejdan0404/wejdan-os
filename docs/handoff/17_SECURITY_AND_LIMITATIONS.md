@@ -5,7 +5,7 @@
 
 # 17 — Security, privacy and limitations
 
-Updated 2026-10-24 on branch `docs/handoff` (on top of `main` @ `ed0df23`, i.e. after the release-gate-3 fixes). Evidence tags follow `00_HANDOFF_INDEX.md` §4. No secret value appears in this document. Items I could not verify are marked UNKNOWN / NOT VERIFIED.
+Updated 2026-10-24 on branch `docs/handoff` (on top of `main` @ `ed0df23` plus the missing-features wave merged from `integ/features` @ `d982b01`). Evidence tags follow `00_HANDOFF_INDEX.md` §4. No secret value appears in this document. Items I could not verify are marked UNKNOWN / NOT VERIFIED.
 
 ## 1. Security model in one paragraph
 
@@ -44,6 +44,7 @@ Source: `vault.ts` header comment and methods; tests `tests/domain/vaultDurabili
 |---|---|---|
 | IndexedDB database name, box (table) names, record ids (day keys, generated ids **and** semantic ids such as habit/product ids), record counts, value sizes | IndexedDB | structure and rough volume of data |
 | Profile registry **and** the identical header row inside each profile database: display name, username, avatar, KDF salts/cost, wrapped keys; plus (registry only) attempt counter and auto-lock choice | `localStorage` key `wejdan.vault.v1`; table `vault` of each profile DB | who uses the device; the wrapped keys are what an offline guesser attacks |
+| **Weekly-review draft (wins, blockers / miss reasons, strength ratings, season picks)** | `localStorage` key `wejdan.reviewDraft.v2.<week>` while the lock is OFF; inside the encrypted DB while it is ON. Residual window: after SIGKILL 300 to 5000 ms after enabling the lock the key can remain in plaintext until the first unlock (gate-7 M2, LOS-043); after SIGKILL right after turning the lock off the draft can be lost (gate-7 M1, LOS-042) | personal reflection text, in clear, only in the crash window |
 | **Orphan plain database / `_bak_` copy after a kill about 190 to 220 ms into turning the lock off** | IndexedDB | **everything, in clear, with no automatic cleanup** (gate-5 M1, LOS-040) |
 | **The pre-lock plain database** | IndexedDB `wejdan_life_os` | **everything, in clear**, until the first real unlock on a LATER launch deletes it (rollback window; the app tells her nothing about it — see LOS-032) |
 | Per-device conveniences: recent searches, unsent review draft, today's pick, focus block, onboarding draft, theme, per-profile reminder memory (reminder ids + snooze times, key `wos.reminders.v1.<profileId>`) | `localStorage` `wejdan.*`, `wos.reminders.v1*` | habits of use. Wiped on manual lock, profile switch and delete (`deviceKeys.ts`), **not on auto-lock**; theme, registry and PWA flags are kept |
@@ -62,7 +63,7 @@ Source: `vault.ts` header comment and methods; tests `tests/domain/vaultDurabili
 | Someone copies the browser profile and guesses offline | Only if password is strong | 310k PBKDF2 slows but does not stop; a short or common password falls quickly. Password rule: `isValidPassword` (length-based; see `credentials.ts`) plus a strength meter in the UI. No stronger policy is enforced |
 | Malicious extension, malware, or XSS in the origin | No | the unlocked key can be used by any script in the origin. Mitigation present: no `eval`, one `innerHTML` use for static first-party sprite markup (`flowers/sprite.ts`), no third-party scripts at runtime; no CSP (`index.html` has no Content-Security-Policy meta and GitHub Pages cannot set headers) |
 | Shoulder surfing | No | not in scope |
-| Server breach | NOT APPLICABLE | no server; a grep of `src/` for `fetch(`, `XMLHttpRequest`, `sendBeacon`, `WebSocket`, `EventSource` returned no hit when the doc was updated. A full network audit with the app running was not performed |
+| Server breach | NOT APPLICABLE | no server; a grep of `src/` for `fetch(`, `XMLHttpRequest`, `sendBeacon`, `WebSocket`, `EventSource` returned no hit when the doc was updated, and again on `d982b01` (only the JSON data folder was excluded). A full network audit with the app running was not performed |
 | Browser killed / storage evicted mid-migration | Covered by design | header/registry mirror + rollback DB + boot recovery; proven by crash-injection tests and a SIGKILL e2e (13) |
 | Two tabs writing the registry | Covered | compare-and-set `rev` + `BroadcastChannel` |
 | Forgotten password and lost recovery code | Data is unrecoverable by design | the unencrypted/encrypted export is the only backup |
@@ -72,16 +73,17 @@ Source: `vault.ts` header comment and methods; tests `tests/domain/vaultDurabili
 ## 4. Residual risks (ordered)
 
 1. **Plaintext pre-lock database during the rollback window** (until the next launch + real unlock). Accepted trade-off for never losing data; not yet disclosed in-app (LOS-032).
-2. **Orphan plain DB / `_bak_` after a kill during turn-off** is never cleaned up yet (LOS-040, gate-5 M1). **Missing-data screen is a dead end** with no import or start-fresh action (LOS-041, gate-5 M2); no data is lost, it is a usability gap.
-3. **Registry/header metadata is plaintext** (name, username, avatar visible to anyone with the browser profile).
-4. **Soft delay is bypassable** offline; only PBKDF2 cost protects the password.
-5. **Same-origin exposure**: all project sites of one GitHub account (`<user>.github.io`) are one origin and share `localStorage`/IndexedDB rules; the legacy Flutter site and this app are served from the same origin under different paths, so one can read the other's storage. (Reasoned from how browsers key storage by origin, not tested.)
-6. **Plain export files** the user may leave in Downloads or cloud folders.
-7. **Plaintext conveniences survive auto-lock** (by design; wiped on manual lock/switch/delete).
-8. **Record ids are semantic** (habit/product ids reveal what exists); making ids opaque is a schema change (LOS-034).
-9. **Orphaned encrypted databases** are not garbage-collected if a profile row is lost and no header can be parsed (LOS-035).
-10. **Auto-lock timers rely on page lifecycle events**; real iOS behaviour is NOT VERIFIED (DEFERRED-BY-OWNER).
-11. **Dependency advisories**: `npm audit` reports 9 (see §9).
+2. **Review-draft crash windows** (LOS-042 loses an unfinished draft; LOS-043 leaves the draft in plaintext until first unlock); neither affects saved data.
+3. **Orphan plain DB / `_bak_` after a kill during turn-off** is never cleaned up yet (LOS-040, gate-5 M1). **Missing-data screen is a dead end** with no import or start-fresh action (LOS-041, gate-5 M2); no data is lost, it is a usability gap.
+4. **Registry/header metadata is plaintext** (name, username, avatar visible to anyone with the browser profile).
+5. **Soft delay is bypassable** offline; only PBKDF2 cost protects the password.
+6. **Same-origin exposure**: all project sites of one GitHub account (`<user>.github.io`) are one origin and share `localStorage`/IndexedDB rules; the legacy Flutter site and this app are served from the same origin under different paths, so one can read the other's storage. (Reasoned from how browsers key storage by origin, not tested.)
+7. **Plain export files** the user may leave in Downloads or cloud folders.
+8. **Plaintext conveniences survive auto-lock** (by design; wiped on manual lock/switch/delete).
+9. **Record ids are semantic** (habit/product ids reveal what exists); making ids opaque is a schema change (LOS-034).
+10. **Orphaned encrypted databases** are not garbage-collected if a profile row is lost and no header can be parsed (LOS-035).
+11. **Auto-lock timers rely on page lifecycle events**; real iOS behaviour is NOT VERIFIED (DEFERRED-BY-OWNER).
+12. **Dependency advisories**: `npm audit` reports 9 (see §9).
 
 ## 5. Privacy posture of the public bundle and the repo
 
@@ -97,7 +99,7 @@ Source: `vault.ts` header comment and methods; tests `tests/domain/vaultDurabili
 | Fact | Evidence |
 |---|---|
 | `vite-plugin-pwa` 0.21.1, `registerType: 'prompt'`, `skipWaiting: false`, `clientsClaim: false` — a new worker waits until the user accepts the update prompt | `vite.config.ts` |
-| Precache: 139 entries ≈ 2,215 KiB in the final build of this branch; `navigateFallback` = `/wejdan-os/index.html`; `splash/**` is excluded from precache | build output, config |
+| Precache: 155 entries ≈ 2,404 KiB in the final build of this branch; `navigateFallback` = `/wejdan-os/index.html`; `splash/**` is excluded from precache | build output, config |
 | Action library is a runtime `CacheFirst` cache named `wejdan-action-library` | config |
 | Legacy Flutter files (`flutter.js`, `flutter_bootstrap.js`, `main.dart.js`, `flutter_service_worker.js`) are in `globIgnores`; `flutter_service_worker.js` is a **kill switch** that unregisters the old worker | `public/`, config |
 | **No user data in caches**: the lock e2e asserts that no cache entry contains the password, recovery code or username. User data is only in IndexedDB/localStorage, never fetched through the worker | `tests/e2e/lockProfiles.e2e.mjs` |

@@ -5,7 +5,7 @@
 
 # 09 — Assets and resources
 
-Verified 2026-10-24, branch `docs/handoff` (on top of `main` @ `ed0df23`), production build from `npm run build` (vite 5.4.11, 139 precache entries ≈ 2,215 KiB).
+Verified 2026-10-24, branch `docs/handoff` (on top of `main` @ `ed0df23`; the wave `d982b01` adds no binary asset: `public/`, `scripts/` and `package.json` are unchanged by it, and it adds the 16 spec files in `docs/design/`), production build from `npm run build` (vite 5.4.11, 139 precache entries ≈ 2,215 KiB).
 
 ## 1. Fonts — how they are really loaded
 
@@ -69,7 +69,7 @@ No raster images, photos, videos, audio, Lottie or Rive files exist under `src/`
 | Output | Notes |
 |---|---|
 | `dist/assets/*.woff2` (72) / `*.woff` (36) | fontsource files, hashed names |
-| `dist/assets/index-*.js` 401,148 B (≈ 135 kB gzip), `react-*.js` 153 kB, `motion-*.js` 135 kB, `actions-*.js` 234 kB, `actions_ar-*.js` 140 kB, `drawings-*.js` 308 kB | vite chunks (`manualChunks`: `react`, `motion`) |
+| `dist/assets/index-*.js` 430,397 B (≈ 144 kB gzip), `react-*.js` 153 kB, `motion-*.js` 135 kB, `actions-*.js` 234 kB, `actions_ar-*.js` 140 kB (vite-reported), `drawings-*.js` 308 kB | vite chunks (`manualChunks`: `react`, `motion`) |
 | `dist/sw.js`, `dist/workbox-*.js` | `vite-plugin-pwa` (`registerType: 'prompt'`, `clientsClaim: false`, `skipWaiting: false`, `navigateFallback: /wejdan-os/index.html`) |
 | `dist/manifest.webmanifest` | name/short_name «وجدان», `lang: ar`, `dir: rtl`, `display: standalone`, `orientation: portrait`, `scope`/`start_url`/`id` = `/wejdan-os/`, `theme_color #FFFFFF`, `background_color #F2F7FE`, 4 icons |
 

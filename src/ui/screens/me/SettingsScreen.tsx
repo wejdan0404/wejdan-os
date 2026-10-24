@@ -25,6 +25,7 @@ import { CANCELLED, useBackupIO } from '../../lock/backupIO'
 import { suppressIntendedRoute } from '../../state/onboardingResume'
 import { ProtectionSection } from '../../lock/ProtectionSection'
 import { BackupReminderRow, RemindersSettingsGroup, StreakSettingGroup } from '../reminders/SettingsRows'
+import { SettingsExtras } from './SettingsExtras'
 import styles from './me.module.css'
 
 
@@ -274,9 +275,7 @@ export default function SettingsScreen() {
 
       <RemindersSettingsGroup />
 
-      <InsetGroupedList header="وحدة خاصة" footer="مطفية افتراضيًا. لو شغّلتيها تبقى خاصة وعلى جهازك بس — بدون توقعات ولا تشخيص.">
-        <ListRow leading={<RowIcon name="lock" tone="ink" />} title="متابعة الدورة" trailing={<Switch checked={s.settings.cycleModule} onChange={(v) => set({ cycleModule: v })} label="متابعة الدورة" />} />
-      </InsetGroupedList>
+      <SettingsExtras />
 
       <>
         <span id="settings-import" style={{ display: 'block', blockSize: 0, marginBlockEnd: 'calc(-1 * var(--space-6))', scrollMarginBlockStart: 'calc(var(--safe-top) + var(--navbar-h) + 8px)' }} />

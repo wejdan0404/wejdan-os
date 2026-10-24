@@ -2,7 +2,7 @@ import type { DomainId, LifeSnapshot, LifeStore } from '../../domain'
 
 /**
  * Habits in a «راحة» (rest) domain never reach today's suggestions. When she deliberately adds a
- * habit (starter pick, Studio, IELTS plan), its domain wakes up to «حفاظ» so the promise in the
+ * habit (starter pick, Studio, IELTS plan), its domain wakes up to «صيانة» so the promise in the
  * toast («تطلع لك باقتراحات اليوم») is true (QA #1). Returns the domains it changed.
  */
 export async function ensureDomainsVisible(store: LifeStore, s: LifeSnapshot, ids: readonly (DomainId | null | undefined)[]): Promise<DomainId[]> {
@@ -20,8 +20,8 @@ export async function ensureDomainsVisible(store: LifeStore, s: LifeSnapshot, id
 }
 
 /**
- * Like [ensureDomainsVisible] but never breaks the «حفاظ» cap (5) silently (QA area 2 #4):
- * resting domains that fit are woken to «حفاظ»; the ones that would exceed the cap are returned
+ * Like [ensureDomainsVisible] but never breaks the «صيانة» cap (5) silently (QA area 2 #4):
+ * resting domains that fit are woken to «صيانة»; the ones that would exceed the cap are returned
  * as `blocked` so the screen can ask her (swap with another domain, keep it resting, or park).
  */
 export async function wakeDomainsRespectingCap(

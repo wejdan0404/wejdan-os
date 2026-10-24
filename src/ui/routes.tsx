@@ -33,6 +33,8 @@ export interface PushedRoute {
 export const pushed: PushedRoute[] = [
   // today
   { pattern: /^\/today\/item\/[^/]+$/, component: L(() => import('./screens/today/ItemDetailScreen')) },
+  // calm day (builder B)
+  { pattern: /^\/today\/calm$/, component: L(() => import('./screens/today/CalmDayScreen')) },
   { pattern: /^\/brief$/, component: L(() => import('./screens/today/MorningBriefScreen')), fullscreen: true },
   { pattern: /^\/evening$/, component: L(() => import('./screens/today/EveningScreen')) },
   { pattern: /^\/focus\/[^/]+$/, component: L(() => import('./screens/today/FocusScreen')) },
@@ -42,13 +44,15 @@ export const pushed: PushedRoute[] = [
   { pattern: /^\/routine\/(am|pm|weekly)\/play$/, component: L(() => import('./screens/habits/RoutinePlayerScreen')) },
   { pattern: /^\/routine\/(am|pm|weekly)$/, component: L(() => import('./screens/habits/RoutineScreen')) },
   { pattern: /^\/me\/products$/, component: L(() => import('./screens/habits/ProductsScreen')) },
-  { pattern: /^\/studio$/, component: L(() => import('./screens/habits/HabitStudioScreen')) },
+  { pattern: /^\/studio$/, component: L(() => import('./screens/habits/StudioEntry')) },
   // path
   { pattern: /^\/path\/project\/[^/]+$/, component: L(() => import('./screens/path/ProjectDetailScreen')) },
   { pattern: /^\/path\/ielts$/, component: L(() => import('./screens/path/IeltsScreen')) },
   { pattern: /^\/path\/driving$/, component: L(() => import('./screens/path/DrivingScreen')) },
   // joy
   { pattern: /^\/joy\/reward$/, component: L(() => import('./screens/joy/RewardsScreen')) },
+  // feat/a: celebrations history
+  { pattern: /^\/joy\/celebrations$/, component: L(() => import('./screens/joy/CelebrationsScreen')) },
   // me
   { pattern: /^\/me\/inbox$/, component: L(() => import('./screens/me/InboxScreen')) },
   { pattern: /^\/me\/money$/, component: L(() => import('./screens/me/MoneyScreen')) },

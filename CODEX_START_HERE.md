@@ -1,6 +1,6 @@
 # CODEX_START_HERE — Wejdan Life OS («وجدان»)
 
-You are taking over a finished-but-ungated personal PWA with no prior context. This file is enough to get running and to know what you may and may not do. Depth is in `docs/handoff/` (23 files; index in `docs/handoff/00_HANDOFF_INDEX.md`). Rules are in `AGENTS.md`.
+You are taking over a feature-complete personal PWA (independently gated up to gate 7, with open minors) with no prior context. This file is enough to get running and to know what you may and may not do. Depth is in `docs/handoff/` (23 files; index in `docs/handoff/00_HANDOFF_INDEX.md`). Rules are in `AGENTS.md`.
 
 > بالعربي باختصار: التطبيق شخصي لوجدان، عربي RTL، بياناته على الجهاز فقط. القرارات المعتمدة منها تغلب أي برومبت عام (وضع فاتح وداكن، ألوان الهوية، خط IBM Plex Sans Arabic وEl Messiri). المستودع عام: لا بيانات شخصية. المهمة الأولى: تأكدي من الخط الأساسي بدون تغيير كود (القسم 5).
 
@@ -8,15 +8,16 @@ You are taking over a finished-but-ungated personal PWA with no prior context. T
 
 A single-owner, Arabic-only, RTL planner PWA: Today (suggested day plan, nothing moves without her tap), Habits (flower garden, momentum, optional flexible streak), Path (projects, goals, IELTS, driving), Joy (sparks, rewards), Me (money, notes, search, weekly review, backup, settings). React 18 + TypeScript + Vite + Dexie (IndexedDB). No server, no accounts, no network calls, no analytics. Optional on-device lock with several profiles (AES-GCM-256). It replaced an earlier Flutter web build at the same GitHub Pages URL.
 
-## 2. Current state (snapshot basis: `main` @ `ed0df23`, 2026-10-24)
+## 2. Current state (snapshot basis: `integ/features` @ `d982b01` merged into `docs/handoff`, 2026-10-24)
 
 | Item | State | Evidence |
 |---|---|---|
-| Product features | Complete against the owner's decisions | `docs/handoff/03_REQUIREMENTS_TRACEABILITY.md` |
+| Product features | Complete against the owner's decisions, plus the missing-features wave (areas A to G: weekly review, insights, Today tiers and calm day, money envelopes, joy map, focus recall, home tidy, evidence filter, Habit Studio wizard, onboarding life map, IELTS stats, driving mechanisms) | `docs/handoff/03_REQUIREMENTS_TRACEABILITY.md` |
 | Type-check, tests, build, privacy scan | Green on this tree | `docs/handoff/13_TESTING_AND_QA.md` §2 and `22_COLD_START_AUDIT.md` |
-| Independent QA gates | Gate 3 found D1 to D9, gate 4 = HOLD (N1 to N5), both fixed with tests (`eed6603`); **gate 5 (independent) = SHIP with two open minors**: LOS-040 (orphan plain DB / `_bak_` after a kill during turn-off) and LOS-041 (missing-data screen is a dead end). Reports are local-only (PER-REPORT) | `14_BUGS_AND_TECH_DEBT.md` §1.2, LOS-002 |
-| Live site | **Release 2 is live** per the integrator: `gh-pages` @ `f7e1f75` = build of `ed0df23` (functionally this source). Not re-checked from this environment | `01_EXECUTIVE_SUMMARY.md` §3, LOS-001 Part B |
+| Independent QA gates | Gate 3 found D1 to D9, gate 4 = HOLD (N1 to N5), both fixed with tests (`eed6603`); gate 5 (independent) = SHIP with two open minors: LOS-040 (orphan plain DB / `_bak_` after a kill during turn-off) and LOS-041 (missing-data screen is a dead end); **gate 6 (wave) = SHIP, fixes `fc6bb39`; gate 7 = SHIP with two minors**: LOS-042 and LOS-043 (review-draft crash windows). Reports are local-only (PER-REPORT) | `14_BUGS_AND_TECH_DEBT.md` §1.2, LOS-002 |
+| Live site | **Release 3 is live** per the integrator (the wave); `gh-pages` SHA `d2db69a`. Release 2 was `f7e1f75`. Not re-checked from this environment | `01_EXECUTIVE_SUMMARY.md` §3, LOS-001 Part B |
 | Public GitHub push | **PLANNED, not done** (one clean snapshot commit on `react-app`; the local history is unpublished) | `15_DECISION_LOG.md` D-64, `21_FINAL_HANDOFF_REPORT.md` |
+| Hand-run e2e | 9 of 12 scripts fail at the onboarding step (the app is fine; the scripts are stale) | LOS-044, `13_TESTING_AND_QA.md` §2 |
 | ESLint | Cannot run (packages not declared) | LOS-037 |
 | `npm audit` | 9 findings, 3 in the runtime router chain | LOS-033 |
 | Real iPhone checks | Deferred by the owner for good | `17_SECURITY_AND_LIMITATIONS.md` |
@@ -49,8 +50,8 @@ Requires Node 22 and npm 10 (verified with v22.22.2 / 10.9.7). Run from the repo
 ```bash
 npm ci
 npx tsc --noEmit -p tsconfig.app.json      # expect exit 0 (bare "tsc --noEmit" would check nothing)
-npm test                                   # expect: Test Files 63 passed, Tests 726 passed (about 2 minutes)
-npm run build                              # expect: 650 modules transformed; precache 139 entries (about 2217 KiB)
+npm test                                   # expect: Test Files 77 passed, Tests 849 passed (about 2 minutes)
+npm run build                              # expect: 712 modules transformed; precache 155 entries (about 2404 KiB)
 npm run privacy:scan                       # expect: clean (exit 0)
 npm run dev                                # open http://localhost:5173/wejdan-os/  (the base path is required)
 ```
@@ -84,7 +85,7 @@ Then write a short baseline note (Arabic summary first) with the exact numbers y
 
 ## 8. What to do after Phase 0
 
-Follow `19_NEXT_DEVELOPMENT_PLAN.md`: Phase 1 re-gate the merged tree (LOS-002, start from the five e2e scripts), Phase 2 dependencies, licence and disclosure, Phase 3 release with the owner, Phase 4 owner decisions (flexible streak default, red delete buttons, personal library key, tab icons). Ask the owner only about items listed there as needing her decision.
+Follow `19_NEXT_DEVELOPMENT_PLAN.md`: Phase 1 re-gate the merged tree (first LOS-044: repair the hand-run e2e scripts, then LOS-040 to LOS-043, then LOS-002), Phase 2 dependencies, licence and disclosure, Phase 3 release with the owner, Phase 4 owner decisions (flexible streak default, red delete buttons, personal library key, tab icons). Ask the owner only about items listed there as needing her decision.
 
 ## 9. How to report
 

@@ -1,6 +1,7 @@
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import { useEffect, useRef, useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
+import { isStudyDomain, recallNote } from '../../../domain'
 import { Bidi } from '../../components/Bidi'
 import { Button } from '../../components/Button'
 import { ProgressArc } from '../../components/ProgressArc'
@@ -8,13 +9,15 @@ import { Screen } from '../../components/Screen'
 import { StarMark } from '../../components/StarMark'
 import { dur, ease, springs } from '../../motion'
 import { useStack } from '../../shell/stack'
+import { useStore } from '../../state/LifeStore'
+import { PhoneAway, RecallStep, SilentPill, TryFirstTip } from './FocusExtras'
 import { Glyph } from './Glyph'
 import { findItem, isolate } from './lib'
 import styles from './Focus.module.css'
 import { useTodayModel } from './useTodayModel'
 import { clearFocusSession, loadFocusSession, resumeFocusSession, saveFocusSession } from './focusSession'
 
-type Phase = 'ready' | 'running' | 'paused' | 'over' | 'done'
+type Phase = 'ready' | 'running' | 'paused' | 'over' | 'recall' | 'done'
 
 const mmss = (sec: number) => {
   const s = Math.max(0, Math.round(sec))
@@ -26,6 +29,7 @@ export default function FocusScreen() {
   const navigate = useNavigate()
   const stack = useStack()
   const reduce = useReducedMotion()
+  const store = useStore()
   const id = decodeURIComponent(useLocation().pathname.split('/').pop() ?? '')
   const { view, isDone, actions } = useTodayModel()
   const found = id === 'free' ? null : findItem(view, id)
@@ -37,6 +41,10 @@ export default function FocusScreen() {
   const [totalSec, setTotalSec] = useState(restored?.totalSec ?? baseMin * 60)
   const [elapsed, setElapsed] = useState(resumed?.elapsed ?? 0)
   const [phase, setPhase] = useState<Phase>(resumed?.phase ?? 'ready')
+  const [away, setAway] = useState(false)
+  const [recallMin, setRecallMin] = useState(1)
+  const [saving, setSaving] = useState(false)
+  const [answered, setAnswered] = useState(false)
   const startedAt = useRef<number | null>(restored?.phase === 'running' && resumed?.phase === 'running' ? restored.startedAt : null)
   const carried = useRef(restored?.phase === 'running' && resumed?.phase === 'running' ? restored.carried : (resumed?.elapsed ?? 0))
 
@@ -46,7 +54,9 @@ export default function FocusScreen() {
       clearFocusSession()
       return
     }
-    saveFocusSession({ id, totalSec, phase, startedAt: phase === 'running' ? startedAt.current : null, carried: phase === 'running' ? carried.current : elapsed })
+    // the recall step is restored as a pause: nothing she did is lost on reload
+    const p = phase === 'recall' ? 'paused' : phase
+    saveFocusSession({ id, totalSec, phase: p, startedAt: p === 'running' ? startedAt.current : null, carried: p === 'running' ? carried.current : elapsed })
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase, totalSec, id])
 
@@ -98,13 +108,39 @@ export default function FocusScreen() {
     if (stack) stack.goBack()
     else navigate('/today')
   }
-  const finish = async () => {
+  const study = item != null && found?.where === 'plan' && isStudyDomain(item.domain)
+  const wrapUp = async (answer: string | null) => {
     const minutes = Math.max(1, Math.round(Math.min(elapsed, totalSec) / 60))
-    if (item && found?.where === 'plan' && !isDone(item)) {
-      await actions.complete(item, item.suggestedLevel, { durationMin: minutes })
+    setSaving(true)
+    try {
+      const n = answer != null && item ? recallNote(item.title.ar, answer) : null
+      if (n) {
+        try {
+          const saved = await store.addNote({ title: n.title, body: n.body })
+          setAnswered(saved != null)
+        } catch {
+          /* the session still counts; she just doesn't get the note */
+        }
+      }
+      if (item && found?.where === 'plan' && !isDone(item)) {
+        await actions.complete(item, item.suggestedLevel, { durationMin: minutes })
+      }
+      setPhase('done')
+      window.setTimeout(back, reduce ? 300 : 1200)
+    } finally {
+      setSaving(false)
     }
-    setPhase('done')
-    window.setTimeout(back, reduce ? 300 : 1200)
+  }
+  const finish = async () => {
+    // study sessions get one retrieval question first (skippable)
+    if (study && item && !isDone(item)) {
+      carried.current = elapsed
+      startedAt.current = null
+      setRecallMin(Math.max(1, Math.round(Math.min(elapsed, totalSec) / 60)))
+      setPhase('recall')
+      return
+    }
+    await wrapUp(null)
   }
 
   const remaining = totalSec - elapsed
@@ -118,6 +154,10 @@ export default function FocusScreen() {
           <Bidi>{title}</Bidi>
         </p>
 
+        {phase === 'recall' ? (
+          <RecallStep title={title} minutes={recallMin} busy={saving} onSave={(a) => void wrapUp(a)} onSkip={() => void wrapUp(null)} />
+        ) : (
+        <>
         <div className={styles.arcWrap}>
           <ProgressArc value={progress} size={248} stroke={6} label={`باقي ${mmss(remaining)}`}>
             <AnimatePresence mode="wait" initial={false}>
@@ -140,9 +180,17 @@ export default function FocusScreen() {
             {phase === 'running' && 'معك. الجوال على جنب.'}
             {phase === 'paused' && 'وقفة صغيرة — كمّلي وقت ما تبين.'}
             {phase === 'over' && 'خلص الوقت. تبين تكمّلين شوي؟'}
-            {phase === 'done' && 'انحسبت لك.'}
+            {phase === 'done' && (answered ? 'انحسبت لك، وجوابك انحفظ في ملاحظاتك.' : 'انحسبت لك.')}
           </motion.p>
         </AnimatePresence>
+
+        {(phase === 'ready' || phase === 'running' || phase === 'paused') && (
+          <>
+            {phase === 'ready' && <PhoneAway away={away} onChange={setAway} />}
+            {away && phase !== 'ready' && <SilentPill />}
+            {study && <TryFirstTip />}
+          </>
+        )}
 
         <div className={styles.controls}>
           {phase === 'ready' && (
@@ -176,6 +224,8 @@ export default function FocusScreen() {
             </Button>
           )}
         </div>
+        </>
+        )}
       </div>
     </Screen>
   )
