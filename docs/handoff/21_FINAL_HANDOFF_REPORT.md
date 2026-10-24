@@ -25,7 +25,7 @@ Date: 2026-10-24. Basis: `integ/features` @ `d982b01` (the missing-features wave
 |---|---|---|
 | Repository | https://github.com/wejdan0404/wejdan-os (public) | exists; its `main` still holds the old Flutter code and data (owner's choice) |
 | Target branch for the React source | `react-app` | **PLANNED, UNVERIFIED** (not created by this work) |
-| Commit SHA on that branch | `PENDING_PUSH` | to be filled by the integrator in this section and in `HANDOFF_MANIFEST.json` after the push |
+| Commit SHA on that branch | `be98a824bcc8b74b745be6655dc480d83896dcab (content commit; a later commit only records it)` | to be filled by the integrator in this section and in `HANDOFF_MANIFEST.json` after the push |
 | Shape of the push | one clean snapshot commit; local history stays local | decision D-64 |
 | Live site (GitHub Pages) | release 3 (the wave): `gh-pages` SHA `d2db69a`; release 2 was `f7e1f75` (139 precache entries); the merged tree builds 155 | per the integrator (PER-REPORT); not re-checked by the author |
 | Pre-push gate | `npm run privacy:scan` on the exact tree, then `22_COLD_START_AUDIT.md` commands from a fresh clone | not yet done on the pushed tree because nothing is pushed |
@@ -33,8 +33,8 @@ Date: 2026-10-24. Basis: `integ/features` @ `d982b01` (the missing-features wave
 Integrator fill-in (leave as is until the push happens):
 
 ```
-branch: react-app            sha: PENDING_PUSH            pushed-at: PENDING_PUSH
-privacy:scan on pushed tree: PENDING_PUSH
+branch: react-app            sha: be98a82            pushed-at: 2026-10-24T17:21Z
+privacy:scan on pushed tree: OK (run on the pushed tree)
 ```
 
 ## 3. Quality results (from this session's own runs, 2026-10-24)

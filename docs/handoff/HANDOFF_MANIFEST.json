@@ -14,8 +14,8 @@
     "targetBranch": "react-app",
     "targetBranchStatus": "PLANNED",
     "push": "one clean snapshot commit; local history unpublished",
-    "commit_sha": "PENDING_PUSH",
-    "pushedAt": "PENDING_PUSH",
+    "commit_sha": "be98a824bcc8b74b745be6655dc480d83896dcab",
+    "pushedAt": "2026-10-24T17:21Z",
     "liveSite": "https://wejdan0404.github.io/wejdan-os/",
     "liveSiteMatchesSource": true,
     "liveSiteRelease": "release 3 (missing-features wave, source d982b01): gh-pages SHA d2db69a, filled by the integrator; release 2 was f7e1f75 (build of main ed0df23, 139 precache entries); per the integrator, not re-checked by the author"

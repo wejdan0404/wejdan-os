@@ -31,7 +31,7 @@ Wejdan Life OS («وجدان») is a single-owner, Arabic-only, RTL personal ope
 
 - **Release 3 is live** per the integrator (not re-checked from this environment; PER-REPORT): it carries the missing-features wave. Its `gh-pages` SHA is `d2db69a`. Release 2 was `gh-pages` @ `f7e1f75`, a build of `main` @ `ed0df23`; the first React publish was `169ca40` (built from `0fa7aa6`, bundle `index-DhYFUn4i.js`). The handoff branch differs from `d982b01` only by two source comments, so the live bundle and this source are functionally the same.
 - Publishing to `gh-pages` requires the owner's explicit approval each time (`20_CODEX_EXECUTION_PLAYBOOK.md` §6.2). Verify the live bundle name with `curl` before relying on any of the above.
-- The GitHub source push is a separate, **PLANNED** step: one clean snapshot commit on a new branch `react-app` (D-64). Status: not pushed; branch and SHA to be recorded by the integrator in `HANDOFF_MANIFEST.json` (`commit_sha` is `PENDING_PUSH`).
+- The GitHub source push is a separate, **done** step: one clean snapshot commit on a new branch `react-app` (D-64). Status: pushed to branch `react-app` (be98a824bcc8b74b745be6655dc480d83896dcab[:7], verified with git ls-remote); recorded in `HANDOFF_MANIFEST.json`.
 
 ## 4. Validation snapshot (run during this handoff on this tree)
 
