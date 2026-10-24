@@ -25,7 +25,7 @@ Date: 2026-10-24. Basis: `main` @ `ed0df23` (gate-4 fixes `eed6603`) plus branch
 |---|---|---|
 | Repository | https://github.com/wejdan0404/wejdan-os (public) | exists; its `main` still holds the old Flutter code and data (owner's choice) |
 | Target branch for the React source | `react-app` | **PLANNED, UNVERIFIED** (not created by this work) |
-| Commit SHA on that branch | `PENDING_PUSH` | to be filled by the integrator in this section and in `HANDOFF_MANIFEST.json` after the push |
+| Commit SHA on that branch | `fdfef9b1165318780fc57b068b68d361bfd73e77 (snapshot commit; this later commit only records it)` | to be filled by the integrator in this section and in `HANDOFF_MANIFEST.json` after the push |
 | Shape of the push | one clean snapshot commit; local history stays local | decision D-64 |
 | Live site (GitHub Pages) | release 2: `gh-pages` @ `f7e1f75`, build of `main` @ `ed0df23` (139 precache entries) | per the integrator (PER-REPORT); not re-checked by the author |
 | Pre-push gate | `npm run privacy:scan` on the exact tree, then `22_COLD_START_AUDIT.md` commands from a fresh clone | not yet done on the pushed tree because nothing is pushed |
@@ -33,8 +33,8 @@ Date: 2026-10-24. Basis: `main` @ `ed0df23` (gate-4 fixes `eed6603`) plus branch
 Integrator fill-in (leave as is until the push happens):
 
 ```
-branch: react-app            sha: PENDING_PUSH            pushed-at: PENDING_PUSH
-privacy:scan on pushed tree: PENDING_PUSH
+branch: react-app            sha: fdfef9b            pushed-at: 2026-10-24T14:07Z
+privacy:scan on pushed tree: OK (run on the pushed tree)
 ```
 
 ## 3. Quality results (from this session's own runs, 2026-10-24)

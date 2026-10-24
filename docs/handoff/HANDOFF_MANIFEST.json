@@ -14,8 +14,8 @@
     "targetBranch": "react-app",
     "targetBranchStatus": "PLANNED",
     "push": "one clean snapshot commit; local history unpublished",
-    "commit_sha": "PENDING_PUSH",
-    "pushedAt": "PENDING_PUSH",
+    "commit_sha": "fdfef9b1165318780fc57b068b68d361bfd73e77",
+    "pushedAt": "2026-10-24T14:07Z",
     "liveSite": "https://wejdan0404.github.io/wejdan-os/",
     "liveSiteMatchesSource": true,
     "liveSiteRelease": "release 2: gh-pages f7e1f75 = build of main ed0df23 (139 precache entries); per the integrator, not re-checked by the author"
