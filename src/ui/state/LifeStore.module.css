@@ -1,0 +1,31 @@
+.splash {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 24px;
+  background: var(--surface-default);
+  color: var(--text-primary);
+}
+
+.msg {
+  margin: 0;
+  max-width: 28ch;
+  text-align: center;
+  font: var(--type-body);
+  color: var(--text-secondary);
+}
+
+.banner {
+  position: fixed;
+  inset-inline: 0;
+  top: 0;
+  z-index: 50;
+  padding: calc(env(safe-area-inset-top, 0px) + 6px) 16px 6px;
+  text-align: center;
+  font: var(--type-caption);
+  color: var(--text-secondary);
+  background: var(--surface-subtle);
+  border-bottom: 0.5px solid var(--border-subtle);
+}

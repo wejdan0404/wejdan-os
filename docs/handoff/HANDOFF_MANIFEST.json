@@ -1,0 +1,282 @@
+{
+  "schema": "wejdan-os-handoff-manifest/1",
+  "generated": "2026-10-24",
+  "project": {
+    "name": "Wejdan Life OS",
+    "arabicName": "وجدان",
+    "packageName": "wejdan-os-web",
+    "kind": "Arabic RTL local-only PWA",
+    "stack": "React 18, TypeScript, Vite 5.4, Dexie 4.0.8, Framer Motion 11, vite-plugin-pwa 0.21"
+  },
+  "repository": {
+    "url": "https://github.com/wejdan0404/wejdan-os",
+    "visibility": "public",
+    "targetBranch": "react-app",
+    "targetBranchStatus": "PLANNED",
+    "push": "one clean snapshot commit; local history unpublished",
+    "commit_sha": "PENDING_PUSH",
+    "pushedAt": "PENDING_PUSH",
+    "liveSite": "https://wejdan0404.github.io/wejdan-os/",
+    "liveSiteMatchesSource": true,
+    "liveSiteRelease": "release 2: gh-pages f7e1f75 = build of main ed0df23 (139 precache entries); per the integrator, not re-checked by the author"
+  },
+  "basis": {
+    "mainCommit": "ed0df23",
+    "gate4FixCommit": "eed6603",
+    "handoffBranch": "docs/handoff",
+    "note": "hashes refer to local, unpublished history"
+  },
+  "modules": {
+    "verified": [
+      {
+        "id": "domain-engines",
+        "status": "complete",
+        "evidence": "tests/domain (32 files)"
+      },
+      {
+        "id": "store-and-storage-dexie-v2",
+        "status": "complete",
+        "evidence": "tests/domain/store.test.ts, repository.test.ts"
+      },
+      {
+        "id": "today-day-plan-suggestion-mode",
+        "status": "complete",
+        "evidence": "tests/ui/today, tests/domain/dayPlanner.test.ts"
+      },
+      {
+        "id": "habits-garden-routines",
+        "status": "complete",
+        "evidence": "tests/ui/habits"
+      },
+      {
+        "id": "path-projects-goals-ielts-driving",
+        "status": "complete",
+        "evidence": "tests/ui/path"
+      },
+      {
+        "id": "joy-sparks-rewards",
+        "status": "complete",
+        "evidence": "tests/ui/joy"
+      },
+      {
+        "id": "money-payday-bills",
+        "status": "complete",
+        "evidence": "tests/ui/money, tests/domain/paydayCycle.test.ts"
+      },
+      {
+        "id": "notes-search-sources-changelog",
+        "status": "complete",
+        "evidence": "tests/ui/notes, tests/ui/sources, tests/domain/notesSearchSources.test.ts"
+      },
+      {
+        "id": "app-lock-and-profiles-vault",
+        "status": "complete; gate 4 HOLD fixed in eed6603; gate 5 independent SHIP with two minors (LOS-040, LOS-041)",
+        "evidence": "tests/domain/vault*.test.ts, tests/ui/lock, e2e lockProfiles (71) and lockKill (375)"
+      },
+      {
+        "id": "in-app-reminders-and-ics",
+        "status": "complete",
+        "evidence": "tests/domain/ics.test.ts, inAppReminders.test.ts, e2e streakRemindersLogo (34)"
+      },
+      {
+        "id": "flexible-streak",
+        "status": "complete; default ON awaiting owner approval",
+        "evidence": "tests/domain/flexibleStreak.test.ts"
+      },
+      {
+        "id": "flutter-data-migration",
+        "status": "complete in unit tests; e2e not runnable here",
+        "evidence": "tests/domain/legacyMigration.test.ts, tests/migration"
+      },
+      {
+        "id": "pwa-offline-and-flutter-takeover",
+        "status": "complete in Chromium; no real device",
+        "evidence": "tests/ui/pwa, e2e lockProfiles offline checks, tests/e2e/sw-takeover/README.md"
+      },
+      {
+        "id": "bidi-and-arabic-copy",
+        "status": "complete",
+        "evidence": "tests/ui/today/bidiF1.test.ts, bidiG3.test.ts, e2e bidiGlyphOrder (21)"
+      },
+      {
+        "id": "privacy-tooling",
+        "status": "complete",
+        "evidence": "scripts/privacy-scan.mjs, npm run privacy:scan"
+      }
+    ],
+    "incomplete": [
+      {
+        "id": "gate-5-minor-orphan-plain-db-cleanup",
+        "backlog": "LOS-040",
+        "state": "open; kill ~190-220 ms into turn-off leaves plain DB / _bak_ with no cleanup"
+      },
+      {
+        "id": "gate-5-minor-missing-data-screen",
+        "backlog": "LOS-041",
+        "state": "open; dead end, no import / start-fresh"
+      },
+      {
+        "id": "remaining-final-checks",
+        "backlog": "LOS-002",
+        "state": "gate 5 = SHIP; text scale, contrast, board comparison not covered"
+      },
+      {
+        "id": "eslint",
+        "backlog": "LOS-037",
+        "state": "cannot run; packages not declared"
+      },
+      {
+        "id": "npm-audit",
+        "backlog": "LOS-033",
+        "state": "9 findings open"
+      },
+      {
+        "id": "license-and-font-notices",
+        "backlog": "LOS-036",
+        "state": "open; owner decision"
+      },
+      {
+        "id": "github-snapshot-push",
+        "backlog": "LOS-001",
+        "state": "PLANNED"
+      },
+      {
+        "id": "live-site-publish",
+        "backlog": "LOS-001 Part B",
+        "state": "done per integrator (release 2, f7e1f75); future publishes still need owner approval"
+      },
+      {
+        "id": "real-device-checks",
+        "backlog": "DEFERRED-BY-OWNER",
+        "state": "not done, permanently deferred"
+      },
+      {
+        "id": "lock-plaintext-residuals",
+        "backlog": "LOS-032, LOS-034, LOS-035, LOS-038",
+        "state": "disclosed in docs/handoff/17_SECURITY_AND_LIMITATIONS.md"
+      }
+    ]
+  },
+  "documents": {
+    "root": [
+      "README.md",
+      "AGENTS.md",
+      "CODEX_START_HERE.md"
+    ],
+    "handoff": [
+      "docs/handoff/00_HANDOFF_INDEX.md",
+      "docs/handoff/01_EXECUTIVE_SUMMARY.md",
+      "docs/handoff/02_PROJECT_VISION.md",
+      "docs/handoff/03_REQUIREMENTS_TRACEABILITY.md",
+      "docs/handoff/04_CURRENT_IMPLEMENTATION.md",
+      "docs/handoff/05_SYSTEM_ARCHITECTURE.md",
+      "docs/handoff/06_CODEBASE_GUIDE.md",
+      "docs/handoff/07_DESIGN_SYSTEM.md",
+      "docs/handoff/08_SCREENS_AND_USER_FLOWS.md",
+      "docs/handoff/09_ASSETS_AND_RESOURCES.md",
+      "docs/handoff/10_DEPENDENCIES_AND_TOOLS.md",
+      "docs/handoff/11_DATA_STATE_AND_INTEGRATIONS.md",
+      "docs/handoff/12_SETUP_AND_ENVIRONMENT.md",
+      "docs/handoff/13_TESTING_AND_QA.md",
+      "docs/handoff/14_BUGS_AND_TECH_DEBT.md",
+      "docs/handoff/15_DECISION_LOG.md",
+      "docs/handoff/16_DEVELOPMENT_HISTORY.md",
+      "docs/handoff/17_SECURITY_AND_LIMITATIONS.md",
+      "docs/handoff/18_REMAINING_BACKLOG.md",
+      "docs/handoff/19_NEXT_DEVELOPMENT_PLAN.md",
+      "docs/handoff/20_CODEX_EXECUTION_PLAYBOOK.md",
+      "docs/handoff/21_FINAL_HANDOFF_REPORT.md",
+      "docs/handoff/22_COLD_START_AUDIT.md"
+    ],
+    "manifest": "docs/handoff/HANDOFF_MANIFEST.json",
+    "index": "docs/handoff/00_HANDOFF_INDEX.md",
+    "tools": [
+      "docs/handoff/tools/capture-screens.mjs",
+      "docs/handoff/tools/scan-asset-refs.mjs",
+      "docs/handoff/tools/check-docs.mjs"
+    ],
+    "screenshots": "docs/handoff/screenshots/"
+  },
+  "assetManifest": "docs/handoff/09_ASSETS_AND_RESOURCES.md",
+  "environment": {
+    "node": "v22.22.2",
+    "npm": "10.9.7",
+    "note": "no engines field in package.json"
+  },
+  "testCommands": [
+    {
+      "command": "npm ci",
+      "result": "exit 0 (474 packages; 9 audit findings)"
+    },
+    {
+      "command": "npx tsc --noEmit -p tsconfig.app.json",
+      "result": "exit 0"
+    },
+    {
+      "command": "npm test",
+      "result": "63 files / 726 tests passed"
+    },
+    {
+      "command": "npm run build",
+      "result": "exit 0; 650 modules; precache 139 entries (2217.50 KiB)"
+    },
+    {
+      "command": "npm run privacy:scan",
+      "result": "OK; 456 tracked files, 8 patterns, 5 deny-list entries"
+    },
+    {
+      "command": "node docs/handoff/tools/check-docs.mjs",
+      "result": "OK; 26 documents, 31 links, 660 paths (docs/handoff/22_COLD_START_AUDIT.md)"
+    },
+    {
+      "command": "tests/e2e/*.e2e.mjs (hand-run)",
+      "result": "toast 28, lock 71 (re-run on ed0df23), streak 34, lockKill 375 (re-run on ed0df23), bidi 21: all passed"
+    }
+  ],
+  "criticalBlockers": [],
+  "releaseBlockers": [
+    "LOS-001 push and publish need owner approval",
+    "LOS-040 and LOS-041 gate-5 minors",
+    "LOS-033 npm audit",
+    "LOS-036 licence",
+    "LOS-030 owner rotates tokens"
+  ],
+  "nextTaskIds": [
+    "Phase 0 baseline (docs/handoff/19_NEXT_DEVELOPMENT_PLAN.md)",
+    "LOS-040",
+    "LOS-041",
+    "LOS-002",
+    "LOS-033",
+    "LOS-037",
+    "LOS-036",
+    "LOS-032"
+  ],
+  "ownerDecisionsOutstanding": [
+    {
+      "id": "LOS-015",
+      "question": "Flexible streak default ON for new installs?"
+    },
+    {
+      "id": "LOS-039",
+      "question": "Keep red fill on delete-profile / turn-off-lock buttons?"
+    },
+    {
+      "id": "LOS-038",
+      "question": "Personal library: plain local key when lock is off, or always inside the database?"
+    },
+    {
+      "id": "LOS-014",
+      "question": "Tab icons: cup/plant or star/leaf?"
+    },
+    {
+      "id": "LOS-036",
+      "question": "Which licence?"
+    },
+    {
+      "id": "LOS-031",
+      "question": "Public history cleanup?"
+    }
+  ],
+  "codexReadiness": "READY WITH LIMITATIONS",
+  "precedence": "Owner-approved decisions (docs/handoff/15_DECISION_LOG.md D-59) supersede the generic master prompt: light and dark themes, identity colours, IBM Plex Sans Arabic + El Messiri; Thmanyah not used (font licence)."
+}

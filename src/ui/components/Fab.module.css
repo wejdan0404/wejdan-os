@@ -1,0 +1,14 @@
+.fab {
+  position: fixed;
+  inset-inline-end: var(--page-margin);
+  inset-block-end: calc(var(--tabbar-h) + var(--safe-bottom) + var(--space-4));
+  z-index: 15;
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: var(--r-card);
+  background: var(--action-default);
+  color: var(--on-action);
+  box-shadow: var(--shadow-elevated);
+}

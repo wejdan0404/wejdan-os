@@ -1,0 +1,191 @@
+.scroll {
+  position: relative;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior-y: contain;
+  -webkit-overflow-scrolling: touch;
+  background: var(--group-bg);
+  --content-bottom: calc(var(--tabbar-h) + var(--safe-bottom) + var(--space-8));
+  padding-block-end: var(--content-bottom);
+}
+
+/* settings-like screens sit on the sky-50 ground; their hero lifts as a white card */
+.scroll[data-ground='tinted'] {
+  --group-bg: var(--ground-tinted);
+  --hero-bg: var(--hero-bg-on-tinted);
+  --hero-shadow: var(--hero-shadow-on-tinted);
+  --btn-secondary-bg: var(--cell-bg);
+  --btn-secondary-ring: var(--border-subtle);
+  background: var(--ground-tinted);
+}
+
+/* dark-only header aurora (TodayDark): one ambient glow at the leading top corner, scrolls with the page */
+.aurora {
+  position: absolute;
+  inset-block-start: -140px;
+  inset-inline-start: -120px;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: var(--aurora);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* the floating + must never cover the last row */
+.scroll[data-fab] {
+  --content-bottom: calc(var(--tabbar-h) + var(--safe-bottom) + 56px + var(--space-8) + var(--space-4));
+}
+
+.bar {
+  position: sticky;
+  inset-block-start: 0;
+  z-index: 10;
+  padding-block-start: var(--safe-top);
+}
+
+.material {
+  position: absolute;
+  inset: 0;
+  background: var(--material-bar);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  backdrop-filter: blur(20px) saturate(180%);
+  box-shadow: 0 var(--hairline) 0 var(--separator);
+}
+
+.barRow {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  min-height: var(--navbar-h);
+  padding-inline: var(--space-2);
+}
+
+.barStart {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.barEnd {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-1);
+}
+
+.compactTitle {
+  font: var(--type-headline);
+  color: var(--text-primary);
+  text-align: center;
+  /* one line normally; with very large text it may take a second line instead of being clipped */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+  text-wrap: balance;
+  max-width: 60vw;
+}
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  min-height: var(--tap);
+  padding-inline: var(--space-1) var(--space-2);
+  color: var(--text-accent);
+  font: var(--type-body);
+  border-radius: var(--r-control);
+}
+
+.back[data-cancel] {
+  padding-inline: var(--space-2);
+}
+
+.back:active {
+  opacity: 0.5;
+}
+
+.large {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-inline: var(--page-margin);
+  padding-block: var(--space-1) var(--space-4);
+}
+
+.titleRowPlain {
+  display: contents;
+}
+.titleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+/* a decorative band (Joy's Harlequin) owns the top of the page; the title starts below it, never on the pattern */
+.scroll[data-band] .large {
+  padding-block-start: var(--band-clearance, 96px);
+}
+
+.largeTitle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font: var(--type-display);
+  color: var(--text-primary);
+  transform-origin: right center;
+  letter-spacing: 0;
+}
+
+.subtitle {
+  font: var(--type-caption);
+  color: var(--text-muted);
+}
+
+/* eyebrow row above the large title (boards: «W · السبت 24 أكتوبر … ✦ 38», «موسم الأساس · الأسبوع 3») */
+.eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  min-height: 32px;
+  margin-block-end: var(--space-1);
+  font: var(--type-caption);
+  color: var(--text-muted);
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+/* decorative band behind the bar + large title (Joy's Harlequin) */
+.band {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.large {
+  position: relative;
+  z-index: 1;
+}
+
+.latin {
+  font-family: var(--font-numeric);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+/* Screen titles take programmatic focus on push (tabIndex -1); the move is announced, not drawn. */
+.focusTarget:focus {
+  outline: none;
+}

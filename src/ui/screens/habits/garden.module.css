@@ -1,0 +1,86 @@
+.switch {
+  flex: 0 0 auto;
+  width: 160px;
+}
+
+/* one-line flower rows (board) */
+.line {
+  font: var(--type-body);
+  color: var(--text-primary);
+}
+.lineName {
+  font-weight: 600;
+}
+.lineMeta {
+  color: var(--text-secondary);
+}
+
+.bed {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 8px 14px 22px;
+  margin-inline: var(--page-margin);
+  margin-block-end: var(--space-6);
+  border-radius: var(--r-panel, 32px);
+  background: var(--surface-subtle);
+}
+.row {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  border-block-end: 0.75px solid color-mix(in srgb, var(--text-primary) 28%, transparent);
+}
+.plant {
+  display: grid;
+  place-items: end center;
+  gap: 2px;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  border-radius: var(--r-control);
+  transition: transform 120ms ease;
+}
+.plant:active {
+  transform: scale(0.97);
+}
+.plant:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+.rooted {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font: var(--type-footnote);
+  color: var(--text-accent);
+  white-space: nowrap;
+}
+
+/* «ترتاح» — the flower keeps its stage, shown quieter (not withered), legible in dark too. */
+.resting {
+  display: inline-flex;
+  opacity: 0.6;
+  filter: saturate(0.6);
+}
+
+/* one quiet line under each flower in the garden view */
+.plantName {
+  max-width: 96px;
+  font: var(--type-caption, var(--type-footnote));
+  color: var(--text-secondary);
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.plantStar {
+  margin-inline-end: 3px;
+  vertical-align: baseline;
+  color: var(--brand-primary);
+}

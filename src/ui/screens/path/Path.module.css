@@ -1,0 +1,645 @@
+/* Path area — Density 1 (Subtle): Star Dotted Line dividers, one soft sky panel for the season. */
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.pad {
+  margin-inline: var(--page-margin);
+}
+
+/* ---- season panel ---------------------------------------------------- */
+.season {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-inline: var(--page-margin);
+  padding: var(--space-5);
+  /* boards: the season is the one hero — subtle sky block (light), gradient + glow (dark), no CTA */
+  border-radius: var(--r-hero);
+  background: var(--hero-bg);
+  box-shadow: var(--hero-shadow);
+}
+
+.seasonHead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.seasonTitle {
+  margin: 0;
+  font: var(--type-hero);
+  color: var(--text-primary);
+}
+
+.seasonWeek {
+  font: var(--type-footnote);
+  color: var(--text-accent);
+  white-space: nowrap;
+}
+
+.track {
+  height: 4px;
+  border-radius: var(--r-pill);
+  background: color-mix(in srgb, var(--action-default) 18%, transparent);
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  border-radius: var(--r-pill);
+  background: var(--action-default);
+  transform-origin: right center;
+}
+
+.seasonNote {
+  margin: 0;
+  font: var(--type-caption);
+  color: var(--text-muted);
+}
+
+.seasonLink {
+  align-self: flex-start;
+  min-height: var(--tap);
+  margin-block-end: calc(var(--space-3) * -1);
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--text-accent);
+  font: var(--type-label);
+  cursor: pointer;
+}
+
+/* ---- star dotted divider ---------------------------------------------- */
+.divider {
+  display: flex;
+  align-items: center;
+  margin-inline: calc(var(--page-margin) + 4px);
+  color: var(--brand-primary);
+}
+
+.dots {
+  flex: 1;
+  height: 8px;
+  background-image: radial-gradient(circle, var(--border-default) 1.2px, transparent 1.4px);
+  background-size: 9px 8px;
+  background-position: center;
+}
+
+/* ---- section heads ---------------------------------------------------- */
+.sectionHead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-inline: calc(var(--page-margin) + 4px);
+}
+
+.sectionTitle {
+  margin: 0;
+  font: var(--type-footnote);
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.linkBtn {
+  min-height: var(--tap);
+  min-width: var(--tap);
+  padding-inline: var(--space-2);
+  margin-inline-end: calc(var(--space-2) * -1);
+  border: 0;
+  background: transparent;
+  color: var(--text-accent);
+  font: var(--type-caption);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.linkBtn:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  border-radius: var(--r-control);
+}
+
+/* ---- project cards ---------------------------------------------------- */
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-inline: var(--page-margin);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--r-card);
+  background: var(--surface-elevated);
+  box-shadow: var(--shadow-subtle);
+  overflow: hidden;
+}
+
+.card[data-open] {
+  box-shadow: var(--shadow-elevated);
+}
+
+.cardHead {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  width: 100%;
+  min-height: 60px;
+  padding: var(--space-3) var(--space-4);
+  border: 0;
+  background: transparent;
+  color: inherit;
+  text-align: start;
+  font: inherit;
+  cursor: pointer;
+}
+
+.cardHead:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: -2px;
+  border-radius: var(--r-card);
+}
+
+.cardText {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardTitle {
+  font: var(--type-headline);
+  color: var(--text-primary);
+}
+
+.cardSub {
+  font: var(--type-footnote);
+  color: var(--text-muted);
+}
+
+.status {
+  flex: none;
+  height: 24px;
+  padding-inline: var(--space-2);
+  border-radius: var(--r-chip);
+  background: var(--surface-subtle);
+  color: var(--text-muted);
+  font: var(--type-label);
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+.status[data-tone='active'] {
+  background: var(--action-tint);
+  color: var(--text-accent);
+}
+
+.status[data-tone='done'] {
+  background: var(--success-surface);
+  color: var(--success);
+}
+
+.caret {
+  flex: none;
+  color: var(--text-muted);
+  transition: transform var(--dur-base) var(--ease-standard);
+}
+
+.card[data-open] .caret {
+  transform: rotate(180deg);
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: 0 var(--space-4) var(--space-4);
+}
+
+.next {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--r-control);
+  background: var(--surface-subtle);
+}
+
+.nextLabel {
+  font: var(--type-label);
+  color: var(--text-accent);
+}
+
+.nextTitle {
+  font: var(--type-body);
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.nextMeta {
+  font: var(--type-footnote);
+  color: var(--text-muted);
+}
+
+.facts {
+  margin: 0;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-1) var(--space-4);
+  font: var(--type-caption);
+}
+
+.facts dt {
+  color: var(--text-muted);
+}
+
+.facts dd {
+  margin: 0;
+  color: var(--text-primary);
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.facts dd[data-note] {
+  color: var(--text-secondary);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+/* ---- forms (sheets & inline) ------------------------------------------ */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.label {
+  font: var(--type-footnote);
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.input,
+.textarea,
+.select {
+  min-height: 52px;
+  padding-inline: var(--space-4);
+  border-radius: var(--r-control);
+  border: 1px solid var(--border-subtle);
+  background: var(--surface-subtle);
+  color: var(--text-primary);
+  font: var(--type-body);
+  font-size: max(16px, 1rem);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.textarea {
+  min-height: 96px;
+  padding-block: var(--space-3);
+  resize: vertical;
+}
+
+.input:focus-visible,
+.textarea:focus-visible,
+.select:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 0;
+}
+
+.row2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+}
+
+.hint {
+  margin: 0;
+  font: var(--type-footnote);
+  color: var(--text-muted);
+}
+
+.hint.padded {
+  margin-inline: calc(var(--page-margin) + 4px);
+}
+
+.addRow {
+  display: flex;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4) var(--space-3);
+}
+
+.addRow .input {
+  flex: 1;
+  min-height: 44px;
+}
+
+/* ---- detail screen ---------------------------------------------------- */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-inline: var(--page-margin);
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-inline: var(--page-margin);
+  padding: var(--space-5);
+  /* the screen's one hero: sky block (light), gradient + glow ring (dark) — boards */
+  border-radius: var(--r-hero);
+  background: var(--hero-bg);
+  box-shadow: var(--hero-shadow);
+  --btn-secondary-bg: var(--cell-bg);
+}
+
+.heroTitle {
+  margin: 0;
+  font: var(--type-h2);
+  color: var(--text-primary);
+}
+
+.danger {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-inline: var(--page-margin);
+  margin-block-start: var(--space-4);
+}
+
+.dangerBtn {
+  min-height: var(--tap);
+  border: 0;
+  border-radius: var(--r-control);
+  background: transparent;
+  color: var(--error);
+  font: var(--type-body);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.dangerBtn[data-armed] {
+  background: var(--error);
+  color: var(--on-action);
+}
+
+.dangerBtn:focus-visible {
+  outline: 2px solid var(--focus-ring);
+}
+
+.stepActions {
+  display: flex;
+  gap: var(--space-1);
+}
+
+.iconBtn {
+  /* 44px targets (QA area 3 #15) */
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: var(--r-pill);
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.iconBtn:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.iconBtn:focus-visible {
+  outline: 2px solid var(--focus-ring);
+}
+
+/* ---- IELTS ------------------------------------------------------------ */
+.week {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: var(--space-1);
+  margin-inline: var(--page-margin);
+}
+
+.day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: var(--space-2) 2px;
+  border-radius: var(--r-control);
+  background: var(--surface-elevated);
+  box-shadow: var(--shadow-subtle);
+  text-align: center;
+  min-width: 0;
+}
+
+.day[data-today] {
+  background: var(--action-default);
+  color: var(--on-action);
+}
+
+.dayName {
+  font: var(--type-label);
+  opacity: 0.8;
+}
+
+.daySkill {
+  font: var(--type-footnote);
+  font-weight: 600;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+.flash {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: 180px;
+  margin-inline: var(--page-margin);
+  padding: var(--space-6) var(--space-5);
+  border: 0;
+  border-radius: var(--r-hero);
+  background: var(--surface-elevated);
+  box-shadow: var(--shadow-elevated);
+  color: var(--text-primary);
+  font: inherit;
+  text-align: center;
+  cursor: pointer;
+  width: calc(100% - 2 * var(--page-margin));
+}
+
+.flash:focus-visible {
+  outline: 2px solid var(--focus-ring);
+}
+
+.flashFront {
+  font: var(--type-h1);
+  font-family: var(--font-numeric);
+}
+
+.flashBack {
+  font: var(--type-title2);
+  color: var(--text-secondary);
+}
+
+.flashExample {
+  font: var(--type-caption);
+  color: var(--text-muted);
+}
+
+.flashHint {
+  font: var(--type-footnote);
+  color: var(--text-accent);
+}
+
+.grades {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-2);
+  margin-inline: var(--page-margin);
+}
+
+.bands {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-2);
+}
+
+.num {
+  font-family: var(--font-numeric);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---- driving ---------------------------------------------------------- */
+.plan {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-inline: var(--page-margin);
+  padding: var(--space-5);
+  /* boards: the season is the one hero — subtle sky block (light), gradient + glow (dark), no CTA */
+  border-radius: var(--r-hero);
+  background: var(--hero-bg);
+  box-shadow: var(--hero-shadow);
+}
+
+.planRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.planText {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.planTitle {
+  font: var(--type-headline);
+  color: var(--text-primary);
+}
+
+.planSub {
+  font: var(--type-footnote);
+  color: var(--text-muted);
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  min-height: var(--tap);
+  font: var(--type-body);
+}
+
+.toggle input {
+  width: 22px;
+  height: 22px;
+  accent-color: var(--action-default);
+}
+
+/* ---- domains sheet ---- */
+.warn {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border-radius: var(--r-card);
+  background: color-mix(in srgb, var(--warning) 9%, var(--cell-bg));
+  font: var(--type-caption);
+  color: var(--text-primary);
+}
+.warn p {
+  margin: 0;
+}
+.domainList {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-radius: var(--r-card);
+  background: var(--cell-bg);
+  padding-inline: var(--space-4);
+}
+.domainRow {
+  /* Fixed control column so every row lines up, short or long names (QA area 3 #21). */
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 196px;
+  align-items: center;
+  gap: var(--space-2) var(--space-3);
+  min-block-size: 60px;
+  padding-block: var(--space-2);
+}
+.domainRow > .warn {
+  grid-column: 1 / -1;
+}
+.domainRow:not(:last-child) {
+  box-shadow: inset 0 calc(var(--hairline) * -1) 0 var(--separator);
+}
+.domainName {
+  font: var(--type-row);
+  color: var(--text-primary);
+}
+.domainRow > [role='radiogroup'] {
+  min-inline-size: 0;
+}
+.fieldError {
+  margin: 0;
+  font: var(--type-footnote);
+  color: var(--error);
+}
+.milestone {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: var(--tap);
+}
+.milestone .input {
+  flex: 1;
+  min-height: 44px;
+}

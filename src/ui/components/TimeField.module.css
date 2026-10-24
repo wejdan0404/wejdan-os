@@ -1,0 +1,21 @@
+.field {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  font-family: var(--font-numeric);
+  font-variant-numeric: tabular-nums;
+}
+
+.field select {
+  min-block-size: 44px;
+  min-inline-size: 44px;
+  text-align: center;
+  text-align-last: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.colon {
+  font: var(--type-label);
+  font-weight: 600;
+  color: var(--text-muted);
+}

@@ -1,0 +1,96 @@
+.bar {
+  position: fixed;
+  inset-inline: 0;
+  inset-block-end: 0;
+  z-index: 20;
+  padding-block-end: var(--safe-bottom);
+}
+
+.bar {
+  transition: transform var(--dur-slow) var(--ease-standard), opacity var(--dur-base) var(--ease-standard);
+}
+
+.bar[data-hidden] {
+  transform: translateY(110%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.material {
+  position: absolute;
+  inset: 0;
+  background: var(--material-tab);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  backdrop-filter: blur(28px) saturate(180%);
+  box-shadow: 0 calc(var(--hairline) * -1) 0 var(--separator);
+}
+
+.list {
+  position: relative;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  max-width: 640px;
+  margin-inline: auto;
+}
+
+.item {
+  flex: 1;
+}
+
+.tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  width: 100%;
+  min-height: var(--tabbar-h);
+  padding-block: 5px 3px;
+  color: var(--text-muted);
+  transition: color var(--dur-base) var(--ease-standard);
+}
+
+.tab[data-active] {
+  color: var(--text-primary);
+}
+
+.tab[data-active] .label {
+  font-weight: 600;
+}
+
+.glyph {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 28px;
+}
+
+.glyph > svg {
+  position: relative;
+}
+
+.dotSlot {
+  position: relative;
+  display: block;
+  width: 4px;
+  height: 4px;
+}
+
+.indicator {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--r-pill);
+  background: var(--brand-primary);
+}
+
+.label {
+  font: var(--type-tab);
+}
+
+.tab:active .glyph {
+  transform: scale(0.92);
+  transition: transform var(--dur-quick) var(--ease-standard);
+}

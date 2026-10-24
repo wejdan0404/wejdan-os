@@ -1,0 +1,27 @@
+.head {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-inline: var(--page-margin);
+  min-height: 28px;
+}
+
+.title {
+  font: var(--type-headline);
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+/* dotted thread (Star Dotted Line, divider form) */
+.thread {
+  flex: 1;
+  height: 10px;
+  background-image:
+    radial-gradient(circle, var(--border-default) 1.2px, transparent 1.6px);
+  background-size: 9px 10px;
+  background-position: right center;
+  background-repeat: repeat-x;
+  opacity: 0.9;
+  -webkit-mask-image: linear-gradient(to left, #000 60%, transparent);
+  mask-image: linear-gradient(to left, #000 60%, transparent);
+}

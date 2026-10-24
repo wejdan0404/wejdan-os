@@ -1,0 +1,20 @@
+.row {
+  display: flex;
+  flex-wrap: wrap; /* a11y #6: at large text the control takes its own full-width line */
+  align-items: center;
+  gap: var(--space-3);
+  margin-inline: var(--page-margin);
+}
+
+.label {
+  font: var(--type-caption);
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.control {
+  /* compact, sized to its three words (boards) — still wraps to its own line at large text */
+  flex: 0 1 auto;
+  min-width: 0;
+  margin-inline-start: auto;
+}

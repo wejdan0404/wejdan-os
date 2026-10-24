@@ -1,0 +1,45 @@
+.track {
+  display: flex;
+  padding: 3px;
+  gap: 2px;
+  border-radius: var(--r-control);
+  background: var(--surface-subtle);
+  box-shadow: inset 0 0 0 var(--hairline) var(--seg-ring);
+}
+
+.segment {
+  position: relative;
+  flex: 1;
+  /* 36pt visual segment (boards); the hit area below keeps the 44pt target */
+  min-height: 36px;
+  padding-inline: 14px;
+  border-radius: 9px;
+  font: var(--type-footnote);
+  font-weight: 500;
+  color: var(--text-muted);
+  transition: color var(--dur-base) var(--ease-standard);
+}
+
+.segment::after {
+  content: '';
+  position: absolute;
+  inset-block: -4px;
+  inset-inline: 0;
+}
+
+.segment[data-active] {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.thumb {
+  position: absolute;
+  inset: 0;
+  border-radius: 9px;
+  background: var(--surface-elevated);
+  box-shadow: var(--seg-thumb-shadow);
+}
+
+.label {
+  position: relative;
+}

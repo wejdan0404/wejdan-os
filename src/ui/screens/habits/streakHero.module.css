@@ -1,0 +1,106 @@
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-inline: var(--page-margin);
+  margin-block-end: var(--space-6);
+  padding: var(--space-6);
+  border-radius: var(--r-hero);
+  background: var(--hero-bg);
+  box-shadow: var(--hero-shadow);
+  overflow: hidden;
+  isolation: isolate;
+}
+.glow {
+  position: absolute;
+  inset-block-start: -80px;
+  inset-inline-start: -60px;
+  inline-size: 220px;
+  block-size: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--glow-accent) 0%, transparent 65%);
+  opacity: var(--hero-glow-opacity, 0);
+  z-index: -1;
+  pointer-events: none;
+}
+.overline {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font: var(--type-footnote);
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+.title {
+  margin: 0;
+  font: var(--type-hero);
+  font-size: 1.4rem;
+  color: var(--text-primary);
+}
+.sub {
+  margin: 0;
+  font: var(--type-caption);
+  color: var(--text-secondary);
+}
+.hero > ul:first-of-type {
+  margin-block-start: var(--space-4);
+}
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin: var(--space-2) 0 0;
+  padding: 0;
+  list-style: none;
+  font: var(--type-footnote);
+  color: var(--text-secondary);
+}
+.legendItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.key {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  inline-size: 18px;
+  block-size: 18px;
+  border-radius: 50%;
+}
+.key[data-state='done'] {
+  background: var(--action-default);
+  color: var(--on-action);
+}
+.key[data-state='compensation'] {
+  border: 1.5px dashed var(--action-default);
+  background: color-mix(in srgb, var(--action-default) 16%, transparent);
+}
+.key[data-state='rest'] {
+  color: var(--text-muted);
+}
+.keyDash {
+  inline-size: 10px;
+  block-size: 2px;
+  border-radius: 1px;
+  background: currentColor;
+}
+.note {
+  margin: var(--space-2) 0 0;
+  font: var(--type-footnote);
+  color: var(--text-secondary);
+}
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  align-self: flex-start;
+  min-block-size: var(--tap);
+  margin-block-start: var(--space-1);
+  padding: 0;
+  font: var(--type-label);
+  color: var(--text-accent);
+  text-align: start;
+}

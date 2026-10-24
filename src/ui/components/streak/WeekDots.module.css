@@ -1,0 +1,66 @@
+.row {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  min-inline-size: 0;
+}
+.dot {
+  position: relative;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: 36px;
+  block-size: 36px;
+  border-radius: 50%;
+  color: var(--on-action);
+}
+.dot[data-state='done'] {
+  background: var(--action-default);
+}
+.dot[data-state='compensation'] {
+  border: 1.5px dashed var(--action-default);
+  background: color-mix(in srgb, var(--action-default) 16%, transparent);
+  color: var(--text-accent);
+}
+.dot[data-state='today'] {
+  border: 2px solid var(--action-default);
+}
+.dot[data-state='upcoming'] {
+  border: 1px solid var(--border-subtle);
+}
+.dot[data-state='rest'] {
+  color: var(--text-muted);
+}
+.centre {
+  inline-size: 8px;
+  block-size: 8px;
+  border-radius: 50%;
+  background: var(--action-default);
+}
+.dash {
+  inline-size: 10px;
+  block-size: 2px;
+  border-radius: 1px;
+  background: currentColor;
+}
+.label {
+  font: var(--type-footnote);
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+.label[data-today] {
+  color: var(--text-primary);
+  font-weight: 700;
+}

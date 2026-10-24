@@ -1,0 +1,421 @@
+/* ---- Reminders settings ------------------------------------------------------------------ */
+.lede {
+  margin: 0 var(--page-margin) var(--space-5);
+  font: var(--type-body);
+  color: var(--text-secondary);
+  text-wrap: pretty;
+}
+.tile {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: 32px;
+  block-size: 32px;
+  border-radius: 8px;
+  background: var(--action-tint);
+  color: var(--text-accent);
+}
+.plus,
+.clockIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: 32px;
+  block-size: 32px;
+  color: var(--text-accent);
+}
+.addTitle {
+  color: var(--text-accent);
+  font-weight: 600;
+}
+.timeChip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-block-size: var(--tap);
+  min-inline-size: 84px;
+  padding-inline: var(--space-3);
+  border-radius: var(--r-control);
+  background: var(--surface-subtle);
+  box-shadow: inset 0 0 0 var(--hairline) var(--border-subtle);
+  color: var(--text-primary);
+  font: var(--type-label);
+  font-weight: 600;
+  white-space: nowrap;
+}
+.dimmable {
+  transition: opacity var(--dur-base) var(--ease-standard);
+}
+.dimmable[data-off] {
+  opacity: 0.45;
+}
+
+/* ---- Time wheel -------------------------------------------------------------------------- */
+.wheel {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 4px;
+  block-size: 190px;
+  margin-block-end: var(--space-4);
+  border-radius: var(--r-card);
+  background: var(--surface-subtle);
+  overflow: hidden;
+}
+.band {
+  position: absolute;
+  inset-inline: 12px;
+  inset-block-start: 75px;
+  block-size: 40px;
+  border-radius: 10px;
+  background: var(--surface-elevated);
+  box-shadow: var(--shadow-subtle), inset 0 0 0 var(--hairline) var(--border-subtle);
+  pointer-events: none;
+}
+.col {
+  position: relative;
+  flex: 1;
+  max-inline-size: 84px;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  padding-block: 76px;
+  scrollbar-width: none;
+  overscroll-behavior: contain;
+  -webkit-mask-image: linear-gradient(transparent, #000 28%, #000 72%, transparent);
+  mask-image: linear-gradient(transparent, #000 28%, #000 72%, transparent);
+}
+.col::-webkit-scrollbar {
+  display: none;
+}
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: 100%;
+  block-size: 38px;
+  scroll-snap-align: center;
+  font: var(--type-body);
+  font-family: var(--font-numeric);
+  font-variant-numeric: tabular-nums;
+  font-size: 1.15rem;
+  color: var(--text-muted);
+}
+.cell[data-selected] {
+  color: var(--text-primary);
+  font-weight: 700;
+}
+.colon {
+  align-self: center;
+  font: var(--type-headline);
+  color: var(--text-primary);
+}
+/* the keyboard / VoiceOver path: the existing TimeField selects, shown only when one has focus */
+.srTime {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+.srTime:focus-within {
+  position: static;
+  inline-size: auto;
+  block-size: auto;
+  margin: 0 0 var(--space-4);
+  overflow: visible;
+  clip-path: none;
+  display: flex;
+  justify-content: center;
+}
+.timeBody {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-2) var(--page-margin) var(--space-8);
+}
+.timeFor {
+  margin: 0 0 var(--space-3);
+  font: var(--type-label);
+  color: var(--text-muted);
+  text-align: center;
+}
+.repeatRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-block-size: 56px;
+  padding-inline: var(--space-4);
+  border-radius: var(--r-card);
+  background: var(--surface-subtle);
+}
+.repeatIcon {
+  display: inline-flex;
+  color: var(--text-accent);
+}
+.repeatTitle {
+  font: var(--type-row);
+  color: var(--text-primary);
+}
+.repeatVal {
+  margin-inline-start: auto;
+  font: var(--type-caption);
+  color: var(--text-muted);
+}
+.removeBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  align-self: center;
+  min-block-size: var(--tap);
+  margin-block-start: var(--space-4);
+  padding-inline: var(--space-4);
+  font: var(--type-label);
+  font-weight: 600;
+  color: var(--error);
+}
+.saveBtn {
+  min-block-size: var(--tap);
+  padding-inline: var(--space-4);
+}
+
+/* ---- Calendar export sheet --------------------------------------------------------------- */
+.icsBody {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-2) var(--page-margin) var(--space-8);
+}
+.icsBody .lede {
+  margin: 0 0 var(--space-2);
+}
+.sectionLabel {
+  margin: var(--space-3) 0 0;
+  font: var(--type-label);
+  font-weight: 500;
+  color: var(--text-muted);
+}
+.empty {
+  margin: 0;
+  padding: var(--space-4);
+  border-radius: var(--r-card);
+  background: var(--surface-subtle);
+  font: var(--type-caption);
+  color: var(--text-secondary);
+}
+.checklist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-radius: var(--r-card);
+  background: var(--surface-subtle);
+  overflow: hidden;
+}
+.checklist li + li {
+  box-shadow: inset 0 var(--hairline) 0 var(--border-subtle);
+  margin-inline-start: var(--space-4);
+}
+.checkRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  inline-size: 100%;
+  min-block-size: 64px;
+  padding: var(--space-2) var(--space-4) var(--space-2) 0;
+  text-align: start;
+}
+.checkText {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-inline-size: 0;
+}
+.checkTitle {
+  font: var(--type-row);
+  color: var(--text-primary);
+}
+.checkSub {
+  font: var(--type-caption);
+  color: var(--text-muted);
+}
+.checkMark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  inline-size: 28px;
+  block-size: 28px;
+  border-radius: 50%;
+  border: 1.5px solid var(--check-ring);
+  color: var(--on-action);
+}
+.checkMark[data-on] {
+  border-color: transparent;
+  background: var(--action-default);
+}
+.fine {
+  margin: 0;
+  font: var(--type-footnote);
+  color: var(--text-muted);
+  text-align: center;
+}
+.fileCard {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border-radius: var(--r-card);
+  background: var(--surface-subtle);
+}
+.fileTile {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: 48px;
+  block-size: 48px;
+  border-radius: var(--r-control);
+  background: var(--surface-elevated);
+  color: var(--text-primary);
+  box-shadow: inset 0 0 0 var(--hairline) var(--border-subtle);
+}
+.fileText {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-inline-size: 0;
+}
+.fileName {
+  font: var(--type-headline);
+  font-family: var(--font-numeric);
+  color: var(--text-primary);
+  overflow-wrap: anywhere;
+}
+.fileMeta {
+  font: var(--type-footnote);
+  color: var(--text-muted);
+}
+.fileOk {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font: var(--type-footnote);
+  font-weight: 600;
+  color: var(--success);
+}
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  font: var(--type-body);
+  color: var(--text-secondary);
+}
+.stepNo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  inline-size: 28px;
+  block-size: 28px;
+  border-radius: 50%;
+  background: var(--action-tint);
+  color: var(--text-accent);
+  font: var(--type-label);
+  font-family: var(--font-numeric);
+  font-weight: 700;
+}
+
+/* ---- Today banner ------------------------------------------------------------------------ */
+.banner {
+  /* in-flow card above the day list: never fixed/overlaying */
+  position: relative;
+  margin-inline: var(--page-margin);
+  padding: 14px var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  border-radius: var(--r-card);
+  background: var(--surface-default);
+  box-shadow: var(--card-shadow), inset 0 0 0 var(--hairline) var(--border-subtle);
+}
+.bannerTop {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+.bannerIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  inline-size: 40px;
+  block-size: 40px;
+  border-radius: 50%;
+  background: var(--action-tint);
+  color: var(--text-accent);
+}
+.bannerText {
+  flex: 1;
+  min-inline-size: 0;
+}
+.bannerTitle {
+  margin: 0;
+  font: var(--type-headline);
+  color: var(--text-primary);
+}
+.bannerSub {
+  margin: 0;
+  font: var(--type-footnote);
+  color: var(--text-muted);
+}
+.bannerMore {
+  flex-shrink: 0;
+  min-inline-size: 28px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  text-align: center;
+  font: var(--type-footnote);
+  font-weight: 600;
+  color: var(--text-primary);
+  background: var(--action-tint);
+}
+.bannerClose {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: var(--tap);
+  block-size: var(--tap);
+  margin-inline-end: calc(-1 * var(--space-2));
+  color: var(--text-secondary);
+}
+.bannerActions {
+  display: flex;
+  gap: var(--space-3);
+}
+.bannerPrimary,
+.bannerSecondary {
+  flex: 1;
+  min-block-size: var(--tap);
+  padding-inline: var(--space-3);
+  border-radius: var(--r-control);
+  font: var(--type-label);
+  font-weight: 600;
+}
+.bannerPrimary {
+  background: var(--action-default);
+  color: var(--on-action);
+}
+.bannerSecondary {
+  background: transparent;
+  color: var(--text-primary);
+  box-shadow: inset 0 0 0 1px var(--border-subtle);
+}

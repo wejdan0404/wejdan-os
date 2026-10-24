@@ -1,0 +1,82 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.line {
+  display: flex;
+  align-items: center;
+  padding-inline: 6px;
+  min-height: 20px;
+}
+
+.dots {
+  flex: 1;
+  height: 10px;
+  background-image: radial-gradient(circle, var(--dot-color) 1.4px, transparent 1.6px);
+  background-size: 10px 10px;
+  background-position: center;
+  --dot-color: var(--border-subtle);
+}
+.dots[data-state='done'] {
+  --dot-color: var(--action-default);
+}
+.dots[data-state='mid'] {
+  --dot-color: var(--border-default);
+}
+
+.star {
+  width: 18px;
+  height: 18px;
+  flex: none;
+  fill: var(--action-default);
+}
+
+.ring {
+  width: 14px;
+  height: 14px;
+  flex: none;
+  border-radius: 999px;
+  border: 2px solid var(--action-default);
+  background: var(--surface-default);
+  box-shadow: var(--glow-micro, none);
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  flex: none;
+  border-radius: 999px;
+  border: 1.5px solid var(--border-default);
+}
+
+.labels {
+  display: grid;
+  font: var(--type-footnote);
+  color: var(--text-muted);
+}
+
+.label {
+  text-align: center;
+  /* wrap to two lines instead of clipping a Latin tail («…t SPF 30+») */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  unicode-bidi: plaintext;
+  padding-inline: 2px;
+}
+.label[data-edge='start'] {
+  text-align: start;
+}
+.label[data-edge='end'] {
+  text-align: end;
+}
+.label[data-current] {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+

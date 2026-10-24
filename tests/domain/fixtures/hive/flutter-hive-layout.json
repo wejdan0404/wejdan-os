@@ -1,0 +1,887 @@
+{
+ "source": "hive_ce 2.20.1 web layout captured from the Flutter build (titles sanitised to \"test\")",
+ "databases": {
+  "wlo_actions": {
+   "version": 1,
+   "store": "box",
+   "entries": [
+    {
+     "key": "BODY-01",
+     "value": "{\"action_id\":\"BODY-01\",\"area\":\"test\",\"name_ar\":\"test\",\"name_en\":\"test\",\"what\":\"test\",\"dose\":\"test\",\"why\":\"test\",\"evidence_strength\":\"Guideline\",\"sources\":[{\"type\":\"PMID\",\"id\":\"33239350\",\"title\":\"test\",\"year\":2020,\"verified_by\":\"eutils\"},{\"type\":\"URL\",\"id\":\"test\",\"title\":\"test\",\"year\":null,\"verified_by\":\"webfetch\"},{\"type\":\"URL\",\"id\":\"test\",\"title\":\"test\",\"year\":null,\"verified_by\":\"webfetch\"},{\"type\":\"PMID\",\"id\":\"34484438\",\"title\":\"test\",\"year\":2021,\"verified_by\":\"eutils\"}],\"cue_suggestion\":\"test\",\"minimum_version\":\"test\",\"normal_version\":\"test\",\"bonus_version\":\"test\",\"joy_pairing\":\"test\",\"friction_down\":\"test\",\"friction_up_for_competing\":\"test\",\"if_then_plan\":\"test\",\"tracking_metric\":\"test\",\"progression\":\"test\",\"safety_or_stop_rule\":\"test\",\"schedule_slot\":\"afternoon\",\"time_minutes_normal\":35,\"app_type\":\"Habit\",\"priority_for_her\":\"Core\",\"notes\":\"test\",\"ar\":{\"card_title_ar\":\"test\",\"card_meta_ar\":\"test\",\"why_short_ar\":\"test\",\"what_ar\":\"test\",\"dose_ar\":\"test\",\"why_ar\":\"test\",\"cue_ar\":\"test\",\"minimum_ar\":\"test\",\"normal_ar\":\"test\",\"bonus_ar\":\"test\",\"joy_ar\":\"test\",\"friction_down_ar\":\"test\",\"friction_up_ar\":\"test\",\"if_then_ar\":\"test\",\"metric_ar\":\"test\",\"safety_ar\":\"test\"}}"
+    },
+    {
+     "key": "BODY-02",
+     "value": "{\"action_id\":\"BODY-02\",\"area\":\"walking\",\"name_ar\":\"test\",\"name_en\":\"test\",\"what\":\"test\",\"dose\":\"test\",\"why\":\"test\",\"evidence_strength\":\"SR/MA\",\"sources\":[{\"type\":\"PMID\",\"id\":\"40713949\",\"title\":\"test\",\"year\":2025,\"verified_by\":\"eutils\"},{\"type\":\"PMID\",\"id\":\"35247352\",\"title\":\"test\",\"year\":2022,\"verified_by\":\"eutils\"}],\"cue_suggestion\":\"test\",\"minimum_version\":\"test\",\"normal_version\":\"test\",\"bonus_version\":\"test\",\"joy_pairing\":\"test\",\"friction_down\":\"test\",\"friction_up_for_competing\":\"test\",\"if_then_plan\":\"test\",\"tracking_metric\":\"test\",\"progression\":\"test\",\"safety_or_stop_rule\":\"test\",\"schedule_slot\":\"evening\",\"time_minutes_normal\":30,\"app_type\":\"Habit\",\"priority_for_her\":\"Core\",\"notes\":\"test\",\"ar\":{\"card_title_ar\":\"test\",\"card_meta_ar\":\"test\",\"why_short_ar\":\"test\",\"what_ar\":\"test\",\"dose_ar\":\"test\",\"why_ar\":\"test\",\"cue_ar\":\"test\",\"minimum_ar\":\"test\",\"normal_ar\":\"test\",\"bonus_ar\":\"test\",\"joy_ar\":\"test\",\"friction_down_ar\":\"test\",\"friction_up_ar\":\"test\",\"if_then_ar\":\"test\",\"metric_ar\":\"test\",\"safety_ar\":\"test\"}}"
+    }
+   ]
+  },
+  "wlo_admindocs": {
+   "version": 1,
+   "store": "box",
+   "entries": [
+    {
+     "key": "qa_doc1",
+     "value": "{\"id\":\"qa_doc1\",\"name\":\"test\",\"expiry\":\"2026-11-12\",\"remindDaysBefore\":30,\"note\":\"\"}"
+    },
+    {
+     "key": "qa_doc2",
+     "value": "{\"id\":\"qa_doc2\",\"name\":\"test\",\"expiry\":null,\"remindDaysBefore\":30,\"note\":\"\"}"
+    }
+   ]
+  },
+  "wlo_bills": {
+   "version": 1,
+   "store": "box",
+   "entries": [
+    {
+     "key": "qa_bill",
+     "value": "{\"id\":\"qa_bill\",\"title\":\"test\",\"amount\":115,\"dueDay\":26,\"isSubscription\":false,\"active\":true}"
+    },
+    {
+     "key": "qa_sub",
+     "value": "{\"id\":\"qa_sub\",\"title\":\"test\",\"amount\":35,\"dueDay\":28,\"isSubscription\":true,\"active\":true}"
+    }
+   ]
+  },
+  "wlo_bnplitems": {
+   "version": 1,
+   "store": "box",
+   "entries": [
+    {
+     "key": "qa_bnpl",
+     "value": "{\"id\":\"qa_bnpl\",\"title\":\"test\",\"provider\":\"test\",\"instalmentAmount\":112,\"dueDates\":[\"2026-09-12\",\"2026-10-12\",\"2026-11-12\",\"2026-12-12\"],\"paidDates\":[\"2026-09-12\"]}"
+    }
+   ]
+  },
+  "wlo_cycleentries": {
+   "version": 1,
+   "store": "box",
+   "entries": [
+    {
+     "key": "qa_cyc",
+     "value": "{\"id\":\"qa_cyc\",\"date\":\"2026-10-18\",\"kind\":\"start\",\"note\":\"test\"}"
+    }
+   ]
+  },
+  "wlo_dayplans": {
+   "version": 1,
+   "store": "box",
+   "entries": []
+  },
+  "wlo_domains": {
+   "version": 1,
+   "store": "box",
+   "entries": [
+    {
+     "key": "admin",
+     "value": "{\"id\":\"admin\",\"nameAr\":\"test\",\"nameEn\":\"test\",\"state\":\"rest\",\"sensitive\":false,\"enabled\":true,\"parent\":null,\"sortOrder\":12}"
+    },
+    {
+     "key": "aquarium",
+     "value": "{\"id\":\"aquarium\",\"nameAr\":\"test\",\"nameEn\":\"Aquarium\",\"state\":\"rest\",\"sensitive\":false,\"enabled\":false,\"parent\":\"home\",\"sortOrder\":16}"
+    },
+    {
+     "key": "care",
+     "value": "{\"id\":\"care\",\"nameAr\":\"test\",\"nameEn\":\"test\",\"state\":\"maintain\",\"sensitive\":false,\"enabled\":true,\"parent\":null,\"sortOrder\":3}"
+    },
+    {
+     "key": "career",
+     "value": "{\"id\":\"career\",\"nameAr\":\"test\",\"nameEn\":\"test\",\"state\":\"grow\",\"sensitive\":false,\"enabled\":true,\"parent\":null,\"sortOrder\":7}"
+    },
+    {
+     "key": "digital",
+     "value": "{\"id\":\"digital\",\"nameAr\":\"test\",\"nameEn\":\"test\",\"state\":\"rest\",\"sensitive\":false,\"enabled\":true,\"parent\":null,\"sortOrder\":11}"
+    },
+    {
+     "key": "driving",
+     "value": "{\"id\":\"driving\",\"nameAr\":\"test\",\"nameEn\":\"Driving\",\"state\":\"rest\",\"sensitive\":false,\"enabled\":true,\"parent\":null,\"sortOrder\":8}"
+    },
+    {
+     "key": "faith",
+     "value": "{\"id\":\"faith\",\"nameAr\":\"test\",\"nameEn\":\"test\",\"state\":\"rest\",\"sensitive\":false,\"enabled\":true,\"parent\":null,\"sortOrder\":15}"
+    },
+    {
+     "key": "food",
+     "value": "{\"id\":\"food\",\"nameAr\":\"test\",\"nameEn\":\"Food\",\"state\":\"rest\",\"sensitive\":false,\"enabled\":true,\"parent\":null,\"sortOrder\":2}"
+    },
+    {
+     "key": "health",
+     "value": "{\"id\":\"health\",\"nameAr\":\"test\",\"nameEn\":\"test\",\"state\":\"grow\",\"sensitive\":false,\"enabled\":true,\"parent\":null,\"sortOrder\":0}"
+    },
+    {
+     "key": "home",
+     "value": "{\"id\":\"home\",\"nameAr\":\"test\",\"nameEn\":\"Home\",\"state\":\"maintain\",\"sensitive\":false,\"enabled\":true,\"parent\":null,\"sortOrder\":10}"
+    },
+    {
+     "key": "ielts",
+     "value": "{\"id\":\"ielts\",\"nameAr\":\"test\",\"nameEn\":\"test\",\"state\":\"grow\",\"sensitive\":false,\"enabled\":true,\"parent\":null,\"sortOrder\":5}"
+    },
+    {
+     "key": "joy",
+     "value": "{\"id\":\"joy\",\"nameAr\":\"test\",\"nameEn\":\"test\",\"state\":\"rest\",\"sensitive\":false,\"enabled\":true,\"parent\":null,\"sortOrder\":13}"
+    },
+    {
+     "key": "learning",
+     "value": "{\"id\":\"learning\",\"nameAr\":\"test\",\"nameEn\":\"test\",\"state\":\"rest\",\"sensitive\":false,\"enabled\":true,\"parent\":null,\"sortOrder\":6}"
+    },
+    {
+     "key": "money",
+     "value": "{\"id\":\"money\",\"nameAr\":\"test\",\"nameEn\":\"Money\",\"state\":\"maintain\",\"sensitive\":false,\"enabled\":true,\"parent\":null,\"sortOrder\":9}"
+    },
+    {
+     "key": "people",
+     "value": "{\"id\":\"people\",\"nameAr\":\"test\",\"nameEn\":\"test\",\"state\":\"rest\",\"sensitive\":false,\"enabled\":true,\"parent\":null,\"sortOrder\":14}"
+    },
+    {
+     "key": "sleep",
+     "value": "{\"id\":\"sleep\",\"nameAr\":\"test\",\"nameEn\":\"test\",\"state\":\"maintain\",\"sensitive\":false,\"enabled\":true,\"parent\":null,\"sortOrder\":1}"
+    },
+    {
+     "key": "womensHealth",
+     "value": "{\"id\":\"womensHealth\",\"nameAr\":\"test\",\"nameEn\":\"test\",\"state\":\"rest\",\"sensitive\":true,\"enabled\":false,\"parent\":null,\"sortOrder\":4}"
+    }
+   ]
+  },
+  "wlo_drivingsessions": {
+   "version": 1,
+   "store": "box",
+   "entries": [
+    {
+     "key": "qa_drv1",
+     "value": "{\"id\":\"qa_drv1\",\"date\":\"2026-10-20\",\"minutes\":20,\"conditions\":[\"day\",\"parking\"],\"supervised\":true,\"kind\":\"practice\",\"note\":\"test\"}"
+    },
+    {
+     "key": "qa_drv2",
+     "value": "{\"id\":\"qa_drv2\",\"date\":\"2026-10-22\",\"minutes\":10,\"conditions\":[],\"supervised\":false,\"kind\":\"hazardPerception\",\"note\":\"test\"}"
+    },
+    {
+     "key": "qa_drv3",
+     "value": "{\"id\":\"qa_drv3\",\"date\":\"2026-10-21\",\"minutes\":15,\"conditions\":[],\"supervised\":false,\"kind\":\"theory\",\"note\":\"test\"}"
+    }
+   ]
+  },
+  "wlo_energychecks": {
+   "version": 1,
+   "store": "box",
+   "entries": [
+    {
+     "key": "2026-10-23",
+     "value": "{\"date\":\"2026-10-23\",\"mode\":\"green\",\"at\":\"2026-10-23T23:40:43.228\"}"
+    }
+   ]
+  },
+  "wlo_enginerules": {
+   "version": 1,
+   "store": "box",
+   "entries": [
+    {
+     "key": "ENG-01",
+     "value": "{\"action_id\":\"ENG-01\",\"area\":\"test\",\"name_ar\":\"test\",\"name_en\":\"test\",\"what\":\"test\",\"why\":\"test\",\"evidence_strength\":\"SR/MA\",\"sources\":[{\"type\":\"PMID\",\"id\":\"26361052\",\"title\":\"test\",\"year\":2016,\"verified_by\":\"eutils\"},{\"type\":\"PMID\",\"id\":\"23211256\",\"title\":\"test\",\"year\":2012,\"verified_by\":\"eutils\"},{\"type\":\"DOI\",\"id\":\"10.3390/healthcare12232488\",\"title\":\"test\",\"year\":2024,\"verified_by\":\"crossref\"}],\"safety_or_stop_rule\":\"test\",\"notes\":\"\",\"app_type\":\"test\",\"ar\":{\"card_title_ar\":\"test\",\"what_ar\":\"test\",\"why_ar\":\"test\",\"safety_ar\":\"test\"}}"
+    },
+    {
+     "key": "ENG-02",
+     "value": "{\"action_id\":\"ENG-02\",\"area\":\"test\",\"name_ar\":\"test\",\"name_en\":\"test\",\"what\":\"test\",\"why\":\"test\",\"evidence_strength\":\"SR/MA\",\"sources\":[{\"type\":\"DOI\",\"id\":\"10.1002/ejsp.674\",\"title\":\"test\",\"year\":2010,\"verified_by\":\"crossref\"},{\"type\":\"PMID\",\"id\":\"23211256\",\"title\":\"test\",\"year\":2012,\"verified_by\":\"eutils\"},{\"type\":\"DOI\",\"id\":\"10.3390/healthcare12232488\",\"title\":\"test\",\"year\":2024,\"verified_by\":\"crossref\"}],\"safety_or_stop_rule\":\"test\",\"notes\":\"\",\"app_type\":\"test\",\"ar\":{\"card_title_ar\":\"test\",\"what_ar\":\"test\",\"why_ar\":\"test\",\"safety_ar\":\"test\"}}"
+    }
+   ]
+  },
+  "wlo_errands": {
+   "version": 1,
+   "store": "box",
+   "entries": [
+    {
+     "key": "qa_err1",
+     "value": "{\"id\":\"qa_err1\",\"title\":\"test\",\"done\":false,\"addedDate\":null}"
+    },
+    {
+     "key": "qa_err2",
+     "value": "{\"id\":\"qa_err2\",\"title\":\"test\",\"done\":true,\"addedDate\":null}"
+    }
+   ]
+  },
+  "wlo_experiments": {
+   "version": 1,
+   "store": "box",
+   "entries": []
+  },
+  "wlo_fixedevents": {
+   "version": 1,
+   "store": "box",
+   "entries": []
+  },
+  "wlo_goals": {
+   "version": 1,
+   "store": "box",
+   "entries": [
+    {
+     "key": "g_career",
+     "value": "{\"id\":\"g_career\",\"domain\":\"career\",\"titleAr\":\"test\",\"titleEn\":\"test\",\"targetNote\":\"\",\"milestones\":[{\"id\":\"m_car_1\",\"titleAr\":\"test\",\"titleEn\":\"test\",\"quarter\":1,\"done\":false,\"doneDate\":null,\"rewardJoyId\":null},{\"id\":\"m_car_2\",\"titleAr\":\"test\",\"titleEn\":\"test\",\"quarter\":2,\"done\":false,\"doneDate\":null,\"rewardJoyId\":null},{\"id\":\"m_car_3\",\"titleAr\":\"test\",\"titleEn\":\"test\",\"quarter\":3,\"done\":false,\"doneDate\":null,\"rewardJoyId\":null}],\"linkedHabitIds\":[\"h_focus\"],\"linkedProjectIds\":[],\"sortOrder\":3}"
+    },
+    {
+     "key": "g_driving",
+     "value": "{\"id\":\"g_driving\",\"domain\":\"driving\",\"titleAr\":\"test\",\"titleEn\":\"test\",\"targetNote\":\"\",\"milestones\":[{\"id\":\"m_drv_1\",\"titleAr\":\"test\",\"titleEn\":\"test\",\"quarter\":1,\"done\":false,\"doneDate\":null,\"rewardJoyId\":null},{\"id\":\"m_drv_2\",\"titleAr\":\"test\",\"titleEn\":\"test\",\"quarter\":2,\"done\":false,\"doneDate\":null,\"rewardJoyId\":null},{\"id\":\"m_drv_3\",\"titleAr\":\"test\",\"titleEn\":\"test\",\"quarter\":3,\"done\":false,\"doneDate\":null,\"rewardJoyId\":null}],\"linkedHabitIds\":[],\"linkedProjectIds\":[],\"sortOrder\":1}"
+    },
+    {
+     "key": "g_health",
+     "value": "{\"id\":\"g_health\",\"domain\":\"health\",\"titleAr\":\"test\",\"titleEn\":\"test\",\"targetNote\":\"\",\"milestones\":[{\"id\":\"m_hl_1\",\"titleAr\":\"test\",\"titleEn\":\"test\",\"quarter\":1,\"done\":false,\"doneDate\":null,\"rewardJoyId\":null},{\"id\":\"m_hl_2\",\"titleAr\":\"test\",\"titleEn\":\"test\",\"quarter\":2,\"done\":false,\"doneDate\":null,\"rewardJoyId\":null},{\"id\":\"m_hl_4\",\"titleAr\":\"test\",\"titleEn\":\"test\",\"quarter\":4,\"done\":false,\"doneDate\":null,\"rewardJoyId\":null}],\"linkedHabitIds\":[\"h_walk\",\"h_strength\",\"h_wake\"],\"linkedProjectIds\":[],\"sortOrder\":4}"
+    },
+    {
+     "key": "g_ielts",
+     "value": "{\"id\":\"g_ielts\",\"domain\":\"ielts\",\"titleAr\":\"test\",\"titleEn\":\"IELTS\",\"targetNote\":\"\",\"milestones\":[{\"id\":\"m_ie_1\",\"titleAr\":\"test\",\"titleEn\":\"test\",\"quarter\":1,\"done\":false,\"doneDate\":null,\"rewardJoyId\":null},{\"id\":\"m_ie_2\",\"titleAr\":\"test\",\"titleEn\":\"test\",\"quarter\":2,\"done\":false,\"doneDate\":null,\"rewardJoyId\":null},{\"id\":\"m_ie_3\",\"titleAr\":\"test\",\"titleEn\":\"test\",\"quarter\":3,\"done\":false,\"doneDate\":null,\"rewardJoyId\":null}],\"linkedHabitIds\":[\"h_vocab\"],\"linkedProjectIds\":[],\"sortOrder\":2}"
+    },
+    {
+     "key": "g_money",
+     "value": "{\"id\":\"g_money\",\"domain\":\"money\",\"titleAr\":\"test\",\"titleEn\":\"Money\",\"targetNote\":\"\",\"milestones\":[{\"id\":\"m_mo_1\",\"titleAr\":\"test\",\"titleEn\":\"test\",\"quarter\":1,\"done\":false,\"doneDate\":null,\"rewardJoyId\":null},{\"id\":\"m_mo_3\",\"titleAr\":\"test\",\"titleEn\":\"test\",\"quarter\":3,\"done\":false,\"doneDate\":null,\"rewardJoyId\":null}],\"linkedHabitIds\":[],\"linkedProjectIds\":[],\"sortOrder\":5}"
+    }
+   ]
+  },
+  "wlo_habits": {
+   "version": 1,
+   "store": "box",
+   "entries": [
+    {
+     "key": "h_cleanse",
+     "value": "{\"id\":\"h_cleanse\",\"domain\":\"care\",\"titleAr\":\"test\",\"titleEn\":\"test\",\"actionId\":\"FOOD-21\",\"goal\":\"\",\"cue\":\"test\",\"ifThen\":\"test\",\"minimumText\":\"test\",\"normalText\":\"test\",\"bonusText\":\"test\",\"joyPairing\":\"test\",\"frictionDown\":\"test\",\"frictionUp\":\"\",\"reminder\":{\"enabled\":false,\"offsetMin\":0,\"textAr\":null,\"textEn\":null},\"priority\":\"core\",\"schedule\":{\"weekdays\":[1,2,3,4,5,6,7],\"anchor\":{\"type\":\"sleep\",\"minute\":null,\"prayer\":null,\"slot\":\"anytime\",\"offsetMin\":0}},\"durationMin\":3,\"minimumDurationMin\":2,\"minimumDurationEstimated\":true,\"durationEstimated\":false,\"status\":\"active\",\"routineId\":\"r_night\",\"alternationGroup\":null,\"essential\":false,\"shrunkToMinimum\":false,\"comebackPending\":false,\"sortOrder\":22,\"createdDate\":\"2026-10-02\"}"
+    },
+    {
+     "key": "h_dental",
+     "value": "{\"id\":\"h_dental\",\"domain\":\"care\",\"titleAr\":\"test\",\"titleEn\":\"test\",\"actionId\":\"FOOD-23\",\"goal\":\"\",\"cue\":\"test\",\"ifThen\":\"test\",\"minimumText\":\"test\",\"normalText\":\"test\",\"bonusText\":\"test\",\"joyPairing\":\"test\",\"frictionDown\":\"test\",\"frictionUp\":\"\",\"reminder\":{\"enabled\":false,\"offsetMin\":0,\"textAr\":null,\"textEn\":null},\"priority\":\"core\",\"schedule\":{\"weekdays\":[1,2,3,4,5,6,7],\"anchor\":{\"type\":\"sleep\",\"minute\":null,\"prayer\":null,\"slot\":\"anytime\",\"offsetMin\":0}},\"durationMin\":4,\"minimumDurationMin\":2,\"minimumDurationEstimated\":false,\"durationEstimated\":false,\"status\":\"active\",\"routineId\":\"r_night\",\"alternationGroup\":null,\"essential\":true,\"shrunkToMinimum\":false,\"comebackPending\":false,\"sortOrder\":23,\"createdDate\":\"2026-10-02\"}"
+    },
+    {
+     "key": "h_focus",
+     "value": "{\"id\":\"h_focus\",\"domain\":\"career\",\"titleAr\":\"test\",\"titleEn\":\"test\",\"actionId\":\"GROW-22\",\"goal\":\"\",\"cue\":\"test\",\"ifThen\":\"test\",\"minimumText\":\"test\",\"normalText\":\"test\",\"bonusText\":\"test\",\"joyPairing\":\"test\",\"frictionDown\":\"test\",\"frictionUp\":\"test\",\"reminder\":{\"enabled\":false,\"offsetMin\":0,\"textAr\":null,\"textEn\":null},\"priority\":\"core\",\"schedule\":{\"weekdays\":[7,1,2,3,4],\"anchor\":{\"type\":\"wake\",\"minute\":null,\"prayer\":null,\"slot\":\"morning\",\"offsetMin\":90}},\"durationMin\":90,\"minimumDurationMin\":15,\"minimumDurationEstimated\":false,\"durationEstimated\":true,\"status\":\"active\",\"routineId\":null,\"alternationGroup\":null,\"essential\":false,\"shrunkToMinimum\":false,\"comebackPending\":false,\"sortOrder\":2,\"createdDate\":\"2026-10-02\"}"
+    },
+    {
+     "key": "h_money_log",
+     "value": "{\"id\":\"h_money_log\",\"domain\":\"money\",\"titleAr\":\"test\",\"titleEn\":\"test\",\"actionId\":\"LIFE-05\",\"goal\":\"\",\"cue\":\"test\",\"ifThen\":\"test\",\"minimumText\":\"test\",\"normalText\":\"test\",\"bonusText\":\"test\",\"joyPairing\":\"test\",\"frictionDown\":\"test\",\"frictionUp\":\"test\",\"reminder\":{\"enabled\":false,\"offsetMin\":0,\"textAr\":null,\"textEn\":null},\"priority\":\"core\",\"schedule\":{\"weekdays\":[1,2,3,4,5,6,7],\"anchor\":{\"type\":\"slot\",\"minute\":null,\"prayer\":null,\"slot\":\"evening\",\"offsetMin\":0}},\"durationMin\":15,\"minimumDurationMin\":2,\"minimumDurationEstimated\":true,\"durationEstimated\":true,\"status\":\"active\",\"routineId\":null,\"alternationGroup\":null,\"essential\":false,\"shrunkToMinimum\":false,\"comebackPending\":false,\"sortOrder\":6,\"createdDate\":\"2026-10-02\"}"
+    },
+    {
+     "key": "h_room_reset",
+     "value": "{\"id\":\"h_room_reset\",\"domain\":\"home\",\"titleAr\":\"test\",\"titleEn\":\"test\",\"actionId\":\"LIFE-13\",\"goal\":\"\",\"cue\":\"test\",\"ifThen\":\"test\",\"minimumText\":\"test\",\"normalText\":\"test\",\"bonusText\":\"test\",\"joyPairing\":\"test\",\"frictionDown\":\"test\",\"frictionUp\":\"test\",\"reminder\":{\"enabled\":false,\"offsetMin\":0,\"textAr\":null,\"textEn\":null},\"priority\":\"recommended\",\"schedule\":{\"weekdays\":[1,2,3,4,5,6,7],\"anchor\":{\"type\":\"sleep\",\"minute\":null,\"prayer\":null,\"slot\":\"evening\",\"offsetMin\":-90}},\"durationMin\":10,\"minimumDurationMin\":3,\"minimumDurationEstimated\":true,\"durationEstimated\":true,\"status\":\"active\",\"routineId\":null,\"alternationGroup\":null,\"essential\":false,\"shrunkToMinimum\":false,\"comebackPending\":false,\"sortOrder\":5,\"createdDate\":\"2026-10-02\"}"
+    },
+    {
+     "key": "h_strength",
+     "value": "{\"id\":\"h_strength\",\"domain\":\"health\",\"titleAr\":\"test\",\"titleEn\":\"test\",\"actionId\":\"BODY-05\",\"goal\":\"\",\"cue\":\"test\",\"ifThen\":\"test\",\"minimumText\":\"test\",\"normalText\":\"test\",\"bonusText\":\"test\",\"joyPairing\":\"test\",\"frictionDown\":\"test\",\"frictionUp\":\"test\",\"reminder\":{\"enabled\":true,\"offsetMin\":0,\"textAr\":null,\"textEn\":null},\"priority\":\"core\",\"schedule\":{\"weekdays\":[7,2,4],\"anchor\":{\"type\":\"prayer\",\"minute\":null,\"prayer\":\"asr\",\"slot\":\"afternoon\",\"offsetMin\":15}},\"durationMin\":30,\"minimumDurationMin\":10,\"minimumDurationEstimated\":true,\"durationEstimated\":false,\"status\":\"active\",\"routineId\":null,\"alternationGroup\":\"movement\",\"essential\":false,\"shrunkToMinimum\":false,\"comebackPending\":false,\"sortOrder\":4,\"createdDate\":\"2026-10-02\"}"
+    },
+    {
+     "key": "h_sunscreen",
+     "value": "{\"id\":\"h_sunscreen\",\"domain\":\"care\",\"titleAr\":\"test\",\"titleEn\":\"test\",\"actionId\":\"FOOD-20\",\"goal\":\"\",\"cue\":\"test\",\"ifThen\":\"test\",\"minimumText\":\"test\",\"normalText\":\"test\",\"bonusText\":\"test\",\"joyPairing\":\"test\",\"frictionDown\":\"test\",\"frictionUp\":\"\",\"reminder\":{\"enabled\":false,\"offsetMin\":0,\"textAr\":null,\"textEn\":null},\"priority\":\"core\",\"schedule\":{\"weekdays\":[1,2,3,4,5,6,7],\"anchor\":{\"type\":\"wake\",\"minute\":null,\"prayer\":null,\"slot\":\"anytime\",\"offsetMin\":0}},\"durationMin\":2,\"minimumDurationMin\":1,\"minimumDurationEstimated\":true,\"durationEstimated\":false,\"status\":\"active\",\"routineId\":\"r_morning\",\"alternationGroup\":null,\"essential\":false,\"shrunkToMinimum\":false,\"comebackPending\":false,\"sortOrder\":11,\"createdDate\":\"2026-10-02\"}"
+    },
+    {
+     "key": "h_vocab",
+     "value": "{\"id\":\"h_vocab\",\"domain\":\"ielts\",\"titleAr\":\"test\",\"titleEn\":\"test\",\"actionId\":\"GROW-07\",\"goal\":\"\",\"cue\":\"test\",\"ifThen\":\"test\",\"minimumText\":\"test\",\"normalText\":\"test\",\"bonusText\":\"test\",\"joyPairing\":\"test\",\"frictionDown\":\"test\",\"frictionUp\":\"test\",\"reminder\":{\"enabled\":true,\"offsetMin\":0,\"textAr\":null,\"textEn\":null},\"priority\":\"core\",\"schedule\":{\"weekdays\":[1,2,3,4,5,6,7],\"anchor\":{\"type\":\"slot\",\"minute\":null,\"prayer\":null,\"slot\":\"morning\",\"offsetMin\":0}},\"durationMin\":45,\"minimumDurationMin\":5,\"minimumDurationEstimated\":true,\"durationEstimated\":true,\"status\":\"active\",\"routineId\":null,\"alternationGroup\":null,\"essential\":false,\"shrunkToMinimum\":false,\"comebackPending\":false,\"sortOrder\":1,\"createdDate\":\"2026-10-02\"}"
+    },
+    {
+     "key": "h_wake",
+     "value": "{\"id\":\"h_wake\",\"domain\":\"sleep\",\"titleAr\":\"test\",\"titleEn\":\"test\",\"actionId\":\"BODY-15\",\"goal\":\"\",\"cue\":\"test\",\"ifThen\":\"test\",\"minimumText\":\"test\",\"normalText\":\"test\",\"bonusText\":\"test\",\"joyPairing\":\"test\",\"frictionDown\":\"test\",\"frictionUp\":\"test\",\"reminder\":{\"enabled\":false,\"offsetMin\":0,\"textAr\":null,\"textEn\":null},\"priority\":\"core\",\"schedule\":{\"weekdays\":[1,2,3,4,5,6,7],\"anchor\":{\"type\":\"wake\",\"minute\":null,\"prayer\":null,\"slot\":\"anytime\",\"offsetMin\":0}},\"durationMin\":1,\"minimumDurationMin\":1,\"minimumDurationEstimated\":true,\"durationEstimated\":true,\"status\":\"active\",\"routineId\":\"r_morning\",\"alternationGroup\":null,\"essential\":false,\"shrunkToMinimum\":false,\"comebackPending\":false,\"sortOrder\":10,\"createdDate\":\"2026-10-02\"}"
+    },
+    {
+     "key": "h_walk",
+     "value": "{\"id\":\"h_walk\",\"domain\":\"health\",\"titleAr\":\"test\",\"titleEn\":\"test\",\"actionId\":\"BODY-02\",\"goal\":\"\",\"cue\":\"test\",\"ifThen\":\"test\",\"minimumText\":\"test\",\"normalText\":\"test\",\"bonusText\":\"test\",\"joyPairing\":\"test\",\"frictionDown\":\"test\",\"frictionUp\":\"test\",\"reminder\":{\"enabled\":true,\"offsetMin\":0,\"textAr\":null,\"textEn\":null},\"priority\":\"core\",\"schedule\":{\"weekdays\":[1,3,5,6],\"anchor\":{\"type\":\"prayer\",\"minute\":null,\"prayer\":\"maghrib\",\"slot\":\"evening\",\"offsetMin\":10}},\"durationMin\":30,\"minimumDurationMin\":10,\"minimumDurationEstimated\":false,\"durationEstimated\":false,\"status\":\"active\",\"routineId\":null,\"alternationGroup\":\"movement\",\"essential\":false,\"shrunkToMinimum\":false,\"comebackPending\":false,\"sortOrder\":3,\"createdDate\":\"2026-10-02\"}"
+    },
+    {
+     "key": "h_wind_down",
+     "value": "{\"id\":\"h_wind_down\",\"domain\":\"sleep\",\"titleAr\":\"test\",\"titleEn\":\"test\",\"actionId\":\"BODY-17\",\"goal\":\"\",\"cue\":\"test\",\"ifThen\":\"test\",\"minimumText\":\"test\",\"normalText\":\"test\",\"bonusText\":\"test\",\"joyPairing\":\"test\",\"frictionDown\":\"test\",\"frictionUp\":\"test\",\"reminder\":{\"enabled\":false,\"offsetMin\":0,\"textAr\":null,\"textEn\":null},\"priority\":\"core\",\"schedule\":{\"weekdays\":[1,2,3,4,5,6,7],\"anchor\":{\"type\":\"sleep\",\"minute\":null,\"prayer\":null,\"slot\":\"anytime\",\"offsetMin\":0}},\"durationMin\":30,\"minimumDurationMin\":1,\"minimumDurationEstimated\":true,\"durationEstimated\":false,\"status\":\"active\",\"routineId\":\"r_night\",\"alternationGroup\":null,\"essential\":true,\"shrunkToMinimum\":false,\"comebackPending\":false,\"sortOrder\":21,\"createdDate\":\"2026-10-02\"}"
+    }
+   ]
+  },
+  "wlo_joyitems": {
+   "version": 1,
+   "store": "box",
+   "entries": [
+    {
+     "key": "joy_beans",
+     "value": "{\"id\":\"joy_beans\",\"kind\":\"earned\",\"titleAr\":\"test\",\"titleEn\":\"test\",\"size\":\"quick\",\"price\":60,\"bundledHabitId\":null,\"costsMoney\":true,\"keepFree\":false,\"active\":true}"
+    },
+    {
+     "key": "joy_book",
+     "value": "{\"id\":\"joy_book\",\"kind\":\"earned\",\"titleAr\":\"test\",\"titleEn\":\"test\",\"size\":\"medium\",\"price\":120,\"bundledHabitId\":null,\"costsMoney\":true,\"keepFree\":false,\"active\":true}"
+    },
+    {
+     "key": "joy_coffee_book",
+     "value": "{\"id\":\"joy_coffee_book\",\"kind\":\"free\",\"titleAr\":\"test\",\"titleEn\":\"test\",\"size\":\"medium\",\"price\":null,\"bundledHabitId\":null,\"costsMoney\":false,\"keepFree\":true,\"active\":true}"
+    },
+    {
+     "key": "joy_outing",
+     "value": "{\"id\":\"joy_outing\",\"kind\":\"earned\",\"titleAr\":\"test\",\"titleEn\":\"test\",\"size\":\"big\",\"price\":200,\"bundledHabitId\":null,\"costsMoney\":true,\"keepFree\":false,\"active\":true}"
+    },
+    {
+     "key": "joy_podcast",
+     "value": "{\"id\":\"joy_podcast\",\"kind\":\"bundled\",\"titleAr\":\"test\",\"titleEn\":\"test\",\"size\":\"quick\",\"price\":null,\"bundledHabitId\":\"h_walk\",\"costsMoney\":false,\"keepFree\":false,\"active\":true}"
+    },
+    {
+     "key": "joy_series",
+     "value": "{\"id\":\"joy_series\",\"kind\":\"bundled\",\"titleAr\":\"test\",\"titleEn\":\"test\",\"size\":\"medium\",\"price\":null,\"bundledHabitId\":\"h_strength\",\"costsMoney\":false,\"keepFree\":false,\"active\":true}"
+    }
+   ]
+  },
+  "wlo_logs": {
+   "version": 1,
+   "store": "box",
+   "entries": [
+    {
+     "key": "qa_log_0",
+     "value": "{\"id\":\"qa_log_0\",\"itemId\":\"h_money_log\",\"kind\":\"habit\",\"date\":\"2026-10-09\",\"level\":\"minimum\",\"durationMin\":20,\"enjoyment\":5,\"note\":null,\"loggedAt\":\"2026-10-09T00:00:00.000\",\"minuteOfDay\":981}"
+    },
+    {
+     "key": "qa_log_1",
+     "value": "{\"id\":\"qa_log_1\",\"itemId\":\"h_room_reset\",\"kind\":\"habit\",\"date\":\"2026-10-09\",\"level\":\"minimum\",\"durationMin\":20,\"enjoyment\":5,\"note\":null,\"loggedAt\":\"2026-10-09T00:00:00.000\",\"minuteOfDay\":1018}"
+    },
+    {
+     "key": "qa_log_10",
+     "value": "{\"id\":\"qa_log_10\",\"itemId\":\"h_money_log\",\"kind\":\"habit\",\"date\":\"2026-10-12\",\"level\":\"normal\",\"durationMin\":20,\"enjoyment\":5,\"note\":null,\"loggedAt\":\"2026-10-12T00:00:00.000\",\"minuteOfDay\":948}"
+    },
+    {
+     "key": "qa_log_11",
+     "value": "{\"id\":\"qa_log_11\",\"itemId\":\"h_room_reset\",\"kind\":\"habit\",\"date\":\"2026-10-12\",\"level\":\"normal\",\"durationMin\":20,\"enjoyment\":5,\"note\":null,\"loggedAt\":\"2026-10-12T00:00:00.000\",\"minuteOfDay\":985}"
+    },
+    {
+     "key": "qa_log_12",
+     "value": "{\"id\":\"qa_log_12\",\"itemId\":\"h_vocab\",\"kind\":\"habit\",\"date\":\"2026-10-12\",\"level\":\"normal\",\"durationMin\":20,\"enjoyment\":5,\"note\":null,\"loggedAt\":\"2026-10-12T00:00:00.000\",\"minuteOfDay\":800}"
+    },
+    {
+     "key": "qa_log_13",
+     "value": "{\"id\":\"qa_log_13\",\"itemId\":\"h_walk\",\"kind\":\"habit\",\"date\":\"2026-10-12\",\"level\":\"normal\",\"durationMin\":20,\"enjoyment\":5,\"note\":null,\"loggedAt\":\"2026-10-12T00:00:00.000\",\"minuteOfDay\":763}"
+    },
+    {
+     "key": "qa_log_14",
+     "value": "{\"id\":\"qa_log_14\",\"itemId\":\"h_focus\",\"kind\":\"habit\",\"date\":\"2026-10-13\",\"level\":\"minimum\",\"durationMin\":15,\"enjoyment\":4,\"note\":null,\"loggedAt\":\"2026-10-13T00:00:00.000\",\"minuteOfDay\":789}"
+    },
+    {
+     "key": "qa_log_15",
+     "value": "{\"id\":\"qa_log_15\",\"itemId\":\"h_money_log\",\"kind\":\"habit\",\"date\":\"2026-10-13\",\"level\":\"minimum\",\"durationMin\":15,\"enjoyment\":4,\"note\":null,\"loggedAt\":\"2026-10-13T00:00:00.000\",\"minuteOfDay\":937}"
+    },
+    {
+     "key": "qa_log_16",
+     "value": "{\"id\":\"qa_log_16\",\"itemId\":\"h_room_reset\",\"kind\":\"habit\",\"date\":\"2026-10-13\",\"level\":\"minimum\",\"durationMin\":15,\"enjoyment\":4,\"note\":null,\"loggedAt\":\"2026-10-13T00:00:00.000\",\"minuteOfDay\":974}"
+    },
+    {
+     "key": "qa_log_17",
+     "value": "{\"id\":\"qa_log_17\",\"itemId\":\"h_vocab\",\"kind\":\"habit\",\"date\":\"2026-10-13\",\"level\":\"minimum\",\"durationMin\":15,\"enjoyment\":4,\"note\":null,\"loggedAt\":\"2026-10-13T00:00:00.000\",\"minuteOfDay\":789}"
+    },
+    {
+     "key": "qa_log_18",
+     "value": "{\"id\":\"qa_log_18\",\"itemId\":\"h_room_reset\",\"kind\":\"habit\",\"date\":\"2026-10-14\",\"level\":\"normal\",\"durationMin\":10,\"enjoyment\":3,\"note\":null,\"loggedAt\":\"2026-10-14T00:00:00.000\",\"minuteOfDay\":963}"
+    },
+    {
+     "key": "qa_log_19",
+     "value": "{\"id\":\"qa_log_19\",\"itemId\":\"h_walk\",\"kind\":\"habit\",\"date\":\"2026-10-14\",\"level\":\"normal\",\"durationMin\":10,\"enjoyment\":3,\"note\":null,\"loggedAt\":\"2026-10-14T00:00:00.000\",\"minuteOfDay\":741}"
+    },
+    {
+     "key": "qa_log_2",
+     "value": "{\"id\":\"qa_log_2\",\"itemId\":\"h_vocab\",\"kind\":\"habit\",\"date\":\"2026-10-09\",\"level\":\"minimum\",\"durationMin\":20,\"enjoyment\":5,\"note\":null,\"loggedAt\":\"2026-10-09T00:00:00.000\",\"minuteOfDay\":833}"
+    },
+    {
+     "key": "qa_log_20",
+     "value": "{\"id\":\"qa_log_20\",\"itemId\":\"h_focus\",\"kind\":\"habit\",\"date\":\"2026-10-15\",\"level\":\"minimum\",\"durationMin\":20,\"enjoyment\":5,\"note\":null,\"loggedAt\":\"2026-10-15T00:00:00.000\",\"minuteOfDay\":767}"
+    },
+    {
+     "key": "qa_log_21",
+     "value": "{\"id\":\"qa_log_21\",\"itemId\":\"h_money_log\",\"kind\":\"habit\",\"date\":\"2026-10-15\",\"level\":\"minimum\",\"durationMin\":20,\"enjoyment\":5,\"note\":null,\"loggedAt\":\"2026-10-15T00:00:00.000\",\"minuteOfDay\":915}"
+    },
+    {
+     "key": "qa_log_22",
+     "value": "{\"id\":\"qa_log_22\",\"itemId\":\"h_strength\",\"kind\":\"habit\",\"date\":\"2026-10-15\",\"level\":\"minimum\",\"durationMin\":20,\"enjoyment\":5,\"note\":null,\"loggedAt\":\"2026-10-15T00:00:00.000\",\"minuteOfDay\":878}"
+    },
+    {
+     "key": "qa_log_23",
+     "value": "{\"id\":\"qa_log_23\",\"itemId\":\"h_vocab\",\"kind\":\"habit\",\"date\":\"2026-10-15\",\"level\":\"minimum\",\"durationMin\":20,\"enjoyment\":5,\"note\":null,\"loggedAt\":\"2026-10-15T00:00:00.000\",\"minuteOfDay\":767}"
+    },
+    {
+     "key": "qa_log_24",
+     "value": "{\"id\":\"qa_log_24\",\"itemId\":\"h_money_log\",\"kind\":\"habit\",\"date\":\"2026-10-16\",\"level\":\"normal\",\"durationMin\":15,\"enjoyment\":4,\"note\":null,\"loggedAt\":\"2026-10-16T00:00:00.000\",\"minuteOfDay\":904}"
+    },
+    {
+     "key": "qa_log_25",
+     "value": "{\"id\":\"qa_log_25\",\"itemId\":\"h_room_reset\",\"kind\":\"habit\",\"date\":\"2026-10-16\",\"level\":\"normal\",\"durationMin\":15,\"enjoyment\":4,\"note\":null,\"loggedAt\":\"2026-10-16T00:00:00.000\",\"minuteOfDay\":941}"
+    },
+    {
+     "key": "qa_log_26",
+     "value": "{\"id\":\"qa_log_26\",\"itemId\":\"h_vocab\",\"kind\":\"habit\",\"date\":\"2026-10-16\",\"level\":\"normal\",\"durationMin\":15,\"enjoyment\":4,\"note\":null,\"loggedAt\":\"2026-10-16T00:00:00.000\",\"minuteOfDay\":756}"
+    },
+    {
+     "key": "qa_log_27",
+     "value": "{\"id\":\"qa_log_27\",\"itemId\":\"h_walk\",\"kind\":\"habit\",\"date\":\"2026-10-16\",\"level\":\"normal\",\"durationMin\":15,\"enjoyment\":4,\"note\":null,\"loggedAt\":\"2026-10-16T00:00:00.000\",\"minuteOfDay\":719}"
+    },
+    {
+     "key": "qa_log_28",
+     "value": "{\"id\":\"qa_log_28\",\"itemId\":\"h_money_log\",\"kind\":\"habit\",\"date\":\"2026-10-17\",\"level\":\"minimum\",\"durationMin\":10,\"enjoyment\":3,\"note\":null,\"loggedAt\":\"2026-10-17T00:00:00.000\",\"minuteOfDay\":893}"
+    },
+    {
+     "key": "qa_log_29",
+     "value": "{\"id\":\"qa_log_29\",\"itemId\":\"h_room_reset\",\"kind\":\"habit\",\"date\":\"2026-10-17\",\"level\":\"minimum\",\"durationMin\":10,\"enjoyment\":3,\"note\":null,\"loggedAt\":\"2026-10-17T00:00:00.000\",\"minuteOfDay\":930}"
+    },
+    {
+     "key": "qa_log_3",
+     "value": "{\"id\":\"qa_log_3\",\"itemId\":\"h_room_reset\",\"kind\":\"habit\",\"date\":\"2026-10-10\",\"level\":\"normal\",\"durationMin\":15,\"enjoyment\":4,\"note\":null,\"loggedAt\":\"2026-10-10T00:00:00.000\",\"minuteOfDay\":1007}"
+    },
+    {
+     "key": "qa_log_30",
+     "value": "{\"id\":\"qa_log_30\",\"itemId\":\"h_vocab\",\"kind\":\"habit\",\"date\":\"2026-10-17\",\"level\":\"minimum\",\"durationMin\":10,\"enjoyment\":3,\"note\":null,\"loggedAt\":\"2026-10-17T00:00:00.000\",\"minuteOfDay\":745}"
+    },
+    {
+     "key": "qa_log_31",
+     "value": "{\"id\":\"qa_log_31\",\"itemId\":\"h_room_reset\",\"kind\":\"habit\",\"date\":\"2026-10-18\",\"level\":\"normal\",\"durationMin\":20,\"enjoyment\":5,\"note\":null,\"loggedAt\":\"2026-10-18T00:00:00.000\",\"minuteOfDay\":919}"
+    },
+    {
+     "key": "qa_log_32",
+     "value": "{\"id\":\"qa_log_32\",\"itemId\":\"h_strength\",\"kind\":\"habit\",\"date\":\"2026-10-18\",\"level\":\"normal\",\"durationMin\":20,\"enjoyment\":5,\"note\":null,\"loggedAt\":\"2026-10-18T00:00:00.000\",\"minuteOfDay\":845}"
+    },
+    {
+     "key": "qa_log_33",
+     "value": "{\"id\":\"qa_log_33\",\"itemId\":\"h_focus\",\"kind\":\"habit\",\"date\":\"2026-10-19\",\"level\":\"minimum\",\"durationMin\":15,\"enjoyment\":4,\"note\":null,\"loggedAt\":\"2026-10-19T00:00:00.000\",\"minuteOfDay\":723}"
+    },
+    {
+     "key": "qa_log_34",
+     "value": "{\"id\":\"qa_log_34\",\"itemId\":\"h_money_log\",\"kind\":\"habit\",\"date\":\"2026-10-19\",\"level\":\"minimum\",\"durationMin\":15,\"enjoyment\":4,\"note\":null,\"loggedAt\":\"2026-10-19T00:00:00.000\",\"minuteOfDay\":871}"
+    },
+    {
+     "key": "qa_log_35",
+     "value": "{\"id\":\"qa_log_35\",\"itemId\":\"h_vocab\",\"kind\":\"habit\",\"date\":\"2026-10-19\",\"level\":\"minimum\",\"durationMin\":15,\"enjoyment\":4,\"note\":null,\"loggedAt\":\"2026-10-19T00:00:00.000\",\"minuteOfDay\":723}"
+    },
+    {
+     "key": "qa_log_36",
+     "value": "{\"id\":\"qa_log_36\",\"itemId\":\"h_walk\",\"kind\":\"habit\",\"date\":\"2026-10-19\",\"level\":\"minimum\",\"durationMin\":15,\"enjoyment\":4,\"note\":null,\"loggedAt\":\"2026-10-19T00:00:00.000\",\"minuteOfDay\":686}"
+    },
+    {
+     "key": "qa_log_37",
+     "value": "{\"id\":\"qa_log_37\",\"itemId\":\"h_focus\",\"kind\":\"habit\",\"date\":\"2026-10-20\",\"level\":\"normal\",\"durationMin\":10,\"enjoyment\":3,\"note\":null,\"loggedAt\":\"2026-10-20T00:00:00.000\",\"minuteOfDay\":712}"
+    },
+    {
+     "key": "qa_log_38",
+     "value": "{\"id\":\"qa_log_38\",\"itemId\":\"h_money_log\",\"kind\":\"habit\",\"date\":\"2026-10-20\",\"level\":\"normal\",\"durationMin\":10,\"enjoyment\":3,\"note\":null,\"loggedAt\":\"2026-10-20T00:00:00.000\",\"minuteOfDay\":860}"
+    },
+    {
+     "key": "qa_log_39",
+     "value": "{\"id\":\"qa_log_39\",\"itemId\":\"h_room_reset\",\"kind\":\"habit\",\"date\":\"2026-10-20\",\"level\":\"normal\",\"durationMin\":10,\"enjoyment\":3,\"note\":null,\"loggedAt\":\"2026-10-20T00:00:00.000\",\"minuteOfDay\":897}"
+    },
+    {
+     "key": "qa_log_4",
+     "value": "{\"id\":\"qa_log_4\",\"itemId\":\"h_walk\",\"kind\":\"habit\",\"date\":\"2026-10-10\",\"level\":\"normal\",\"durationMin\":15,\"enjoyment\":4,\"note\":null,\"loggedAt\":\"2026-10-10T00:00:00.000\",\"minuteOfDay\":785}"
+    },
+    {
+     "key": "qa_log_40",
+     "value": "{\"id\":\"qa_log_40\",\"itemId\":\"h_strength\",\"kind\":\"habit\",\"date\":\"2026-10-20\",\"level\":\"normal\",\"durationMin\":10,\"enjoyment\":3,\"note\":null,\"loggedAt\":\"2026-10-20T00:00:00.000\",\"minuteOfDay\":823}"
+    },
+    {
+     "key": "qa_log_41",
+     "value": "{\"id\":\"qa_log_41\",\"itemId\":\"h_vocab\",\"kind\":\"habit\",\"date\":\"2026-10-20\",\"level\":\"normal\",\"durationMin\":10,\"enjoyment\":3,\"note\":null,\"loggedAt\":\"2026-10-20T00:00:00.000\",\"minuteOfDay\":712}"
+    },
+    {
+     "key": "qa_log_42",
+     "value": "{\"id\":\"qa_log_42\",\"itemId\":\"h_focus\",\"kind\":\"habit\",\"date\":\"2026-10-21\",\"level\":\"minimum\",\"durationMin\":20,\"enjoyment\":5,\"note\":null,\"loggedAt\":\"2026-10-21T00:00:00.000\",\"minuteOfDay\":701}"
+    },
+    {
+     "key": "qa_log_43",
+     "value": "{\"id\":\"qa_log_43\",\"itemId\":\"h_money_log\",\"kind\":\"habit\",\"date\":\"2026-10-21\",\"level\":\"minimum\",\"durationMin\":20,\"enjoyment\":5,\"note\":null,\"loggedAt\":\"2026-10-21T00:00:00.000\",\"minuteOfDay\":849}"
+    },
+    {
+     "key": "qa_log_44",
+     "value": "{\"id\":\"qa_log_44\",\"itemId\":\"h_room_reset\",\"kind\":\"habit\",\"date\":\"2026-10-21\",\"level\":\"minimum\",\"durationMin\":20,\"enjoyment\":5,\"note\":null,\"loggedAt\":\"2026-10-21T00:00:00.000\",\"minuteOfDay\":886}"
+    },
+    {
+     "key": "qa_log_45",
+     "value": "{\"id\":\"qa_log_45\",\"itemId\":\"h_vocab\",\"kind\":\"habit\",\"date\":\"2026-10-21\",\"level\":\"minimum\",\"durationMin\":20,\"enjoyment\":5,\"note\":null,\"loggedAt\":\"2026-10-21T00:00:00.000\",\"minuteOfDay\":701}"
+    },
+    {
+     "key": "qa_log_46",
+     "value": "{\"id\":\"qa_log_46\",\"itemId\":\"h_room_reset\",\"kind\":\"habit\",\"date\":\"2026-10-22\",\"level\":\"normal\",\"durationMin\":15,\"enjoyment\":4,\"note\":null,\"loggedAt\":\"2026-10-22T00:00:00.000\",\"minuteOfDay\":875}"
+    },
+    {
+     "key": "qa_log_47",
+     "value": "{\"id\":\"qa_log_47\",\"itemId\":\"h_strength\",\"kind\":\"habit\",\"date\":\"2026-10-22\",\"level\":\"normal\",\"durationMin\":15,\"enjoyment\":4,\"note\":null,\"loggedAt\":\"2026-10-22T00:00:00.000\",\"minuteOfDay\":801}"
+    },
+    {
+     "key": "qa_log_5",
+     "value": "{\"id\":\"qa_log_5\",\"itemId\":\"h_focus\",\"kind\":\"habit\",\"date\":\"2026-10-11\",\"level\":\"minimum\",\"durationMin\":10,\"enjoyment\":3,\"note\":null,\"loggedAt\":\"2026-10-11T00:00:00.000\",\"minuteOfDay\":811}"
+    },
+    {
+     "key": "qa_log_6",
+     "value": "{\"id\":\"qa_log_6\",\"itemId\":\"h_money_log\",\"kind\":\"habit\",\"date\":\"2026-10-11\",\"level\":\"minimum\",\"durationMin\":10,\"enjoyment\":3,\"note\":null,\"loggedAt\":\"2026-10-11T00:00:00.000\",\"minuteOfDay\":959}"
+    },
+    {
+     "key": "qa_log_7",
+     "value": "{\"id\":\"qa_log_7\",\"itemId\":\"h_strength\",\"kind\":\"habit\",\"date\":\"2026-10-11\",\"level\":\"minimum\",\"durationMin\":10,\"enjoyment\":3,\"note\":null,\"loggedAt\":\"2026-10-11T00:00:00.000\",\"minuteOfDay\":922}"
+    },
+    {
+     "key": "qa_log_8",
+     "value": "{\"id\":\"qa_log_8\",\"itemId\":\"h_vocab\",\"kind\":\"habit\",\"date\":\"2026-10-11\",\"level\":\"minimum\",\"durationMin\":10,\"enjoyment\":3,\"note\":null,\"loggedAt\":\"2026-10-11T00:00:00.000\",\"minuteOfDay\":811}"
+    },
+    {
+     "key": "qa_log_9",
+     "value": "{\"id\":\"qa_log_9\",\"itemId\":\"h_focus\",\"kind\":\"habit\",\"date\":\"2026-10-12\",\"level\":\"normal\",\"durationMin\":20,\"enjoyment\":5,\"note\":null,\"loggedAt\":\"2026-10-12T00:00:00.000\",\"minuteOfDay\":800}"
+    }
+   ]
+  },
+  "wlo_meta": {
+   "version": 1,
+   "store": "box",
+   "entries": [
+    {
+     "key": "firstRunDate",
+     "value": "2026-10-23"
+    },
+    {
+     "key": "libraryVersion",
+     "value": "3"
+    },
+    {
+     "key": "openedDays",
+     "value": "[\"2026-10-23\"]"
+    },
+    {
+     "key": "seeded",
+     "value": "true"
+    },
+    {
+     "key": "settings",
+     "value": "{\"language\":\"ar\",\"theme\":\"system\",\"notificationCap\":4,\"quietStartMinute\":1380,\"quietEndMinute\":360,\"quietEndSetByUser\":false,\"wakeMinute\":360,\"sleepMinute\":1380,\"prayerAnchorsEnabled\":false,\"latitude\":21.4225,\"longitude\":39.8262,\"utcOffsetMinutes\":180,\"timeZoneName\":\"Asia/Riyadh\",\"cycleModule\":false,\"pcosModule\":false,\"aquariumModule\":false,\"appLock\":false,\"forgivingStreak\":false,\"dailyBudgetMin\":150,\"budgetByWeekday\":{},\"ieltsWeakestSkill\":\"writing\",\"weekStartsOn\":7,\"eveningShutdownBeforeSleepMin\":90,\"onboardingDone\":true,\"lastSeasonReview\":null,\"firstActionPin\":null}"
+    }
+   ]
+  },
+  "wlo_mocktests": {
+   "version": 1,
+   "store": "box",
+   "entries": [
+    {
+     "key": "qa_mock",
+     "value": "{\"id\":\"qa_mock\",\"date\":\"2026-10-15\",\"reading\":6.5,\"listening\":6,\"writing\":5.5,\"speaking\":6,\"note\":\"test\"}"
+    }
+   ]
+  },
+  "wlo_moneyenvelopes": {
+   "version": 1,
+   "store": "box",
+   "entries": [
+    {
+     "key": "qa_env",
+     "value": "{\"id\":\"qa_env\",\"titleAr\":\"test\",\"titleEn\":\"test\",\"month\":\"2026-10\",\"planned\":700,\"spent\":520}"
+    }
+   ]
+  },
+  "wlo_nudgerecords": {
+   "version": 1,
+   "store": "box",
+   "entries": []
+  },
+  "wlo_projects": {
+   "version": 1,
+   "store": "box",
+   "entries": [
+    {
+     "key": "qa_idea",
+     "value": "{\"id\":\"qa_idea\",\"domain\":\"learning\",\"titleAr\":\"test\",\"titleEn\":\"test\",\"status\":\"idea\",\"goalId\":null,\"isCourse\":false,\"steps\":[],\"sortOrder\":0}"
+    },
+    {
+     "key": "qa_proj",
+     "value": "{\"id\":\"qa_proj\",\"domain\":\"career\",\"titleAr\":\"test\",\"titleEn\":\"test\",\"status\":\"active\",\"goalId\":null,\"isCourse\":false,\"steps\":[{\"id\":\"qa_ps1\",\"titleAr\":\"test\",\"titleEn\":\"test\",\"actionId\":null,\"done\":true,\"doneDate\":\"2026-10-22\",\"durationMin\":30},{\"id\":\"qa_ps2\",\"titleAr\":\"test\",\"titleEn\":\"test\",\"actionId\":null,\"done\":false,\"doneDate\":null,\"durationMin\":30}],\"sortOrder\":0}"
+    }
+   ]
+  },
+  "wlo_routines": {
+   "version": 1,
+   "store": "box",
+   "entries": [
+    {
+     "key": "r_morning",
+     "value": "{\"id\":\"r_morning\",\"titleAr\":\"test\",\"titleEn\":\"test\",\"section\":\"morningChain\",\"anchor\":{\"type\":\"wake\",\"minute\":null,\"prayer\":null,\"slot\":\"anytime\",\"offsetMin\":0},\"steps\":[{\"id\":\"rs_wake\",\"habitId\":\"h_wake\",\"titleAr\":\"\",\"titleEn\":\"\",\"actionId\":null,\"domain\":\"care\",\"minimumText\":\"\",\"normalText\":\"\",\"durationMin\":5,\"minimumDurationMin\":2,\"essential\":false},{\"id\":\"rs_morning_cleanse\",\"habitId\":null,\"titleAr\":\"test\",\"titleEn\":\"test\",\"actionId\":\"FOOD-21\",\"domain\":\"care\",\"minimumText\":\"\",\"normalText\":\"test\",\"durationMin\":3,\"minimumDurationMin\":1,\"essential\":false},{\"id\":\"rs_sunscreen\",\"habitId\":\"h_sunscreen\",\"titleAr\":\"\",\"titleEn\":\"\",\"actionId\":null,\"domain\":\"care\",\"minimumText\":\"\",\"normalText\":\"\",\"durationMin\":5,\"minimumDurationMin\":2,\"essential\":false},{\"id\":\"rs_morning_brush\",\"habitId\":null,\"titleAr\":\"test\",\"titleEn\":\"test\",\"actionId\":\"FOOD-23\",\"domain\":\"care\",\"minimumText\":\"\",\"normalText\":\"test\",\"durationMin\":4,\"minimumDurationMin\":2,\"essential\":false}],\"weekdays\":[1,2,3,4,5,6,7],\"active\":true}"
+    },
+    {
+     "key": "r_night",
+     "value": "{\"id\":\"r_night\",\"titleAr\":\"test\",\"titleEn\":\"test\",\"section\":\"eveningChain\",\"anchor\":{\"type\":\"sleep\",\"minute\":null,\"prayer\":null,\"slot\":\"anytime\",\"offsetMin\":-60},\"steps\":[{\"id\":\"rs_wind_down\",\"habitId\":\"h_wind_down\",\"titleAr\":\"\",\"titleEn\":\"\",\"actionId\":null,\"domain\":\"care\",\"minimumText\":\"\",\"normalText\":\"\",\"durationMin\":5,\"minimumDurationMin\":2,\"essential\":false},{\"id\":\"rs_cleanse\",\"habitId\":\"h_cleanse\",\"titleAr\":\"\",\"titleEn\":\"\",\"actionId\":null,\"domain\":\"care\",\"minimumText\":\"\",\"normalText\":\"\",\"durationMin\":5,\"minimumDurationMin\":2,\"essential\":false},{\"id\":\"rs_dental\",\"habitId\":\"h_dental\",\"titleAr\":\"\",\"titleEn\":\"\",\"actionId\":null,\"domain\":\"care\",\"minimumText\":\"\",\"normalText\":\"\",\"durationMin\":5,\"minimumDurationMin\":2,\"essential\":false}],\"weekdays\":[1,2,3,4,5,6,7],\"active\":true}"
+    }
+   ]
+  },
+  "wlo_seasons": {
+   "version": 1,
+   "store": "box",
+   "entries": [
+    {
+     "key": "s_1",
+     "value": "{\"id\":\"s_1\",\"titleAr\":\"test\",\"titleEn\":\"test\",\"startDate\":\"2026-10-23\",\"plannedEndDate\":null,\"endedDate\":null,\"states\":{\"health\":\"grow\",\"sleep\":\"maintain\",\"food\":\"rest\",\"care\":\"maintain\",\"womensHealth\":\"rest\",\"ielts\":\"grow\",\"learning\":\"rest\",\"career\":\"grow\",\"driving\":\"rest\",\"money\":\"maintain\",\"home\":\"maintain\",\"digital\":\"rest\",\"admin\":\"rest\",\"joy\":\"rest\",\"people\":\"rest\",\"faith\":\"rest\",\"aquarium\":\"rest\"}}"
+    }
+   ]
+  },
+  "wlo_sparktxns": {
+   "version": 1,
+   "store": "box",
+   "entries": [
+    {
+     "key": "qa_spk_cb",
+     "value": "{\"id\":\"qa_spk_cb\",\"date\":\"2026-10-21\",\"amount\":4,\"reason\":\"comeback\",\"refId\":\"qa_log_0\",\"at\":\"2026-10-23T23:40:43.228\"}"
+    },
+    {
+     "key": "qa_spk_qa_log_0",
+     "value": "{\"id\":\"qa_spk_qa_log_0\",\"date\":\"2026-10-09\",\"amount\":2,\"reason\":\"completion\",\"refId\":\"qa_log_0\",\"at\":\"2026-10-09T00:00:00.000\"}"
+    },
+    {
+     "key": "qa_spk_qa_log_1",
+     "value": "{\"id\":\"qa_spk_qa_log_1\",\"date\":\"2026-10-09\",\"amount\":2,\"reason\":\"completion\",\"refId\":\"qa_log_1\",\"at\":\"2026-10-09T00:00:00.000\"}"
+    },
+    {
+     "key": "qa_spk_qa_log_10",
+     "value": "{\"id\":\"qa_spk_qa_log_10\",\"date\":\"2026-10-12\",\"amount\":2,\"reason\":\"completion\",\"refId\":\"qa_log_10\",\"at\":\"2026-10-12T00:00:00.000\"}"
+    },
+    {
+     "key": "qa_spk_qa_log_11",
+     "value": "{\"id\":\"qa_spk_qa_log_11\",\"date\":\"2026-10-12\",\"amount\":2,\"reason\":\"completion\",\"refId\":\"qa_log_11\",\"at\":\"2026-10-12T00:00:00.000\"}"
+    },
+    {
+     "key": "qa_spk_qa_log_12",
+     "value": "{\"id\":\"qa_spk_qa_log_12\",\"date\":\"2026-10-12\",\"amount\":2,\"reason\":\"completion\",\"refId\":\"qa_log_12\",\"at\":\"2026-10-12T00:00:00.000\"}"
+    },
+    {
+     "key": "qa_spk_qa_log_13",
+     "value": "{\"id\":\"qa_spk_qa_log_13\",\"date\":\"2026-10-12\",\"amount\":2,\"reason\":\"completion\",\"refId\":\"qa_log_13\",\"at\":\"2026-10-12T00:00:00.000\"}"
+    },
+    {
+     "key": "qa_spk_qa_log_14",
+     "value": "{\"id\":\"qa_spk_qa_log_14\",\"date\":\"2026-10-13\",\"amount\":2,\"reason\":\"completion\",\"refId\":\"qa_log_14\",\"at\":\"2026-10-13T00:00:00.000\"}"
+    },
+    {
+     "key": "qa_spk_qa_log_15",
+     "value": "{\"id\":\"qa_spk_qa_log_15\",\"date\":\"2026-10-13\",\"amount\":2,\"reason\":\"completion\",\"refId\":\"qa_log_15\",\"at\":\"2026-10-13T00:00:00.000\"}"
+    },
+    {
+     "key": "qa_spk_qa_log_16",
+     "value": "{\"id\":\"qa_spk_qa_log_16\",\"date\":\"2026-10-13\",\"amount\":2,\"reason\":\"completion\",\"refId\":\"qa_log_16\",\"at\":\"2026-10-13T00:00:00.000\"}"
+    },
+    {
+     "key": "qa_spk_qa_log_17",
+     "value": "{\"id\":\"qa_spk_qa_log_17\",\"date\":\"2026-10-13\",\"amount\":2,\"reason\":\"completion\",\"refId\":\"qa_log_17\",\"at\":\"2026-10-13T00:00:00.000\"}"
+    },
+    {
+     "key": "qa_spk_qa_log_18",
+     "value": "{\"id\":\"qa_spk_qa_log_18\",\"date\":\"2026-10-14\",\"amount\":2,\"reason\":\"completion\",\"refId\":\"qa_log_18\",\"at\":\"2026-10-14T00:00:00.000\"}"
+    },
+    {
+     "key": "qa_spk_qa_log_19",
+     "value": "{\"id\":\"qa_spk_qa_log_19\",\"date\":\"2026-10-14\",\"amount\":2,\"reason\":\"completion\",\"refId\":\"qa_log_19\",\"at\":\"2026-10-14T00:00:00.000\"}"
+    },
+    {
+     "key": "qa_spk_qa_log_2",
+     "value": "{\"id\":\"qa_spk_qa_log_2\",\"date\":\"2026-10-09\",\"amount\":2,\"reason\":\"completion\",\"refId\":\"qa_log_2\",\"at\":\"2026-10-09T00:00:00.000\"}"
+    },
+    {
+     "key": "qa_spk_qa_log_20",
+     "value": "{\"id\":\"qa_spk_qa_log_20\",\"date\":\"2026-10-15\",\"amount\":2,\"reason\":\"completion\",\"refId\":\"qa_log_20\",\"at\":\"2026-10-15T00:00:00.000\"}"
+    },
+    {
+     "key": "qa_spk_qa_log_21",
+     "value": "{\"id\":\"qa_spk_qa_log_21\",\"date\":\"2026-10-15\",\"amount\":2,\"reason\":\"completion\",\"refId\":\"qa_log_21\",\"at\":\"2026-10-15T00:00:00.000\"}"
+    },
+    {
+     "key": "qa_spk_qa_log_22",
+     "value": "{\"id\":\"qa_spk_qa_log_22\",\"date\":\"2026-10-15\",\"amount\":2,\"reason\":\"completion\",\"refId\":\"qa_log_22\",\"at\":\"2026-10-15T00:00:00.000\"}"
+    },
+    {
+     "key": "qa_spk_qa_log_23",
+     "value": "{\"id\":\"qa_spk_qa_log_23\",\"date\":\"2026-10-15\",\"amount\":2,\"reason\":\"completion\",\"refId\":\"qa_log_23\",\"at\":\"2026-10-15T00:00:00.000\"}"
+    },
+    {
+     "key": "qa_spk_qa_log_24",
+     "value": "{\"id\":\"qa_spk_qa_log_24\",\"date\":\"2026-10-16\",\"amount\":2,\"reason\":\"completion\",\"refId\":\"qa_log_24\",\"at\":\"2026-10-16T00:00:00.000\"}"
+    },
+    {
+     "key": "qa_spk_qa_log_25",
+     "value": "{\"id\":\"qa_spk_qa_log_25\",\"date\":\"2026-10-16\",\"amount\":2,\"reason\":\"completion\",\"refId\":\"qa_log_25\",\"at\":\"2026-10-16T00:00:00.000\"}"
+    },
+    {
+     "key": "qa_spk_qa_log_26",
+     "value": "{\"id\":\"qa_spk_qa_log_26\",\"date\":\"2026-10-16\",\"amount\":2,\"reason\":\"completion\",\"refId\":\"qa_log_26\",\"at\":\"2026-10-16T00:00:00.000\"}"
+    },
+    {
+     "key": "qa_spk_qa_log_27",
+     "value": "{\"id\":\"qa_spk_qa_log_27\",\"date\":\"2026-10-16\",\"amount\":2,\"reason\":\"completion\",\"refId\":\"qa_log_27\",\"at\":\"2026-10-16T00:00:00.000\"}"
+    },
+    {
+     "key": "qa_spk_qa_log_28",
+     "value": "{\"id\":\"qa_spk_qa_log_28\",\"date\":\"2026-10-17\",\"amount\":2,\"reason\":\"completion\",\"refId\":\"qa_log_28\",\"at\":\"2026-10-17T00:00:00.000\"}"
+    },
+    {
+     "key": "qa_spk_qa_log_29",
+     "value": "{\"id\":\"qa_spk_qa_log_29\",\"date\":\"2026-10-17\",\"amount\":2,\"reason\":\"completion\",\"refId\":\"qa_log_29\",\"at\":\"2026-10-17T00:00:00.000\"}"
+    },
+    {
+     "key": "qa_spk_qa_log_3",
+     "value": "{\"id\":\"qa_spk_qa_log_3\",\"date\":\"2026-10-10\",\"amount\":2,\"reason\":\"completion\",\"refId\":\"qa_log_3\",\"at\":\"2026-10-10T00:00:00.000\"}"
+    },
+    {
+     "key": "qa_spk_qa_log_30",
+     "value": "{\"id\":\"qa_spk_qa_log_30\",\"date\":\"2026-10-17\",\"amount\":2,\"reason\":\"completion\",\"refId\":\"qa_log_30\",\"at\":\"2026-10-17T00:00:00.000\"}"
+    },
+    {
+     "key": "qa_spk_qa_log_31",
+     "value": "{\"id\":\"qa_spk_qa_log_31\",\"date\":\"2026-10-18\",\"amount\":2,\"reason\":\"completion\",\"refId\":\"qa_log_31\",\"at\":\"2026-10-18T00:00:00.000\"}"
+    },
+    {
+     "key": "qa_spk_qa_log_32",
+     "value": "{\"id\":\"qa_spk_qa_log_32\",\"date\":\"2026-10-18\",\"amount\":2,\"reason\":\"completion\",\"refId\":\"qa_log_32\",\"at\":\"2026-10-18T00:00:00.000\"}"
+    },
+    {
+     "key": "qa_spk_qa_log_33",
+     "value": "{\"id\":\"qa_spk_qa_log_33\",\"date\":\"2026-10-19\",\"amount\":2,\"reason\":\"completion\",\"refId\":\"qa_log_33\",\"at\":\"2026-10-19T00:00:00.000\"}"
+    },
+    {
+     "key": "qa_spk_qa_log_34",
+     "value": "{\"id\":\"qa_spk_qa_log_34\",\"date\":\"2026-10-19\",\"amount\":2,\"reason\":\"completion\",\"refId\":\"qa_log_34\",\"at\":\"2026-10-19T00:00:00.000\"}"
+    },
+    {
+     "key": "qa_spk_qa_log_35",
+     "value": "{\"id\":\"qa_spk_qa_log_35\",\"date\":\"2026-10-19\",\"amount\":2,\"reason\":\"completion\",\"refId\":\"qa_log_35\",\"at\":\"2026-10-19T00:00:00.000\"}"
+    },
+    {
+     "key": "qa_spk_qa_log_36",
+     "value": "{\"id\":\"qa_spk_qa_log_36\",\"date\":\"2026-10-19\",\"amount\":2,\"reason\":\"completion\",\"refId\":\"qa_log_36\",\"at\":\"2026-10-19T00:00:00.000\"}"
+    },
+    {
+     "key": "qa_spk_qa_log_37",
+     "value": "{\"id\":\"qa_spk_qa_log_37\",\"date\":\"2026-10-20\",\"amount\":2,\"reason\":\"completion\",\"refId\":\"qa_log_37\",\"at\":\"2026-10-20T00:00:00.000\"}"
+    },
+    {
+     "key": "qa_spk_qa_log_38",
+     "value": "{\"id\":\"qa_spk_qa_log_38\",\"date\":\"2026-10-20\",\"amount\":2,\"reason\":\"completion\",\"refId\":\"qa_log_38\",\"at\":\"2026-10-20T00:00:00.000\"}"
+    },
+    {
+     "key": "qa_spk_qa_log_39",
+     "value": "{\"id\":\"qa_spk_qa_log_39\",\"date\":\"2026-10-20\",\"amount\":2,\"reason\":\"completion\",\"refId\":\"qa_log_39\",\"at\":\"2026-10-20T00:00:00.000\"}"
+    },
+    {
+     "key": "qa_spk_qa_log_4",
+     "value": "{\"id\":\"qa_spk_qa_log_4\",\"date\":\"2026-10-10\",\"amount\":2,\"reason\":\"completion\",\"refId\":\"qa_log_4\",\"at\":\"2026-10-10T00:00:00.000\"}"
+    },
+    {
+     "key": "qa_spk_qa_log_40",
+     "value": "{\"id\":\"qa_spk_qa_log_40\",\"date\":\"2026-10-20\",\"amount\":2,\"reason\":\"completion\",\"refId\":\"qa_log_40\",\"at\":\"2026-10-20T00:00:00.000\"}"
+    },
+    {
+     "key": "qa_spk_qa_log_41",
+     "value": "{\"id\":\"qa_spk_qa_log_41\",\"date\":\"2026-10-20\",\"amount\":2,\"reason\":\"completion\",\"refId\":\"qa_log_41\",\"at\":\"2026-10-20T00:00:00.000\"}"
+    },
+    {
+     "key": "qa_spk_qa_log_42",
+     "value": "{\"id\":\"qa_spk_qa_log_42\",\"date\":\"2026-10-21\",\"amount\":2,\"reason\":\"completion\",\"refId\":\"qa_log_42\",\"at\":\"2026-10-21T00:00:00.000\"}"
+    },
+    {
+     "key": "qa_spk_qa_log_43",
+     "value": "{\"id\":\"qa_spk_qa_log_43\",\"date\":\"2026-10-21\",\"amount\":2,\"reason\":\"completion\",\"refId\":\"qa_log_43\",\"at\":\"2026-10-21T00:00:00.000\"}"
+    },
+    {
+     "key": "qa_spk_qa_log_44",
+     "value": "{\"id\":\"qa_spk_qa_log_44\",\"date\":\"2026-10-21\",\"amount\":2,\"reason\":\"completion\",\"refId\":\"qa_log_44\",\"at\":\"2026-10-21T00:00:00.000\"}"
+    },
+    {
+     "key": "qa_spk_qa_log_45",
+     "value": "{\"id\":\"qa_spk_qa_log_45\",\"date\":\"2026-10-21\",\"amount\":2,\"reason\":\"completion\",\"refId\":\"qa_log_45\",\"at\":\"2026-10-21T00:00:00.000\"}"
+    },
+    {
+     "key": "qa_spk_qa_log_46",
+     "value": "{\"id\":\"qa_spk_qa_log_46\",\"date\":\"2026-10-22\",\"amount\":2,\"reason\":\"completion\",\"refId\":\"qa_log_46\",\"at\":\"2026-10-22T00:00:00.000\"}"
+    },
+    {
+     "key": "qa_spk_qa_log_47",
+     "value": "{\"id\":\"qa_spk_qa_log_47\",\"date\":\"2026-10-22\",\"amount\":2,\"reason\":\"completion\",\"refId\":\"qa_log_47\",\"at\":\"2026-10-22T00:00:00.000\"}"
+    },
+    {
+     "key": "qa_spk_qa_log_5",
+     "value": "{\"id\":\"qa_spk_qa_log_5\",\"date\":\"2026-10-11\",\"amount\":2,\"reason\":\"completion\",\"refId\":\"qa_log_5\",\"at\":\"2026-10-11T00:00:00.000\"}"
+    },
+    {
+     "key": "qa_spk_qa_log_6",
+     "value": "{\"id\":\"qa_spk_qa_log_6\",\"date\":\"2026-10-11\",\"amount\":2,\"reason\":\"completion\",\"refId\":\"qa_log_6\",\"at\":\"2026-10-11T00:00:00.000\"}"
+    },
+    {
+     "key": "qa_spk_qa_log_7",
+     "value": "{\"id\":\"qa_spk_qa_log_7\",\"date\":\"2026-10-11\",\"amount\":2,\"reason\":\"completion\",\"refId\":\"qa_log_7\",\"at\":\"2026-10-11T00:00:00.000\"}"
+    },
+    {
+     "key": "qa_spk_qa_log_8",
+     "value": "{\"id\":\"qa_spk_qa_log_8\",\"date\":\"2026-10-11\",\"amount\":2,\"reason\":\"completion\",\"refId\":\"qa_log_8\",\"at\":\"2026-10-11T00:00:00.000\"}"
+    },
+    {
+     "key": "qa_spk_qa_log_9",
+     "value": "{\"id\":\"qa_spk_qa_log_9\",\"date\":\"2026-10-12\",\"amount\":2,\"reason\":\"completion\",\"refId\":\"qa_log_9\",\"at\":\"2026-10-12T00:00:00.000\"}"
+    },
+    {
+     "key": "qa_spk_wr",
+     "value": "{\"id\":\"qa_spk_wr\",\"date\":\"2026-10-21\",\"amount\":10,\"reason\":\"weeklyReview\",\"refId\":\"qa_wr\",\"at\":\"2026-10-23T23:40:43.228\"}"
+    }
+   ]
+  },
+  "wlo_strengthchecks": {
+   "version": 1,
+   "store": "box",
+   "entries": []
+  },
+  "wlo_vocabcards": {
+   "version": 1,
+   "store": "box",
+   "entries": [
+    {
+     "key": "qa_vc_0",
+     "value": "{\"id\":\"qa_vc_0\",\"front\":\"test\",\"back\":\"test\",\"example\":\"\",\"ease\":2.5,\"intervalDays\":1,\"repetitions\":1,\"due\":\"2026-10-23\",\"lapses\":0,\"lastReviewed\":\"2026-10-22\"}"
+    },
+    {
+     "key": "qa_vc_1",
+     "value": "{\"id\":\"qa_vc_1\",\"front\":\"test\",\"back\":\"test\",\"example\":\"\",\"ease\":2.5,\"intervalDays\":1,\"repetitions\":1,\"due\":\"2026-10-23\",\"lapses\":0,\"lastReviewed\":\"2026-10-22\"}"
+    },
+    {
+     "key": "qa_vc_2",
+     "value": "{\"id\":\"qa_vc_2\",\"front\":\"test\",\"back\":\"test\",\"example\":\"\",\"ease\":2.5,\"intervalDays\":1,\"repetitions\":1,\"due\":\"2026-10-23\",\"lapses\":0,\"lastReviewed\":\"2026-10-22\"}"
+    },
+    {
+     "key": "qa_vc_3",
+     "value": "{\"id\":\"qa_vc_3\",\"front\":\"test\",\"back\":\"test\",\"example\":\"\",\"ease\":2.5,\"intervalDays\":1,\"repetitions\":1,\"due\":\"2026-10-23\",\"lapses\":0,\"lastReviewed\":\"2026-10-22\"}"
+    },
+    {
+     "key": "qa_vc_4",
+     "value": "{\"id\":\"qa_vc_4\",\"front\":\"test\",\"back\":\"test\",\"example\":\"\",\"ease\":2.5,\"intervalDays\":1,\"repetitions\":0,\"due\":\"2026-10-23\",\"lapses\":0,\"lastReviewed\":null}"
+    },
+    {
+     "key": "qa_vc_5",
+     "value": "{\"id\":\"qa_vc_5\",\"front\":\"test\",\"back\":\"test\",\"example\":\"\",\"ease\":2.5,\"intervalDays\":1,\"repetitions\":0,\"due\":\"2026-10-23\",\"lapses\":0,\"lastReviewed\":null}"
+    }
+   ]
+  },
+  "wlo_weeklyreviews": {
+   "version": 1,
+   "store": "box",
+   "entries": []
+  },
+  "wlo_weeklytasks": {
+   "version": 1,
+   "store": "box",
+   "entries": [
+    {
+     "key": "wt_admin",
+     "value": "{\"id\":\"wt_admin\",\"domain\":\"admin\",\"titleAr\":\"test\",\"titleEn\":\"test\",\"actionId\":\"LIFE-16\",\"minimumText\":\"test\",\"normalText\":\"test\",\"durationMin\":45,\"minimumDurationMin\":10,\"preferredWeekdays\":[7],\"anchor\":{\"type\":\"prayer\",\"minute\":null,\"prayer\":\"asr\",\"slot\":\"afternoon\",\"offsetMin\":60},\"timesPerWeek\":1,\"pinned\":true,\"isWeeklyReview\":false,\"active\":true,\"sortOrder\":3}"
+    },
+    {
+     "key": "wt_ielts_writing",
+     "value": "{\"id\":\"wt_ielts_writing\",\"domain\":\"ielts\",\"titleAr\":\"test\",\"titleEn\":\"test\",\"actionId\":\"GROW-10\",\"minimumText\":\"test\",\"normalText\":\"test\",\"durationMin\":60,\"minimumDurationMin\":10,\"preferredWeekdays\":[1],\"anchor\":{\"type\":\"prayer\",\"minute\":null,\"prayer\":\"dhuhr\",\"slot\":\"midday\",\"offsetMin\":15},\"timesPerWeek\":1,\"pinned\":false,\"isWeeklyReview\":false,\"active\":true,\"sortOrder\":1}"
+    },
+    {
+     "key": "wt_meal_plan",
+     "value": "{\"id\":\"wt_meal_plan\",\"domain\":\"food\",\"titleAr\":\"test\",\"titleEn\":\"test\",\"actionId\":\"FOOD-08\",\"minimumText\":\"test\",\"normalText\":\"test\",\"durationMin\":15,\"minimumDurationMin\":5,\"preferredWeekdays\":[5],\"anchor\":{\"type\":\"prayer\",\"minute\":null,\"prayer\":\"maghrib\",\"slot\":\"evening\",\"offsetMin\":15},\"timesPerWeek\":1,\"pinned\":true,\"isWeeklyReview\":false,\"active\":true,\"sortOrder\":2}"
+    },
+    {
+     "key": "wt_weekly_review",
+     "value": "{\"id\":\"wt_weekly_review\",\"domain\":\"joy\",\"titleAr\":\"test\",\"titleEn\":\"test\",\"actionId\":\"JOY-09\",\"minimumText\":\"test\",\"normalText\":\"test\",\"durationMin\":25,\"minimumDurationMin\":5,\"preferredWeekdays\":[6],\"anchor\":{\"type\":\"slot\",\"minute\":null,\"prayer\":null,\"slot\":\"evening\",\"offsetMin\":60},\"timesPerWeek\":1,\"pinned\":false,\"isWeeklyReview\":true,\"active\":true,\"sortOrder\":4}"
+    }
+   ]
+  },
+  "wlo_wishitems": {
+   "version": 1,
+   "store": "box",
+   "entries": [
+    {
+     "key": "qa_wish1",
+     "value": "{\"id\":\"qa_wish1\",\"title\":\"test\",\"addedDate\":\"2026-10-21\",\"price\":899,\"coolingOffDays\":7,\"decision\":null}"
+    },
+    {
+     "key": "qa_wish2",
+     "value": "{\"id\":\"qa_wish2\",\"title\":\"test\",\"addedDate\":\"2026-10-15\",\"price\":450,\"coolingOffDays\":7,\"decision\":null}"
+    }
+   ]
+  }
+ }
+}

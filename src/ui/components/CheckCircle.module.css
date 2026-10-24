@@ -1,0 +1,46 @@
+.hit {
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  width: var(--tap);
+  height: var(--tap);
+  flex-shrink: 0;
+  border-radius: var(--r-pill);
+}
+
+.ring {
+  display: grid;
+  place-items: center;
+  border-radius: var(--r-pill);
+  box-shadow: inset 0 0 0 1.5px var(--check-ring);
+  background: transparent;
+  transition: background-color var(--dur-base) var(--ease-standard), box-shadow var(--dur-base) var(--ease-standard);
+}
+
+.ring[data-checked] {
+  background: var(--action-default);
+  box-shadow: inset 0 0 0 1.5px var(--action-default);
+}
+
+.index {
+  grid-area: 1 / 1;
+  font: var(--type-footnote);
+  font-family: var(--font-numeric);
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.ring > svg {
+  grid-area: 1 / 1;
+}
+
+.hiddenCheck {
+  visibility: hidden;
+}
+
+.star {
+  /* outer top corner, away from the row title — one star per completion, never beside the text */
+  position: absolute;
+  inset-block-start: 2px;
+  inset-inline-start: 2px;
+}

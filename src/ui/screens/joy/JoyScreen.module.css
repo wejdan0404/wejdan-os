@@ -1,0 +1,150 @@
+/* متعتي — density 2 (Standard): Harlequin at 48% on the top band only, never behind body text.
+   One hero (today's free joy) with the screen's single glow. */
+
+.band {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline: 0;
+  /* board: the pattern gets its own 132pt band; the title and chip sit below it */
+  height: calc(var(--safe-top) + 132px);
+  pointer-events: none;
+  opacity: 0.56;
+  background-image: url('./harlequin.svg');
+  background-size: 40px 50px;
+  background-repeat: repeat;
+  -webkit-mask-image: linear-gradient(to bottom, #000 45%, transparent);
+  mask-image: linear-gradient(to bottom, #000 45%, transparent);
+}
+
+/* sparks — small, identity colours, never gold */
+.sparks {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 32px;
+  min-width: var(--tap);
+  padding-inline: var(--space-3);
+  margin-inline-end: var(--space-2);
+  border-radius: var(--r-pill);
+  background: var(--surface-subtle);
+  color: var(--text-secondary);
+  font: 600 0.824rem/1 var(--font-numeric);
+  font-variant-numeric: tabular-nums;
+  justify-content: center;
+}
+
+.sparks:active {
+  opacity: 0.6;
+}
+
+/* hero: ink in light, elevated charcoal in dark */
+.hero {
+  --hero-bg: #0e121c;
+  --hero-text: #ffffff;
+  --hero-sub: #d1d2d5;
+  --hero-accent: #bedaf7;
+  --hero-btn-bg: #9bc4ee;
+  --hero-btn-ink: #0e121c;
+  --hero-ring: transparent;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-inline: var(--page-margin);
+  padding: var(--space-6);
+  border-radius: var(--r-hero);
+  background: var(--hero-bg);
+  color: var(--hero-text);
+  overflow: hidden;
+  isolation: isolate;
+  box-shadow: var(--shadow-elevated), inset 0 0 0 1px var(--hero-ring);
+}
+
+:global([data-theme='dark']) .hero {
+  --hero-bg: #222630;
+  --hero-ring: rgba(255, 255, 255, 0.06);
+}
+
+@media (prefers-color-scheme: dark) {
+  :global(:root:not([data-theme='light'])) .hero {
+    --hero-bg: #222630;
+    --hero-ring: rgba(255, 255, 255, 0.06);
+  }
+}
+
+.heroGlow {
+  position: absolute;
+  inset-block-start: -60px;
+  inset-inline-end: -40px;
+  width: 220px;
+  height: 220px;
+  border-radius: var(--r-pill);
+  background: radial-gradient(circle, rgba(190, 218, 247, 0.22), rgba(190, 218, 247, 0) 68%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.heroEyebrow {
+  font: var(--type-overline);
+  color: var(--hero-accent);
+}
+
+.heroTitle {
+  font: var(--type-h1);
+  margin: 0;
+  text-wrap: balance;
+}
+
+.heroBody {
+  margin: 0;
+  font: var(--type-caption);
+  color: var(--hero-sub);
+  max-width: 30ch;
+}
+
+.heroActions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-block-start: var(--space-3);
+}
+
+.heroBtn {
+  min-height: 48px;
+  padding-inline: 28px;
+  border-radius: var(--r-control);
+  background: var(--hero-btn-bg);
+  color: var(--hero-btn-ink);
+  font: 600 1rem/1.5 var(--font-body);
+}
+
+.heroBtn:focus-visible,
+.heroLink:focus-visible {
+  outline: 2px solid var(--hero-accent);
+  outline-offset: 2px;
+}
+
+.heroLink {
+  min-height: var(--tap);
+  padding-inline: var(--space-2);
+  color: var(--hero-accent);
+  font: var(--type-label);
+  border-radius: var(--r-control);
+}
+
+.heroDone {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 48px;
+  color: var(--hero-accent);
+  font: var(--type-label);
+}
+
+/* 32px pill, 44px hit area */
+.sparks::before {
+  content: '';
+  position: absolute;
+  inset: -6px 0;
+}

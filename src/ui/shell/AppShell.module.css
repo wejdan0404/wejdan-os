@@ -1,0 +1,71 @@
+.app {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  background: var(--group-bg);
+}
+
+.base {
+  position: absolute;
+  inset: 0;
+  inset-block-end: var(--toast-reserve, 0px);
+}
+
+.root {
+  position: absolute;
+  inset: 0;
+}
+
+.dim {
+  position: absolute;
+  inset: 0;
+  background: #000;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.pushed {
+  position: absolute;
+  inset: 0;
+  inset-block-end: var(--toast-reserve, 0px);
+  z-index: 12;
+  background: var(--group-bg);
+  box-shadow: 0 0 24px rgba(14, 18, 28, 0.18);
+}
+
+/*
+ * While a toast shows, the screens end where its band starts (--toast-reserve, set by Toast.tsx), so a
+ * list row or button is never under it. The screens then own no tab-bar room: footers and the last row
+ * sit against that edge instead of 56px + safe area above it.
+ */
+:global(body[data-toast-reserve]) .base,
+:global(body[data-toast-reserve]) .pushed {
+  --tabbar-h: 0px;
+  --safe-bottom: 0px;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .base,
+  .pushed {
+    transition: inset-block-end var(--dur-base) var(--ease-standard);
+  }
+}
+
+/* full-screen covers: no tab bar underneath, so content runs to the safe area */
+.pushed[data-fullscreen] {
+  z-index: 25;
+  --tabbar-h: 0px;
+}
+
+/* leading edge (right in RTL) — swipe back */
+.edge {
+  position: absolute;
+  inset-block: calc(var(--safe-top) + var(--navbar-h)) 0;
+  inset-inline-start: 0;
+  width: 22px;
+  z-index: 30;
+  touch-action: none;
+}
+
+.fallback {
+  padding-block-start: calc(var(--safe-top) + 96px);
+}

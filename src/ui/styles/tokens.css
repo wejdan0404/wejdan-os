@@ -1,0 +1,319 @@
+/* Wejdan identity tokens — values from the owner's identity brief (design system; the brief file is local-only and not in this repo).
+   Core: White #FFFFFF · Ink #0E121C · Sky #BEDAF7 · Violet #6172B5.
+   Light: violet leads actions. Dark: sky leads actions, violet is the mark only. */
+
+:root,
+[data-theme='light'] {
+  color-scheme: light;
+  /* surfaces */
+  --surface-default: #ffffff;
+  --surface-subtle: #f2f7fe;
+  --surface-elevated: #ffffff;
+  --surface-inverse: #0e121c;
+  /* page ground: white on the main screens (boards); the sky-50 ground is for settings-like screens
+     (Me, Settings, Sources, Change log, Import review) via Screen ground="tinted" */
+  --group-bg: #ffffff;
+  --ground-tinted: #f2f7fe;
+  --heat-0: #f2f7fe;
+  --heat-1: #ddebfc;
+  --heat-2: #bedaf7;
+  --heat-3: #9bc4ee;
+  --heat-4: #5e93d6;
+  --heat-ring: rgba(14, 18, 28, 0.08);
+  --btn-secondary-bg: var(--surface-subtle);
+  --btn-secondary-ring: transparent;
+  --hero-shadow-quiet: none;
+  --cell-bg: #ffffff;
+  --cell-pressed: #ddebfc;
+  /* text */
+  --text-primary: #0e121c;
+  --text-secondary: #2b3358;
+  --text-muted: #50545c;
+  --text-accent: #4e5c96;
+  --text-on-inverse: #ffffff;
+  /* borders */
+  --border-subtle: #bedaf7;
+  --border-default: #9bc4ee;
+  --border-strong: #0e121c;
+  --separator: rgba(14, 18, 28, 0.1);
+  --check-ring: #86898f; /* neutral/500 — neutral ink like the boards, still ≥3:1 on white (3.6:1) */
+  /* brand + action */
+  --brand-primary: #6172b5;
+  --brand-secondary: #9bc4ee;
+  --action-default: #6172b5;
+  --action-hover: #3d4877;
+  --action-pressed: #2b3358;
+  --on-action: #ffffff;
+  --action-tint: #eef0f8; /* violet/50 — secondary button fill */
+  --action-disabled: #e5e6e7;
+  /* switch: off = hollow track with a solid neutral thumb (≥3:1 vs cell), on = filled track + check in thumb */
+  --switch-off-border: #86898f; /* neutral/500 — 3.6:1 on white */
+  --switch-off-thumb: #6e7179;  /* neutral/600 */
+  --switch-on-thumb: #ffffff;
+  --switch-on-glyph: #6172b5;
+  --focus-ring: #6172b5;
+  --glow-accent: #9bc4ee;
+  /* status (always paired with icon + text) */
+  --success: #207f4d;
+  --warning: #966400;
+  --error: #a71a1e;
+  --on-error: #ffffff; /* text/icons on --error fills: 7.5:1 */
+  --info: #2169c7;
+  --success-surface: #edf9f2;
+  /* materials */
+  --material-bar: rgba(255, 255, 255, 0.82);
+  --material-thick: rgba(255, 255, 255, 0.86);
+  --material-tab: rgba(255, 255, 255, 0.84); /* white material per boards (kept above .72 for label contrast) */
+  --toast-bg: #0e121c;
+  --toast-fg: #ffffff;
+  --toast-border: transparent;
+  --scrim: rgba(14, 18, 28, 0.56);
+  /* depth */
+  --shadow-subtle: 0 4px 16px rgba(14, 18, 28, 0.12);
+  --shadow-elevated: 0 12px 32px rgba(14, 18, 28, 0.18);
+  --glow-micro: 0 0 12px rgba(155, 196, 238, 0.55);
+  --glow-hero: 0 0 48px rgba(155, 196, 238, 0.45);
+  --mark-color: #0e121c;
+  --toast-action: #9bc4ee;
+  /* light heroes are a soft sky block with no shadow and no glow (boards) */
+  --hero-glow-opacity: 0;
+  /* cards on the white ground: soft lift + 0.5px ink hairline (boards) */
+  --card-shadow: 0 4px 16px rgba(14, 18, 28, 0.08), 0 0 0 0.5px rgba(14, 18, 28, 0.06);
+  /* the one hero per screen */
+  --hero-bg: #f2f7fe;
+  --hero-shadow: none;
+  /* on a tinted ground the hero lifts as a white card instead */
+  --hero-bg-on-tinted: #ffffff;
+  --hero-shadow-on-tinted: 0 4px 16px rgba(14, 18, 28, 0.08), 0 0 0 0.5px rgba(14, 18, 28, 0.06);
+  /* dark-only header aurora (TodayDark): hidden in light */
+  --aurora: none;
+  /* segmented controls: borderless sky track in light, 0.5px hairline in dark (boards) */
+  --seg-ring: transparent;
+  --seg-thumb-shadow: 0 1px 4px rgba(14, 18, 28, 0.1);
+}
+
+[data-theme='dark'] {
+  color-scheme: dark;
+  --surface-default: #0e121c;
+  --surface-subtle: #181c26;
+  --surface-elevated: #222630;
+  --surface-inverse: #ffffff;
+  --group-bg: #0e121c;
+  --cell-bg: #181c26;
+  --cell-pressed: #222630;
+  --text-primary: #ffffff;
+  --text-secondary: #d1d2d5;
+  --text-muted: #a2a4a9;
+  --text-accent: #bedaf7;
+  --text-on-inverse: #0e121c;
+  --border-subtle: #40444d;
+  --border-default: #6e7179;
+  --border-strong: #86898f;
+  --separator: rgba(255, 255, 255, 0.1);
+  --check-ring: #86898f;
+  --brand-primary: #7587cf;
+  --brand-secondary: #bedaf7;
+  --action-default: #9bc4ee;
+  --action-hover: #bedaf7;
+  --action-pressed: #7faae3;
+  --on-action: #0e121c;
+  --action-tint: #1b2e4c; /* sky/900 */
+  --action-disabled: #40444d;
+  --switch-off-border: #86898f; /* 5:1 on #181c26 */
+  --switch-off-thumb: #a2a4a9;
+  --switch-on-thumb: #0e121c;
+  --switch-on-glyph: #9bc4ee;
+  --focus-ring: #bedaf7;
+  --glow-accent: #bedaf7;
+  --success: #78e8af;
+  --warning: #ffcd53;
+  --error: #f78383;
+  --on-error: #0e121c; /* 7.6:1 on #f78383 */
+  --info: #78b7ff;
+  --success-surface: #10291d;
+  --material-bar: rgba(14, 18, 28, 0.82);
+  --material-thick: rgba(34, 38, 48, 0.86);
+  --material-tab: rgba(24, 28, 38, 0.94); /* neutral/950 */
+  --toast-bg: #222630;
+  --toast-fg: #ffffff;
+  --toast-border: rgba(255, 255, 255, 0.12);
+  --scrim: rgba(14, 18, 28, 0.56);
+  --shadow-subtle: none;
+  --shadow-elevated: 0 12px 32px rgba(0, 0, 0, 0.44);
+  --glow-micro: 0 0 12px rgba(190, 218, 247, 0.45);
+  --glow-hero: 0 0 56px rgba(190, 218, 247, 0.28);
+  --mark-color: #ffffff;
+  --toast-action: #bedaf7;
+  --hero-glow-opacity: 0.14;
+  /* dark depth = surface ladder + hairlines + one glow (TodayDark) */
+  --ground-tinted: #0e121c;
+  --heat-0: #181c26;
+  --heat-1: #1b2e4c;
+  --heat-2: #2a4470;
+  --heat-3: #3a5f94;
+  --heat-4: #7faae3;
+  --heat-ring: #40444d;
+  --btn-secondary-bg: var(--surface-subtle);
+  --btn-secondary-ring: #40444d;
+  --hero-shadow-quiet: inset 0 0 0 0.5px #40444d;
+  --card-shadow: inset 0 0 0 0.5px #40444d;
+  --seg-ring: #40444d;
+  --seg-thumb-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+  --hero-bg: linear-gradient(160deg, #262b3a 0%, #222630 55%, #1e2230 100%);
+  --hero-shadow: 0 0 0 1px rgba(190, 218, 247, 0.18), 0 18px 56px rgba(97, 114, 181, 0.42);
+  --hero-bg-on-tinted: linear-gradient(160deg, #262b3a 0%, #222630 55%, #1e2230 100%);
+  --hero-shadow-on-tinted: 0 0 0 1px rgba(190, 218, 247, 0.18), 0 18px 56px rgba(97, 114, 181, 0.42);
+  --aurora: radial-gradient(circle, rgba(97, 114, 181, 0.3) 0%, rgba(97, 114, 181, 0) 68%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    color-scheme: dark;
+    --surface-default: #0e121c;
+    --surface-subtle: #181c26;
+    --surface-elevated: #222630;
+    --surface-inverse: #ffffff;
+    --group-bg: #0e121c;
+    --cell-bg: #181c26;
+    --cell-pressed: #222630;
+    --text-primary: #ffffff;
+    --text-secondary: #d1d2d5;
+    --text-muted: #a2a4a9;
+    --text-accent: #bedaf7;
+    --text-on-inverse: #0e121c;
+    --border-subtle: #40444d;
+    --border-default: #6e7179;
+    --border-strong: #86898f;
+    --separator: rgba(255, 255, 255, 0.1);
+    --check-ring: #86898f;
+    --brand-primary: #7587cf;
+    --brand-secondary: #bedaf7;
+    --action-default: #9bc4ee;
+    --action-hover: #bedaf7;
+    --action-pressed: #7faae3;
+    --on-action: #0e121c;
+    --action-tint: #1b2e4c;
+    --action-disabled: #40444d;
+    --switch-off-border: #86898f; /* 5:1 on #181c26 */
+    --switch-off-thumb: #a2a4a9;
+    --switch-on-thumb: #0e121c;
+    --switch-on-glyph: #9bc4ee;
+    --focus-ring: #bedaf7;
+    --glow-accent: #bedaf7;
+    --success: #78e8af;
+    --warning: #ffcd53;
+    --error: #f78383;
+    --on-error: #0e121c; /* 7.6:1 on #f78383 */
+    --info: #78b7ff;
+    --success-surface: #10291d;
+    --material-bar: rgba(14, 18, 28, 0.82);
+    --material-thick: rgba(34, 38, 48, 0.86);
+    --material-tab: rgba(24, 28, 38, 0.94); /* neutral/950 */
+    --toast-bg: #222630;
+    --toast-fg: #ffffff;
+    --toast-border: rgba(255, 255, 255, 0.12);
+    --scrim: rgba(14, 18, 28, 0.56);
+    --shadow-subtle: none;
+    --shadow-elevated: 0 12px 32px rgba(0, 0, 0, 0.44);
+    --glow-micro: 0 0 12px rgba(190, 218, 247, 0.45);
+    --glow-hero: 0 0 56px rgba(190, 218, 247, 0.28);
+    --mark-color: #ffffff;
+    --toast-action: #bedaf7;
+    --hero-glow-opacity: 0.14;
+    /* dark depth = surface ladder + hairlines + one glow (TodayDark) */
+    --ground-tinted: #0e121c;
+    --heat-0: #181c26;
+    --heat-1: #1b2e4c;
+    --heat-2: #2a4470;
+    --heat-3: #3a5f94;
+    --heat-4: #7faae3;
+    --heat-ring: #40444d;
+    --btn-secondary-bg: var(--surface-subtle);
+    --btn-secondary-ring: #40444d;
+    --hero-shadow-quiet: inset 0 0 0 0.5px #40444d;
+    --card-shadow: inset 0 0 0 0.5px #40444d;
+    --seg-ring: #40444d;
+    --seg-thumb-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+    --hero-bg: linear-gradient(160deg, #262b3a 0%, #222630 55%, #1e2230 100%);
+    --hero-shadow: 0 0 0 1px rgba(190, 218, 247, 0.18), 0 18px 56px rgba(97, 114, 181, 0.42);
+    --hero-bg-on-tinted: linear-gradient(160deg, #262b3a 0%, #222630 55%, #1e2230 100%);
+    --hero-shadow-on-tinted: 0 0 0 1px rgba(190, 218, 247, 0.18), 0 18px 56px rgba(97, 114, 181, 0.42);
+    --aurora: radial-gradient(circle, rgba(97, 114, 181, 0.3) 0%, rgba(97, 114, 181, 0) 68%);
+  }
+}
+
+:root {
+  /* type */
+  --font-display: 'El Messiri', 'IBM Plex Sans Arabic', 'Geeza Pro', serif;
+  --font-body: 'IBM Plex Sans Arabic', 'IBM Plex Sans', -apple-system, 'SF Arabic', 'Geeza Pro', system-ui, sans-serif;
+  --font-numeric: 'IBM Plex Sans', 'IBM Plex Sans Arabic', -apple-system, system-ui, sans-serif;
+  /* Arabic mobile scale — rem so it follows the user's text size.
+     On iOS, html uses -apple-system-body (Dynamic Type): 1rem = 17px at default, scales with Settings.
+     Elsewhere 1rem = 16px. Arabic gets taller line-heights than Latin (unitless ratios). */
+  --type-display: 700 2rem/1.42 var(--font-display);        /* Large Title 34 */
+  --type-h1: 700 1.647rem/1.43 var(--font-display);         /* 28 — standalone screens only (one serif per screen) */
+  --type-hero: 600 1.294rem/1.55 var(--font-body);          /* hero / card title — Plex 22/34/600 (boards) */
+  --type-card: 600 1.176rem/1.6 var(--font-body);           /* card title — Plex 20/32/600 (Path) */
+  --type-title2: 600 1.294rem/1.5 var(--font-body);         /* Title 2 22 */
+  --type-h2: 500 1.176rem/1.6 var(--font-body);             /* 20 */
+  --type-headline: 600 1rem/1.6 var(--font-body);           /* Headline 17/600 */
+  --type-body: 400 1rem/1.7 var(--font-body);               /* Body 17 */
+  --type-label: 500 0.882rem/1.6 var(--font-body);          /* Subhead 15 */
+  --type-caption: 400 0.882rem/1.6 var(--font-body);        /* 15 */
+  --type-footnote: 400 0.765rem/1.55 var(--font-body);      /* Footnote 13 */
+  --type-tab: 500 0.706rem/1.3 var(--font-body);            /* 12 — floor */
+  --type-overline: 600 0.765rem/1.55 var(--font-body);      /* 13 */
+  --type-row: 500 1rem/1.6 var(--font-body);                /* row title */
+  --type-metric: 600 1.882rem/1.2 var(--font-numeric);      /* 32 */
+
+  /* spacing — 8pt grid, mobile margin 20 */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --page-margin: 20px;
+  --tap: 44px;
+
+  /* radii */
+  --r-chip: 4px;
+  --r-control: 12px;
+  --r-card: 20px;
+  --r-hero: 32px;
+  --r-pill: 999px;
+
+  /* strokes */
+  --hairline: 0.5px;
+
+  /* motion (identity motion.md) */
+  --dur-instant: 0ms;
+  --dur-quick: 120ms;
+  --dur-base: 200ms;
+  --dur-slow: 320ms;
+  --dur-gentle: 500ms;
+  --dur-ambient: 8000ms;
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-enter: cubic-bezier(0, 0, 0, 1);
+  --ease-exit: cubic-bezier(0.3, 0, 1, 1);
+
+  /* layout */
+  --tabbar-h: 56px;
+  --navbar-h: 44px;
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+@media (max-resolution: 1dppx) {
+  :root { --hairline: 1px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-base: 120ms;
+    --dur-slow: 120ms;
+    --dur-gentle: 120ms;
+  }
+}

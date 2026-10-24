@@ -1,0 +1,83 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-1);
+  width: 100%;
+  padding: var(--space-5);
+  background: var(--cell-bg);
+  text-align: start;
+  overflow: hidden;
+}
+
+.eyebrow {
+  font: var(--type-footnote);
+  font-weight: 600;
+  color: var(--text-accent);
+}
+
+.title {
+  font: var(--type-title2);
+  color: var(--text-primary);
+}
+
+.preview {
+  font: var(--type-caption);
+  color: var(--text-muted);
+}
+
+.layer {
+  position: fixed;
+  inset: 0;
+  z-index: 45;
+  display: flex;
+  align-items: flex-end;
+}
+
+.backdrop {
+  position: absolute;
+  inset: 0;
+  background: var(--scrim);
+}
+
+.detail {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  width: 100%;
+  max-width: 640px;
+  margin-inline: auto;
+  height: calc(100% - var(--safe-top) - 24px);
+  padding: var(--space-8) var(--page-margin) calc(var(--space-8) + var(--safe-bottom));
+  background: var(--surface-elevated);
+  overflow-y: auto;
+  border-end-start-radius: 0 !important;
+  border-end-end-radius: 0 !important;
+}
+
+.close {
+  position: absolute;
+  inset-block-start: var(--space-3);
+  inset-inline-end: var(--space-3);
+  display: grid;
+  place-items: center;
+  width: var(--tap);
+  height: var(--tap);
+  border-radius: var(--r-pill);
+  background: var(--surface-subtle);
+  color: var(--text-secondary);
+}
+
+.detailTitle {
+  font: var(--type-hero);
+  color: var(--text-primary);
+}
+
+.detailBody {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  font: var(--type-body);
+  color: var(--text-secondary);
+}

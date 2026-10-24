@@ -1,0 +1,20 @@
+.flower {
+  display: inline-grid;
+  place-items: center;
+  flex: none;
+  /* ink: deep in light, soft pale in dark (fills stay her Violet/Sky) */
+  color: var(--text-primary);
+}
+:global([data-theme='dark']) .flower {
+  color: var(--text-secondary);
+}
+@media (prefers-color-scheme: dark) {
+  :global(:root:not([data-theme='light'])) .flower {
+    color: var(--text-secondary);
+  }
+}
+.svg {
+  display: block;
+  overflow: visible;
+  shape-rendering: geometricPrecision;
+}

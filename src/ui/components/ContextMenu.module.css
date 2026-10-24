@@ -1,0 +1,66 @@
+.target {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+  border-radius: var(--r-card);
+}
+
+.layer {
+  position: fixed;
+  inset: 0;
+  z-index: 55;
+}
+
+.backdrop {
+  position: absolute;
+  inset: 0;
+  background: color-mix(in srgb, var(--surface-inverse) 18%, transparent);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+.menu {
+  position: absolute;
+  width: min(260px, calc(100vw - 40px));
+  padding-block: 4px;
+  border-radius: 14px;
+  background: var(--material-thick);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  backdrop-filter: blur(24px) saturate(180%);
+  box-shadow: var(--shadow-elevated);
+  overflow: hidden;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 48px;
+  padding-inline: var(--space-4);
+  font: var(--type-body);
+  color: var(--text-primary);
+  text-align: start;
+}
+
+.item:not(:last-child) {
+  box-shadow: inset 0 calc(var(--hairline) * -1) 0 var(--separator);
+}
+
+.item:active {
+  background: var(--cell-pressed);
+}
+
+.item[data-destructive] {
+  color: var(--error);
+}
+
+/* lifted, inert snapshot of the pressed row above the blur */
+.preview {
+  position: fixed;
+  pointer-events: none;
+  border-radius: var(--r-card);
+  overflow: hidden;
+  background: var(--cell-bg);
+  box-shadow: var(--shadow-elevated);
+}

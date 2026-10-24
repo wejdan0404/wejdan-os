@@ -1,0 +1,8 @@
+# Generic deny-list for scripts/privacy-scan.mjs — one case-insensitive literal per line.
+# Put ONLY generic markers here. Owner-specific strings go in the git-ignored
+# scripts/privacy-denylist.local.txt (same format) — it is read automatically when present.
+scratchpad/private
+private-library
+wejdan-private
+flutter_export_2026
+handoff.zip

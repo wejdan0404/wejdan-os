@@ -1,0 +1,47 @@
+.stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-5);
+  padding-inline: var(--page-margin);
+  padding-block-start: var(--space-6);
+  text-align: center;
+}
+
+.what {
+  margin: 0;
+  font: var(--type-h2);
+  color: var(--text-primary);
+  max-width: 28ch;
+  text-wrap: balance;
+}
+
+.arcWrap {
+  display: grid;
+  place-items: center;
+  max-width: 100%;
+}
+
+.time {
+  font-family: var(--font-numeric);
+  font-size: 3.25rem;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+}
+
+.status {
+  margin: 0;
+  min-height: 1.75em;
+  font: var(--type-caption);
+  color: var(--text-secondary);
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  width: 100%;
+  max-width: 360px;
+}

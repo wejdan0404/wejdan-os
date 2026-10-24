@@ -1,0 +1,65 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  position: relative;
+  /* one ground for the whole screen (no white top / grey bottom split) */
+  min-block-size: 100%;
+  min-height: 100dvh;
+  box-sizing: border-box;
+  padding-block: calc(env(safe-area-inset-top, 0px) + var(--space-10)) var(--space-6);
+  padding-inline: var(--page-margin);
+  text-align: center;
+  /* same ground as every other screen */
+  background: var(--group-bg);
+  color: var(--text-primary);
+}
+
+.title {
+  font: var(--type-h1);
+  outline: none;
+  text-wrap: balance;
+}
+
+.body {
+  max-inline-size: 32ch;
+  font: var(--type-body);
+  color: var(--text-secondary);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-3);
+  margin-block-start: var(--space-2);
+}
+
+/* A pushed screen that crashed still has a way back, laid out like the normal nav bar. */
+.bar {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline: 0;
+  display: flex;
+  align-items: center;
+  min-block-size: var(--navbar-h, 44px);
+  padding-block-start: env(safe-area-inset-top, 0px);
+  padding-inline: var(--space-2);
+}
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  min-height: var(--tap, 44px);
+  padding-inline: var(--space-1) var(--space-2);
+  color: var(--text-accent);
+  font: var(--type-body);
+  border-radius: var(--r-control);
+}
+
+.back:active {
+  opacity: 0.5;
+}

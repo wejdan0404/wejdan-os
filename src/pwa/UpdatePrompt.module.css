@@ -1,0 +1,77 @@
+.wrap {
+  position: fixed;
+  inset-inline: 12px;
+  top: calc(var(--safe-top, env(safe-area-inset-top, 0px)) + 10px);
+  z-index: 2147483000;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+}
+.card {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  inline-size: min(100%, 420px);
+  padding: 10px 10px 10px 14px;
+  padding-inline-start: 16px;
+  border-radius: 20px;
+  background: var(--toast-bg, #0e121c);
+  color: var(--toast-fg, #fff);
+  border: 1px solid var(--toast-border, transparent);
+  box-shadow: var(--shadow-elevated, 0 12px 32px rgba(14, 18, 28, 0.18));
+  font-family: 'IBM Plex Sans Arabic', system-ui, sans-serif;
+  animation: enter 320ms cubic-bezier(0, 0, 0, 1) both;
+}
+.text {
+  flex: 1;
+  min-inline-size: 0;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+.primary,
+.secondary {
+  min-block-size: 44px;
+  min-inline-size: 44px;
+  padding-inline: 14px;
+  border-radius: 12px;
+  border: 0;
+  font: inherit;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.primary {
+  background: var(--toast-action, #9bc4ee);
+  color: #0e121c;
+}
+.secondary {
+  background: transparent;
+  color: inherit;
+  opacity: 0.8;
+  font-weight: 500;
+}
+.primary:active,
+.secondary:active {
+  transform: scale(0.97);
+}
+.primary:focus-visible,
+.secondary:focus-visible {
+  outline: 2px solid var(--focus-ring, #bedaf7);
+  outline-offset: 2px;
+}
+@keyframes enter {
+  from {
+    opacity: 0;
+    transform: translateY(-16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    animation: none;
+  }
+}

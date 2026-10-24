@@ -1,0 +1,61 @@
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  min-height: 32px;
+  padding-inline: var(--space-2);
+  border-radius: var(--r-chip);
+  font: var(--type-footnote);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.interactive {
+  position: relative;
+  /* a11y #7: the button itself is ≥44×44; the visible chip stays 32px tall
+     (transparent border ring, background painted inside it) */
+  min-height: 44px;
+  min-width: 44px;
+  justify-content: center;
+  border-block: 6px solid transparent;
+  background-clip: padding-box;
+}
+
+.neutral {
+  background: transparent;
+  color: var(--text-secondary);
+  box-shadow: inset 0 0 0 1px var(--border-subtle);
+}
+
+.accent {
+  background: var(--action-tint);
+  color: var(--text-accent);
+}
+
+.success {
+  background: var(--success-surface);
+  color: var(--success);
+}
+
+.warning {
+  background: var(--surface-subtle);
+  color: var(--warning);
+}
+
+/* Selected reads stronger than unselected (QA area 2 #13): firmer tint, full-strength ring,
+   heavier label and a leading check — never the muted look of a disabled control. */
+.selected {
+  background: color-mix(in srgb, var(--brand-primary) 18%, transparent);
+  color: var(--text-accent);
+  font-weight: 600;
+  box-shadow: inset 0 0 0 1.5px var(--brand-primary);
+}
+.check {
+  flex: none;
+  stroke-width: 2.25;
+}
+
+/* after the tone rules (their `background` shorthand resets the clip): keep the 32px visible pill */
+.chip.interactive {
+  background-clip: padding-box;
+}

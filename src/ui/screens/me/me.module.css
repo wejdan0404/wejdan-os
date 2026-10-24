@@ -1,0 +1,608 @@
+/* ME area — shared styles. Tokens only; RTL via logical properties. */
+
+.pad {
+  margin-inline: var(--page-margin);
+}
+
+.lede {
+  margin: 0;
+  font: var(--type-caption);
+  color: var(--text-muted);
+  text-wrap: pretty;
+}
+
+.lede.pad {
+  margin-inline: var(--page-margin);
+}
+
+.note {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  margin-inline: var(--page-margin);
+  font: var(--type-footnote);
+  color: var(--text-muted);
+}
+
+/* ---- row icon tile -------------------------------------------------------------------- */
+.rowIcon {
+  display: inline-grid;
+  place-items: center;
+  inline-size: 30px;
+  block-size: 30px;
+  border-radius: 8px;
+  background: var(--action-tint);
+  color: var(--text-accent);
+}
+.rowIcon[data-tone='ink'] {
+  background: color-mix(in srgb, var(--text-primary) 7%, transparent);
+  color: var(--text-primary);
+}
+.rowIcon[data-tone='warn'] {
+  background: color-mix(in srgb, var(--error) 12%, transparent);
+  color: var(--error);
+}
+
+/* ---- profile header (Me) ------------------------------------------------------------- */
+.profile {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-inline: var(--page-margin);
+}
+.avatar {
+  /* 56pt white disc with the one W on Me (boards) */
+  display: grid;
+  place-items: center;
+  inline-size: 56px;
+  block-size: 56px;
+  border-radius: 50%;
+  background: var(--cell-bg);
+  box-shadow: var(--card-shadow);
+  flex-shrink: 0;
+}
+.profileName {
+  margin: 0;
+  font: var(--type-hero);
+  color: var(--text-primary);
+}
+.profileMeta {
+  margin: 0;
+  font: var(--type-footnote);
+  color: var(--text-muted);
+}
+
+/* ---- review-ready card --------------------------------------------------------------- */
+.reviewCard {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-inline: var(--page-margin);
+  padding: var(--space-5);
+  border-radius: var(--r-hero);
+  background: var(--hero-bg);
+  box-shadow: var(--hero-shadow);
+}
+.reviewEyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font: var(--type-footnote);
+  font-weight: 600;
+  color: var(--text-accent);
+}
+.reviewTitle {
+  margin: 0;
+  /* one serif per screen: her name is the display title, the hero is Plex 22/600 */
+  font: var(--type-hero);
+  color: var(--text-primary);
+}
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-block-start: var(--space-2);
+}
+
+/* ---- trailing value text in rows ------------------------------------------------------ */
+.trail {
+  font: var(--type-caption);
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+.trailStrong {
+  font: var(--type-label);
+  font-weight: 600;
+  color: var(--text-primary);
+  font-family: var(--font-numeric);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.badge {
+  display: inline-grid;
+  place-items: center;
+  min-inline-size: 22px;
+  block-size: 22px;
+  padding-inline: 7px;
+  border-radius: var(--r-pill);
+  background: var(--action-tint);
+  color: var(--text-accent);
+  font: var(--type-footnote);
+  font-weight: 600;
+  font-family: var(--font-numeric);
+}
+
+/* ---- money --------------------------------------------------------------------------- */
+.spend {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-inline: var(--page-margin);
+  padding: var(--space-5);
+  border-radius: var(--r-card);
+  background: var(--cell-bg);
+}
+/* boards: the payday/plan block is the one hero; the spend metric sits on the ground (density 0) */
+.spendHero {
+  border-radius: var(--r-hero);
+  background: var(--hero-bg);
+  box-shadow: var(--hero-shadow);
+  --btn-secondary-bg: var(--cell-bg);
+}
+.spendFlat {
+  padding: 0;
+  border-radius: 0;
+  background: none;
+}
+.spendLabel {
+  font: var(--type-footnote);
+  font-weight: 600;
+  color: var(--text-muted);
+}
+.spendRow {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+.metric {
+  font: var(--type-metric);
+  font-variant-numeric: tabular-nums;
+  color: var(--text-primary);
+}
+.of {
+  font: var(--type-caption);
+  color: var(--text-muted);
+}
+.bar {
+  position: relative;
+  block-size: 8px;
+  border-radius: var(--r-pill);
+  background: color-mix(in srgb, var(--brand-secondary) 35%, transparent);
+  overflow: hidden;
+}
+.barFill {
+  position: absolute;
+  inset-block: 0;
+  inset-inline-start: 0;
+  border-radius: inherit;
+  background: var(--action-default);
+}
+.barFill[data-over] {
+  /* full bar in the deepest identity tone — the line under it says it's over (no gold) */
+  background: var(--action-pressed, var(--brand-primary));
+}
+
+/* plan split (payday) */
+.split {
+  display: flex;
+  gap: 3px;
+  block-size: 10px;
+  border-radius: var(--r-pill);
+  overflow: hidden;
+}
+.split > span:nth-child(1) { background: var(--brand-primary); }
+.split > span:nth-child(2) { background: var(--brand-secondary); }
+.split > span:nth-child(3) { background: color-mix(in srgb, var(--text-primary) 18%, transparent); }
+.legend {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-2);
+}
+.legendItem {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.legendKey {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font: var(--type-footnote);
+  color: var(--text-muted);
+}
+.dot {
+  inline-size: 8px;
+  block-size: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.legendVal {
+  font: var(--type-label);
+  font-weight: 600;
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---- forms --------------------------------------------------------------------------- */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding-inline: var(--page-margin);
+  padding-block-end: var(--space-6);
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+.fieldLabel {
+  font: var(--type-footnote);
+  font-weight: 600;
+  color: var(--text-muted);
+}
+.input,
+.select,
+.textarea {
+  inline-size: 100%;
+  min-block-size: 48px;
+  padding-inline: var(--space-4);
+  border-radius: var(--r-control);
+  background: var(--cell-bg);
+  color: var(--text-primary);
+  font: var(--type-body);
+  border: 1px solid var(--border-subtle);
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.textarea {
+  min-block-size: 96px;
+  padding-block: var(--space-3);
+  resize: vertical;
+}
+.input:focus-visible,
+.select:focus-visible,
+.textarea:focus-visible {
+  border-color: var(--focus-ring);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--focus-ring) 22%, transparent);
+}
+.input::placeholder,
+.textarea::placeholder {
+  color: var(--text-muted);
+}
+.ltrInput {
+  direction: ltr;
+  text-align: end;
+  font-family: var(--font-numeric);
+  font-variant-numeric: tabular-nums;
+}
+.inlineSelect {
+  min-block-size: 44px;
+  padding-inline: var(--space-3);
+  border-radius: var(--r-control);
+  background: var(--action-tint);
+  color: var(--text-accent);
+  font: var(--type-label);
+  font-weight: 600;
+  border: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  text-align: center;
+}
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+/* ---- help ---------------------------------------------------------------------------- */
+.emergency {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-inline: var(--page-margin);
+  padding: var(--space-5);
+  border-radius: var(--r-card);
+  background: var(--cell-bg);
+  box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--error) 55%, transparent);
+}
+.emergencyTitle {
+  margin: 0;
+  font: var(--type-title2);
+  color: var(--text-primary);
+}
+.callRow {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+.callBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  flex: 1 1 140px;
+  min-block-size: 56px;
+  padding-block: var(--space-2);
+  padding-inline: var(--space-4);
+  box-sizing: border-box;
+  border-radius: var(--r-control);
+  background: var(--error);
+  color: var(--on-error);
+  font: var(--type-headline);
+  text-decoration: none;
+  text-align: center;
+  flex-wrap: wrap;
+}
+.callNum {
+  font-family: var(--font-numeric);
+  font-size: 1.4rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+}
+
+/* ---- insights ------------------------------------------------------------------------ */
+.weekDots {
+  display: inline-flex;
+  gap: 4px;
+  direction: rtl;
+}
+.weekDot {
+  inline-size: 8px;
+  block-size: 8px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--brand-secondary) 45%, transparent);
+}
+.weekDot[data-done] {
+  background: var(--brand-primary);
+}
+
+/* ---- evidence ------------------------------------------------------------------------ */
+.sourceLink {
+  color: var(--text-accent);
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+.detailBlock {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding-inline: var(--page-margin);
+  padding-block-end: var(--space-6);
+}
+.detailHead {
+  margin: 0;
+  font: var(--type-footnote);
+  font-weight: 600;
+  color: var(--text-muted);
+}
+.detailText {
+  margin: 0;
+  font: var(--type-body);
+  color: var(--text-primary);
+  text-wrap: pretty;
+}
+
+/* ---- confirm panel (in-sheet) ---------------------------------------------------------- */
+.confirm {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border-radius: var(--r-card);
+  background: color-mix(in srgb, var(--warning) 9%, var(--cell-bg));
+}
+.confirmSheet {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding-block-end: var(--space-4);
+}
+.confirmTitle {
+  margin: 0;
+  font: var(--type-headline);
+  color: var(--text-primary);
+}
+.counts {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  gap: 4px var(--space-4);
+  font: var(--type-footnote);
+  color: var(--text-secondary);
+}
+.counts :global(.num) {
+  font-family: var(--font-numeric);
+  font-variant-numeric: tabular-nums;
+  text-align: end;
+}
+.danger {
+  color: var(--error) !important;
+}
+.hiddenInput {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ---- import review (spec §11) ---- */
+.reviewList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.reviewBox {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  border-radius: var(--r-control);
+  background: var(--cell-bg);
+}
+.reviewHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2) var(--space-3);
+}
+.reviewName {
+  display: flex;
+  flex-direction: column;
+  min-inline-size: 0;
+}
+.reviewExpand {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-block-size: var(--tap);
+  font: var(--type-label);
+  color: var(--text-accent);
+}
+.reviewItems {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  max-block-size: 320px;
+  overflow-y: auto;
+}
+.reviewItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  min-block-size: var(--tap);
+  box-shadow: inset 0 calc(var(--hairline) * -1) 0 var(--separator);
+}
+.reviewItemLabel {
+  min-inline-size: 0;
+  font: var(--type-caption);
+  color: var(--text-primary);
+  overflow-wrap: anywhere;
+}
+
+/* Help: the whole row is the tel: link (≥44px target, one clear action). */
+.telRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-block-size: max(64px, 3.75rem);
+  padding-block: 14px;
+  padding-inline: var(--space-4);
+  color: var(--text-primary);
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.telRow:active {
+  background: color-mix(in srgb, var(--text-primary) 4%, var(--cell-bg));
+}
+.telRow:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: -2px;
+}
+.telText {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+.telTitle {
+  font: var(--type-row);
+}
+.telSub {
+  font: var(--type-footnote);
+  color: var(--text-muted);
+}
+.telNum {
+  font: var(--type-label);
+  font-weight: 600;
+  font-family: var(--font-numeric);
+  font-variant-numeric: tabular-nums;
+  color: var(--text-accent);
+  white-space: nowrap;
+}
+
+/* over the spending plan: icon + text in identity colours, no gold (QA area4 #11) */
+.overLine {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  margin: 0;
+  font: var(--type-caption);
+  color: var(--text-secondary);
+}
+.overLine > svg {
+  flex: none;
+  margin-block-start: 2px;
+  color: var(--brand-primary);
+}
+/* Import review: what «استبدلي» removes from her device (QA area 5 #12) */
+.reviewGone {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--r-control);
+  background: color-mix(in srgb, var(--warning) 8%, transparent);
+  color: var(--text-secondary);
+  font: var(--type-footnote);
+}
+.reviewGoneTitle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  color: var(--text-primary);
+}
+.reviewGoneList {
+  margin: 0;
+  padding-inline-start: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+/* nav-bar buttons on Me (search + settings gear, boards) */
+.navGroup {
+  display: inline-flex;
+  gap: var(--space-2);
+}
+.navBtn {
+  display: inline-grid;
+  place-items: center;
+  inline-size: 44px;
+  block-size: 44px;
+  border: 0;
+  border-radius: var(--r-pill);
+  background: var(--surface-subtle);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: transform var(--dur-quick) var(--ease-standard);
+}
+.navBtn:active {
+  transform: scale(0.94);
+}
+.navBtn:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}

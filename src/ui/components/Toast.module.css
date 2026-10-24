@@ -1,0 +1,61 @@
+/*
+ * Toast placement: the toast never covers, replaces or disables a control.
+ * It floats above everything docked to the screen (tab bar + safe area, the + button, sticky footers
+ * and CTA docks, a sheet's controls). Toast.tsx measures what is docked and sets --toast-bottom;
+ * the default is just above the safe area (no tab bar on screen).
+ * top (fallback): a banner under the status bar, only when a sheet leaves no free band.
+ */
+.region {
+  position: fixed;
+  inset-inline: 0;
+  inset-block-end: 0;
+  display: flex;
+  justify-content: center;
+  padding-inline: var(--page-margin);
+  padding-block-end: var(--toast-bottom, calc(var(--safe-bottom) + var(--space-2)));
+  pointer-events: none;
+  z-index: 60;
+}
+
+.region[data-placement='top'] {
+  inset-block-end: auto;
+  inset-block-start: calc(var(--safe-top) + var(--space-2));
+  z-index: 120;
+}
+
+.toast {
+  pointer-events: auto;
+  cursor: default;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  width: 100%;
+  max-width: 420px;
+  min-height: 48px;
+  padding-inline: var(--space-4) var(--space-2);
+  border-radius: 16px;
+  background: var(--toast-bg);
+  color: var(--toast-fg);
+  border: var(--hairline) solid var(--toast-border);
+  box-shadow: var(--shadow-elevated);
+}
+
+.message {
+  flex: 1;
+  font: var(--type-caption);
+  font-weight: 500;
+}
+
+.action {
+  pointer-events: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  min-height: var(--tap);
+  min-width: var(--tap);
+  padding-inline: var(--space-3);
+  border-radius: var(--r-control);
+  font: var(--type-caption);
+  font-weight: 600;
+  color: var(--toast-action);
+}

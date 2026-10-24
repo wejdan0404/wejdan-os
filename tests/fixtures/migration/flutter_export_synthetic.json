@@ -1,0 +1,2750 @@
+{
+  "schemaVersion": 1,
+  "exportedAt": "2026-10-23T23:50:38.975",
+  "boxes": {
+    "domains": [
+      {
+        "id": "admin",
+        "nameAr": "مجال تجريبي ١٣",
+        "nameEn": "Test domain 13",
+        "state": "rest",
+        "sensitive": false,
+        "enabled": true,
+        "parent": null,
+        "sortOrder": 12
+      },
+      {
+        "id": "aquarium",
+        "nameAr": "مجال تجريبي ١٧",
+        "nameEn": "Test domain 17",
+        "state": "rest",
+        "sensitive": false,
+        "enabled": false,
+        "parent": "home",
+        "sortOrder": 16
+      },
+      {
+        "id": "care",
+        "nameAr": "مجال تجريبي ٤",
+        "nameEn": "Test domain 4",
+        "state": "maintain",
+        "sensitive": false,
+        "enabled": true,
+        "parent": null,
+        "sortOrder": 3
+      },
+      {
+        "id": "career",
+        "nameAr": "مجال تجريبي ٨",
+        "nameEn": "Test domain 8",
+        "state": "grow",
+        "sensitive": false,
+        "enabled": true,
+        "parent": null,
+        "sortOrder": 7
+      },
+      {
+        "id": "digital",
+        "nameAr": "مجال تجريبي ١٢",
+        "nameEn": "Test domain 12",
+        "state": "rest",
+        "sensitive": false,
+        "enabled": true,
+        "parent": null,
+        "sortOrder": 11
+      },
+      {
+        "id": "driving",
+        "nameAr": "مجال تجريبي ٩",
+        "nameEn": "Test domain 9",
+        "state": "rest",
+        "sensitive": false,
+        "enabled": true,
+        "parent": null,
+        "sortOrder": 8
+      },
+      {
+        "id": "faith",
+        "nameAr": "مجال تجريبي ١٦",
+        "nameEn": "Test domain 16",
+        "state": "rest",
+        "sensitive": false,
+        "enabled": true,
+        "parent": null,
+        "sortOrder": 15
+      },
+      {
+        "id": "food",
+        "nameAr": "مجال تجريبي ٣",
+        "nameEn": "Test domain 3",
+        "state": "rest",
+        "sensitive": false,
+        "enabled": true,
+        "parent": null,
+        "sortOrder": 2
+      },
+      {
+        "id": "health",
+        "nameAr": "مجال تجريبي ١",
+        "nameEn": "Test domain 1",
+        "state": "grow",
+        "sensitive": false,
+        "enabled": true,
+        "parent": null,
+        "sortOrder": 0
+      },
+      {
+        "id": "home",
+        "nameAr": "مجال تجريبي ١١",
+        "nameEn": "Test domain 11",
+        "state": "maintain",
+        "sensitive": false,
+        "enabled": true,
+        "parent": null,
+        "sortOrder": 10
+      },
+      {
+        "id": "ielts",
+        "nameAr": "مجال تجريبي ٦",
+        "nameEn": "Test domain 6",
+        "state": "grow",
+        "sensitive": false,
+        "enabled": true,
+        "parent": null,
+        "sortOrder": 5
+      },
+      {
+        "id": "joy",
+        "nameAr": "مجال تجريبي ١٤",
+        "nameEn": "Test domain 14",
+        "state": "rest",
+        "sensitive": false,
+        "enabled": true,
+        "parent": null,
+        "sortOrder": 13
+      },
+      {
+        "id": "learning",
+        "nameAr": "مجال تجريبي ٧",
+        "nameEn": "Test domain 7",
+        "state": "rest",
+        "sensitive": false,
+        "enabled": true,
+        "parent": null,
+        "sortOrder": 6
+      },
+      {
+        "id": "money",
+        "nameAr": "مجال تجريبي ١٠",
+        "nameEn": "Test domain 10",
+        "state": "maintain",
+        "sensitive": false,
+        "enabled": true,
+        "parent": null,
+        "sortOrder": 9
+      },
+      {
+        "id": "people",
+        "nameAr": "مجال تجريبي ١٥",
+        "nameEn": "Test domain 15",
+        "state": "rest",
+        "sensitive": false,
+        "enabled": true,
+        "parent": null,
+        "sortOrder": 14
+      },
+      {
+        "id": "sleep",
+        "nameAr": "مجال تجريبي ٢",
+        "nameEn": "Test domain 2",
+        "state": "maintain",
+        "sensitive": false,
+        "enabled": true,
+        "parent": null,
+        "sortOrder": 1
+      },
+      {
+        "id": "womensHealth",
+        "nameAr": "مجال تجريبي ٥",
+        "nameEn": "Test domain 5",
+        "state": "rest",
+        "sensitive": true,
+        "enabled": false,
+        "parent": null,
+        "sortOrder": 4
+      }
+    ],
+    "seasons": [
+      {
+        "id": "s_1",
+        "titleAr": "موسم تجريبي",
+        "titleEn": "Test season",
+        "startDate": "2026-10-23",
+        "plannedEndDate": null,
+        "endedDate": null,
+        "states": {
+          "health": "grow",
+          "sleep": "maintain",
+          "food": "rest",
+          "care": "maintain",
+          "womensHealth": "rest",
+          "ielts": "grow",
+          "learning": "rest",
+          "career": "grow",
+          "driving": "rest",
+          "money": "maintain",
+          "home": "maintain",
+          "digital": "rest",
+          "admin": "rest",
+          "joy": "rest",
+          "people": "rest",
+          "faith": "rest",
+          "aquarium": "rest"
+        }
+      }
+    ],
+    "habits": [
+      {
+        "id": "h_t01",
+        "domain": "care",
+        "titleAr": "عادة تجريبية ١",
+        "titleEn": "Test habit 1",
+        "actionId": "FOOD-21",
+        "goal": "",
+        "cue": "إشارة تجريبية.",
+        "ifThen": "إذا ظهرت الإشارة التجريبية، فأبدأ العادة.",
+        "minimumText": "النسخة الصغرى التجريبية.",
+        "normalText": "النسخة العادية التجريبية.",
+        "bonusText": "النسخة الإضافية التجريبية.",
+        "joyPairing": "متعة تجريبية.",
+        "frictionDown": "تسهيل تجريبي.",
+        "frictionUp": "",
+        "reminder": {
+          "enabled": false,
+          "offsetMin": 0,
+          "textAr": null,
+          "textEn": null
+        },
+        "priority": "core",
+        "schedule": {
+          "weekdays": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "anchor": {
+            "type": "sleep",
+            "minute": null,
+            "prayer": null,
+            "slot": "anytime",
+            "offsetMin": 0
+          }
+        },
+        "durationMin": 3,
+        "minimumDurationMin": 2,
+        "minimumDurationEstimated": true,
+        "durationEstimated": false,
+        "status": "active",
+        "routineId": "r_night",
+        "alternationGroup": null,
+        "essential": false,
+        "shrunkToMinimum": false,
+        "comebackPending": false,
+        "sortOrder": 22,
+        "createdDate": "2026-10-02"
+      },
+      {
+        "id": "h_t02",
+        "domain": "care",
+        "titleAr": "عادة تجريبية ٢",
+        "titleEn": "Test habit 2",
+        "actionId": "FOOD-23",
+        "goal": "",
+        "cue": "إشارة تجريبية.",
+        "ifThen": "إذا ظهرت الإشارة التجريبية، فأبدأ العادة.",
+        "minimumText": "النسخة الصغرى التجريبية.",
+        "normalText": "النسخة العادية التجريبية.",
+        "bonusText": "النسخة الإضافية التجريبية.",
+        "joyPairing": "متعة تجريبية.",
+        "frictionDown": "تسهيل تجريبي.",
+        "frictionUp": "",
+        "reminder": {
+          "enabled": false,
+          "offsetMin": 0,
+          "textAr": null,
+          "textEn": null
+        },
+        "priority": "core",
+        "schedule": {
+          "weekdays": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "anchor": {
+            "type": "sleep",
+            "minute": null,
+            "prayer": null,
+            "slot": "anytime",
+            "offsetMin": 0
+          }
+        },
+        "durationMin": 4,
+        "minimumDurationMin": 2,
+        "minimumDurationEstimated": false,
+        "durationEstimated": false,
+        "status": "active",
+        "routineId": "r_night",
+        "alternationGroup": null,
+        "essential": true,
+        "shrunkToMinimum": false,
+        "comebackPending": false,
+        "sortOrder": 23,
+        "createdDate": "2026-10-02"
+      },
+      {
+        "id": "h_t03",
+        "domain": "career",
+        "titleAr": "عادة تجريبية ٣",
+        "titleEn": "Test habit 3",
+        "actionId": "GROW-22",
+        "goal": "",
+        "cue": "إشارة تجريبية.",
+        "ifThen": "إذا ظهرت الإشارة التجريبية، فأبدأ العادة.",
+        "minimumText": "النسخة الصغرى التجريبية.",
+        "normalText": "النسخة العادية التجريبية.",
+        "bonusText": "النسخة الإضافية التجريبية.",
+        "joyPairing": "متعة تجريبية.",
+        "frictionDown": "تسهيل تجريبي.",
+        "frictionUp": "عائق تجريبي.",
+        "reminder": {
+          "enabled": false,
+          "offsetMin": 0,
+          "textAr": null,
+          "textEn": null
+        },
+        "priority": "core",
+        "schedule": {
+          "weekdays": [
+            7,
+            1,
+            2,
+            3,
+            4
+          ],
+          "anchor": {
+            "type": "wake",
+            "minute": null,
+            "prayer": null,
+            "slot": "morning",
+            "offsetMin": 90
+          }
+        },
+        "durationMin": 90,
+        "minimumDurationMin": 15,
+        "minimumDurationEstimated": false,
+        "durationEstimated": true,
+        "status": "active",
+        "routineId": null,
+        "alternationGroup": null,
+        "essential": false,
+        "shrunkToMinimum": false,
+        "comebackPending": false,
+        "sortOrder": 2,
+        "createdDate": "2026-10-02"
+      },
+      {
+        "id": "h_t04",
+        "domain": "money",
+        "titleAr": "عادة تجريبية ٤",
+        "titleEn": "Test habit 4",
+        "actionId": "LIFE-05",
+        "goal": "",
+        "cue": "إشارة تجريبية.",
+        "ifThen": "إذا ظهرت الإشارة التجريبية، فأبدأ العادة.",
+        "minimumText": "النسخة الصغرى التجريبية.",
+        "normalText": "النسخة العادية التجريبية.",
+        "bonusText": "النسخة الإضافية التجريبية.",
+        "joyPairing": "متعة تجريبية.",
+        "frictionDown": "تسهيل تجريبي.",
+        "frictionUp": "عائق تجريبي.",
+        "reminder": {
+          "enabled": false,
+          "offsetMin": 0,
+          "textAr": null,
+          "textEn": null
+        },
+        "priority": "core",
+        "schedule": {
+          "weekdays": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "anchor": {
+            "type": "slot",
+            "minute": null,
+            "prayer": null,
+            "slot": "evening",
+            "offsetMin": 0
+          }
+        },
+        "durationMin": 15,
+        "minimumDurationMin": 2,
+        "minimumDurationEstimated": true,
+        "durationEstimated": true,
+        "status": "active",
+        "routineId": null,
+        "alternationGroup": null,
+        "essential": false,
+        "shrunkToMinimum": false,
+        "comebackPending": false,
+        "sortOrder": 6,
+        "createdDate": "2026-10-02"
+      },
+      {
+        "id": "h_t05",
+        "domain": "home",
+        "titleAr": "عادة تجريبية ٥",
+        "titleEn": "Test habit 5",
+        "actionId": "LIFE-13",
+        "goal": "",
+        "cue": "إشارة تجريبية.",
+        "ifThen": "إذا ظهرت الإشارة التجريبية، فأبدأ العادة.",
+        "minimumText": "النسخة الصغرى التجريبية.",
+        "normalText": "النسخة العادية التجريبية.",
+        "bonusText": "النسخة الإضافية التجريبية.",
+        "joyPairing": "متعة تجريبية.",
+        "frictionDown": "تسهيل تجريبي.",
+        "frictionUp": "عائق تجريبي.",
+        "reminder": {
+          "enabled": false,
+          "offsetMin": 0,
+          "textAr": null,
+          "textEn": null
+        },
+        "priority": "recommended",
+        "schedule": {
+          "weekdays": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "anchor": {
+            "type": "sleep",
+            "minute": null,
+            "prayer": null,
+            "slot": "evening",
+            "offsetMin": -90
+          }
+        },
+        "durationMin": 10,
+        "minimumDurationMin": 3,
+        "minimumDurationEstimated": true,
+        "durationEstimated": true,
+        "status": "active",
+        "routineId": null,
+        "alternationGroup": null,
+        "essential": false,
+        "shrunkToMinimum": false,
+        "comebackPending": false,
+        "sortOrder": 5,
+        "createdDate": "2026-10-02"
+      },
+      {
+        "id": "h_t06",
+        "domain": "health",
+        "titleAr": "عادة تجريبية ٦",
+        "titleEn": "Test habit 6",
+        "actionId": "BODY-05",
+        "goal": "",
+        "cue": "إشارة تجريبية.",
+        "ifThen": "إذا ظهرت الإشارة التجريبية، فأبدأ العادة.",
+        "minimumText": "النسخة الصغرى التجريبية.",
+        "normalText": "النسخة العادية التجريبية.",
+        "bonusText": "النسخة الإضافية التجريبية.",
+        "joyPairing": "متعة تجريبية.",
+        "frictionDown": "تسهيل تجريبي.",
+        "frictionUp": "عائق تجريبي.",
+        "reminder": {
+          "enabled": true,
+          "offsetMin": 0,
+          "textAr": null,
+          "textEn": null
+        },
+        "priority": "core",
+        "schedule": {
+          "weekdays": [
+            7,
+            2,
+            4
+          ],
+          "anchor": {
+            "type": "prayer",
+            "minute": null,
+            "prayer": "asr",
+            "slot": "afternoon",
+            "offsetMin": 15
+          }
+        },
+        "durationMin": 30,
+        "minimumDurationMin": 10,
+        "minimumDurationEstimated": true,
+        "durationEstimated": false,
+        "status": "active",
+        "routineId": null,
+        "alternationGroup": "movement",
+        "essential": false,
+        "shrunkToMinimum": false,
+        "comebackPending": false,
+        "sortOrder": 4,
+        "createdDate": "2026-10-02"
+      },
+      {
+        "id": "h_t07",
+        "domain": "care",
+        "titleAr": "عادة تجريبية ٧",
+        "titleEn": "Test habit 7",
+        "actionId": "FOOD-20",
+        "goal": "",
+        "cue": "إشارة تجريبية.",
+        "ifThen": "إذا ظهرت الإشارة التجريبية، فأبدأ العادة.",
+        "minimumText": "النسخة الصغرى التجريبية.",
+        "normalText": "النسخة العادية التجريبية.",
+        "bonusText": "النسخة الإضافية التجريبية.",
+        "joyPairing": "متعة تجريبية.",
+        "frictionDown": "تسهيل تجريبي.",
+        "frictionUp": "",
+        "reminder": {
+          "enabled": false,
+          "offsetMin": 0,
+          "textAr": null,
+          "textEn": null
+        },
+        "priority": "core",
+        "schedule": {
+          "weekdays": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "anchor": {
+            "type": "wake",
+            "minute": null,
+            "prayer": null,
+            "slot": "anytime",
+            "offsetMin": 0
+          }
+        },
+        "durationMin": 2,
+        "minimumDurationMin": 1,
+        "minimumDurationEstimated": true,
+        "durationEstimated": false,
+        "status": "active",
+        "routineId": "r_morning",
+        "alternationGroup": null,
+        "essential": false,
+        "shrunkToMinimum": false,
+        "comebackPending": false,
+        "sortOrder": 11,
+        "createdDate": "2026-10-02"
+      },
+      {
+        "id": "h_t08",
+        "domain": "ielts",
+        "titleAr": "عادة تجريبية ٨",
+        "titleEn": "Test habit 8",
+        "actionId": "GROW-07",
+        "goal": "",
+        "cue": "إشارة تجريبية.",
+        "ifThen": "إذا ظهرت الإشارة التجريبية، فأبدأ العادة.",
+        "minimumText": "النسخة الصغرى التجريبية.",
+        "normalText": "النسخة العادية التجريبية.",
+        "bonusText": "النسخة الإضافية التجريبية.",
+        "joyPairing": "متعة تجريبية.",
+        "frictionDown": "تسهيل تجريبي.",
+        "frictionUp": "عائق تجريبي.",
+        "reminder": {
+          "enabled": true,
+          "offsetMin": 0,
+          "textAr": null,
+          "textEn": null
+        },
+        "priority": "core",
+        "schedule": {
+          "weekdays": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "anchor": {
+            "type": "slot",
+            "minute": null,
+            "prayer": null,
+            "slot": "morning",
+            "offsetMin": 0
+          }
+        },
+        "durationMin": 45,
+        "minimumDurationMin": 5,
+        "minimumDurationEstimated": true,
+        "durationEstimated": true,
+        "status": "active",
+        "routineId": null,
+        "alternationGroup": null,
+        "essential": false,
+        "shrunkToMinimum": false,
+        "comebackPending": false,
+        "sortOrder": 1,
+        "createdDate": "2026-10-02"
+      },
+      {
+        "id": "h_t09",
+        "domain": "sleep",
+        "titleAr": "عادة تجريبية ٩",
+        "titleEn": "Test habit 9",
+        "actionId": "BODY-15",
+        "goal": "",
+        "cue": "إشارة تجريبية.",
+        "ifThen": "إذا ظهرت الإشارة التجريبية، فأبدأ العادة.",
+        "minimumText": "النسخة الصغرى التجريبية.",
+        "normalText": "النسخة العادية التجريبية.",
+        "bonusText": "النسخة الإضافية التجريبية.",
+        "joyPairing": "متعة تجريبية.",
+        "frictionDown": "تسهيل تجريبي.",
+        "frictionUp": "عائق تجريبي.",
+        "reminder": {
+          "enabled": false,
+          "offsetMin": 0,
+          "textAr": null,
+          "textEn": null
+        },
+        "priority": "core",
+        "schedule": {
+          "weekdays": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "anchor": {
+            "type": "wake",
+            "minute": null,
+            "prayer": null,
+            "slot": "anytime",
+            "offsetMin": 0
+          }
+        },
+        "durationMin": 1,
+        "minimumDurationMin": 1,
+        "minimumDurationEstimated": true,
+        "durationEstimated": true,
+        "status": "active",
+        "routineId": "r_morning",
+        "alternationGroup": null,
+        "essential": false,
+        "shrunkToMinimum": false,
+        "comebackPending": false,
+        "sortOrder": 10,
+        "createdDate": "2026-10-02"
+      },
+      {
+        "id": "h_t10",
+        "domain": "health",
+        "titleAr": "عادة تجريبية ١٠",
+        "titleEn": "Test habit 10",
+        "actionId": "BODY-02",
+        "goal": "",
+        "cue": "إشارة تجريبية.",
+        "ifThen": "إذا ظهرت الإشارة التجريبية، فأبدأ العادة.",
+        "minimumText": "النسخة الصغرى التجريبية.",
+        "normalText": "النسخة العادية التجريبية.",
+        "bonusText": "النسخة الإضافية التجريبية.",
+        "joyPairing": "متعة تجريبية.",
+        "frictionDown": "تسهيل تجريبي.",
+        "frictionUp": "عائق تجريبي.",
+        "reminder": {
+          "enabled": true,
+          "offsetMin": 0,
+          "textAr": null,
+          "textEn": null
+        },
+        "priority": "core",
+        "schedule": {
+          "weekdays": [
+            1,
+            3,
+            5,
+            6
+          ],
+          "anchor": {
+            "type": "prayer",
+            "minute": null,
+            "prayer": "maghrib",
+            "slot": "evening",
+            "offsetMin": 10
+          }
+        },
+        "durationMin": 30,
+        "minimumDurationMin": 10,
+        "minimumDurationEstimated": false,
+        "durationEstimated": false,
+        "status": "active",
+        "routineId": null,
+        "alternationGroup": "movement",
+        "essential": false,
+        "shrunkToMinimum": false,
+        "comebackPending": false,
+        "sortOrder": 3,
+        "createdDate": "2026-10-02"
+      },
+      {
+        "id": "h_t11",
+        "domain": "sleep",
+        "titleAr": "عادة تجريبية ١١",
+        "titleEn": "Test habit 11",
+        "actionId": "BODY-17",
+        "goal": "",
+        "cue": "إشارة تجريبية.",
+        "ifThen": "إذا ظهرت الإشارة التجريبية، فأبدأ العادة.",
+        "minimumText": "النسخة الصغرى التجريبية.",
+        "normalText": "النسخة العادية التجريبية.",
+        "bonusText": "النسخة الإضافية التجريبية.",
+        "joyPairing": "متعة تجريبية.",
+        "frictionDown": "تسهيل تجريبي.",
+        "frictionUp": "عائق تجريبي.",
+        "reminder": {
+          "enabled": false,
+          "offsetMin": 0,
+          "textAr": null,
+          "textEn": null
+        },
+        "priority": "core",
+        "schedule": {
+          "weekdays": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "anchor": {
+            "type": "sleep",
+            "minute": null,
+            "prayer": null,
+            "slot": "anytime",
+            "offsetMin": 0
+          }
+        },
+        "durationMin": 30,
+        "minimumDurationMin": 1,
+        "minimumDurationEstimated": true,
+        "durationEstimated": false,
+        "status": "active",
+        "routineId": "r_night",
+        "alternationGroup": null,
+        "essential": true,
+        "shrunkToMinimum": false,
+        "comebackPending": false,
+        "sortOrder": 21,
+        "createdDate": "2026-10-02"
+      }
+    ],
+    "routines": [
+      {
+        "id": "r_morning",
+        "titleAr": "روتين الصباح",
+        "titleEn": "Morning routine",
+        "section": "morningChain",
+        "anchor": {
+          "type": "wake",
+          "minute": null,
+          "prayer": null,
+          "slot": "anytime",
+          "offsetMin": 0
+        },
+        "steps": [
+          {
+            "id": "rs_t1",
+            "habitId": "h_t09",
+            "titleAr": "",
+            "titleEn": "",
+            "actionId": null,
+            "domain": "care",
+            "minimumText": "",
+            "normalText": "",
+            "durationMin": 5,
+            "minimumDurationMin": 2,
+            "essential": false
+          },
+          {
+            "id": "rs_t2",
+            "habitId": null,
+            "titleAr": "خطوة تجريبية ٢",
+            "titleEn": "Test step 2",
+            "actionId": "FOOD-21",
+            "domain": "care",
+            "minimumText": "",
+            "normalText": "نص تجريبي.",
+            "durationMin": 3,
+            "minimumDurationMin": 1,
+            "essential": false
+          },
+          {
+            "id": "rs_t3",
+            "habitId": "h_t07",
+            "titleAr": "",
+            "titleEn": "",
+            "actionId": null,
+            "domain": "care",
+            "minimumText": "",
+            "normalText": "",
+            "durationMin": 5,
+            "minimumDurationMin": 2,
+            "essential": false
+          },
+          {
+            "id": "rs_t4",
+            "habitId": null,
+            "titleAr": "خطوة تجريبية ٤",
+            "titleEn": "Test step 4",
+            "actionId": "FOOD-23",
+            "domain": "care",
+            "minimumText": "",
+            "normalText": "نص تجريبي.",
+            "durationMin": 4,
+            "minimumDurationMin": 2,
+            "essential": false
+          }
+        ],
+        "weekdays": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "active": true
+      },
+      {
+        "id": "r_night",
+        "titleAr": "روتين الليل",
+        "titleEn": "Night routine",
+        "section": "eveningChain",
+        "anchor": {
+          "type": "sleep",
+          "minute": null,
+          "prayer": null,
+          "slot": "anytime",
+          "offsetMin": -60
+        },
+        "steps": [
+          {
+            "id": "rs_t5",
+            "habitId": "h_t11",
+            "titleAr": "",
+            "titleEn": "",
+            "actionId": null,
+            "domain": "care",
+            "minimumText": "",
+            "normalText": "",
+            "durationMin": 5,
+            "minimumDurationMin": 2,
+            "essential": false
+          },
+          {
+            "id": "rs_t6",
+            "habitId": "h_t01",
+            "titleAr": "",
+            "titleEn": "",
+            "actionId": null,
+            "domain": "care",
+            "minimumText": "",
+            "normalText": "",
+            "durationMin": 5,
+            "minimumDurationMin": 2,
+            "essential": false
+          },
+          {
+            "id": "rs_t7",
+            "habitId": "h_t02",
+            "titleAr": "",
+            "titleEn": "",
+            "actionId": null,
+            "domain": "care",
+            "minimumText": "",
+            "normalText": "",
+            "durationMin": 5,
+            "minimumDurationMin": 2,
+            "essential": false
+          }
+        ],
+        "weekdays": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "active": true
+      }
+    ],
+    "weeklyTasks": [
+      {
+        "id": "wt_t1",
+        "domain": "admin",
+        "titleAr": "مهمة أسبوعية تجريبية ١",
+        "titleEn": "Test weekly task 1",
+        "actionId": "LIFE-16",
+        "minimumText": "نص أدنى تجريبي.",
+        "normalText": "نص عادي تجريبي.",
+        "durationMin": 45,
+        "minimumDurationMin": 10,
+        "preferredWeekdays": [
+          7
+        ],
+        "anchor": {
+          "type": "prayer",
+          "minute": null,
+          "prayer": "asr",
+          "slot": "afternoon",
+          "offsetMin": 60
+        },
+        "timesPerWeek": 1,
+        "pinned": true,
+        "isWeeklyReview": false,
+        "active": true,
+        "sortOrder": 3
+      },
+      {
+        "id": "wt_t2",
+        "domain": "ielts",
+        "titleAr": "مهمة أسبوعية تجريبية ٢",
+        "titleEn": "Test weekly task 2",
+        "actionId": "GROW-10",
+        "minimumText": "نص أدنى تجريبي.",
+        "normalText": "نص عادي تجريبي.",
+        "durationMin": 60,
+        "minimumDurationMin": 10,
+        "preferredWeekdays": [
+          1
+        ],
+        "anchor": {
+          "type": "prayer",
+          "minute": null,
+          "prayer": "dhuhr",
+          "slot": "midday",
+          "offsetMin": 15
+        },
+        "timesPerWeek": 1,
+        "pinned": false,
+        "isWeeklyReview": false,
+        "active": true,
+        "sortOrder": 1
+      },
+      {
+        "id": "wt_t3",
+        "domain": "food",
+        "titleAr": "مهمة أسبوعية تجريبية ٣",
+        "titleEn": "Test weekly task 3",
+        "actionId": "FOOD-08",
+        "minimumText": "نص أدنى تجريبي.",
+        "normalText": "نص عادي تجريبي.",
+        "durationMin": 15,
+        "minimumDurationMin": 5,
+        "preferredWeekdays": [
+          5
+        ],
+        "anchor": {
+          "type": "prayer",
+          "minute": null,
+          "prayer": "maghrib",
+          "slot": "evening",
+          "offsetMin": 15
+        },
+        "timesPerWeek": 1,
+        "pinned": true,
+        "isWeeklyReview": false,
+        "active": true,
+        "sortOrder": 2
+      },
+      {
+        "id": "wt_weekly_review",
+        "domain": "joy",
+        "titleAr": "المراجعة الأسبوعية",
+        "titleEn": "Weekly review",
+        "actionId": "JOY-09",
+        "minimumText": "نص أدنى تجريبي.",
+        "normalText": "نص عادي تجريبي.",
+        "durationMin": 25,
+        "minimumDurationMin": 5,
+        "preferredWeekdays": [
+          6
+        ],
+        "anchor": {
+          "type": "slot",
+          "minute": null,
+          "prayer": null,
+          "slot": "evening",
+          "offsetMin": 60
+        },
+        "timesPerWeek": 1,
+        "pinned": false,
+        "isWeeklyReview": true,
+        "active": true,
+        "sortOrder": 4
+      }
+    ],
+    "projects": [
+      {
+        "id": "qa_idea",
+        "domain": "learning",
+        "titleAr": "test",
+        "titleEn": "test",
+        "status": "idea",
+        "goalId": null,
+        "isCourse": false,
+        "steps": [],
+        "sortOrder": 0
+      },
+      {
+        "id": "qa_proj",
+        "domain": "career",
+        "titleAr": "test",
+        "titleEn": "test",
+        "status": "active",
+        "goalId": null,
+        "isCourse": false,
+        "steps": [
+          {
+            "id": "qa_ps1",
+            "titleAr": "test",
+            "titleEn": "test",
+            "actionId": null,
+            "done": true,
+            "doneDate": "2026-10-22",
+            "durationMin": 30
+          },
+          {
+            "id": "qa_ps2",
+            "titleAr": "test",
+            "titleEn": "test",
+            "actionId": null,
+            "done": true,
+            "doneDate": "2026-10-23",
+            "durationMin": 30
+          }
+        ],
+        "sortOrder": 0
+      }
+    ],
+    "goals": [
+      {
+        "id": "g_t1",
+        "domain": "career",
+        "titleAr": "هدف تجريبي ١",
+        "titleEn": "Test goal 1",
+        "targetNote": "",
+        "milestones": [
+          {
+            "id": "m_t1_1",
+            "titleAr": "مرحلة تجريبية ١.١",
+            "titleEn": "Test milestone 1.1",
+            "quarter": 1,
+            "done": false,
+            "doneDate": null,
+            "rewardJoyId": null
+          },
+          {
+            "id": "m_t1_2",
+            "titleAr": "مرحلة تجريبية ١.٢",
+            "titleEn": "Test milestone 1.2",
+            "quarter": 2,
+            "done": false,
+            "doneDate": null,
+            "rewardJoyId": null
+          },
+          {
+            "id": "m_t1_3",
+            "titleAr": "مرحلة تجريبية ١.٣",
+            "titleEn": "Test milestone 1.3",
+            "quarter": 3,
+            "done": false,
+            "doneDate": null,
+            "rewardJoyId": null
+          }
+        ],
+        "linkedHabitIds": [
+          "h_t03"
+        ],
+        "linkedProjectIds": [],
+        "sortOrder": 3
+      },
+      {
+        "id": "g_t2",
+        "domain": "driving",
+        "titleAr": "هدف تجريبي ٢",
+        "titleEn": "Test goal 2",
+        "targetNote": "",
+        "milestones": [
+          {
+            "id": "m_t2_1",
+            "titleAr": "مرحلة تجريبية ٢.١",
+            "titleEn": "Test milestone 2.1",
+            "quarter": 1,
+            "done": false,
+            "doneDate": null,
+            "rewardJoyId": null
+          },
+          {
+            "id": "m_t2_2",
+            "titleAr": "مرحلة تجريبية ٢.٢",
+            "titleEn": "Test milestone 2.2",
+            "quarter": 2,
+            "done": false,
+            "doneDate": null,
+            "rewardJoyId": null
+          },
+          {
+            "id": "m_t2_3",
+            "titleAr": "مرحلة تجريبية ٢.٣",
+            "titleEn": "Test milestone 2.3",
+            "quarter": 3,
+            "done": false,
+            "doneDate": null,
+            "rewardJoyId": null
+          }
+        ],
+        "linkedHabitIds": [],
+        "linkedProjectIds": [],
+        "sortOrder": 1
+      },
+      {
+        "id": "g_t3",
+        "domain": "health",
+        "titleAr": "هدف تجريبي ٣",
+        "titleEn": "Test goal 3",
+        "targetNote": "",
+        "milestones": [
+          {
+            "id": "m_t3_1",
+            "titleAr": "مرحلة تجريبية ٣.١",
+            "titleEn": "Test milestone 3.1",
+            "quarter": 1,
+            "done": false,
+            "doneDate": null,
+            "rewardJoyId": null
+          },
+          {
+            "id": "m_t3_2",
+            "titleAr": "مرحلة تجريبية ٣.٢",
+            "titleEn": "Test milestone 3.2",
+            "quarter": 2,
+            "done": false,
+            "doneDate": null,
+            "rewardJoyId": null
+          },
+          {
+            "id": "m_t3_3",
+            "titleAr": "مرحلة تجريبية ٣.٣",
+            "titleEn": "Test milestone 3.3",
+            "quarter": 4,
+            "done": false,
+            "doneDate": null,
+            "rewardJoyId": null
+          }
+        ],
+        "linkedHabitIds": [
+          "h_t10",
+          "h_t06",
+          "h_t09"
+        ],
+        "linkedProjectIds": [],
+        "sortOrder": 4
+      },
+      {
+        "id": "g_t4",
+        "domain": "ielts",
+        "titleAr": "هدف تجريبي ٤",
+        "titleEn": "Test goal 4",
+        "targetNote": "",
+        "milestones": [
+          {
+            "id": "m_t4_1",
+            "titleAr": "مرحلة تجريبية ٤.١",
+            "titleEn": "Test milestone 4.1",
+            "quarter": 1,
+            "done": false,
+            "doneDate": null,
+            "rewardJoyId": null
+          },
+          {
+            "id": "m_t4_2",
+            "titleAr": "مرحلة تجريبية ٤.٢",
+            "titleEn": "Test milestone 4.2",
+            "quarter": 2,
+            "done": false,
+            "doneDate": null,
+            "rewardJoyId": null
+          },
+          {
+            "id": "m_t4_3",
+            "titleAr": "مرحلة تجريبية ٤.٣",
+            "titleEn": "Test milestone 4.3",
+            "quarter": 3,
+            "done": false,
+            "doneDate": null,
+            "rewardJoyId": null
+          }
+        ],
+        "linkedHabitIds": [
+          "h_t08"
+        ],
+        "linkedProjectIds": [],
+        "sortOrder": 2
+      },
+      {
+        "id": "g_t5",
+        "domain": "money",
+        "titleAr": "هدف تجريبي ٥",
+        "titleEn": "Test goal 5",
+        "targetNote": "",
+        "milestones": [
+          {
+            "id": "m_t5_1",
+            "titleAr": "مرحلة تجريبية ٥.١",
+            "titleEn": "Test milestone 5.1",
+            "quarter": 1,
+            "done": false,
+            "doneDate": null,
+            "rewardJoyId": null
+          },
+          {
+            "id": "m_t5_2",
+            "titleAr": "مرحلة تجريبية ٥.٢",
+            "titleEn": "Test milestone 5.2",
+            "quarter": 3,
+            "done": false,
+            "doneDate": null,
+            "rewardJoyId": null
+          }
+        ],
+        "linkedHabitIds": [],
+        "linkedProjectIds": [],
+        "sortOrder": 5
+      }
+    ],
+    "logs": [
+      {
+        "id": "log_1792799342370000_0",
+        "itemId": "h_t08",
+        "kind": "habit",
+        "date": "2026-10-23",
+        "level": "bonus",
+        "durationMin": null,
+        "enjoyment": null,
+        "note": null,
+        "loggedAt": "2026-10-23T23:49:02.368",
+        "minuteOfDay": 1429
+      },
+      {
+        "id": "log_1792799343921000_2",
+        "itemId": "h_t10",
+        "kind": "habit",
+        "date": "2026-10-23",
+        "level": "normal",
+        "durationMin": null,
+        "enjoyment": null,
+        "note": null,
+        "loggedAt": "2026-10-23T23:49:03.921",
+        "minuteOfDay": 1429
+      },
+      {
+        "id": "log_1792799346740000_4",
+        "itemId": "qa_ps2",
+        "kind": "projectStep",
+        "date": "2026-10-23",
+        "level": "minimum",
+        "durationMin": null,
+        "enjoyment": null,
+        "note": null,
+        "loggedAt": "2026-10-23T23:49:06.740",
+        "minuteOfDay": 1429
+      },
+      {
+        "id": "log_1792799360540000_6",
+        "itemId": "joy_t3",
+        "kind": "joy",
+        "date": "2026-10-23",
+        "level": "normal",
+        "durationMin": null,
+        "enjoyment": null,
+        "note": null,
+        "loggedAt": "2026-10-23T23:49:20.540",
+        "minuteOfDay": 1429
+      },
+      {
+        "id": "log_1792799385404000_11",
+        "itemId": "wt_weekly_review",
+        "kind": "weeklyTask",
+        "date": "2026-10-23",
+        "level": "normal",
+        "durationMin": 1,
+        "enjoyment": null,
+        "note": null,
+        "loggedAt": "2026-10-23T23:49:45.346",
+        "minuteOfDay": 1429
+      },
+      {
+        "id": "qa_log_0",
+        "itemId": "h_t04",
+        "kind": "habit",
+        "date": "2026-10-09",
+        "level": "minimum",
+        "durationMin": 20,
+        "enjoyment": 5,
+        "note": null,
+        "loggedAt": "2026-10-09T00:00:00.000",
+        "minuteOfDay": 981
+      },
+      {
+        "id": "qa_log_1",
+        "itemId": "h_t05",
+        "kind": "habit",
+        "date": "2026-10-09",
+        "level": "minimum",
+        "durationMin": 20,
+        "enjoyment": 5,
+        "note": null,
+        "loggedAt": "2026-10-09T00:00:00.000",
+        "minuteOfDay": 1018
+      },
+      {
+        "id": "qa_log_10",
+        "itemId": "h_t04",
+        "kind": "habit",
+        "date": "2026-10-12",
+        "level": "normal",
+        "durationMin": 20,
+        "enjoyment": 5,
+        "note": null,
+        "loggedAt": "2026-10-12T00:00:00.000",
+        "minuteOfDay": 948
+      },
+      {
+        "id": "qa_log_11",
+        "itemId": "h_t05",
+        "kind": "habit",
+        "date": "2026-10-12",
+        "level": "normal",
+        "durationMin": 20,
+        "enjoyment": 5,
+        "note": null,
+        "loggedAt": "2026-10-12T00:00:00.000",
+        "minuteOfDay": 985
+      },
+      {
+        "id": "qa_log_12",
+        "itemId": "h_t08",
+        "kind": "habit",
+        "date": "2026-10-12",
+        "level": "normal",
+        "durationMin": 20,
+        "enjoyment": 5,
+        "note": null,
+        "loggedAt": "2026-10-12T00:00:00.000",
+        "minuteOfDay": 800
+      },
+      {
+        "id": "qa_log_13",
+        "itemId": "h_t10",
+        "kind": "habit",
+        "date": "2026-10-12",
+        "level": "normal",
+        "durationMin": 20,
+        "enjoyment": 5,
+        "note": null,
+        "loggedAt": "2026-10-12T00:00:00.000",
+        "minuteOfDay": 763
+      },
+      {
+        "id": "qa_log_14",
+        "itemId": "h_t03",
+        "kind": "habit",
+        "date": "2026-10-13",
+        "level": "minimum",
+        "durationMin": 15,
+        "enjoyment": 4,
+        "note": null,
+        "loggedAt": "2026-10-13T00:00:00.000",
+        "minuteOfDay": 789
+      },
+      {
+        "id": "qa_log_15",
+        "itemId": "h_t04",
+        "kind": "habit",
+        "date": "2026-10-13",
+        "level": "minimum",
+        "durationMin": 15,
+        "enjoyment": 4,
+        "note": null,
+        "loggedAt": "2026-10-13T00:00:00.000",
+        "minuteOfDay": 937
+      },
+      {
+        "id": "qa_log_16",
+        "itemId": "h_t05",
+        "kind": "habit",
+        "date": "2026-10-13",
+        "level": "minimum",
+        "durationMin": 15,
+        "enjoyment": 4,
+        "note": null,
+        "loggedAt": "2026-10-13T00:00:00.000",
+        "minuteOfDay": 974
+      },
+      {
+        "id": "qa_log_17",
+        "itemId": "h_t08",
+        "kind": "habit",
+        "date": "2026-10-13",
+        "level": "minimum",
+        "durationMin": 15,
+        "enjoyment": 4,
+        "note": null,
+        "loggedAt": "2026-10-13T00:00:00.000",
+        "minuteOfDay": 789
+      },
+      {
+        "id": "qa_log_18",
+        "itemId": "h_t05",
+        "kind": "habit",
+        "date": "2026-10-14",
+        "level": "normal",
+        "durationMin": 10,
+        "enjoyment": 3,
+        "note": null,
+        "loggedAt": "2026-10-14T00:00:00.000",
+        "minuteOfDay": 963
+      },
+      {
+        "id": "qa_log_19",
+        "itemId": "h_t10",
+        "kind": "habit",
+        "date": "2026-10-14",
+        "level": "normal",
+        "durationMin": 10,
+        "enjoyment": 3,
+        "note": null,
+        "loggedAt": "2026-10-14T00:00:00.000",
+        "minuteOfDay": 741
+      },
+      {
+        "id": "qa_log_2",
+        "itemId": "h_t08",
+        "kind": "habit",
+        "date": "2026-10-09",
+        "level": "minimum",
+        "durationMin": 20,
+        "enjoyment": 5,
+        "note": null,
+        "loggedAt": "2026-10-09T00:00:00.000",
+        "minuteOfDay": 833
+      },
+      {
+        "id": "qa_log_20",
+        "itemId": "h_t03",
+        "kind": "habit",
+        "date": "2026-10-15",
+        "level": "minimum",
+        "durationMin": 20,
+        "enjoyment": 5,
+        "note": null,
+        "loggedAt": "2026-10-15T00:00:00.000",
+        "minuteOfDay": 767
+      },
+      {
+        "id": "qa_log_21",
+        "itemId": "h_t04",
+        "kind": "habit",
+        "date": "2026-10-15",
+        "level": "minimum",
+        "durationMin": 20,
+        "enjoyment": 5,
+        "note": null,
+        "loggedAt": "2026-10-15T00:00:00.000",
+        "minuteOfDay": 915
+      },
+      {
+        "id": "qa_log_22",
+        "itemId": "h_t06",
+        "kind": "habit",
+        "date": "2026-10-15",
+        "level": "minimum",
+        "durationMin": 20,
+        "enjoyment": 5,
+        "note": null,
+        "loggedAt": "2026-10-15T00:00:00.000",
+        "minuteOfDay": 878
+      },
+      {
+        "id": "qa_log_23",
+        "itemId": "h_t08",
+        "kind": "habit",
+        "date": "2026-10-15",
+        "level": "minimum",
+        "durationMin": 20,
+        "enjoyment": 5,
+        "note": null,
+        "loggedAt": "2026-10-15T00:00:00.000",
+        "minuteOfDay": 767
+      },
+      {
+        "id": "qa_log_24",
+        "itemId": "h_t04",
+        "kind": "habit",
+        "date": "2026-10-16",
+        "level": "normal",
+        "durationMin": 15,
+        "enjoyment": 4,
+        "note": null,
+        "loggedAt": "2026-10-16T00:00:00.000",
+        "minuteOfDay": 904
+      },
+      {
+        "id": "qa_log_25",
+        "itemId": "h_t05",
+        "kind": "habit",
+        "date": "2026-10-16",
+        "level": "normal",
+        "durationMin": 15,
+        "enjoyment": 4,
+        "note": null,
+        "loggedAt": "2026-10-16T00:00:00.000",
+        "minuteOfDay": 941
+      },
+      {
+        "id": "qa_log_26",
+        "itemId": "h_t08",
+        "kind": "habit",
+        "date": "2026-10-16",
+        "level": "normal",
+        "durationMin": 15,
+        "enjoyment": 4,
+        "note": null,
+        "loggedAt": "2026-10-16T00:00:00.000",
+        "minuteOfDay": 756
+      },
+      {
+        "id": "qa_log_27",
+        "itemId": "h_t10",
+        "kind": "habit",
+        "date": "2026-10-16",
+        "level": "normal",
+        "durationMin": 15,
+        "enjoyment": 4,
+        "note": null,
+        "loggedAt": "2026-10-16T00:00:00.000",
+        "minuteOfDay": 719
+      },
+      {
+        "id": "qa_log_28",
+        "itemId": "h_t04",
+        "kind": "habit",
+        "date": "2026-10-17",
+        "level": "minimum",
+        "durationMin": 10,
+        "enjoyment": 3,
+        "note": null,
+        "loggedAt": "2026-10-17T00:00:00.000",
+        "minuteOfDay": 893
+      },
+      {
+        "id": "qa_log_29",
+        "itemId": "h_t05",
+        "kind": "habit",
+        "date": "2026-10-17",
+        "level": "minimum",
+        "durationMin": 10,
+        "enjoyment": 3,
+        "note": null,
+        "loggedAt": "2026-10-17T00:00:00.000",
+        "minuteOfDay": 930
+      },
+      {
+        "id": "qa_log_3",
+        "itemId": "h_t05",
+        "kind": "habit",
+        "date": "2026-10-10",
+        "level": "normal",
+        "durationMin": 15,
+        "enjoyment": 4,
+        "note": null,
+        "loggedAt": "2026-10-10T00:00:00.000",
+        "minuteOfDay": 1007
+      },
+      {
+        "id": "qa_log_30",
+        "itemId": "h_t08",
+        "kind": "habit",
+        "date": "2026-10-17",
+        "level": "minimum",
+        "durationMin": 10,
+        "enjoyment": 3,
+        "note": null,
+        "loggedAt": "2026-10-17T00:00:00.000",
+        "minuteOfDay": 745
+      },
+      {
+        "id": "qa_log_31",
+        "itemId": "h_t05",
+        "kind": "habit",
+        "date": "2026-10-18",
+        "level": "normal",
+        "durationMin": 20,
+        "enjoyment": 5,
+        "note": null,
+        "loggedAt": "2026-10-18T00:00:00.000",
+        "minuteOfDay": 919
+      },
+      {
+        "id": "qa_log_32",
+        "itemId": "h_t06",
+        "kind": "habit",
+        "date": "2026-10-18",
+        "level": "normal",
+        "durationMin": 20,
+        "enjoyment": 5,
+        "note": null,
+        "loggedAt": "2026-10-18T00:00:00.000",
+        "minuteOfDay": 845
+      },
+      {
+        "id": "qa_log_33",
+        "itemId": "h_t03",
+        "kind": "habit",
+        "date": "2026-10-19",
+        "level": "minimum",
+        "durationMin": 15,
+        "enjoyment": 4,
+        "note": null,
+        "loggedAt": "2026-10-19T00:00:00.000",
+        "minuteOfDay": 723
+      },
+      {
+        "id": "qa_log_34",
+        "itemId": "h_t04",
+        "kind": "habit",
+        "date": "2026-10-19",
+        "level": "minimum",
+        "durationMin": 15,
+        "enjoyment": 4,
+        "note": null,
+        "loggedAt": "2026-10-19T00:00:00.000",
+        "minuteOfDay": 871
+      },
+      {
+        "id": "qa_log_35",
+        "itemId": "h_t08",
+        "kind": "habit",
+        "date": "2026-10-19",
+        "level": "minimum",
+        "durationMin": 15,
+        "enjoyment": 4,
+        "note": null,
+        "loggedAt": "2026-10-19T00:00:00.000",
+        "minuteOfDay": 723
+      },
+      {
+        "id": "qa_log_36",
+        "itemId": "h_t10",
+        "kind": "habit",
+        "date": "2026-10-19",
+        "level": "minimum",
+        "durationMin": 15,
+        "enjoyment": 4,
+        "note": null,
+        "loggedAt": "2026-10-19T00:00:00.000",
+        "minuteOfDay": 686
+      },
+      {
+        "id": "qa_log_37",
+        "itemId": "h_t03",
+        "kind": "habit",
+        "date": "2026-10-20",
+        "level": "normal",
+        "durationMin": 10,
+        "enjoyment": 3,
+        "note": null,
+        "loggedAt": "2026-10-20T00:00:00.000",
+        "minuteOfDay": 712
+      },
+      {
+        "id": "qa_log_38",
+        "itemId": "h_t04",
+        "kind": "habit",
+        "date": "2026-10-20",
+        "level": "normal",
+        "durationMin": 10,
+        "enjoyment": 3,
+        "note": null,
+        "loggedAt": "2026-10-20T00:00:00.000",
+        "minuteOfDay": 860
+      },
+      {
+        "id": "qa_log_39",
+        "itemId": "h_t05",
+        "kind": "habit",
+        "date": "2026-10-20",
+        "level": "normal",
+        "durationMin": 10,
+        "enjoyment": 3,
+        "note": null,
+        "loggedAt": "2026-10-20T00:00:00.000",
+        "minuteOfDay": 897
+      },
+      {
+        "id": "qa_log_4",
+        "itemId": "h_t10",
+        "kind": "habit",
+        "date": "2026-10-10",
+        "level": "normal",
+        "durationMin": 15,
+        "enjoyment": 4,
+        "note": null,
+        "loggedAt": "2026-10-10T00:00:00.000",
+        "minuteOfDay": 785
+      },
+      {
+        "id": "qa_log_40",
+        "itemId": "h_t06",
+        "kind": "habit",
+        "date": "2026-10-20",
+        "level": "normal",
+        "durationMin": 10,
+        "enjoyment": 3,
+        "note": null,
+        "loggedAt": "2026-10-20T00:00:00.000",
+        "minuteOfDay": 823
+      },
+      {
+        "id": "qa_log_41",
+        "itemId": "h_t08",
+        "kind": "habit",
+        "date": "2026-10-20",
+        "level": "normal",
+        "durationMin": 10,
+        "enjoyment": 3,
+        "note": null,
+        "loggedAt": "2026-10-20T00:00:00.000",
+        "minuteOfDay": 712
+      },
+      {
+        "id": "qa_log_42",
+        "itemId": "h_t03",
+        "kind": "habit",
+        "date": "2026-10-21",
+        "level": "minimum",
+        "durationMin": 20,
+        "enjoyment": 5,
+        "note": null,
+        "loggedAt": "2026-10-21T00:00:00.000",
+        "minuteOfDay": 701
+      },
+      {
+        "id": "qa_log_43",
+        "itemId": "h_t04",
+        "kind": "habit",
+        "date": "2026-10-21",
+        "level": "minimum",
+        "durationMin": 20,
+        "enjoyment": 5,
+        "note": null,
+        "loggedAt": "2026-10-21T00:00:00.000",
+        "minuteOfDay": 849
+      },
+      {
+        "id": "qa_log_44",
+        "itemId": "h_t05",
+        "kind": "habit",
+        "date": "2026-10-21",
+        "level": "minimum",
+        "durationMin": 20,
+        "enjoyment": 5,
+        "note": null,
+        "loggedAt": "2026-10-21T00:00:00.000",
+        "minuteOfDay": 886
+      },
+      {
+        "id": "qa_log_45",
+        "itemId": "h_t08",
+        "kind": "habit",
+        "date": "2026-10-21",
+        "level": "minimum",
+        "durationMin": 20,
+        "enjoyment": 5,
+        "note": null,
+        "loggedAt": "2026-10-21T00:00:00.000",
+        "minuteOfDay": 701
+      },
+      {
+        "id": "qa_log_46",
+        "itemId": "h_t05",
+        "kind": "habit",
+        "date": "2026-10-22",
+        "level": "normal",
+        "durationMin": 15,
+        "enjoyment": 4,
+        "note": null,
+        "loggedAt": "2026-10-22T00:00:00.000",
+        "minuteOfDay": 875
+      },
+      {
+        "id": "qa_log_47",
+        "itemId": "h_t06",
+        "kind": "habit",
+        "date": "2026-10-22",
+        "level": "normal",
+        "durationMin": 15,
+        "enjoyment": 4,
+        "note": null,
+        "loggedAt": "2026-10-22T00:00:00.000",
+        "minuteOfDay": 801
+      },
+      {
+        "id": "qa_log_5",
+        "itemId": "h_t03",
+        "kind": "habit",
+        "date": "2026-10-11",
+        "level": "minimum",
+        "durationMin": 10,
+        "enjoyment": 3,
+        "note": null,
+        "loggedAt": "2026-10-11T00:00:00.000",
+        "minuteOfDay": 811
+      },
+      {
+        "id": "qa_log_6",
+        "itemId": "h_t04",
+        "kind": "habit",
+        "date": "2026-10-11",
+        "level": "minimum",
+        "durationMin": 10,
+        "enjoyment": 3,
+        "note": null,
+        "loggedAt": "2026-10-11T00:00:00.000",
+        "minuteOfDay": 959
+      },
+      {
+        "id": "qa_log_7",
+        "itemId": "h_t06",
+        "kind": "habit",
+        "date": "2026-10-11",
+        "level": "minimum",
+        "durationMin": 10,
+        "enjoyment": 3,
+        "note": null,
+        "loggedAt": "2026-10-11T00:00:00.000",
+        "minuteOfDay": 922
+      },
+      {
+        "id": "qa_log_8",
+        "itemId": "h_t08",
+        "kind": "habit",
+        "date": "2026-10-11",
+        "level": "minimum",
+        "durationMin": 10,
+        "enjoyment": 3,
+        "note": null,
+        "loggedAt": "2026-10-11T00:00:00.000",
+        "minuteOfDay": 811
+      },
+      {
+        "id": "qa_log_9",
+        "itemId": "h_t03",
+        "kind": "habit",
+        "date": "2026-10-12",
+        "level": "normal",
+        "durationMin": 20,
+        "enjoyment": 5,
+        "note": null,
+        "loggedAt": "2026-10-12T00:00:00.000",
+        "minuteOfDay": 800
+      }
+    ],
+    "dayPlans": [],
+    "energyChecks": [
+      {
+        "date": "2026-10-23",
+        "mode": "green",
+        "at": "2026-10-23T23:48:53.445"
+      }
+    ],
+    "strengthChecks": [
+      {
+        "id": "srbai_1792799378157000_9",
+        "habitId": "h_t08",
+        "date": "2026-10-23",
+        "items": [
+          4,
+          4,
+          4,
+          4
+        ]
+      }
+    ],
+    "joyItems": [
+      {
+        "id": "joy_t1",
+        "kind": "earned",
+        "titleAr": "مكافأة تجريبية ١",
+        "titleEn": "Test reward 1",
+        "size": "quick",
+        "price": 60,
+        "bundledHabitId": null,
+        "costsMoney": true,
+        "keepFree": false,
+        "active": true
+      },
+      {
+        "id": "joy_t2",
+        "kind": "earned",
+        "titleAr": "مكافأة تجريبية ٢",
+        "titleEn": "Test reward 2",
+        "size": "medium",
+        "price": 120,
+        "bundledHabitId": null,
+        "costsMoney": true,
+        "keepFree": false,
+        "active": true
+      },
+      {
+        "id": "joy_t3",
+        "kind": "free",
+        "titleAr": "مكافأة تجريبية ٣",
+        "titleEn": "Test reward 3",
+        "size": "medium",
+        "price": null,
+        "bundledHabitId": null,
+        "costsMoney": false,
+        "keepFree": true,
+        "active": true
+      },
+      {
+        "id": "joy_t4",
+        "kind": "earned",
+        "titleAr": "مكافأة تجريبية ٤",
+        "titleEn": "Test reward 4",
+        "size": "big",
+        "price": 200,
+        "bundledHabitId": null,
+        "costsMoney": true,
+        "keepFree": false,
+        "active": true
+      },
+      {
+        "id": "joy_t5",
+        "kind": "bundled",
+        "titleAr": "مكافأة تجريبية ٥",
+        "titleEn": "Test reward 5",
+        "size": "quick",
+        "price": null,
+        "bundledHabitId": "h_t10",
+        "costsMoney": false,
+        "keepFree": false,
+        "active": true
+      },
+      {
+        "id": "joy_t6",
+        "kind": "bundled",
+        "titleAr": "مكافأة تجريبية ٦",
+        "titleEn": "Test reward 6",
+        "size": "medium",
+        "price": null,
+        "bundledHabitId": "h_t06",
+        "costsMoney": false,
+        "keepFree": false,
+        "active": true
+      }
+    ],
+    "sparkTxns": [
+      {
+        "id": "qa_spk_cb",
+        "date": "2026-10-21",
+        "amount": 4,
+        "reason": "comeback",
+        "refId": "qa_log_0",
+        "at": "2026-10-23T23:48:53.445"
+      },
+      {
+        "id": "qa_spk_qa_log_0",
+        "date": "2026-10-09",
+        "amount": 2,
+        "reason": "completion",
+        "refId": "qa_log_0",
+        "at": "2026-10-09T00:00:00.000"
+      },
+      {
+        "id": "qa_spk_qa_log_1",
+        "date": "2026-10-09",
+        "amount": 2,
+        "reason": "completion",
+        "refId": "qa_log_1",
+        "at": "2026-10-09T00:00:00.000"
+      },
+      {
+        "id": "qa_spk_qa_log_10",
+        "date": "2026-10-12",
+        "amount": 2,
+        "reason": "completion",
+        "refId": "qa_log_10",
+        "at": "2026-10-12T00:00:00.000"
+      },
+      {
+        "id": "qa_spk_qa_log_11",
+        "date": "2026-10-12",
+        "amount": 2,
+        "reason": "completion",
+        "refId": "qa_log_11",
+        "at": "2026-10-12T00:00:00.000"
+      },
+      {
+        "id": "qa_spk_qa_log_12",
+        "date": "2026-10-12",
+        "amount": 2,
+        "reason": "completion",
+        "refId": "qa_log_12",
+        "at": "2026-10-12T00:00:00.000"
+      },
+      {
+        "id": "qa_spk_qa_log_13",
+        "date": "2026-10-12",
+        "amount": 2,
+        "reason": "completion",
+        "refId": "qa_log_13",
+        "at": "2026-10-12T00:00:00.000"
+      },
+      {
+        "id": "qa_spk_qa_log_14",
+        "date": "2026-10-13",
+        "amount": 2,
+        "reason": "completion",
+        "refId": "qa_log_14",
+        "at": "2026-10-13T00:00:00.000"
+      },
+      {
+        "id": "qa_spk_qa_log_15",
+        "date": "2026-10-13",
+        "amount": 2,
+        "reason": "completion",
+        "refId": "qa_log_15",
+        "at": "2026-10-13T00:00:00.000"
+      },
+      {
+        "id": "qa_spk_qa_log_16",
+        "date": "2026-10-13",
+        "amount": 2,
+        "reason": "completion",
+        "refId": "qa_log_16",
+        "at": "2026-10-13T00:00:00.000"
+      },
+      {
+        "id": "qa_spk_qa_log_17",
+        "date": "2026-10-13",
+        "amount": 2,
+        "reason": "completion",
+        "refId": "qa_log_17",
+        "at": "2026-10-13T00:00:00.000"
+      },
+      {
+        "id": "qa_spk_qa_log_18",
+        "date": "2026-10-14",
+        "amount": 2,
+        "reason": "completion",
+        "refId": "qa_log_18",
+        "at": "2026-10-14T00:00:00.000"
+      },
+      {
+        "id": "qa_spk_qa_log_19",
+        "date": "2026-10-14",
+        "amount": 2,
+        "reason": "completion",
+        "refId": "qa_log_19",
+        "at": "2026-10-14T00:00:00.000"
+      },
+      {
+        "id": "qa_spk_qa_log_2",
+        "date": "2026-10-09",
+        "amount": 2,
+        "reason": "completion",
+        "refId": "qa_log_2",
+        "at": "2026-10-09T00:00:00.000"
+      },
+      {
+        "id": "qa_spk_qa_log_20",
+        "date": "2026-10-15",
+        "amount": 2,
+        "reason": "completion",
+        "refId": "qa_log_20",
+        "at": "2026-10-15T00:00:00.000"
+      },
+      {
+        "id": "qa_spk_qa_log_21",
+        "date": "2026-10-15",
+        "amount": 2,
+        "reason": "completion",
+        "refId": "qa_log_21",
+        "at": "2026-10-15T00:00:00.000"
+      },
+      {
+        "id": "qa_spk_qa_log_22",
+        "date": "2026-10-15",
+        "amount": 2,
+        "reason": "completion",
+        "refId": "qa_log_22",
+        "at": "2026-10-15T00:00:00.000"
+      },
+      {
+        "id": "qa_spk_qa_log_23",
+        "date": "2026-10-15",
+        "amount": 2,
+        "reason": "completion",
+        "refId": "qa_log_23",
+        "at": "2026-10-15T00:00:00.000"
+      },
+      {
+        "id": "qa_spk_qa_log_24",
+        "date": "2026-10-16",
+        "amount": 2,
+        "reason": "completion",
+        "refId": "qa_log_24",
+        "at": "2026-10-16T00:00:00.000"
+      },
+      {
+        "id": "qa_spk_qa_log_25",
+        "date": "2026-10-16",
+        "amount": 2,
+        "reason": "completion",
+        "refId": "qa_log_25",
+        "at": "2026-10-16T00:00:00.000"
+      },
+      {
+        "id": "qa_spk_qa_log_26",
+        "date": "2026-10-16",
+        "amount": 2,
+        "reason": "completion",
+        "refId": "qa_log_26",
+        "at": "2026-10-16T00:00:00.000"
+      },
+      {
+        "id": "qa_spk_qa_log_27",
+        "date": "2026-10-16",
+        "amount": 2,
+        "reason": "completion",
+        "refId": "qa_log_27",
+        "at": "2026-10-16T00:00:00.000"
+      },
+      {
+        "id": "qa_spk_qa_log_28",
+        "date": "2026-10-17",
+        "amount": 2,
+        "reason": "completion",
+        "refId": "qa_log_28",
+        "at": "2026-10-17T00:00:00.000"
+      },
+      {
+        "id": "qa_spk_qa_log_29",
+        "date": "2026-10-17",
+        "amount": 2,
+        "reason": "completion",
+        "refId": "qa_log_29",
+        "at": "2026-10-17T00:00:00.000"
+      },
+      {
+        "id": "qa_spk_qa_log_3",
+        "date": "2026-10-10",
+        "amount": 2,
+        "reason": "completion",
+        "refId": "qa_log_3",
+        "at": "2026-10-10T00:00:00.000"
+      },
+      {
+        "id": "qa_spk_qa_log_30",
+        "date": "2026-10-17",
+        "amount": 2,
+        "reason": "completion",
+        "refId": "qa_log_30",
+        "at": "2026-10-17T00:00:00.000"
+      },
+      {
+        "id": "qa_spk_qa_log_31",
+        "date": "2026-10-18",
+        "amount": 2,
+        "reason": "completion",
+        "refId": "qa_log_31",
+        "at": "2026-10-18T00:00:00.000"
+      },
+      {
+        "id": "qa_spk_qa_log_32",
+        "date": "2026-10-18",
+        "amount": 2,
+        "reason": "completion",
+        "refId": "qa_log_32",
+        "at": "2026-10-18T00:00:00.000"
+      },
+      {
+        "id": "qa_spk_qa_log_33",
+        "date": "2026-10-19",
+        "amount": 2,
+        "reason": "completion",
+        "refId": "qa_log_33",
+        "at": "2026-10-19T00:00:00.000"
+      },
+      {
+        "id": "qa_spk_qa_log_34",
+        "date": "2026-10-19",
+        "amount": 2,
+        "reason": "completion",
+        "refId": "qa_log_34",
+        "at": "2026-10-19T00:00:00.000"
+      },
+      {
+        "id": "qa_spk_qa_log_35",
+        "date": "2026-10-19",
+        "amount": 2,
+        "reason": "completion",
+        "refId": "qa_log_35",
+        "at": "2026-10-19T00:00:00.000"
+      },
+      {
+        "id": "qa_spk_qa_log_36",
+        "date": "2026-10-19",
+        "amount": 2,
+        "reason": "completion",
+        "refId": "qa_log_36",
+        "at": "2026-10-19T00:00:00.000"
+      },
+      {
+        "id": "qa_spk_qa_log_37",
+        "date": "2026-10-20",
+        "amount": 2,
+        "reason": "completion",
+        "refId": "qa_log_37",
+        "at": "2026-10-20T00:00:00.000"
+      },
+      {
+        "id": "qa_spk_qa_log_38",
+        "date": "2026-10-20",
+        "amount": 2,
+        "reason": "completion",
+        "refId": "qa_log_38",
+        "at": "2026-10-20T00:00:00.000"
+      },
+      {
+        "id": "qa_spk_qa_log_39",
+        "date": "2026-10-20",
+        "amount": 2,
+        "reason": "completion",
+        "refId": "qa_log_39",
+        "at": "2026-10-20T00:00:00.000"
+      },
+      {
+        "id": "qa_spk_qa_log_4",
+        "date": "2026-10-10",
+        "amount": 2,
+        "reason": "completion",
+        "refId": "qa_log_4",
+        "at": "2026-10-10T00:00:00.000"
+      },
+      {
+        "id": "qa_spk_qa_log_40",
+        "date": "2026-10-20",
+        "amount": 2,
+        "reason": "completion",
+        "refId": "qa_log_40",
+        "at": "2026-10-20T00:00:00.000"
+      },
+      {
+        "id": "qa_spk_qa_log_41",
+        "date": "2026-10-20",
+        "amount": 2,
+        "reason": "completion",
+        "refId": "qa_log_41",
+        "at": "2026-10-20T00:00:00.000"
+      },
+      {
+        "id": "qa_spk_qa_log_42",
+        "date": "2026-10-21",
+        "amount": 2,
+        "reason": "completion",
+        "refId": "qa_log_42",
+        "at": "2026-10-21T00:00:00.000"
+      },
+      {
+        "id": "qa_spk_qa_log_43",
+        "date": "2026-10-21",
+        "amount": 2,
+        "reason": "completion",
+        "refId": "qa_log_43",
+        "at": "2026-10-21T00:00:00.000"
+      },
+      {
+        "id": "qa_spk_qa_log_44",
+        "date": "2026-10-21",
+        "amount": 2,
+        "reason": "completion",
+        "refId": "qa_log_44",
+        "at": "2026-10-21T00:00:00.000"
+      },
+      {
+        "id": "qa_spk_qa_log_45",
+        "date": "2026-10-21",
+        "amount": 2,
+        "reason": "completion",
+        "refId": "qa_log_45",
+        "at": "2026-10-21T00:00:00.000"
+      },
+      {
+        "id": "qa_spk_qa_log_46",
+        "date": "2026-10-22",
+        "amount": 2,
+        "reason": "completion",
+        "refId": "qa_log_46",
+        "at": "2026-10-22T00:00:00.000"
+      },
+      {
+        "id": "qa_spk_qa_log_47",
+        "date": "2026-10-22",
+        "amount": 2,
+        "reason": "completion",
+        "refId": "qa_log_47",
+        "at": "2026-10-22T00:00:00.000"
+      },
+      {
+        "id": "qa_spk_qa_log_5",
+        "date": "2026-10-11",
+        "amount": 2,
+        "reason": "completion",
+        "refId": "qa_log_5",
+        "at": "2026-10-11T00:00:00.000"
+      },
+      {
+        "id": "qa_spk_qa_log_6",
+        "date": "2026-10-11",
+        "amount": 2,
+        "reason": "completion",
+        "refId": "qa_log_6",
+        "at": "2026-10-11T00:00:00.000"
+      },
+      {
+        "id": "qa_spk_qa_log_7",
+        "date": "2026-10-11",
+        "amount": 2,
+        "reason": "completion",
+        "refId": "qa_log_7",
+        "at": "2026-10-11T00:00:00.000"
+      },
+      {
+        "id": "qa_spk_qa_log_8",
+        "date": "2026-10-11",
+        "amount": 2,
+        "reason": "completion",
+        "refId": "qa_log_8",
+        "at": "2026-10-11T00:00:00.000"
+      },
+      {
+        "id": "qa_spk_qa_log_9",
+        "date": "2026-10-12",
+        "amount": 2,
+        "reason": "completion",
+        "refId": "qa_log_9",
+        "at": "2026-10-12T00:00:00.000"
+      },
+      {
+        "id": "qa_spk_wr",
+        "date": "2026-10-21",
+        "amount": 10,
+        "reason": "weeklyReview",
+        "refId": "qa_wr",
+        "at": "2026-10-23T23:48:53.445"
+      },
+      {
+        "id": "spk_1792799342370000_1",
+        "date": "2026-10-23",
+        "amount": 6,
+        "reason": "comeback",
+        "refId": "log_1792799342370000_0",
+        "at": "2026-10-23T23:49:02.368"
+      },
+      {
+        "id": "spk_1792799343921000_3",
+        "date": "2026-10-23",
+        "amount": 4,
+        "reason": "comeback",
+        "refId": "log_1792799343921000_2",
+        "at": "2026-10-23T23:49:03.921"
+      },
+      {
+        "id": "spk_1792799346740000_5",
+        "date": "2026-10-23",
+        "amount": 1,
+        "reason": "completion",
+        "refId": "log_1792799346740000_4",
+        "at": "2026-10-23T23:49:06.740"
+      },
+      {
+        "id": "spk_1792799363055000_8",
+        "date": "2026-10-23",
+        "amount": -60,
+        "reason": "redeem",
+        "refId": "joy_t1",
+        "at": "2026-10-23T23:49:23.055"
+      },
+      {
+        "id": "spk_1792799385404000_12",
+        "date": "2026-10-23",
+        "amount": 5,
+        "reason": "weeklyReview",
+        "refId": "log_1792799385404000_11",
+        "at": "2026-10-23T23:49:45.346"
+      }
+    ],
+    "experiments": [
+      {
+        "id": "exp_1792799385313000_10",
+        "habitId": "h_t10",
+        "titleAr": "تجربة تجريبية",
+        "titleEn": "Test experiment",
+        "variable": "bundle:joy_t5",
+        "status": "active",
+        "startDate": "2026-10-23",
+        "endDate": null,
+        "lengthDays": 7
+      }
+    ],
+    "vocabCards": [
+      {
+        "id": "qa_vc_0",
+        "front": "test",
+        "back": "test",
+        "example": "",
+        "ease": 2.5,
+        "intervalDays": 1,
+        "repetitions": 1,
+        "due": "2026-10-23",
+        "lapses": 0,
+        "lastReviewed": "2026-10-22"
+      },
+      {
+        "id": "qa_vc_1",
+        "front": "test",
+        "back": "test",
+        "example": "",
+        "ease": 2.5,
+        "intervalDays": 1,
+        "repetitions": 1,
+        "due": "2026-10-23",
+        "lapses": 0,
+        "lastReviewed": "2026-10-22"
+      },
+      {
+        "id": "qa_vc_2",
+        "front": "test",
+        "back": "test",
+        "example": "",
+        "ease": 2.5,
+        "intervalDays": 1,
+        "repetitions": 1,
+        "due": "2026-10-23",
+        "lapses": 0,
+        "lastReviewed": "2026-10-22"
+      },
+      {
+        "id": "qa_vc_3",
+        "front": "test",
+        "back": "test",
+        "example": "",
+        "ease": 2.5,
+        "intervalDays": 1,
+        "repetitions": 1,
+        "due": "2026-10-23",
+        "lapses": 0,
+        "lastReviewed": "2026-10-22"
+      },
+      {
+        "id": "qa_vc_4",
+        "front": "test",
+        "back": "test",
+        "example": "",
+        "ease": 2.5,
+        "intervalDays": 1,
+        "repetitions": 0,
+        "due": "2026-10-23",
+        "lapses": 0,
+        "lastReviewed": null
+      },
+      {
+        "id": "qa_vc_5",
+        "front": "test",
+        "back": "test",
+        "example": "",
+        "ease": 2.5,
+        "intervalDays": 1,
+        "repetitions": 0,
+        "due": "2026-10-23",
+        "lapses": 0,
+        "lastReviewed": null
+      }
+    ],
+    "mockTests": [
+      {
+        "id": "qa_mock",
+        "date": "2026-10-15",
+        "reading": 6.5,
+        "listening": 6,
+        "writing": 5.5,
+        "speaking": 6,
+        "note": "test"
+      }
+    ],
+    "drivingSessions": [
+      {
+        "id": "qa_drv1",
+        "date": "2026-10-20",
+        "minutes": 20,
+        "conditions": [
+          "day",
+          "parking"
+        ],
+        "supervised": true,
+        "kind": "practice",
+        "note": "test"
+      },
+      {
+        "id": "qa_drv2",
+        "date": "2026-10-22",
+        "minutes": 10,
+        "conditions": [],
+        "supervised": false,
+        "kind": "hazardPerception",
+        "note": "test"
+      },
+      {
+        "id": "qa_drv3",
+        "date": "2026-10-21",
+        "minutes": 15,
+        "conditions": [],
+        "supervised": false,
+        "kind": "theory",
+        "note": "test"
+      }
+    ],
+    "moneyEnvelopes": [
+      {
+        "id": "qa_env",
+        "titleAr": "test",
+        "titleEn": "test",
+        "month": "2026-10",
+        "planned": 700,
+        "spent": 520
+      }
+    ],
+    "bills": [
+      {
+        "id": "qa_bill",
+        "title": "test",
+        "amount": 115,
+        "dueDay": 26,
+        "isSubscription": false,
+        "active": true
+      },
+      {
+        "id": "qa_sub",
+        "title": "test",
+        "amount": 35,
+        "dueDay": 28,
+        "isSubscription": true,
+        "active": true
+      }
+    ],
+    "bnplItems": [
+      {
+        "id": "qa_bnpl",
+        "title": "test",
+        "provider": "test",
+        "instalmentAmount": 112,
+        "dueDates": [
+          "2026-09-12",
+          "2026-10-12",
+          "2026-11-12",
+          "2026-12-12"
+        ],
+        "paidDates": [
+          "2026-09-12"
+        ]
+      }
+    ],
+    "wishItems": [
+      {
+        "id": "qa_wish1",
+        "title": "test",
+        "addedDate": "2026-10-21",
+        "price": 899,
+        "coolingOffDays": 7,
+        "decision": null
+      },
+      {
+        "id": "qa_wish2",
+        "title": "test",
+        "addedDate": "2026-10-15",
+        "price": 450,
+        "coolingOffDays": 7,
+        "decision": null
+      }
+    ],
+    "adminDocs": [
+      {
+        "id": "qa_doc1",
+        "name": "test",
+        "expiry": "2026-11-12",
+        "remindDaysBefore": 30,
+        "note": ""
+      },
+      {
+        "id": "qa_doc2",
+        "name": "test",
+        "expiry": null,
+        "remindDaysBefore": 30,
+        "note": ""
+      }
+    ],
+    "fixedEvents": [],
+    "nudgeRecords": [],
+    "errands": [
+      {
+        "id": "qa_err1",
+        "title": "test",
+        "done": false,
+        "addedDate": null
+      },
+      {
+        "id": "qa_err2",
+        "title": "test",
+        "done": true,
+        "addedDate": null
+      }
+    ],
+    "cycleEntries": [
+      {
+        "id": "qa_cyc",
+        "date": "2026-10-18",
+        "kind": "start",
+        "note": "test"
+      }
+    ],
+    "weeklyReviews": [
+      {
+        "id": "2026-10-18",
+        "date": "2026-10-23",
+        "chapterTitle": "test",
+        "wins": [
+          "إنجاز تجريبي ١",
+          "إنجاز تجريبي ٢",
+          "إنجاز تجريبي ٣",
+          "test",
+          "إنجاز تجريبي ٤",
+          "إنجاز تجريبي ٥",
+          "إنجاز تجريبي ٦",
+          "إنجاز تجريبي ٧",
+          "إنجاز تجريبي ٨",
+          "test"
+        ],
+        "blockers": [
+          "forgot"
+        ],
+        "top3": [
+          "أولوية تجريبية ١"
+        ],
+        "experimentId": "exp_1792799385313000_10",
+        "durationSec": 17
+      }
+    ]
+  },
+  "meta": {
+    "settings": {
+      "language": "ar",
+      "theme": "dark",
+      "notificationCap": 3,
+      "quietStartMinute": 1410,
+      "quietEndMinute": 360,
+      "quietEndSetByUser": false,
+      "wakeMinute": 360,
+      "sleepMinute": 1380,
+      "prayerAnchorsEnabled": true,
+      "latitude": 21.4225,
+      "longitude": 39.8262,
+      "utcOffsetMinutes": 180,
+      "timeZoneName": "Asia/Riyadh",
+      "cycleModule": false,
+      "pcosModule": false,
+      "aquariumModule": false,
+      "appLock": false,
+      "forgivingStreak": false,
+      "dailyBudgetMin": 150,
+      "budgetByWeekday": {},
+      "ieltsWeakestSkill": "writing",
+      "weekStartsOn": 7,
+      "eveningShutdownBeforeSleepMin": 90,
+      "onboardingDone": true,
+      "lastSeasonReview": null,
+      "firstActionPin": null
+    },
+    "openedDays": [
+      "2026-10-23"
+    ],
+    "firstRunDate": "2026-10-23",
+    "moduleState": {
+      "drivingStepsDone": [],
+      "drivingServiceLink": "",
+      "ieltsFeedbackChecks": [],
+      "homeZoneOffset": 0,
+      "autoSaveDay": null,
+      "autoSaveMinute": 540,
+      "freshStartDismissed": null,
+      "resetMinutes": 10
+    }
+  }
+}

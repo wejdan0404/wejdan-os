@@ -1,0 +1,24 @@
+{
+  "source": "Synthetic fixture (invented generic data, shape of a Flutter web export). Expected values are the engine outputs the migration tests assert for this data.",
+  "capturedLocal": "2026-10-23T23:50 (browser TZ UTC; logical day 2026-10-23)",
+  "uiActions": [
+    "Synthetic: levelled completions, one project step, one joy item, one redeem (-60), one weekly review, a few settings changes"
+  ],
+  "sparksBalance": 66,
+  "weekMomentum": 66,
+  "stages": {
+    "عادة تجريبية ٨": "rooted",
+    "عادة تجريبية ٣": "growing",
+    "عادة تجريبية ١٠": "growing",
+    "عادة تجريبية ٦": "growing",
+    "عادة تجريبية ٥": "growing",
+    "عادة تجريبية ٤": "growing"
+  },
+  "resting": [
+    "عادة تجريبية ٩"
+  ],
+  "joyRewardProgress": {
+    "مكافأة تجريبية ٢": "باقي 54 شرارة",
+    "مكافأة تجريبية ٤": "باقي 134 شرارة"
+  }
+}

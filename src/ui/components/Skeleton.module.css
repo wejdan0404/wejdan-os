@@ -1,0 +1,37 @@
+.sk {
+  display: block;
+  background: var(--surface-subtle);
+  box-shadow: inset 0 0 0 var(--hairline) var(--border-subtle);
+  animation: breathe 1s var(--ease-standard) infinite alternate;
+}
+
+@keyframes breathe {
+  from { opacity: 1; }
+  to { opacity: 0.55; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sk { animation: none; }
+}
+
+.rows {
+  display: flex;
+  flex-direction: column;
+  background: var(--cell-bg);
+  border-radius: var(--r-card);
+  margin-inline: var(--page-margin);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4);
+}
+
+.lines {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}

@@ -1,0 +1,21 @@
+.wrap {
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.wrap > svg {
+  position: absolute;
+  inset: 0;
+  overflow: visible;
+}
+
+.center {
+  position: relative;
+  font: var(--type-footnote);
+  font-weight: 600;
+  font-family: var(--font-numeric);
+  font-variant-numeric: tabular-nums;
+  color: var(--text-primary);
+}

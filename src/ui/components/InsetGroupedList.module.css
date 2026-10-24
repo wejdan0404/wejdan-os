@@ -1,0 +1,75 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-inline: var(--page-margin);
+}
+
+.section[data-flush] {
+  margin-inline: 0;
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding-inline: var(--space-1);
+  min-height: 24px;
+}
+
+.headerText {
+  /* grows so a header can carry a trailing dotted thread (Star Dotted Line) */
+  flex: 1;
+  min-inline-size: 0;
+  font: var(--type-overline);
+  color: var(--text-muted);
+}
+
+.group {
+  overflow: hidden;
+  border-radius: var(--r-card);
+  background: var(--cell-bg);
+  /* white card on the white ground: soft lift + 0.5px hairline; dark: 0.5px hairline on #181c26 (boards) */
+  box-shadow: var(--card-shadow);
+  isolation: isolate;
+}
+
+.plain {
+  overflow: hidden;
+}
+
+.footer {
+  font: var(--type-footnote);
+  color: var(--text-muted);
+  padding-inline: var(--space-1);
+}
+
+/* hairline separators between rows, inset to the text column (past a leading icon) */
+.group > *,
+.plain > * {
+  position: relative;
+}
+
+.group > * + *::before,
+.plain > * + *::before {
+  content: '';
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 16px;
+  inset-inline-end: 0;
+  height: var(--hairline);
+  background: var(--separator);
+  z-index: 3;
+  pointer-events: none;
+}
+
+.group > * + *:is([data-has-leading], :has(> [data-has-leading]))::before,
+.plain > * + *:is([data-has-leading], :has(> [data-has-leading]))::before {
+  inset-inline-start: 60px;
+}
+
+/* elevated: a touch more lift for cards that sit on a tinted surface (e.g. search results in a sheet) */
+.section[data-elevated] .group {
+  /* the card's own shadow isn't clipped by its overflow:hidden (kept for swipe actions) */
+  box-shadow: var(--card-shadow), var(--shadow-subtle);
+}

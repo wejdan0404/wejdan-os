@@ -1,0 +1,73 @@
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-inline: var(--page-margin);
+  padding: var(--space-6) var(--space-5) var(--space-5);
+  border-radius: var(--r-hero);
+  /* light: soft sky block, no shadow; dark: gradient + hairline ring + Glow/Hero (boards) */
+  background: var(--hero-bg);
+  box-shadow: var(--hero-shadow);
+  --btn-secondary-bg: var(--cell-bg);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Glow/Hero — one per screen, never under long text */
+.glow {
+  position: absolute;
+  inset-block-start: -70px;
+  inset-inline-start: -50px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--glow-accent) 0%, transparent 65%);
+  opacity: var(--hero-glow-opacity, 0.32);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  text-align: start;
+}
+
+.body:disabled {
+  cursor: default;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font: var(--type-footnote);
+  font-weight: 600;
+  color: var(--text-accent);
+}
+
+.title {
+  /* one serif per screen: the greeting carries the display face, the hero title is Plex 22/600 */
+  font: var(--type-hero);
+  color: var(--text-primary);
+  text-wrap: balance;
+}
+
+.meta {
+  font: var(--type-caption);
+  color: var(--text-muted);
+}
+
+.why {
+  font: var(--type-caption);
+  color: var(--text-secondary);
+  max-width: 34ch;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}

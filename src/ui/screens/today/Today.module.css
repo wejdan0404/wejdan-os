@@ -1,0 +1,248 @@
+/* Today area — local styles over the kit tokens. */
+
+.sparks {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 32px;
+  padding-inline: 12px;
+  border-radius: var(--r-pill);
+  background: var(--surface-subtle);
+  box-shadow: inset 0 0 0 var(--hairline) var(--separator);
+  color: var(--text-secondary);
+  -webkit-tap-highlight-color: transparent;
+}
+/* 44pt hit area around the 32pt pill */
+.sparks::after {
+  content: '';
+  position: absolute;
+  inset: -6px -4px;
+}
+.sparks:active {
+  transform: scale(0.97);
+}
+
+/* eyebrow row: W 32 + date (boards) */
+.eyebrowStart {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  color: var(--text-secondary);
+}
+
+.num {
+  font-family: var(--font-numeric);
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.briefLink {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: var(--tap);
+  margin-inline: var(--page-margin);
+  padding-inline: var(--space-4);
+  border-radius: var(--r-control);
+  background: var(--surface-subtle);
+  color: var(--text-secondary);
+  font: var(--type-caption);
+  font-weight: 500;
+  text-align: start;
+}
+.briefLink > span {
+  flex: 1;
+}
+.briefLink:active {
+  opacity: 0.7;
+}
+
+/* calm blocks: empty day / day done — same footprint as the hero, no glow */
+.calm {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  margin-inline: var(--page-margin);
+  padding: var(--space-6) var(--space-5) var(--space-5);
+  border-radius: var(--r-hero);
+  background: var(--hero-bg);
+  box-shadow: var(--hero-shadow);
+}
+.calmEyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font: var(--type-footnote);
+  font-weight: 600;
+  color: var(--text-accent);
+}
+.calmTitle {
+  font: var(--type-hero);
+  color: var(--text-primary);
+  margin: 0;
+}
+.calmBody {
+  font: var(--type-caption);
+  color: var(--text-secondary);
+  max-width: 34ch;
+  margin: 0;
+}
+.calmActions {
+  margin-block-start: var(--space-4);
+  display: flex;
+  gap: var(--space-2);
+}
+
+.busy {
+  margin-inline: var(--page-margin);
+  margin-block: calc(var(--space-2) * -1) 0;
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--r-control);
+  background: var(--surface-subtle);
+  color: var(--text-secondary);
+  font: var(--type-caption);
+}
+
+.routine {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-inline: var(--page-margin);
+}
+.routineHead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+.routineTitle {
+  margin: 0;
+  font: var(--type-footnote);
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.link {
+  min-height: var(--tap);
+  min-width: var(--tap);
+  margin-block: calc((var(--tap) - 1.5rem) / -2);
+  padding-inline: var(--space-1);
+  color: var(--text-accent);
+  font: var(--type-caption);
+  font-weight: 500;
+}
+.link:active {
+  opacity: 0.5;
+}
+
+.glyph {
+  display: inline-flex;
+  color: var(--text-muted);
+}
+
+.accentIcon {
+  display: inline-flex;
+  color: var(--text-accent);
+}
+
+.count {
+  font: var(--type-caption);
+  color: var(--text-muted);
+}
+
+.addPill {
+  flex: none;
+  /* a11y #7: 44px target, 36px visible pill */
+  min-height: 44px;
+  border-block: 4px solid transparent;
+  background-clip: padding-box;
+  padding-inline: 12px;
+  border-radius: var(--r-pill);
+  background: var(--action-default);
+  color: var(--on-action);
+  font: var(--type-caption);
+  font-weight: 600;
+  white-space: nowrap;
+  position: relative;
+}
+/* the box itself is 44px tall now; this only widens the hit area a touch */
+.addPill::after {
+  content: '';
+  position: absolute;
+  inset: 0 -4px;
+}
+.addPill:active {
+  transform: scale(0.97);
+}
+
+.addedPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 32px;
+  padding-inline: 12px;
+  border-radius: var(--r-pill);
+  background: var(--surface-subtle);
+  color: var(--text-accent);
+  font: var(--type-caption);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.helpLink {
+  align-self: center;
+  min-height: var(--tap);
+  color: var(--text-accent);
+  font: var(--type-caption);
+}
+
+.sheetBody {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding-block-end: var(--space-6);
+}
+.sheetEmpty {
+  margin: 0;
+  padding-inline: var(--page-margin);
+  font: var(--type-body);
+  color: var(--text-secondary);
+}
+
+
+/* energy segments: full 44pt targets */
+.energyTap {
+  min-height: var(--tap);
+}
+
+/* routine thread title never truncates mid Latin word */
+.routineTitle bdi {
+  unicode-bidi: isolate;
+}
+
+/* the card brings its own page margin (QA area4 #18: no double inset) */
+.payday {
+  margin-inline: 0;
+  /* Today already has its hero: the payday card keeps the sky block but no second glow */
+  --hero-shadow: var(--hero-shadow-quiet);
+}
+
+/* after the colour rule: paint the pill inside the transparent 44px ring (a11y #7) */
+.addPill {
+  background-clip: padding-box;
+}
+
+/* quick add sits in the header on Today (no floating + over rows) */
+.headerBtn {
+  display: inline-grid;
+  place-items: center;
+  min-width: var(--tap);
+  min-height: var(--tap);
+  border-radius: var(--r-control);
+  color: var(--text-accent);
+}
+.headerBtn:active {
+  opacity: 0.5;
+}

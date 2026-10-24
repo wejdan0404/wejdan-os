@@ -1,0 +1,19 @@
+.balance {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-secondary);
+}
+
+.add {
+  display: grid;
+  place-items: center;
+  width: var(--tap);
+  height: var(--tap);
+  border-radius: var(--r-control);
+  color: var(--text-accent);
+}
+
+.add:active {
+  opacity: 0.5;
+}

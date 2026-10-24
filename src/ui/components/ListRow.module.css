@@ -1,0 +1,262 @@
+.wrap {
+  position: relative;
+  container: row / inline-size;
+  background: var(--cell-bg);
+  overflow: hidden;
+}
+
+.row {
+  position: relative;
+  z-index: 1;
+  background: var(--cell-bg);
+  touch-action: pan-y;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  width: 100%;
+  min-height: max(64px, 3.75rem);
+  padding-block: 14px;
+  padding-inline: var(--space-4);
+  text-align: start;
+  transition: background-color var(--dur-quick) var(--ease-standard);
+}
+
+/* tappable row: the title button's ::after covers the row */
+.inner[data-tappable] {
+  position: relative;
+}
+
+.link {
+  display: inline;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  color: inherit;
+  text-align: start;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+.link:focus-visible {
+  outline: none;
+}
+
+.link:focus-visible::after {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: -2px;
+}
+
+.inner[data-tappable] .leading,
+.inner[data-tappable] .trailing,
+.inner[data-tappable] .subtitle :is(a, button) {
+  position: relative;
+  z-index: 1;
+}
+
+/* QA area4 #1: decorative leading/trailing content (a «استلميها» pill, a star) must not swallow
+   the row tap — only real controls inside them take their own taps. */
+.inner[data-tappable] .leading,
+.inner[data-tappable] .trailing {
+  pointer-events: none;
+}
+.inner[data-tappable] .leading :is(a, button, input, select, label, [role='button'], [role='switch'], [role='checkbox'], [tabindex]),
+.inner[data-tappable] .trailing :is(a, button, input, select, label, [role='button'], [role='switch'], [role='checkbox'], [tabindex]) {
+  pointer-events: auto;
+}
+
+.inner[data-tappable]:has(.link:active) {
+  background: color-mix(in srgb, var(--text-primary) 4%, var(--cell-bg));
+}
+
+.leading {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  color: var(--text-accent);
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.title {
+  font: var(--type-row);
+  color: var(--text-primary);
+  /* break only a word that can't fit on its own line — never «تصح / ين» (a11y #6) */
+  overflow-wrap: break-word;
+}
+
+.title[data-muted] {
+  color: var(--text-muted);
+}
+
+.subtitle {
+  font: var(--type-footnote);
+  color: var(--text-muted);
+}
+
+.trailing {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-shrink: 0;
+  font: var(--type-caption);
+  color: var(--text-muted);
+}
+
+.chevron {
+  color: var(--border-default);
+  margin-inline-start: calc(var(--space-1) * -1);
+}
+
+.actions {
+  position: absolute;
+  inset-block: 0;
+  display: flex;
+  z-index: 0;
+}
+
+.actions[data-side='leading'] {
+  inset-inline-start: 0;
+}
+
+.actions[data-side='trailing'] {
+  inset-inline-end: 0;
+}
+
+.action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  width: 76px;
+  font: var(--type-footnote);
+  font-weight: 600;
+}
+
+.action[data-tone='accent'] {
+  background: var(--action-default);
+  color: var(--on-action);
+}
+
+.action[data-tone='neutral'] {
+  background: var(--text-muted);
+  color: var(--surface-default);
+}
+
+.action[data-tone='destructive'] {
+  background: var(--error);
+  color: var(--surface-default);
+}
+
+.action[data-tone='success'] {
+  background: var(--success);
+  color: var(--surface-default);
+}
+
+/* visible «…» — every menu action is reachable without a gesture */
+.more {
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  inline-size: var(--tap);
+  block-size: var(--tap);
+  margin-inline: calc(var(--space-2) * -1);
+  border-radius: 50%;
+  color: var(--text-muted);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.more:active {
+  background: var(--cell-pressed);
+}
+
+.more:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: -2px;
+}
+
+/* a11y #6: with large text (200%) a wide trailing control drops below the title instead of
+   squeezing it; at default size (row ≥ 20rem = 320px) the layout is unchanged. */
+@container row (max-width: 20rem) {
+  .inner {
+    flex-wrap: wrap;
+  }
+  .text {
+    flex: 1 1 calc(100% - 48px);
+  }
+  .trailing {
+    flex-wrap: wrap;
+    margin-inline-start: auto;
+  }
+}
+
+/* a11y #12: keyboard-reachable swipe actions, visible only while focused */
+.kbActions {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+.kbActions:focus-within {
+  inset-block: 0;
+  inset-inline-end: 0;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  width: auto;
+  height: auto;
+  padding-inline: var(--space-3);
+  overflow: visible;
+  clip: auto;
+  background: var(--cell-bg);
+  box-shadow: -8px 0 16px var(--cell-bg);
+}
+.kbAction {
+  min-block-size: 44px;
+  min-inline-size: 44px;
+  padding-inline: var(--space-3);
+  border: 0;
+  border-radius: var(--r-control);
+  font: var(--type-label);
+  font-weight: 600;
+  background: var(--action-default);
+  color: var(--on-action);
+}
+.kbAction[data-tone='neutral'] {
+  background: var(--text-muted);
+  color: var(--surface-default);
+}
+.kbAction[data-tone='destructive'] {
+  background: var(--error);
+  color: var(--surface-default);
+}
+.kbAction[data-tone='success'] {
+  background: var(--success);
+  color: var(--surface-default);
+}
+.kbAction:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
